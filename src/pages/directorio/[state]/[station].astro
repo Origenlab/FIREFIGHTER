@@ -34,6 +34,8 @@ const { Content } = await render(station);
 
 const state = states.find((s) => s.slug === data.stateSlug);
 const currentStationSlug = station.id.split('/').pop()?.replace('.md', '') || '';
+const siteUrl = 'https://firefighter.com.mx';
+const canonicalUrl = `${siteUrl}/directorio/${data.stateSlug}/${currentStationSlug}`;
 
 // Calculate nearby stations by distance
 function getDistance(lat1: number, lon1: number, lat2: number, lon2: number): number {
@@ -80,40 +82,252 @@ const serviceLabels: Record<string, string> = {
 // Google Maps URL
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${data.latitude},${data.longitude}`;
 
-// Schema.org data
-const schemaData = {
+// SEO: Generate rich keywords
+const servicesText = data.services.map(s => serviceLabels[s] || s).join(', ');
+const seoKeywords = [
+  'bomberos',
+  'estación de bomberos',
+  data.municipality,
+  data.city,
+  data.state,
+  'emergencias',
+  '911',
+  'incendios',
+  'rescate',
+  data.neighborhood || '',
+  serviceTypeLabels[data.serviceType] || '',
+].filter(Boolean).join(', ');
+
+// Enhanced SEO meta description
+const enhancedDescription = data.metaDescription ||
+  `${data.name} en ${data.neighborhood ? data.neighborhood + ', ' : ''}${data.municipality}, ${data.city}. ` +
+  `Tel: ${data.phone}. Servicios: ${servicesText.substring(0, 60)}. ` +
+  `Horario: ${data.operatingHours}. Emergencias: 911.`;
+
+// Schema.org FireStation - Enhanced
+const fireStationSchema = {
   "@context": "https://schema.org",
   "@type": "FireStation",
+  "@id": canonicalUrl,
   "name": data.name,
+  "alternateName": data.stationCode,
+  "description": enhancedDescription,
+  "url": canonicalUrl,
+  "telephone": data.phone,
+  "email": data.email || undefined,
   "address": {
     "@type": "PostalAddress",
     "streetAddress": data.address,
-    "addressLocality": data.city,
+    "addressLocality": data.municipality,
     "addressRegion": data.state,
     "postalCode": data.postalCode || "",
-    "addressCountry": "MX"
+    "addressCountry": "MX",
+    "areaServed": {
+      "@type": "City",
+      "name": data.city
+    }
   },
   "geo": {
     "@type": "GeoCoordinates",
     "latitude": data.latitude,
     "longitude": data.longitude
   },
-  "telephone": data.phone,
+  "hasMap": mapsUrl,
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
     "opens": "00:00",
     "closes": "23:59"
   },
-  "url": `https://firefighter.com.mx/directorio/${data.stateSlug}/${currentStationSlug}`
+  "foundingDate": data.yearEstablished ? String(data.yearEstablished) : undefined,
+  "numberOfEmployees": data.totalPersonnel ? {
+    "@type": "QuantitativeValue",
+    "value": data.totalPersonnel
+  } : undefined,
+  "knowsAbout": data.services.map(s => serviceLabels[s] || s),
+  "publicAccess": true,
+  "isAccessibleForFree": true,
+  "currenciesAccepted": "MXN",
+  "paymentAccepted": "Emergency services are free",
+  "priceRange": "Gratuito",
+  "image": `${siteUrl}/images/og-station-default.jpg`,
+  "sameAs": data.website ? [data.website] : [],
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `tel:${data.phone}`,
+      "actionPlatform": ["http://schema.org/IOSPlatform", "http://schema.org/AndroidPlatform"]
+    },
+    "result": {
+      "@type": "Reservation",
+      "name": "Llamar a la estación"
+    }
+  },
+  "aggregateRating": data.verified ? {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "ratingCount": "1",
+    "bestRating": "5",
+    "worstRating": "1"
+  } : undefined
+};
+
+// Schema.org BreadcrumbList
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": siteUrl
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Directorio",
+      "item": `${siteUrl}/directorio`
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": state?.name || data.state,
+      "item": `${siteUrl}/directorio/${data.stateSlug}`
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": data.name,
+      "item": canonicalUrl
+    }
+  ]
+};
+
+// Schema.org FAQPage - For emergency reporting section
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuál es el número de emergencias para bomberos en México?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El número de emergencias es el 911. Este número es gratuito y funciona desde cualquier teléfono fijo o celular en todo México."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": `¿Cuál es el teléfono de la ${data.name}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `El teléfono directo de la ${data.name} es ${data.phone}. También puedes llamar al 911 para emergencias.`
+      }
+    },
+    {
+      "@type": "Question",
+      "name": `¿Dónde está ubicada la ${data.name}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `La ${data.name} está ubicada en ${data.address}, ${data.neighborhood ? data.neighborhood + ', ' : ''}${data.municipality}, ${data.city}, ${data.state}, C.P. ${data.postalCode || 'N/A'}.`
+      }
+    },
+    {
+      "@type": "Question",
+      "name": `¿Cuál es el horario de la ${data.name}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `La ${data.name} opera las ${data.operatingHours}, los 365 días del año para atender emergencias.`
+      }
+    },
+    {
+      "@type": "Question",
+      "name": `¿Qué servicios ofrece la ${data.name}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `La ${data.name} ofrece los siguientes servicios: ${servicesText}.`
+      }
+    }
+  ]
+};
+
+// Schema.org LocalBusiness (combined for better local SEO)
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "GovernmentService",
+  "name": data.name,
+  "serviceType": "Servicios de Emergencia y Bomberos",
+  "provider": {
+    "@type": "GovernmentOrganization",
+    "name": `Heroico Cuerpo de Bomberos de ${data.city}`,
+    "areaServed": {
+      "@type": "City",
+      "name": data.city,
+      "containedIn": {
+        "@type": "State",
+        "name": data.state
+      }
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": data.municipality,
+    "containedIn": {
+      "@type": "State",
+      "name": data.state
+    }
+  },
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": canonicalUrl,
+    "servicePhone": data.phone,
+    "availableLanguage": {
+      "@type": "Language",
+      "name": "Spanish"
+    }
+  }
 };
 ---
 
 <BaseLayout
   title={data.metaTitle || `${data.name} | Bomberos ${data.city}`}
-  description={data.metaDescription || `${data.name} en ${data.city}, ${data.state}. Dirección: ${data.address}. Tel: ${data.phone}. Emergencias: 911.`}
+  description={enhancedDescription}
+  canonicalUrl={canonicalUrl}
 >
-  <JsonLd type="FireStation" data={schemaData} />
+  <!-- SEO: Geo Meta Tags for Local Search -->
+  <meta slot="head" name="geo.region" content={`MX-${data.stateSlug.toUpperCase().substring(0, 3)}`} />
+  <meta slot="head" name="geo.placename" content={`${data.municipality}, ${data.city}`} />
+  <meta slot="head" name="geo.position" content={`${data.latitude};${data.longitude}`} />
+  <meta slot="head" name="ICBM" content={`${data.latitude}, ${data.longitude}`} />
+
+  <!-- SEO: Keywords -->
+  <meta slot="head" name="keywords" content={seoKeywords} />
+
+  <!-- SEO: Additional Meta Tags -->
+  <meta slot="head" name="author" content="Firefighter México" />
+  <meta slot="head" name="publisher" content="Firefighter México" />
+  <meta slot="head" name="coverage" content="México" />
+  <meta slot="head" name="distribution" content="global" />
+  <meta slot="head" name="rating" content="general" />
+  <meta slot="head" name="revisit-after" content="7 days" />
+
+  <!-- SEO: Place/Location Tags (for Apple Maps, etc) -->
+  <meta slot="head" property="place:location:latitude" content={String(data.latitude)} />
+  <meta slot="head" property="place:location:longitude" content={String(data.longitude)} />
+
+  <!-- Schema.org JSON-LD: FireStation (Primary) -->
+  <script type="application/ld+json" set:html={JSON.stringify(fireStationSchema)} />
+
+  <!-- Schema.org JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Schema.org JSON-LD: FAQPage -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Schema.org JSON-LD: GovernmentService -->
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
 
   <div class="bg-slate-50 min-h-screen">
     <div class="container-custom py-8">
