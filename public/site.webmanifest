@@ -1,16 +1,59 @@
 {
-  "name": "Firefighter México - Directorio de Bomberos",
+  "name": "Firefighter México - Directorio Nacional de Bomberos",
   "short_name": "Firefighter MX",
-  "description": "Directorio Nacional de Estaciones de Bomberos de México",
+  "description": "El directorio más completo de estaciones de bomberos en México. Encuentra información de contacto, ubicación y servicios de emergencia en los 32 estados.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#ffffff",
   "theme_color": "#dc2626",
+  "lang": "es-MX",
+  "dir": "ltr",
+  "categories": ["emergency", "government", "reference"],
   "icons": [
     {
       "src": "/favicon.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     }
-  ]
+  ],
+  "shortcuts": [
+    {
+      "name": "Directorio Nacional",
+      "short_name": "Directorio",
+      "description": "Ver todas las estaciones de bomberos",
+      "url": "/directorio",
+      "icons": [{ "src": "/icon.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Emergencias 911",
+      "short_name": "911",
+      "description": "Información de emergencias",
+      "url": "/emergencias",
+      "icons": [{ "src": "/icon.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Mapa Interactivo",
+      "short_name": "Mapa",
+      "description": "Encuentra estaciones cercanas",
+      "url": "/mapa",
+      "icons": [{ "src": "/icon.svg", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
 }

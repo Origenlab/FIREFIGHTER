@@ -36,6 +36,23 @@ const fullTitle = `${title} | ${siteName}`;
 <link rel="canonical" href={canonicalUrl} />
 {noindex && <meta name="robots" content="noindex, nofollow" />}
 
+<!-- Language & Region -->
+<meta http-equiv="content-language" content="es-MX" />
+<link rel="alternate" hreflang="es-MX" href={canonicalUrl} />
+<link rel="alternate" hreflang="es" href={canonicalUrl} />
+<link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+
+<!-- Geographic Tags -->
+<meta name="geo.region" content="MX" />
+<meta name="geo.placename" content="México" />
+
+<!-- Additional SEO -->
+<meta name="author" content="Firefighter México" />
+<meta name="publisher" content="Firefighter México" />
+<meta name="copyright" content={`© ${new Date().getFullYear()} Firefighter México`} />
+<meta name="rating" content="general" />
+<meta name="distribution" content="global" />
+
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={type} />
 <meta property="og:url" content={canonicalUrl} />

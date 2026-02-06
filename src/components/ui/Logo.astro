@@ -1,0 +1,75 @@
+---
+interface Props {
+  variant?: 'default' | 'white' | 'icon-only';
+  size?: 'sm' | 'md' | 'lg';
+  class?: string;
+}
+
+const { variant = 'default', size = 'md', class: className = '' } = Astro.props;
+
+const sizes = {
+  sm: { icon: 'w-8 h-8', text: 'text-lg' },
+  md: { icon: 'w-10 h-10', text: 'text-xl' },
+  lg: { icon: 'w-12 h-12', text: 'text-2xl' },
+};
+
+const textColors = {
+  default: { primary: 'text-slate-800', accent: 'text-fire-600' },
+  white: { primary: 'text-white', accent: 'text-fire-500' },
+  'icon-only': { primary: '', accent: '' },
+};
+---
+
+<a
+  href="/"
+  class:list={['flex items-center gap-3 group', className]}
+  aria-label="Firefighter México - Ir al inicio"
+>
+  <!-- Logo Icon -->
+  <div class:list={[
+    sizes[size].icon,
+    'bg-gradient-to-br from-fire-500 to-fire-700 rounded-xl flex items-center justify-center',
+    'group-hover:from-fire-600 group-hover:to-fire-800 transition-all duration-300',
+    'shadow-lg shadow-fire-500/25 group-hover:shadow-fire-500/40'
+  ]}>
+    <svg
+      class="w-2/3 h-2/3 text-white"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <!-- Fire flame icon -->
+      <path
+        d="M12 2C12 2 7 8 7 13C7 16.866 9.23858 20 12 20C14.7614 20 17 16.866 17 13C17 8 12 2 12 2Z"
+        fill="url(#flameGrad)"
+      />
+      <path
+        d="M12 8C12 8 9.5 11 9.5 14C9.5 15.933 10.567 17.5 12 17.5C13.433 17.5 14.5 15.933 14.5 14C14.5 11 12 8 12 8Z"
+        fill="#FEF3C7"
+      />
+      <defs>
+        <linearGradient id="flameGrad" x1="12" y1="2" x2="12" y2="20" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FBBF24"/>
+          <stop offset="0.5" stop-color="#F97316"/>
+          <stop offset="1" stop-color="#DC2626"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- Logo Text -->
+  {variant !== 'icon-only' && (
+    <div class="flex flex-col">
+      <div class:list={['font-display font-bold leading-tight', sizes[size].text]}>
+        <span class={textColors[variant].primary}>Firefighter</span>
+        <span class={textColors[variant].accent}>México</span>
+      </div>
+      {size === 'lg' && (
+        <span class="text-xs text-slate-500 font-medium tracking-wide">
+          Directorio Nacional de Bomberos
+        </span>
+      )}
+    </div>
+  )}
+</a>

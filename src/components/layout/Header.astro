@@ -1,5 +1,6 @@
 ---
 import Button from '../ui/Button.astro';
+import Logo from '../ui/Logo.astro';
 
 const currentPath = Astro.url.pathname;
 
@@ -16,18 +17,8 @@ const navItems = [
   <div class="container-custom">
     <nav class="flex items-center justify-between h-16 md:h-20">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 bg-fire-600 rounded-lg flex items-center justify-center group-hover:bg-fire-700 transition-colors">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path>
-          </svg>
-        </div>
-        <div class="hidden sm:block">
-          <span class="font-display font-bold text-xl text-slate-800">Firefighter</span>
-          <span class="font-display font-bold text-xl text-fire-600">México</span>
-        </div>
-      </a>
+      <Logo variant="default" size="md" class="hidden sm:flex" />
+      <Logo variant="icon-only" size="md" class="sm:hidden" />
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center gap-1">

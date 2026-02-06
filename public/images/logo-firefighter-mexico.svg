@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <defs>
+    <linearGradient id="fireGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="50%" style="stop-color:#dc2626"/>
+      <stop offset="100%" style="stop-color:#b91c1c"/>
+    </linearGradient>
+    <linearGradient id="flameGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#dc2626"/>
+      <stop offset="40%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#fbbf24"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shield/Badge Background -->
+  <path d="M25 4 L42 10 L42 28 C42 36 34 44 25 48 C16 44 8 36 8 28 L8 10 Z" fill="url(#fireGradient)"/>
+
+  <!-- Inner Shield -->
+  <path d="M25 7 L39 12 L39 27 C39 34 32 41 25 44 C18 41 11 34 11 27 L11 12 Z" fill="#1e293b"/>
+
+  <!-- Fire Flame Icon -->
+  <path d="M25 14 C25 14 30 20 30 26 C30 30 28 33 25 33 C22 33 20 30 20 26 C20 20 25 14 25 14 Z" fill="url(#flameGradient)"/>
+  <path d="M25 20 C25 20 28 24 28 27 C28 29 27 30 25 30 C23 30 22 29 22 27 C22 24 25 20 25 20 Z" fill="#fef3c7"/>
+
+  <!-- Text: Firefighter -->
+  <text x="52" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#1e293b">Firefighter</text>
+
+  <!-- Text: México -->
+  <text x="52" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#dc2626">México</text>
+
+  <!-- Tagline -->
+  <text x="135" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="400" fill="#64748b">Directorio Nacional</text>
+</svg>
