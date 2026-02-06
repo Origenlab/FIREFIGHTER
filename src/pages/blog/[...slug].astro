@@ -1,0 +1,129 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString('es-MX', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+};
+---
+
+<BaseLayout
+  title={post.data.title}
+  description={post.data.description}
+  image={post.data.image}
+  imageAlt={post.data.imageAlt}
+  type="article"
+  publishedDate={post.data.pubDate.toISOString()}
+  modifiedDate={post.data.updatedDate?.toISOString()}
+  author={post.data.author}
+  keywords={post.data.tags}
+>
+  <article class="section">
+    <div class="container">
+      <header class="article-header">
+        <div class="article-meta">
+          <time datetime={post.data.pubDate.toISOString()}>
+            {formatDate(post.data.pubDate)}
+          </time>
+          {post.data.author && <span class="author">por {post.data.author}</span>}
+        </div>
+        <h1>{post.data.title}</h1>
+        <p class="article-description">{post.data.description}</p>
+        {post.data.tags.length > 0 && (
+          <div class="article-tags">
+            {post.data.tags.map((tag) => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
+        )}
+      </header>
+
+      {post.data.image && (
+        <img
+          src={post.data.image}
+          alt={post.data.imageAlt || post.data.title}
+          class="article-image"
+        />
+      )}
+
+      <div class="prose">
+        <Content />
+      </div>
+
+      <footer class="article-footer">
+        <a href="/blog" class="btn btn-outline">← Volver al blog</a>
+      </footer>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-header {
+    margin-bottom: var(--space-8);
+  }
+
+  .article-meta {
+    display: flex;
+    gap: var(--space-4);
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-4);
+  }
+
+  .article-header h1 {
+    margin-bottom: var(--space-4);
+  }
+
+  .article-description {
+    font-size: var(--text-xl);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-4);
+  }
+
+  .article-tags {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    background-color: var(--color-bg-secondary);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+  }
+
+  .article-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-8);
+  }
+
+  .prose {
+    max-width: 75ch;
+  }
+
+  .article-footer {
+    margin-top: var(--space-12);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border);
+  }
+</style>

@@ -1,0 +1,10 @@
+# Robots.txt for firefighter.com.mx
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://firefighter.com.mx/sitemap-index.xml
+
+# Disallow admin or private paths (add as needed)
+# Disallow: /admin/
