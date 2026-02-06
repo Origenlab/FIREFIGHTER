@@ -1,21 +1,39 @@
 ---
-import DirectoryLayout from '../../../layouts/DirectoryLayout.astro';
-import StationCard from '../../../components/directory/StationCard.astro';
-import Badge from '../../../components/ui/Badge.astro';
-import Pagination from '../../../components/ui/Pagination.astro';
+import DirectoryLayout from '../../../../layouts/DirectoryLayout.astro';
+import StationCard from '../../../../components/directory/StationCard.astro';
+import Badge from '../../../../components/ui/Badge.astro';
+import Pagination from '../../../../components/ui/Pagination.astro';
 import { getCollection } from 'astro:content';
-import states from '../../../data/states.json';
-
-const ITEMS_PER_PAGE = 12;
+import states from '../../../../data/states.json';
 
 export async function getStaticPaths() {
-  return states.map((state) => ({
-    params: { state: state.slug },
-    props: { state },
-  }));
+  const ITEMS_PER_PAGE = 12;
+  const allStations = await getCollection('stations');
+  const paths: { params: { state: string; page: string }; props: any }[] = [];
+
+  for (const state of states) {
+    const stateStations = allStations.filter(
+      (station) => station.data.stateSlug === state.slug
+    );
+
+    const totalPages = Math.ceil(stateStations.length / ITEMS_PER_PAGE);
+
+    // Only generate pagination pages if there's more than one page
+    // Skip page 1 since that's handled by the index
+    for (let page = 2; page <= totalPages; page++) {
+      paths.push({
+        params: { state: state.slug, page: String(page) },
+        props: { state, pageNum: page },
+      });
+    }
+  }
+
+  return paths;
 }
 
-const { state } = Astro.props;
+const ITEMS_PER_PAGE = 12;
+const { state, pageNum } = Astro.props;
+const currentPage = pageNum;
 
 // Get all stations for this state
 const allStations = await getCollection('stations');
@@ -31,9 +49,10 @@ stateStations.sort((a, b) => {
 });
 
 // Pagination
-const currentPage = 1;
 const totalPages = Math.ceil(stateStations.length / ITEMS_PER_PAGE);
-const paginatedStations = stateStations.slice(0, ITEMS_PER_PAGE);
+const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+const endIndex = startIndex + ITEMS_PER_PAGE;
+const paginatedStations = stateStations.slice(startIndex, endIndex);
 
 // Group stations by municipality
 const municipalityGroups = stateStations.reduce((acc, station) => {
@@ -49,13 +68,20 @@ const municipalities = Object.keys(municipalityGroups).sort();
 ---
 
 <DirectoryLayout
-  title={`Estaciones de Bomberos en ${state.name}`}
-  description={`Directorio de ${stateStations.length} estaciones de bomberos en ${state.name}. Encuentra teléfonos, direcciones y servicios de emergencia.`}
+  title={`Estaciones de Bomberos en ${state.name} - Página ${currentPage}`}
+  description={`Directorio de estaciones de bomberos en ${state.name}. Página ${currentPage} de ${totalPages}. Encuentra teléfonos, direcciones y servicios de emergencia.`}
   breadcrumbs={[
     { label: 'Directorio', href: '/directorio' },
-    { label: state.name },
+    { label: state.name, href: `/directorio/${state.slug}` },
+    { label: `Página ${currentPage}` },
   ]}
 >
+  <!-- Prev/Next links for SEO -->
+  <link slot="head" rel="prev" href={currentPage === 2 ? `/directorio/${state.slug}` : `/directorio/${state.slug}/pagina/${currentPage - 1}`} />
+  {currentPage < totalPages && (
+    <link slot="head" rel="next" href={`/directorio/${state.slug}/pagina/${currentPage + 1}`} />
+  )}
+
   <!-- Header -->
   <div class="mb-8">
     <div class="flex flex-wrap items-center gap-3 mb-4">
@@ -63,6 +89,7 @@ const municipalities = Object.keys(municipalityGroups).sort();
         {state.name}
       </h1>
       <Badge variant="fire">{stateStations.length} estaciones</Badge>
+      <Badge variant="slate">Página {currentPage}</Badge>
     </div>
     <p class="text-lg text-slate-600">
       Directorio de estaciones de bomberos en {state.name}. Capital: <span class="font-medium">{state.capital}</span>
@@ -89,61 +116,24 @@ const municipalities = Object.keys(municipalityGroups).sort();
     </div>
   </div>
 
-  <!-- Municipality Filter -->
-  {municipalities.length > 1 && (
-    <div class="mb-6">
-      <h2 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">
-        Filtrar por Alcaldía
-      </h2>
-      <div class="flex flex-wrap gap-2">
-        {municipalities.map((municipality) => (
-          <span class="px-3 py-1.5 text-sm font-medium bg-white text-slate-600 border border-slate-200 rounded-full">
-            {municipality} ({municipalityGroups[municipality].length})
-          </span>
-        ))}
-      </div>
-    </div>
-  )}
-
   <!-- Stations List -->
-  {stateStations.length > 0 ? (
-    <>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {paginatedStations.map((station) => (
-          <StationCard station={station} />
-        ))}
-      </div>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {paginatedStations.map((station) => (
+      <StationCard station={station} />
+    ))}
+  </div>
 
-      {/* Pagination */}
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        basePath={`/directorio/${state.slug}`}
-      />
+  {/* Pagination */}
+  <Pagination
+    currentPage={currentPage}
+    totalPages={totalPages}
+    basePath={`/directorio/${state.slug}`}
+  />
 
-      {/* Showing info */}
-      {totalPages > 1 && (
-        <p class="text-center text-sm text-slate-500 mt-2">
-          Mostrando {paginatedStations.length} de {stateStations.length} estaciones
-        </p>
-      )}
-    </>
-  ) : (
-    <div class="card p-12 text-center">
-      <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-        <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-      </div>
-      <h3 class="text-lg font-semibold text-slate-800 mb-2">Sin estaciones registradas</h3>
-      <p class="text-slate-500 mb-4">
-        Aún no tenemos estaciones registradas para {state.name}.
-      </p>
-      <a href="/agregar-estacion" class="btn btn-outline btn-sm">
-        Sugerir una estación
-      </a>
-    </div>
-  )}
+  {/* Showing info */}
+  <p class="text-center text-sm text-slate-500 mt-2">
+    Mostrando {startIndex + 1}-{Math.min(endIndex, stateStations.length)} de {stateStations.length} estaciones
+  </p>
 
   <!-- Emergency CTA -->
   <div class="mt-12 bg-slate-800 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
