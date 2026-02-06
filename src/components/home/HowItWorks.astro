@@ -1,0 +1,63 @@
+---
+const steps = [
+  {
+    number: '01',
+    title: 'Selecciona tu estado',
+    description: 'Elige entre los 32 estados de la República Mexicana para ver las estaciones disponibles.',
+    icon: 'map',
+  },
+  {
+    number: '02',
+    title: 'Encuentra tu estación',
+    description: 'Usa nuestro buscador o el mapa interactivo para encontrar la estación más cercana.',
+    icon: 'search',
+  },
+  {
+    number: '03',
+    title: 'Contacta directamente',
+    description: 'Obtén teléfonos, direcciones y cómo llegar. En emergencias, siempre llama al 911.',
+    icon: 'phone',
+  },
+];
+---
+
+<section class="section">
+  <div class="container-custom">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-800 mb-4">
+        Cómo Funciona
+      </h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        Encuentra información de bomberos en tres simples pasos
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+      {steps.map((step, index) => (
+        <div class="relative text-center">
+          {/* Connector line */}
+          {index < steps.length - 1 && (
+            <div class="hidden md:block absolute top-12 left-1/2 w-full h-0.5 bg-slate-200"></div>
+          )}
+
+          {/* Step content */}
+          <div class="relative">
+            {/* Number circle */}
+            <div class="w-24 h-24 mx-auto mb-6 bg-fire-100 rounded-full flex items-center justify-center">
+              <span class="text-3xl font-display font-bold text-fire-600">{step.number}</span>
+            </div>
+
+            <h3 class="text-xl font-display font-semibold text-slate-800 mb-3">
+              {step.title}
+            </h3>
+            <p class="text-slate-600 leading-relaxed">
+              {step.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

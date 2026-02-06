@@ -1,0 +1,79 @@
+---
+interface Props {
+  type: 'WebSite' | 'Organization' | 'FireStation' | 'BreadcrumbList' | 'Article';
+  data: Record<string, any>;
+}
+
+const { type, data } = Astro.props;
+
+const siteUrl = 'https://firefighter.com.mx';
+
+// Base schemas
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Firefighter México",
+  "url": siteUrl,
+  "logo": `${siteUrl}/images/logo-firefighter-mexico.svg`,
+  "description": "Directorio Nacional de Estaciones de Bomberos de México",
+  "sameAs": [],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "911",
+    "contactType": "emergency",
+    "areaServed": "MX"
+  }
+};
+
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Firefighter México",
+  "url": siteUrl,
+  "description": "Directorio Nacional de Estaciones de Bomberos de México",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${siteUrl}/directorio/?q={search_term_string}`
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
+
+let schema;
+
+switch (type) {
+  case 'WebSite':
+    schema = { ...webSiteSchema, ...data };
+    break;
+  case 'Organization':
+    schema = { ...organizationSchema, ...data };
+    break;
+  case 'FireStation':
+    schema = {
+      "@context": "https://schema.org",
+      "@type": "FireStation",
+      ...data
+    };
+    break;
+  case 'BreadcrumbList':
+    schema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": data.items
+    };
+    break;
+  case 'Article':
+    schema = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      ...data
+    };
+    break;
+  default:
+    schema = data;
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

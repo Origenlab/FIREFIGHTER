@@ -1,5 +1,7 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
+import Badge from '../../components/ui/Badge.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -26,104 +28,96 @@ const formatDate = (date: Date) => {
   title={post.data.title}
   description={post.data.description}
   image={post.data.image}
-  imageAlt={post.data.imageAlt}
   type="article"
-  publishedDate={post.data.pubDate.toISOString()}
-  modifiedDate={post.data.updatedDate?.toISOString()}
-  author={post.data.author}
-  keywords={post.data.tags}
 >
-  <article class="section">
-    <div class="container">
-      <header class="article-header">
-        <div class="article-meta">
-          <time datetime={post.data.pubDate.toISOString()}>
-            {formatDate(post.data.pubDate)}
-          </time>
-          {post.data.author && <span class="author">por {post.data.author}</span>}
-        </div>
-        <h1>{post.data.title}</h1>
-        <p class="article-description">{post.data.description}</p>
-        {post.data.tags.length > 0 && (
-          <div class="article-tags">
+  <article class="section bg-slate-50">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <Breadcrumbs
+          items={[
+            { label: 'Blog', href: '/blog' },
+            { label: post.data.title },
+          ]}
+        />
+
+        <header class="mb-8">
+          <div class="flex flex-wrap gap-2 mb-4">
             {post.data.tags.map((tag) => (
-              <span class="tag">{tag}</span>
+              <Badge variant="fire" size="sm">{tag}</Badge>
             ))}
           </div>
+
+          <h1 class="text-3xl md:text-4xl font-display font-bold text-slate-800 mb-4">
+            {post.data.title}
+          </h1>
+
+          <p class="text-xl text-slate-600 mb-6">
+            {post.data.description}
+          </p>
+
+          <div class="flex items-center gap-4 text-sm text-slate-500">
+            <span>Por {post.data.author}</span>
+            <span>•</span>
+            <time datetime={post.data.pubDate.toISOString()}>
+              {formatDate(post.data.pubDate)}
+            </time>
+          </div>
+        </header>
+
+        {post.data.image && (
+          <img
+            src={post.data.image}
+            alt={post.data.imageAlt || post.data.title}
+            class="w-full rounded-xl mb-8"
+          />
         )}
-      </header>
 
-      {post.data.image && (
-        <img
-          src={post.data.image}
-          alt={post.data.imageAlt || post.data.title}
-          class="article-image"
-        />
-      )}
+        <div class="card p-8 md:p-12">
+          <div class="prose prose-lg prose-slate max-w-none">
+            <Content />
+          </div>
+        </div>
 
-      <div class="prose">
-        <Content />
+        <footer class="mt-8 pt-8 border-t border-slate-200">
+          <a href="/blog" class="btn btn-outline">
+            ← Volver al blog
+          </a>
+        </footer>
       </div>
-
-      <footer class="article-footer">
-        <a href="/blog" class="btn btn-outline">← Volver al blog</a>
-      </footer>
     </div>
   </article>
 </BaseLayout>
 
 <style>
-  .article-header {
-    margin-bottom: var(--space-8);
+  .prose h2 {
+    @apply text-2xl font-display font-semibold text-slate-800 mt-8 mb-4;
   }
 
-  .article-meta {
-    display: flex;
-    gap: var(--space-4);
-    color: var(--color-text-muted);
-    font-size: var(--text-sm);
-    margin-bottom: var(--space-4);
+  .prose h3 {
+    @apply text-xl font-display font-semibold text-slate-700 mt-6 mb-3;
   }
 
-  .article-header h1 {
-    margin-bottom: var(--space-4);
+  .prose p {
+    @apply text-slate-600 mb-4 leading-relaxed;
   }
 
-  .article-description {
-    font-size: var(--text-xl);
-    color: var(--color-text-secondary);
-    margin-bottom: var(--space-4);
+  .prose ul, .prose ol {
+    @apply space-y-2 mb-6 pl-6;
   }
 
-  .article-tags {
-    display: flex;
-    gap: var(--space-2);
-    flex-wrap: wrap;
+  .prose li {
+    @apply text-slate-600;
   }
 
-  .tag {
-    background-color: var(--color-bg-secondary);
-    padding: var(--space-1) var(--space-3);
-    border-radius: var(--radius-full);
-    font-size: var(--text-sm);
-    color: var(--color-text-secondary);
+  .prose strong {
+    @apply text-slate-800;
   }
 
-  .article-image {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: var(--radius-lg);
-    margin-bottom: var(--space-8);
+  .prose a {
+    @apply text-fire-600 hover:text-fire-700 underline;
   }
 
-  .prose {
-    max-width: 75ch;
-  }
-
-  .article-footer {
-    margin-top: var(--space-12);
-    padding-top: var(--space-8);
-    border-top: 1px solid var(--color-border);
+  .prose blockquote {
+    @apply border-l-4 border-fire-500 pl-6 italic text-slate-600 my-6;
   }
 </style>

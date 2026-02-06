@@ -1,0 +1,52 @@
+---
+import states from '../../data/states.json';
+import Card from '../ui/Card.astro';
+
+// Sort states alphabetically
+const sortedStates = [...states].sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<section class="section bg-slate-50">
+  <div class="container-custom">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-800 mb-4">
+        Explora por Estado
+      </h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        Selecciona un estado para ver todas las estaciones de bomberos disponibles
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4">
+      {sortedStates.map((state) => (
+        <a
+          href={`/directorio/${state.slug}`}
+          class="group card p-4 hover:border-fire-400 transition-all"
+        >
+          <div class="flex items-center justify-between">
+            <div class="flex-1 min-w-0">
+              <h3 class="font-semibold text-slate-800 group-hover:text-fire-600 transition-colors truncate">
+                {state.name}
+              </h3>
+              <p class="text-sm text-slate-500">
+                {state.totalStations} estaciones
+              </p>
+            </div>
+            <svg class="w-5 h-5 text-slate-400 group-hover:text-fire-600 group-hover:translate-x-1 transition-all flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <!-- Total count -->
+    <div class="text-center mt-10">
+      <p class="text-slate-500">
+        Total: <span class="font-semibold text-slate-700">{sortedStates.reduce((acc, s) => acc + s.totalStations, 0)}</span> estaciones en <span class="font-semibold text-slate-700">32</span> estados
+      </p>
+    </div>
+  </div>
+</section>

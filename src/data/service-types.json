@@ -1,0 +1,20 @@
+{
+  "serviceTypes": [
+    {"id": "profesional", "name": "Profesional", "description": "Cuerpo de bomberos con personal remunerado"},
+    {"id": "voluntario", "name": "Voluntario", "description": "Cuerpo de bomberos con personal voluntario"},
+    {"id": "industrial", "name": "Industrial", "description": "Brigada de emergencia en zona industrial"},
+    {"id": "aeroportuario", "name": "Aeroportuario", "description": "Servicio de rescate en aeropuertos"},
+    {"id": "proteccion-civil", "name": "Protección Civil", "description": "Unidad de protección civil con capacidad de respuesta a incendios"}
+  ],
+  "services": [
+    {"id": "combate-incendios", "name": "Combate de Incendios", "icon": "flame"},
+    {"id": "atencion-medica", "name": "Atención Médica", "icon": "heart-pulse"},
+    {"id": "rescate-vehicular", "name": "Rescate Vehicular", "icon": "car"},
+    {"id": "rescate-acuatico", "name": "Rescate Acuático", "icon": "waves"},
+    {"id": "materiales-peligrosos", "name": "Materiales Peligrosos", "icon": "alert-triangle"},
+    {"id": "rescate-alturas", "name": "Rescate en Alturas", "icon": "mountain"},
+    {"id": "proteccion-civil", "name": "Protección Civil", "icon": "shield"},
+    {"id": "capacitacion", "name": "Capacitación", "icon": "graduation-cap"},
+    {"id": "prevencion", "name": "Prevención", "icon": "eye"}
+  ]
+}

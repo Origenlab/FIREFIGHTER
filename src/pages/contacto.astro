@@ -1,174 +1,126 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
 ---
 
 <BaseLayout
   title="Contacto"
-  description="Contáctanos para cotizaciones, dudas o más información sobre nuestros servicios de protección contra incendios."
-  keywords={['contacto', 'cotización', 'información']}
+  description="Contáctanos para sugerencias, correcciones o información sobre el directorio de estaciones de bomberos de México."
 >
-  <section class="section">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h1>Contáctanos</h1>
-          <p class="lead">
-            Estamos aquí para ayudarte. Completa el formulario o utiliza nuestros datos de contacto directo.
+  <section class="section bg-slate-50">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-12">
+          <h1 class="text-3xl md:text-4xl font-display font-bold text-slate-800 mb-4">
+            Contacto
+          </h1>
+          <p class="text-lg text-slate-600">
+            ¿Tienes sugerencias, correcciones o quieres agregar una estación?
+            Escríbenos y te responderemos lo antes posible.
           </p>
-
-          <div class="info-cards">
-            <div class="info-card">
-              <h3>📍 Dirección</h3>
-              <address>
-                <p>Ciudad de México, México</p>
-              </address>
-            </div>
-
-            <div class="info-card">
-              <h3>📞 Teléfono</h3>
-              <p><a href="tel:+525512345678">+52 55 1234 5678</a></p>
-            </div>
-
-            <div class="info-card">
-              <h3>✉️ Email</h3>
-              <p><a href="mailto:info@firefighter.com.mx">info@firefighter.com.mx</a></p>
-            </div>
-
-            <div class="info-card">
-              <h3>🕐 Horario</h3>
-              <p>Lunes a Viernes: 9:00 - 18:00</p>
-              <p>Emergencias: 24/7</p>
-            </div>
-          </div>
         </div>
 
-        <div class="contact-form-wrapper">
-          <form class="contact-form card" name="contact" method="POST" data-netlify="true">
-            <div class="card-content">
-              <h2>Envíanos un mensaje</h2>
-
-              <div class="form-group">
-                <label for="name" class="form-label">Nombre completo *</label>
+        <div class="card p-8">
+          <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-slate-700 mb-2">
+                  Nombre *
+                </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  class="form-input"
                   required
-                  autocomplete="name"
+                  class="input"
+                  placeholder="Tu nombre"
                 />
               </div>
-
-              <div class="form-group">
-                <label for="email" class="form-label">Correo electrónico *</label>
+              <div>
+                <label for="email" class="block text-sm font-medium text-slate-700 mb-2">
+                  Correo electrónico *
+                </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  class="form-input"
                   required
-                  autocomplete="email"
+                  class="input"
+                  placeholder="tu@email.com"
                 />
               </div>
+            </div>
 
-              <div class="form-group">
-                <label for="phone" class="form-label">Teléfono</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  class="form-input"
-                  autocomplete="tel"
-                />
-              </div>
+            <div>
+              <label for="subject" class="block text-sm font-medium text-slate-700 mb-2">
+                Asunto *
+              </label>
+              <select id="subject" name="subject" required class="input">
+                <option value="">Selecciona una opción</option>
+                <option value="agregar-estacion">Agregar nueva estación</option>
+                <option value="correccion">Corrección de datos</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="colaboracion">Colaboración</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
 
-              <div class="form-group">
-                <label for="service" class="form-label">Servicio de interés</label>
-                <select id="service" name="service" class="form-input">
-                  <option value="">Selecciona una opción</option>
-                  <option value="extintores">Extintores</option>
-                  <option value="sistemas">Sistemas contra incendios</option>
-                  <option value="capacitacion">Capacitación</option>
-                  <option value="otro">Otro</option>
-                </select>
-              </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-slate-700 mb-2">
+                Mensaje *
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="5"
+                class="input"
+                placeholder="Escribe tu mensaje aquí..."
+              ></textarea>
+            </div>
 
-              <div class="form-group">
-                <label for="message" class="form-label">Mensaje *</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  class="form-textarea"
-                  rows="5"
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-block">
+            <div class="flex items-center gap-4">
+              <Button type="submit" variant="primary">
                 Enviar mensaje
-              </button>
+              </Button>
+              <span class="text-sm text-slate-500">* Campos requeridos</span>
             </div>
           </form>
+        </div>
+
+        <!-- Additional info -->
+        <div class="mt-12 grid md:grid-cols-2 gap-6">
+          <div class="card p-6 text-center">
+            <div class="w-12 h-12 bg-fire-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-fire-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+              </svg>
+            </div>
+            <h3 class="font-display font-semibold text-slate-800 mb-2">Agregar Estación</h3>
+            <p class="text-sm text-slate-600 mb-4">
+              ¿Conoces una estación que no está en nuestro directorio?
+            </p>
+            <a href="/agregar-estacion" class="text-fire-600 hover:text-fire-700 font-medium text-sm">
+              Sugerir estación →
+            </a>
+          </div>
+
+          <div class="card p-6 text-center">
+            <div class="w-12 h-12 bg-gold-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+              </svg>
+            </div>
+            <h3 class="font-display font-semibold text-slate-800 mb-2">¿Emergencia?</h3>
+            <p class="text-sm text-slate-600 mb-4">
+              Este no es un servicio de emergencias. En caso de emergencia:
+            </p>
+            <a href="tel:911" class="text-2xl font-display font-bold text-fire-600">
+              Llama al 911
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </BaseLayout>
-
-<style>
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-12);
-    align-items: start;
-  }
-
-  h1 {
-    margin-bottom: var(--space-4);
-  }
-
-  .lead {
-    color: var(--color-text-secondary);
-    font-size: var(--text-lg);
-    margin-bottom: var(--space-8);
-  }
-
-  .info-cards {
-    display: grid;
-    gap: var(--space-4);
-  }
-
-  .info-card {
-    padding: var(--space-4);
-    background-color: var(--color-bg-secondary);
-    border-radius: var(--radius-lg);
-  }
-
-  .info-card h3 {
-    font-size: var(--text-base);
-    margin-bottom: var(--space-2);
-  }
-
-  .info-card p {
-    margin-bottom: var(--space-1);
-    color: var(--color-text-secondary);
-  }
-
-  .info-card address {
-    font-style: normal;
-  }
-
-  .contact-form h2 {
-    margin-bottom: var(--space-6);
-  }
-
-  .btn-block {
-    width: 100%;
-  }
-
-  @media (max-width: 768px) {
-    .contact-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>

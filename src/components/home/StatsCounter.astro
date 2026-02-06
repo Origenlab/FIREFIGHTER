@@ -1,0 +1,25 @@
+---
+const stats = [
+  { value: '700+', label: 'Estaciones Registradas', icon: 'building' },
+  { value: '20,000+', label: 'Bomberos en Servicio', icon: 'users' },
+  { value: '32', label: 'Estados Cubiertos', icon: 'map' },
+  { value: '24/7', label: 'Disponibilidad', icon: 'clock' },
+];
+---
+
+<section class="bg-fire-600 py-16 md:py-20">
+  <div class="container-custom">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+      {stats.map((stat) => (
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-display font-bold text-white mb-2">
+            {stat.value}
+          </div>
+          <div class="text-fire-100 text-sm md:text-base">
+            {stat.label}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

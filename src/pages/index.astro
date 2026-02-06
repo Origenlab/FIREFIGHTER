@@ -1,216 +1,25 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/home/Hero.astro';
+import StatesGrid from '../components/home/StatesGrid.astro';
+import StatsCounter from '../components/home/StatsCounter.astro';
+import HowItWorks from '../components/home/HowItWorks.astro';
+import FeaturedStations from '../components/home/FeaturedStations.astro';
+
+const schema = {
+  type: 'WebSite' as const,
+  data: {},
+};
 ---
 
 <BaseLayout
-  title="Inicio"
-  description="Firefighter - Servicios profesionales de seguridad y protección contra incendios en México. Extintores, sistemas contra incendios, capacitación y más."
-  keywords={['extintores', 'protección contra incendios', 'seguridad industrial', 'México', 'capacitación']}
+  title="Directorio de Estaciones de Bomberos en México"
+  description="Encuentra estaciones de bomberos en los 32 estados de México. Directorio completo con direcciones, teléfonos y servicios de emergencia. Línea de emergencia: 911."
+  schema={schema}
 >
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1>Protección Profesional Contra Incendios</h1>
-        <p class="hero-subtitle">
-          Expertos en seguridad y prevención de incendios. Protegemos lo que más importa.
-        </p>
-        <div class="hero-cta">
-          <a href="/contacto" class="btn btn-primary">Solicitar Cotización</a>
-          <a href="/servicios" class="btn btn-outline">Ver Servicios</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section class="section features">
-    <div class="container">
-      <h2 class="section-title">¿Por qué elegirnos?</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">🔥</div>
-          <h3>Experiencia</h3>
-          <p>Más de 10 años de experiencia en protección contra incendios.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">✓</div>
-          <h3>Certificados</h3>
-          <p>Personal certificado y equipos que cumplen con las normas oficiales.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3>Respuesta Rápida</h3>
-          <p>Atención inmediata y servicio de emergencia 24/7.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">💼</div>
-          <h3>Soluciones Integrales</h3>
-          <p>Desde la evaluación hasta la instalación y mantenimiento.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Preview -->
-  <section class="section services-preview">
-    <div class="container">
-      <h2 class="section-title">Nuestros Servicios</h2>
-      <div class="services-grid">
-        <article class="service-card card">
-          <div class="card-content">
-            <h3>Extintores</h3>
-            <p>Venta, recarga y mantenimiento de extintores de todos los tipos.</p>
-            <a href="/servicios/extintores" class="btn btn-outline">Más información</a>
-          </div>
-        </article>
-        <article class="service-card card">
-          <div class="card-content">
-            <h3>Sistemas Contra Incendios</h3>
-            <p>Diseño e instalación de sistemas de detección y supresión.</p>
-            <a href="/servicios/sistemas" class="btn btn-outline">Más información</a>
-          </div>
-        </article>
-        <article class="service-card card">
-          <div class="card-content">
-            <h3>Capacitación</h3>
-            <p>Cursos y talleres de prevención y combate de incendios.</p>
-            <a href="/servicios/capacitacion" class="btn btn-outline">Más información</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="section cta-section">
-    <div class="container">
-      <div class="cta-content">
-        <h2>¿Necesitas una cotización?</h2>
-        <p>Contáctanos hoy y recibe una evaluación gratuita de tus necesidades de seguridad.</p>
-        <a href="/contacto" class="btn btn-primary">Contactar Ahora</a>
-      </div>
-    </div>
-  </section>
+  <Hero />
+  <StatesGrid />
+  <FeaturedStations />
+  <StatsCounter />
+  <HowItWorks />
 </BaseLayout>
-
-<style>
-  /* Hero */
-  .hero {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    color: white;
-    padding-block: var(--space-20);
-    text-align: center;
-  }
-
-  .hero h1 {
-    color: white;
-    font-size: var(--text-5xl);
-    margin-bottom: var(--space-4);
-  }
-
-  .hero-subtitle {
-    font-size: var(--text-xl);
-    opacity: 0.9;
-    max-width: 600px;
-    margin-inline: auto;
-    margin-bottom: var(--space-8);
-  }
-
-  .hero-cta {
-    display: flex;
-    gap: var(--space-4);
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .hero .btn-outline {
-    border-color: white;
-    color: white;
-  }
-
-  .hero .btn-outline:hover {
-    background-color: white;
-    color: var(--color-primary);
-  }
-
-  /* Section titles */
-  .section-title {
-    text-align: center;
-    margin-bottom: var(--space-12);
-  }
-
-  /* Features */
-  .features {
-    background-color: var(--color-bg-secondary);
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--space-8);
-  }
-
-  .feature-card {
-    text-align: center;
-    padding: var(--space-6);
-  }
-
-  .feature-icon {
-    font-size: 3rem;
-    margin-bottom: var(--space-4);
-  }
-
-  .feature-card h3 {
-    margin-bottom: var(--space-2);
-  }
-
-  /* Services Grid */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-6);
-  }
-
-  .service-card h3 {
-    color: var(--color-primary);
-    margin-bottom: var(--space-3);
-  }
-
-  .service-card p {
-    color: var(--color-text-secondary);
-    margin-bottom: var(--space-4);
-  }
-
-  /* CTA Section */
-  .cta-section {
-    background-color: var(--color-secondary);
-    color: white;
-  }
-
-  .cta-content {
-    text-align: center;
-    max-width: 600px;
-    margin-inline: auto;
-  }
-
-  .cta-content h2 {
-    color: white;
-    margin-bottom: var(--space-4);
-  }
-
-  .cta-content p {
-    opacity: 0.9;
-    margin-bottom: var(--space-6);
-  }
-
-  @media (max-width: 768px) {
-    .hero {
-      padding-block: var(--space-12);
-    }
-
-    .hero h1 {
-      font-size: var(--text-3xl);
-    }
-  }
-</style>

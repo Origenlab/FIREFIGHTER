@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Acerca de Firefighter México"
+  description="Conoce más sobre el proyecto Firefighter México, el directorio nacional de estaciones de bomberos más completo del país."
+>
+  <section class="section">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="text-3xl md:text-4xl font-display font-bold text-slate-800 mb-6">
+          Acerca de Firefighter México
+        </h1>
+
+        <div class="prose prose-lg prose-slate">
+          <p class="lead text-xl text-slate-600 mb-8">
+            Firefighter México es el directorio más completo de estaciones de bomberos en la República Mexicana. Nuestro objetivo es facilitar el acceso a información de contacto y ubicación de los cuerpos de bomberos en todo el país.
+          </p>
+
+          <div class="card p-8 mb-8">
+            <h2 class="text-2xl font-display font-semibold text-slate-800 mb-4">
+              Nuestra Misión
+            </h2>
+            <p class="text-slate-600">
+              Proporcionar a la ciudadanía mexicana una herramienta confiable y actualizada para localizar estaciones de bomberos. Creemos que el acceso rápido a esta información puede salvar vidas en situaciones de emergencia.
+            </p>
+          </div>
+
+          <h2 class="text-2xl font-display font-semibold text-slate-800 mb-4">
+            ¿Qué ofrecemos?
+          </h2>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-fire-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-slate-600">Directorio con información de más de 700 estaciones de bomberos</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-fire-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-slate-600">Cobertura de los 32 estados de la República</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-fire-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-slate-600">Mapa interactivo para ubicar estaciones cercanas</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-fire-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-slate-600">Información de contacto directo y servicios disponibles</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-fire-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-slate-600">Actualización constante de datos</span>
+            </li>
+          </ul>
+
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-8">
+            <h3 class="font-display font-semibold text-amber-800 mb-2">
+              Aviso Importante
+            </h3>
+            <p class="text-amber-700 text-sm">
+              Firefighter México es un <strong>proyecto independiente no gubernamental</strong>. La información proporcionada es recopilada de fuentes públicas y puede no estar siempre actualizada. En caso de emergencia, siempre llama al <strong>911</strong>.
+            </p>
+          </div>
+
+          <h2 class="text-2xl font-display font-semibold text-slate-800 mb-4">
+            Colabora con nosotros
+          </h2>
+          <p class="text-slate-600 mb-4">
+            Si conoces una estación de bomberos que no está en nuestro directorio, o si encuentras información incorrecta, te invitamos a colaborar con nosotros.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/agregar-estacion" class="btn btn-primary">
+              Sugerir estación
+            </a>
+            <a href="/contacto" class="btn btn-outline">
+              Contactar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
