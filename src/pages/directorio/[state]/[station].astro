@@ -236,123 +236,262 @@ const schemaData = {
           </div>
         </div>
 
-        <!-- Sidebar -->
-        <div class="space-y-6">
-          <!-- Contact Info -->
-          <div class="card p-6">
-            <h2 class="text-lg font-display font-semibold text-slate-800 mb-4">
-              Contacto
-            </h2>
-            <div class="space-y-4">
-              <div>
-                <div class="text-sm text-slate-500 mb-1">Teléfono principal</div>
-                <a href={`tel:${data.phone}`} class="text-fire-600 hover:text-fire-700 font-medium">
-                  {data.phone}
-                </a>
-              </div>
+        <!-- Sidebar - Refined Design -->
+        <div class="space-y-4">
 
-              {data.adminPhone && (
+          <!-- Quick Stats - Compact -->
+          <div class="card p-4">
+            <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Datos Clave</h3>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-fire-50 rounded-md flex items-center justify-center">
+                  <svg class="w-4 h-4 text-fire-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
                 <div>
-                  <div class="text-sm text-slate-500 mb-1">Teléfono administrativo</div>
-                  <a href={`tel:${data.adminPhone}`} class="text-slate-700 hover:text-fire-600">
-                    {data.adminPhone}
-                  </a>
+                  <div class="text-sm font-semibold text-slate-800">{data.operatingHours}</div>
+                  <div class="text-xs text-slate-400">Horario</div>
+                </div>
+              </div>
+              {data.yearEstablished && (
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 bg-gold-50 rounded-md flex items-center justify-center">
+                    <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-sm font-semibold text-slate-800">{data.yearEstablished}</div>
+                    <div class="text-xs text-slate-400">Fundación</div>
+                  </div>
                 </div>
               )}
-
-              <div>
-                <div class="text-sm text-slate-500 mb-1">Emergencias</div>
-                <a href="tel:911" class="text-2xl font-display font-bold text-gold-500 hover:text-gold-600">
-                  911
-                </a>
+              {data.totalPersonnel && (
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 bg-blue-50 rounded-md flex items-center justify-center">
+                    <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-sm font-semibold text-slate-800">{data.totalPersonnel}</div>
+                    <div class="text-xs text-slate-400">Personal</div>
+                  </div>
+                </div>
+              )}
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-green-50 rounded-md flex items-center justify-center">
+                  <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-sm font-semibold text-green-600">{data.status === 'activa' ? 'Activa' : data.status}</div>
+                  <div class="text-xs text-slate-400">Estado</div>
+                </div>
               </div>
+            </div>
+          </div>
+
+          <!-- Equipment - Compact -->
+          {data.equipment && (
+            <div class="card p-4">
+              <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Flota Vehicular</h3>
+              <div class="space-y-2">
+                {data.equipment.fireTrucks > 0 && (
+                  <div class="flex items-center justify-between py-2 px-3 bg-slate-50 rounded-lg">
+                    <div class="flex items-center gap-2">
+                      <div class="w-6 h-6 bg-fire-100 rounded flex items-center justify-center">
+                        <svg class="w-3.5 h-3.5 text-fire-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path>
+                        </svg>
+                      </div>
+                      <span class="text-sm text-slate-700">Motobombas</span>
+                    </div>
+                    <span class="text-sm font-bold text-fire-600">{data.equipment.fireTrucks}</span>
+                  </div>
+                )}
+                {data.equipment.ambulances > 0 && (
+                  <div class="flex items-center justify-between py-2 px-3 bg-slate-50 rounded-lg">
+                    <div class="flex items-center gap-2">
+                      <div class="w-6 h-6 bg-blue-100 rounded flex items-center justify-center">
+                        <svg class="w-3.5 h-3.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                      </div>
+                      <span class="text-sm text-slate-700">Ambulancias</span>
+                    </div>
+                    <span class="text-sm font-bold text-blue-600">{data.equipment.ambulances}</span>
+                  </div>
+                )}
+                {data.equipment.rescueVehicles > 0 && (
+                  <div class="flex items-center justify-between py-2 px-3 bg-slate-50 rounded-lg">
+                    <div class="flex items-center gap-2">
+                      <div class="w-6 h-6 bg-gold-100 rounded flex items-center justify-center">
+                        <svg class="w-3.5 h-3.5 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path>
+                        </svg>
+                      </div>
+                      <span class="text-sm text-slate-700">Rescate</span>
+                    </div>
+                    <span class="text-sm font-bold text-gold-600">{data.equipment.rescueVehicles}</span>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          <!-- Contact - Refined -->
+          <div class="card p-4">
+            <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Contacto</h3>
+            <div class="space-y-2">
+              <a href={`tel:${data.phone}`} class="flex items-center gap-3 p-2.5 bg-fire-50 rounded-lg border border-fire-100 hover:border-fire-200 transition-colors group">
+                <div class="w-8 h-8 bg-fire-500 rounded-md flex items-center justify-center">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                  </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-fire-600">Principal</div>
+                  <div class="text-sm font-medium text-slate-800 truncate">{data.phone}</div>
+                </div>
+              </a>
+
+              {data.adminPhone && (
+                <a href={`tel:${data.adminPhone}`} class="flex items-center gap-3 p-2.5 hover:bg-slate-50 rounded-lg transition-colors">
+                  <div class="w-8 h-8 bg-slate-100 rounded-md flex items-center justify-center">
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="text-xs text-slate-400">Administrativo</div>
+                    <div class="text-sm text-slate-700 truncate">{data.adminPhone}</div>
+                  </div>
+                </a>
+              )}
 
               {data.email && (
-                <div>
-                  <div class="text-sm text-slate-500 mb-1">Email</div>
-                  <a href={`mailto:${data.email}`} class="text-slate-700 hover:text-fire-600 break-all">
-                    {data.email}
-                  </a>
-                </div>
+                <a href={`mailto:${data.email}`} class="flex items-center gap-3 p-2.5 hover:bg-slate-50 rounded-lg transition-colors">
+                  <div class="w-8 h-8 bg-slate-100 rounded-md flex items-center justify-center">
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="text-xs text-slate-400">Email</div>
+                    <div class="text-sm text-slate-700 truncate">{data.email}</div>
+                  </div>
+                </a>
               )}
 
               {data.website && (
-                <div>
-                  <div class="text-sm text-slate-500 mb-1">Sitio web</div>
-                  <a href={data.website} target="_blank" rel="noopener noreferrer" class="text-fire-600 hover:text-fire-700">
-                    Visitar sitio oficial →
-                  </a>
-                </div>
+                <a href={data.website} target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-2.5 hover:bg-slate-50 rounded-lg transition-colors">
+                  <div class="w-8 h-8 bg-slate-100 rounded-md flex items-center justify-center">
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <div class="text-xs text-slate-400">Sitio web</div>
+                    <div class="text-sm text-fire-600">Visitar →</div>
+                  </div>
+                </a>
               )}
             </div>
           </div>
 
-          <!-- Station Info -->
-          <div class="card p-6">
-            <h2 class="text-lg font-display font-semibold text-slate-800 mb-4">
-              Información
-            </h2>
-            <dl class="space-y-3">
-              <div class="flex justify-between">
-                <dt class="text-slate-500">Horario</dt>
-                <dd class="font-medium text-slate-800">{data.operatingHours}</dd>
+          <!-- Location - Refined -->
+          <div class="card p-4">
+            <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Ubicación</h3>
+            <div class="space-y-3 text-sm">
+              <div>
+                <div class="text-xs text-slate-400 mb-0.5">Dirección</div>
+                <div class="text-slate-700">{data.address}</div>
               </div>
-
-              {data.yearEstablished && (
-                <div class="flex justify-between">
-                  <dt class="text-slate-500">Fundación</dt>
-                  <dd class="font-medium text-slate-800">{data.yearEstablished}</dd>
+              {data.neighborhood && (
+                <div>
+                  <div class="text-xs text-slate-400 mb-0.5">Colonia</div>
+                  <div class="text-slate-700">{data.neighborhood}</div>
                 </div>
               )}
-
-              {data.totalPersonnel && (
-                <div class="flex justify-between">
-                  <dt class="text-slate-500">Personal</dt>
-                  <dd class="font-medium text-slate-800">{data.totalPersonnel} personas</dd>
+              <div class="flex gap-4">
+                <div class="flex-1">
+                  <div class="text-xs text-slate-400 mb-0.5">Alcaldía</div>
+                  <div class="text-slate-700">{data.municipality}</div>
                 </div>
-              )}
-
-              {data.equipment && (
-                <>
-                  {data.equipment.fireTrucks > 0 && (
-                    <div class="flex justify-between">
-                      <dt class="text-slate-500">Camiones</dt>
-                      <dd class="font-medium text-slate-800">{data.equipment.fireTrucks}</dd>
-                    </div>
-                  )}
-                  {data.equipment.ambulances > 0 && (
-                    <div class="flex justify-between">
-                      <dt class="text-slate-500">Ambulancias</dt>
-                      <dd class="font-medium text-slate-800">{data.equipment.ambulances}</dd>
-                    </div>
-                  )}
-                </>
-              )}
-            </dl>
+                {data.postalCode && (
+                  <div>
+                    <div class="text-xs text-slate-400 mb-0.5">C.P.</div>
+                    <div class="text-slate-700">{data.postalCode}</div>
+                  </div>
+                )}
+              </div>
+              <div class="pt-2 border-t border-slate-100">
+                <div class="text-xs text-slate-400 mb-1">Coordenadas</div>
+                <div class="font-mono text-xs text-slate-500 bg-slate-50 rounded px-2 py-1.5">
+                  {data.latitude.toFixed(6)}, {data.longitude.toFixed(6)}
+                </div>
+              </div>
+              <a
+                href={mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center gap-2 w-full py-2.5 bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium rounded-lg transition-colors"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                </svg>
+                Ver en Google Maps
+              </a>
+            </div>
           </div>
 
-          <!-- Nearby Stations -->
+          <!-- Verification Badge - Compact -->
+          {data.verified && (
+            <div class="card p-3 bg-green-50 border-green-100">
+              <div class="flex items-center gap-2">
+                <div class="w-7 h-7 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-sm font-medium text-green-800">Información Verificada</div>
+                  {data.lastUpdated && (
+                    <div class="text-xs text-green-600">Actualizado: {data.lastUpdated}</div>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+
+          <!-- Nearby Stations - Refined -->
           {nearbyStations.length > 0 && (
-            <div class="card p-6">
-              <h2 class="text-lg font-display font-semibold text-slate-800 mb-4">
-                Estaciones Cercanas
-              </h2>
-              <div class="space-y-3">
+            <div class="card p-4">
+              <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Estaciones Cercanas</h3>
+              <div class="space-y-2">
                 {nearbyStations.map((nearbyStation) => {
                   const slug = nearbyStation.id.split('/').pop()?.replace('.md', '');
                   return (
                     <a
                       href={`/directorio/${nearbyStation.data.stateSlug}/${slug}`}
-                      class="block p-3 bg-slate-50 rounded-lg hover:bg-fire-50 hover:border-fire-200 border border-transparent transition-all group"
+                      class="flex items-center gap-2.5 p-2.5 bg-slate-50 rounded-lg hover:bg-fire-50 border border-transparent hover:border-fire-100 transition-all group"
                     >
-                      <div class="font-medium text-slate-800 group-hover:text-fire-600 text-sm mb-1">
-                        {nearbyStation.data.name}
+                      <div class="w-7 h-7 bg-fire-100 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-fire-200">
+                        <svg class="w-3.5 h-3.5 text-fire-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path>
+                        </svg>
                       </div>
-                      <div class="flex items-center justify-between text-xs text-slate-500">
-                        <span>{nearbyStation.data.municipality}</span>
-                        <span class="text-fire-600 font-medium">
-                          ~{nearbyStation.distance.toFixed(1)} km
-                        </span>
+                      <div class="flex-1 min-w-0">
+                        <div class="text-sm text-slate-700 group-hover:text-fire-600 truncate">
+                          {nearbyStation.data.name}
+                        </div>
+                        <div class="text-xs text-slate-400">{nearbyStation.data.municipality}</div>
+                      </div>
+                      <div class="text-xs font-semibold text-fire-600 whitespace-nowrap">
+                        {nearbyStation.distance.toFixed(1)} km
                       </div>
                     </a>
                   );
@@ -361,26 +500,22 @@ const schemaData = {
             </div>
           )}
 
-          <!-- Other Stations in State -->
+          <!-- Other Stations in State - Refined -->
           {relatedStations.length > 0 && (
-            <div class="card p-6">
-              <h2 class="text-lg font-display font-semibold text-slate-800 mb-4">
-                Más en {state?.name || data.state}
-              </h2>
-              <div class="space-y-2">
+            <div class="card p-4">
+              <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Más en {state?.name || data.state}</h3>
+              <div class="space-y-1">
                 {relatedStations.map((relStation) => {
                   const slug = relStation.id.split('/').pop()?.replace('.md', '');
                   return (
                     <a
                       href={`/directorio/${relStation.data.stateSlug}/${slug}`}
-                      class="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-50 transition-colors group"
+                      class="flex items-center gap-2 px-2 py-1.5 rounded hover:bg-slate-50 transition-colors group"
                     >
-                      <div class="w-6 h-6 bg-fire-100 rounded flex items-center justify-center flex-shrink-0">
-                        <svg class="w-3 h-3 text-fire-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path>
-                        </svg>
-                      </div>
-                      <span class="text-sm text-slate-700 group-hover:text-fire-600 truncate">
+                      <svg class="w-3 h-3 text-slate-300 group-hover:text-fire-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                      </svg>
+                      <span class="text-sm text-slate-600 group-hover:text-fire-600 truncate">
                         {relStation.data.name}
                       </span>
                     </a>
@@ -389,22 +524,37 @@ const schemaData = {
               </div>
               <a
                 href={`/directorio/${data.stateSlug}`}
-                class="block mt-4 text-center text-sm text-fire-600 hover:text-fire-700 font-medium"
+                class="block mt-3 text-center text-xs text-fire-600 hover:text-fire-700 font-medium"
               >
-                Ver todas en {state?.name || data.state} →
+                Ver todas las estaciones →
               </a>
             </div>
           )}
 
-          <!-- Emergency CTA -->
-          <div class="bg-fire-600 rounded-xl p-6 text-center text-white">
-            <h3 class="font-display font-semibold mb-2">¿Emergencia?</h3>
-            <p class="text-fire-100 text-sm mb-4">No esperes, llama inmediatamente</p>
+          <!-- Emergency CTA - Refined -->
+          <div class="card p-4 bg-gradient-to-br from-fire-600 to-fire-700 text-white text-center">
+            <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+              </svg>
+            </div>
+            <h3 class="font-semibold mb-1">¿Emergencia?</h3>
+            <p class="text-fire-100 text-xs mb-3">No pierdas tiempo</p>
             <a
               href="tel:911"
-              class="block w-full py-3 bg-white text-fire-600 font-bold rounded-lg hover:bg-fire-50 transition-colors"
+              class="flex items-center justify-center gap-2 w-full py-3 bg-white text-fire-600 font-bold rounded-lg hover:bg-fire-50 transition-colors"
             >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+              </svg>
               Llamar al 911
+            </a>
+          </div>
+
+          <!-- Report Info - Minimal -->
+          <div class="text-center py-2">
+            <a href="/agregar-estacion" class="text-xs text-slate-400 hover:text-fire-600 transition-colors">
+              ¿Información incorrecta? Ayúdanos a corregirla
             </a>
           </div>
         </div>
@@ -413,202 +563,347 @@ const schemaData = {
   </div>
 </BaseLayout>
 
-<style>
+<style is:global>
   /* Station Content - Enhanced Design System */
   .station-content {
-    @apply space-y-6;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
   }
 
-  /* Main Section Cards (H2) */
-  .station-content :global(h2) {
-    @apply relative flex items-center gap-3 text-xl font-display font-bold text-white
-           bg-gradient-to-r from-fire-600 to-fire-500
-           px-6 py-4 rounded-t-xl mt-8 mb-0;
+  /* Main Section Headers (H2) - Fire Red Headers */
+  .station-content h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: white;
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+    padding: 1rem 1.5rem;
+    margin: 0;
+    border-top: 1px solid #fecaca;
   }
 
-  .station-content :global(h2)::before {
+  .station-content h2:first-of-type {
+    border-top: none;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .station-content h2::before {
     content: '';
-    @apply w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M13 10V3L4 14h7v7l9-11h-7z'/%3E%3C/svg%3E");
-    background-size: 20px;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z'/%3E%3C/svg%3E");
+    background-size: 1.25rem;
     background-position: center;
     background-repeat: no-repeat;
+    flex-shrink: 0;
   }
 
-  .station-content :global(h2:first-of-type) {
-    @apply mt-0;
+  /* Content Sections */
+  .station-content > p,
+  .station-content > ul,
+  .station-content > ol,
+  .station-content > table,
+  .station-content > blockquote {
+    padding: 0 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
-  /* Section Content Wrapper */
-  .station-content :global(h2 + *) {
-    @apply bg-white rounded-b-xl shadow-sm border border-slate-200 border-t-0 p-6;
-  }
-
-  .station-content :global(h2 + p),
-  .station-content :global(h2 + ul),
-  .station-content :global(h2 + ol) {
-    @apply bg-white rounded-b-xl shadow-sm border border-slate-200 border-t-0 p-6 text-slate-600;
+  /* H2 Section Wrappers */
+  .station-content h2 + p,
+  .station-content h2 + ul,
+  .station-content h2 + h3 {
+    padding-top: 1.5rem;
   }
 
   /* Subsection Headers (H3) */
-  .station-content :global(h3) {
-    @apply relative flex items-center gap-2 text-lg font-display font-semibold text-slate-800
-           mt-6 mb-4 pb-2 border-b-2 border-fire-200;
+  .station-content h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #1e293b;
+    padding: 0 1.5rem;
+    margin: 1.5rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #fecaca;
   }
 
-  .station-content :global(h3)::before {
+  .station-content h3::before {
     content: '';
-    @apply w-6 h-6 rounded bg-fire-100;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.375rem;
+    background-color: #fee2e2;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23dc2626' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M9 5l7 7-7 7'/%3E%3C/svg%3E");
-    background-size: 14px;
+    background-size: 0.875rem;
     background-position: center;
     background-repeat: no-repeat;
+    flex-shrink: 0;
   }
 
   /* Paragraphs */
-  .station-content :global(p) {
-    @apply text-slate-600 leading-relaxed mb-4;
+  .station-content p {
+    color: #475569;
+    line-height: 1.75;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
-  .station-content :global(p strong) {
-    @apply text-slate-800 font-semibold;
+  .station-content p strong {
+    color: #1e293b;
+    font-weight: 600;
   }
 
-  /* Lists - Styled as Feature Cards */
-  .station-content :global(ul) {
-    @apply space-y-2 mb-6 list-none pl-0;
+  /* Unordered Lists - Card Style */
+  .station-content ul {
+    list-style: none;
+    padding: 0 1.5rem;
+    margin: 1rem 0;
   }
 
-  .station-content :global(ul li) {
-    @apply relative flex items-start gap-3 p-3 bg-slate-50 rounded-lg border border-slate-100
-           hover:bg-fire-50 hover:border-fire-200 transition-colors;
+  .station-content ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
   }
 
-  .station-content :global(ul li)::before {
+  .station-content ul li:hover {
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    border-color: #fecaca;
+    transform: translateX(4px);
+  }
+
+  .station-content ul li::before {
     content: '';
-    @apply w-5 h-5 rounded bg-fire-500 flex-shrink-0 mt-0.5;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 0.25rem;
+    background-color: #dc2626;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
-    background-size: 12px;
+    background-size: 0.75rem;
     background-position: center;
     background-repeat: no-repeat;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
   }
 
-  .station-content :global(ul li strong) {
-    @apply text-fire-700 font-semibold;
+  .station-content ul li strong {
+    color: #b91c1c;
+    font-weight: 600;
   }
 
-  /* Ordered Lists */
-  .station-content :global(ol) {
-    @apply space-y-3 mb-6 list-none pl-0 counter-reset: item;
+  /* Ordered Lists - Numbered Steps */
+  .station-content ol {
+    list-style: none;
+    padding: 0 1.5rem;
+    margin: 1rem 0;
+    counter-reset: step-counter;
   }
 
-  .station-content :global(ol li) {
-    @apply relative flex items-start gap-4 p-4 bg-gradient-to-r from-slate-50 to-white
-           rounded-lg border border-slate-200 counter-increment: item;
+  .station-content ol li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    background: white;
+    border-radius: 0.75rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    counter-increment: step-counter;
+    transition: all 0.2s ease;
   }
 
-  .station-content :global(ol li)::before {
-    content: counter(item);
-    @apply w-8 h-8 rounded-full bg-fire-600 text-white font-bold text-sm
-           flex items-center justify-center flex-shrink-0;
+  .station-content ol li:hover {
+    border-color: #fecaca;
+    box-shadow: 0 4px 6px rgba(220, 38, 38, 0.1);
   }
 
-  /* Tables - Professional Data Display */
-  .station-content :global(table) {
-    @apply w-full border-collapse rounded-xl overflow-hidden shadow-sm mb-6;
+  .station-content ol li::before {
+    content: counter(step-counter);
+    min-width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+    color: white;
+    font-weight: 700;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
   }
 
-  .station-content :global(thead) {
-    @apply bg-gradient-to-r from-slate-800 to-slate-700;
+  .station-content ol li strong {
+    color: #1e293b;
+    font-weight: 600;
   }
 
-  .station-content :global(th) {
-    @apply text-white font-display font-semibold text-sm text-left px-4 py-3
-           border-b border-slate-600;
+  /* Tables - Professional Design */
+  .station-content table {
+    width: calc(100% - 3rem);
+    margin: 1.5rem;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
 
-  .station-content :global(tbody tr) {
-    @apply bg-white border-b border-slate-100 hover:bg-fire-50 transition-colors;
+  .station-content thead {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
   }
 
-  .station-content :global(tbody tr:last-child) {
-    @apply border-b-0;
+  .station-content th {
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-align: left;
+    padding: 0.875rem 1rem;
+    border-bottom: 2px solid #475569;
   }
 
-  .station-content :global(td) {
-    @apply px-4 py-3 text-slate-600 text-sm;
+  .station-content th:first-child {
+    border-radius: 0.75rem 0 0 0;
   }
 
-  .station-content :global(td:first-child) {
-    @apply font-medium text-slate-800;
+  .station-content th:last-child {
+    border-radius: 0 0.75rem 0 0;
   }
 
-  .station-content :global(td strong) {
-    @apply text-fire-600 font-semibold;
+  .station-content tbody tr {
+    background: white;
+    transition: all 0.15s ease;
   }
 
-  /* Horizontal Rules as Section Dividers */
-  .station-content :global(hr) {
-    @apply my-8 border-0 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent;
+  .station-content tbody tr:nth-child(even) {
+    background: #f8fafc;
   }
 
-  /* Blockquotes as Callouts */
-  .station-content :global(blockquote) {
-    @apply relative bg-gold-50 border-l-4 border-gold-500 rounded-r-lg p-4 my-6
-           italic text-slate-700;
+  .station-content tbody tr:hover {
+    background: #fef2f2;
   }
 
-  .station-content :global(blockquote)::before {
+  .station-content td {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+    color: #475569;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .station-content tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .station-content td:first-child {
+    font-weight: 500;
+    color: #1e293b;
+  }
+
+  .station-content td strong {
+    color: #dc2626;
+    font-weight: 600;
+  }
+
+  /* Horizontal Rules - Styled Dividers */
+  .station-content hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #cbd5e1, transparent);
+    margin: 2rem 1.5rem;
+  }
+
+  /* Blockquotes - Callout Cards */
+  .station-content blockquote {
+    position: relative;
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    border-left: 4px solid #f59e0b;
+    border-radius: 0 0.75rem 0.75rem 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem;
+    color: #78350f;
+    font-style: italic;
+  }
+
+  .station-content blockquote::before {
     content: '"';
-    @apply absolute -top-2 left-2 text-5xl text-gold-300 font-serif leading-none;
+    position: absolute;
+    top: -0.5rem;
+    left: 0.75rem;
+    font-size: 3rem;
+    color: #fcd34d;
+    font-family: Georgia, serif;
+    line-height: 1;
   }
 
-  /* Code/Technical Info */
-  .station-content :global(code) {
-    @apply bg-slate-100 text-fire-600 px-2 py-1 rounded text-sm font-mono;
+  .station-content blockquote p {
+    padding: 0;
+    margin: 0;
   }
 
-  /* Emphasis Text */
-  .station-content :global(em) {
-    @apply text-slate-500 not-italic text-sm;
+  /* Emphasis/Italic - Footer Notes */
+  .station-content > p > em:only-child,
+  .station-content > p:last-of-type em {
+    display: block;
+    font-style: normal;
+    font-size: 0.875rem;
+    color: #64748b;
+    padding: 1rem 1.5rem;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    margin: 1.5rem -1.5rem -1rem -1.5rem;
+  }
+
+  /* Code/Technical */
+  .station-content code {
+    background: #f1f5f9;
+    color: #dc2626;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-family: 'SF Mono', Monaco, monospace;
   }
 
   /* Links */
-  .station-content :global(a) {
-    @apply text-fire-600 hover:text-fire-700 underline decoration-fire-200
-           hover:decoration-fire-400 transition-colors;
+  .station-content a {
+    color: #dc2626;
+    text-decoration: underline;
+    text-decoration-color: #fecaca;
+    text-underline-offset: 2px;
+    transition: all 0.15s ease;
   }
 
-  /* Special formatting for specific section types */
-  /* Equipment sections get icons */
-  .station-content :global(h3:contains("Equip"))::before,
-  .station-content :global(h3:contains("Flota"))::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23dc2626' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M8 7h.01M8 11h.01M8 15h.01M12 7h.01M12 11h.01M12 15h.01M16 7h.01M16 11h.01M16 15h.01M6 3h12a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2z'/%3E%3C/svg%3E");
+  .station-content a:hover {
+    color: #b91c1c;
+    text-decoration-color: #dc2626;
   }
 
-  /* Nested content spacing */
-  .station-content :global(h3 + p),
-  .station-content :global(h3 + ul),
-  .station-content :global(h3 + table) {
-    @apply mt-0;
+  /* Last element padding */
+  .station-content > *:last-child {
+    padding-bottom: 1.5rem;
+    margin-bottom: 0;
   }
 
-  /* Card wrapper for all content after H2 until next H2 */
-  .station-content > :global(*:not(h2)) {
-    @apply px-6;
-  }
-
-  .station-content > :global(h2 ~ *:not(h2)) {
-    @apply bg-white mx-0 -mt-px;
-  }
-
-  .station-content > :global(h2 ~ *:not(h2):last-child),
-  .station-content > :global(h2 ~ hr + *:not(h2)) {
-    @apply rounded-b-xl pb-6 mb-6 shadow-sm border-x border-b border-slate-200;
-  }
-
-  /* First element after H2 */
-  .station-content > :global(h2 + *) {
-    @apply pt-6 border-x border-slate-200;
+  /* Em dash separator styling */
+  .station-content li strong + text,
+  .station-content li strong ~ * {
+    color: #64748b;
   }
 </style>
