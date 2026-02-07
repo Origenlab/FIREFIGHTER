@@ -1,6 +1,5 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
 
 interface BreadcrumbItem {
   label: string;
@@ -17,10 +16,9 @@ interface Props {
 const { title, description, image, breadcrumbs = [] } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description} image={image}>
+<BaseLayout title={title} description={description} image={image} breadcrumbs={breadcrumbs}>
   <div class="bg-slate-50 min-h-screen">
     <div class="container-custom py-8">
-      {breadcrumbs.length > 0 && <Breadcrumbs items={breadcrumbs} />}
       <slot />
     </div>
   </div>

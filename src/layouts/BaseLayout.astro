@@ -1,9 +1,15 @@
 ---
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
 import SEOHead from '../components/seo/SEOHead.astro';
 import JsonLd from '../components/seo/JsonLd.astro';
 import '../assets/styles/global.css';
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
 
 interface Props {
   title: string;
@@ -13,6 +19,7 @@ interface Props {
   type?: 'website' | 'article';
   canonicalUrl?: string;
   noindex?: boolean;
+  breadcrumbs?: BreadcrumbItem[];
   schema?: {
     type: 'WebSite' | 'Organization' | 'FireStation' | 'BreadcrumbList' | 'Article';
     data: Record<string, any>;
@@ -27,6 +34,7 @@ const {
   type = 'website',
   canonicalUrl,
   noindex = false,
+  breadcrumbs,
   schema,
 } = Astro.props;
 ---
@@ -89,6 +97,10 @@ const {
     </a>
 
     <Header />
+
+    {breadcrumbs && breadcrumbs.length > 0 && (
+      <Breadcrumbs items={breadcrumbs} />
+    )}
 
     <main id="main-content" class="flex-1">
       <slot />

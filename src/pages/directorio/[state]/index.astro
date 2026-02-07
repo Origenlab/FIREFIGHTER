@@ -1,7 +1,6 @@
 ---
-import DirectoryLayout from '../../../layouts/DirectoryLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 import StationCard from '../../../components/directory/StationCard.astro';
-import Badge from '../../../components/ui/Badge.astro';
 import Pagination from '../../../components/ui/Pagination.astro';
 import { getCollection } from 'astro:content';
 import states from '../../../data/states.json';
@@ -46,123 +45,179 @@ const municipalityGroups = stateStations.reduce((acc, station) => {
 }, {} as Record<string, typeof stateStations>);
 
 const municipalities = Object.keys(municipalityGroups).sort();
+
+// Determine municipality label based on state
+const getMunicipalityLabel = (stateName: string) => {
+  if (stateName === 'Ciudad de México') return 'alcaldías';
+  return 'municipios';
+};
+const municipalityLabel = getMunicipalityLabel(state.name);
 ---
 
-<DirectoryLayout
+<BaseLayout
   title={`Estaciones de Bomberos en ${state.name}`}
-  description={`Directorio de ${stateStations.length} estaciones de bomberos en ${state.name}. Encuentra teléfonos, direcciones y servicios de emergencia.`}
+  description={`Directorio completo de ${stateStations.length} estaciones de bomberos en ${state.name}. Encuentra teléfonos, direcciones, ubicación GPS y servicios de emergencia.`}
   breadcrumbs={[
     { label: 'Directorio', href: '/directorio' },
     { label: state.name },
   ]}
 >
-  <!-- Header -->
-  <div class="mb-8">
-    <div class="flex flex-wrap items-center gap-3 mb-4">
-      <h1 class="text-3xl md:text-4xl font-display font-bold text-slate-800">
-        {state.name}
-      </h1>
-      <Badge variant="fire">{stateStations.length} estaciones</Badge>
-    </div>
-    <p class="text-lg text-slate-600">
-      Directorio de estaciones de bomberos en {state.name}. Capital: <span class="font-medium">{state.capital}</span>
-    </p>
-  </div>
+  <!-- Hero Section - Identical to Index -->
+  <section class="bg-slate-900">
+    <div class="container-custom py-20 md:py-28">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-  <!-- Quick Info -->
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-    <div class="card p-4">
-      <div class="text-sm text-slate-500 mb-1">Estaciones</div>
-      <div class="text-2xl font-display font-bold text-fire-600">{stateStations.length}</div>
-    </div>
-    <div class="card p-4">
-      <div class="text-sm text-slate-500 mb-1">Capital</div>
-      <div class="text-lg font-semibold text-slate-800 truncate">{state.capital}</div>
-    </div>
-    <div class="card p-4">
-      <div class="text-sm text-slate-500 mb-1">Alcaldías</div>
-      <div class="text-lg font-semibold text-slate-800">{municipalities.length}</div>
-    </div>
-    <div class="card p-4">
-      <div class="text-sm text-slate-500 mb-1">Emergencias</div>
-      <div class="text-2xl font-display font-bold text-gold-500">911</div>
-    </div>
-  </div>
+        <!-- Left Content -->
+        <div class="text-center lg:text-left">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-fire-600 rounded-full mb-6">
+            <span class="w-2 h-2 bg-white rounded-full"></span>
+            <span class="text-white text-sm font-medium">{stateStations.length} Estaciones en {state.name}</span>
+          </div>
 
-  <!-- Municipality Filter -->
-  {municipalities.length > 1 && (
-    <div class="mb-6">
-      <h2 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">
-        Filtrar por Alcaldía
-      </h2>
-      <div class="flex flex-wrap gap-2">
-        {municipalities.map((municipality) => (
-          <span class="px-3 py-1.5 text-sm font-medium bg-white text-slate-600 border border-slate-200 rounded-full">
-            {municipality} ({municipalityGroups[municipality].length})
-          </span>
-        ))}
+          <!-- Main Heading -->
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-[1.1]">
+            Bomberos en
+            <span class="text-fire-500">{state.name}</span>
+          </h1>
+
+          <!-- Description -->
+          <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            Directorio completo con información de contacto, ubicación GPS y servicios de
+            <span class="text-white font-semibold">{stateStations.length} estaciones</span> en {municipalities.length} {municipalityLabel}.
+          </p>
+
+          <!-- Search Bar -->
+          <form action="/directorio" method="GET" class="max-w-lg mx-auto lg:mx-0 mb-8">
+            <div class="flex items-center bg-white rounded-2xl p-2 shadow-xl">
+              <svg class="w-6 h-6 ml-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+              <input
+                type="search"
+                name="q"
+                placeholder={`Buscar en ${state.name}...`}
+                class="flex-1 px-4 py-4 text-slate-800 placeholder-slate-400 bg-transparent border-0 focus:outline-none focus:ring-0 text-lg"
+                aria-label="Buscar estaciones de bomberos"
+              />
+              <button type="submit" class="px-6 py-4 bg-fire-600 text-white font-semibold rounded-xl hover:bg-fire-700 transition-colors">
+                Buscar
+              </button>
+            </div>
+          </form>
+
+          <!-- Breadcrumbs as Quick Links -->
+          <div class="flex flex-wrap justify-center lg:justify-start gap-3">
+            <a href="/directorio" class="px-3 py-1 text-sm text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 rounded-full transition-colors">← Todos los estados</a>
+            <a href="#estaciones" class="px-3 py-1 text-sm text-fire-400 hover:text-fire-300 transition-colors">Ver estaciones ↓</a>
+          </div>
+        </div>
+
+        <!-- Right Side - Marketing Text -->
+        <div class="hidden lg:block">
+          <p class="text-slate-300 text-lg leading-relaxed mb-6">
+            Directorio completo de estaciones de bomberos en <strong class="text-white">{state.name}</strong>. Nuestro directorio incluye información detallada de {stateStations.length} estaciones distribuidas en {municipalities.length} {municipalityLabel}, con datos de contacto directo, ubicación exacta con coordenadas GPS, servicios especializados y horarios de atención las 24 horas.
+          </p>
+          <p class="text-slate-300 text-lg leading-relaxed">
+            Cada estación cuenta con información sobre el <strong class="text-white">tipo de cuerpo de bomberos</strong> (profesional, voluntario, industrial o aeroportuario), equipamiento disponible, áreas de cobertura y servicios de emergencia. Facilitamos que ciudadanos, empresas e instituciones en {state.name} puedan contactar rápidamente a la estación más cercana.
+          </p>
+        </div>
       </div>
-    </div>
-  )}
 
-  <!-- Stations List -->
-  {stateStations.length > 0 ? (
-    <>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {paginatedStations.map((station) => (
-          <StationCard station={station} />
-        ))}
-      </div>
-
-      {/* Pagination */}
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        basePath={`/directorio/${state.slug}`}
-      />
-
-      {/* Showing info */}
-      {totalPages > 1 && (
-        <p class="text-center text-sm text-slate-500 mt-2">
-          Mostrando {paginatedStations.length} de {stateStations.length} estaciones
+      <!-- Mobile Marketing Text -->
+      <div class="lg:hidden mt-10">
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Directorio completo de estaciones de bomberos en {state.name}. Información de contacto, ubicación GPS y servicios de las {stateStations.length} estaciones en {municipalities.length} {municipalityLabel}.
         </p>
-      )}
-    </>
-  ) : (
-    <div class="card p-12 text-center">
-      <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-        <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
       </div>
-      <h3 class="text-lg font-semibold text-slate-800 mb-2">Sin estaciones registradas</h3>
-      <p class="text-slate-500 mb-4">
-        Aún no tenemos estaciones registradas para {state.name}.
-      </p>
-      <a href="/agregar-estacion" class="btn btn-outline btn-sm">
-        Sugerir una estación
-      </a>
     </div>
-  )}
+  </section>
 
-  <!-- Emergency CTA -->
-  <div class="mt-12 bg-slate-800 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-    <div class="text-center sm:text-left">
-      <h3 class="text-lg font-display font-semibold text-white mb-1">
-        ¿Emergencia en {state.name}?
-      </h3>
-      <p class="text-slate-400 text-sm">
-        No pierdas tiempo. Llama al número de emergencias nacional.
-      </p>
+  <!-- Emergency Banner -->
+  <div class="bg-fire-600">
+    <div class="container-custom py-4">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+        <div class="flex items-center gap-3 text-white">
+          <div class="w-10 h-10 bg-fire-700 rounded-full flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+          </div>
+          <span class="font-semibold text-lg">¿Emergencia en {state.name}?</span>
+        </div>
+        <a
+          href="tel:911"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-white text-fire-600 font-bold rounded-xl hover:bg-fire-50 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          Llama al 911
+        </a>
+      </div>
     </div>
-    <a
-      href="tel:911"
-      class="flex items-center gap-2 px-6 py-3 bg-fire-600 text-white font-semibold rounded-lg hover:bg-fire-700 transition-colors whitespace-nowrap"
-    >
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-      </svg>
-      Llamar al 911
-    </a>
   </div>
-</DirectoryLayout>
+
+  <!-- Main Content -->
+  <div class="bg-slate-50 min-h-screen">
+    <div class="container-custom py-8">
+      <!-- Municipality Filter -->
+      <div id="estaciones" class="pt-4">
+        {municipalities.length > 1 && (
+          <div class="mb-8">
+            <h2 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">
+              Filtrar por {state.name === 'Ciudad de México' ? 'Alcaldía' : 'Municipio'}
+            </h2>
+            <div class="flex flex-wrap gap-2">
+              {municipalities.map((municipality) => (
+                <span class="px-3 py-1.5 text-sm font-medium bg-white text-slate-600 border border-slate-200 rounded-full">
+                  {municipality} ({municipalityGroups[municipality].length})
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Stations List -->
+        {stateStations.length > 0 ? (
+          <>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {paginatedStations.map((station) => (
+                <StationCard station={station} />
+              ))}
+            </div>
+
+            {/* Pagination */}
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              basePath={`/directorio/${state.slug}`}
+            />
+
+            {/* Showing info */}
+            {totalPages > 1 && (
+              <p class="text-center text-sm text-slate-500 mt-2">
+                Mostrando {paginatedStations.length} de {stateStations.length} estaciones
+              </p>
+            )}
+          </>
+        ) : (
+          <div class="bg-white border-2 border-slate-200 rounded-2xl p-12 text-center">
+            <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-800 mb-2">Sin estaciones registradas</h3>
+            <p class="text-slate-500 mb-4">
+              Aún no tenemos estaciones registradas para {state.name}.
+            </p>
+            <a href="/agregar-estacion" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white font-semibold rounded-lg hover:bg-fire-600 transition-colors">
+              Sugerir una estación
+            </a>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</BaseLayout>
