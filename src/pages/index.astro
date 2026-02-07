@@ -5,17 +5,12 @@ import StatesGrid from '../components/home/StatesGrid.astro';
 import StatsCounter from '../components/home/StatsCounter.astro';
 import HowItWorks from '../components/home/HowItWorks.astro';
 import FeaturedStations from '../components/home/FeaturedStations.astro';
-
-const schema = {
-  type: 'WebSite' as const,
-  data: {},
-};
 ---
 
 <BaseLayout
   title="Directorio de Estaciones de Bomberos en México"
   description="Encuentra estaciones de bomberos en los 32 estados de México. Directorio completo con direcciones, teléfonos y servicios de emergencia. Línea de emergencia: 911."
-  schema={schema}
+  includeWebsiteSchema={true}
 >
   <Hero />
   <StatesGrid />

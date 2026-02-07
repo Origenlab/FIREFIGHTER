@@ -5,6 +5,26 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Professional Fire Department Palette
+        'fire-red': {
+          DEFAULT: '#C41E3A',
+          dark: '#A01830',
+          light: '#E8314F',
+        },
+        navy: {
+          DEFAULT: '#1B2A4A',
+          light: '#2D4A7A',
+          dark: '#0F1A2E',
+        },
+        gold: {
+          DEFAULT: '#D4A843',
+          light: '#F0D68A',
+          dark: '#B8922F',
+          400: '#fbbf24',
+          500: '#f59e0b',
+          600: '#d97706',
+        },
+        // Keep existing fire scale for compatibility
         fire: {
           50: '#fef2f2',
           100: '#fee2e2',
@@ -18,10 +38,18 @@ export default {
           900: '#7f1d1d',
           950: '#450a0a',
         },
-        gold: {
-          400: '#fbbf24',
-          500: '#f59e0b',
-          600: '#d97706',
+        // Neutral palette for backgrounds/text
+        neutral: {
+          50: '#FAFAFA',
+          100: '#F5F5F5',
+          200: '#E5E5E5',
+          300: '#D4D4D4',
+          400: '#A3A3A3',
+          500: '#737373',
+          600: '#525252',
+          700: '#404040',
+          800: '#2C2C2C',
+          900: '#1A1A1A',
         },
       },
       fontFamily: {

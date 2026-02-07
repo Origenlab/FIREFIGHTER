@@ -1,5 +1,5 @@
 ---
-import DirectoryLayout from '../../layouts/DirectoryLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import states from '../../data/states.json';
 
 // Sort states alphabetically
@@ -27,107 +27,137 @@ const regionNames: Record<string, string> = {
 };
 ---
 
-<DirectoryLayout
+<BaseLayout
   title="Directorio Nacional de Estaciones de Bomberos"
   description="Explora el directorio completo de estaciones de bomberos en los 32 estados de México. Encuentra información de contacto, ubicación y servicios."
   breadcrumbs={[{ label: 'Directorio' }]}
 >
-  <!-- Header Section -->
-  <div class="mb-12">
-    <h1 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-900 mb-6">
-      Directorio Nacional de Bomberos
-    </h1>
+  <!-- Hero Section -->
+  <section class="bg-slate-900">
+    <div class="container-custom py-20 md:py-28">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Left Content -->
+        <div class="text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-fire-600 rounded-full mb-6">
+            <span class="w-2 h-2 bg-white rounded-full"></span>
+            <span class="text-white text-sm font-medium">{totalStations}+ Estaciones en México</span>
+          </div>
 
-    <!-- Marketing/SEO Content -->
-    <div class="grid lg:grid-cols-2 gap-6">
-      <p class="text-slate-600 text-lg leading-relaxed">
-        Firefighter México es la <strong class="text-slate-900">plataforma de referencia</strong> para localizar estaciones de bomberos en toda la República Mexicana. Nuestro directorio reúne información detallada de más de {totalStations} estaciones distribuidas en los 32 estados, incluyendo datos de contacto directo, ubicación exacta con coordenadas GPS, servicios especializados y horarios de atención.
-      </p>
-      <p class="text-slate-600 text-lg leading-relaxed">
-        Cada ficha de estación incluye información sobre el <strong class="text-slate-900">tipo de cuerpo de bomberos</strong> (profesional, voluntario, industrial o aeroportuario), su equipamiento, áreas de cobertura y servicios de emergencia disponibles. Facilitamos que ciudadanos, empresas e instituciones puedan contactar rápidamente a la estación más cercana en caso de emergencia o para solicitar servicios de prevención.
-      </p>
-    </div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-[1.1]">
+            Directorio
+            <span class="text-fire-500">Nacional</span>
+          </h1>
 
-    <!-- Search Bar -->
-    <div class="bg-white border-2 border-slate-200 rounded-2xl p-2 max-w-2xl mt-8">
-      <form action="/directorio" method="GET" class="flex items-center">
-        <svg class="w-5 h-5 ml-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-        </svg>
-        <input
-          type="search"
-          name="q"
-          placeholder="Buscar por estado, ciudad o nombre de estación..."
-          class="flex-1 px-4 py-3 text-slate-800 placeholder-slate-400 bg-transparent border-0 focus:outline-none focus:ring-0"
-        />
-        <button type="submit" class="px-6 py-3 bg-fire-600 text-white font-semibold rounded-xl hover:bg-fire-700 transition-colors">
-          Buscar
-        </button>
-      </form>
-    </div>
-  </div>
+          <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            Explora el directorio completo de estaciones de bomberos en los
+            <span class="text-white font-semibold">32 estados de México</span>. Información de contacto, ubicación y servicios.
+          </p>
 
-  <!-- States Grid by Region -->
-  <div class="space-y-12">
-    {Object.entries(regions).map(([region, stateList]) => (
-      <div>
-        <div class="flex items-center gap-3 mb-6">
-          <h2 class="text-xl font-display font-bold text-slate-900">
-            {regionNames[region] || region}
-          </h2>
-          <div class="flex-1 h-px bg-slate-200"></div>
-          <span class="text-sm text-slate-500 font-medium">{stateList.length} estados</span>
+          <!-- Search Bar -->
+          <form action="/directorio" method="GET" class="max-w-lg mx-auto lg:mx-0 mb-8">
+            <div class="flex items-center bg-white rounded-2xl p-2 shadow-xl">
+              <svg class="w-6 h-6 ml-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+              <input
+                type="search"
+                name="q"
+                placeholder="Buscar estado, ciudad o estación..."
+                class="flex-1 px-4 py-4 text-slate-800 placeholder-slate-400 bg-transparent border-0 focus:outline-none focus:ring-0 text-lg"
+                aria-label="Buscar estaciones de bomberos"
+              />
+              <button type="submit" class="px-6 py-4 bg-fire-600 text-white font-semibold rounded-xl hover:bg-fire-700 transition-colors">
+                Buscar
+              </button>
+            </div>
+          </form>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {stateList.map((state) => (
-            <a
-              href={`/directorio/${state.slug}`}
-              class="group bg-white border-2 border-slate-200 rounded-xl p-5 hover:border-fire-400 transition-colors"
-            >
-              <div class="flex items-start justify-between mb-3">
-                <div class="w-10 h-10 bg-fire-100 rounded-lg flex items-center justify-center">
-                  <svg class="w-5 h-5 text-fire-600" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C12 2 7 8 7 13C7 16.866 9.23858 20 12 20C14.7614 20 17 16.866 17 13C17 8 12 2 12 2Z"/>
-                  </svg>
-                </div>
-                <span class="text-xs font-bold text-fire-600 bg-fire-50 px-2 py-1 rounded-full">
-                  {state.totalStations}
-                </span>
-              </div>
-              <h3 class="font-display font-bold text-slate-900 group-hover:text-fire-600 transition-colors mb-1">
-                {state.name}
-              </h3>
-              <p class="text-sm text-slate-500">
-                {state.capital}
-              </p>
-            </a>
-          ))}
+        <!-- Right Side - Info -->
+        <div class="hidden lg:block">
+          <p class="text-slate-300 text-lg leading-relaxed mb-6">
+            Firefighter México es la <strong class="text-white">plataforma de referencia</strong> para localizar estaciones de bomberos en toda la República Mexicana. Nuestro directorio reúne información detallada de más de {totalStations} estaciones, incluyendo datos de contacto directo, ubicación exacta con coordenadas GPS, servicios especializados y horarios de atención.
+          </p>
+          <p class="text-slate-300 text-lg leading-relaxed">
+            Cada ficha de estación incluye información sobre el <strong class="text-white">tipo de cuerpo de bomberos</strong> (profesional, voluntario, industrial o aeroportuario), su equipamiento, áreas de cobertura y servicios de emergencia disponibles.
+          </p>
         </div>
       </div>
-    ))}
-  </div>
+    </div>
+  </section>
 
-  <!-- Emergency CTA -->
-  <div class="mt-16 bg-slate-900 rounded-2xl p-8 md:p-12">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="text-center md:text-left">
-        <h2 class="text-2xl md:text-3xl font-display font-bold text-white mb-3">
-          ¿Tienes una emergencia?
-        </h2>
-        <p class="text-slate-400 text-lg max-w-lg">
-          No pierdas tiempo buscando. Llama inmediatamente al número de emergencias nacional.
-        </p>
+  <!-- Emergency Banner -->
+  <div class="bg-fire-600">
+    <div class="container-custom py-4">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+        <div class="flex items-center gap-3 text-white">
+          <div class="w-10 h-10 bg-fire-700 rounded-full flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+          </div>
+          <span class="font-semibold text-lg">¿Emergencia?</span>
+        </div>
+        <a
+          href="tel:911"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-white text-fire-600 font-bold rounded-xl hover:bg-fire-50 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          Llama al 911
+        </a>
       </div>
-      <a
-        href="tel:911"
-        class="flex items-center gap-3 px-8 py-5 bg-fire-600 text-white font-bold text-lg rounded-xl hover:bg-fire-700 transition-colors whitespace-nowrap"
-      >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-        </svg>
-        Llamar al 911
-      </a>
     </div>
   </div>
-</DirectoryLayout>
+
+  <!-- Main Content -->
+  <div class="bg-slate-50 min-h-screen">
+    <div class="container-custom py-12">
+      <!-- States Grid by Region -->
+      <div class="space-y-12">
+        {Object.entries(regions).map(([region, stateList]) => (
+          <div>
+            <div class="flex items-center gap-3 mb-6">
+              <h2 class="text-xl font-display font-bold text-slate-900">
+                {regionNames[region] || region}
+              </h2>
+              <div class="flex-1 h-px bg-slate-200"></div>
+              <span class="text-sm text-slate-500 font-medium">{stateList.length} estados</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {stateList.map((state) => (
+                <a
+                  href={`/directorio/${state.slug}`}
+                  class="group bg-white rounded-xl overflow-hidden hover:shadow-lg transition-shadow"
+                  style="border: 1px solid #e2e8f0;"
+                >
+                  <div class="h-1 w-full" style="background-color: #dc2626;"></div>
+                  <div class="p-5">
+                    <div class="flex items-start justify-between mb-3">
+                      <div class="w-10 h-10 bg-fire-100 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-fire-600" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2C12 2 7 8 7 13C7 16.866 9.23858 20 12 20C14.7614 20 17 16.866 17 13C17 8 12 2 12 2Z"/>
+                        </svg>
+                      </div>
+                      <span class="text-xs font-bold text-fire-600 bg-fire-50 px-2 py-1 rounded-full">
+                        {state.totalStations}
+                      </span>
+                    </div>
+                    <h3 class="font-display font-bold text-slate-900 group-hover:text-fire-600 transition-colors mb-1">
+                      {state.name}
+                    </h3>
+                    <p class="text-sm text-slate-500">
+                      {state.capital}
+                    </p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

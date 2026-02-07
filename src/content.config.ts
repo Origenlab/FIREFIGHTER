@@ -7,7 +7,7 @@ const stations = defineCollection({
   schema: z.object({
     name: z.string(),
     stationCode: z.string().optional(),
-    serviceType: z.enum(['profesional', 'voluntario', 'industrial', 'aeroportuario', 'proteccion-civil']),
+    serviceType: z.enum(['profesional', 'voluntario', 'mixto', 'industrial', 'aeroportuario', 'proteccion-civil']),
     status: z.enum(['activa', 'inactiva', 'en-construccion']).default('activa'),
     state: z.string(),
     stateSlug: z.string(),
@@ -32,11 +32,14 @@ const stations = defineCollection({
       'atencion-medica',
       'rescate-vehicular',
       'rescate-acuatico',
+      'rescate-forestal',
+      'rescate-montaña',
       'materiales-peligrosos',
       'rescate-alturas',
       'proteccion-civil',
       'capacitacion',
-      'prevencion'
+      'prevencion',
+      'explosivos'
     ])).default(['combate-incendios']),
     equipment: z.object({
       fireTrucks: z.number().default(0),

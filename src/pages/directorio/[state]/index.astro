@@ -61,6 +61,10 @@ const municipalityLabel = getMunicipalityLabel(state.name);
     { label: 'Directorio', href: '/directorio' },
     { label: state.name },
   ]}
+  stateDirectory={{
+    name: state.name,
+    stationCount: stateStations.length,
+  }}
 >
   <!-- Hero Section - Identical to Index -->
   <section class="bg-slate-900">

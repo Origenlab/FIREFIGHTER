@@ -5,20 +5,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout
   title="Aviso de Privacidad"
   description="Aviso de privacidad de Firefighter México. Conoce cómo protegemos tu información personal."
+  breadcrumbs={[{ label: 'Privacidad' }]}
 >
-  <section class="section">
-    <div class="container-custom">
-      <div class="max-w-3xl mx-auto">
-        <h1 class="text-3xl md:text-4xl font-display font-bold text-slate-800 mb-6">
-          Aviso de Privacidad
+  <!-- Hero Section -->
+  <section class="bg-slate-900">
+    <div class="container-custom py-20 md:py-28">
+      <div class="text-center lg:text-left max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-fire-600 rounded-full mb-6">
+          <span class="w-2 h-2 bg-white rounded-full"></span>
+          <span class="text-white text-sm font-medium">Documento Legal</span>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-[1.1]">
+          Aviso de
+          <span class="text-fire-500">Privacidad</span>
         </h1>
 
-        <p class="text-slate-500 mb-8">
-          Última actualización: Febrero 2026
+        <p class="text-lg md:text-xl text-slate-400 leading-relaxed">
+          Conoce cómo protegemos tu información personal y los derechos que tienes sobre tus datos.
+          <span class="text-white font-semibold">Última actualización: Febrero 2026</span>
         </p>
+      </div>
+    </div>
+  </section>
 
-        <div class="prose prose-slate max-w-none">
-          <div class="card p-8 space-y-6">
+  <!-- Main Content -->
+  <section class="section bg-slate-50">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="bg-white rounded-xl overflow-hidden" style="border: 1px solid #e2e8f0;">
+          <div class="h-1 w-full" style="background-color: #dc2626;"></div>
+          <div class="p-8 space-y-8">
             <section>
               <h2 class="text-xl font-display font-semibold text-slate-800 mb-3">
                 1. Responsable del tratamiento
@@ -97,7 +114,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 8. Contacto
               </h2>
               <p class="text-slate-600">
-                Para cualquier duda sobre este aviso de privacidad o el tratamiento de sus datos, puede contactarnos a través de nuestra <a href="/contacto" class="text-fire-600 hover:text-fire-700">página de contacto</a>.
+                Para cualquier duda sobre este aviso de privacidad o el tratamiento de sus datos, puede contactarnos a través de nuestra <a href="/contacto" class="text-fire-600 hover:text-fire-700 font-medium">página de contacto</a>.
               </p>
             </section>
           </div>

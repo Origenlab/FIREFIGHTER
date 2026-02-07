@@ -6,118 +6,154 @@ import Button from '../components/ui/Button.astro';
 <BaseLayout
   title="Contacto"
   description="Contáctanos para sugerencias, correcciones o información sobre el directorio de estaciones de bomberos de México."
+  breadcrumbs={[{ label: 'Contacto' }]}
 >
-  <section class="section bg-slate-50">
-    <div class="container-custom">
-      <div class="max-w-3xl mx-auto">
-        <div class="text-center mb-12">
-          <h1 class="text-3xl md:text-4xl font-display font-bold text-slate-800 mb-4">
-            Contacto
+  <!-- Hero Section -->
+  <section class="bg-slate-900">
+    <div class="container-custom py-20 md:py-28">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Left Content -->
+        <div class="text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-fire-600 rounded-full mb-6">
+            <span class="w-2 h-2 bg-white rounded-full"></span>
+            <span class="text-white text-sm font-medium">Estamos para ayudarte</span>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-[1.1]">
+            <span class="text-fire-500">Contacto</span>
           </h1>
-          <p class="text-lg text-slate-600">
+
+          <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
             ¿Tienes sugerencias, correcciones o quieres agregar una estación?
-            Escríbenos y te responderemos lo antes posible.
+            <span class="text-white font-semibold">Escríbenos y te responderemos lo antes posible.</span>
           </p>
         </div>
 
-        <div class="card p-8">
-          <form name="contact" method="POST" data-netlify="true" class="space-y-6">
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <label for="name" class="block text-sm font-medium text-slate-700 mb-2">
-                  Nombre *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  class="input"
-                  placeholder="Tu nombre"
-                />
+        <!-- Right Side - Info -->
+        <div class="hidden lg:block">
+          <p class="text-slate-300 text-lg leading-relaxed mb-6">
+            Queremos mantener el directorio <strong class="text-white">actualizado y preciso</strong>. Tu retroalimentación es fundamental para lograrlo. Si encuentras información incorrecta o conoces una estación que no está registrada, háznoslo saber.
+          </p>
+          <p class="text-slate-300 text-lg leading-relaxed">
+            <strong class="text-white">Importante:</strong> Este no es un servicio de emergencias. En caso de emergencia, llama al <strong class="text-fire-400">911</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="section bg-slate-50">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <!-- Form Card -->
+        <div class="bg-white rounded-xl overflow-hidden" style="border: 1px solid #e2e8f0;">
+          <div class="h-1 w-full" style="background-color: #dc2626;"></div>
+          <div class="p-8">
+            <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-slate-700 mb-2">
+                    Nombre *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="input"
+                    placeholder="Tu nombre"
+                  />
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-slate-700 mb-2">
+                    Correo electrónico *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="input"
+                    placeholder="tu@email.com"
+                  />
+                </div>
               </div>
+
               <div>
-                <label for="email" class="block text-sm font-medium text-slate-700 mb-2">
-                  Correo electrónico *
+                <label for="subject" class="block text-sm font-medium text-slate-700 mb-2">
+                  Asunto *
                 </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  class="input"
-                  placeholder="tu@email.com"
-                />
+                <select id="subject" name="subject" required class="input">
+                  <option value="">Selecciona una opción</option>
+                  <option value="agregar-estacion">Agregar nueva estación</option>
+                  <option value="correccion">Corrección de datos</option>
+                  <option value="sugerencia">Sugerencia</option>
+                  <option value="colaboracion">Colaboración</option>
+                  <option value="otro">Otro</option>
+                </select>
               </div>
-            </div>
 
-            <div>
-              <label for="subject" class="block text-sm font-medium text-slate-700 mb-2">
-                Asunto *
-              </label>
-              <select id="subject" name="subject" required class="input">
-                <option value="">Selecciona una opción</option>
-                <option value="agregar-estacion">Agregar nueva estación</option>
-                <option value="correccion">Corrección de datos</option>
-                <option value="sugerencia">Sugerencia</option>
-                <option value="colaboracion">Colaboración</option>
-                <option value="otro">Otro</option>
-              </select>
-            </div>
+              <div>
+                <label for="message" class="block text-sm font-medium text-slate-700 mb-2">
+                  Mensaje *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows="5"
+                  class="input"
+                  placeholder="Escribe tu mensaje aquí..."
+                ></textarea>
+              </div>
 
-            <div>
-              <label for="message" class="block text-sm font-medium text-slate-700 mb-2">
-                Mensaje *
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows="5"
-                class="input"
-                placeholder="Escribe tu mensaje aquí..."
-              ></textarea>
-            </div>
-
-            <div class="flex items-center gap-4">
-              <Button type="submit" variant="primary">
-                Enviar mensaje
-              </Button>
-              <span class="text-sm text-slate-500">* Campos requeridos</span>
-            </div>
-          </form>
+              <div class="flex items-center gap-4">
+                <Button type="submit" variant="primary">
+                  Enviar mensaje
+                </Button>
+                <span class="text-sm text-slate-500">* Campos requeridos</span>
+              </div>
+            </form>
+          </div>
         </div>
 
         <!-- Additional info -->
         <div class="mt-12 grid md:grid-cols-2 gap-6">
-          <div class="card p-6 text-center">
-            <div class="w-12 h-12 bg-fire-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <svg class="w-6 h-6 text-fire-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-              </svg>
+          <div class="bg-white rounded-xl overflow-hidden" style="border: 1px solid #e2e8f0;">
+            <div class="h-1 w-full" style="background-color: #dc2626;"></div>
+            <div class="p-6 text-center">
+              <div class="w-12 h-12 bg-fire-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <svg class="w-6 h-6 text-fire-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                </svg>
+              </div>
+              <h3 class="font-display font-semibold text-slate-800 mb-2">Agregar Estación</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                ¿Conoces una estación que no está en nuestro directorio?
+              </p>
+              <a href="/agregar-estacion" class="text-fire-600 hover:text-fire-700 font-medium text-sm">
+                Sugerir estación →
+              </a>
             </div>
-            <h3 class="font-display font-semibold text-slate-800 mb-2">Agregar Estación</h3>
-            <p class="text-sm text-slate-600 mb-4">
-              ¿Conoces una estación que no está en nuestro directorio?
-            </p>
-            <a href="/agregar-estacion" class="text-fire-600 hover:text-fire-700 font-medium text-sm">
-              Sugerir estación →
-            </a>
           </div>
 
-          <div class="card p-6 text-center">
-            <div class="w-12 h-12 bg-gold-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <svg class="w-6 h-6 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
-              </svg>
+          <div class="bg-white rounded-xl overflow-hidden" style="border: 1px solid #e2e8f0;">
+            <div class="h-1 w-full" style="background-color: #f59e0b;"></div>
+            <div class="p-6 text-center">
+              <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                </svg>
+              </div>
+              <h3 class="font-display font-semibold text-slate-800 mb-2">¿Emergencia?</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Este no es un servicio de emergencias. En caso de emergencia:
+              </p>
+              <a href="tel:911" class="text-2xl font-display font-bold text-fire-600">
+                Llama al 911
+              </a>
             </div>
-            <h3 class="font-display font-semibold text-slate-800 mb-2">¿Emergencia?</h3>
-            <p class="text-sm text-slate-600 mb-4">
-              Este no es un servicio de emergencias. En caso de emergencia:
-            </p>
-            <a href="tel:911" class="text-2xl font-display font-bold text-fire-600">
-              Llama al 911
-            </a>
           </div>
         </div>
       </div>

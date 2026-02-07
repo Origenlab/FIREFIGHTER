@@ -2,6 +2,7 @@
 /**
  * StationCard Component - Clean Professional Design
  * Focused on essential information for emergency services
+ * Includes regional differentiation for CDMX vs EDOMEX
  */
 
 interface Props {
@@ -27,12 +28,21 @@ interface Props {
 const { station } = Astro.props;
 const { data } = station;
 
+// Service type configuration
 const serviceTypeConfig: Record<string, { label: string; color: string }> = {
   'profesional': { label: 'Profesional', color: '#dc2626' },
   'voluntario': { label: 'Voluntario', color: '#2563eb' },
   'industrial': { label: 'Industrial', color: '#d97706' },
   'aeroportuario': { label: 'Aeroportuario', color: '#9333ea' },
   'proteccion-civil': { label: 'Protección Civil', color: '#059669' },
+};
+
+// Regional configuration for visual differentiation
+const regionConfig: Record<string, { code: string; color: string; bgColor: string }> = {
+  'ciudad-de-mexico': { code: 'CDMX', color: '#dc2626', bgColor: '#fef2f2' },
+  'estado-de-mexico': { code: 'EDOMEX', color: '#059669', bgColor: '#ecfdf5' },
+  // Default for other states
+  'default': { code: '', color: '#6366f1', bgColor: '#eef2ff' },
 };
 
 const serviceLabels: Record<string, string> = {
@@ -46,22 +56,40 @@ const serviceLabels: Record<string, string> = {
   'capacitacion': 'Capacitación',
   'prevencion': 'Prevención',
   'ambulancia': 'Ambulancia',
+  'rescate-forestal': 'Forestal',
+  'rescate-montaña': 'Montaña',
 };
 
 const typeConfig = serviceTypeConfig[data.serviceType] || serviceTypeConfig['profesional'];
+const region = regionConfig[data.stateSlug] || regionConfig['default'];
 const stationUrl = `/directorio/${data.stateSlug}/${station.id.split('/').pop()?.replace('.md', '')}`;
+
+// Use region color for the accent bar if it's Estado de México, otherwise use service type color
+const accentColor = data.stateSlug === 'estado-de-mexico' ? region.color : typeConfig.color;
 ---
 
 <article class="bg-white rounded-xl overflow-hidden transition-shadow duration-200 hover:shadow-lg" style="border: 1px solid #e2e8f0;">
-  <!-- Colored Top Bar -->
-  <div class="h-1 w-full" style={`background-color: ${typeConfig.color};`}></div>
+  <!-- Colored Top Bar - Uses regional color for differentiation -->
+  <div class="h-1 w-full" style={`background-color: ${accentColor};`}></div>
 
   <div class="p-5">
-    <!-- Header: Type Badge + Status -->
+    <!-- Header: Regional Badge + Type Badge + Status -->
     <div class="flex items-center justify-between mb-3">
-      <span class="px-2.5 py-1 rounded text-xs font-semibold" style={`background-color: ${typeConfig.color}12; color: ${typeConfig.color};`}>
-        {typeConfig.label}
-      </span>
+      <div class="flex items-center gap-2">
+        <!-- Regional Badge -->
+        {region.code && (
+          <span
+            class="px-2 py-0.5 rounded text-xs font-bold tracking-wide"
+            style={`background-color: ${region.bgColor}; color: ${region.color}; border: 1px solid ${region.color}20;`}
+          >
+            {region.code}
+          </span>
+        )}
+        <!-- Service Type Badge -->
+        <span class="px-2.5 py-1 rounded text-xs font-semibold" style={`background-color: ${typeConfig.color}12; color: ${typeConfig.color};`}>
+          {typeConfig.label}
+        </span>
+      </div>
       {data.status === 'activa' && (
         <span class="flex items-center gap-1.5 text-xs font-medium" style="color: #16a34a;">
           <span class="w-1.5 h-1.5 rounded-full" style="background-color: #16a34a;"></span>
@@ -106,7 +134,7 @@ const stationUrl = `/directorio/${data.stateSlug}/${station.id.split('/').pop()?
       <a
         href={stationUrl}
         class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold transition-colors"
-        style="background-color: #dc2626; color: white;"
+        style={`background-color: ${accentColor}; color: white;`}
       >
         Ver detalles
       </a>

@@ -4,6 +4,7 @@ import Footer from '../components/layout/Footer.astro';
 import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
 import SEOHead from '../components/seo/SEOHead.astro';
 import JsonLd from '../components/seo/JsonLd.astro';
+import type { StationData, BreadcrumbItem as SEOBreadcrumb } from '../utils/seo';
 import '../assets/styles/global.css';
 
 interface BreadcrumbItem {
@@ -16,10 +17,22 @@ interface Props {
   description: string;
   image?: string;
   imageAlt?: string;
-  type?: 'website' | 'article';
+  type?: 'website' | 'article' | 'place';
   canonicalUrl?: string;
   noindex?: boolean;
   breadcrumbs?: BreadcrumbItem[];
+  // SEO enhancements
+  includeWebsiteSchema?: boolean;
+  stateDirectory?: {
+    name: string;
+    stationCount: number;
+  };
+  station?: StationData;
+  article?: {
+    author: string;
+  };
+  publishedDate?: string;
+  modifiedDate?: string;
   schema?: {
     type: 'WebSite' | 'Organization' | 'FireStation' | 'BreadcrumbList' | 'Article';
     data: Record<string, any>;
@@ -35,8 +48,20 @@ const {
   canonicalUrl,
   noindex = false,
   breadcrumbs,
+  includeWebsiteSchema = false,
+  stateDirectory,
+  station,
+  article,
+  publishedDate,
+  modifiedDate,
   schema,
 } = Astro.props;
+
+// Convert breadcrumbs to SEO format
+const seoBreadcrumbs: SEOBreadcrumb[] | undefined = breadcrumbs?.map(item => ({
+  name: item.label,
+  url: item.href || '',
+}));
 ---
 
 <!doctype html>
@@ -54,6 +79,13 @@ const {
       type={type}
       canonicalUrl={canonicalUrl}
       noindex={noindex}
+      breadcrumbs={seoBreadcrumbs}
+      includeWebsiteSchema={includeWebsiteSchema}
+      stateDirectory={stateDirectory}
+      station={station}
+      article={article}
+      publishedDate={publishedDate}
+      modifiedDate={modifiedDate}
     />
 
     <!-- Favicon -->
