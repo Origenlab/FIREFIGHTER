@@ -1,58 +1,295 @@
 ---
 /**
- * StatesGrid Component - Clean Professional Design
- * Grid of states using consistent card design
+ * StatesGrid Component - Premium SEO Design
+ * Grid of 3 columns with SEO-rich excerpts for each state
  */
 import states from '../../data/states.json';
 
+// SEO excerpts for each state with relevant keywords
+const stateExcerpts: Record<string, { excerpt: string; keywords: string[] }> = {
+  'aguascalientes': {
+    excerpt: 'Bomberos profesionales atendiendo emergencias en la Feria de San Marcos, zona industrial automotriz y centro histórico.',
+    keywords: ['Feria San Marcos', 'zona industrial', 'rescate vehicular']
+  },
+  'baja-california': {
+    excerpt: 'Estaciones de bomberos en Tijuana, Mexicali y Ensenada. Cobertura fronteriza, rescate en playas y zonas industriales.',
+    keywords: ['Tijuana', 'Mexicali', 'frontera', 'maquiladoras']
+  },
+  'baja-california-sur': {
+    excerpt: 'Bomberos en Los Cabos y La Paz. Especialistas en incendios forestales, rescate acuático y atención turística.',
+    keywords: ['Los Cabos', 'La Paz', 'turismo', 'rescate marítimo']
+  },
+  'campeche': {
+    excerpt: 'Cuerpos de bomberos protegiendo la industria petrolera, zonas arqueológicas mayas y reservas naturales.',
+    keywords: ['industria petrolera', 'zonas arqueológicas', 'Calakmul']
+  },
+  'chiapas': {
+    excerpt: 'Bomberos en Tuxtla Gutiérrez y San Cristóbal. Rescate en selva lacandona, volcán Tacaná y zonas de montaña.',
+    keywords: ['selva lacandona', 'San Cristóbal', 'montaña', 'volcán']
+  },
+  'chihuahua': {
+    excerpt: 'El estado más grande de México. Bomberos en Ciudad Juárez, Chihuahua capital y zona industrial maquiladora.',
+    keywords: ['Ciudad Juárez', 'maquiladoras', 'desierto', 'frontera']
+  },
+  'ciudad-de-mexico': {
+    excerpt: 'Heroico Cuerpo de Bomberos de la CDMX. 21 estaciones cubriendo 16 alcaldías, edificios altos y metro.',
+    keywords: ['CDMX', 'alcaldías', 'edificios', 'metro', 'rescate urbano']
+  },
+  'coahuila': {
+    excerpt: 'Bomberos en Saltillo, Torreón y Monclova. Cobertura industrial, minera y zonas desérticas del norte.',
+    keywords: ['Saltillo', 'Torreón', 'minería', 'industria siderúrgica']
+  },
+  'colima': {
+    excerpt: 'Bomberos especializados en emergencias del Volcán de Colima, puerto de Manzanillo y zonas turísticas.',
+    keywords: ['Volcán de Colima', 'Manzanillo', 'puerto', 'turismo']
+  },
+  'durango': {
+    excerpt: 'Estaciones de bomberos en la capital y zona serrana. Rescate forestal, minería y carreteras de montaña.',
+    keywords: ['sierra', 'minería', 'bosques', 'rescate forestal']
+  },
+  'estado-de-mexico': {
+    excerpt: 'El estado más poblado. 45 estaciones cubriendo zona metropolitana, Toluca, Nevado y parques industriales.',
+    keywords: ['Ecatepec', 'Naucalpan', 'Toluca', 'Nevado', 'zona industrial']
+  },
+  'guanajuato': {
+    excerpt: 'Bomberos en León, Irapuato y Guanajuato capital. Cobertura del Bajío industrial y ciudades coloniales.',
+    keywords: ['León', 'Bajío', 'industria automotriz', 'ciudades coloniales']
+  },
+  'guerrero': {
+    excerpt: 'Cuerpos de bomberos en Acapulco, Chilpancingo e Ixtapa. Rescate en playas, sierra y zonas turísticas.',
+    keywords: ['Acapulco', 'Ixtapa', 'playas', 'rescate acuático']
+  },
+  'hidalgo': {
+    excerpt: 'Bomberos en Pachuca y zona metropolitana. Atención a Pueblos Mágicos, minería y bosques de oyamel.',
+    keywords: ['Pachuca', 'Pueblos Mágicos', 'minería', 'bosques']
+  },
+  'jalisco': {
+    excerpt: 'Bomberos de Guadalajara y zona metropolitana. Cobertura de Puerto Vallarta, Chapala y zona industrial.',
+    keywords: ['Guadalajara', 'Puerto Vallarta', 'Chapala', 'industria tech']
+  },
+  'michoacan': {
+    excerpt: 'Estaciones en Morelia y Uruapan. Especialistas en incendios forestales, volcanes y costa del Pacífico.',
+    keywords: ['Morelia', 'Uruapan', 'mariposa monarca', 'volcán Paricutín']
+  },
+  'morelos': {
+    excerpt: 'Bomberos en Cuernavaca y Cuautla. Rescate en barrancas, balnearios y zonas arqueológicas de Tepoztlán.',
+    keywords: ['Cuernavaca', 'Cuautla', 'Tepoztlán', 'balnearios']
+  },
+  'nayarit': {
+    excerpt: 'Cuerpos de bomberos en Tepic y Riviera Nayarit. Rescate en playas, islas Marietas y sierra del Nayar.',
+    keywords: ['Riviera Nayarit', 'Tepic', 'playas', 'islas']
+  },
+  'nuevo-leon': {
+    excerpt: 'Bomberos de Monterrey y zona metropolitana. Cobertura industrial, Cerro de la Silla y rescate urbano.',
+    keywords: ['Monterrey', 'industria', 'rescate urbano', 'zona metropolitana']
+  },
+  'oaxaca': {
+    excerpt: 'Estaciones en Oaxaca capital y costa. Atención a comunidades indígenas, playas de Huatulco y sierra.',
+    keywords: ['Huatulco', 'Puerto Escondido', 'sierra', 'comunidades']
+  },
+  'puebla': {
+    excerpt: 'Bomberos en Puebla capital y Cholula. Cobertura del Popocatépetl, zona industrial VW y centro histórico.',
+    keywords: ['Puebla', 'Popocatépetl', 'Cholula', 'VW', 'volcán']
+  },
+  'queretaro': {
+    excerpt: 'Cuerpos de bomberos en Querétaro y San Juan del Río. Industria aeroespacial y zona colonial.',
+    keywords: ['Querétaro', 'aeroespacial', 'industria', 'centro histórico']
+  },
+  'quintana-roo': {
+    excerpt: 'Bomberos en Cancún, Playa del Carmen y Riviera Maya. Especialistas en hoteles, huracanes y rescate acuático.',
+    keywords: ['Cancún', 'Playa del Carmen', 'hoteles', 'huracanes']
+  },
+  'san-luis-potosi': {
+    excerpt: 'Estaciones en la capital y zona industrial. Cobertura de la Huasteca, minería y zona desértica.',
+    keywords: ['Huasteca', 'minería', 'zona industrial', 'desierto']
+  },
+  'sinaloa': {
+    excerpt: 'Bomberos en Culiacán, Mazatlán y Los Mochis. Rescate en playas, agricultura y zona turística.',
+    keywords: ['Mazatlán', 'Culiacán', 'playas', 'agricultura']
+  },
+  'sonora': {
+    excerpt: 'Cuerpos de bomberos en Hermosillo y zona fronteriza. Especialistas en desierto, maquiladoras y minería.',
+    keywords: ['Hermosillo', 'frontera', 'desierto', 'maquiladoras']
+  },
+  'tabasco': {
+    excerpt: 'Bomberos en Villahermosa. Especialistas en inundaciones, industria petrolera y zonas pantanosas.',
+    keywords: ['Villahermosa', 'inundaciones', 'petróleo', 'pantanos']
+  },
+  'tamaulipas': {
+    excerpt: 'Estaciones en Reynosa, Tampico y Matamoros. Cobertura fronteriza, puertos y zona industrial.',
+    keywords: ['Reynosa', 'Tampico', 'frontera', 'puertos', 'industria']
+  },
+  'tlaxcala': {
+    excerpt: 'Bomberos en el estado más pequeño. Cobertura de zona industrial, La Malinche y centro histórico.',
+    keywords: ['La Malinche', 'industria textil', 'centro histórico']
+  },
+  'veracruz': {
+    excerpt: 'El estado con más estaciones. Bomberos en Veracruz puerto, Xalapa y Coatzacoalcos. Zona petrolera y costera.',
+    keywords: ['Veracruz', 'Xalapa', 'puerto', 'petróleo', 'Pico de Orizaba']
+  },
+  'yucatan': {
+    excerpt: 'Bomberos en Mérida y zona arqueológica. Atención a Chichén Itzá, costa y comunidades mayas.',
+    keywords: ['Mérida', 'Chichén Itzá', 'cenotes', 'zona arqueológica']
+  },
+  'zacatecas': {
+    excerpt: 'Estaciones en la capital y zona minera. Especialistas en rescate en minas, centro histórico y sierra.',
+    keywords: ['minería', 'centro histórico', 'sierra', 'rescate en minas']
+  }
+};
+
 const sortedStates = [...states].sort((a, b) => a.name.localeCompare(b.name));
 const totalStations = sortedStates.reduce((acc, s) => acc + s.totalStations, 0);
+
+// Region colors for visual variety
+const regionColors: Record<string, { bg: string; border: string; badge: string }> = {
+  'centro': { bg: 'bg-blue-50', border: 'border-blue-200', badge: 'bg-blue-100 text-blue-700' },
+  'norte': { bg: 'bg-amber-50', border: 'border-amber-200', badge: 'bg-amber-100 text-amber-700' },
+  'noreste': { bg: 'bg-emerald-50', border: 'border-emerald-200', badge: 'bg-emerald-100 text-emerald-700' },
+  'noroeste': { bg: 'bg-orange-50', border: 'border-orange-200', badge: 'bg-orange-100 text-orange-700' },
+  'sur': { bg: 'bg-purple-50', border: 'border-purple-200', badge: 'bg-purple-100 text-purple-700' },
+  'sureste': { bg: 'bg-teal-50', border: 'border-teal-200', badge: 'bg-teal-100 text-teal-700' },
+  'centro-occidente': { bg: 'bg-rose-50', border: 'border-rose-200', badge: 'bg-rose-100 text-rose-700' },
+  'peninsula': { bg: 'bg-cyan-50', border: 'border-cyan-200', badge: 'bg-cyan-100 text-cyan-700' },
+};
+
+const regionLabels: Record<string, string> = {
+  'centro': 'Centro',
+  'norte': 'Norte',
+  'noreste': 'Noreste',
+  'noroeste': 'Noroeste',
+  'sur': 'Sur',
+  'sureste': 'Sureste',
+  'centro-occidente': 'Centro-Occidente',
+  'peninsula': 'Península',
+};
 ---
 
-<section class="py-16 md:py-24" style="background-color: #f8fafc;">
+<section class="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
     <!-- Header -->
-    <div class="text-center mb-10">
-      <h2 class="text-2xl md:text-3xl font-bold mb-3" style="color: #0f172a;">
-        Explora por Estado
+    <div class="text-center mb-12">
+      <span class="inline-flex items-center gap-2 px-4 py-2 bg-fire-red/10 text-fire-red rounded-full text-sm font-semibold mb-4">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+        </svg>
+        32 Estados de la República
+      </span>
+      <h2 class="text-3xl md:text-4xl font-display font-bold text-navy mb-4">
+        Directorio Nacional de Bomberos
       </h2>
-      <p class="text-base" style="color: #64748b;">
-        Selecciona un estado para ver las estaciones disponibles
+      <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+        Encuentra estaciones de bomberos en todo México. Información de contacto, direcciones,
+        servicios de emergencia y teléfonos directos para cada estado.
       </p>
     </div>
 
-    <!-- Grid -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
-      {sortedStates.map((state) => (
-        <a
-          href={`/directorio/${state.slug}`}
-          class="group bg-white rounded-xl overflow-hidden transition-shadow duration-200 hover:shadow-md"
-          style="border: 1px solid #e2e8f0;"
-        >
-          <div class="h-1 w-full" style="background-color: #dc2626;"></div>
-          <div class="p-4">
-            <div class="flex items-center justify-between gap-2">
-              <div class="min-w-0">
-                <h3 class="font-semibold text-sm truncate" style="color: #0f172a;">
-                  {state.name}
-                </h3>
-                <p class="text-xs mt-0.5" style="color: #64748b;">
-                  {state.totalStations} estaciones
-                </p>
-              </div>
-              <svg class="w-4 h-4 flex-shrink-0 transition-transform group-hover:translate-x-0.5" style="color: #94a3b8;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </div>
-          </div>
-        </a>
-      ))}
+    <!-- Stats Banner -->
+    <div class="bg-navy rounded-2xl p-6 mb-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="text-center">
+        <div class="text-3xl md:text-4xl font-bold text-white">{totalStations}</div>
+        <div class="text-sm text-slate-300">Estaciones Registradas</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl md:text-4xl font-bold text-fire-red">32</div>
+        <div class="text-sm text-slate-300">Estados Cubiertos</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl md:text-4xl font-bold text-gold">24/7</div>
+        <div class="text-sm text-slate-300">Disponibilidad</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl md:text-4xl font-bold text-emerald-400">911</div>
+        <div class="text-sm text-slate-300">Emergencias Nacional</div>
+      </div>
     </div>
 
-    <!-- Total count -->
-    <div class="text-center mt-8">
-      <p class="text-sm" style="color: #64748b;">
-        Total: <strong style="color: #0f172a;">{totalStations}</strong> estaciones en <strong style="color: #0f172a;">32</strong> estados
+    <!-- States Grid - 3 Columns -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {sortedStates.map((state) => {
+        const stateData = stateExcerpts[state.slug] || { excerpt: `Estaciones de bomberos en ${state.name}. Servicios de emergencia 24/7.`, keywords: [] };
+        const colors = regionColors[state.region] || regionColors['centro'];
+
+        return (
+          <a
+            href={`/directorio/${state.slug}`}
+            class={`group relative bg-white rounded-2xl overflow-hidden border-2 ${colors.border} hover:border-fire-red transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
+          >
+            {/* Top Accent Bar */}
+            <div class="h-1.5 bg-gradient-to-r from-fire-red to-fire-red-dark"></div>
+
+            <div class="p-6">
+              {/* Header with State Name and Badge */}
+              <div class="flex items-start justify-between gap-3 mb-4">
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class={`px-2 py-0.5 text-xs font-medium rounded-full ${colors.badge}`}>
+                      {regionLabels[state.region] || state.region}
+                    </span>
+                    <span class="text-xs text-slate-400">{state.code}</span>
+                  </div>
+                  <h3 class="text-xl font-display font-bold text-navy group-hover:text-fire-red transition-colors">
+                    {state.name}
+                  </h3>
+                </div>
+
+                {/* Station Count Badge */}
+                <div class="flex flex-col items-center justify-center w-16 h-16 bg-slate-100 rounded-xl group-hover:bg-fire-red/10 transition-colors">
+                  <span class="text-2xl font-bold text-fire-red">{state.totalStations}</span>
+                  <span class="text-[10px] text-slate-500 uppercase tracking-wide">estaciones</span>
+                </div>
+              </div>
+
+              {/* Capital */}
+              <div class="flex items-center gap-2 text-sm text-slate-500 mb-3">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                </svg>
+                <span>Capital: <strong class="text-slate-700">{state.capital}</strong></span>
+              </div>
+
+              {/* SEO Excerpt */}
+              <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                {stateData.excerpt}
+              </p>
+
+              {/* Keywords Tags */}
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                {stateData.keywords.slice(0, 3).map((keyword) => (
+                  <span class="px-2 py-1 text-xs bg-slate-100 text-slate-600 rounded-md">
+                    {keyword}
+                  </span>
+                ))}
+              </div>
+
+              {/* CTA */}
+              <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                <span class="text-sm font-medium text-fire-red group-hover:text-fire-red-dark transition-colors">
+                  Ver estaciones →
+                </span>
+                <div class="flex items-center gap-1 text-xs text-slate-400">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  24/7
+                </div>
+              </div>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+
+    <!-- SEO Rich Footer Text -->
+    <div class="mt-12 prose prose-slate max-w-none text-center">
+      <p class="text-sm text-slate-500 leading-relaxed">
+        <strong>Firefighter.com.mx</strong> es el directorio más completo de estaciones de bomberos en México.
+        Encuentra información de contacto, teléfonos de emergencia, direcciones exactas y servicios disponibles
+        en las <strong>{totalStations} estaciones</strong> registradas en los 32 estados de la República Mexicana.
+        Desde bomberos profesionales en grandes ciudades como Ciudad de México, Guadalajara y Monterrey,
+        hasta cuerpos voluntarios en comunidades rurales. Nuestro directorio incluye información sobre
+        rescate vehicular, combate de incendios, atención médica prehospitalaria, rescate acuático,
+        materiales peligrosos (HAZMAT) y protección civil. Para emergencias marca el <strong>911</strong>.
       </p>
     </div>
   </div>
