@@ -2,6 +2,42 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
+// Color palette for each state (32 unique colors)
+const stateColors: Record<string, string> = {
+  'aguascalientes': '#E74C3C',
+  'baja-california': '#3498DB',
+  'baja-california-sur': '#1ABC9C',
+  'campeche': '#9B59B6',
+  'chiapas': '#F39C12',
+  'chihuahua': '#E67E22',
+  'ciudad-de-mexico': '#C0392B',
+  'coahuila': '#2980B9',
+  'colima': '#16A085',
+  'durango': '#8E44AD',
+  'estado-de-mexico': '#27AE60',
+  'guanajuato': '#D35400',
+  'guerrero': '#2C3E50',
+  'hidalgo': '#F1C40F',
+  'jalisco': '#E91E63',
+  'michoacan': '#00BCD4',
+  'morelos': '#FF5722',
+  'nayarit': '#673AB7',
+  'nuevo-leon': '#009688',
+  'oaxaca': '#795548',
+  'puebla': '#607D8B',
+  'queretaro': '#FF9800',
+  'quintana-roo': '#03A9F4',
+  'san-luis-potosi': '#4CAF50',
+  'sinaloa': '#9C27B0',
+  'sonora': '#CDDC39',
+  'tabasco': '#00ACC1',
+  'tamaulipas': '#FF4081',
+  'tlaxcala': '#7C4DFF',
+  'veracruz': '#64DD17',
+  'yucatan': '#FFD600',
+  'zacatecas': '#F50057',
+};
+
 const stations = await getCollection('stations');
 const stationsData = stations.map(s => ({
   name: s.data.name,
@@ -13,7 +49,21 @@ const stationsData = stations.map(s => ({
   phone: s.data.phone,
   address: s.data.address,
   slug: s.id.split('/').pop()?.replace('.md', ''),
+  color: stateColors[s.data.stateSlug] || '#dc2626',
 }));
+
+// Get unique states with their colors for the legend
+const statesWithColors = [...new Set(stations.map(s => s.data.stateSlug))]
+  .map(slug => {
+    const station = stations.find(s => s.data.stateSlug === slug);
+    return {
+      slug,
+      name: station?.data.state || slug,
+      color: stateColors[slug] || '#dc2626',
+      count: stations.filter(s => s.data.stateSlug === slug).length,
+    };
+  })
+  .sort((a, b) => a.name.localeCompare(b.name));
 ---
 
 <BaseLayout
@@ -29,10 +79,20 @@ const stationsData = stations.map(s => ({
             Mapa Nacional
           </h1>
           <p class="text-sm text-slate-500">
-            {stations.length} estaciones registradas
+            {stations.length} estaciones en {statesWithColors.length} estados
           </p>
         </div>
         <div class="flex items-center gap-3">
+          <button
+            id="legend-btn"
+            class="btn btn-outline btn-sm"
+            title="Ver leyenda"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+            </svg>
+            <span class="hidden sm:inline">Leyenda</span>
+          </button>
           <button
             id="locate-btn"
             class="btn btn-outline btn-sm"
@@ -42,7 +102,7 @@ const stationsData = stations.map(s => ({
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
             </svg>
-            Mi ubicación
+            <span class="hidden sm:inline">Mi ubicación</span>
           </button>
           <a href="/directorio" class="btn btn-primary btn-sm">
             Ver directorio
@@ -52,7 +112,40 @@ const stationsData = stations.map(s => ({
     </div>
 
     <!-- Map Container -->
-    <div id="map" class="flex-1"></div>
+    <div class="flex-1 relative">
+      <div id="map" class="absolute inset-0"></div>
+
+      <!-- Legend Panel -->
+      <div id="legend-panel" class="absolute top-4 right-4 bg-white rounded-xl shadow-xl border border-slate-200 p-4 z-[1000] max-h-[calc(100vh-200px)] overflow-y-auto hidden w-72">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="font-display font-bold text-slate-800">Estados</h3>
+          <button id="close-legend" class="text-slate-400 hover:text-slate-600">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="space-y-2">
+          {statesWithColors.map((state) => (
+            <a
+              href={`/directorio/${state.slug}`}
+              class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 transition-colors group"
+            >
+              <div
+                class="w-4 h-4 rounded-full flex-shrink-0 border-2 border-white shadow-sm"
+                style={`background-color: ${state.color};`}
+              ></div>
+              <span class="text-sm text-slate-700 group-hover:text-fire-red flex-1 truncate">
+                {state.name}
+              </span>
+              <span class="text-xs text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">
+                {state.count}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Leaflet CSS -->
@@ -76,38 +169,57 @@ const stationsData = stations.map(s => ({
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
 
-      // Custom fire station icon
-      const fireIcon = L.divIcon({
-        className: 'custom-marker',
-        html: `<div style="background-color: #dc2626; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);">
-          <svg style="width: 16px; height: 16px; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path>
-          </svg>
-        </div>`,
-        iconSize: [32, 32],
-        iconAnchor: [16, 32],
-        popupAnchor: [0, -32]
-      });
+      // Function to create custom fire station icon with state-specific color
+      function createFireIcon(color) {
+        return L.divIcon({
+          className: 'custom-marker',
+          html: `<div style="background-color: ${color}; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 3px solid white; box-shadow: 0 2px 6px rgba(0,0,0,0.35);">
+            <svg style="width: 16px; height: 16px; color: white;" fill="none" stroke="white" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path>
+            </svg>
+          </div>`,
+          iconSize: [32, 32],
+          iconAnchor: [16, 32],
+          popupAnchor: [0, -32]
+        });
+      }
 
-      // Add markers for each station
+      // Add markers for each station with state-specific color
       stationsData.forEach(station => {
-        const marker = L.marker([station.lat, station.lng], { icon: fireIcon })
+        const marker = L.marker([station.lat, station.lng], { icon: createFireIcon(station.color) })
           .addTo(map)
           .bindPopup(`
-            <div style="min-width: 200px;">
-              <h3 style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">${station.name}</h3>
-              <p style="color: #dc2626; font-size: 12px; margin-bottom: 8px;">${station.city}, ${station.state}</p>
-              <p style="font-size: 12px; color: #64748b; margin-bottom: 8px;">${station.address}</p>
-              <div style="display: flex; gap: 8px;">
-                <a href="tel:${station.phone}" style="font-size: 12px; color: #dc2626; text-decoration: none;">
+            <div style="min-width: 220px;">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                <div style="width: 12px; height: 12px; border-radius: 50%; background-color: ${station.color}; flex-shrink: 0;"></div>
+                <span style="font-size: 11px; color: ${station.color}; font-weight: 600; text-transform: uppercase;">${station.state}</span>
+              </div>
+              <h3 style="font-weight: 700; font-size: 15px; margin-bottom: 4px; color: #1e293b;">${station.name}</h3>
+              <p style="color: #64748b; font-size: 12px; margin-bottom: 8px;">${station.city}</p>
+              <p style="font-size: 12px; color: #94a3b8; margin-bottom: 12px;">${station.address}</p>
+              <div style="display: flex; gap: 8px; align-items: center; padding-top: 8px; border-top: 1px solid #e2e8f0;">
+                <a href="tel:${station.phone}" style="font-size: 12px; color: ${station.color}; text-decoration: none; font-weight: 500;">
                   📞 ${station.phone}
                 </a>
               </div>
-              <a href="/directorio/${station.stateSlug}/${station.slug}" style="display: block; margin-top: 8px; font-size: 12px; color: #dc2626; text-decoration: none; font-weight: 500;">
+              <a href="/directorio/${station.stateSlug}/${station.slug}" style="display: block; margin-top: 12px; font-size: 13px; color: white; background-color: ${station.color}; text-decoration: none; font-weight: 600; padding: 8px 12px; border-radius: 8px; text-align: center;">
                 Ver detalle →
               </a>
             </div>
           `);
+      });
+
+      // Legend toggle
+      const legendPanel = document.getElementById('legend-panel');
+      const legendBtn = document.getElementById('legend-btn');
+      const closeLegend = document.getElementById('close-legend');
+
+      legendBtn.addEventListener('click', function() {
+        legendPanel.classList.toggle('hidden');
+      });
+
+      closeLegend.addEventListener('click', function() {
+        legendPanel.classList.add('hidden');
       });
 
       // Geolocation button
@@ -142,10 +254,36 @@ const stationsData = stations.map(s => ({
 
   <style is:global>
     .leaflet-popup-content-wrapper {
-      border-radius: 12px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
     }
     .leaflet-popup-content {
-      margin: 12px;
+      margin: 16px;
+    }
+    .leaflet-popup-tip {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    .custom-marker {
+      transition: transform 0.2s ease;
+    }
+    .custom-marker:hover {
+      transform: scale(1.1);
+    }
+
+    /* Legend scrollbar */
+    #legend-panel::-webkit-scrollbar {
+      width: 6px;
+    }
+    #legend-panel::-webkit-scrollbar-track {
+      background: #f1f5f9;
+      border-radius: 3px;
+    }
+    #legend-panel::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 3px;
+    }
+    #legend-panel::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
     }
   </style>
 </BaseLayout>
