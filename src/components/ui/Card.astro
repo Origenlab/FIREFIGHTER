@@ -1,8 +1,15 @@
 ---
+/**
+ * Card Component - Clean Professional Design
+ * Base card component used across the site
+ * See: /docs/CARD-DESIGN.md for usage guidelines
+ */
+
 interface Props {
-  variant?: 'default' | 'highlight' | 'bordered';
+  variant?: 'default' | 'highlight' | 'state';
   padding?: 'none' | 'sm' | 'md' | 'lg';
   href?: string;
+  accentColor?: string;
   class?: string;
 }
 
@@ -10,32 +17,39 @@ const {
   variant = 'default',
   padding = 'md',
   href,
+  accentColor,
   class: className = '',
 } = Astro.props;
 
-const variantClasses = {
-  default: 'bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5',
-  highlight: 'bg-white border-2 border-fire-200 shadow-sm hover:shadow-md hover:border-fire-400 hover:-translate-y-0.5',
-  bordered: 'bg-white border-2 border-slate-200 hover:border-slate-300',
-};
-
-const paddingClasses = {
+const paddingStyles: Record<string, string> = {
   none: '',
-  sm: 'p-4',
-  md: 'p-6',
-  lg: 'p-8',
+  sm: 'padding: 1rem;',
+  md: 'padding: 1.25rem;',
+  lg: 'padding: 1.5rem;',
 };
 
-const baseClasses = 'rounded-xl transition-all duration-200';
-const classes = `${baseClasses} ${variantClasses[variant]} ${paddingClasses[padding]} ${className}`;
+const baseStyle = `
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+  ${paddingStyles[padding]}
+`.trim();
+
+const hoverStyle = variant === 'default' || variant === 'highlight'
+  ? 'hover:shadow-lg'
+  : '';
 ---
 
 {href ? (
-  <a href={href} class={`block ${classes}`}>
+  <a href={href} class={`block ${hoverStyle} ${className}`} style={baseStyle}>
+    {accentColor && <div style={`height: 4px; width: 100%; background-color: ${accentColor}; margin: -1.25rem -1.25rem 1.25rem -1.25rem; width: calc(100% + 2.5rem);`}></div>}
     <slot />
   </a>
 ) : (
-  <div class={classes}>
+  <div class={`${hoverStyle} ${className}`} style={baseStyle}>
+    {accentColor && <div style={`height: 4px; width: 100%; background-color: ${accentColor}; margin: -1.25rem -1.25rem 1.25rem -1.25rem; width: calc(100% + 2.5rem);`}></div>}
     <slot />
   </div>
 )}

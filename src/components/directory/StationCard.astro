@@ -1,7 +1,7 @@
 ---
 /**
- * StationCard Component - Premium Professional Design
- * Modern card with elegant styling and premium feel
+ * StationCard Component - Clean Professional Design
+ * Focused on essential information for emergency services
  */
 
 interface Props {
@@ -27,156 +27,89 @@ interface Props {
 const { station } = Astro.props;
 const { data } = station;
 
-const serviceTypeConfig: Record<string, { label: string; gradient: string; icon: string; color: string }> = {
-  'profesional': {
-    label: 'Profesional',
-    gradient: 'from-red-500 to-red-700',
-    icon: '🔥',
-    color: '#dc2626'
-  },
-  'voluntario': {
-    label: 'Voluntario',
-    gradient: 'from-blue-500 to-blue-700',
-    icon: '💙',
-    color: '#2563eb'
-  },
-  'industrial': {
-    label: 'Industrial',
-    gradient: 'from-amber-500 to-amber-700',
-    icon: '🏭',
-    color: '#d97706'
-  },
-  'aeroportuario': {
-    label: 'Aeroportuario',
-    gradient: 'from-purple-500 to-purple-700',
-    icon: '✈️',
-    color: '#9333ea'
-  },
-  'proteccion-civil': {
-    label: 'Protección Civil',
-    gradient: 'from-emerald-500 to-emerald-700',
-    icon: '🛡️',
-    color: '#059669'
-  },
+const serviceTypeConfig: Record<string, { label: string; color: string }> = {
+  'profesional': { label: 'Profesional', color: '#dc2626' },
+  'voluntario': { label: 'Voluntario', color: '#2563eb' },
+  'industrial': { label: 'Industrial', color: '#d97706' },
+  'aeroportuario': { label: 'Aeroportuario', color: '#9333ea' },
+  'proteccion-civil': { label: 'Protección Civil', color: '#059669' },
 };
 
-const serviceIcons: Record<string, { label: string; icon: string }> = {
-  'combate-incendios': { label: 'Incendios', icon: '🔥' },
-  'atencion-medica': { label: 'Médico', icon: '🏥' },
-  'rescate-vehicular': { label: 'Rescate', icon: '🚗' },
-  'rescate-acuatico': { label: 'Acuático', icon: '🌊' },
-  'materiales-peligrosos': { label: 'HAZMAT', icon: '☢️' },
-  'rescate-alturas': { label: 'Alturas', icon: '🏔️' },
-  'proteccion-civil': { label: 'Prot. Civil', icon: '🛡️' },
-  'capacitacion': { label: 'Capacitación', icon: '📚' },
-  'prevencion': { label: 'Prevención', icon: '🔍' },
-  'ambulancia': { label: 'Ambulancia', icon: '🚑' },
+const serviceLabels: Record<string, string> = {
+  'combate-incendios': 'Incendios',
+  'atencion-medica': 'Médico',
+  'rescate-vehicular': 'Rescate',
+  'rescate-acuatico': 'Acuático',
+  'materiales-peligrosos': 'HAZMAT',
+  'rescate-alturas': 'Alturas',
+  'proteccion-civil': 'Prot. Civil',
+  'capacitacion': 'Capacitación',
+  'prevencion': 'Prevención',
+  'ambulancia': 'Ambulancia',
 };
 
 const typeConfig = serviceTypeConfig[data.serviceType] || serviceTypeConfig['profesional'];
 const stationUrl = `/directorio/${data.stateSlug}/${station.id.split('/').pop()?.replace('.md', '')}`;
 ---
 
-<article class="group relative bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1" style="box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 14px rgba(0,0,0,0.04); border: 1px solid #e2e8f0;">
-  <!-- Colored Top Accent Bar -->
-  <div class="h-1.5 w-full" style={`background: linear-gradient(90deg, ${typeConfig.color}, ${typeConfig.color}dd);`}></div>
+<article class="bg-white rounded-xl overflow-hidden transition-shadow duration-200 hover:shadow-lg" style="border: 1px solid #e2e8f0;">
+  <!-- Colored Top Bar -->
+  <div class="h-1 w-full" style={`background-color: ${typeConfig.color};`}></div>
 
-  <!-- Card Content -->
-  <div class="p-5 sm:p-6">
-    <!-- Header Row: Badge + Status -->
-    <div class="flex items-center justify-between mb-4">
-      <!-- Service Type Badge -->
-      <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold" style={`background-color: ${typeConfig.color}15; color: ${typeConfig.color};`}>
-        <span>{typeConfig.icon}</span>
-        <span>{typeConfig.label}</span>
-      </div>
-
-      <!-- Status Indicator -->
+  <div class="p-5">
+    <!-- Header: Type Badge + Status -->
+    <div class="flex items-center justify-between mb-3">
+      <span class="px-2.5 py-1 rounded text-xs font-semibold" style={`background-color: ${typeConfig.color}12; color: ${typeConfig.color};`}>
+        {typeConfig.label}
+      </span>
       {data.status === 'activa' && (
-        <div class="flex items-center gap-1.5">
-          <span class="relative flex h-2.5 w-2.5">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background-color: #22c55e;"></span>
-            <span class="relative inline-flex rounded-full h-2.5 w-2.5" style="background-color: #22c55e;"></span>
-          </span>
-          <span class="text-xs font-medium" style="color: #22c55e;">Activa 24/7</span>
-        </div>
+        <span class="flex items-center gap-1.5 text-xs font-medium" style="color: #16a34a;">
+          <span class="w-1.5 h-1.5 rounded-full" style="background-color: #16a34a;"></span>
+          Activa
+        </span>
       )}
     </div>
 
     <!-- Station Name -->
-    <h3 class="mb-3">
-      <a href={stationUrl} class="font-bold text-lg leading-tight transition-colors hover:underline decoration-2 underline-offset-2" style="color: #0f172a; text-decoration-color: transparent;" onmouseover="this.style.color='#dc2626'" onmouseout="this.style.color='#0f172a'">
-        {data.name}
-      </a>
+    <h3 class="font-bold text-lg mb-2 leading-tight" style="color: #0f172a;">
+      <a href={stationUrl} class="hover:underline">{data.name}</a>
     </h3>
 
-    <!-- Location Info -->
-    <div class="flex items-start gap-2.5 mb-4 pb-4" style="border-bottom: 1px solid #f1f5f9;">
-      <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #fef2f2;">
-        <svg class="w-4 h-4" fill="none" stroke="#dc2626" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-        </svg>
-      </div>
-      <div class="flex-1 min-w-0">
-        <p class="text-sm font-semibold truncate" style="color: #334155;">{data.municipality}, {data.state}</p>
-        <p class="text-xs mt-0.5 line-clamp-1" style="color: #64748b;">{data.address}</p>
-      </div>
+    <!-- Location -->
+    <p class="text-sm font-medium mb-1" style="color: #475569;">{data.municipality}, {data.state}</p>
+    <p class="text-sm mb-4" style="color: #64748b;">{data.address}</p>
+
+    <!-- Services -->
+    <div class="flex flex-wrap gap-1.5 mb-4 pb-4" style="border-bottom: 1px solid #f1f5f9;">
+      {data.services.slice(0, 4).map((service) => (
+        <span class="px-2 py-0.5 rounded text-xs font-medium" style="background-color: #f1f5f9; color: #475569;">
+          {serviceLabels[service] || service}
+        </span>
+      ))}
+      {data.services.length > 4 && (
+        <span class="px-2 py-0.5 rounded text-xs" style="color: #94a3b8;">+{data.services.length - 4}</span>
+      )}
     </div>
 
-    <!-- Services Grid -->
-    <div class="mb-5">
-      <p class="text-[10px] font-bold uppercase tracking-wider mb-2" style="color: #94a3b8;">Servicios</p>
-      <div class="flex flex-wrap gap-1.5">
-        {data.services.slice(0, 4).map((service) => {
-          const svc = serviceIcons[service] || { label: service, icon: '•' };
-          return (
-            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-medium" style="background-color: #f8fafc; color: #475569; border: 1px solid #e2e8f0;">
-              <span class="text-[10px]">{svc.icon}</span>
-              {svc.label}
-            </span>
-          );
-        })}
-        {data.services.length > 4 && (
-          <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium" style="background-color: #f1f5f9; color: #64748b;">
-            +{data.services.length - 4} más
-          </span>
-        )}
-      </div>
-    </div>
-
-    <!-- Action Footer -->
-    <div class="flex items-center gap-3 pt-4" style="border-top: 1px solid #f1f5f9;">
-      <!-- Phone Button -->
+    <!-- Actions -->
+    <div class="flex gap-3">
       <a
         href={`tel:${data.phone}`}
-        class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-semibold transition-all"
+        class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold transition-colors"
         style="background-color: #f8fafc; color: #334155; border: 1px solid #e2e8f0;"
-        onmouseover="this.style.backgroundColor='#f1f5f9'; this.style.borderColor='#cbd5e1';"
-        onmouseout="this.style.backgroundColor='#f8fafc'; this.style.borderColor='#e2e8f0';"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
         </svg>
-        <span>Llamar</span>
+        Llamar
       </a>
-
-      <!-- View Details Button -->
       <a
         href={stationUrl}
-        class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold transition-all"
-        style="background-color: #dc2626; color: white; box-shadow: 0 2px 8px rgba(220, 38, 38, 0.25);"
-        onmouseover="this.style.backgroundColor='#b91c1c'; this.style.boxShadow='0 4px 12px rgba(220, 38, 38, 0.35)';"
-        onmouseout="this.style.backgroundColor='#dc2626'; this.style.boxShadow='0 2px 8px rgba(220, 38, 38, 0.25)';"
+        class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold transition-colors"
+        style="background-color: #dc2626; color: white;"
       >
-        <span>Ver detalles</span>
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-        </svg>
+        Ver detalles
       </a>
     </div>
   </div>
-
-  <!-- Hover Glow Effect -->
-  <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style="box-shadow: 0 0 0 1px rgba(220, 38, 38, 0.1), 0 8px 25px -5px rgba(220, 38, 38, 0.12);"></div>
 </article>

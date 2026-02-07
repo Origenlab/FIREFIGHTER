@@ -1,21 +1,26 @@
 ---
+/**
+ * StatsCounter Component - Clean Professional Design
+ * Key statistics displayed in a simple banner
+ */
+
 const stats = [
-  { value: '700+', label: 'Estaciones Registradas', icon: 'building' },
-  { value: '20,000+', label: 'Bomberos en Servicio', icon: 'users' },
-  { value: '32', label: 'Estados Cubiertos', icon: 'map' },
-  { value: '24/7', label: 'Disponibilidad', icon: 'clock' },
+  { value: '700+', label: 'Estaciones Registradas' },
+  { value: '20,000+', label: 'Bomberos en Servicio' },
+  { value: '32', label: 'Estados Cubiertos' },
+  { value: '24/7', label: 'Disponibilidad' },
 ];
 ---
 
-<section class="bg-fire-600 py-16 md:py-20">
-  <div class="container-custom">
+<section class="py-14 md:py-16" style="background-color: #dc2626;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
       {stats.map((stat) => (
         <div class="text-center">
-          <div class="text-4xl md:text-5xl font-display font-bold text-white mb-2">
+          <div class="text-3xl md:text-4xl font-bold mb-1" style="color: #ffffff;">
             {stat.value}
           </div>
-          <div class="text-fire-100 text-sm md:text-base">
+          <div class="text-sm" style="color: rgba(255,255,255,0.85);">
             {stat.label}
           </div>
         </div>

@@ -1,58 +1,66 @@
 ---
+/**
+ * HowItWorks Component - Clean Professional Design
+ * Simple steps with consistent card styling
+ */
+
 const steps = [
   {
     number: '01',
     title: 'Selecciona tu estado',
     description: 'Elige entre los 32 estados de la República Mexicana para ver las estaciones disponibles.',
-    icon: 'map',
   },
   {
     number: '02',
     title: 'Encuentra tu estación',
-    description: 'Usa nuestro buscador o el mapa interactivo para encontrar la estación más cercana.',
-    icon: 'search',
+    description: 'Usa el buscador o navega por municipio para encontrar la estación más cercana.',
   },
   {
     number: '03',
     title: 'Contacta directamente',
     description: 'Obtén teléfonos, direcciones y cómo llegar. En emergencias, siempre llama al 911.',
-    icon: 'phone',
   },
 ];
 ---
 
-<section class="section">
-  <div class="container-custom">
+<section class="py-16 md:py-24" style="background-color: #ffffff;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Header -->
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-800 mb-4">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold mb-3" style="color: #0f172a;">
         Cómo Funciona
       </h2>
-      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+      <p class="text-base" style="color: #64748b;">
         Encuentra información de bomberos en tres simples pasos
       </p>
     </div>
 
     <!-- Steps -->
-    <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+    <div class="grid md:grid-cols-3 gap-6 md:gap-8">
       {steps.map((step, index) => (
-        <div class="relative text-center">
-          {/* Connector line */}
-          {index < steps.length - 1 && (
-            <div class="hidden md:block absolute top-12 left-1/2 w-full h-0.5 bg-slate-200"></div>
-          )}
-
-          {/* Step content */}
-          <div class="relative">
-            {/* Number circle */}
-            <div class="w-24 h-24 mx-auto mb-6 bg-fire-100 rounded-full flex items-center justify-center">
-              <span class="text-3xl font-display font-bold text-fire-600">{step.number}</span>
+        <div
+          class="bg-white rounded-xl overflow-hidden text-center"
+          style="border: 1px solid #e2e8f0;"
+        >
+          <div class="h-1 w-full" style="background-color: #dc2626;"></div>
+          <div class="p-6">
+            <!-- Number -->
+            <div
+              class="w-16 h-16 mx-auto mb-5 rounded-full flex items-center justify-center"
+              style="background-color: #fef2f2;"
+            >
+              <span class="text-2xl font-bold" style="color: #dc2626;">
+                {step.number}
+              </span>
             </div>
 
-            <h3 class="text-xl font-display font-semibold text-slate-800 mb-3">
+            <!-- Title -->
+            <h3 class="text-lg font-bold mb-2" style="color: #0f172a;">
               {step.title}
             </h3>
-            <p class="text-slate-600 leading-relaxed">
+
+            <!-- Description -->
+            <p class="text-sm leading-relaxed" style="color: #64748b;">
               {step.description}
             </p>
           </div>
