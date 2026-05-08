@@ -1,0 +1,158 @@
+---
+/**
+ * Sectors — Sectores que atendemos
+ * Diseño: fondo gris muy claro, cards blancas, sin arcoíris
+ */
+
+const sectors = [
+  {
+    title: 'Cuerpos de Bomberos',
+    desc: 'EPP certificado NFPA, SCBA, herramientas de rescate y equipo operativo completo para cuerpos de bomberos profesionales y voluntarios en toda la República.',
+    norm: 'NFPA 1971 · 1977 · 1981',
+    items: ['Trajes estructurales', 'SCBA Scott / MSA', 'Cascos Bullard', 'Herramientas Holmatro', 'Botas dieléctricas', 'Equipo forestal'],
+    sectors: ['Bomberos prof.', 'Cuerpos voluntarios', 'Protección civil'],
+    highlight: 'EPP completo certificado NFPA',
+    link: 'Cuerpos%20de%20Bomberos',
+  },
+  {
+    title: 'Industria y Manufactura',
+    desc: 'Brigadas equipadas NOM-002-STPS, extintores industriales, sistemas fijos y señalética para plantas, parques industriales y centros de distribución de cualquier giro.',
+    norm: 'NOM-002-STPS',
+    items: ['Extintores industriales', 'Gabinetes equipados', 'Brigadas NOM-002', 'Señalética NOM', 'Sistemas de espuma', 'Detectores de gas'],
+    sectors: ['Plantas ind.', 'Parques industriales', 'Centros logísticos'],
+    highlight: 'Cumplimiento NOM-002-STPS garantizado',
+    link: 'Industria%20y%20Manufactura',
+  },
+  {
+    title: 'Hospitales y Salud',
+    desc: 'Detectores especializados, extintores CO₂ para equipos médicos y sistemas de supresión limpia bajo normas sanitarias, COFEPRIS y protección civil.',
+    norm: 'NOM-003-SEGOB',
+    items: ['Extintores CO₂', 'Supresión limpia FM-200', 'Detectores de humo', 'Señalética hospitalaria', 'Luces de evacuación', 'Mangueras certificadas'],
+    sectors: ['Hospitales', 'Clínicas', 'Laboratorios'],
+    highlight: 'Sistemas sin residuos para equipos médicos',
+    link: 'Hospitales%20y%20Salud',
+  },
+  {
+    title: 'Hoteles y Centros Comerciales',
+    desc: 'Gabinetes, mangueras, extintores y señalética para cumplimiento de COFEPRIS, verificaciones de protección civil estatal y federal y reglamentos locales.',
+    norm: 'NOM-002 · NOM-003',
+    items: ['Gabinetes tipo I y II', 'Extintores PQS / CO₂', 'Señalética fotolum.', 'Luces de emergencia', 'Detectores de humo', 'Mangueras 1½" y 2½"'],
+    sectors: ['Hoteles', 'Plazas comerc.', 'Restaurantes'],
+    highlight: 'Documentación para verificaciones PC',
+    link: 'Hoteles%20y%20Centros%20Comerciales',
+  },
+  {
+    title: 'Construcción y Proyectos',
+    desc: 'Especificación, suministro e instalación de sistemas fijos (sprinklers, FM-200, CO₂) para obra nueva, remodelación y adecuaciones bajo NFPA 13.',
+    norm: 'NFPA 13 · FM Approvals',
+    items: ['Sprinklers NFPA 13', 'Supresión FM-200', 'Bombas contra incendio', 'Tuberías y soportería', 'Gabinetes instalados', 'Ingeniería de diseño'],
+    sectors: ['Obra nueva', 'Remodelación', 'Adecuaciones'],
+    highlight: 'Diseño + suministro + instalación',
+    link: 'Construcci%C3%B3n%20y%20Proyectos',
+  },
+  {
+    title: 'Gobierno y Protección Civil',
+    desc: 'Licitaciones y suministro directo para dependencias federales, estatales y municipales. Documentación completa para compras públicas bajo LAASSP y LOPSRM.',
+    norm: 'LAASSP · LOPSRM',
+    items: ['Ficha CABMS / COG', 'Cert. de laboratorio', 'Carta de distribuidor', 'Núm. de serie trazable', 'Factura fiscal', 'Garantía de fábrica'],
+    sectors: ['Gobierno federal', 'Gobiernos estatales', 'Municipios'],
+    highlight: 'Documentación completa para licitaciones',
+    link: 'Gobierno%20y%20Protecci%C3%B3n%20Civil',
+  },
+];
+---
+
+<section style="background:#f8fafc; padding:96px 0; border-top:1px solid #e4e4e7;">
+  <div class="container-custom">
+
+    <!-- Header 50/50 -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16" style="align-items:center; margin-bottom:56px;">
+
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+          <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+          <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Sectores que Atendemos</span>
+        </div>
+        <h2 style="font-size:clamp(1.9rem,2.8vw,2.7rem);font-weight:800;color:#09090b;line-height:1.1;margin:0;letter-spacing:-0.02em;">
+          Soluciones para<br>cada industria
+        </h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:28px;">
+        <div>
+          <span style="display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px;">Cobertura Nacional por Sector</span>
+          <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">
+            Atendemos a <strong style="color:#09090b; font-weight:600;">cuerpos de bomberos, brigadas industriales, hospitales, hoteles, constructoras y dependencias de gobierno</strong> en los 32 estados de México. Cada sector tiene requerimientos normativos distintos y contamos con el portafolio certificado para cubrirlos todos.
+          </p>
+        </div>
+        <div style="padding-top:28px; border-top:1px solid #e8e8e8;">
+          <span style="display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px;">Cumplimiento Normativo Garantizado</span>
+          <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">
+            Todos nuestros equipos cumplen con las normas aplicables a cada industria: <strong style="color:#09090b; font-weight:600;">NFPA 1971, NOM-002-STPS, NOM-003-SEGOB, LAASSP y LOPSRM</strong>. Documentación técnica completa para verificaciones, licitaciones y auditorías de protección civil.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Grid 3×2 — patrón homologado -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {sectors.map((s) => (
+        <div style="background:#fff; border:1px solid #e4e4e7; border-radius:14px; overflow:hidden; display:flex; flex-direction:column; transition:box-shadow 0.2s ease, transform 0.2s ease;" class="hover:-translate-y-1 hover:shadow-lg">
+
+          <!-- Header -->
+          <div style="padding:24px 24px 0;">
+            <span style="display:inline-block; background:#dc2626; color:#fff; font-size:0.62rem; font-weight:800; letter-spacing:0.06em; padding:3px 9px; border-radius:4px; text-transform:uppercase; margin-bottom:14px;">{s.norm}</span>
+            <h3 style="font-size:1.05rem; font-weight:700; color:#09090b; margin:0 0 10px; line-height:1.3;">{s.title}</h3>
+            <p style="font-size:0.78rem; color:#71717a; line-height:1.7; margin:0 0 18px;">{s.desc}</p>
+          </div>
+
+          <!-- Body -->
+          <div style="padding:0 24px 24px; display:flex; flex-direction:column; flex:1;">
+
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+              <span style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#a1a1aa;">Equipo incluido</span>
+              <div style="flex:1; height:1px; background:#f4f4f5;"></div>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:5px; margin-bottom:18px;">
+              {s.items.map(item => (
+                <span style="font-size:0.68rem; color:#3f3f46; background:#f4f4f5; padding:5px 8px; border-radius:5px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; line-height:1.4;">{item}</span>
+              ))}
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+              <span style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#a1a1aa;">Aplica para</span>
+              <div style="flex:1; height:1px; background:#f4f4f5;"></div>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:5px; margin-bottom:18px;">
+              {s.sectors.map(t => (
+                <span style="font-size:0.67rem; color:#52525b; background:#fff; border:1px solid #e4e4e7; padding:4px 9px; border-radius:99px; line-height:1.4;">{t}</span>
+              ))}
+            </div>
+
+            <div style="display:flex; align-items:center; gap:7px; padding:9px 12px; border-radius:8px; background:#fef2f2;">
+              <svg width="12" height="12" fill="#dc2626" viewBox="0 0 20 20" style="flex-shrink:0;">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span style="font-size:0.68rem; font-weight:600; color:#dc2626;">{s.highlight}</span>
+            </div>
+
+            <a
+              href={`https://wa.me/525500000000?text=Hola%2C%20necesito%20equipo%20para%20${s.link}`}
+              target="_blank"
+              rel="noopener"
+              style="margin-top:18px; border-top:1px solid #f4f4f5; padding-top:16px; display:flex; align-items:center; justify-content:space-between; font-size:0.8rem; font-weight:600; color:#dc2626; text-decoration:none;"
+            >
+              <span>Cotizar para {s.title}</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

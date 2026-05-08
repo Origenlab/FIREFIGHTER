@@ -1,0 +1,37 @@
+---
+/**
+ * CertificationsBar - Barra de certificaciones y normas
+ * NFPA, NOM, UL, FM — factor #1 de confianza en el sector
+ */
+
+const certs = [
+  { code: 'NFPA 1971', name: 'Trajes Estructurales', color: '#dc2626' },
+  { code: 'NFPA 1977', name: 'Equipo Forestal', color: '#d97706' },
+  { code: 'NFPA 1981', name: 'Respiración SCBA', color: '#2563eb' },
+  { code: 'NOM-002', name: 'STPS Incendios', color: '#16a34a' },
+  { code: 'NOM-003', name: 'SEGOB Señalética', color: '#7c3aed' },
+  { code: 'UL Listed', name: 'Underwriters Lab.', color: '#0891b2' },
+  { code: 'FM Approved', name: 'Factory Mutual', color: '#be185d' },
+];
+---
+
+<div style="background-color: #0f172a; border-bottom: 1px solid #1e293b;">
+  <div class="container-custom py-4">
+    <div class="flex flex-wrap items-center gap-3 md:gap-6">
+      <span class="text-xs font-bold uppercase tracking-widest flex-shrink-0" style="color: #475569;">
+        Certificaciones:
+      </span>
+      <div class="flex flex-wrap gap-2 md:gap-3">
+        {certs.map((cert) => (
+          <div
+            class="flex items-center gap-2 px-3 py-1.5 rounded-lg"
+            style={`background-color: ${cert.color}15; border: 1px solid ${cert.color}40;`}
+          >
+            <span class="text-xs font-bold" style={`color: ${cert.color};`}>{cert.code}</span>
+            <span class="text-xs hidden sm:inline" style="color: #64748b;">{cert.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>

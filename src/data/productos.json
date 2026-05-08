@@ -1,0 +1,578 @@
+[
+  {
+    "slug": "equipos-bomberos",
+    "nombre": "Equipos para Bomberos",
+    "badge": "NFPA 1971",
+    "norma": "NFPA 1971",
+    "sector": ["Bomberos prof.", "Cuerpos voluntarios", "Protección civil"],
+    "descripcion": "EPP estructural certificado NFPA 1971 para operaciones de combate de incendios y rescate. Trajes, cascos, botas, guantes y accesorios de las marcas líderes del mercado.",
+    "highlight": "EPP completo certificado NFPA 1971",
+    "items": ["Trajes Nomex", "Chaquetones", "Cascos Bullard", "Botas dieléctricas", "Guantes estructurales", "Capuchas Nomex"],
+    "productos": [
+      {
+        "id": "traje-estructural-nomex",
+        "nombre": "Traje Estructural Nomex III-A",
+        "marca": "MSA Safety",
+        "norma": "NFPA 1971",
+        "descripcion": "Traje de proximidad estructural de dos piezas fabricado en fibra Nomex III-A. Resistencia a la llama, transferencia de calor y vapor de agua certificadas NFPA 1971 ed. 2018.",
+        "caracteristicas": ["Material Nomex III-A tela exterior", "Barrera de vapor Crosstech", "Forro térmico Caldura 7.5", "Cintas reflectivas 3M Scotchlite", "Certificación NFPA 1971:2018", "Disponible tallas XS a 3XL"],
+        "aplicacion": "Incendios estructurales, rescate urbano",
+        "sector": ["Bomberos prof.", "Cuerpos voluntarios"]
+      },
+      {
+        "id": "casco-bullard-usrhb",
+        "nombre": "Casco Estructural USRHB",
+        "marca": "Bullard",
+        "norma": "NFPA 1971",
+        "descripcion": "Casco termoplástico para combate de incendios estructurales con sistema de suspensión de 8 puntos, correa de barbilla integrada y visor facial de fábrica.",
+        "caracteristicas": ["Termoplástico resistente al calor", "Suspensión 8 puntos ajustable", "Visor facial abatible incluido", "Correa barbilla integrada", "NFPA 1971 y ANSI Z89.1", "Colores: rojo, negro, amarillo, blanco"],
+        "aplicacion": "Combate incendios estructurales y rescate",
+        "sector": ["Bomberos prof.", "Cuerpos voluntarios", "Protección civil"]
+      },
+      {
+        "id": "scba-scott-ap50",
+        "nombre": "SCBA Scott Air-Pak 50",
+        "marca": "Scott / 3M",
+        "norma": "NFPA 1981",
+        "descripcion": "Equipo de respiración autónoma de circuito abierto con monitoreo integrado, alarma PASS automática y compatibilidad RIC/UAC para rescate en colapso.",
+        "caracteristicas": ["Cilindro 45 o 60 minutos", "PASS integrado automático", "HUD (Head-Up Display)", "Compatible RIC/UAC", "NFPA 1981:2019", "Peso: 11.5 kg con cilindro 45min"],
+        "aplicacion": "Ambientes IDLH, rescate en humo",
+        "sector": ["Bomberos prof.", "Cuerpos voluntarios"]
+      },
+      {
+        "id": "botas-haix-flash",
+        "nombre": "Botas Fire Flash 3.0",
+        "marca": "HAIX",
+        "norma": "NFPA 1971",
+        "descripcion": "Botas de combate de incendios con horma anatómica, membrana GORE-TEX, plantilla de acero inoxidable y protección dieléctrica certificada.",
+        "caracteristicas": ["Cuero de vacuno ignífugo", "Membrana GORE-TEX impermeable", "Plantilla de acero inoxidable", "Puntera de acero", "Suela antiderrapante calor", "NFPA 1971:2018, ASTM F1504"],
+        "aplicacion": "Combate estructural y rescate vehicular",
+        "sector": ["Bomberos prof.", "Brigadas industriales"]
+      },
+      {
+        "id": "guantes-estructurales-msa",
+        "nombre": "Guantes Estructurales Orca",
+        "marca": "MSA Safety",
+        "norma": "NFPA 1971",
+        "descripcion": "Guantes para combate de incendios estructurales con palma de piel de cabra, barrera de vapor y refuerzo Kevlar en zonas de desgaste.",
+        "caracteristicas": ["Palma piel de cabra 0.8mm", "Dorso Nomex/Kevlar", "Barrera de vapor integrada", "Refuerzo en zona de agarre", "NFPA 1971:2018", "Tallas S, M, L, XL, XXL"],
+        "aplicacion": "Combate incendios, maniobras de rescate",
+        "sector": ["Bomberos prof.", "Cuerpos voluntarios"]
+      },
+      {
+        "id": "capucha-nomex-pbi",
+        "nombre": "Capucha Nomex/PBI Doble Capa",
+        "marca": "MSA Safety",
+        "norma": "NFPA 1971",
+        "descripcion": "Capucha de protección para cuello y cara en fibra Nomex/PBI de doble capa. Protege las zonas no cubiertas por el casco y la máscara del SCBA.",
+        "caracteristicas": ["Fibra Nomex/PBI doble capa", "Abertura facial elástica", "Costuras planas sin costuras abrasivas", "NFPA 1971:2018", "Lavable a máquina", "Tallas: universal, chico/grande"],
+        "aplicacion": "Complemento EPP estructural",
+        "sector": ["Bomberos prof.", "Cuerpos voluntarios"]
+      }
+    ]
+  },
+  {
+    "slug": "scba-respiracion",
+    "nombre": "SCBA y Respiración",
+    "badge": "NFPA 1981",
+    "norma": "NFPA 1981",
+    "sector": ["Bomberos prof.", "Brigadas industriales", "Espacios confinados"],
+    "descripcion": "Equipos de respiración autónoma (SCBA) y sistemas de suministro de aire para operaciones en atmósferas peligrosas, incendios y espacios confinados.",
+    "highlight": "SCBA certificado NFPA 1981:2019",
+    "items": ["SCBA Scott AP50", "SCBA MSA G1", "Cilindros 45/60min", "Máscaras SCBA", "PASS devices", "Kits mantenimiento"],
+    "productos": [
+      {
+        "id": "scba-msa-g1",
+        "nombre": "SCBA G1 SCBA",
+        "marca": "MSA Safety",
+        "norma": "NFPA 1981",
+        "descripcion": "Equipo de respiración autónoma de circuito abierto MSA G1, el más ligero de su clase. PASS integrado, HUD de 7 LEDs y sistema de fácil limpieza.",
+        "caracteristicas": ["Peso 10.9 kg con cilindro 30min", "PASS integrado certificado NFPA 1982", "HUD de 7 LEDs presión/alarma", "Válvula de demanda de bajo perfil", "Compatible RIC/UAC", "NFPA 1981:2019"],
+        "aplicacion": "Incendios estructurales, IDLH",
+        "sector": ["Bomberos prof.", "Brigadas industriales"]
+      },
+      {
+        "id": "cilindro-45min-scott",
+        "nombre": "Cilindro Fibra de Carbono 45 min",
+        "marca": "Scott / 3M",
+        "norma": "NFPA 1981",
+        "descripcion": "Cilindro de fibra de carbono con válvula integrada para SCBA. Capacidad 45 minutos a demanda nominal. Ligero y resistente a impactos.",
+        "caracteristicas": ["Material fibra de carbono", "Capacidad 45 min nominal", "Presión 300 bar (4500 psi)", "Válvula integrada con manómetro", "Inspección hidrostática 5 años", "Compatible Scott AP50 y AP75"],
+        "aplicacion": "Recambio y ampliación de flota SCBA",
+        "sector": ["Bomberos prof.", "Cuerpos voluntarios"]
+      },
+      {
+        "id": "mascara-airmaск-elite",
+        "nombre": "Máscara AirMask Pro Elite",
+        "marca": "MSA Safety",
+        "norma": "NFPA 1981",
+        "descripcion": "Máscara facial completa para SCBA con visor panorámico de policarbonato, correas de ajuste rápido y sistema de voz integrado.",
+        "caracteristicas": ["Visor panorámico 180°", "Sello facial silicona dual", "Sistema de voz integrado", "Correa 5 puntos ajuste rápido", "Compatible con radios portátiles", "NFPA 1981:2019, EN 136"],
+        "aplicacion": "Operaciones IDLH, rescate en humo",
+        "sector": ["Bomberos prof.", "Brigadas industriales"]
+      },
+      {
+        "id": "pass-sensa-plus",
+        "nombre": "PASS Sensa Plus",
+        "marca": "MSA Safety",
+        "norma": "NFPA 1982",
+        "descripcion": "Dispositivo de alarma personal de seguridad (PASS) autónomo certificado NFPA 1982. Activa alarma sonora y visual ante inmovilidad del bombero.",
+        "caracteristicas": ["Alarma 95 dB a 1 metro", "Sensor de movimiento 30 seg", "Activación manual de pánico", "Batería 500 horas de espera", "NFPA 1982:2018", "Integrable a SCBA MSA G1"],
+        "aplicacion": "Seguridad personal en operaciones",
+        "sector": ["Bomberos prof.", "Cuerpos voluntarios"]
+      },
+      {
+        "id": "kit-linea-aire-30m",
+        "nombre": "Kit Línea de Suministro de Aire 30m",
+        "marca": "Scott / 3M",
+        "norma": "NFPA 1981",
+        "descripcion": "Sistema de suministro de aire respirable en línea para espacios confinados y operaciones de larga duración. Manguera de 30 metros con manifold de distribución.",
+        "caracteristicas": ["Manguera alta presión 30m", "Presión trabajo 300 bar", "Manifold 4 salidas", "Conexiones rápidas acero inox", "Carrete de almacenamiento", "Compatible con cilindros 300 bar"],
+        "aplicacion": "Espacios confinados, operaciones prolongadas",
+        "sector": ["Brigadas industriales", "Espacios confinados"]
+      },
+      {
+        "id": "kit-mantenimiento-scba",
+        "nombre": "Kit de Mantenimiento SCBA Anual",
+        "marca": "Scott / 3M",
+        "norma": "NFPA 1981",
+        "descripcion": "Kit completo de piezas de repuesto para mantenimiento anual de SCBA Scott AP50. Incluye válvulas, juntas, filtros y consumibles certificados OEM.",
+        "caracteristicas": ["Piezas OEM originales Scott", "Juntas de silicona y EPDM", "Válvula de demanda reconstruida", "Filtros de partículas", "Manual de mantenimiento", "Garantía OEM 12 meses"],
+        "aplicacion": "Mantenimiento preventivo de flota SCBA",
+        "sector": ["Bomberos prof.", "Brigadas industriales"]
+      }
+    ]
+  },
+  {
+    "slug": "extintores",
+    "nombre": "Extintores",
+    "badge": "NOM-154-SCFI",
+    "norma": "NOM-154-SCFI",
+    "sector": ["Industria", "Comercios", "Oficinas", "Hospitales"],
+    "descripcion": "Extintores portátiles y sobre ruedas para todo tipo de fuego (A, B, C, D, K). Marca Amerex con certificación NOM-154-SCFI y UL para uso comercial e industrial.",
+    "highlight": "Certificados NOM-154-SCFI y UL Listed",
+    "items": ["Extintores PQS", "Extintores CO₂", "Clase K cocinas", "Agua presurizada", "Espuma AFFF", "Extintores industriales"],
+    "productos": [
+      {
+        "id": "extintor-pqs-6kg",
+        "nombre": "Extintor PQS ABC 6 kg",
+        "marca": "Amerex",
+        "norma": "NOM-154-SCFI",
+        "descripcion": "Extintor de polvo químico seco ABC de 6 kg con agente supresor monoamonio fosfato. Ideal para uso general en oficinas, bodegas y áreas comerciales.",
+        "caracteristicas": ["Agente PQS monoamonio fosfato", "Capacidad 6 kg (extintor 2-A:20-B:C)", "Válvula de bronce cromada", "Manómetro de presión integrado", "NOM-154-SCFI y UL Listed", "Recarga anual disponible"],
+        "aplicacion": "Fuegos clase A, B y C",
+        "sector": ["Comercios", "Oficinas", "Bodegas"]
+      },
+      {
+        "id": "extintor-co2-5kg",
+        "nombre": "Extintor CO₂ 5 kg",
+        "marca": "Amerex",
+        "norma": "NOM-154-SCFI",
+        "descripcion": "Extintor de bióxido de carbono de 5 kg para fuegos clase B y C. Sin residuo, ideal para equipos eléctricos, servidores y áreas de manufactura electrónica.",
+        "caracteristicas": ["Agente CO₂ sin residuo", "Capacidad 5 kg (5-B:C)", "Boquilla difusora antiestática", "Cilindro de acero sin costura", "NOM-154-SCFI y UL Listed", "No daña equipos electrónicos"],
+        "aplicacion": "Fuegos clase B y C, equipos electrónicos",
+        "sector": ["Hospitales", "Oficinas", "Manufactura electrónica"]
+      },
+      {
+        "id": "extintor-clase-k",
+        "nombre": "Extintor Clase K 6 L",
+        "marca": "Amerex",
+        "norma": "NOM-154-SCFI",
+        "descripcion": "Extintor clase K para fuegos en cocinas comerciales con aceites y grasas vegetales y animales a alta temperatura. Agente acetato de potasio.",
+        "caracteristicas": ["Agente acetato de potasio", "Capacidad 6 litros", "Efecto saponificación en grasas", "Boquilla de baja velocidad", "NOM-154-SCFI y UL Listed", "Requerido por NFPA 96 en cocinas"],
+        "aplicacion": "Cocinas comerciales, grasas y aceites",
+        "sector": ["Hoteles", "Restaurantes", "Comedores industriales"]
+      },
+      {
+        "id": "extintor-agua-9l",
+        "nombre": "Extintor Agua Presurizada 9 L",
+        "marca": "Amerex",
+        "norma": "NOM-154-SCFI",
+        "descripcion": "Extintor de agua presurizada de 9 litros para fuegos clase A en materiales sólidos. Máxima capacidad de enfriamiento y penetración en materiales fibrosos.",
+        "caracteristicas": ["Agua destilada presurizada", "Capacidad 9 litros (2-A)", "Alcance chorro 9-10 metros", "Cilindro acero inox", "NOM-154-SCFI y UL Listed", "No usar en fuegos eléctricos"],
+        "aplicacion": "Fuegos clase A — madera, papel, textiles",
+        "sector": ["Bodegas", "Industria papelera", "Comercios"]
+      },
+      {
+        "id": "extintor-espuma-9l",
+        "nombre": "Extintor Espuma AFFF 9 L",
+        "marca": "Amerex",
+        "norma": "NOM-154-SCFI",
+        "descripcion": "Extintor de espuma AFFF de 9 litros para fuegos clase A y B. Forma una película sofocante sobre la superficie del combustible.",
+        "caracteristicas": ["Agente espuma AFFF 3%", "Capacidad 9 litros (3-A:20-B)", "Película sofocante película acuosa", "Alcance 6-8 metros", "NOM-154-SCFI y UL Listed", "Efectivo en derrames de combustible"],
+        "aplicacion": "Fuegos clase A y B — líquidos inflamables",
+        "sector": ["Plantas industriales", "Aeropuertos", "Gasolineras"]
+      },
+      {
+        "id": "extintor-industrial-50kg",
+        "nombre": "Extintor PQS Industrial 50 kg",
+        "marca": "Amerex",
+        "norma": "NOM-154-SCFI",
+        "descripcion": "Extintor de polvo químico seco sobre ruedas de 50 kg para riesgos industriales de alto nivel. Manguera de 6 metros y boquilla tipo pistola.",
+        "caracteristicas": ["Agente PQS 50 kg", "Capacidad 20-A:160-B:C", "Manguera 6 metros flexible", "Boquilla pistola grip", "Ruedas de transporte", "NOM-154-SCFI y UL Listed"],
+        "aplicacion": "Plantas industriales, hangares, refinerías",
+        "sector": ["Industria pesada", "Aeropuertos", "Plantas petroquímicas"]
+      }
+    ]
+  },
+  {
+    "slug": "sistemas-fijos",
+    "nombre": "Sistemas de Supresión Fija",
+    "badge": "NFPA 13",
+    "norma": "NFPA 13",
+    "sector": ["Construcción", "Industria", "Hospitales", "Hoteles"],
+    "descripcion": "Sistemas fijos de supresión y extinción automática de incendios bajo normas NFPA 13, NFPA 2001 y FM Approvals. Diseño, suministro e instalación integral.",
+    "highlight": "Diseño + suministro + instalación NFPA 13",
+    "items": ["Sprinklers NFPA 13", "FM-200 / HFC-227", "CO₂ total flooding", "Bombas contra incendio", "Válvulas de control", "Sistemas espuma AFFF"],
+    "productos": [
+      {
+        "id": "sprinkler-colgante-68",
+        "nombre": "Sprinkler Colgante 68°C K-80",
+        "marca": "Tyco / Johnson Controls",
+        "norma": "NFPA 13",
+        "descripcion": "Sprinkler automático colgante estándar K-80 con ampolla de vidrio a 68°C. Certificado UL para sistemas húmedos de almacenamiento y oficinas.",
+        "caracteristicas": ["Temperatura de activación 68°C (rojo)", "Factor K-80 (8.0 gpm/psi½)", "Rosca ½\" NPT", "Acabado bronce o cromo", "Certificado UL y FM", "NFPA 13:2022"],
+        "aplicacion": "Sistemas húmedos, oficinas, bodegas",
+        "sector": ["Construcción", "Hoteles", "Industria"]
+      },
+      {
+        "id": "sistema-fm200",
+        "nombre": "Sistema de Supresión FM-200 (HFC-227ea)",
+        "marca": "Kidde / Carrier",
+        "norma": "NFPA 2001",
+        "descripcion": "Sistema de supresión limpia con agente HFC-227ea (FM-200) para protección de cuartos de servidores, salas de control y áreas con equipos críticos.",
+        "caracteristicas": ["Agente HFC-227ea sin residuo", "Tiempo de descarga < 10 seg", "Nulo daño a equipos electrónicos", "Panel de control integrado", "Alarmas sonoras y visuales", "NFPA 2001, FM Approvals"],
+        "aplicacion": "Salas de servidores, control, equipos críticos",
+        "sector": ["Hospitales", "Industria", "Telecomunicaciones"]
+      },
+      {
+        "id": "bomba-ci-diesel",
+        "nombre": "Bomba Contra Incendio Diésel 750 gpm",
+        "marca": "Grundfos / Patterson",
+        "norma": "NFPA 20",
+        "descripcion": "Bomba centrífuga horizontal para sistema contra incendio con motor diésel de respaldo. 750 gpm a 100 psi. Incluye controlador listado UL.",
+        "caracteristicas": ["Capacidad 750 gpm a 100 psi", "Motor diésel de respaldo", "Controlador UL Listed", "Bomba jockey integrada", "Panel de arranque automático", "NFPA 20, UL Listed, FM Approved"],
+        "aplicacion": "Corazón del sistema CI de edificios",
+        "sector": ["Construcción", "Industria", "Hospitales"]
+      },
+      {
+        "id": "valvula-alarma-os-y",
+        "nombre": "Válvula OS&Y de Compuerta 4\"",
+        "marca": "Viking",
+        "norma": "NFPA 13",
+        "descripcion": "Válvula de compuerta OS&Y (Outside Screw and Yoke) de 4 pulgadas para corte de sistemas de rociadores. Indicador visual de posición abierto/cerrado.",
+        "caracteristicas": ["Diámetro 4\" (DN100)", "Cuerpo hierro fundido", "Indicador visual posición OS&Y", "Presión trabajo 175 psi", "UL Listed y FM Approved", "Supervisión eléctrica disponible"],
+        "aplicacion": "Control principal sistema de rociadores",
+        "sector": ["Construcción", "Industria"]
+      },
+      {
+        "id": "boquilla-espuma-foam",
+        "nombre": "Boquilla Espuma Hi-Combust 2.5\"",
+        "marca": "Angus Fire",
+        "norma": "NFPA 11",
+        "descripcion": "Boquilla tipo foam-water para generación de espuma de baja expansión. Ajuste de caudal variable y ángulo de cobertura de 0° a 120°.",
+        "caracteristicas": ["Cuerpo aluminio anodizado", "Caudal 200 a 400 gpm ajustable", "Cobertura 0° a 120°", "Compatible espuma AR-AFFF 3x3%", "Rosca 2.5\" NST", "NFPA 11, UL Listed"],
+        "aplicacion": "Derrames de combustible, hangares, tanques",
+        "sector": ["Aeropuertos", "Plantas petroquímicas", "Industria"]
+      },
+      {
+        "id": "panel-notifier-nfs2",
+        "nombre": "Panel de Detección NFS2-3030",
+        "marca": "Notifier / Honeywell",
+        "norma": "NFPA 72",
+        "descripcion": "Panel de detección y alarma de incendio inteligente para 3,030 puntos direccionables. Compatible con protocolo SLC CLIP/FASTID y gestión centralizada.",
+        "caracteristicas": ["3,030 puntos direccionables", "Protocolo SLC CLIP/FASTID", "Pantalla LCD en español", "2 lazos SLC expandibles", "Fuente 10A con batería respaldo", "UL Listed, NFPA 72:2022"],
+        "aplicacion": "Edificios medianos y grandes, hospitales",
+        "sector": ["Hospitales", "Hoteles", "Edificios corporativos"]
+      }
+    ]
+  },
+  {
+    "slug": "herramientas-rescate",
+    "nombre": "Herramientas de Rescate",
+    "badge": "NFPA 1936",
+    "norma": "NFPA 1936",
+    "sector": ["Bomberos prof.", "Protección civil", "Rescate vehicular"],
+    "descripcion": "Herramientas hidráulicas de rescate Holmatro para excarcelación vehicular y rescate en estructuras colapsadas. La referencia mundial en herramientas de rescate.",
+    "highlight": "Herramientas Holmatro — referencia mundial",
+    "items": ["Combi Tool V300", "Tijeras hidráulicas", "Spreaders", "Rams hidráulicos", "Generadores P50", "Iluminación LED"],
+    "productos": [
+      {
+        "id": "holmatro-combi-v300",
+        "nombre": "Combi Tool V300",
+        "marca": "Holmatro",
+        "norma": "NFPA 1936",
+        "descripcion": "Herramienta combinada (cizalla + expansor) Holmatro V300. Fuerza de expansión 420 kN y fuerza de corte 950 kN. Tecnología CORE de alto rendimiento.",
+        "caracteristicas": ["Fuerza expansión 420 kN", "Fuerza corte 950 kN", "Apertura máx. 280 mm", "Peso 10.2 kg sin mangueras", "Tecnología CORE", "NFPA 1936:2022, CE"],
+        "aplicacion": "Excarcelación vehicular primaria",
+        "sector": ["Bomberos prof.", "Protección civil"]
+      },
+      {
+        "id": "holmatro-tijeras-sp3200",
+        "nombre": "Tijeras Hidráulicas SP 3200",
+        "marca": "Holmatro",
+        "norma": "NFPA 1936",
+        "descripcion": "Tijeras de corte hidráulicas de alto rendimiento para acero estructural, varilla y postes. Apertura de 230 mm y fuerza de corte de 1,100 kN.",
+        "caracteristicas": ["Fuerza corte 1,100 kN", "Apertura 230 mm", "Cuchillas intercambiables", "Peso 11.5 kg", "Rotación de cabeza 360°", "NFPA 1936:2022, CE"],
+        "aplicacion": "Corte de postes, varillas, chapas de acero",
+        "sector": ["Bomberos prof.", "Rescate industrial"]
+      },
+      {
+        "id": "holmatro-spreader-sp5250",
+        "nombre": "Expansor SP 5250",
+        "marca": "Holmatro",
+        "norma": "NFPA 1936",
+        "descripcion": "Expansor hidráulico de gran apertura para rescate en vehículos pesados y autobuses. Apertura máxima 520 mm con fuerza de expansión de 500 kN.",
+        "caracteristicas": ["Fuerza expansión 500 kN", "Apertura máxima 520 mm", "Puntas intercambiables 4 tipos", "Peso 12.8 kg", "Tecnología CORE", "NFPA 1936:2022, CE"],
+        "aplicacion": "Vehículos pesados, autobuses, rescate industrial",
+        "sector": ["Bomberos prof.", "Rescate carretero"]
+      },
+      {
+        "id": "holmatro-ram-hr4320",
+        "nombre": "Ram Extensible HR 4320",
+        "marca": "Holmatro",
+        "norma": "NFPA 1936",
+        "descripcion": "Ram hidráulico de doble extensión para desplazamiento de columna de dirección y tablero. Fuerza de empuje 200 kN con extensión de 430 a 720 mm.",
+        "caracteristicas": ["Fuerza empuje 200 kN", "Extensión mín. 430 mm / máx. 720 mm", "Doble extensión telescópica", "Peso 8.2 kg", "Puntas giratorias incluidas", "NFPA 1936:2022, CE"],
+        "aplicacion": "Desplazamiento de tablero, columna de dirección",
+        "sector": ["Bomberos prof.", "Protección civil"]
+      },
+      {
+        "id": "holmatro-generador-p50",
+        "nombre": "Generador Hidráulico P50",
+        "marca": "Holmatro",
+        "norma": "NFPA 1936",
+        "descripcion": "Unidad de potencia hidráulica de dos etapas para alimentación de herramientas de rescate. Motor Honda de 4 tiempos con 50 cc/rev y doble circuito.",
+        "caracteristicas": ["Motor Honda GX35 4 tiempos", "Caudal alto 2.5 L/min", "Caudal bajo 0.85 L/min", "Presión máx. 720 bar", "Depósito aceite 1.5 L", "Peso 16.5 kg"],
+        "aplicacion": "Fuente de potencia para herramientas hidráulicas",
+        "sector": ["Bomberos prof.", "Protección civil"]
+      },
+      {
+        "id": "iluminacion-led-multiflood",
+        "nombre": "Torre de Iluminación LED Multiflood",
+        "marca": "Holmatro",
+        "norma": "NFPA 1936",
+        "descripcion": "Torre de iluminación LED portátil para escenas de rescate nocturnas. 8 paneles LED de 80W con mástil telescópico hasta 2.5 metros de altura.",
+        "caracteristicas": ["8 × panel LED 80W (640W total)", "Flujo luminoso 56,000 lm", "Mástil telescópico 1.0–2.5 m", "Base de trípode estabilizada", "Cable 10 metros incluido", "Peso total 12 kg"],
+        "aplicacion": "Iluminación de escenas nocturnas",
+        "sector": ["Bomberos prof.", "Protección civil", "Emergencias viales"]
+      }
+    ]
+  },
+  {
+    "slug": "deteccion-alarma",
+    "nombre": "Detección y Alarma",
+    "badge": "NFPA 72",
+    "norma": "NFPA 72",
+    "sector": ["Hospitales", "Hoteles", "Corporativos", "Industria"],
+    "descripcion": "Sistemas de detección temprana y alarma de incendio bajo NFPA 72. Detectores inteligentes, paneles, estaciones manuales, sirenas y gestión centralizada.",
+    "highlight": "Detección temprana certificada NFPA 72",
+    "items": ["Panel Notifier NFS2", "Detectores ópticos", "Estaciones manuales", "Sirenas y estrobos", "Detectores de gas", "Detectores de calor"],
+    "productos": [
+      {
+        "id": "detector-optico-sd355",
+        "nombre": "Detector Óptico de Humo SD355",
+        "marca": "System Sensor / Honeywell",
+        "norma": "NFPA 72",
+        "descripcion": "Detector fotoeléctrico de humo inteligente de dos hilos compatible con paneles Notifier. Cámara de detección laberíntica con compensación de deriva.",
+        "caracteristicas": ["Tecnología fotoeléctrica", "Compensación de deriva automática", "LED de estatus bicolor", "Distancia entre detectores: 9.1m", "Base universal intercambiable", "UL Listed, NFPA 72:2022"],
+        "aplicacion": "Detección humo en oficinas, hoteles, hospitales",
+        "sector": ["Hospitales", "Hoteles", "Corporativos"]
+      },
+      {
+        "id": "detector-calor-5601",
+        "nombre": "Detector de Calor Fijo/Termovelocimétrico 5601",
+        "marca": "System Sensor / Honeywell",
+        "norma": "NFPA 72",
+        "descripcion": "Detector de calor combinado: temperatura fija a 57°C y termovelocimétrico (ROR) > 8.3°C/min. Ideal para cocinas, garajes y áreas polvorientas.",
+        "caracteristicas": ["Activación fija 57°C (135°F)", "ROR > 8.3°C/min", "Sin cámara — inmune al polvo", "Compatible con paneles CLIP/FASTID", "LED de estatus rojo", "UL Listed, NFPA 72:2022"],
+        "aplicacion": "Cocinas, garajes, cuartos de máquinas",
+        "sector": ["Hoteles", "Industria", "Hospitales"]
+      },
+      {
+        "id": "estacion-manual-bg12",
+        "nombre": "Estación Manual BG-12LX",
+        "marca": "Notifier / Honeywell",
+        "norma": "NFPA 72",
+        "descripcion": "Estación manual de doble acción para activación de alarma. Requiere jalar y girar, evitando activaciones accidentales. Dirección electrónica individual.",
+        "caracteristicas": ["Doble acción (jalar y girar)", "Dirección SLC individual", "Caja metálica color rojo", "Llave de rearme incluida", "LED confirmación activación", "UL Listed, NFPA 72:2022"],
+        "aplicacion": "Puntos de activación manual de alarma",
+        "sector": ["Hospitales", "Hoteles", "Corporativos"]
+      },
+      {
+        "id": "sirena-strobo-spectralert",
+        "nombre": "Sirena / Estrobo SpectrAlert Advance",
+        "marca": "System Sensor / Honeywell",
+        "norma": "NFPA 72",
+        "descripcion": "Dispositivo de notificación combinado sirena + estrobo para evacuación. Candela ajustable 15 a 115 cd y tono de alarma 75 a 99 dB seleccionable.",
+        "caracteristicas": ["Tono seleccionable 75–99 dB", "Candela ajustable 15–115 cd", "Patrón estrobo 1/8 a 2 seg", "Montaje pared o techo", "Compatible 12/24V DC", "UL Listed, NFPA 72:2022"],
+        "aplicacion": "Notificación de alarma en pasillos y áreas",
+        "sector": ["Hospitales", "Hoteles", "Corporativos"]
+      },
+      {
+        "id": "detector-gas-co-multi",
+        "nombre": "Detector de Gas CO/Combustible Multi",
+        "marca": "Industrial Scientific",
+        "norma": "NFPA 72",
+        "descripcion": "Detector fijo de monóxido de carbono y gases combustibles para cuartos de calderas, garajes y plantas industriales. Salida de relé para alarma y panel.",
+        "caracteristicas": ["Detección CO y gas combustible", "Salida relé NC/NA 2A", "Pantalla LCD concentración", "Rango CO: 0–500 ppm", "Rango combustible: 0–100% LEL", "Certificado UL2034, NFPA 72"],
+        "aplicacion": "Garajes, calderas, cuartos de máquinas",
+        "sector": ["Hospitales", "Hoteles", "Industria"]
+      },
+      {
+        "id": "modulo-monitor-m500x",
+        "nombre": "Módulo Monitor M500X",
+        "marca": "Notifier / Honeywell",
+        "norma": "NFPA 72",
+        "descripcion": "Módulo monitor SLC para supervisión de dispositivos convencionales (detectores 2 hilos, válvulas, contactos). Integra subsistemas legacy a panel inteligente.",
+        "caracteristicas": ["1 zona de detección convencional", "Compatible protocolo CLIP/FASTID", "LED de estatus rojo", "Caja montaje superficie o embutir", "Dirección SLC individual", "UL Listed, NFPA 72:2022"],
+        "aplicacion": "Integración de dispositivos convencionales a SLC",
+        "sector": ["Hospitales", "Hoteles", "Industria"]
+      }
+    ]
+  },
+  {
+    "slug": "gabinetes-mangueras",
+    "nombre": "Gabinetes y Mangueras",
+    "badge": "NOM-002-STPS",
+    "norma": "NOM-002-STPS",
+    "sector": ["Industria", "Hoteles", "Comercios", "Construcción"],
+    "descripcion": "Gabinetes contra incendio tipo I y II, mangueras certificadas, lanzas y accesorios de conexión para sistemas fijos y portátiles bajo NOM-002-STPS.",
+    "highlight": "Cumplimiento NOM-002-STPS completo",
+    "items": ["Gabinetes tipo I y II", "Mangueras 1½\" y 2½\"", "Lanzas de niebla", "Válvulas angulares", "Acoples storz", "Accesorios completos"],
+    "productos": [
+      {
+        "id": "gabinete-tipo-i-45",
+        "nombre": "Gabinete Contra Incendio Tipo I 45cm",
+        "marca": "Nacional",
+        "norma": "NOM-002-STPS",
+        "descripcion": "Gabinete metálico tipo I para manguera de 1½\" con válvula angular, manguera de 15 m, lanza y extintor. Lámina calibre 18 con recubrimiento en polvo rojo.",
+        "caracteristicas": ["Lámina calibre 18 recubrimiento polvo", "Válvula angular 1½\" bronce", "Manguera 1½\" × 15 m incluida", "Lanza regulable tipo niebla", "Espacio para extintor 4.5 kg", "NOM-002-STPS:2010"],
+        "aplicacion": "Pisos de oficinas, pasillos comerciales",
+        "sector": ["Hoteles", "Comercios", "Corporativos"]
+      },
+      {
+        "id": "gabinete-tipo-ii-60",
+        "nombre": "Gabinete Contra Incendio Tipo II 60cm",
+        "marca": "Nacional",
+        "norma": "NOM-002-STPS",
+        "descripcion": "Gabinete metálico tipo II de mayor capacidad para manguera de 2½\" con válvula siamesa y adaptadores 2½\" a 1½\". Diseñado para riesgos moderados-altos.",
+        "caracteristicas": ["Lámina calibre 16 extra reforzada", "Válvula angular 2½\" bronce", "Manguera 2½\" × 15 m incluida", "Adaptadores 2½\" a 1½\" incluidos", "Bisagras de acero inox", "NOM-002-STPS:2010"],
+        "aplicacion": "Industria, bodegas, plantas de producción",
+        "sector": ["Industria", "Hoteles de lujo", "Hospitales"]
+      },
+      {
+        "id": "manguera-1.5-tipo1-30m",
+        "nombre": "Manguera 1½\" Tipo 1 × 30 m",
+        "marca": "Nacional",
+        "norma": "NOM-002-STPS",
+        "descripcion": "Manguera forrada de lona y forro interior de caucho para sistemas de gabinete contra incendio. Presión de prueba 250 psi, presión de trabajo 100 psi.",
+        "caracteristicas": ["Diámetro nominal 1½\" (38mm)", "Longitud 30 metros", "Presión trabajo 100 psi", "Presión prueba 250 psi", "Acoples aluminio NST incluidos", "NOM-002-STPS, UL Listed"],
+        "aplicacion": "Reposición en gabinetes tipo I",
+        "sector": ["Industria", "Hoteles", "Comercios"]
+      },
+      {
+        "id": "lanza-niebla-1.5",
+        "nombre": "Lanza de Niebla Regulable 1½\"",
+        "marca": "Elkhart Brass",
+        "norma": "NOM-002-STPS",
+        "descripcion": "Lanza de aluminio tipo fog-straight-off para manguera 1½\". Ajuste de patrón chorro recto, niebla y cierre. Empuñadura ergonómica de agarre seguro.",
+        "caracteristicas": ["Aluminio anodizado", "Patrones: chorro / niebla / cierre", "Caudal 60–125 gpm ajustable", "Conexión 1½\" NST (hembra)", "Empuñadura antideslizante", "UL Listed, NFPA 1964"],
+        "aplicacion": "Control de incendio con gabinete tipo I",
+        "sector": ["Industria", "Hoteles", "Comercios"]
+      },
+      {
+        "id": "valvula-angular-1.5",
+        "nombre": "Válvula Angular 1½\" Bronce",
+        "marca": "Nacional",
+        "norma": "NOM-002-STPS",
+        "descripcion": "Válvula angular de bronce para conexión de manguera en gabinete tipo I. Volante de operación con indicador de posición abierto/cerrado.",
+        "caracteristicas": ["Cuerpo bronce fundido", "Diámetro 1½\" NST", "Rosca hembra NPT entrada", "Rosca macho NST salida", "Presión trabajo 175 psi", "NOM-002-STPS:2010"],
+        "aplicacion": "Punto de conexión en gabinete tipo I",
+        "sector": ["Industria", "Hoteles", "Comercios"]
+      },
+      {
+        "id": "acople-storz-2.5",
+        "nombre": "Acople Storz 2½\" Aluminio",
+        "marca": "Nacional",
+        "norma": "NOM-002-STPS",
+        "descripcion": "Acople de conexión rápida tipo Storz de 2½\" para mangueras de ataque y sistemas de abastecimiento. Llave de ensamble incluida.",
+        "caracteristicas": ["Aluminio fundido anodizado", "Tamaño 2½\" (65mm)", "Conexión giro 1/4 vuelta", "Empaque EPDM reemplazable", "Llave de ensamble incluida", "Compatible NST y Storz"],
+        "aplicacion": "Conexión de mangueras de 2½\"",
+        "sector": ["Bomberos prof.", "Industria"]
+      }
+    ]
+  },
+  {
+    "slug": "equipo-forestal",
+    "nombre": "Equipo Forestal",
+    "badge": "Brigadas forestales",
+    "norma": "Brigadas forestales",
+    "sector": ["Brigadas forestales", "Protección civil", "CONAFOR"],
+    "descripcion": "Equipamiento especializado para brigadas de combate de incendios forestales: mochilas aspersoras, herramientas manuales, EPP forestal y kits completos de brigada.",
+    "highlight": "Equipamiento completo para brigada forestal",
+    "items": ["Mochilas aspersoras 20L", "Bombas portátiles", "Herramientas manuales", "Cascos forestales", "Overoles FR", "Kits brigada"],
+    "productos": [
+      {
+        "id": "mochila-aspersora-20l",
+        "nombre": "Mochila Aspersora Forestal 20 L",
+        "marca": "Husqvarna",
+        "norma": "Brigadas forestales",
+        "descripcion": "Mochila aspersora de 20 litros en polietileno de alta densidad con bomba de palanca doble acción. Ideal para operaciones de supresión directa en incendios forestales.",
+        "caracteristicas": ["Depósito HDPE 20 litros", "Bomba palanca doble acción", "Manguera 1.5 m con boquilla", "Boquilla regulable chorro/niebla", "Correas acolchadas ajustables", "Peso vacío 2.1 kg"],
+        "aplicacion": "Supresión directa en incendios forestales",
+        "sector": ["Brigadas forestales", "CONAFOR"]
+      },
+      {
+        "id": "hacha-pulaski",
+        "nombre": "Hacha Pulaski Forestal",
+        "marca": "Council Tool",
+        "norma": "Brigadas forestales",
+        "descripcion": "Hacha combinada con azadón forestal Pulaski. Herramienta estándar para construcción de brechas cortafuego y apertura de suelo mineral.",
+        "caracteristicas": ["Cabeza acero forjado 1.8 kg", "Filo hacha un lado, azadón otro", "Mango fibra de vidrio 91 cm", "Cubierta protectora incluida", "Libre de astillas en impacto", "Estándar NWCG/CONAFOR"],
+        "aplicacion": "Construcción de brechas cortafuego",
+        "sector": ["Brigadas forestales", "CONAFOR", "Protección civil"]
+      },
+      {
+        "id": "mcleod-forestal",
+        "nombre": "Herramienta McLeod Forestal",
+        "marca": "Council Tool",
+        "norma": "Brigadas forestales",
+        "descripcion": "Herramienta combinada rake-hoe para raspado de material combustible y construcción de líneas de defensa en incendios forestales.",
+        "caracteristicas": ["Cabeza acero templado 1.5 kg", "Rake 9 dientes un lado", "Hoe de filo recto otro lado", "Mango fresno 150 cm", "Cabeza soldada sin remaches", "Estándar NWCG/CONAFOR"],
+        "aplicacion": "Raspado de terreno y líneas de defensa",
+        "sector": ["Brigadas forestales", "CONAFOR"]
+      },
+      {
+        "id": "casco-forestal-msa",
+        "nombre": "Casco Forestal MSA Cairns",
+        "marca": "MSA Safety",
+        "norma": "ANSI Z89.1",
+        "descripcion": "Casco de protección forestal clase E (eléctrico) con visera corta y protección solar posterior. Suspensión de 4 puntos con ajuste de trinquete.",
+        "caracteristicas": ["ABS de alta resistencia", "Clase E (eléctrica) hasta 20kV", "Visera corta delantera", "Suspensión 4 puntos trinquete", "Ranuras ventilación laterales", "ANSI Z89.1:2014, CSA Z94.1"],
+        "aplicacion": "Protección craneal en operaciones forestales",
+        "sector": ["Brigadas forestales", "CONAFOR", "Construcción"]
+      },
+      {
+        "id": "overall-fr-nomex-forestal",
+        "nombre": "Overall FR Nomex Forestal",
+        "marca": "Lakeland Industries",
+        "norma": "NFPA 1977",
+        "descripcion": "Overall de una pieza en Nomex IIIA de 6 oz/yd² color naranja para brigadas forestales. Protección térmica certificada NFPA 1977 para combate de incendios de interfaz.",
+        "caracteristicas": ["Material Nomex IIIA 6 oz/yd²", "Color naranja alta visibilidad", "Cintas reflectivas 3M tipo R", "Cierre frontal con solapa", "Bolsas laterales y pecho", "NFPA 1977:2016"],
+        "aplicacion": "EPP de cuerpo para brigadas forestales",
+        "sector": ["Brigadas forestales", "CONAFOR"]
+      },
+      {
+        "id": "kit-brigada-forestal-completo",
+        "nombre": "Kit Brigada Forestal — 10 personas",
+        "marca": "FIREFIGHTER",
+        "norma": "NFPA 1977",
+        "descripcion": "Kit completo de equipamiento para brigada forestal de 10 personas. Incluye overoles, cascos, guantes, mochilas aspersoras, herramientas manuales y bolsa de transporte.",
+        "caracteristicas": ["10 overoles FR Nomex NFPA 1977", "10 cascos forestales clase E", "10 guantes de cuero forestal", "5 mochilas aspersoras 20L", "5 hachas Pulaski + 5 McLeod", "Bolsa transporte colectiva"],
+        "aplicacion": "Equipamiento inicial brigada forestal",
+        "sector": ["Brigadas forestales", "CONAFOR", "Protección civil"]
+      }
+    ]
+  }
+]

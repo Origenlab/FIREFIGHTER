@@ -1,0 +1,277 @@
+---
+/**
+ * FAQ — Preguntas frecuentes + Formulario a WhatsApp
+ * Dos columnas: izquierda accordion FAQ, derecha form → WhatsApp
+ */
+
+const faqs = [
+  {
+    q: '¿Cuánto tiempo tardan en entregar una cotización?',
+    a: 'Entregamos propuesta técnica y comercial en menos de 24 horas hábiles. Para proyectos urgentes, contacta directamente por WhatsApp y respondemos en menos de 2 horas con una estimación preliminar.',
+  },
+  {
+    q: '¿Los equipos incluyen certificado de origen y ficha técnica?',
+    a: 'Sí. Todos los productos incluyen certificado de origen del fabricante, número de serie trazable y ficha técnica en español sin costo adicional. Esta documentación es requerida para licitaciones públicas y auditorías NOM.',
+  },
+  {
+    q: '¿Hacen entregas en toda la República Mexicana?',
+    a: 'Sí. Entregamos puerta a puerta en los 32 estados. Coordinamos la logística para compras individuales y equipamientos masivos con trazabilidad de envío incluida.',
+  },
+  {
+    q: '¿Qué normas y certificaciones cubren sus equipos?',
+    a: 'Nuestro catálogo está certificado bajo NFPA 1971, 1981, 1977, 1936, NFPA 13, NFPA 72, NOM-002-STPS, NOM-154-SCFI, NOM-003-SEGOB y UL. Cada categoría de producto cuenta con las certificaciones específicas aplicables.',
+  },
+  {
+    q: '¿Pueden participar en licitaciones públicas bajo LAASSP?',
+    a: 'Sí. Contamos con documentación completa para compras públicas: fichas CABMS/COG, certificados de laboratorio, carta de distribuidor autorizado y números de serie. Atendemos licitaciones federales, estatales y municipales.',
+  },
+  {
+    q: '¿Ofrecen asesoría técnica para seleccionar el equipo correcto?',
+    a: 'Sí, sin costo. Ingenieros especializados en NFPA y NOM-002-STPS analizan tu tipo de riesgo, norma aplicable y presupuesto para recomendarte el equipo exacto. Sin compromiso de compra.',
+  },
+  {
+    q: '¿Qué marcas distribuyen de forma autorizada?',
+    a: 'Somos distribuidores autorizados de MSA Safety, Scott Aviation, Holmatro y Amerex, entre otras marcas líderes. Cada producto llega directo del fabricante con garantía y documentación original.',
+  },
+  {
+    q: '¿Tienen soporte posventa y servicio de garantía?',
+    a: 'Sí. Ofrecemos soporte técnico de primer nivel directamente con el fabricante: refacciones originales, gestión de garantía, atención a recalls y diagnóstico en campo. El soporte no termina con la venta.',
+  },
+];
+---
+
+<section style="background:#ffffff; padding:96px 0; border-top:1px solid #e4e4e7;">
+  <div class="container-custom">
+
+    <!-- Header 50/50 -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16" style="align-items:center; margin-bottom:64px;">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+          <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+          <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Preguntas Frecuentes</span>
+        </div>
+        <h2 style="font-size:clamp(1.9rem,2.8vw,2.7rem); font-weight:800; color:#09090b; line-height:1.1; margin:0; letter-spacing:-0.02em;">
+          Todo lo que necesitas<br>saber antes de cotizar
+        </h2>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:28px;">
+        <div>
+          <span style="display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px;">Resolvemos tus Dudas Técnicas</span>
+          <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">
+            Sabemos que adquirir <strong style="color:#09090b; font-weight:600;">equipos contra incendios certificados</strong> implica decisiones técnicas y normativas importantes. Aquí encontrarás respuestas claras sobre certificaciones, tiempos de entrega, documentación para licitaciones y proceso de compra.
+          </p>
+        </div>
+        <div style="padding-top:28px; border-top:1px solid #f0f0f0;">
+          <span style="display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px;">¿Tienes una Pregunta Diferente?</span>
+          <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">
+            Completa el formulario y un especialista te contactará directamente por WhatsApp. Sin bots, sin tiempos de espera prolongados — <strong style="color:#09090b; font-weight:600;">respuesta en menos de 2 horas hábiles</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dos columnas: FAQ + Formulario -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12" style="align-items:start;">
+
+      <!-- Columna izquierda: Accordion FAQ -->
+      <div id="faq-list" style="display:flex; flex-direction:column; gap:4px;">
+        {faqs.map((faq, i) => (
+          <div
+            class="faq-item"
+            style="border:1px solid #e4e4e7; border-radius:12px; overflow:hidden; background:#fff; transition:border-color 0.2s;"
+            data-index={i}
+          >
+            <button
+              class="faq-btn"
+              style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px 22px; background:transparent; border:none; cursor:pointer; text-align:left;"
+              aria-expanded="false"
+            >
+              <span style="font-size:0.875rem; font-weight:600; color:#09090b; line-height:1.4;">{faq.q}</span>
+              <span class="faq-icon" style="flex-shrink:0; width:24px; height:24px; border-radius:50%; background:#f4f4f5; display:flex; align-items:center; justify-content:center; transition:background 0.2s, transform 0.25s;">
+                <svg width="12" height="12" fill="none" stroke="#52525b" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-body" style="max-height:0; overflow:hidden; transition:max-height 0.3s ease, padding 0.3s ease;">
+              <p style="font-size:0.84rem; color:#52525b; line-height:1.8; margin:0; padding:0 22px 20px;">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Columna derecha: Formulario → WhatsApp -->
+      <div style="background:#fff; border:1px solid #e4e4e7; border-radius:14px; overflow:hidden; position:sticky; top:24px;">
+
+        <!-- Header del formulario -->
+        <div style="background:#09090b; padding:28px 32px;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+            <svg width="18" height="18" fill="white" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span style="font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.6);">Contacto Directo</span>
+          </div>
+          <h3 style="font-size:1.2rem; font-weight:800; color:#fff; margin:0 0 6px; letter-spacing:-0.01em;">Escríbenos por WhatsApp</h3>
+          <p style="font-size:0.78rem; color:#71717a; margin:0; line-height:1.6;">Completa el formulario y te contactamos en menos de 2 horas.</p>
+        </div>
+
+        <!-- Campos del formulario -->
+        <div style="padding:28px 32px; display:flex; flex-direction:column; gap:16px;">
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="faq-nombre" style="display:block; font-size:0.7rem; font-weight:700; color:#3f3f46; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:8px;">Nombre *</label>
+              <input
+                id="faq-nombre"
+                type="text"
+                placeholder="Tu nombre completo"
+                style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:8px; font-size:0.875rem; color:#09090b; background:#fff; outline:none; transition:border-color 0.2s; box-sizing:border-box;"
+                onfocus="this.style.borderColor='#dc2626'"
+                onblur="this.style.borderColor='#e4e4e7'"
+              />
+            </div>
+            <div>
+              <label for="faq-empresa" style="display:block; font-size:0.7rem; font-weight:700; color:#3f3f46; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:8px;">Empresa</label>
+              <input
+                id="faq-empresa"
+                type="text"
+                placeholder="Nombre de tu empresa"
+                style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:8px; font-size:0.875rem; color:#09090b; background:#fff; outline:none; transition:border-color 0.2s; box-sizing:border-box;"
+                onfocus="this.style.borderColor='#dc2626'"
+                onblur="this.style.borderColor='#e4e4e7'"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="faq-tel" style="display:block; font-size:0.7rem; font-weight:700; color:#3f3f46; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:8px;">Teléfono *</label>
+            <input
+              id="faq-tel"
+              type="tel"
+              placeholder="+52 55 0000 0000"
+              style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:8px; font-size:0.875rem; color:#09090b; background:#fff; outline:none; transition:border-color 0.2s; box-sizing:border-box;"
+              onfocus="this.style.borderColor='#dc2626'"
+              onblur="this.style.borderColor='#e4e4e7'"
+            />
+          </div>
+
+          <div>
+            <label for="faq-sector" style="display:block; font-size:0.7rem; font-weight:700; color:#3f3f46; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:8px;">Sector / Tipo de proyecto</label>
+            <select
+              id="faq-sector"
+              style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:8px; font-size:0.875rem; color:#09090b; background:#fff; outline:none; appearance:none; cursor:pointer; transition:border-color 0.2s; box-sizing:border-box;"
+              onfocus="this.style.borderColor='#dc2626'"
+              onblur="this.style.borderColor='#e4e4e7'"
+            >
+              <option value="">Selecciona una opción…</option>
+              <option>Cuerpo de Bomberos</option>
+              <option>Brigada Industrial / Empresa</option>
+              <option>Hospital / Salud</option>
+              <option>Hotel / Centro Comercial</option>
+              <option>Construcción / Proyecto nuevo</option>
+              <option>Gobierno / Licitación pública</option>
+              <option>Otro</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="faq-mensaje" style="display:block; font-size:0.7rem; font-weight:700; color:#3f3f46; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:8px;">Mensaje / Pregunta *</label>
+            <textarea
+              id="faq-mensaje"
+              rows="4"
+              placeholder="Cuéntanos qué equipo necesitas, para qué aplicación y cualquier duda que tengas…"
+              style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:8px; font-size:0.875rem; color:#09090b; background:#fff; outline:none; resize:vertical; line-height:1.6; transition:border-color 0.2s; box-sizing:border-box; font-family:inherit;"
+              onfocus="this.style.borderColor='#dc2626'"
+              onblur="this.style.borderColor='#e4e4e7'"
+            ></textarea>
+          </div>
+
+          <!-- Botón enviar -->
+          <button
+            id="faq-submit"
+            type="button"
+            style="width:100%; display:flex; align-items:center; justify-content:center; gap:10px; padding:15px 24px; border-radius:10px; background:#dc2626; color:#fff; font-size:0.9rem; font-weight:700; border:none; cursor:pointer; transition:background 0.2s; letter-spacing:0.01em;"
+            onmouseover="this.style.background='#b91c1c'"
+            onmouseout="this.style.background='#dc2626'"
+          >
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Enviar por WhatsApp
+          </button>
+
+          <!-- Trust note -->
+          <p style="font-size:0.72rem; color:#a1a1aa; text-align:center; margin:0; line-height:1.6;">
+            Tu información es confidencial. Solo la usamos para responderte.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  // ── Accordion FAQ ──
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item') as HTMLElement;
+      const body = item.querySelector('.faq-body') as HTMLElement;
+      const icon = btn.querySelector('.faq-icon') as HTMLElement;
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      // Cerrar todos
+      document.querySelectorAll('.faq-item').forEach(el => {
+        const b = el.querySelector('.faq-body') as HTMLElement;
+        const i = el.querySelector('.faq-icon') as HTMLElement;
+        const btn2 = el.querySelector('.faq-btn') as HTMLElement;
+        b.style.maxHeight = '0';
+        b.style.paddingBottom = '0';
+        btn2.setAttribute('aria-expanded', 'false');
+        i.style.transform = 'rotate(0deg)';
+        i.style.background = '#f4f4f5';
+        (el as HTMLElement).style.borderColor = '#e4e4e7';
+      });
+
+      // Abrir el clickeado si estaba cerrado
+      if (!isOpen) {
+        body.style.maxHeight = body.scrollHeight + 'px';
+        btn.setAttribute('aria-expanded', 'true');
+        icon.style.transform = 'rotate(180deg)';
+        icon.style.background = '#dc2626';
+        icon.querySelector('svg')!.setAttribute('stroke', 'white');
+        item.style.borderColor = '#dc2626';
+      }
+    });
+  });
+
+  // ── Formulario → WhatsApp ──
+  document.getElementById('faq-submit')?.addEventListener('click', () => {
+    const nombre  = (document.getElementById('faq-nombre')  as HTMLInputElement).value.trim();
+    const empresa = (document.getElementById('faq-empresa') as HTMLInputElement).value.trim();
+    const tel     = (document.getElementById('faq-tel')     as HTMLInputElement).value.trim();
+    const sector  = (document.getElementById('faq-sector')  as HTMLSelectElement).value;
+    const mensaje = (document.getElementById('faq-mensaje') as HTMLTextAreaElement).value.trim();
+
+    if (!nombre || !tel || !mensaje) {
+      alert('Por favor completa: Nombre, Teléfono y Mensaje.');
+      return;
+    }
+
+    const lines = [
+      '¡Hola FIREFIGHTER! Les escribo desde el sitio web.',
+      '',
+      `*Nombre:* ${nombre}`,
+      empresa ? `*Empresa:* ${empresa}` : null,
+      `*Teléfono:* ${tel}`,
+      sector  ? `*Sector:* ${sector}` : null,
+      '',
+      `*Mensaje:*`,
+      mensaje,
+    ].filter(l => l !== null).join('\n');
+
+    const url = `https://wa.me/525500000000?text=${encodeURIComponent(lines)}`;
+    window.open(url, '_blank', 'noopener');
+  });
+</script>

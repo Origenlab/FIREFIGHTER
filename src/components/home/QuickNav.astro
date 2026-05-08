@@ -1,0 +1,213 @@
+---
+/**
+ * QuickNav — Barra de navegación rápida post-hero
+ * Ícono rojo + título + subtítulo — patrón meseci.com.mx
+ */
+
+const items = [
+  {
+    href: '#productos',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>`,
+    title: 'Extintores',
+    sub: 'NOM-154-SCFI',
+    cta: false,
+  },
+  {
+    href: '#productos',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>`,
+    title: 'Equipo Bomberos',
+    sub: 'NFPA 1971',
+    cta: false,
+  },
+  {
+    href: '#productos',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>`,
+    title: 'Equipos SCBA',
+    sub: 'NFPA 1981',
+    cta: false,
+  },
+  {
+    href: '#productos',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>`,
+    title: 'Sistemas CI',
+    sub: 'Sprinklers · FM-200',
+    cta: false,
+  },
+  {
+    href: '#productos',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"/>`,
+    title: 'Rescate',
+    sub: 'Herramientas hidráulicas',
+    cta: false,
+  },
+  {
+    href: '#productos',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>`,
+    title: 'Señalización',
+    sub: 'NOM-003-SEGOB',
+    cta: false,
+  },
+  {
+    href: 'https://wa.me/525500000000?text=Hola%20FIREFIGHTER%2C%20necesito%20cotizar%20equipo%20contra%20incendios',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>`,
+    title: 'Cotizar Ahora',
+    sub: 'Respuesta en 2 horas',
+    cta: true,
+  },
+];
+---
+
+<div class="qnav-wrap">
+  <div class="container-custom">
+    <div class="qnav-grid">
+      {items.map((item, i) => (
+        <a
+          href={item.href}
+          target={item.cta ? '_blank' : undefined}
+          rel={item.cta ? 'noopener' : undefined}
+          class={`qnav-item${item.cta ? ' qnav-cta' : ''}`}
+          style={i < items.length - 1 ? 'border-right: 1px solid rgba(255,255,255,0.08);' : ''}
+        >
+          <div class={`qnav-icon${item.cta ? ' qnav-icon-cta' : ''}`}>
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <Fragment set:html={item.icon} />
+            </svg>
+          </div>
+          <div class="qnav-text">
+            <span class={`qnav-title${item.cta ? ' qnav-title-cta' : ''}`}>{item.title}</span>
+            <span class="qnav-sub">{item.sub}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .qnav-wrap {
+    background: #0a0f1a;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .qnav-grid {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .qnav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 16px;
+    flex: 1;
+    min-width: 0;
+    text-decoration: none;
+    position: relative;
+    transition: background 0.18s ease;
+  }
+
+  .qnav-item::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: #dc2626;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+  }
+
+  .qnav-cta::after {
+    background: #16a34a;
+  }
+
+  .qnav-item:hover {
+    background: rgba(220,38,38,0.07);
+  }
+
+  .qnav-item:hover::after {
+    transform: scaleX(1);
+  }
+
+  .qnav-icon {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(220,38,38,0.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f87171;
+    transition: transform 0.18s ease;
+  }
+
+  .qnav-icon-cta {
+    background: rgba(22,163,74,0.15);
+    color: #4ade80;
+  }
+
+  .qnav-item:hover .qnav-icon {
+    transform: scale(1.1);
+  }
+
+  .qnav-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .qnav-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+  }
+
+  .qnav-title-cta {
+    color: #4ade80;
+  }
+
+  .qnav-sub {
+    font-size: 0.72rem;
+    color: #475569;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+    margin-top: 2px;
+  }
+
+  /* Tablet: 2 rows of 4 + 3 */
+  @media (max-width: 900px) {
+    .qnav-grid {
+      flex-wrap: wrap;
+    }
+    .qnav-item {
+      flex: 0 0 25%;
+      border-right: 1px solid rgba(255,255,255,0.08) !important;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .qnav-item:nth-child(4n) {
+      border-right: none !important;
+    }
+  }
+
+  /* Mobile: 2 columns */
+  @media (max-width: 540px) {
+    .qnav-item {
+      flex: 0 0 50%;
+      border-right: 1px solid rgba(255,255,255,0.08) !important;
+    }
+    .qnav-item:nth-child(even) {
+      border-right: none !important;
+    }
+    .qnav-item:nth-child(4n) {
+      border-right: 1px solid rgba(255,255,255,0.08) !important;
+    }
+  }
+</style>

@@ -29,3 +29,10 @@ pnpm-debug.log*
 .idea/
 *.swp
 *.swo
+
+# nested git repo
+FIREFIGHTER/
+
+# scripts de generación
+gen_estudio.py
+Estudio_Competencia_FIREFIGHTER_2026.docx

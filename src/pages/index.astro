@@ -1,20 +1,45 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/home/Hero.astro';
-import StatesGrid from '../components/home/StatesGrid.astro';
-import StatsCounter from '../components/home/StatsCounter.astro';
+import QuickNav from '../components/home/QuickNav.astro';
+import ProductCategories from '../components/home/ProductCategories.astro';
+import WhyFirefighter from '../components/home/WhyFirefighter.astro';
+import Sectors from '../components/home/Sectors.astro';
 import HowItWorks from '../components/home/HowItWorks.astro';
-import FeaturedStations from '../components/home/FeaturedStations.astro';
+import ContactChannels from '../components/home/ContactChannels.astro';
+import Testimonials from '../components/home/Testimonials.astro';
+import FAQ from '../components/home/FAQ.astro';
 ---
 
 <BaseLayout
-  title="Directorio de Estaciones de Bomberos en México"
-  description="Encuentra estaciones de bomberos en los 32 estados de México. Directorio completo con direcciones, teléfonos y servicios de emergencia. Línea de emergencia: 911."
+  title="FIREFIGHTER México | Equipos Contra Incendios y Equipo para Bomberos"
+  description="Venta de equipos contra incendios y equipos para bomberos en México. Trajes, SCBA, extintores, herramientas de rescate certificados NFPA, NOM y UL. Cotiza en 24h."
   includeWebsiteSchema={true}
 >
+  <!-- 1. Hero comercial: propuesta de valor + CTAs -->
   <Hero />
-  <StatesGrid />
-  <FeaturedStations />
-  <StatsCounter />
+
+  <!-- 2. Navegación rápida post-hero -->
+  <QuickNav />
+
+  <!-- 3. Catálogo de categorías de producto -->
+  <ProductCategories />
+
+  <!-- 4. Por qué FIREFIGHTER: diferenciadores -->
+  <WhyFirefighter />
+
+  <!-- 6. Sectores que atendemos -->
+  <Sectors />
+
+  <!-- 7. Proceso de compra (cómo funciona) -->
   <HowItWorks />
+
+  <!-- 8. Canales de atención especializada -->
+  <ContactChannels />
+
+  <!-- 9. Reseñas de clientes -->
+  <Testimonials />
+
+  <!-- 10. Preguntas frecuentes + Formulario WhatsApp -->
+  <FAQ />
 </BaseLayout>

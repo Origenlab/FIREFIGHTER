@@ -1,71 +1,113 @@
 ---
 /**
- * HowItWorks Component - Clean Professional Design
- * Simple steps with consistent card styling
+ * HowItWorks — Proceso de compra
+ * Diseño: fondo oscuro (#09090b), tipografía limpia, números grandes decorativos
  */
 
 const steps = [
   {
-    number: '01',
-    title: 'Selecciona tu estado',
-    description: 'Elige entre los 32 estados de la República Mexicana para ver las estaciones disponibles.',
+    num: '01',
+    title: 'Solicita tu cotización',
+    desc: 'Contáctanos por WhatsApp, teléfono o correo. Cuéntanos qué equipo necesitas, para qué sector y cuántas unidades. No necesitas saber exactamente el modelo.',
+    detail: 'WhatsApp · Teléfono · Email',
   },
   {
-    number: '02',
-    title: 'Encuentra tu estación',
-    description: 'Usa el buscador o navega por municipio para encontrar la estación más cercana.',
+    num: '02',
+    title: 'Recibe propuesta técnica',
+    desc: 'En menos de 24 horas hábiles recibes una propuesta con especificaciones técnicas, certificaciones aplicables, precio final y tiempo de entrega estimado.',
+    detail: 'Respuesta en < 24 horas',
   },
   {
-    number: '03',
-    title: 'Contacta directamente',
-    description: 'Obtén teléfonos, direcciones y cómo llegar. En emergencias, siempre llama al 911.',
+    num: '03',
+    title: 'Entrega en toda la República',
+    desc: 'Confirmado el pedido, coordinamos logística a tu instalación en cualquiera de los 32 estados de México. Con factura, documentación técnica y garantía de fábrica.',
+    detail: 'Cobertura 32 estados',
   },
 ];
 ---
 
-<section class="py-16 md:py-24" style="background-color: #ffffff;">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Header -->
-    <div class="text-center mb-12">
-      <h2 class="text-2xl md:text-3xl font-bold mb-3" style="color: #0f172a;">
-        Cómo Funciona
-      </h2>
-      <p class="text-base" style="color: #64748b;">
-        Encuentra información de bomberos en tres simples pasos
-      </p>
+<section style="background:#09090b; padding:96px 0;">
+  <div class="container-custom">
+
+    <!-- Header 50/50 -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16" style="align-items:center; margin-bottom:64px;">
+
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+          <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+          <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Proceso de Compra</span>
+        </div>
+        <h2 style="font-size:clamp(1.9rem,2.8vw,2.7rem);font-weight:800;color:#fff;line-height:1.1;margin:0;letter-spacing:-0.02em;">
+          Tres pasos para tener<br>el equipo correcto
+        </h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:28px;">
+        <div>
+          <span style="display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#71717a; margin-bottom:10px;">Sin Complicaciones desde el Primer Contacto</span>
+          <p style="font-size:0.9rem; color:#71717a; line-height:1.85; margin:0;">
+            El proceso de compra en FIREFIGHTER está diseñado para ser directo y transparente. Desde que haces el primer contacto por WhatsApp, teléfono o correo, un <strong style="color:#a1a1aa; font-weight:600;">especialista técnico dedicado</strong> toma tu caso y lo acompaña hasta la entrega con documentación completa.
+          </p>
+        </div>
+        <div style="padding-top:28px; border-top:1px solid rgba(255,255,255,0.07);">
+          <span style="display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#71717a; margin-bottom:10px;">Entrega con Documentación Técnica Completa</span>
+          <p style="font-size:0.9rem; color:#71717a; line-height:1.85; margin:0;">
+            Todo pedido se entrega con <strong style="color:#a1a1aa; font-weight:600;">factura fiscal, ficha técnica, certificado de origen y garantía de fábrica</strong>. Logística coordinada a cualquiera de los 32 estados, con trazabilidad de envío y soporte posventa de primer nivel.
+          </p>
+        </div>
+      </div>
+
     </div>
 
     <!-- Steps -->
-    <div class="grid md:grid-cols-3 gap-6 md:gap-8">
-      {steps.map((step, index) => (
-        <div
-          class="bg-white rounded-xl overflow-hidden text-center"
-          style="border: 1px solid #e2e8f0;"
-        >
-          <div class="h-1 w-full" style="background-color: #dc2626;"></div>
-          <div class="p-6">
-            <!-- Number -->
-            <div
-              class="w-16 h-16 mx-auto mb-5 rounded-full flex items-center justify-center"
-              style="background-color: #fef2f2;"
-            >
-              <span class="text-2xl font-bold" style="color: #dc2626;">
-                {step.number}
-              </span>
-            </div>
+    <div class="grid md:grid-cols-3 gap-px" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.07);border-radius:14px;overflow:hidden;">
+      {steps.map((step, i) => (
+        <div style="background:#09090b;padding:44px 36px;display:flex;flex-direction:column;gap:22px;position:relative;overflow:hidden;">
 
-            <!-- Title -->
-            <h3 class="text-lg font-bold mb-2" style="color: #0f172a;">
-              {step.title}
-            </h3>
-
-            <!-- Description -->
-            <p class="text-sm leading-relaxed" style="color: #64748b;">
-              {step.description}
-            </p>
+          <!-- Número decorativo de fondo -->
+          <div style="position:absolute;top:-16px;right:16px;font-size:7rem;font-weight:900;color:rgba(255,255,255,0.03);line-height:1;pointer-events:none;user-select:none;" aria-hidden="true">
+            {step.num}
           </div>
+
+          <!-- Número + separador -->
+          <div style="display:flex;align-items:center;gap:16px;">
+            <span style="font-size:0.68rem;font-weight:800;letter-spacing:0.1em;color:#dc2626;">{step.num}</span>
+            <div style="height:1px;flex:1;background:rgba(255,255,255,0.08);"></div>
+          </div>
+
+          <!-- Contenido -->
+          <h3 style="font-size:1.1rem;font-weight:700;color:#fff;margin:0;line-height:1.3;">{step.title}</h3>
+          <p style="font-size:0.84rem;color:#71717a;line-height:1.8;margin:0;flex:1;">{step.desc}</p>
+
+          <!-- Detail tag -->
+          <div style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);width:fit-content;margin-top:4px;">
+            <svg width="12" height="12" fill="none" stroke="#dc2626" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span style="font-size:0.7rem;font-weight:600;color:#a1a1aa;">{step.detail}</span>
+          </div>
+
         </div>
       ))}
     </div>
+
+    <!-- Bottom CTA -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:48px;flex-wrap:wrap;gap:20px;">
+      <p style="font-size:0.9rem;color:#52525b;margin:0;">
+        ¿Listo para comenzar? Tu especialista responde en menos de 2 horas.
+      </p>
+      <a
+        href="https://wa.me/525500000000?text=Hola%2C%20quiero%20cotizar%20equipo%20contra%20incendios"
+        target="_blank"
+        rel="noopener"
+        style="display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:10px;background:#dc2626;color:#fff;font-size:0.85rem;font-weight:700;text-decoration:none;white-space:nowrap;"
+      >
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Solicitar cotización ahora
+      </a>
+    </div>
+
   </div>
 </section>

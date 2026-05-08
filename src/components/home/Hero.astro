@@ -1,105 +1,132 @@
 ---
 /**
- * Hero Component - Premium Solid Design
- * Clean, professional with solid colors and strong visual hierarchy
+ * Hero Component — FIREFIGHTER México
+ * Two-column professional layout | 50 años de experiencia
  */
 ---
 
-<!-- Hero Section -->
-<section class="bg-slate-900">
-  <div class="container-custom py-20 md:py-28">
-    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+<section
+  class="relative overflow-hidden"
+  style="background: #0b1120;"
+  aria-label="FIREFIGHTER México — Equipos Contra Incendios"
+>
 
-      <!-- Left Content -->
-      <div class="text-center lg:text-left">
-        <!-- Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-2 bg-fire-600 rounded-full mb-6">
-          <span class="w-2 h-2 bg-white rounded-full"></span>
-          <span class="text-white text-sm font-medium">Directorio Nacional 2024</span>
+  <!-- Subtle grid texture -->
+  <div
+    class="absolute inset-0 pointer-events-none"
+    style="background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 48px 48px;"
+  ></div>
+
+  <!-- Red glow top-left -->
+  <div
+    class="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full pointer-events-none"
+    style="background: radial-gradient(circle, rgba(220,38,38,0.18) 0%, transparent 70%);"
+  ></div>
+
+  <!-- Red accent line top -->
+  <div class="absolute top-0 left-0 right-0 h-[3px]" style="background: linear-gradient(90deg, transparent 0%, #dc2626 30%, #ef4444 50%, #dc2626 70%, transparent 100%);"></div>
+
+  <div class="container-custom relative z-10">
+
+    <!-- ── TWO-COLUMN GRID ── -->
+    <div class="grid lg:grid-cols-2 gap-0 min-h-[88vh] items-stretch">
+
+      <!-- ════════════════════════════════
+           COLUMNA IZQUIERDA
+           ════════════════════════════════ -->
+      <div
+        class="flex flex-col justify-center py-20 lg:py-28 lg:pr-16"
+        style="border-right: 1px solid rgba(255,255,255,0.06);"
+      >
+        <!-- Eyebrow badge -->
+        <div class="flex items-center gap-3 mb-8">
+          <div class="flex items-center gap-2 px-3 py-1.5 rounded-full" style="background: rgba(220,38,38,0.12); border: 1px solid rgba(220,38,38,0.35);">
+            <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background:#ef4444;"></span>
+            <span class="text-xs font-bold tracking-widest uppercase" style="color:#fca5a5;">50 Años Protegiendo México</span>
+          </div>
         </div>
 
-        <!-- Main Heading -->
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-[1.1]">
-          Encuentra tu
-          <span class="text-fire-500">estación de bomberos</span>
+        <!-- Main headline -->
+        <h1
+          class="font-bold leading-[1.06] mb-7"
+          style="font-size: clamp(2.1rem, 4.2vw, 3.4rem); color: #f1f5f9; letter-spacing: -0.02em;"
+        >
+          Equipos Profesionales<br>
+          para <em class="not-italic" style="color:#ef4444;">Bomberos</em> y<br>
+          Protección Contra Incendios
         </h1>
 
-        <!-- Description -->
-        <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-          Accede a información de contacto, ubicación y servicios de más de
-          <span class="text-white font-semibold">700 estaciones</span> en los 32 estados de México.
+        <!-- Description paragraph -->
+        <p class="leading-relaxed" style="font-size: clamp(1rem, 1.2vw, 1.125rem); color: #94a3b8; max-width: 480px;">
+          Proveedor integral de equipo para bomberos, brigadas industriales y sistemas
+          contra incendio. Certificaciones <strong style="color:#e2e8f0; font-weight:600;">NFPA, NOM, UL</strong>.
+          Cobertura nacional en México.
         </p>
 
-        <!-- Search Bar -->
-        <form action="/directorio" method="GET" class="max-w-lg mx-auto lg:mx-0 mb-8">
-          <div class="flex items-center bg-white rounded-2xl p-2 shadow-xl">
-            <svg class="w-6 h-6 ml-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-            </svg>
-            <input
-              type="search"
-              name="q"
-              placeholder="Buscar por ciudad, estado o nombre..."
-              class="flex-1 px-4 py-4 text-slate-800 placeholder-slate-400 bg-transparent border-0 focus:outline-none focus:ring-0 text-lg"
-              aria-label="Buscar estaciones de bomberos"
-            />
-            <button type="submit" class="px-6 py-4 bg-fire-600 text-white font-semibold rounded-xl hover:bg-fire-700 transition-colors">
-              Buscar
-            </button>
+      </div>
+
+      <!-- ════════════════════════════════
+           COLUMNA DERECHA — 2 párrafos
+           ════════════════════════════════ -->
+      <div class="flex flex-col justify-center py-20 lg:py-28 lg:pl-16">
+
+        <!-- Decorative number -->
+        <div
+          class="text-[7rem] font-black leading-none select-none mb-6 hidden lg:block"
+          style="color: rgba(220,38,38,0.06); letter-spacing: -0.04em; line-height: 1;"
+          aria-hidden="true"
+        >50</div>
+
+        <!-- Párrafo 1 — Trayectoria e identidad -->
+        <div class="mb-8 relative">
+          <div
+            class="absolute left-0 top-0 bottom-0 w-[3px] rounded-full"
+            style="background: linear-gradient(180deg, #dc2626 0%, rgba(220,38,38,0.2) 100%);"
+          ></div>
+          <div class="pl-6">
+            <span
+              class="block text-xs font-bold tracking-widest uppercase mb-3"
+              style="color:#dc2626;"
+            >Nuestra Historia</span>
+            <p style="font-size: clamp(0.95rem, 1.1vw, 1.05rem); color:#94a3b8; line-height: 1.8;">
+              Con <strong style="color:#e2e8f0; font-weight:600;">más de 50 años de experiencia</strong> en el mercado
+              mexicano, FIREFIGHTER se ha consolidado como el proveedor de referencia en equipos contra
+              incendios y equipo para bomberos en toda la República. Desde nuestros inicios, hemos
+              equipado cuerpos de bomberos profesionales, brigadas industriales y dependencias de protección
+              civil en los <strong style="color:#e2e8f0; font-weight:600;">32 estados de México</strong>,
+              respaldando cada operación con tecnología certificada, asesoría técnica especializada y
+              el compromiso inquebrantable de proteger vidas y salvaguardar instalaciones en cualquier
+              tipo de emergencia.
+            </p>
           </div>
-        </form>
-
-        <!-- Quick Links -->
-        <div class="flex flex-wrap justify-center lg:justify-start gap-3">
-          <span class="text-slate-500 text-sm">Populares:</span>
-          <a href="/directorio/ciudad-de-mexico" class="px-3 py-1 text-sm text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 rounded-full transition-colors">CDMX</a>
-          <a href="/directorio/jalisco" class="px-3 py-1 text-sm text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 rounded-full transition-colors">Jalisco</a>
-          <a href="/directorio/nuevo-leon" class="px-3 py-1 text-sm text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 rounded-full transition-colors">Nuevo León</a>
-          <a href="/directorio" class="px-3 py-1 text-sm text-fire-400 hover:text-fire-300 transition-colors">Ver todos →</a>
         </div>
+
+        <!-- Párrafo 2 — Catálogo, certificaciones y alcance -->
+        <div class="relative">
+          <div
+            class="absolute left-0 top-0 bottom-0 w-[3px] rounded-full"
+            style="background: linear-gradient(180deg, #3b82f6 0%, rgba(59,130,246,0.2) 100%);"
+          ></div>
+          <div class="pl-6">
+            <span
+              class="block text-xs font-bold tracking-widest uppercase mb-3"
+              style="color:#3b82f6;"
+            >Nuestro Compromiso</span>
+            <p style="font-size: clamp(0.95rem, 1.1vw, 1.05rem); color:#94a3b8; line-height: 1.8;">
+              Nuestra cartera incluye <strong style="color:#e2e8f0; font-weight:600;">más de 500 productos certificados</strong>
+              bajo normas NFPA&nbsp;1971, NFPA&nbsp;1977, NFPA&nbsp;1981, NOM-002-STPS, NOM-003-SEGOB,
+              UL y FM&nbsp;Approvals, que abarcan trajes estructurales, equipos de respiración autónoma
+              SCBA, extintores industriales, herramientas hidráulicas de rescate y sistemas completos de
+              supresión y detección. Trabajamos con los principales fabricantes internacionales para
+              garantizar que cada equipo supere los más altos estándares de seguridad —porque cuando
+              se trata de <strong style="color:#e2e8f0; font-weight:600;">proteger vidas</strong>,
+              solo lo mejor es suficiente.
+            </p>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Right Side - Marketing Text -->
-      <div class="hidden lg:block">
-        <p class="text-slate-300 text-lg leading-relaxed mb-6">
-          Firefighter México es la <strong class="text-white">plataforma de referencia</strong> para localizar estaciones de bomberos en toda la República Mexicana. Nuestro directorio reúne información detallada de más de 700 estaciones distribuidas en los 32 estados, incluyendo datos de contacto directo, ubicación exacta con coordenadas GPS, servicios especializados y horarios de atención.
-        </p>
-        <p class="text-slate-300 text-lg leading-relaxed">
-          Cada ficha de estación incluye información sobre el <strong class="text-white">tipo de cuerpo de bomberos</strong> (profesional, voluntario, industrial o aeroportuario), su equipamiento, áreas de cobertura y servicios de emergencia disponibles. Facilitamos que ciudadanos, empresas e instituciones puedan contactar rápidamente a la estación más cercana en caso de emergencia o para solicitar servicios de prevención.
-        </p>
-      </div>
-    </div>
-
-    <!-- Mobile Marketing Text -->
-    <div class="lg:hidden mt-10">
-      <p class="text-slate-400 text-sm leading-relaxed">
-        Firefighter México es la plataforma de referencia para localizar estaciones de bomberos en toda la República Mexicana. Nuestro directorio reúne información de más de 700 estaciones en los 32 estados.
-      </p>
-    </div>
-  </div>
+    </div><!-- end grid -->
+  </div><!-- end container -->
 </section>
-
-<!-- Emergency Banner -->
-<div class="bg-fire-600">
-  <div class="container-custom py-4">
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
-      <div class="flex items-center gap-3 text-white">
-        <div class="w-10 h-10 bg-fire-700 rounded-full flex items-center justify-center">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-          </svg>
-        </div>
-        <span class="font-semibold text-lg">¿Tienes una emergencia?</span>
-      </div>
-      <a
-        href="tel:911"
-        class="inline-flex items-center gap-2 px-6 py-3 bg-white text-fire-600 font-bold rounded-xl hover:bg-fire-50 transition-colors"
-      >
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-        </svg>
-        Llama al 911
-      </a>
-    </div>
-  </div>
-</div>

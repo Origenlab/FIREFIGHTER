@@ -1,0 +1,131 @@
+---
+/**
+ * ContactChannels — Atención especializada por canal
+ * Tres canales: Licitaciones, Asesoría técnica, Soporte & garantía
+ */
+
+const channels = [
+  {
+    label: 'Gobierno · Compras públicas',
+    title: 'Licitaciones Públicas',
+    desc: 'Documentación técnica en formato licitación para dependencias federales, estatales y municipales. Todo lo que necesitas para participar y ganar una licitación con equipos FIREFIGHTER.',
+    items: ['Fichas CABMS / COG', 'Cert. de laboratorio', 'Carta de distribuidor', 'Núm. de serie trazable', 'Especificaciones NOM', 'Factura desglosada'],
+    sectors: ['Gobierno federal', 'Gobiernos estatales', 'Municipios'],
+    highlight: 'Documentación lista para licitación',
+    cta: { text: 'Escribir a licitaciones', href: 'mailto:licitaciones@firefighter.mx', type: 'email' },
+  },
+  {
+    label: 'Sin costo · Respuesta inmediata',
+    title: 'Asesoría Técnica',
+    desc: 'Ingenieros especializados en NFPA y NOM-002-STPS analizan tu tipo de riesgo, norma aplicable y presupuesto para recomendarte el equipo exacto. Sin costo, sin compromiso de compra.',
+    items: ['Análisis de riesgo', 'Norma aplicable', 'Selección de equipo', 'Propuesta técnica', 'Ing. certificados NFPA', 'Respuesta en < 2 h'],
+    sectors: ['Bomberos', 'Brigadas ind.', 'Constructoras'],
+    highlight: 'Asesoría sin costo ni compromiso',
+    cta: { text: 'Consultar por WhatsApp', href: 'https://wa.me/525512345678?text=Hola%2C%20necesito%20asesor%C3%ADa%20t%C3%A9cnica%20para%20seleccionar%20el%20equipo%20correcto%20seg%C3%BAn%20mi%20operaci%C3%B3n.', type: 'whatsapp' },
+  },
+  {
+    label: 'Posventa · Primer nivel',
+    title: 'Soporte y Garantía',
+    desc: 'Fallas en campo, refacciones originales, registro de garantía o trámites de recall atendidos directamente con el fabricante. Soporte técnico de primer nivel cuando más lo necesitas.',
+    items: ['Refacciones originales', 'Gestión de garantía', 'Atención a recalls', 'Diagnóstico en campo', 'Soporte OEM directo', 'Reporte técnico'],
+    sectors: ['Post-compra', 'Mantenimiento', 'Emergencias campo'],
+    highlight: 'Soporte directo con el fabricante',
+    cta: { text: 'Escribir a soporte', href: 'mailto:soporte@firefighter.mx', type: 'email' },
+  },
+];
+---
+
+<section style="background:#f8fafc; padding:80px 0 88px; border-top:1px solid #e4e4e7;">
+  <div class="container-custom">
+
+    <!-- Header 50/50 -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16" style="align-items:center; margin-bottom:52px;">
+
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+          <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+          <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Atención Especializada</span>
+        </div>
+        <h2 style="font-size:clamp(1.9rem,2.8vw,2.7rem); font-weight:800; color:#09090b; line-height:1.1; margin:0; letter-spacing:-0.02em;">
+          Canal correcto según<br>tu necesidad
+        </h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:28px;">
+        <div>
+          <span style="display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px;">Atención Personalizada por Tipo de Cliente</span>
+          <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">
+            No todos los clientes necesitan el mismo proceso. Las <strong style="color:#09090b; font-weight:600;">licitaciones públicas, las brigadas industriales y los cuerpos de bomberos</strong> tienen requerimientos distintos de documentación, tiempos y especificaciones técnicas. Por eso conectamos cada solicitud con el canal y el especialista correcto desde el primer contacto.
+          </p>
+        </div>
+        <div style="padding-top:28px; border-top:1px solid #f0f0f0;">
+          <span style="display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px;">Respuesta Técnica en Menos de 2 Horas</span>
+          <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">
+            Nuestros canales de atención están activos para responder con agilidad: <strong style="color:#09090b; font-weight:600;">WhatsApp para asesoría inmediata, correo para licitaciones con documentación formal y soporte técnico posventa</strong> directo con el fabricante. Sin bots, sin call centers, con especialistas reales.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Tres cards — patrón homologado -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {channels.map((ch) => (
+        <div style="background:#fff; border:1px solid #e4e4e7; border-radius:14px; overflow:hidden; display:flex; flex-direction:column; transition:box-shadow 0.2s ease, transform 0.2s ease;" class="hover:-translate-y-1 hover:shadow-lg">
+
+          <!-- Header -->
+          <div style="padding:24px 24px 0;">
+            <span style="display:inline-block; background:#dc2626; color:#fff; font-size:0.62rem; font-weight:800; letter-spacing:0.06em; padding:3px 9px; border-radius:4px; text-transform:uppercase; margin-bottom:14px;">{ch.label}</span>
+            <h3 style="font-size:1.05rem; font-weight:700; color:#09090b; margin:0 0 10px; line-height:1.3;">{ch.title}</h3>
+            <p style="font-size:0.78rem; color:#71717a; line-height:1.7; margin:0 0 18px;">{ch.desc}</p>
+          </div>
+
+          <!-- Body -->
+          <div style="padding:0 24px 24px; display:flex; flex-direction:column; flex:1;">
+
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+              <span style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#a1a1aa;">Incluye</span>
+              <div style="flex:1; height:1px; background:#f4f4f5;"></div>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:5px; margin-bottom:18px;">
+              {ch.items.map(item => (
+                <span style="font-size:0.68rem; color:#3f3f46; background:#f4f4f5; padding:5px 8px; border-radius:5px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; line-height:1.4;">{item}</span>
+              ))}
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+              <span style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#a1a1aa;">Aplica para</span>
+              <div style="flex:1; height:1px; background:#f4f4f5;"></div>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:5px; margin-bottom:18px;">
+              {ch.sectors.map(s => (
+                <span style="font-size:0.67rem; color:#52525b; background:#fff; border:1px solid #e4e4e7; padding:4px 9px; border-radius:99px; line-height:1.4;">{s}</span>
+              ))}
+            </div>
+
+            <div style="display:flex; align-items:center; gap:7px; padding:9px 12px; border-radius:8px; background:#fef2f2;">
+              <svg width="12" height="12" fill="#dc2626" viewBox="0 0 20 20" style="flex-shrink:0;">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span style="font-size:0.68rem; font-weight:600; color:#dc2626;">{ch.highlight}</span>
+            </div>
+
+            <a
+              href={ch.cta.href}
+              target={ch.cta.type === 'whatsapp' ? '_blank' : undefined}
+              rel={ch.cta.type === 'whatsapp' ? 'noopener' : undefined}
+              style="margin-top:18px; border-top:1px solid #f4f4f5; padding-top:16px; display:flex; align-items:center; justify-content:space-between; font-size:0.8rem; font-weight:600; color:#dc2626; text-decoration:none;"
+            >
+              <span>{ch.cta.text}</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

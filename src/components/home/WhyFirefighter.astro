@@ -1,0 +1,183 @@
+---
+/**
+ * WhyFirefighter — Diferenciadores clave
+ * Diseño: blanco limpio, sin arcoíris de colores, tipografía fuerte
+ */
+
+const reasons = [
+  {
+    num: '01',
+    title: 'Distribución autorizada',
+    desc: 'Distribuidores directos de las marcas líderes globales en EPP y equipo contra incendios. Cada producto incluye certificado de origen y número de serie trazable para licitaciones y auditorías.',
+    items: ['Cert. de origen', 'Núm. de serie', 'Ficha técnica ESP', 'Carta de distribuidor', 'Cert. de laboratorio', 'Soporte directo OEM'],
+    sectors: ['Licitaciones', 'Verificaciones', 'Auditorías PC'],
+    highlight: 'MSA Safety · Scott · Holmatro · Amerex',
+    cta: 'Conocer marcas',
+    link: 'distribuidores%20autorizados',
+  },
+  {
+    num: '02',
+    title: 'Certificaciones vigentes',
+    desc: 'Todo el catálogo certificado bajo las normas internacionales y mexicanas vigentes. Fichas técnicas con número de certificación incluidas en cada venta, sin costo adicional.',
+    items: ['NFPA 1971', 'NFPA 1981 / 1977', 'NOM-002-STPS', 'NOM-154-SCFI', 'UL Listed', 'FM Approvals'],
+    sectors: ['Protección civil', 'Industria', 'Gobierno federal'],
+    highlight: 'Fichas técnicas incluidas en cada venta',
+    cta: 'Ver certificaciones',
+    link: 'certificaciones%20NFPA%20NOM',
+  },
+  {
+    num: '03',
+    title: 'Asesoría sin costo',
+    desc: 'Ingenieros especializados en NFPA y protección civil analizan tu tipo de riesgo, norma aplicable y presupuesto para recomendar el equipo exacto. Sin compromiso de compra.',
+    items: ['Análisis de riesgo', 'Norma aplicable', 'Selección de equipo', 'Propuesta técnica', 'Ing. certificados', 'Sin compromiso'],
+    sectors: ['Bomberos', 'Brigadas ind.', 'Constructoras'],
+    highlight: 'Respuesta en menos de 2 horas',
+    cta: 'Solicitar asesoría',
+    link: 'asesor%C3%ADa%20t%C3%A9cnica%20gratuita',
+  },
+  {
+    num: '04',
+    title: 'Cotización en 24 horas',
+    desc: 'Propuesta técnica y comercial detallada en menos de 24 horas hábiles con especificaciones, precios finales y tiempos de entrega. Transparente para proyectos de cualquier escala.',
+    items: ['Especificaciones técnicas', 'Precio final', 'Tiempo de entrega', 'Certs. aplicables', 'Propuesta formal', 'Sin letra pequeña'],
+    sectors: ['Proyectos ind.', 'Licitaciones', 'Compras directas'],
+    highlight: 'Precios transparentes, sin sorpresas',
+    cta: 'Solicitar cotización',
+    link: 'cotizaci%C3%B3n%20equipo%20contra%20incendios',
+  },
+  {
+    num: '05',
+    title: 'Cobertura en 32 estados',
+    desc: 'Entrega puerta a puerta en toda la República Mexicana. Logística coordinada para compras individuales y equipamientos masivos con trazabilidad de envío en tiempo real.',
+    items: ['Entrega puerta a puerta', 'Trazabilidad de envío', 'Logística masiva', 'Compras individuales', 'Factura fiscal', 'Garantía de fábrica'],
+    sectors: ['32 estados', 'Zonas remotas', 'Proyectos masivos'],
+    highlight: 'Cobertura nacional garantizada',
+    cta: 'Ver cobertura',
+    link: 'entrega%20equipos%20contra%20incendios%20M%C3%A9xico',
+  },
+  {
+    num: '06',
+    title: 'Soporte posventa real',
+    desc: 'Refacciones originales, gestión de garantía directamente con el fabricante y atención prioritaria a recalls. Soporte técnico de primer nivel cuando más lo necesitas.',
+    items: ['Refacciones originales', 'Gestión de garantía', 'Atención a recalls', 'Soporte técnico', 'Primer nivel OEM', 'Directo con fabricante'],
+    sectors: ['Post-compra', 'Mantenimiento', 'Emergencias'],
+    highlight: 'Soporte directo con el fabricante',
+    cta: 'Contactar soporte',
+    link: 'soporte%20t%C3%A9cnico%20equipo%20contra%20incendios',
+  },
+];
+---
+
+<section style="background:#ffffff; padding:96px 0; border-top:1px solid #e4e4e7;">
+  <div class="container-custom">
+
+    <!-- Header 50/50 -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16" style="align-items:center; margin-bottom:64px;">
+
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+          <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+          <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Por qué FIREFIGHTER</span>
+        </div>
+        <h2 style="font-size:clamp(1.9rem,2.8vw,2.7rem);font-weight:800;color:#09090b;line-height:1.1;margin:0;letter-spacing:-0.02em;">
+          El proveedor que necesitas<br>para equipo crítico
+        </h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:28px;">
+        <div>
+          <span style="display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px;">Socio Técnico Especializado</span>
+          <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">
+            FIREFIGHTER no es una tienda genérica de seguridad: somos un proveedor técnico especializado en <strong style="color:#09090b; font-weight:600;">equipos contra incendios y EPP para bomberos</strong> con más de cinco décadas equipando a cuerpos de bomberos, brigadas industriales y dependencias de gobierno en toda la República Mexicana.
+          </p>
+        </div>
+        <div style="padding-top:28px; border-top:1px solid #f0f0f0;">
+          <span style="display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px;">Calidad Certificada, Soporte Real</span>
+          <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">
+            Cada solución incluye <strong style="color:#09090b; font-weight:600;">certificaciones NFPA, NOM y UL vigentes</strong>, ficha técnica en español y soporte posventa de primer nivel con refacciones originales directamente del fabricante. Garantía real, sin intermediarios ni letra pequeña.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Grid 3×2 — mismo patrón de card que ProductCategories -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {reasons.map((r) => (
+        <div style="background:#fff; border:1px solid #e4e4e7; border-radius:14px; overflow:hidden; display:flex; flex-direction:column; transition:box-shadow 0.2s ease, transform 0.2s ease;" class="hover:-translate-y-1 hover:shadow-lg">
+
+          <!-- Header de card: badge número + fondo sutil -->
+          <div style="padding:24px 24px 0; background:#fff;">
+            <span style="display:inline-block; background:#dc2626; color:#fff; font-size:0.62rem; font-weight:800; letter-spacing:0.06em; padding:3px 9px; border-radius:4px; text-transform:uppercase; margin-bottom:14px;">{r.num}</span>
+            <h3 style="font-size:1.05rem; font-weight:700; color:#09090b; margin:0 0 10px; line-height:1.3;">{r.title}</h3>
+            <p style="font-size:0.78rem; color:#71717a; line-height:1.7; margin:0 0 18px;">{r.desc}</p>
+          </div>
+
+          <!-- Body -->
+          <div style="padding:0 24px 24px; display:flex; flex-direction:column; gap:0; flex:1;">
+
+            <!-- Incluye -->
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+              <span style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#a1a1aa;">Incluye</span>
+              <div style="flex:1; height:1px; background:#f4f4f5;"></div>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:5px; margin-bottom:18px;">
+              {r.items.map(item => (
+                <span style="font-size:0.68rem; color:#3f3f46; background:#f4f4f5; padding:5px 8px; border-radius:5px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; line-height:1.4;">{item}</span>
+              ))}
+            </div>
+
+            <!-- Aplica para -->
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+              <span style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#a1a1aa;">Aplica para</span>
+              <div style="flex:1; height:1px; background:#f4f4f5;"></div>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:5px; margin-bottom:18px;">
+              {r.sectors.map(s => (
+                <span style="font-size:0.67rem; color:#52525b; background:#fff; border:1px solid #e4e4e7; padding:4px 9px; border-radius:99px; line-height:1.4;">{s}</span>
+              ))}
+            </div>
+
+            <!-- Highlight -->
+            <div style="display:flex; align-items:center; gap:7px; padding:9px 12px; border-radius:8px; background:#fef2f2; margin-bottom:0;">
+              <svg width="12" height="12" fill="#dc2626" viewBox="0 0 20 20" style="flex-shrink:0;">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span style="font-size:0.68rem; font-weight:600; color:#dc2626;">{r.highlight}</span>
+            </div>
+
+            <!-- CTA -->
+            <a
+              href={`https://wa.me/525500000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20${r.link}`}
+              target="_blank"
+              rel="noopener"
+              style="margin-top:18px; border-top:1px solid #f4f4f5; padding-top:16px; display:flex; align-items:center; justify-content:space-between; font-size:0.8rem; font-weight:600; color:#dc2626; text-decoration:none;"
+            >
+              <span>{r.cta}</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Strip de stats -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;border:1px solid #e4e4e7;border-radius:12px;overflow:hidden;">
+      {[
+        { n: '500+', label: 'Productos en catálogo' },
+        { n: '50+', label: 'Años en el mercado' },
+        { n: '32', label: 'Estados con cobertura' },
+        { n: '<24h', label: 'Tiempo de cotización' },
+      ].map((s, i) => (
+        <div style={`padding:28px 24px;text-align:center;background:#fff;${i < 3 ? 'border-right:1px solid #e4e4e7;' : ''}`}>
+          <div style="font-size:1.75rem;font-weight:800;color:#09090b;line-height:1;">{s.n}</div>
+          <div style="font-size:0.75rem;color:#71717a;margin-top:6px;font-weight:500;">{s.label}</div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

@@ -6,13 +6,6 @@ import { getCollection } from 'astro:content';
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const formatDate = (date: Date) => {
-  return date.toLocaleDateString('es-MX', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
-};
 ---
 
 <BaseLayout
@@ -76,9 +69,6 @@ const formatDate = (date: Date) => {
                     <Badge variant="slate" size="sm">{tag}</Badge>
                   ))}
                 </div>
-                <time class="text-sm text-slate-500">
-                  {formatDate(post.data.pubDate)}
-                </time>
                 <h2 class="text-xl font-display font-semibold text-slate-800 mt-2 mb-3 hover:text-fire-600 transition-colors">
                   <a href={`/blog/${post.id}`}>{post.data.title}</a>
                 </h2>

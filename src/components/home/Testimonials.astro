@@ -1,0 +1,201 @@
+---
+/**
+ * Testimonials — Reseñas de clientes
+ * Grid 4×2 = 8 cards. Patrón homologado del sitio.
+ */
+
+const reviews = [
+  {
+    rating: 5,
+    quote: 'Equipamos a toda nuestra brigada industrial con trajes Nomex y SCBA certificados NFPA. La propuesta técnica llegó en menos de 24 horas con fichas en español. Excelente nivel de servicio y documentación para nuestra auditoría NOM-002-STPS.',
+    name: 'Ing. Roberto Garza',
+    role: 'Jefe de Seguridad Industrial',
+    company: 'Grupo Alfa — Monterrey, NL',
+    tag: 'Brigada industrial',
+    verified: true,
+  },
+  {
+    rating: 5,
+    quote: 'Licitamos equipos SCBA para el H. Cuerpo de Bomberos del municipio. FIREFIGHTER entregó toda la documentación CABMS, cartas de distribuidor y certificados de laboratorio sin que tuviéramos que solicitarlos por separado. Proceso impecable.',
+    name: 'C. Miguel Ángel Torres',
+    role: 'Director de Protección Civil',
+    company: 'Municipio de Querétaro, QRO',
+    tag: 'Licitación pública',
+    verified: true,
+  },
+  {
+    rating: 5,
+    quote: 'Necesitaba sistemas de supresión FM-200 para nuestra sala de servidores. El equipo de ingenieros nos orientó sobre la norma aplicable, diseñó el sistema y coordinó la instalación completa. Todo en tiempo y con garantía de fábrica.',
+    name: 'Lic. Andrea Vázquez',
+    role: 'Gerente de Infraestructura TI',
+    company: 'Hospital Ángeles — CDMX',
+    tag: 'Sistemas fijos',
+    verified: true,
+  },
+  {
+    rating: 5,
+    quote: 'Compramos herramientas hidráulicas Holmatro para rescate vehicular. La atención técnica fue excelente: nos explicaron cada modelo, compararon opciones y nos entregaron con demostración. Calidad y soporte de primer nivel.',
+    name: 'Cdte. Ernesto Sandoval',
+    role: 'Comandante Operativo',
+    company: 'H. Cuerpo de Bomberos — Guadalajara, JAL',
+    tag: 'Herramientas rescate',
+    verified: true,
+  },
+  {
+    rating: 5,
+    quote: 'Equipamos 3 plantas industriales con extintores industriales, gabinetes y señalética NOM. El precio fue competitivo, la entrega puntual y las fichas técnicas estaban listas para la verificación de Protección Civil sin ningún retraso.',
+    name: 'Ing. Carmen Reyes',
+    role: 'Coordinadora SST',
+    company: 'Plásticos del Norte — Torreón, COAH',
+    tag: 'Equipamiento masivo',
+    verified: true,
+  },
+  {
+    rating: 5,
+    quote: 'Como cuerpo de bomberos voluntarios teníamos presupuesto limitado. FIREFIGHTER nos ayudó a priorizar el equipo crítico, consiguió precios de distribuidor directo y nos dio acceso a refacciones originales MSA. Muy profesionales.',
+    name: 'Tte. Luis Hernández',
+    role: 'Jefe de Estación',
+    company: 'Bomberos Voluntarios — Puebla, PUE',
+    tag: 'Cuerpo voluntario',
+    verified: true,
+  },
+  {
+    rating: 5,
+    quote: 'Instalamos un sistema completo de detección y alarma Notifier para nuestro hotel. Desde el diseño hasta la puesta en marcha, el soporte técnico fue constante. Pasamos la verificación de Protección Civil sin observaciones.',
+    name: 'Arq. Sofía Morales',
+    role: 'Gerente de Operaciones',
+    company: 'Hotel Grand Fiesta — Los Cabos, BCS',
+    tag: 'Detección y alarma',
+    verified: true,
+  },
+  {
+    rating: 5,
+    quote: 'Participamos en una licitación federal con equipos FIREFIGHTER. Toda la documentación técnica — números de serie, fichas CABMS y certificados UL — estuvo lista en 48 horas. Ganamos la licitación y la entrega fue perfecta.',
+    name: 'Lic. Jorge Medina',
+    role: 'Director de Adquisiciones',
+    company: 'IMSS — Delegación Centro, CDMX',
+    tag: 'Gobierno federal',
+    verified: true,
+  },
+];
+---
+
+<section style="background:#f8fafc; padding:96px 0; border-top:1px solid #e4e4e7;">
+  <div class="container-custom">
+
+    <!-- Header 50/50 -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16" style="align-items:center; margin-bottom:64px;">
+
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+          <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+          <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Reseñas de Clientes</span>
+        </div>
+        <h2 style="font-size:clamp(1.9rem,2.8vw,2.7rem); font-weight:800; color:#09090b; line-height:1.1; margin:0; letter-spacing:-0.02em;">
+          Lo que dicen quienes<br>confían en FIREFIGHTER
+        </h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:28px;">
+        <div>
+          <span style="display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px;">Clientes Reales, Resultados Verificables</span>
+          <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">
+            Más de cinco décadas equipando a <strong style="color:#09090b; font-weight:600;">cuerpos de bomberos, brigadas industriales, hospitales y dependencias de gobierno</strong> en los 32 estados de México. Cada reseña refleja un proyecto real entregado con documentación técnica completa y garantía de fábrica.
+          </p>
+        </div>
+        <div style="padding-top:28px; border-top:1px solid #f0f0f0;">
+          <span style="display:block; font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px;">Satisfacción en Cada Etapa del Proceso</span>
+          <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">
+            Desde la primera cotización hasta el soporte posventa, nuestros clientes valoran la <strong style="color:#09090b; font-weight:600;">rapidez de respuesta, la precisión técnica y la documentación sin errores</strong> que hace la diferencia en licitaciones, verificaciones de protección civil y auditorías NOM.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Stats rápidas -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-px" style="background:#e4e4e7; border:1px solid #e4e4e7; border-radius:14px; overflow:hidden; margin-bottom:48px;">
+      {[
+        { n: '4.9', label: 'Calificación promedio', sub: 'sobre 5.0' },
+        { n: '500+', label: 'Proyectos entregados', sub: 'en 32 estados' },
+        { n: '98%', label: 'Clientes satisfechos', sub: 'recomendarían FIREFIGHTER' },
+        { n: '<24h', label: 'Tiempo de respuesta', sub: 'propuesta técnica' },
+      ].map((s) => (
+        <div style="background:#fff; padding:28px 24px; text-align:center;">
+          <div style="font-size:1.9rem; font-weight:800; color:#09090b; line-height:1; letter-spacing:-0.02em;">{s.n}</div>
+          <div style="font-size:0.78rem; font-weight:600; color:#3f3f46; margin-top:6px;">{s.label}</div>
+          <div style="font-size:0.68rem; color:#a1a1aa; margin-top:3px;">{s.sub}</div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Grid 4×2 de reseñas -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {reviews.map((r) => (
+        <div style="background:#fff; border:1px solid #e4e4e7; border-radius:14px; overflow:hidden; display:flex; flex-direction:column; transition:box-shadow 0.2s ease, transform 0.2s ease;" class="hover:-translate-y-1 hover:shadow-lg">
+
+          <!-- Header card -->
+          <div style="padding:24px 24px 0;">
+
+            <!-- Estrellas + tag -->
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
+              <div style="display:flex; gap:3px;">
+                {Array.from({ length: r.rating }).map(() => (
+                  <svg width="13" height="13" fill="#f59e0b" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                  </svg>
+                ))}
+              </div>
+              {r.verified && (
+                <span style="display:inline-flex; align-items:center; gap:4px; font-size:0.6rem; font-weight:700; color:#16a34a; background:#f0fdf4; border:1px solid #bbf7d0; padding:2px 7px; border-radius:99px; letter-spacing:0.04em;">
+                  <svg width="8" height="8" fill="#16a34a" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  Verificado
+                </span>
+              )}
+            </div>
+
+            <!-- Quote -->
+            <p style="font-size:0.78rem; color:#3f3f46; line-height:1.75; margin:0 0 18px; font-style:italic;">
+              "{r.quote}"
+            </p>
+
+          </div>
+
+          <!-- Body -->
+          <div style="padding:0 24px 24px; display:flex; flex-direction:column; flex:1; justify-content:flex-end;">
+
+            <!-- Separador -->
+            <div style="height:1px; background:#f4f4f5; margin-bottom:14px;"></div>
+
+            <!-- Reviewer info -->
+            <div style="display:flex; align-items:flex-start; gap:10px;">
+              <!-- Avatar inicial -->
+              <div style="width:36px; height:36px; border-radius:50%; background:#dc2626; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <span style="font-size:0.75rem; font-weight:800; color:#fff; line-height:1;">{r.name.split(' ').map((w: string) => w[0]).slice(0, 2).join('')}</span>
+              </div>
+              <div style="min-width:0;">
+                <div style="font-size:0.8rem; font-weight:700; color:#09090b; line-height:1.2; margin-bottom:3px;">{r.name}</div>
+                <div style="font-size:0.68rem; color:#71717a; line-height:1.4; margin-bottom:6px;">{r.role}</div>
+                <div style="font-size:0.65rem; color:#a1a1aa; line-height:1.3;">{r.company}</div>
+              </div>
+            </div>
+
+            <!-- Tag sector -->
+            <div style="margin-top:14px; padding-top:12px; border-top:1px solid #f4f4f5;">
+              <span style="display:inline-flex; align-items:center; gap:6px; padding:9px 12px; border-radius:8px; background:#fef2f2; width:100%;">
+                <svg width="12" height="12" fill="#dc2626" viewBox="0 0 20 20" style="flex-shrink:0;">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span style="font-size:0.68rem; font-weight:600; color:#dc2626;">{r.tag}</span>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
