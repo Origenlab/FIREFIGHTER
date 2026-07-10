@@ -118,7 +118,11 @@ export function generateBreadcrumbSchema(
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.url.startsWith('http') ? item.url : `${baseUrl}${item.url}`,
+      // El último crumb (página actual) puede venir sin URL: omitir `item`
+      // en vez de apuntarlo al home (URL incorrecta en el schema).
+      ...(item.url
+        ? { item: item.url.startsWith('http') ? item.url : `${baseUrl}${item.url}` }
+        : {}),
     })),
   };
 }
@@ -158,7 +162,12 @@ export function generateOrganizationSchema(baseUrl: string = 'https://firefighte
     '@id': `${baseUrl}/#organization`,
     name: 'Firefighter.com.mx',
     url: baseUrl,
-    logo: `${baseUrl}/logo.svg`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${baseUrl}/images/logo-firefighter-mexico.svg`,
+      width: 200,
+      height: 50,
+    },
     description: 'Directorio Nacional de Estaciones de Bomberos en México. Encuentra la estación más cercana a tu ubicación.',
     areaServed: {
       '@type': 'Country',
@@ -202,7 +211,9 @@ export function generateArticleSchema(
       name: 'Firefighter.com.mx',
       logo: {
         '@type': 'ImageObject',
-        url: `${baseUrl}/logo.svg`,
+        url: `${baseUrl}/images/logo-firefighter-mexico.svg`,
+        width: 200,
+        height: 50,
       },
     },
     datePublished: article.publishDate,

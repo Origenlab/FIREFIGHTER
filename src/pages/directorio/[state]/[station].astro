@@ -149,7 +149,7 @@ const fireStationSchema = {
   "currenciesAccepted": "MXN",
   "paymentAccepted": "Emergency services are free",
   "priceRange": "Gratuito",
-  "image": `${siteUrl}/images/og-station-default.jpg`,
+  "image": `${siteUrl}/images/og-image.png`,
   "sameAs": data.website ? [data.website] : [],
   "potentialAction": {
     "@type": "ReserveAction",
@@ -172,37 +172,8 @@ const fireStationSchema = {
   } : undefined
 };
 
-// Schema.org BreadcrumbList
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Inicio",
-      "item": siteUrl
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Directorio",
-      "item": `${siteUrl}/directorio`
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": state?.name || data.state,
-      "item": `${siteUrl}/directorio/${data.stateSlug}`
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": data.name,
-      "item": canonicalUrl
-    }
-  ]
-};
+// NOTA SEO: el BreadcrumbList lo genera SEOHead desde el prop `breadcrumbs`
+// de BaseLayout — el schema manual duplicado se eliminó (2 BreadcrumbList por página).
 
 // Schema.org FAQPage - For emergency reporting section
 const faqSchema = {
@@ -323,9 +294,6 @@ const localBusinessSchema = {
 
   <!-- Schema.org JSON-LD: FireStation (Primary) -->
   <script type="application/ld+json" set:html={JSON.stringify(fireStationSchema)} />
-
-  <!-- Schema.org JSON-LD: BreadcrumbList -->
-  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
   <!-- Schema.org JSON-LD: FAQPage -->
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />

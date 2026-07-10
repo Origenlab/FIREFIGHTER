@@ -4,7 +4,6 @@ import {
   generateEmergencyServiceSchema,
   generateBreadcrumbSchema,
   generateWebSiteSchema,
-  generateOrganizationSchema,
   generateArticleSchema,
   generateStateDirectorySchema,
 } from '../../lib/seo';
@@ -39,7 +38,7 @@ interface Props {
 const {
   title,
   description,
-  image = '/images/og-image.jpg',
+  image = '/images/og-image.png',
   imageAlt = title,
   canonicalUrl = Astro.url.href,
   type = 'website',
@@ -58,6 +57,15 @@ const siteUrl = 'https://firefighter.com.mx';
 const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 const fullTitle = `${title} | ${siteName}`;
 
+// og:image:type honesto según la extensión real de la imagen resuelta
+const ogExt = (fullImageUrl.split('.').pop() ?? '').toLowerCase();
+const ogImageType =
+  ogExt === 'png' ? 'image/png'
+  : ogExt === 'svg' ? 'image/svg+xml'
+  : ogExt === 'webp' ? 'image/webp'
+  : ogExt === 'avif' ? 'image/avif'
+  : 'image/jpeg';
+
 // Generate JSON-LD schemas
 const schemas: object[] = [];
 
@@ -71,10 +79,10 @@ if (breadcrumbs && breadcrumbs.length > 0) {
   schemas.push(generateBreadcrumbSchema(breadcrumbs, siteUrl));
 }
 
-// Website + Organization schema for homepage
+// Website schema for homepage (Organization ya se emite site-wide en Footer.astro
+// con el mismo @id — duplicarlo aquí generaba dos Organization en conflicto)
 if (includeWebsiteSchema) {
   schemas.push(generateWebSiteSchema(siteUrl));
-  schemas.push(generateOrganizationSchema(siteUrl));
 }
 
 // State directory schema
@@ -133,6 +141,7 @@ if (type === 'article' && article && publishedDate) {
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={fullImageUrl} />
+<meta property="og:image:type" content={ogImageType} />
 <meta property="og:image:alt" content={imageAlt} />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
