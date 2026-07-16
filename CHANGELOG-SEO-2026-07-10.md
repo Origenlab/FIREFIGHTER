@@ -57,3 +57,40 @@ Fix manual (dashboard, en este orden — regla: nunca matar el origen viejo sin 
 ## Verificación live post-deploy (contra pages.dev; el dominio sigue congelado — ver arriba)
 
 Ver resultados al final de la Action en el reporte del orquestador. Esperado tras cutover del dominio: mismos resultados en firefighter.com.mx.
+
+---
+
+# 2ª PASADA — verificación "cero contenido fabricado" (2026-07-10, mismo día)
+
+Alcance de esta pasada: auditar/remover **contenido FABRICADO** (ratings/reseñas/clientes/redes falsos) sin tocar el NAP REAL. La 1ª pasada (arriba) dejó `aggregateRating` y `sameAs` como "fuera de alcance técnico"; esta pasada los evalúa contra la regla dura de OrigenLab "cero contenido fabricado".
+
+## Verificación del dato REAL (se MANTIENE)
+
+- **NAP por estación = REAL y consistente.** Muestreo de frontmatter: nombres reales ("Heroico Cuerpo de Bomberos de Atlixco"), direcciones reales, teléfonos variados con lada real (`+52 244 445-2200`, sin patrón `000-0000`), emails `.gob.mx` reales (`bomberos@atlixco.gob.mx`), comandante, `yearEstablished` (1958), `totalPersonnel`. **No es scaffold.** El schema `FireStation` (NAP/teléfono/geo/horario/foundingDate) se conserva íntegro.
+
+## Cambio APLICADO (working tree, sin commit)
+
+| # | Fix | Confirmado | Archivo | Estado |
+|---|-----|-----------|---------|--------|
+| A | **`aggregateRating` FABRICADO removido.** Emitía `ratingValue:"5" / ratingCount:"1"` **hardcodeado** (constante de template, NO `data.rating`) en las **92** estaciones con `verified:true`. No existe NINGUNA reseña real (0 nodos `Review` en todo el sitio; 0 `aggregateRating` fuera de estaciones). `verified` valida el NAP, no una calificación. Rating inventado idéntico en 92 estaciones de gobierno = review spam → riesgo de acción manual de Google + viola "cero contenido fabricado". La 1ª pasada lo supuso "dato del negocio"; es una constante fabricada. | Sí (grep source + dist: 92 págs) | `src/pages/directorio/[state]/[station].astro` (líneas ~166-172, reemplazadas por comentario NOTA SEO anti-regresión) | **APLICADO** |
+
+## Hallazgos FABRICADOS NO aplicados (contenido visible → requieren build + decisión de marca del humano)
+
+Causa raíz común: **el chrome de marketing es un template comercial de "venta de equipo contra incendios" (marca "FIREFIGHTER México", dominio `firefighter.mx`) injertado sobre un sitio que en realidad es un DIRECTORIO de estaciones de bomberos (`firefighter.com.mx`).** Todo lo de abajo es de ese injerto y es contenido VISIBLE (no schema), fuera de una edición quirúrgica segura sin build:
+
+- **Testimonios fabricados (home)** — `src/components/home/Testimonials.astro`: 7 reseñas de clientes INVENTADOS con nombres y citas ("Ing. Roberto Garza", "C. Miguel Ángel Torres", "Lic. Andrea Vázquez", "Cdte. Ernesto Sandoval", "Ing. Carmen Reyes", "Tte. Luis Hernández", "Arq. Sofía Morales"). Es exactamente "reseñas/clientes falsos". **PROPUESTO: eliminar sección + su import en `src/pages/index.astro`, o reemplazar por reseñas reales verificables. Requiere build para verificar layout.**
+- **Stats fabricados (home)** — `src/components/home/StatsCounter.astro`: `"500+ Productos en Catálogo"`, `"15+ Años de Experiencia"` (métricas de tienda, no de directorio). **PROPUESTO: quitar/sustituir por cifras reales del directorio. Requiere build.**
+- **Footer = marca/contacto equivocados** — `src/components/layout/Footer.astro`: teléfono WhatsApp **PLACEHOLDER** `wa.me/525500000000` (= 55-0000-0000 demo) en ~15 CTAs; emails `@firefighter.mx` (dominio distinto al canónico `.com.mx`); links muertos `/nosotros`, `/marcas`, `/casos`, `/terminos`, `/garantias`, `/devoluciones` (no existen en `src/pages`); `sameAs` con handles adivinados `firefightermx` (facebook/instagram/linkedin/youtube). **PROPUESTO: reemplazar footer por el del directorio con NAP/contacto real. Requiere build + datos reales.**
+- **Nota sobre `sameAs`:** los 4 handles se renderizan como enlaces VISIBLES en el footer (no son solo JSON-LD), por lo que bajo la regla afinada ("remover `sameAs` que NO aparecen enlazados en el sitio") **no** se removieron quirúrgicamente en esta pasada; se marcan como parte del injerto para decisión del humano. Removerlos solo del JSON-LD dejaría los enlaces visibles inconsistentes.
+
+## Validación (estática — SIN build; restricción del entorno)
+
+- **Fuente:** `grep` confirma `aggregateRating`/`ratingValue` **ausentes** del código emitido (solo quedan en comentario). `fireStationSchema` cierra balanceado (11 `{` / 11 `}`).
+- **`validate-dist.py`** se corrió contra `dist/` **PRE-edición** (no se puede rebuild: falta `@rollup/rollup-linux-arm64-gnu`); por eso sigue reportando `aggregateRating: 92`. **NO es un regreso**: refleja el build viejo. Tras el próximo build en CI el conteo debe ser `0`.
+- **No verificable sin build:** que el remove de `aggregateRating` no altere el resto del render (bajísimo riesgo: era la última propiedad de un objeto `JSON.stringify`, y `undefined`-omission ya se usa en el mismo objeto). NO declarado "verde": depende del build en la Action.
+
+## Pendientes para el humano (Mac-side / dashboard)
+
+1. **Build + verificar** en la Action que `aggregateRating` desaparece (validate-dist → `aggregateRating: 0`).
+2. **Decidir el injerto comercial** (testimonios/stats/footer): eliminar o sustituir por contenido real del directorio. Es una violación activa de "cero contenido fabricado".
+3. Sigue vigente el **hallazgo de infraestructura de la 1ª pasada** (dominio apex servido por GH Pages zombi — cutover a Cloudflare Pages).

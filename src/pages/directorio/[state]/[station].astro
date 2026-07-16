@@ -162,14 +162,12 @@ const fireStationSchema = {
       "@type": "Reservation",
       "name": "Llamar a la estación"
     }
-  },
-  "aggregateRating": data.verified ? {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "ratingCount": "1",
-    "bestRating": "5",
-    "worstRating": "1"
-  } : undefined
+  }
+  // NOTA SEO 2026-07-10 (2ª pasada): se REMOVIÓ `aggregateRating`. Emitía un rating
+  // hardcodeado 5.0 / ratingCount 1 en las 92 estaciones con `verified:true`. No existe
+  // ninguna reseña real en el sitio ni en el frontmatter: `verified` valida el NAP, no una
+  // calificación. Rating inventado = viola "cero contenido fabricado" + riesgo de acción
+  // manual de Google por review spam. NO re-agregar sin reseñas reales verificables.
 };
 
 // NOTA SEO: el BreadcrumbList lo genera SEOHead desde el prop `breadcrumbs`
