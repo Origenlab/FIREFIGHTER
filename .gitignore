@@ -36,3 +36,5 @@ FIREFIGHTER/
 # scripts de generación
 gen_estudio.py
 Estudio_Competencia_FIREFIGHTER_2026.docx
+*.log
+.wrangler
