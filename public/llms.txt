@@ -1,0 +1,41 @@
+# FIREFIGHTER.COM.MX — Equipo contra incendios y directorio nacional de estaciones de bomberos
+
+> Firefighter México vende equipos contra incendios y equipo para bomberos (trajes, SCBA,
+> extintores, herramientas de rescate bajo normas NFPA, NOM y UL) y mantiene un directorio
+> de estaciones de bomberos de México con mapa interactivo y números de emergencia.
+
+Idioma: español (es-MX). País: México.
+
+## Acerca de
+El sitio combina dos vertientes: un catálogo comercial de equipo contra incendios y de
+protección para bomberos organizado en ocho categorías, y un directorio público de
+estaciones de bomberos por estado (con fichas de CDMX, Estado de México y Puebla) que
+incluye mapa, números de emergencia y un formulario para registrar nuevas estaciones.
+
+## Servicios / Productos
+- Equipos para bomberos: EPP estructural (trajes Nomex, chaquetones, cascos, botas, guantes) — norma de referencia NFPA 1971.
+- SCBA y protección respiratoria.
+- Extintores.
+- Sistemas fijos contra incendio.
+- Herramientas de rescate.
+- Detección y alarma.
+- Gabinetes y mangueras.
+- Equipo forestal.
+
+## Páginas clave
+- [Inicio](https://firefighter.com.mx/): portada con categorías de producto y canales de cotización.
+- [Productos](https://firefighter.com.mx/productos): índice del catálogo por categoría.
+- [Equipos para bomberos](https://firefighter.com.mx/productos/equipos-bomberos): EPP estructural para combate de incendios.
+- [Extintores](https://firefighter.com.mx/productos/extintores): categoría de extintores del catálogo.
+- [Herramientas de rescate](https://firefighter.com.mx/productos/herramientas-rescate): categoría de herramientas de rescate.
+- [Directorio de estaciones](https://firefighter.com.mx/directorio): estaciones de bomberos por estado.
+- [Mapa](https://firefighter.com.mx/mapa): mapa interactivo de estaciones de bomberos en México.
+- [Emergencias](https://firefighter.com.mx/emergencias): números de emergencia en México (línea nacional 911).
+- [Agregar estación](https://firefighter.com.mx/agregar-estacion): formulario para sumar una estación al directorio.
+- [Blog](https://firefighter.com.mx/blog): artículos técnicos sobre equipo y normativa contra incendios.
+- [Acerca de](https://firefighter.com.mx/acerca-de): qué es el proyecto Firefighter México.
+- [Contacto](https://firefighter.com.mx/contacto): formulario de contacto y cotización.
+
+## Contacto
+- Sitio: https://firefighter.com.mx
+- Formulario de contacto: https://firefighter.com.mx/contacto
