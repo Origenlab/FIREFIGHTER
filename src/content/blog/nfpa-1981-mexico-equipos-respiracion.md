@@ -36,7 +36,7 @@ NFPA 1970 (Standard on Open-Circuit Self-Contained Breathing Apparatus for Emerg
 | HUD | Opcional | Obligatorio |
 | Presión facial positiva mínima | Especificada | Incrementada |
 | RIC/UAC | Recomendado | Obligatorio |
-| PASS integrado | Conforme a NFPA 1970 (sin actualizar) | Conforme a NFPA 1982:2018 |
+| PASS integrado | Conforme a la edición previa de NFPA 1982 (sin actualizar) | Conforme a NFPA 1982:2018 |
 | Prueba de resistencia al calor | Protocolo 2013 | Protocolo 2019 (más exigente) |
 
 Para equipos comprados en 2026 para uso en combate de incendio estructural, la especificación correcta es NFPA 1981:2019. La edición 2013 ya no representa el estado del arte en protección, y los equipos certificados solo bajo esa edición no tienen HUD obligatorio.
