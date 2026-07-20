@@ -59,7 +59,7 @@ El dato de quema agropecuaria sin control es el más relevante desde la perspect
 
 ## La brecha de equipamiento
 
-No hay un informe oficial de CONAFOR que documente sistemáticamente la brecha entre el equipo disponible en las brigadas y el equipo necesario para operar con estándar NFPA 1977. Esta información se construye de manera fragmentaria a partir de:
+No hay un informe oficial de CONAFOR que documente sistemáticamente la brecha entre el equipo disponible en las brigadas y el equipo necesario para operar con estándar NFPA 1950. Esta información se construye de manera fragmentaria a partir de:
 
 - Reportes de incidentes donde se menciona EPP inadecuado
 - Diagnósticos de programas de brigadas comunitarias estatales
@@ -67,7 +67,7 @@ No hay un informe oficial de CONAFOR que documente sistemáticamente la brecha e
 
 Lo que la evidencia disponible muestra consistentemente:
 
-**Proporción de brigadistas con EPP certificado NFPA 1977**: estimaciones basadas en diagnósticos de estados sugieren que menos del 30% de los brigadistas forestales activos en México opera con overol certificado NFPA 1977. La mayoría usa ropa de trabajo de algodón o FR-cotton no verificado.
+**Proporción de brigadistas con EPP certificado NFPA 1950**: estimaciones basadas en diagnósticos de estados sugieren que menos del 30% de los brigadistas forestales activos en México opera con overol certificado NFPA 1950. La mayoría usa ropa de trabajo de algodón o FR-cotton no verificado.
 
 **Herramientas manuales**: el Pulaski tiene buena penetración en brigadas CONAFOR. La herramienta McLeod es menos frecuente, lo que explica parcialmente la calidad variable de acabado de líneas.
 
@@ -89,7 +89,7 @@ La aritmética de la prevención bien equipada es favorable. El problema es pol�
 
 Basado en los diagnósticos disponibles y la observación de campo, los ítems de equipo con mayor brecha en brigadas forestales en México son:
 
-**EPP certificado NFPA 1977:**
+**EPP certificado NFPA 1950:**
 - Overoles FR Nomex o FR-cotton verificado (brecha estimada: más del 70% de brigadistas sin overol certificado)
 - Cascos forestales certificados (brecha estimada: más del 50% usan cascos de construcción no forestales)
 - Guantes de cuero de especificación forestal (menos crítico pero frecuentemente inadecuado)
@@ -107,7 +107,7 @@ Basado en los diagnósticos disponibles y la observación de campo, los ítems d
 
 Para el proceso de equipamiento de brigadas bajo programa CONAFOR incluyendo licitaciones y especificaciones técnicas, consulte el artículo sobre [CONAFOR y el equipamiento de brigadas forestales](/blog/conafor-equipamiento-brigadas-forestales).
 
-Para los requisitos técnicos de EPP bajo NFPA 1977, consulte el artículo sobre [NFPA 1977 y EPP para incendios forestales](/blog/nfpa-1977-epp-incendios-forestales).
+Para los requisitos técnicos de EPP bajo NFPA 1950, consulte el artículo sobre [NFPA 1950 y EPP para incendios forestales](/blog/nfpa-1977-epp-incendios-forestales).
 
 ## La lectura correcta de las estadísticas
 

@@ -88,7 +88,7 @@ La Estación Central tiene jurisdicción directa sobre un área de **18 km²** e
 ### Equipamiento Especializado
 
 **Protección Personal:**
-- Trajes estructurales certificados NFPA 1971 (nivel máximo)
+- Trajes estructurales certificados NFPA 1970 (nivel máximo)
 - Trajes de aproximación al fuego (proximidad 500°C)
 - Cascos con comunicación integrada y cámara térmica
 - Botas de seguridad dieléctricas

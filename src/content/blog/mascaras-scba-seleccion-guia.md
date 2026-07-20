@@ -3,7 +3,7 @@ title: "Máscaras SCBA: selección, fit test y mantenimiento para brigadas en M�
 description: "Máscaras SCBA: fit test cuantitativo vs cualitativo, sello dual, tallas reales, integración con radio portátil, desinfección y criterios de reemplazo."
 pubDate: 2026-05-20
 author: "FIREFIGHTER México"
-tags: ["máscara SCBA", "fit test", "NFPA 1981", "respiración autónoma México"]
+tags: ["máscara SCBA", "fit test", "NFPA 1970", "respiración autónoma México"]
 draft: false
 ---
 
@@ -27,7 +27,7 @@ Limitaciones: el resultado depende de la sensibilidad sensorial del usuario (alg
 
 **Fit test cuantitativo:** se usa un equipo de medición que detecta partículas o trazadores específicos en el interior de la máscara mientras el usuario realiza movimientos estandarizados (girar cabeza, hablar, agacharse). El resultado es un factor de ajuste (Fit Factor) numérico que cuantifica el nivel de protección real del sello para ese usuario.
 
-NFPA 1981 y OSHA requieren fit test cuantitativo para confirmar que el ajuste de la máscara cumple el factor de protección asignado (APF 10,000 para SCBA de presión positiva). El cualitativo puede usarse para selección inicial; el cuantitativo es el que confirma la protección real.
+NFPA 1970 y OSHA requieren fit test cuantitativo para confirmar que el ajuste de la máscara cumple el factor de protección asignado (APF 10,000 para SCBA de presión positiva). El cualitativo puede usarse para selección inicial; el cuantitativo es el que confirma la protección real.
 
 En México, el fit test cuantitativo es prácticamente inexistente en la mayoría de los cuerpos de bomberos voluntarios y muchas brigadas industriales. No porque no sea posible — es porque nadie lo ha pedido ni implementado. Es la diferencia entre creer que el equipo protege y saber que el equipo protege para ese usuario específico.
 
@@ -97,7 +97,7 @@ Señales de reemplazo inmediato:
 
 El sello no se repara. Se reemplaza. Los sellos de reposición son componentes estándar en los catálogos de MSA y Scott con disponibilidad en México.
 
-Para revisar el [SCBA MSA G1](/blog/scba-msa-g1-guia-tecnica) completo, los [dispositivos PASS integrados](/blog/pass-devices-nfpa-1982-seguridad) y los requisitos de la [norma NFPA 1981](/blog/nfpa-1981-mexico-equipos-respiracion), consulta los artículos correspondientes. Los [equipos de respiración autónoma disponibles](/productos/scba-respiracion) incluyen máscaras en múltiples tallas con especificaciones de sello documentadas.
+Para revisar el [SCBA MSA G1](/blog/scba-msa-g1-guia-tecnica) completo, los [dispositivos PASS integrados](/blog/pass-devices-nfpa-1982-seguridad) y los requisitos de la [norma NFPA 1970](/blog/nfpa-1981-mexico-equipos-respiracion), consulta los artículos correspondientes. Los [equipos de respiración autónoma disponibles](/productos/scba-respiracion) incluyen máscaras en múltiples tallas con especificaciones de sello documentadas.
 
 
 ## Tabla comparativa de características clave por modelo

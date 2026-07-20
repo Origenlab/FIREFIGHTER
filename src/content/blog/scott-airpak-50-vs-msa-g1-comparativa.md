@@ -62,13 +62,13 @@ Los cilindros de fibra de carbono del Scott AP50 y del MSA G1 no son intercambia
 
 Esto importa cuando una brigada tiene equipos mixtos (por renovaciones parciales en años diferentes) o cuando compra cilindros adicionales de respaldo. Si tienes 4 G1 y 2 AP50 y tus cilindros de respaldo son todos MSA, los bomberos con AP50 no tienen cilindros intercambiables.
 
-En licitaciones donde se especifica solo "SCBA NFPA 1981" sin marca, existe el riesgo de recibir equipos de marcas diferentes que no son interoperables en cilindros. Si ya tienes equipo de una marca, la especificación de la nueva compra debe incluir esa marca para garantizar interoperabilidad.
+En licitaciones donde se especifica solo "SCBA NFPA 1970" sin marca, existe el riesgo de recibir equipos de marcas diferentes que no son interoperables en cilindros. Si ya tienes equipo de una marca, la especificación de la nueva compra debe incluir esa marca para garantizar interoperabilidad.
 
 ## La trampa de la "marca de confianza" sin soporte técnico local
 
-Existe una tercera opción que aparece frecuentemente en licitaciones de precio bajo: marcas con distribuidores locales que ofrecen equipos con "certificación NFPA 1981" a precios significativamente menores que Scott o MSA.
+Existe una tercera opción que aparece frecuentemente en licitaciones de precio bajo: marcas con distribuidores locales que ofrecen equipos con "certificación NFPA 1970" a precios significativamente menores que Scott o MSA.
 
-Algunas de esas marcas son legítimas y sus productos están correctamente certificados. Otras usan las frases evasivas que ya describimos en el artículo sobre [NFPA 1981 en México](/blog/nfpa-1981-mexico-equipos-respiracion): "diseñado para cumplir" en lugar de "certificado por laboratorio acreditado".
+Algunas de esas marcas son legítimas y sus productos están correctamente certificados. Otras usan las frases evasivas que ya describimos en el artículo sobre [NFPA 1970 en México](/blog/nfpa-1981-mexico-equipos-respiracion): "diseñado para cumplir" en lugar de "certificado por laboratorio acreditado".
 
 La verificación es la misma que para cualquier equipo de protección: pide el número de certificado, el laboratorio emisor, la edición específica de la norma. Si el distribuidor no puede entregar esa documentación, no compres el equipo.
 

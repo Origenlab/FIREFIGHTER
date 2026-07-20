@@ -90,7 +90,7 @@ Los cilindros de fibra de carbono son más sensibles a las condiciones de almace
 
 *La autonomía real depende de la demanda del usuario. Un bombero bajo estrés físico intenso puede consumir 80–120 L/min vs los 40 L/min del flujo estándar de cálculo.*
 
-El [SCBA MSA G1](/blog/scba-msa-g1-guia-tecnica) y su gestión de cilindros, el [programa de mantenimiento anual del SCBA](/blog/mantenimiento-scba-programa-anual) con los tres niveles de revisión, y los requisitos de la [norma NFPA 1981](/blog/nfpa-1981-mexico-equipos-respiracion) son los marcos técnicos que rodean la gestión correcta de cilindros. Los [equipos de respiración autónoma disponibles](/productos/scba-respiracion) incluyen cilindros de reposición con especificaciones técnicas completas.
+El [SCBA MSA G1](/blog/scba-msa-g1-guia-tecnica) y su gestión de cilindros, el [programa de mantenimiento anual del SCBA](/blog/mantenimiento-scba-programa-anual) con los tres niveles de revisión, y los requisitos de la [norma NFPA 1970](/blog/nfpa-1981-mexico-equipos-respiracion) son los marcos técnicos que rodean la gestión correcta de cilindros. Los [equipos de respiración autónoma disponibles](/productos/scba-respiracion) incluyen cilindros de reposición con especificaciones técnicas completas.
 
 El cilindro es el componente del SCBA que más fácilmente se ignora en el mantenimiento porque "solo es el tanque". Es también el componente cuya falla es más catastrófica. Inspección después de cada uso. Prueba hidrostática a tiempo. Retiro a los 15 años desde fabricación.
 

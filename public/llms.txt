@@ -13,7 +13,7 @@ estaciones de bomberos por estado (con fichas de CDMX, Estado de México y Puebl
 incluye mapa, números de emergencia y un formulario para registrar nuevas estaciones.
 
 ## Servicios / Productos
-- Equipos para bomberos: EPP estructural (trajes Nomex, chaquetones, cascos, botas, guantes) — norma de referencia NFPA 1971.
+- Equipos para bomberos: EPP estructural (trajes Nomex, chaquetones, cascos, botas, guantes) — norma de referencia NFPA 1970.
 - SCBA y protección respiratoria.
 - Extintores.
 - Sistemas fijos contra incendio.

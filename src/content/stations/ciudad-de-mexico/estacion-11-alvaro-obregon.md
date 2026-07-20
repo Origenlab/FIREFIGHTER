@@ -82,7 +82,7 @@ La Estación 11 tiene jurisdicción sobre un área aproximada de **96 km²**, at
 ### Equipamiento Especializado
 
 **Protección Personal:**
-- Trajes estructurales certificados NFPA 1971
+- Trajes estructurales certificados NFPA 1970
 - Cascos con protección facial y térmica
 - Botas de seguridad con puntera de acero
 - Guantes de intervención multinivel

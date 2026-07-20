@@ -85,7 +85,7 @@ La Estación 05 tiene jurisdicción sobre un área aproximada de **312 km²** (l
 ### Equipamiento Especializado
 
 **Protección Personal:**
-- Trajes estructurales certificados NFPA 1971
+- Trajes estructurales certificados NFPA 1970
 - Trajes para incendios forestales (más ligeros y transpirables)
 - Cascos con protección facial y térmica
 - Botas de seguridad para terreno irregular

@@ -81,7 +81,7 @@ La Estación 15 tiene jurisdicción sobre un área aproximada de **85.34 km²**,
 ### Equipamiento Especializado
 
 **Protección Personal:**
-- Trajes estructurales certificados NFPA 1971
+- Trajes estructurales certificados NFPA 1970
 - Trajes de inmersión para rescate acuático
 - Cascos con protección facial y térmica
 - Botas de seguridad con puntera de acero

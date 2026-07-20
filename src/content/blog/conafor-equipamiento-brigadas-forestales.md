@@ -29,7 +29,7 @@ El número de brigadas directas varía año con año según presupuesto, pero t�
 
 El Programa de Combate y Restauración de Ecosistemas Forestales apoya brigadas organizadas a nivel comunitario, ejidal o municipal. Estas brigadas:
 - Son contratadas por los propios ejidos o comunidades bajo acuerdo con CONAFOR
-- Reciben equipo a través del programa, aunque con especificaciones que no siempre reflejan el estándar NFPA 1977
+- Reciben equipo a través del programa, aunque con especificaciones que no siempre reflejan el estándar NFPA 1950
 - Tienen capacitación variable dependiendo del estado y del año de operación
 
 Las brigadas comunitarias representan la mayor parte de la fuerza de combate forestal en México pero también la mayor variabilidad en calidad de equipamiento.
@@ -49,7 +49,7 @@ El área técnica de la Gerencia de Manejo del Fuego genera las especificaciones
 - Ser lo suficientemente abiertas para permitir competencia entre proveedores
 - Cumplir con los principios de no restricción de competencia de la normatividad de adquisiciones
 
-Este balance es donde ocurre la degradación de calidad. Una especificación que diga "overol FR para incendios forestales certificado NFPA 1977 con TPP ≥ 20 cal/cm²" es correcta técnicamente pero puede reducir el número de proveedores que pueden participar, lo que algunas áreas de adquisición interpretan como restricción de competencia.
+Este balance es donde ocurre la degradación de calidad. Una especificación que diga "overol FR para incendios forestales certificado NFPA 1950 con TPP ≥ 20 cal/cm²" es correcta técnicamente pero puede reducir el número de proveedores que pueden participar, lo que algunas áreas de adquisición interpretan como restricción de competencia.
 
 En la práctica, las especificaciones tienden a suavizarse hasta un punto donde múltiples proveedores pueden participar, incluyendo proveedores de equipo genérico que no cumple el estándar técnico completo.
 
@@ -105,7 +105,7 @@ Para empresas que quieren participar como proveedores de equipo forestal en lici
 
 **Para equipo técnico especializado:**
 - Contar con especificaciones técnicas del equipo en español
-- Tener los reportes de ensayo de laboratorio que avalen el cumplimiento de la norma citada en el pliego (NFPA 1977, ANSI, etc.)
+- Tener los reportes de ensayo de laboratorio que avalen el cumplimiento de la norma citada en el pliego (NFPA 1950, ANSI, etc.)
 - Capacidad de entrega en los tiempos del contrato
 - Garantía y soporte postventa (refacciones, reemplazos en garantía)
 
@@ -119,7 +119,7 @@ Este tipo de omisión no es maliciosa; es el resultado de especificaciones redac
 
 La solución requiere que el área técnica de CONAFOR tenga acceso a asesoría técnica especializada en equipo forestal para construir pliegos que reflejen el estándar real necesario para operación segura y efectiva.
 
-Para entender los estándares técnicos aplicables al EPP que debería especificarse en estos pliegos, consulte el artículo sobre [NFPA 1977 y EPP para incendios forestales](/blog/nfpa-1977-epp-incendios-forestales).
+Para entender los estándares técnicos aplicables al EPP que debería especificarse en estos pliegos, consulte el artículo sobre [NFPA 1950 y EPP para incendios forestales](/blog/nfpa-1977-epp-incendios-forestales).
 
 Para ver la lista completa de equipo que debe tener una brigada de 10 personas con especificaciones técnicas correctas, consulte el artículo sobre el [kit de brigada forestal para 10 personas](/blog/kit-brigada-forestal-10-personas).
 

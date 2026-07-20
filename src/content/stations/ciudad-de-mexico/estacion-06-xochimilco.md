@@ -81,7 +81,7 @@ La Estación 06 tiene jurisdicción sobre un área aproximada de **122 km²**, a
 ### Equipamiento Especializado
 
 **Protección Personal:**
-- Trajes estructurales certificados NFPA 1971
+- Trajes estructurales certificados NFPA 1970
 - Trajes secos para rescate acuático
 - Cascos con protección facial y térmica
 - Botas de seguridad anfibias

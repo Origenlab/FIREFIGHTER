@@ -56,19 +56,19 @@ Las bases de licitación de equipos de bomberos en México frecuentemente incurr
 
 **Error 1 — Especificar características genéricas sin parámetros de rendimiento medibles**
 
-Bases que dicen "traje para bomberos resistente al fuego" sin especificar TPP mínimo, THL mínimo, material del outer shell ni la edición de la NFPA 1971 requerida, permiten la entrada de cualquier prenda con hilo FR —desde un overol de taller hasta un traje certificado de alta gama.
+Bases que dicen "traje para bomberos resistente al fuego" sin especificar TPP mínimo, THL mínimo, material del outer shell ni la edición de la NFPA 1970 requerida, permiten la entrada de cualquier prenda con hilo FR —desde un overol de taller hasta un traje certificado de alta gama.
 
 **La corrección**: especificar exactamente: "Traje estructural para combate de incendios certificado NFPA 1971 edición 2018, con TPP mínimo de 35 cal/cm² y THL mínimo de 130 W/m², cubierta exterior de Nomex IIIA mínimo 6 oz/yd² o material equivalente de mayor rendimiento, moisture barrier de ePTFE expandido (CROSSTECH® o equivalente certificado), liner térmico mínimo Caldura® 7.5 oz/yd² o equivalente. El certificado de conformidad debe ser emitido por laboratorio acreditado UL, Intertek, SGS o equivalente ILAC."
 
 **Error 2 — No exigir certificado de laboratorio, solo declaración del proveedor**
 
-Una declaración en papel del proveedor de que "el equipo cumple NFPA 1981" no tiene valor técnico ni legal. El proveedor puede creerlo sinceramente o puede mentir deliberadamente —el resultado para el comprador es el mismo: equipo que no fue sometido a las pruebas de la norma.
+Una declaración en papel del proveedor de que "el equipo cumple NFPA 1970" no tiene valor técnico ni legal. El proveedor puede creerlo sinceramente o puede mentir deliberadamente —el resultado para el comprador es el mismo: equipo que no fue sometido a las pruebas de la norma.
 
 **La corrección**: exigir en las bases el certificado de conformidad del laboratorio acreditado con número de lote rastreable, vigencia máxima de 5 años desde la emisión, y correspondiente al modelo específico ofertado.
 
 **Error 3 — Ignorar la edición vigente de las normas**
 
-Las normas NFPA se actualizan cada 3–5 años. Especificar "NFPA 1971" sin indicar la edición puede resultar en equipo certificado bajo la edición 2007 que no cumple con los requisitos de resistencia química (moisture barrier) de la edición 2018.
+Las normas NFPA se actualizan cada 3–5 años. Especificar "NFPA 1970" sin indicar la edición puede resultar en equipo certificado bajo la edición 2007 que no cumple con los requisitos de resistencia química (moisture barrier) de la edición 2018.
 
 **La corrección**: siempre especificar la edición: "NFPA 1971 edición 2018" o "la edición más reciente vigente al momento de la entrega".
 
@@ -94,10 +94,10 @@ Esta tabla es una referencia fundamental para los redactores de bases de licitac
 | Equipo | Norma primaria | Norma secundaria | Certificación adicional |
 |---|---|---|---|
 | Traje estructural completo | NFPA 1971:2018 | NOM-002-STPS-2010 | UL, Intertek o equivalente ILAC |
-| SCBA | NFPA 1981:2019 | NFPA 1852 (mantenimiento) | NIOSH (equipos con componente de detección) |
+| SCBA | NFPA 1981:2019 | NFPA 1850 (mantenimiento) | NIOSH (equipos con componente de detección) |
 | Casco de bombero | NFPA 1971:2018 (sección cascos) | EN 443:2008 (admisible) | UL o CE (aceptar ambos) |
 | Botas de bombero | NFPA 1971:2018 (calzado) | ASTM F2412/F2413 | UL o CE equivalente |
-| Guantes de bombero | NFPA 1971:2018 (guantes) | EN 659 (admisible) | UL o CE |
+| Guantes de bombero | NFPA 1971:2018 (guantes) | EN 659:2003+A1:2008 (admisible) | UL o CE |
 | Extintores portátiles | NOM-154-SCFI-2005 | NFPA 10:2022 | UL 711 (clasificación del agente) |
 | Sistemas de rociadores | NFPA 13:2022 | NOM-002-STPS-2010 | UL o FM Approvals para cabezales |
 | Sistema de detección/alarma | NFPA 72:2022 | NOM-002-STPS-2010 | UL 268 (detectores), UL 864 (panel) |

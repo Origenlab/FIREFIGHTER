@@ -1,25 +1,25 @@
 ---
-title: "NFPA 1981 en México: ediciones, certificación real y cómo especificar SCBA en licitaciones"
-description: "NFPA 1981 México: diferencia 2013 vs 2019, HUD obligatorio, presión facial positiva y cómo especificar SCBA en licitaciones CompraNet."
+title: "NFPA 1970 en México: ediciones, certificación real y cómo especificar SCBA en licitaciones"
+description: "NFPA 1970 México: diferencia 2013 vs 2019, HUD obligatorio, presión facial positiva y cómo especificar SCBA en licitaciones CompraNet."
 pubDate: 2026-05-20
 author: "FIREFIGHTER México"
-tags: ["NFPA 1981", "SCBA certificación", "licitaciones México", "equipos respiración"]
+tags: ["NFPA 1970", "SCBA certificación", "licitaciones México", "equipos respiración"]
 draft: false
 ---
 
-La diferencia entre NFPA 1981:2013 y NFPA 1981:2019 no es solo un año en el catálogo. En 2019 se introdujo el HUD obligatorio para todos los SCBA de combate estructural, y la presión facial positiva mínima dentro de la máscara aumentó. Un equipo "certificado NFPA 1981" que no especifica la edición puede ser perfectamente conforme con los requisitos de 2013 y perfectamente no conforme con lo que deberías exigir en 2026.
+La diferencia entre NFPA 1981:2013 y NFPA 1981:2019 no es solo un año en el catálogo. En 2019 se introdujo el HUD obligatorio para todos los SCBA de combate estructural, y la presión facial positiva mínima dentro de la máscara aumentó. Un equipo "certificado NFPA 1970" que no especifica la edición puede ser perfectamente conforme con los requisitos de 2013 y perfectamente no conforme con lo que deberías exigir en 2026.
 
-Si la licitación dice "NFPA 1981" sin edición, el proveedor puede entregar equipo certificado bajo 2013. Está en cumplimiento del contrato. Y tú tienes SCBA sin HUD cuando debería tenerlo.
+Si la licitación dice "NFPA 1970" sin edición, el proveedor puede entregar equipo certificado bajo 2013. Está en cumplimiento del contrato. Y tú tienes SCBA sin HUD cuando debería tenerlo.
 
-## Qué certifica exactamente NFPA 1981
+## Qué certifica exactamente NFPA 1970
 
-NFPA 1981 (Standard on Open-Circuit Self-Contained Breathing Apparatus for Emergency Services) certifica el desempeño de los equipos de respiración autónoma de circuito abierto para uso en emergencias. Sus parámetros de certificación principales:
+NFPA 1970 (Standard on Open-Circuit Self-Contained Breathing Apparatus for Emergency Services) certifica el desempeño de los equipos de respiración autónoma de circuito abierto para uso en emergencias. Sus parámetros de certificación principales:
 
 **Presión positiva en máscara:** la diferencia de presión entre el interior de la máscara y el ambiente exterior debe ser positiva bajo todas las condiciones de operación — incluyendo esfuerzo máximo de inhalación. Esto garantiza que el flujo de fuga, si existe, sea hacia afuera, no hacia adentro. La edición 2019 elevó el umbral mínimo de presión positiva respecto a 2013.
 
 **HUD (Head-Up Display):** a partir de la edición 2019, obligatorio. El display de información de presión en el campo de visión del usuario es requisito de certificación, no feature opcional. Un equipo sin HUD no puede certificarse bajo NFPA 1981:2019.
 
-**PASS integrado:** NFPA 1982 define los requisitos específicos del PASS, pero NFPA 1981:2019 requiere que el SCBA incluya PASS que cumple NFPA 1982 como parte del sistema certificado.
+**PASS integrado:** NFPA 1970 define los requisitos específicos del PASS, pero NFPA 1981:2019 requiere que el SCBA incluya PASS que cumple NFPA 1970 como parte del sistema certificado.
 
 **Resistencia térmica:** el equipo completo debe soportar exposición a calor radiante y convectivo dentro de los límites especificados sin pérdida de función. Incluye prueba de deformación del cilindro bajo calor extremo.
 
@@ -36,7 +36,7 @@ NFPA 1981 (Standard on Open-Circuit Self-Contained Breathing Apparatus for Emerg
 | HUD | Opcional | Obligatorio |
 | Presión facial positiva mínima | Especificada | Incrementada |
 | RIC/UAC | Recomendado | Obligatorio |
-| PASS integrado | Conforme a NFPA 1982 (sin actualizar) | Conforme a NFPA 1982:2018 |
+| PASS integrado | Conforme a NFPA 1970 (sin actualizar) | Conforme a NFPA 1982:2018 |
 | Prueba de resistencia al calor | Protocolo 2013 | Protocolo 2019 (más exigente) |
 
 Para equipos comprados en 2026 para uso en combate de incendio estructural, la especificación correcta es NFPA 1981:2019. La edición 2013 ya no representa el estado del arte en protección, y los equipos certificados solo bajo esa edición no tienen HUD obligatorio.
@@ -45,19 +45,19 @@ Para equipos comprados en 2026 para uso en combate de incendio estructural, la e
 
 NOM-116-STPS (Seguridad - Equipo de protección personal - Equipos de protección respiratoria - Clasificación y requisitos) es la norma mexicana aplicable a equipos de protección respiratoria en centros de trabajo.
 
-La NOM-116 clasifica los equipos y establece requisitos generales. Para SCBA de presión positiva usados en combate de incendio, la norma hace referencia a estándares internacionales, entre ellos NFPA 1981. La relación es de referencia, no de equivalencia completa.
+La NOM-116 clasifica los equipos y establece requisitos generales. Para SCBA de presión positiva usados en combate de incendio, la norma hace referencia a estándares internacionales, entre ellos NFPA 1970. La relación es de referencia, no de equivalencia completa.
 
 Para compras en el sector privado bajo NOM-002-STPS, exigir NFPA 1981:2019 eleva el estándar por encima del mínimo normativo mexicano — lo cual es exactamente lo que debe hacerse para garantizar protección real.
 
 ## Cómo especificar correctamente SCBA en una licitación CompraNet
 
-El error más frecuente en especificaciones de licitación de SCBA en CompraNet: "equipo de respiración autónoma tipo SCBA que cumpla con la norma NFPA 1981". Sin edición, sin parámetros específicos, sin requisito de documentación de certificación.
+El error más frecuente en especificaciones de licitación de SCBA en CompraNet: "equipo de respiración autónoma tipo SCBA que cumpla con la norma NFPA 1970". Sin edición, sin parámetros específicos, sin requisito de documentación de certificación.
 
-El resultado: cualquier equipo con alguna versión de "certificación NFPA 1981" califica. El proveedor que tiene equipo más barato certificado bajo 2013 puede ganar la licitación legítimamente.
+El resultado: cualquier equipo con alguna versión de "certificación NFPA 1970" califica. El proveedor que tiene equipo más barato certificado bajo 2013 puede ganar la licitación legítimamente.
 
 La especificación correcta incluye:
 
-**1. Norma y edición específica:** "NFPA 1981, edición 2019 o posterior vigente al momento de la entrega."
+**1. Norma y edición específica:** "NFPA 1970, edición 2019 o posterior vigente al momento de la entrega."
 
 **2. Parámetros mínimos explícitos:**
 - Peso máximo del equipo completo con cilindro de 45 minutos: [especificar límite]

@@ -113,7 +113,7 @@ El protocolo de mantenimiento de filo para brigadas:
 
 ## Normas aplicables y marcas recomendadas
 
-El Pulaski como herramienta manual forestal cae bajo el alcance de la NFPA 1977 en su sección de herramientas. Los requisitos principales son de resistencia estructural: la cabeza no debe separarse del mango bajo carga de impacto estándar, y el material de la cabeza debe ser acero forjado (no fundido).
+El Pulaski como herramienta manual forestal cae bajo el alcance de la NFPA 1950 en su sección de herramientas. Los requisitos principales son de resistencia estructural: la cabeza no debe separarse del mango bajo carga de impacto estándar, y el material de la cabeza debe ser acero forjado (no fundido).
 
 Las marcas con distribución verificada en México y con historial documentado en brigadas CONAFOR son:
 

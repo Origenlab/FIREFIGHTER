@@ -140,6 +140,6 @@ El costo de un McLeod profesional es menor al costo de una mochila aspersora bá
 
 Para el equipamiento completo de brigada incluyendo McLeod, Pulaski, mochilas y EPP, consulte el artículo sobre el [kit de brigada forestal para 10 personas](/blog/kit-brigada-forestal-10-personas).
 
-Para entender los requisitos de certificación de herramientas bajo NFPA 1977, consulte el artículo sobre [NFPA 1977 y EPP para incendios forestales](/blog/nfpa-1977-epp-incendios-forestales).
+Para entender los requisitos de certificación de herramientas bajo NFPA 1950, consulte el artículo sobre [NFPA 1950 y EPP para incendios forestales](/blog/nfpa-1977-epp-incendios-forestales).
 
 La línea de defensa es la última barrera entre el fuego y las áreas protegidas. Construirla bien requiere las dos herramientas correctas operando en secuencia correcta. El McLeod es la mitad que más frecuentemente falta.

@@ -81,7 +81,7 @@ La Estación 12 tiene jurisdicción sobre un área aproximada de **80.95 km²**,
 ### Equipamiento Especializado
 
 **Protección Personal:**
-- Trajes estructurales certificados NFPA 1971
+- Trajes estructurales certificados NFPA 1970
 - Trajes para incendio forestal (más ligeros y ventilados)
 - Cascos con protección facial y térmica
 - Botas de seguridad para terreno irregular

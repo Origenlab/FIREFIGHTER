@@ -112,6 +112,6 @@ Para instituciones en zonas de difícil acceso al servicio certificado: establec
 | Prueba hidrostática cilindro | 2/3 | Cada 5 años | Instalación certificada |
 | Revisión de fabricante | 3 | Cada 3–5 años | Taller autorizado |
 
-El [SCBA MSA G1](/blog/scba-msa-g1-guia-tecnica) con sus especificaciones específicas de mantenimiento, los [cilindros de fibra de carbono](/blog/cilindros-fibra-carbono-scba-guia) con su programa de inspección y prueba hidrostática, y la [norma NFPA 1981](/blog/nfpa-1981-mexico-equipos-respiracion) son los marcos de referencia complementarios. Los [equipos de respiración disponibles en México](/productos/scba-respiracion) incluyen información de soporte técnico y mantenimiento para cada modelo.
+El [SCBA MSA G1](/blog/scba-msa-g1-guia-tecnica) con sus especificaciones específicas de mantenimiento, los [cilindros de fibra de carbono](/blog/cilindros-fibra-carbono-scba-guia) con su programa de inspección y prueba hidrostática, y la [norma NFPA 1970](/blog/nfpa-1981-mexico-equipos-respiracion) son los marcos de referencia complementarios. Los [equipos de respiración disponibles en México](/productos/scba-respiracion) incluyen información de soporte técnico y mantenimiento para cada modelo.
 
 El SCBA que no se mantiene no protege. La diferencia entre el equipo que funciona cuando se necesita y el que falla en ese momento se construye en los 12 meses entre cada mantenimiento técnico.

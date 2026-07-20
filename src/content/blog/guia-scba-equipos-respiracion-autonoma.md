@@ -1,9 +1,9 @@
 ---
 title: "SCBA para bomberos y brigadas industriales: guía técnica completa para elegir, operar y mantener equipos de respiración autónoma"
-description: "Guía de alto nivel sobre equipos SCBA: normas NFPA 1981, arquitectura del sistema, selección de cilindros, marcas MSA G1 y Scott Air-Pak, telemetría, mantenimiento NFPA 1852 y requisitos para brigadas en México."
+description: "Guía de alto nivel sobre equipos SCBA: normas NFPA 1970, arquitectura del sistema, selección de cilindros, marcas MSA G1 y Scott Air-Pak, telemetría, mantenimiento NFPA 1850 y requisitos para brigadas en México."
 pubDate: 2026-01-22
 author: "FIREFIGHTER México"
-tags: ["SCBA", "respiración autónoma", "NFPA 1981", "MSA G1", "equipos bomberos México"]
+tags: ["SCBA", "respiración autónoma", "NFPA 1970", "MSA G1", "equipos bomberos México"]
 draft: false
 ---
 
@@ -40,11 +40,11 @@ Implicación directa para dimensionamiento de equipos: una brigada que planea en
 
 ---
 
-## La norma NFPA 1981: qué evalúa y cómo interpretarla
+## La norma NFPA 1970: qué evalúa y cómo interpretarla
 
-La **NFPA 1981** (Standard on Open-Circuit Self-Contained Breathing Apparatus for Emergency Services) es el estándar que define los requisitos mínimos de rendimiento para SCBA en combate de incendios y emergencias. La edición 2019 incorporó requisitos de comunicación integrada y mayor resistencia al calor que las ediciones anteriores.
+La **NFPA 1970** (Standard on Open-Circuit Self-Contained Breathing Apparatus for Emergency Services) es el estándar que define los requisitos mínimos de rendimiento para SCBA en combate de incendios y emergencias. La edición 2019 incorporó requisitos de comunicación integrada y mayor resistencia al calor que las ediciones anteriores.
 
-### Pruebas clave de la NFPA 1981
+### Pruebas clave de la NFPA 1970
 
 | Prueba | Valor mínimo requerido | Qué mide |
 |---|---|---|
@@ -83,7 +83,7 @@ Para operaciones de combate estructural, el **Tipo 3 o Tipo 4** a 4,500 psi es e
 
 La primera etapa reduce la presión del cilindro (4,500 psi) a una presión intermedia (~100 psi). La segunda etapa reduce esa presión intermedia a presión ambiente más una pequeña sobrepresión que mantiene la presión positiva en el interior de la máscara.
 
-**La presión positiva es el mecanismo de seguridad fundamental del SCBA moderno**: si hay cualquier microfuga en la máscara (junta deteriorada, ajuste incorrecto, vello facial del usuario), la fuga será de adentro hacia afuera —aire limpio hacia el ambiente— nunca de afuera hacia adentro. Un equipo que no mantiene presión positiva no cumple con la NFPA 1981 y no debe usarse en zona IDLH.
+**La presión positiva es el mecanismo de seguridad fundamental del SCBA moderno**: si hay cualquier microfuga en la máscara (junta deteriorada, ajuste incorrecto, vello facial del usuario), la fuga será de adentro hacia afuera —aire limpio hacia el ambiente— nunca de afuera hacia adentro. Un equipo que no mantiene presión positiva no cumple con la NFPA 1970 y no debe usarse en zona IDLH.
 
 ### Componente 3: Máscara facial de cara completa
 
@@ -92,7 +92,7 @@ La máscara es el componente de más alto contacto con el usuario y el que más 
 - **Campo visual panorámico** (≥ 180°): permite al bombero ver hacia los lados sin girar la cabeza, crítico en espacios confinados y oscuros
 - **Visor de policarbonato o PMMA tratado**: debe resistir calor radiante sin deformación que limite la visión
 - **Sistema de ajuste de 5 o 6 puntos**: debe poder colocarse correctamente en menos de 30 segundos, incluso con guantes de combate puestos
-- **Compatibilidad con casco**: la máscara debe integrarse con el casco NFPA 1971 del usuario sin crear zona de exposición ni puntos de presión
+- **Compatibilidad con casco**: la máscara debe integrarse con el casco NFPA 1970 del usuario sin crear zona de exposición ni puntos de presión
 
 > **Factor crítico que pocos evalúan**: el **vello facial**. Cualquier barba, bigote o patilla de más de 1 mm de longitud en la zona de sello de la máscara compromete la hermeticidad de forma severa. Los estudios de ajuste (fit test) demuestran que un bigote corto puede reducir el factor de protección de 10,000 a menos de 500. Los protocolos operativos de la NFPA 1500 requieren que los bomberos que usan SCBA mantengan el rostro afeitado en las zonas de contacto de la máscara.
 
@@ -156,7 +156,7 @@ La máscara de policarbonato de la X3 Pro ofrece una de las mejores relaciones c
 
 ### Drager PSS 7000 — Para entornos químicos
 
-El **PSS 7000** de Drager (Alemania) está certificado bajo NFPA 1981 y EN 137 simultáneamente, siendo la opción preferida para brigadas de respuesta a emergencias químicas (MATPEL). Su diseño permite la integración con trajes de nivel A (completamente encapsulado) mediante adaptadores específicos.
+El **PSS 7000** de Drager (Alemania) está certificado bajo NFPA 1970 y EN 137 simultáneamente, siendo la opción preferida para brigadas de respuesta a emergencias químicas (MATPEL). Su diseño permite la integración con trajes de nivel A (completamente encapsulado) mediante adaptadores específicos.
 
 ---
 
@@ -172,9 +172,9 @@ El **PSS 7000** de Drager (Alemania) está certificado bajo NFPA 1981 y EN 137 s
 
 ---
 
-## Mantenimiento obligatorio NFPA 1852: el programa que salva vidas
+## Mantenimiento obligatorio NFPA 1850: el programa que salva vidas
 
-La **NFPA 1852** establece que el SCBA es un equipo de ciclo de vida definido, no de "uso hasta que falle". Un cilindro sin prueba hidrostática vigente es legalmente un equipo fuera de servicio, aunque visualmente parezca en perfecto estado.
+La **NFPA 1850** establece que el SCBA es un equipo de ciclo de vida definido, no de "uso hasta que falle". Un cilindro sin prueba hidrostática vigente es legalmente un equipo fuera de servicio, aunque visualmente parezca en perfecto estado.
 
 ### Programa de mantenimiento por etapa
 

@@ -1,9 +1,9 @@
 ---
 title: "Guantes estructurales MSA Orca: protección de manos en combate de incendio"
-description: "Guantes estructurales NFPA 1971: piel de cabra vs vaca, barrera de vapor obligatoria, Kevlar, destreza con SCBA y criterios de retiro en México."
+description: "Guantes estructurales NFPA 1970: piel de cabra vs vaca, barrera de vapor obligatoria, Kevlar, destreza con SCBA y criterios de retiro en México."
 pubDate: 2026-05-20
 author: "FIREFIGHTER México"
-tags: ["guantes bombero", "MSA Orca", "NFPA 1971", "protección manos"]
+tags: ["guantes bombero", "MSA Orca", "NFPA 1970", "protección manos"]
 draft: false
 ---
 
@@ -23,11 +23,11 @@ Los MSA Orca resuelven esto con una solución de construcción mixta: piel de ca
 
 ## La barrera de vapor integrada: por qué es obligatoria y qué pasa sin ella
 
-NFPA 1971 exige barrera de vapor integrada en guantes estructurales. No es opcional. No es un feature premium. Es un requisito de certificación.
+NFPA 1970 exige barrera de vapor integrada en guantes estructurales. No es opcional. No es un feature premium. Es un requisito de certificación.
 
 El mecanismo de falla sin barrera de vapor: en operación con líneas de ataque activas, el agua pulverizada genera vapor caliente que puede penetrar el exterior del guante. Si no hay barrera, ese vapor alcanza la piel de la mano. El vapor de agua a 80–100°C en contacto directo con piel produce quemaduras de segundo y tercer grado con una velocidad que sorprende a quienes no han experimentado ese mecanismo.
 
-La barrera de vapor de los guantes estructurales funciona igual que la del traje: es una membrana semipermeable que impide la penetración de vapor desde exterior mientras permite la evaporación de transpiración desde interior. Un guante "para bomberos" sin barrera de vapor no cumple NFPA 1971. Punto.
+La barrera de vapor de los guantes estructurales funciona igual que la del traje: es una membrana semipermeable que impide la penetración de vapor desde exterior mientras permite la evaporación de transpiración desde interior. Un guante "para bomberos" sin barrera de vapor no cumple NFPA 1970. Punto.
 
 Cómo verificarlo: el fabricante debe indicar el material específico de la barrera (CROSSTECH, GORE-TEX, o equivalente con designación técnica) en la ficha técnica del guante. Si la especificación solo menciona "material de barrera" sin identificar el componente, hay razón para dudar.
 
@@ -77,10 +77,10 @@ La palma del guante es la zona de desgaste primario. Los puntos de inspección c
 | Perfil de brigada | Material palma recomendado | Barrera de vapor | Nivel de destreza |
 |---|---|---|---|
 | Combate estructural intensivo | Piel de cabra 0.8mm | CROSSTECH o GORE-TEX | Máximo |
-| Brigada industrial general | Piel de cabra/vaca mixta | Obligatoria NFPA 1971 | Alto |
+| Brigada industrial general | Piel de cabra/vaca mixta | Obligatoria NFPA 1970 | Alto |
 | Rescate vehicular | Piel de vaca reforzada | Obligatoria | Medio-alto |
-| Hazmat nivel A | Guante NFPA 1971 + sobreguante | Ver norma específica | Según operación |
+| Hazmat nivel A | Guante NFPA 1970 + sobreguante | Ver norma específica | Según operación |
 
-El guante forma parte del [ensemble completo certificado bajo NFPA 1971](/blog/epp-completo-kit-bombero-profesional). Su compatibilidad con el puño del [traje estructural](/blog/traje-bombero-nomex-guia-completa) determina si hay brecha de exposición en la zona de muñeca. La integración de puño-guante es uno de los puntos más frecuentemente comprometidos en ensembles ensamblados con piezas de diferentes marcas sin verificar compatibilidad. Los [equipos estructurales disponibles](/productos/equipos-bomberos) incluyen guantes certificados con ficha técnica completa.
+El guante forma parte del [ensemble completo certificado bajo NFPA 1970](/blog/epp-completo-kit-bombero-profesional). Su compatibilidad con el puño del [traje estructural](/blog/traje-bombero-nomex-guia-completa) determina si hay brecha de exposición en la zona de muñeca. La integración de puño-guante es uno de los puntos más frecuentemente comprometidos en ensembles ensamblados con piezas de diferentes marcas sin verificar compatibilidad. Los [equipos estructurales disponibles](/productos/equipos-bomberos) incluyen guantes certificados con ficha técnica completa.
 
 La protección de manos no es el último renglón del presupuesto. Es el primer componente que el bombero usa activamente en cada intervención.

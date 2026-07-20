@@ -1,9 +1,9 @@
 ---
-title: "Botas y guantes para bomberos certificados NFPA 1971: guía técnica completa de selección y mantenimiento"
-description: "Análisis técnico profundo de botas y guantes estructurales NFPA 1971: pruebas de rendimiento, materiales, marcas HAIX y Jolly, selección por operación, integración con el sistema de traje y mantenimiento. Para bomberos profesionales y brigadas en México."
+title: "Botas y guantes para bomberos certificados NFPA 1970: guía técnica completa de selección y mantenimiento"
+description: "Análisis técnico profundo de botas y guantes estructurales NFPA 1970: pruebas de rendimiento, materiales, marcas HAIX y Jolly, selección por operación, integración con el sistema de traje y mantenimiento. Para bomberos profesionales y brigadas en México."
 pubDate: 2026-03-26
 author: "FIREFIGHTER México"
-tags: ["botas bomberos NFPA 1971", "guantes estructurales bomberos", "HAIX bomberos", "EPP bomberos México", "calzado protección incendios"]
+tags: ["botas bomberos NFPA 1970", "guantes estructurales bomberos", "HAIX bomberos", "EPP bomberos México", "calzado protección incendios"]
 draft: false
 ---
 
@@ -19,11 +19,11 @@ Este es un error con consecuencias documentadas. Esta guía te dará los criteri
 
 ### El problema de la integración de extremidades
 
-Un traje estructural NFPA 1971 certificado protege el torso, los brazos y las piernas del bombero. Pero el traje termina en los puños de las mangas y en el borde inferior del pantalón. Desde ese punto hacia adelante, la protección depende de los guantes y las botas.
+Un traje estructural NFPA 1970 certificado protege el torso, los brazos y las piernas del bombero. Pero el traje termina en los puños de las mangas y en el borde inferior del pantalón. Desde ese punto hacia adelante, la protección depende de los guantes y las botas.
 
 El punto de transición —donde el traje termina y el guante o la bota comienza— es la **zona de mayor vulnerabilidad del sistema completo**. Un guante de longitud de muñeca insuficiente expone la piel cuando el bombero extiende el brazo. Una bota de caña corta o un pantalón que no cubre correctamente el talón de la bota expone el tobillo.
 
-La NFPA 1971 no certifica el traje, las botas y los guantes de forma independiente solamente —también evalúa el **sistema integrado** en uso. Los fabricantes de trajes de mayor calidad (Globe, Lion, MSA) diseñan sus puños y cintillas específicamente para solaparse con los modelos de guantes y botas que recomiendan como complemento certificado.
+La NFPA 1970 no certifica el traje, las botas y los guantes de forma independiente solamente —también evalúa el **sistema integrado** en uso. Los fabricantes de trajes de mayor calidad (Globe, Lion, MSA) diseñan sus puños y cintillas específicamente para solaparse con los modelos de guantes y botas que recomiendan como complemento certificado.
 
 > **El criterio que pocos aplican**: al seleccionar botas y guantes, verificar que el fabricante ha probado la integración con el traje específico que usa la brigada. Un guante excelente de un fabricante puede crear una zona de exposición de 3 cm en la muñeca cuando se usa con el chaquetón de otro fabricante —suficiente para una quemadura profunda en exposición directa.
 
@@ -41,9 +41,9 @@ La NFPA 1971 no certifica el traje, las botas y los guantes de forma independien
 
 ---
 
-## La norma NFPA 1971 aplicada a calzado y guantes: las pruebas específicas
+## La norma NFPA 1970 aplicada a calzado y guantes: las pruebas específicas
 
-### Pruebas de certificación para botas NFPA 1971
+### Pruebas de certificación para botas NFPA 1970
 
 La norma evalúa el calzado como sistema completo. No es suficiente que la suela resista el calor si la membrana interior no es impermeable, o que la puntera sea resistente si el cuero superior se deteriora ante el calor radiante.
 
@@ -57,7 +57,7 @@ La norma evalúa el calzado como sistema completo. No es suficiente que la suela
 | Dieléctrico (aislamiento eléctrico) | ASTM F2412 Clase EH | Hasta 18,000 V en seco | Protección en equipos energizados hasta media tensión |
 | Resistencia al calor de contacto (suela) | EN ISO 20344 | Temperatura máx. 250°C por tiempo mínimo especificado | Cuánto tiempo puede el bombero estar de pie sobre suelo caliente |
 
-### Pruebas de certificación para guantes NFPA 1971
+### Pruebas de certificación para guantes NFPA 1970
 
 | Prueba | Metodología | Valor mínimo | Implicación práctica |
 |---|---|---|---|
@@ -65,7 +65,7 @@ La norma evalúa el calzado como sistema completo. No es suficiente que la suela
 | Resistencia a llama directa | ASTM D6413 | Propagación < 100 mm en 12 segundos | El guante no propaga la llama al cuerpo del guante |
 | Resistencia al calor húmedo (vapor) | ISO 17496 | Sin quemadura de 2° en 25 segundos a 100°C | Protección crítica ante vapor caliente |
 | Barrera ante patógenos líquidos | ASTM F1671 | Sin penetración | Protección en víctimas con sangrado |
-| Resistencia a líquidos peligrosos | 25 sustancias NFPA 1971 | Sin penetración para las sustancias de la lista | Protección química básica en emergencias MATPEL menores |
+| Resistencia a líquidos peligrosos | 25 sustancias NFPA 1970 | Sin penetración para las sustancias de la lista | Protección química básica en emergencias MATPEL menores |
 | Funcionalidad / destreza | Maniobra de 10 botones pequeños | ≤ 13 segundos | El bombero puede operar válvulas y herramientas con el guante puesto |
 | Resistencia a corte en palma | EN 388 | Variable por zona | Protección ante vidrios y metales cortantes |
 
@@ -91,18 +91,18 @@ Las botas de cuero son el calzado estándar para operaciones de combate de incen
 
 | Marca | Modelo destacado | Material superior | Membrana | Certificación | Peso / bota | Caña |
 |---|---|---|---|---|---|---|
-| HAIX | Fire Flash 3.0 | Cuero HAIX tratado | HAIX Clima System (Gore-Tex) | NFPA 1971 / EN 15090 | 820 g | 10" |
-| Jolly | Firebird | Cuero Gore-Tex | Gore-Tex Extended Comfort | NFPA 1971 / EN 15090 | 940 g | 9" |
-| Weinbrenner (Ranger) | 4555 | Cuero alta resistencia | Sin membrana (goma exterior) | NFPA 1971 | 1,100 g | 8" |
-| Globe Mfg. | Veridian | Cuero Danner | Gore-Tex | NFPA 1971 | 920 g | 10" |
-| MSA Safety | Orca Boot | Cuero hidrofugado | Membrana MSA | NFPA 1971 | 890 g | 9" |
-| Rosenbauer | Step-Air | Cuero + Kevlar refuerzo | Gore-Tex | EN 15090 / NFPA 1971 | 850 g | 10" |
+| HAIX | Fire Flash 3.0 | Cuero HAIX tratado | HAIX Clima System (Gore-Tex) | NFPA 1970 / EN 15090:2012 | 820 g | 10" |
+| Jolly | Firebird | Cuero Gore-Tex | Gore-Tex Extended Comfort | NFPA 1970 / EN 15090:2012 | 940 g | 9" |
+| Weinbrenner (Ranger) | 4555 | Cuero alta resistencia | Sin membrana (goma exterior) | NFPA 1970 | 1,100 g | 8" |
+| Globe Mfg. | Veridian | Cuero Danner | Gore-Tex | NFPA 1970 | 920 g | 10" |
+| MSA Safety | Orca Boot | Cuero hidrofugado | Membrana MSA | NFPA 1970 | 890 g | 9" |
+| Rosenbauer | Step-Air | Cuero + Kevlar refuerzo | Gore-Tex | EN 15090:2012 / NFPA 1970 | 850 g | 10" |
 
 ### Botas para incendios forestales: criterios distintos
 
 Las operaciones forestales exigen un calzado completamente diferente. El problema no es el calor radiante intenso de una estructura —es la fatiga por marcha larga en terreno irregular, con pendientes de hasta 45°, durante 8–12 horas.
 
-**Las prioridades del calzado forestal** (según NFPA 1977):
+**Las prioridades del calzado forestal** (según NFPA 1950):
 
 - **Soporte de tobillo en terreno irregular**: la caña debe ser alta (8–10") y estructuralmente rígida en los laterales para prevenir esguinces en pendiente
 - **Suela Vibram o equivalente**: patrón de taco profundo (≥ 5 mm) para agarre en roca húmeda, tierra suelta y hierba quemada
@@ -115,7 +115,7 @@ Las operaciones forestales exigen un calzado completamente diferente. El problem
 
 ## Tipos de guantes para bomberos: las tres categorías que no deben confundirse
 
-### Guantes estructurales NFPA 1971
+### Guantes estructurales NFPA 1970
 
 Son los guantes para combate de incendios estructurales. Deben proveer protección térmica certificada mientras permiten al bombero operar válvulas, mangueras, herramientas y trasladar víctimas.
 
@@ -133,11 +133,11 @@ Son los guantes para combate de incendios estructurales. Deben proveer protecci�
 
 **PGI / Shelby Fire (USA)**: fabricante de referencia para cuerpos de bomberos norteamericanos. El modelo **Shelby 5228** (cuero de vaca + CROSSTECH + liner Nomex) es uno de los guantes estructurales más utilizados en América. Disponible vía importación a través de distribuidores como FIREFIGHTER México.
 
-**Ansell / Marigold (UK)**: el modelo **ActivArmr 97-300** para bombero ofrece certificación NFPA 1971 y EN 659 simultáneamente —especialmente valorado en licitaciones que mezclan especificaciones de ambas normas.
+**Ansell / Marigold (UK)**: el modelo **ActivArmr 97-300** para bombero ofrece certificación NFPA 1970 y EN 659:2003+A1:2008 simultáneamente —especialmente valorado en licitaciones que mezclan especificaciones de ambas normas.
 
 **Lion Apparel (USA)**: sus guantes coordina con los sistemas de trajes Lion (Quantum y Axion), con longitudes de puño diseñadas específicamente para solaparse sin zona de exposición con la manga de esos modelos.
 
-**Portwest / Profirst (Europa)**: gama de guantes estructurales europeos con certificación EN 659, aceptados en licitaciones mexicanas que no especifican NFPA 1971 explícitamente.
+**Portwest / Profirst (Europa)**: gama de guantes estructurales europeos con certificación EN 659:2003+A1:2008, aceptados en licitaciones mexicanas que no especifican NFPA 1970 explícitamente.
 
 ### Guantes de rescate vehicular: protección diferente, no intercambiable
 
@@ -148,7 +148,7 @@ Los guantes de rescate vehicular (excarcelación) están diseñados para un perf
 - **Resistencia química a líquidos de vehículo**: gasolina, aceite lubricante, líquido de frenos, refrigerante, electrolito de batería
 - **Destreza alta**: para operar herramientas Holmatro y manipular víctimas atrapadas en espacios reducidos
 
-**Lo que los guantes de rescate vehicular NO son**: no están diseñados para protección térmica de combate de incendios. El TPP de un guante de rescate vehicular típico es de 8–15 cal/cm² —muy por debajo del mínimo de 35 cal/cm² de la NFPA 1971. No deben usarse en el interior de estructuras en llamas.
+**Lo que los guantes de rescate vehicular NO son**: no están diseñados para protección térmica de combate de incendios. El TPP de un guante de rescate vehicular típico es de 8–15 cal/cm² —muy por debajo del mínimo de 35 cal/cm² de la NFPA 1970. No deben usarse en el interior de estructuras en llamas.
 
 ### Guantes de respuesta médica (EMS): el complemento de primeros auxilios
 
@@ -226,6 +226,6 @@ La selección de botas y guantes debe hacerse en función de tres variables simu
 
 ## FIREFIGHTER México: asesoría técnica en EPP de extremidades
 
-Suministramos botas y guantes certificados NFPA 1971 para bomberos y brigadas industriales en México. Nuestra asesoría técnica incluye la evaluación de integración con el traje existente, la verificación de los certificados de laboratorio por número de lote y la medición profesional del pie para garantizar el ajuste correcto.
+Suministramos botas y guantes certificados NFPA 1970 para bomberos y brigadas industriales en México. Nuestra asesoría técnica incluye la evaluación de integración con el traje existente, la verificación de los certificados de laboratorio por número de lote y la medición profesional del pie para garantizar el ajuste correcto.
 
 Contáctanos para recibir una propuesta técnica sin costo para el sistema completo de EPP de tu brigada.

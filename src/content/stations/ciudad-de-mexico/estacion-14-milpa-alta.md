@@ -78,7 +78,7 @@ La Estación 14 tiene jurisdicción sobre un área aproximada de **288 km²** (l
 ### Equipamiento Especializado
 
 **Protección Personal:**
-- Trajes estructurales certificados NFPA 1971
+- Trajes estructurales certificados NFPA 1970
 - Trajes para combate de incendio forestal (ligeros)
 - Cascos con protección facial y térmica
 - Botas de seguridad para terreno irregular

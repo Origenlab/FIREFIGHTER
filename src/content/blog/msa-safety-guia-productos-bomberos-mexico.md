@@ -93,7 +93,7 @@ El **Gallet F1 XF** es el casco de combate de incendios más utilizado en Europa
 
 **Construcción técnica**:
 
-La carcasa del F1 XF está fabricada en composite de polietileno de alta densidad con refuerzo de fibra de Kevlar en las zonas de mayor impacto (corona, laterales, nuca). Esta combinación logra resistir el impacto de 2 kg desde 1.5 metros (prueba EN 443) mientras mantiene un peso total de **1,520 gramos** —entre los más ligeros de su categoría de protección.
+La carcasa del F1 XF está fabricada en composite de polietileno de alta densidad con refuerzo de fibra de Kevlar en las zonas de mayor impacto (corona, laterales, nuca). Esta combinación logra resistir el impacto de 2 kg desde 1.5 metros (prueba EN 443:2008) mientras mantiene un peso total de **1,520 gramos** —entre los más ligeros de su categoría de protección.
 
 El sistema de suspensión interior de 8 puntos con almohadillas de espuma viscoelástica distribuye el impacto y el peso del casco de forma homogénea. La rueda de ajuste posterior permite modificar el ajuste de 52 a 63 cm sin necesidad de quitarse los guantes.
 
@@ -104,7 +104,7 @@ El sistema de suspensión interior de 8 puntos con almohadillas de espuma viscoe
 - Sistema de soporte para lámpara frontal compatible con lámparas MSA y de terceros
 - Puerto lateral para auricular de radio compatible con los principales fabricantes (Motorola, Kenwood, Hytera)
 
-**Certificaciones**: EN 443:2008 (norma europea de cascos de bombero), disponible en versión certificada NFPA 1971 para licitaciones que requieren certificación americana.
+**Certificaciones**: EN 443:2008 (norma europea de cascos de bombero), disponible en versión certificada NFPA 1970 para licitaciones que requieren certificación americana.
 
 ### MSA Cairns 1010: el icono americano con 188 años de historia
 
@@ -188,7 +188,7 @@ Como distribuidores autorizados de MSA Safety, FIREFIGHTER México ofrece el pro
 
 **Recarga de cilindros SCBA**: aire comprimido grado D (pureza ≥ 99.99%, CO ≤ 10 ppm, CO₂ ≤ 25 ppm, humedad ≤ 67 ppm) con certificado de composición del lote de cada recarga.
 
-**Prueba hidrostática de cilindros**: cada 5 años según NFPA 1852, con certificado de prueba DOT/SCT y actualización del registro del equipo en el sistema de gestión de flota MSA.
+**Prueba hidrostática de cilindros**: cada 5 años según NFPA 1850, con certificado de prueba DOT/SCT y actualización del registro del equipo en el sistema de gestión de flota MSA.
 
 **Reparación certificada de SCBA**: técnicos con certificación directa de MSA Safety USA, con acceso a refacciones originales y tiempo de respuesta garantizado.
 

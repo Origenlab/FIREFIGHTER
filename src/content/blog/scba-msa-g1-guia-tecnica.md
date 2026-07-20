@@ -3,7 +3,7 @@ title: "MSA G1 SCBA: guía técnica para brigadas de bomberos e industria en Mé
 description: "SCBA MSA G1: peso 10.9 kg, HUD 7 LEDs, PASS integrado automático, RIC/UAC para rescate de caído, mantenimiento trimestral y diferencia con Scott AP50."
 pubDate: 2026-05-20
 author: "FIREFIGHTER México"
-tags: ["SCBA MSA G1", "equipo respiración autónoma", "NFPA 1981", "brigadas México"]
+tags: ["SCBA MSA G1", "equipo respiración autónoma", "NFPA 1970", "brigadas México"]
 draft: false
 ---
 
@@ -62,7 +62,7 @@ Las tareas del usuario cada trimestre:
 - Inspección visual del cilindro: buscar daños físicos, abrasiones en la capa de fibra de carbono, corrosión en la válvula
 - Verificar presión del cilindro (debe estar entre 4,350 y 4,500 psi para cilindro de carbono de 45 min)
 - Prueba funcional de la válvula de demanda: abrir cilindro, verificar flujo al respirar
-- Prueba del PASS: activar y verificar alarma (ver NFPA 1982)
+- Prueba del PASS: activar y verificar alarma (ver NFPA 1970)
 - Prueba del HUD: verificar que todos los LEDs funcionan
 - Inspección del sello facial de la máscara: sin grietas, rigidez ni deformación
 - Verificar ajuste correcto de la máscara al usuario
@@ -90,6 +90,6 @@ El G1 es el equipo correcto para combate estructural, industria de alto riesgo, 
 - Atmósferas con gases tóxicos a altísima concentración donde la autonomía sea crítica: considerar cilindros de mayor capacidad
 - Operaciones donde la autonomía de 45 minutos sea sistemáticamente insuficiente: evaluar cilindros de 60 minutos
 
-La [norma NFPA 1981 y su aplicación en México](/blog/nfpa-1981-mexico-equipos-respiracion) define los requisitos de certificación que cualquier SCBA debe cumplir para uso en combate de incendio. Los [SCBA y equipos de respiración disponibles](/productos/scba-respiracion) incluyen el G1 y otras opciones con fichas técnicas completas para cada perfil de aplicación.
+La [norma NFPA 1970 y su aplicación en México](/blog/nfpa-1981-mexico-equipos-respiracion) define los requisitos de certificación que cualquier SCBA debe cumplir para uso en combate de incendio. Los [SCBA y equipos de respiración disponibles](/productos/scba-respiracion) incluyen el G1 y otras opciones con fichas técnicas completas para cada perfil de aplicación.
 
 La ingeniería del G1 no resuelve todos los problemas de operación. Pero reduce la fricción de los más críticos: el peso que fatiga, la información que llega tarde, el dispositivo de alarma que no se activó.

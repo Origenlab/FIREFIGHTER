@@ -1,9 +1,9 @@
 ---
 title: "Traje de bombero Nomex: guía técnica completa para brigadas en México"
-description: "Todo sobre trajes de bombero NFPA 1971 en México: TPP, THL, Nomex vs PBI, barrera de vapor, clima caliente y mantenimiento NFPA 1851. Guía real, no de catálogo."
+description: "Todo sobre trajes de bombero NFPA 1970 en México: TPP, THL, Nomex vs PBI, barrera de vapor, clima caliente y mantenimiento NFPA 1850. Guía real, no de catálogo."
 pubDate: 2026-05-20
 author: "FIREFIGHTER México"
-tags: ["trajes bomberos", "Nomex", "NFPA 1971", "EPP bomberos México"]
+tags: ["trajes bomberos", "Nomex", "NFPA 1970", "EPP bomberos México"]
 draft: false
 ---
 
@@ -25,7 +25,7 @@ Y si alguien en tu estación lavó trajes con blanqueador el año pasado, haz la
 
 El TPP (Thermal Protective Performance) no es un número de marketing. Es una medición de laboratorio que responde a una pregunta muy específica: ¿cuánta energía térmica puede absorber el ensemble completo antes de que la temperatura en la interfaz con la piel supere el umbral de quemadura de segundo grado?
 
-NFPA 1971 establece un mínimo de 35 cal/cm². Los trajes de alto desempeño llegan a 55 cal/cm² o más. La diferencia no es académica: en un flashover, la temperatura en la capa de gases puede superar los 600°C en segundos. La diferencia entre 35 y 50 cal/cm² es tiempo — y en ese margen el bombero puede llegar a la salida o no llegar.
+NFPA 1970 establece un mínimo de 35 cal/cm². Los trajes de alto desempeño llegan a 55 cal/cm² o más. La diferencia no es académica: en un flashover, la temperatura en la capa de gases puede superar los 600°C en segundos. La diferencia entre 35 y 50 cal/cm² es tiempo — y en ese margen el bombero puede llegar a la salida o no llegar.
 
 Pero hay una trampa que los catálogos no mencionan: el TPP se mide en condiciones de laboratorio, sobre un ensemble seco y nuevo. Un traje húmedo, con la barrera de vapor saturada, puede perder entre el 25 y el 35% de su TPP efectivo. Un traje con 10 ciclos de lavado sin mantenimiento adecuado puede estar operando con valores significativamente por debajo de la certificación original.
 
@@ -35,7 +35,7 @@ Cuando te digan que el traje tiene TPP de 45 cal/cm², la pregunta correcta es: 
 
 Aquí es donde la selección de traje en México es estructuralmente diferente a la selección en Europa o Norteamérica.
 
-El THL (Total Heat Loss) mide la capacidad del traje para dejar salir el calor corporal. Se expresa en W/m². NFPA 1971 exige mínimo 205 W/m². Lo que la norma no te dice es que en Culiacán o Mérida, con temperatura exterior de 40°C y humedad relativa de 75%, incluso un traje con THL de 250 W/m² puede ser insuficiente para prevenir hipertermia en operaciones de más de 20 minutos.
+El THL (Total Heat Loss) mide la capacidad del traje para dejar salir el calor corporal. Se expresa en W/m². NFPA 1970 exige mínimo 205 W/m². Lo que la norma no te dice es que en Culiacán o Mérida, con temperatura exterior de 40°C y humedad relativa de 75%, incluso un traje con THL de 250 W/m² puede ser insuficiente para prevenir hipertermia en operaciones de más de 20 minutos.
 
 Un bombero trabajando en condiciones de combate de incendio produce entre 600 y 1,000 W de calor metabólico. El traje debe dejar escapar ese calor. Cuando la temperatura exterior es de 40°C, el gradiente de temperatura que impulsa esa disipación es casi nulo — el calor no tiene a dónde ir.
 
@@ -45,7 +45,7 @@ La implicación práctica para quien compra equipo en México: en zonas de clima
 
 ## Nomex IIIA vs PBI Gold: la diferencia real, no la del catálogo
 
-Ambos materiales cumplen NFPA 1971. Ambos protegen. La pregunta correcta no es "¿cuál es mejor?" sino "¿cuál es adecuado para mi operación?"
+Ambos materiales cumplen NFPA 1970. Ambos protegen. La pregunta correcta no es "¿cuál es mejor?" sino "¿cuál es adecuado para mi operación?"
 
 **Nomex IIIA** es una mezcla meta-aramídica con Kevlar y componente antiestático. Sus ventajas reales en operación: excelente relación costo-desempeño, amplia disponibilidad de reemplazos en México, probado en décadas de uso. Su limitación real: después de una exposición térmica intensa, la resistencia tensil residual cae más rápido que en PBI. Un traje Nomex que ha estado en un flashover necesita inspección especializada inmediata — la degradación puede no ser visible a simple vista.
 
@@ -66,9 +66,9 @@ La regla práctica que usamos en FIREFIGHTER: brigada industrial con menos de 2 
 
 ## Las tres capas: entender la función protege la inversión
 
-Un traje de bombero estructural certificado bajo [NFPA 1971](/blog/nfpa-1971-mexico-norma-bomberos) tiene tres capas obligatorias. Reemplazar una sin considerar la compatibilidad con las otras dos anula la certificación del ensemble.
+Un traje de bombero estructural certificado bajo [NFPA 1970](/blog/nfpa-1971-mexico-norma-bomberos) tiene tres capas obligatorias. Reemplazar una sin considerar la compatibilidad con las otras dos anula la certificación del ensemble.
 
-**Capa exterior (Outer Shell):** primera defensa contra llama directa, calor radiante y abrasión. Los materiales más comunes son Nomex IIIA, PBI Gold, Advance y Caldura SL. El color de la capa exterior no es cosmético: la certificación del ensemble incluye el color específico del material certificado. Un traje teñido o con la capa exterior reemplazada por tela no certificada ya no es NFPA 1971.
+**Capa exterior (Outer Shell):** primera defensa contra llama directa, calor radiante y abrasión. Los materiales más comunes son Nomex IIIA, PBI Gold, Advance y Caldura SL. El color de la capa exterior no es cosmético: la certificación del ensemble incluye el color específico del material certificado. Un traje teñido o con la capa exterior reemplazada por tela no certificada ya no es NFPA 1970.
 
 **Barrera de humedad (Moisture Barrier):** la capa más crítica y la más ignorada. Los materiales dominantes son CROSSTECH (DuPont) y Gore-Tex Firepatch. La barrera de vapor sana tiene aspecto uniforme, membrana lisa y adherida al sustrato. Cuando falla, el agua que penetra desde exterior se convierte en vapor al contacto con el calor del incendio — y ese vapor, atrapado entre la barrera y el forro, genera quemaduras de segundo grado sin llama directa.
 
@@ -84,17 +84,17 @@ Un traje sale de servicio sin discusión ante cualquiera de las siguientes condi
 - Parches retrorreflectantes con menos del 50% de reflectividad
 - Fecha de fabricación mayor a 10 años (independientemente del estado visual)
 - Exposición documentada o sospechada a productos químicos no compatibles
-- Incapacidad de identificar la edición de NFPA 1971 bajo la que fue certificado
+- Incapacidad de identificar la edición de NFPA 1970 bajo la que fue certificado
 
-Ese último punto es relevante en México porque existe equipo importado o fabricado localmente que dice "certificado NFPA 1971" sin especificar edición ni laboratorio. Si el proveedor no puede mostrar el certificado de laboratorio acreditado con número de modelo y edición específica, el traje no está certificado: está diseñado para parecer que lo está.
+Ese último punto es relevante en México porque existe equipo importado o fabricado localmente que dice "certificado NFPA 1970" sin especificar edición ni laboratorio. Si el proveedor no puede mostrar el certificado de laboratorio acreditado con número de modelo y edición específica, el traje no está certificado: está diseñado para parecer que lo está.
 
-## NFPA 1851: el documento que protege legalmente a tu institución
+## NFPA 1850: el documento que protege legalmente a tu institución
 
 Si hay un accidente operativo y el bombero lesionado estaba usando un traje sin registro de mantenimiento, sin historial de inspección, sin protocolo documentado de retiro — la responsabilidad legal recae sobre la institución.
 
-[NFPA 1851](/blog/mantenimiento-epp-estructural-nfpa-1851) no es solo un programa de mantenimiento. Es el registro documentado que demuestra que la institución cumplió con su obligación de proporcionar EPP en condiciones operativas. Tres niveles de inspección, responsable definido, frecuencia establecida, detergentes aprobados, criterios de retiro específicos.
+[NFPA 1850](/blog/mantenimiento-epp-estructural-nfpa-1851) no es solo un programa de mantenimiento. Es el registro documentado que demuestra que la institución cumplió con su obligación de proporcionar EPP en condiciones operativas. Tres niveles de inspección, responsable definido, frecuencia establecida, detergentes aprobados, criterios de retiro específicos.
 
-El hollín no es suciedad estética. Es un conductor térmico que penetra las fibras de Nomex y reduce el TPP efectivo. Después de 10 usos sin limpieza adecuada, un traje puede haber perdido 30% o más de su capacidad de protección. El programa de limpieza bajo NFPA 1851 no es mantenimiento preventivo — es mantenimiento de la función de protección que justificó la inversión.
+El hollín no es suciedad estética. Es un conductor térmico que penetra las fibras de Nomex y reduce el TPP efectivo. Después de 10 usos sin limpieza adecuada, un traje puede haber perdido 30% o más de su capacidad de protección. El programa de limpieza bajo NFPA 1850 no es mantenimiento preventivo — es mantenimiento de la función de protección que justificó la inversión.
 
 ## Protocolo de inspección de la barrera de vapor (el que más se omite)
 
@@ -113,7 +113,7 @@ Si detectas compromiso en la barrera, ese traje no vuelve a operación hasta rep
 
 Para adquirir trajes de bombero estructural en México con criterio técnico real, exige estos documentos al proveedor antes del pago:
 
-- Certificado de conformidad NFPA 1971 emitido por laboratorio acreditado (UL, Intertek, SGS), con número de modelo exacto y edición específica de la norma
+- Certificado de conformidad NFPA 1970 emitido por laboratorio acreditado (UL, Intertek, SGS), con número de modelo exacto y edición específica de la norma
 - Ficha técnica de cada una de las tres capas con nombre del fabricante de la tela, no solo el nombre comercial del traje
 - Valores certificados de TPP y THL del ensemble completo
 - Instrucciones de lavado y mantenimiento aprobadas por el fabricante

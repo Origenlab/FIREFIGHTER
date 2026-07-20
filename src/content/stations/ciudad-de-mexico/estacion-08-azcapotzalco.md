@@ -82,7 +82,7 @@ La Estación 08 tiene jurisdicción sobre un área aproximada de **33 km²**, at
 ### Equipamiento Especializado
 
 **Protección Personal:**
-- Trajes estructurales certificados NFPA 1971
+- Trajes estructurales certificados NFPA 1970
 - Trajes de protección química Nivel A y B
 - Trajes de aproximación al fuego (proximidad)
 - Cascos con protección facial y térmica

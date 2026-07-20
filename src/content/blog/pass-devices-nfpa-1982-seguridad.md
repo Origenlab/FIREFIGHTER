@@ -1,9 +1,9 @@
 ---
-title: "Dispositivos PASS y NFPA 1982: por qué el bombero que murió tenía el PASS apagado"
-description: "Dispositivos PASS NFPA 1982: activación automática vs manual, prueba semanal, batería, decibeles en industria y uso como herramienta de mayday."
+title: "Dispositivos PASS y NFPA 1970: por qué el bombero que murió tenía el PASS apagado"
+description: "Dispositivos PASS NFPA 1970: activación automática vs manual, prueba semanal, batería, decibeles en industria y uso como herramienta de mayday."
 pubDate: 2026-05-20
 author: "FIREFIGHTER México"
-tags: ["PASS device", "NFPA 1982", "seguridad bomberos", "equipo SCBA"]
+tags: ["PASS device", "NFPA 1970", "seguridad bomberos", "equipo SCBA"]
 draft: false
 ---
 
@@ -15,7 +15,7 @@ El dispositivo que salva vidas es exactamente igual de inútil cuando está apag
 
 PASS (Personal Alert Safety System) es un dispositivo de alarma diseñado para alertar a otros bomberos cuando un bombero ha quedado inmóvil, posiblemente incapacitado. El principio de operación:
 
-El dispositivo monitorea el movimiento del usuario mediante un acelerómetro. Cuando detecta ausencia de movimiento durante aproximadamente 30 segundos, entra en pre-alarma: emite una señal sonora y/o vibración que alerta al usuario de que está a punto de activar la alarma completa. Si el usuario no responde (mueve el equipo), a los 30 segundos adicionales activa la alarma completa: señal acústica de alta intensidad (mínimo 95 dB a 3 metros, conforme a NFPA 1982) que persiste hasta que el equipo es rescatado y la alarma desactivada manualmente.
+El dispositivo monitorea el movimiento del usuario mediante un acelerómetro. Cuando detecta ausencia de movimiento durante aproximadamente 30 segundos, entra en pre-alarma: emite una señal sonora y/o vibración que alerta al usuario de que está a punto de activar la alarma completa. Si el usuario no responde (mueve el equipo), a los 30 segundos adicionales activa la alarma completa: señal acústica de alta intensidad (mínimo 95 dB a 3 metros, conforme a NFPA 1970) que persiste hasta que el equipo es rescatado y la alarma desactivada manualmente.
 
 El bombero también puede activar la alarma manualmente presionando el botón de mayday en el dispositivo. Esta función de activación manual es crítica cuando el bombero está consciente pero atrapado o incapacitado — no necesita esperar los 30 segundos de inmóvil para pedir ayuda.
 
@@ -37,15 +37,15 @@ El PASS integrado comparte la energía del sistema SCBA. El PASS separado tiene 
 
 En brigadas que aún usan PASS separados (equipo más antiguo), la batería del PASS es consistentemente el mantenimiento más descuidado. La batería puede agotarse sin que nadie lo note si no hay prueba funcional regular. El equipo "está" en el arnés, "tiene" PASS, la lista de verificación dice "sí". Nadie verificó que la batería funciona.
 
-NFPA 1982 requiere prueba funcional del PASS antes de cada uso — activar el dispositivo, verificar que la alarma suena al nivel correcto, desactivar. Para PASS con baterías reemplazables, verificar la carga. Para PASS con batería integrada, verificar según las instrucciones del fabricante.
+NFPA 1970 requiere prueba funcional del PASS antes de cada uso — activar el dispositivo, verificar que la alarma suena al nivel correcto, desactivar. Para PASS con baterías reemplazables, verificar la carga. Para PASS con batería integrada, verificar según las instrucciones del fabricante.
 
 Esta prueba toma 60 segundos. El no hacerla puede costar una vida.
 
 Para PASS integrados en SCBA moderno: la verificación de funcionamiento forma parte de la prueba funcional del SCBA completo antes de cada uso.
 
-## Prueba semanal obligatoria bajo NFPA 1982
+## Prueba semanal obligatoria bajo NFPA 1970
 
-NFPA 1982 (Standard on Personal Alert Safety Systems) especifica que cada PASS debe ser probado funcionalmente al menos una vez por semana, independientemente del uso. El procedimiento de prueba semanal:
+NFPA 1970 (Standard on Personal Alert Safety Systems) especifica que cada PASS debe ser probado funcionalmente al menos una vez por semana, independientemente del uso. El procedimiento de prueba semanal:
 
 1. Colocar el PASS en posición de operación (como si estuviera en el arnés del bombero)
 2. Activar el dispositivo
@@ -59,7 +59,7 @@ Si la alarma no activa, si el nivel sonoro es perceptiblemente menor a lo normal
 
 ## Decibeles requeridos y el problema en ambientes industriales
 
-NFPA 1982 establece 95 dB a 3 metros como nivel mínimo de alarma. En condiciones de silencio relativo, 95 dB es audible y reconocible como alarma de emergencia.
+NFPA 1970 establece 95 dB a 3 metros como nivel mínimo de alarma. En condiciones de silencio relativo, 95 dB es audible y reconocible como alarma de emergencia.
 
 En ambientes industriales con maquinaria operando, el nivel de ruido ambiental puede estar entre 80 y 100 dB. En una sala de compresores, una planta de producción con maquinaria pesada, o en cualquier espacio con sistemas HVAC industriales, los 95 dB del PASS pueden perderse en el ruido de fondo.
 
@@ -98,7 +98,7 @@ Ninguno de esos pasos funciona si el PASS estaba apagado en el paso 1.
 - Exposición a agua de inmersión (si el modelo no tiene certificación de impermeabilidad)
 - Baterías no reemplazadas en el período especificado por el fabricante
 
-Para revisar la integración del PASS en el [SCBA MSA G1](/blog/scba-msa-g1-guia-tecnica), los requisitos de la [norma NFPA 1981](/blog/nfpa-1981-mexico-equipos-respiracion), y el uso de SCBA en [espacios confinados](/blog/espacios-confinados-proteccion-respiratoria) donde el PASS tiene consideraciones adicionales, consulta los artículos específicos. Los [equipos SCBA disponibles con PASS integrado](/productos/scba-respiracion) tienen la documentación técnica para cada modelo.
+Para revisar la integración del PASS en el [SCBA MSA G1](/blog/scba-msa-g1-guia-tecnica), los requisitos de la [norma NFPA 1970](/blog/nfpa-1981-mexico-equipos-respiracion), y el uso de SCBA en [espacios confinados](/blog/espacios-confinados-proteccion-respiratoria) donde el PASS tiene consideraciones adicionales, consulta los artículos específicos. Los [equipos SCBA disponibles con PASS integrado](/productos/scba-respiracion) tienen la documentación técnica para cada modelo.
 
 
 ## Tabla comparativa: PASS separado vs PASS integrado

@@ -1,9 +1,9 @@
 ---
 title: "Casco de bombero Bullard USRHB: guía técnica para combate estructural"
-description: "Guía técnica del casco de bombero Bullard USRHB: diferencia casco industrial vs estructural, suspensión, visor NFPA 1971, integración con SCBA y mantenimiento."
+description: "Guía técnica del casco de bombero Bullard USRHB: diferencia casco industrial vs estructural, suspensión, visor NFPA 1970, integración con SCBA y mantenimiento."
 pubDate: 2026-05-20
 author: "FIREFIGHTER México"
-tags: ["casco bombero", "Bullard USRHB", "NFPA 1971", "EPP estructural"]
+tags: ["casco bombero", "Bullard USRHB", "NFPA 1970", "EPP estructural"]
 draft: false
 ---
 
@@ -21,13 +21,13 @@ En construcción, el casco protege principalmente contra impacto vertical de obj
 
 En combate de incendio estructural, las amenazas son otras:
 
-**Calor radiante sostenido.** La carcasa del casco debe resistir exposición a calor radiante sin deformarse ni conducir calor hacia el cráneo. Un casco industrial estándar no tiene especificación térmica para ese tipo de exposición. El Bullard USRHB está fabricado en termoplástico de alto impacto con estabilización UV y resistencia térmica probada conforme a NFPA 1971.
+**Calor radiante sostenido.** La carcasa del casco debe resistir exposición a calor radiante sin deformarse ni conducir calor hacia el cráneo. Un casco industrial estándar no tiene especificación térmica para ese tipo de exposición. El Bullard USRHB está fabricado en termoplástico de alto impacto con estabilización UV y resistencia térmica probada conforme a NFPA 1970.
 
 **Impactos múltiples y en múltiples direcciones.** El derrumbe parcial de una estructura no genera impacto desde arriba solamente. Los cascotes vienen lateralmente, oblicuamente. El sistema de suspensión de 8 puntos del USRHB distribuye la energía de impacto en toda la circunferencia craneal, no solo en el vértice.
 
 **Exposición a llama directa.** La visera abatible del USRHB está diseñada y certificada para resistir exposición directa a llama. Una visera de policarbonato estándar de casco industrial entra en ignición o se deforma bajo esa exposición.
 
-**Integración con el sistema completo.** El casco estructural forma parte de un ensemble NFPA 1971. Su geometría, el espacio para la capucha de Nomex, la compatibilidad con la máscara del SCBA — todo está diseñado para funcionar junto. Un casco industrial rompe esa integración.
+**Integración con el sistema completo.** El casco estructural forma parte de un ensemble NFPA 1970. Su geometría, el espacio para la capucha de Nomex, la compatibilidad con la máscara del SCBA — todo está diseñado para funcionar junto. Un casco industrial rompe esa integración.
 
 ## Suspensión de 8 puntos vs 4 puntos: por qué importa en impacto
 
@@ -43,9 +43,9 @@ El ajuste de la suspensión también importa. Un casco que no está ajustado cor
 
 La visera facial del casco estructural cumple función dual: protección ocular contra partículas y protección térmica contra calor radiante y llama directa. No es lo mismo que la visera de un casco de motociclismo, ni la de un casco forestal, ni la de cualquier casco industrial estándar.
 
-NFPA 1971 especifica que la visera debe resistir la prueba de impacto de perdigones de acero a velocidad estipulada, la prueba de flama (sin ignición ni goteo), y la prueba de calor radiante sostenido. La visera del USRHB cumple todos estos parámetros y está incluida en el certificado del ensemble.
+NFPA 1970 especifica que la visera debe resistir la prueba de impacto de perdigones de acero a velocidad estipulada, la prueba de flama (sin ignición ni goteo), y la prueba de calor radiante sostenido. La visera del USRHB cumple todos estos parámetros y está incluida en el certificado del ensemble.
 
-Para verificar que la visera de cualquier casco tiene certificación NFPA 1971 real: el certificado del casco debe incluir explícitamente la visera como componente certificado. Si el casco tiene certificación pero la visera viene por separado sin certificación propia ni referencia en el documento principal, hay un problema.
+Para verificar que la visera de cualquier casco tiene certificación NFPA 1970 real: el certificado del casco debe incluir explícitamente la visera como componente certificado. Si el casco tiene certificación pero la visera viene por separado sin certificación propia ni referencia en el documento principal, hay un problema.
 
 Lo que vemos en el mercado mexicano: cascos que tienen carcasa certificada pero cuya visera es un componente comercial sin certificación NFPA. El proveedor muestra el certificado del casco y confía en que el comprador no lea los detalles del componente.
 
@@ -78,15 +78,15 @@ El sistema de suspensión tiene vida útil independiente de la carcasa. Generalm
 
 ## Tabla de criterios de selección y verificación
 
-| Criterio | Casco industrial clase E | Casco estructural NFPA 1971 |
+| Criterio | Casco industrial clase E | Casco estructural NFPA 1970 |
 |---|---|---|
-| Resistencia al calor radiante | No especificada | Certificada NFPA 1971 |
+| Resistencia al calor radiante | No especificada | Certificada NFPA 1970 |
 | Visera certificada para llama | No | Sí, incluida en certificado |
 | Suspensión 8 puntos | No estándar | Sí |
 | Integración con SCBA | No diseñada | Sí, por geometría |
 | Resistencia a impacto lateral | Básica | Certificada multi-dirección |
-| Señalización retrorreflectante | Opcional | Obligatoria NFPA 1971 |
-| Vida útil máxima | 5 años (ANSI Z89) | 10 años desde fabricación (NFPA 1971) |
+| Señalización retrorreflectante | Opcional | Obligatoria NFPA 1970 |
+| Vida útil máxima | 5 años (ANSI Z89) | 10 años desde fabricación (NFPA 1850) |
 
 ## Señales de retiro del casco
 
@@ -100,6 +100,6 @@ Un casco sale de servicio ante:
 
 El último punto es importante: el termoplástico de la carcasa envejece y pierde propiedades mecánicas con el tiempo, independientemente del uso. Un casco fabricado en 2013 que "nunca se ha usado" no debe estar en servicio activo en 2026.
 
-Para ver cómo el casco se integra en el [EPP completo estructural](/blog/traje-bombero-nomex-guia-completa), incluyendo compatibilidad de ensemble con traje, capucha y SCBA, consulta nuestras guías específicas. Los [equipos de bombero disponibles en México](/productos/equipos-bomberos) incluyen cascos con certificación NFPA 1971 verificada.
+Para ver cómo el casco se integra en el [EPP completo estructural](/blog/traje-bombero-nomex-guia-completa), incluyendo compatibilidad de ensemble con traje, capucha y SCBA, consulta nuestras guías específicas. Los [equipos de bombero disponibles en México](/productos/equipos-bomberos) incluyen cascos con certificación NFPA 1970 verificada.
 
 La diferencia entre el casco correcto y el incorrecto no se mide en el precio de compra. Se mide en lo que sucede en los 30 segundos posteriores al derrumbe que nadie previó.

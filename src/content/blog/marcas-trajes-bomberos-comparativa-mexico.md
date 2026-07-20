@@ -23,7 +23,7 @@ Antes de comparar nombres conviene saber en qué se diferencian realmente las ma
 
 **Lion**, del grupo estadounidense LION, tiene una larga trayectoria en trajes estructurales y un énfasis particular en el cuidado y mantenimiento del EPP a lo largo de toda su vida útil. **Honeywell First Responder / Morning Pride** mantiene presencia histórica en el mercado con opciones de alto desempeño y configuraciones variadas. Y **Fire-Dex** y **Veridian**, también estadounidenses, ofrecen propuestas muy competitivas en relación desempeño-costo, populares entre cuerpos que buscan una certificación sólida sin pagar el sobreprecio de las marcas más premium.
 
-Aquí va la aclaración profesional más importante de todo el artículo: todas estas marcas pueden ofrecer trajes que cumplen NFPA 1971/1970. La certificación es el piso, no el diferenciador. Lo que cambia entre ellas —y, sobre todo, dentro de cada una, según el modelo y la configuración que elijas— es cómo resuelven la ergonomía, el estrés térmico y el respaldo. Comprar "la marca premium" en su modelo más básico y mal configurado puede ser peor negocio que comprar una marca media en su mejor configuración para tu operación.
+Aquí va la aclaración profesional más importante de todo el artículo: todas estas marcas pueden ofrecer trajes que cumplen NFPA 1970 (antes NFPA 1971). La certificación es el piso, no el diferenciador. Lo que cambia entre ellas —y, sobre todo, dentro de cada una, según el modelo y la configuración que elijas— es cómo resuelven la ergonomía, el estrés térmico y el respaldo. Comprar "la marca premium" en su modelo más básico y mal configurado puede ser peor negocio que comprar una marca media en su mejor configuración para tu operación.
 
 ## Tabla comparativa de marcas de trajes para bomberos
 
@@ -46,7 +46,7 @@ Esta es la parte que cambia compras de verdad. Después de años cotizando traje
 - **La certificación verificable por modelo y edición.** "Marca premium" sin certificado con número de modelo y edición de norma no garantiza nada; exige siempre el papel del laboratorio acreditado.
 - **El respaldo posventa en México.** Refacciones OEM y reparación certificada definen si el traje dura cinco años o diez —y, por lo tanto, cuánto te cuesta de verdad por año.
 - **El tallaje correcto.** El mejor traje del mundo en la talla equivocada no protege; deja zonas expuestas y multiplica la fatiga.
-- **El programa de mantenimiento.** Incluso la mejor marca pierde TPP sin un programa [NFPA 1851](/blog/mantenimiento-epp-estructural-nfpa-1851), con su inspección avanzada anual y su limpieza profunda periódica.
+- **El programa de mantenimiento.** Incluso la mejor marca pierde TPP sin un programa [NFPA 1850](/blog/mantenimiento-epp-estructural-nfpa-1851), con su inspección avanzada anual y su limpieza profunda periódica.
 
 Dicho sin rodeos: elige primero la configuración correcta y el respaldo, y deja que esa decisión defina la marca —no al revés—. Es el orden que protege tanto a tu gente como a tu presupuesto.
 

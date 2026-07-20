@@ -160,11 +160,11 @@ Después de observar brigadas en formación en múltiples estados, los errores m
 
 **Operar sin zona de seguridad identificada.** Cada operación en campo forestal requiere tener identificada una zona de seguridad a la que todos los integrantes puedan llegar a pie en menos de 2 minutos desde cualquier punto de la línea de trabajo.
 
-Para entender los requisitos de EPP que el personal necesitará desde la Fase 3, consulte el artículo sobre [overoles FR y Nomex NFPA 1977](/blog/overall-fr-nomex-nfpa-1977-forestal).
+Para entender los requisitos de EPP que el personal necesitará desde la Fase 3, consulte el artículo sobre [overoles FR y Nomex NFPA 1950](/blog/overall-fr-nomex-nfpa-1977-forestal).
 
 Para el detalle de las herramientas de campo, consulte los artículos sobre el [hacha Pulaski](/blog/hacha-pulaski-herramienta-forestal) y la [herramienta McLeod](/blog/mcleod-herramienta-forestal-lineas-defensa).
 
-Para los estándares de certificación aplicables al EPP, consulte el artículo sobre [NFPA 1977 y EPP para incendios forestales](/blog/nfpa-1977-epp-incendios-forestales).
+Para los estándares de certificación aplicables al EPP, consulte el artículo sobre [NFPA 1950 y EPP para incendios forestales](/blog/nfpa-1977-epp-incendios-forestales).
 
 Planificar bien una brigada toma tiempo. La primera temporada siempre es la más difícil. La segunda es cuando se ven los resultados del trabajo previo. Para la tercera, si se hizo bien, la brigada tiene capacidad real.
 

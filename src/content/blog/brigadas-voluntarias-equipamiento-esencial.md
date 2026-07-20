@@ -17,7 +17,7 @@ Lo que vamos a hacer es ser específicos: qué equipo es el mínimo real para op
 
 Los datos formales son escasos porque no existe un registro federal actualizado y público del estado de equipamiento de los cuerpos voluntarios. Pero la información de campo es consistente: en la mayoría de los estados, los cuerpos voluntarios municipales reciben apoyo presupuestal insuficiente del gobierno municipal, operan con unidades vehiculares con más de 15 años de uso, y el EPP individual frecuentemente proviene de donaciones de departamentos de Estados Unidos o de trajes que otros cuerpos han retirado.
 
-Un traje retirado por otro cuerpo de bomberos puede haber sido retirado precisamente porque no cumplía las condiciones mínimas de NFPA 1851 para seguir en servicio. Donarlo no es un favor si el receptor no tiene herramientas para evaluarlo.
+Un traje retirado por otro cuerpo de bomberos puede haber sido retirado precisamente porque no cumplía las condiciones mínimas de NFPA 1850 para seguir en servicio. Donarlo no es un favor si el receptor no tiene herramientas para evaluarlo.
 
 Esto no es argumento para que los voluntarios rechacen donaciones. Es argumento para que sepan cómo evaluarlas.
 
@@ -25,22 +25,22 @@ Esto no es argumento para que los voluntarios rechacen donaciones. Es argumento 
 
 Hay una distinción importante que frecuentemente se confunde:
 
-**EPP básico** es el ideal de especificación: traje NFPA 1971 certificado en edición reciente, casco estructural, guantes NFPA 1971, botas estructurales, capucha Nomex/PBI. El ensemble completo que un cuerpo profesional debería tener. Costo por elemento: $48,000–$70,000 MXN sin SCBA.
+**EPP básico** es el ideal de especificación: traje NFPA 1970 certificado en edición reciente, casco estructural, guantes NFPA 1970, botas estructurales, capucha Nomex/PBI. El ensemble completo que un cuerpo profesional debería tener. Costo por elemento: $48,000–$70,000 MXN sin SCBA.
 
 **EPP mínimo seguro** es el umbral debajo del cual operar en incendio estructural genera riesgo inaceptable para el brigadista. No es lo ideal. Es lo que se puede aceptar temporalmente mientras se consigue el equipo correcto.
 
 ¿Cuál es ese umbral mínimo? En FIREFIGHTER, con la información de campo que tenemos, lo definimos así:
 
-- Traje de dos capas con capa exterior FR y barrera de humedad funcional, aunque no sea NFPA 1971 edición reciente. Un traje certificado bajo edición 2013 en buenas condiciones es mejor que un traje "diseñado para cumplir" la edición 2018.
-- Casco estructural NFPA 1971, sin excepción. El casco industrial no es sustituto.
-- Guantes con algún nivel de protección térmica certificada. Al menos guantes de cuero grueso con forro FR si no hay guantes NFPA 1971.
+- Traje de dos capas con capa exterior FR y barrera de humedad funcional, aunque no sea NFPA 1970 edición reciente. Un traje certificado bajo edición 2013 en buenas condiciones es mejor que un traje "diseñado para cumplir" la edición 2018.
+- Casco estructural NFPA 1970, sin excepción. El casco industrial no es sustituto.
+- Guantes con algún nivel de protección térmica certificada. Al menos guantes de cuero grueso con forro FR si no hay guantes NFPA 1970.
 - Botas con suela de resistencia térmica mínima. No necesariamente HAIX Fire Flash, pero tampoco botas de construcción estándar.
 
 Lo que no existe como "mínimo seguro": operar sin casco estructural, operar sin traje FR de al menos dos capas, operar en atmósferas con posible presencia de gases tóxicos sin SCBA.
 
 ## Tabla: EPP básico vs EPP mínimo seguro con costos referenciales
 
-| Componente | EPP básico (certificado NFPA 1971) | EPP mínimo seguro (operación restringida) | Diferencia MXN |
+| Componente | EPP básico (certificado NFPA 1970) | EPP mínimo seguro (operación restringida) | Diferencia MXN |
 |---|---|---|---|
 | Traje estructural | $28,000–$42,000 | $12,000–$18,000 (traje FR bicapa) | $16,000–$24,000 |
 | Casco | $5,500–$9,000 | $5,500–$9,000 (no hay sustituto) | $0 |
@@ -83,7 +83,7 @@ Si eres responsable de seguridad en una empresa que tiene instalaciones cerca de
 
 Los bomberos voluntarios protegen las mismas comunidades donde operan las plantas industriales, los parques logísticos, los desarrollos habitacionales. No es filantropía abstracta. Es inversión en la capacidad de respuesta del sistema que protege la operación.
 
-El [EPP completo estructural](/blog/epp-completo-kit-bombero-profesional) y los estándares [NFPA 1971](/blog/nfpa-1971-mexico-norma-bomberos) que debe cumplir son los mismos para voluntarios que para profesionales — la norma no hace distinción. Y la [guía para equipar brigadas industriales](/blog/equipar-brigada-industrial-mexico-guia) tiene herramientas que aplican también para brigadas voluntarias. Los [equipos certificados disponibles en México](/productos/equipos-bomberos) incluyen opciones para diferentes niveles de presupuesto.
+El [EPP completo estructural](/blog/epp-completo-kit-bombero-profesional) y los estándares [NFPA 1970](/blog/nfpa-1971-mexico-norma-bomberos) que debe cumplir son los mismos para voluntarios que para profesionales — la norma no hace distinción. Y la [guía para equipar brigadas industriales](/blog/equipar-brigada-industrial-mexico-guia) tiene herramientas que aplican también para brigadas voluntarias. Los [equipos certificados disponibles en México](/productos/equipos-bomberos) incluyen opciones para diferentes niveles de presupuesto.
 
 Un voluntario mal equipado que responde a un incendio en tu instalación es un riesgo adicional para ti, para él, y para la operación. Uno bien equipado es parte de tu sistema de respuesta.
 

@@ -1,9 +1,9 @@
 ---
-title: "Mantenimiento EPP estructural bajo NFPA 1851: el programa que protege al bombero y a la institución"
-description: "NFPA 1851 en México: 3 niveles de mantenimiento, hollín como conductor térmico, detergentes FR aprobados, secado correcto y registro como protección legal."
+title: "Mantenimiento EPP estructural bajo NFPA 1850: el programa que protege al bombero y a la institución"
+description: "NFPA 1850 en México: 3 niveles de mantenimiento, hollín como conductor térmico, detergentes FR aprobados, secado correcto y registro como protección legal."
 pubDate: 2026-05-20
 author: "FIREFIGHTER México"
-tags: ["NFPA 1851", "mantenimiento EPP", "traje bombero", "brigadas México"]
+tags: ["NFPA 1850", "mantenimiento EPP", "traje bombero", "brigadas México"]
 draft: false
 ---
 
@@ -11,9 +11,9 @@ Un traje de bombero nuevo, con TPP certificado de 45 cal/cm², puede estar opera
 
 El hollín no es suciedad estética. Es carbono particulado ultrafino que penetra las fibras de Nomex y PBI y actúa como conductor térmico. Las fibras que debían atrapar aire caliente — el mecanismo de aislamiento — ahora tienen partículas de carbono que conducen calor en lugar de bloquearlo. Un traje sucio no solo parece descuidado. Tiene menos protección.
 
-Este es el mecanismo que NFPA 1851 busca interrumpir con su programa de mantenimiento. No es un programa de limpieza. Es un programa de mantenimiento de las propiedades de protección del equipo.
+Este es el mecanismo que NFPA 1850 busca interrumpir con su programa de mantenimiento. No es un programa de limpieza. Es un programa de mantenimiento de las propiedades de protección del equipo.
 
-## Los 3 niveles de NFPA 1851: responsable, frecuencia y alcance
+## Los 3 niveles de NFPA 1850: responsable, frecuencia y alcance
 
 **Nivel 1: Inspección rutinaria**
 
@@ -32,7 +32,7 @@ Si encuentra cualquiera de esas condiciones, el traje sale de servicio. No "voy 
 
 **Nivel 2: Inspección avanzada**
 
-Responsable: personal capacitado específicamente en NFPA 1851 (no el usuario — alguien designado con capacitación documentada).
+Responsable: personal capacitado específicamente en NFPA 1850 (no el usuario — alguien designado con capacitación documentada).
 Frecuencia: mínimo cada 12 meses, y después de cualquier exposición térmica o química significativa.
 Alcance: evaluación completa de todas las capas, componentes y costuras. Incluye la separación de capas para inspección de la barrera de humedad, prueba de impermeabilidad de la capa exterior, y evaluación del forro térmico para pérdida de loft o compactación.
 
@@ -87,7 +87,7 @@ Si hay un accidente operativo y el bombero lesionado estaba usando EPP sin histo
 
 El argumento del abogado contrario es simple: si el equipo fallara, ¿cómo prueba que estaba en condiciones? Si no hay registros, no hay prueba. La responsabilidad recae sobre quien proporcionó el equipo.
 
-El programa NFPA 1851 requiere registro documentado de:
+El programa NFPA 1850 requiere registro documentado de:
 - Cada inspección rutinaria (fecha, usuario, resultado)
 - Cada inspección avanzada (fecha, inspector, hallazgos, acciones tomadas)
 - Cada lavado avanzado (fecha, detergente usado, método)
@@ -120,10 +120,10 @@ Antes de lavar un traje estructural, confirma:
 - Secado al aire, temperatura ambiente, sin luz solar directa
 - Inspección visual post-lavado antes de devolver al servicio
 
-El [traje de bombero Nomex](/blog/traje-bombero-nomex-guia-completa) que no recibe mantenimiento bajo NFPA 1851 pierde progresivamente la protección que justificó su costo. La [norma NFPA 1971](/blog/nfpa-1971-mexico-norma-bomberos) certifica el ensemble en condiciones de laboratorio — el programa NFPA 1851 es lo que mantiene esas condiciones en el mundo real. Los [equipos de bombero disponibles](/productos/equipos-bomberos) incluyen instrucciones de mantenimiento aprobadas por fabricante para cada modelo.
+El [traje de bombero Nomex](/blog/traje-bombero-nomex-guia-completa) que no recibe mantenimiento bajo NFPA 1850 pierde progresivamente la protección que justificó su costo. La [norma NFPA 1970](/blog/nfpa-1971-mexico-norma-bomberos) certifica el ensemble en condiciones de laboratorio — el programa NFPA 1850 es lo que mantiene esas condiciones en el mundo real. Los [equipos de bombero disponibles](/productos/equipos-bomberos) incluyen instrucciones de mantenimiento aprobadas por fabricante para cada modelo.
 
 
-## Tabla resumen: niveles NFPA 1851 con responsable y frecuencia
+## Tabla resumen: niveles NFPA 1850 con responsable y frecuencia
 
 | Nivel | Nombre | Responsable | Frecuencia mínima | Alcance clave |
 |---|---|---|---|---|

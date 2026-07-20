@@ -81,7 +81,7 @@ La Estación 13 tiene jurisdicción sobre un área aproximada de **74.58 km²**,
 ### Equipamiento Especializado
 
 **Protección Personal:**
-- Trajes estructurales certificados NFPA 1971
+- Trajes estructurales certificados NFPA 1970
 - Trajes para combate de incendio forestal
 - Cascos con protección facial y térmica
 - Botas de seguridad para terreno montañoso

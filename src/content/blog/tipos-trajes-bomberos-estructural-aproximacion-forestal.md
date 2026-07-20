@@ -21,7 +21,7 @@ Por eso elegir el tipo correcto no es un tecnicismo: es la diferencia entre prot
 
 El **traje estructural** es el que casi todos imaginan al pensar "bombero": tres capas —exterior, barrera de humedad y forro térmico— para incendios en edificaciones, con riesgo de *flashover*, contacto con llama y calor intenso. Su norma de referencia es **NFPA 1971** (edición 2018), hoy consolidada dentro de **NFPA 1970** (2024). Es el más robusto y también el más caluroso de portar, lo que en México importa más de lo que parece. Lo desarrollamos en la [guía técnica del traje Nomex](/blog/traje-bombero-nomex-guia-completa) y en la [guía de trajes estructurales NFPA 1971](/blog/guia-trajes-estructurales-nfpa-1971).
 
-El **traje forestal**, o *wildland*, es más ligero y transpirable —de una o dos capas— y está pensado para incendios de vegetación: calor moderado, jornadas largas, terreno difícil y muchísimo esfuerzo físico. Aquí la amenaza principal compite entre el fuego y el sobrecalentamiento del propio cuerpo dentro de una prenda que no respira. Su norma es **NFPA 1977**, y lo cubrimos en el [EPP para incendios forestales NFPA 1977](/blog/nfpa-1977-epp-incendios-forestales) y en el [overall FR Nomex forestal](/blog/overall-fr-nomex-nfpa-1977-forestal).
+El **traje forestal**, o *wildland*, es más ligero y transpirable —de una o dos capas— y está pensado para incendios de vegetación: calor moderado, jornadas largas, terreno difícil y muchísimo esfuerzo físico. Aquí la amenaza principal compite entre el fuego y el sobrecalentamiento del propio cuerpo dentro de una prenda que no respira. Su norma es **NFPA 1950**, y lo cubrimos en el [EPP para incendios forestales NFPA 1950](/blog/nfpa-1977-epp-incendios-forestales) y en el [overall FR Nomex forestal](/blog/overall-fr-nomex-nfpa-1977-forestal).
 
 El **traje de aproximación** (*proximity*) lleva un recubrimiento aluminizado reflejante para enfrentar el calor radiante extremo, típico de fuegos de combustibles e hidrocarburos. No es para entrar al fuego, sino para acercarse a él: aeropuertos, refinerías, plantas petroquímicas, hangares. La protección de aproximación se certifica dentro de **NFPA 1971** (ensemble *proximity*), también ahora bajo NFPA 1970.
 
@@ -35,7 +35,7 @@ El **traje ARFF**, finalmente, es la variante especializada de aproximación par
 | Capas | 3 (exterior, barrera, forro) | 1–2, transpirable | Aluminizada + estructural | Aluminizada reforzada |
 | Peso | Alto | Bajo | Alto | Muy alto |
 | Transpirabilidad | Baja | Alta | Baja | Muy baja |
-| Norma de referencia | NFPA 1971 / 1970 | NFPA 1977 | NFPA 1971 proximity / 1970 | NFPA 1971 proximity / 1970 |
+| Norma de referencia | NFPA 1970 (antes 1971) | NFPA 1950 | NFPA 1970 proximity | NFPA 1970 proximity |
 | Riesgo de un mal uso | Golpe de calor en clima cálido | Insuficiente ante llama directa | No apto para entrada a fuego | Fatiga, sobrecosto |
 | Sector típico | Bomberos municipales, industria | CONAFOR, brigadas forestales | Refinería, petroquímica | Aeropuertos, aviación |
 
@@ -49,7 +49,7 @@ El sector define la amenaza, y la amenaza define el tipo. Esta es la guía rápi
 - **Brigada industrial general**: estructural certificado, dimensionado según el riesgo bajo la NOM-002-STPS. Lo aterrizamos en la [guía NOM-002-STPS](/blog/nom-002-stps-guia-brigadas-industriales).
 - **Refinería, petroquímica o almacenamiento de combustibles**: aproximación para el riesgo de calor radiante, complementado con estructural según el plan de emergencia de la instalación.
 - **Aeropuerto o aviación**: ARFF, sin sustituto posible.
-- **Brigada forestal o CONAFOR**: forestal NFPA 1977; el estructural sería contraproducente por peso y calor —es exactamente el error de la escena con la que abrimos—. Ver [equipamiento de brigadas forestales CONAFOR](/blog/conafor-equipamiento-brigadas-forestales).
+- **Brigada forestal o CONAFOR**: forestal NFPA 1950; el estructural sería contraproducente por peso y calor —es exactamente el error de la escena con la que abrimos—. Ver [equipamiento de brigadas forestales CONAFOR](/blog/conafor-equipamiento-brigadas-forestales).
 - **Cuerpo voluntario mixto**: priorizar estructural y evaluar forestal según la geografía local y la temporada.
 
 La trampa más común y más cara es pensar que el traje estructural "sirve para todo porque es el más resistente". No sirve para todo: en el monte es un peligro y frente a fuego de combustibles no ofrece la reflectividad del de aproximación. Resistencia no es lo mismo que idoneidad.
@@ -60,7 +60,7 @@ Hay una capa de decisión que en México pesa más que en casi cualquier otro me
 
 ## Por qué definir y comprar tus trajes con FIREFIGHTER
 
-Vender el tipo equivocado es facilísimo —basta con despachar lo que el cliente pidió por nombre—; acertarle exige preguntar antes de cotizar, y eso es exactamente lo que hacemos. Nuestra asesoría empieza por la amenaza y no por el catálogo: definimos contigo el tipo correcto —estructural, forestal, aproximación o ARFF— a partir de tu operación, tu sector y tu clima. Manejamos los cuatro tipos con marcas de distribución autorizada —MSA, dueña de **Globe** y **Bristol**— y certificación verificable por edición de norma, y cuando un cuerpo necesita más de un tipo, algo habitual en municipios que combinan estructura y forestal, lo cotizamos de forma integral en lugar de venderte dos compras desconectadas. Entregamos la documentación que corresponda —NFPA 1971/1970 para estructural y *proximity*, NFPA 1977 para forestal— lista para tu cumplimiento interno y para licitación, con cobertura en los 32 estados y respuesta en menos de 24 horas.
+Vender el tipo equivocado es facilísimo —basta con despachar lo que el cliente pidió por nombre—; acertarle exige preguntar antes de cotizar, y eso es exactamente lo que hacemos. Nuestra asesoría empieza por la amenaza y no por el catálogo: definimos contigo el tipo correcto —estructural, forestal, aproximación o ARFF— a partir de tu operación, tu sector y tu clima. Manejamos los cuatro tipos con marcas de distribución autorizada —MSA, dueña de **Globe** y **Bristol**— y certificación verificable por edición de norma, y cuando un cuerpo necesita más de un tipo, algo habitual en municipios que combinan estructura y forestal, lo cotizamos de forma integral en lugar de venderte dos compras desconectadas. Entregamos la documentación que corresponda —NFPA 1970 (antes NFPA 1971) para estructural y *proximity*, NFPA 1950 para forestal— lista para tu cumplimiento interno y para licitación, con cobertura en los 32 estados y respuesta en menos de 24 horas.
 
 Explora [equipos para bomberos](/productos/equipos-bomberos) y [equipo forestal](/productos/equipo-forestal), o escríbenos a **ventas@firefighter.mx** para que definamos juntos el tipo correcto antes de hablar de precio.
 

@@ -41,11 +41,11 @@ La clasificación determina el EPP mínimo que los brigadistas necesitan para in
 
 | Componente | Riesgo bajo | Riesgo moderado | Riesgo alto |
 |---|---|---|---|
-| Ropa de protección | Overol FR básico | Traje bicapa FR | Traje estructural NFPA 1971 |
-| Protección respiratory | Semimáscara con filtro | Semimáscara con filtro orgánico | SCBA presión positiva NFPA 1981 |
-| Casco | Casco industrial clase E | Casco industrial + protección facial | Casco estructural NFPA 1971 |
-| Guantes | Guantes de cuero o resistentes al calor | Guantes FR certificados | Guantes estructurales NFPA 1971 |
-| Botas | Botas de seguridad antidieléctricas | Botas de seguridad con protección térmica | Botas estructurales NFPA 1971 |
+| Ropa de protección | Overol FR básico | Traje bicapa FR | Traje estructural NFPA 1970 |
+| Protección respiratory | Semimáscara con filtro | Semimáscara con filtro orgánico | SCBA presión positiva NFPA 1970 |
+| Casco | Casco industrial clase E | Casco industrial + protección facial | Casco estructural NFPA 1970 |
+| Guantes | Guantes de cuero o resistentes al calor | Guantes FR certificados | Guantes estructurales NFPA 1970 |
+| Botas | Botas de seguridad antidieléctricas | Botas de seguridad con protección térmica | Botas estructurales NFPA 1970 |
 | Iluminación | Linterna manual | Linterna manual + casco | Linterna intrínsecamente segura |
 
 La columna de riesgo alto no es opcional en instalaciones petroquímicas, plantas químicas o cualquier proceso con atmósferas potencialmente IDLH (Immediately Dangerous to Life and Health). Operar en esas atmósferas con EPP de riesgo moderado no es "protección parcial" — es ausencia de protección contra las amenazas específicas de ese entorno.
@@ -54,7 +54,7 @@ La columna de riesgo alto no es opcional en instalaciones petroquímicas, planta
 
 En el diagnóstico de equipamiento de brigadas industriales que hacemos en FIREFIGHTER, el SCBA es el componente más frecuentemente ausente, más frecuentemente remplazado por equipo inadecuado, y más frecuentemente justificado como "muy caro para el riesgo que tenemos."
 
-El razonamiento es comprensible. Un SCBA de presión positiva certificado NFPA 1981 cuesta entre $55,000 y $95,000 MXN. Para una brigada de 6 personas, estamos hablando de $330,000–$570,000 MXN solo en este componente. No es una inversión menor.
+El razonamiento es comprensible. Un SCBA de presión positiva certificado NFPA 1970 cuesta entre $55,000 y $95,000 MXN. Para una brigada de 6 personas, estamos hablando de $330,000–$570,000 MXN solo en este componente. No es una inversión menor.
 
 Pero el cálculo cambia cuando se evalúa el riesgo real. En cualquier instalación industrial con proceso que genere gases tóxicos (H2S en petroquímica, CO en fundiciones, vapores de solvente en manufactura), la atmósfera durante un incendio puede alcanzar concentraciones IDLH en minutos. Una semimáscara con filtro tiene un factor de protección de 10 a 100 contra concentraciones conocidas. Un SCBA de presión positiva tiene un factor de protección de 10,000.
 
@@ -103,8 +103,8 @@ Si un brigadista sufre lesiones en operación y el EPP no estaba certificado, no
 
 **Demanda civil:** el brigadista lesionado o sus beneficiarios pueden demandar directamente a la empresa por daños y perjuicios, independientemente de las coberturas de seguro.
 
-La documentación que mitiga esa exposición legal: certificados de conformidad del EPP, registros de mantenimiento bajo NFPA 1851, capacitación documentada de los brigadistas, y el programa de prevención y protección contra incendios actualizado.
+La documentación que mitiga esa exposición legal: certificados de conformidad del EPP, registros de mantenimiento bajo NFPA 1850, capacitación documentada de los brigadistas, y el programa de prevención y protección contra incendios actualizado.
 
-Para dimensionar el [EPP completo del ensemble estructural](/blog/epp-completo-kit-bombero-profesional) y los [estándares NFPA 1971](/blog/nfpa-1971-mexico-norma-bomberos) que aplican, consulta nuestras guías específicas. La línea completa de [equipos para brigadas industriales](/productos/equipos-bomberos) incluye opciones para cada nivel de riesgo, con documentación técnica y certificaciones verificables.
+Para dimensionar el [EPP completo del ensemble estructural](/blog/epp-completo-kit-bombero-profesional) y los [estándares NFPA 1970](/blog/nfpa-1971-mexico-norma-bomberos) que aplican, consulta nuestras guías específicas. La línea completa de [equipos para brigadas industriales](/productos/equipos-bomberos) incluye opciones para cada nivel de riesgo, con documentación técnica y certificaciones verificables.
 
 El cumplimiento de NOM-002 es el piso, no el techo. La protección real de tu brigada depende de cuánto por encima de ese piso estás dispuesto a construir.

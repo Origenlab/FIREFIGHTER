@@ -149,13 +149,13 @@ El equipamiento sin personas capacitadas para usarlo es decoración costosa. La 
 ### Equipamiento mínimo obligatorio para la brigada
 
 **Sub-brigada de combate de incendios** (lo que la STPS inspeccionará):
-- Cascos de protección con pantalla facial: NOM-115-STPS o NFPA 1971 para nivel avanzado
+- Cascos de protección con pantalla facial: NOM-115-STPS o NFPA 1970 para nivel avanzado
 - Guantes resistentes al calor: cuero o Nomex, no guantes de trabajo convencionales
 - Botas de seguridad dieléctricas: puntera metálica + suela antiderrapante + aislamiento eléctrico
 - Chamarra FR (Flame Resistant): Nomex o tejido FR certificado, no mezclilla ni sintéticos
 - Lámpara de mano: resistente al agua, mínimo 200 lúmenes, batería comprobada
 - Radio portátil: comunicación directa con el Jefe de Emergencias
-- SCBA certificado NFPA 1981: para brigadas que realizarán entradas a espacios con humo
+- SCBA certificado NFPA 1970: para brigadas que realizarán entradas a espacios con humo
 
 **Sub-brigada de evacuación:**
 - Chaleco de alta visibilidad con identificación "EVACUACIÓN" o "BRIGADA"

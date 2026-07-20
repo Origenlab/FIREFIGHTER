@@ -57,7 +57,7 @@ Cuando la compra es de gobierno, se añade una capa que no existe en el sector p
 
 Más allá del trámite, estos son los puntos donde más procesos se traban, y donde una buena asesoría hace la diferencia:
 
-- **Una especificación que permite equipo de baja calidad.** Si el pliego solo dice "traje NFPA 1971", cualquier producto que diga cumplir entra a competir. Hay que exigir edición, laboratorio y configuración de capas.
+- **Una especificación que permite equipo de baja calidad.** Si el pliego solo dice "traje NFPA 1970", cualquier producto que diga cumplir entra a competir. Hay que exigir edición, laboratorio y configuración de capas.
 - **Falta de documentación del licitante.** Certificados, cartas de distribución, fichas técnicas: el equipo correcto con papeles incompletos pierde la adjudicación frente a uno peor mejor documentado.
 - **Plazos de entrega irreales** que no contemplan el tallaje a medida ni los tiempos de importación.
 - **Ausencia de criterios de posventa** en el fallo, que deja al cuerpo sin refacciones a los pocos meses.
@@ -74,11 +74,11 @@ Antes de cerrar una compra por volumen, vale la pena confirmar que tienes resuel
 - La documentación exigida al proveedor, pactada por escrito.
 - El precio por volumen y un plazo de entrega realista, comprometidos.
 - La posventa garantizada: refacciones y reparación dentro de México.
-- El presupuesto de mantenimiento [NFPA 1851](/blog/mantenimiento-epp-estructural-nfpa-1851) contemplado desde el inicio, no como un extra de último momento.
+- El presupuesto de mantenimiento [NFPA 1850](/blog/mantenimiento-epp-estructural-nfpa-1851) contemplado desde el inicio, no como un extra de último momento.
 
 ## Por qué equipar tu brigada con FIREFIGHTER
 
-Una compra por volumen es donde más se nota la diferencia entre un proveedor que despacha cajas y uno que equipa operaciones, porque es donde más cosas pueden salir mal en silencio. Incluimos el programa de tallaje —nominal y con reserva operativa— para que cada traje ajuste a quien lo va a usar, y te ayudamos a redactar la especificación técnica que evita tanto el equipo de baja calidad como las cotizaciones que no se pueden comparar. Abrimos precio por volumen real y entregamos propuesta formal en menos de 24 horas. Trabajamos con distribución autorizada de marca —MSA, dueña de **Globe** y **Bristol**—, con certificación verificable y garantía de fabricante, y conocemos por dentro los procesos de gobierno: LAASSP, CABMS y la documentación completa que el sector exige. Coordinamos la logística en los 32 estados con verificación de talla y norma a la recepción, y después de la entrega acompañamos el programa NFPA 1851 de toda la flota de EPP con refacciones OEM, porque equipar una brigada no termina el día que llegan las cajas.
+Una compra por volumen es donde más se nota la diferencia entre un proveedor que despacha cajas y uno que equipa operaciones, porque es donde más cosas pueden salir mal en silencio. Incluimos el programa de tallaje —nominal y con reserva operativa— para que cada traje ajuste a quien lo va a usar, y te ayudamos a redactar la especificación técnica que evita tanto el equipo de baja calidad como las cotizaciones que no se pueden comparar. Abrimos precio por volumen real y entregamos propuesta formal en menos de 24 horas. Trabajamos con distribución autorizada de marca —MSA, dueña de **Globe** y **Bristol**—, con certificación verificable y garantía de fabricante, y conocemos por dentro los procesos de gobierno: LAASSP, CABMS y la documentación completa que el sector exige. Coordinamos la logística en los 32 estados con verificación de talla y norma a la recepción, y después de la entrega acompañamos el programa NFPA 1850 de toda la flota de EPP con refacciones OEM, porque equipar una brigada no termina el día que llegan las cajas.
 
 Cuéntanos cuántos integrantes tiene tu brigada y en qué operación trabajan, en [equipos para bomberos](/productos/equipos-bomberos) o escribiendo a **ventas@firefighter.mx**. Para procesos de gobierno, **licitaciones@firefighter.mx**.
 

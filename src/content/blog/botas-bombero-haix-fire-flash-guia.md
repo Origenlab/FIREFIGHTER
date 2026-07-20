@@ -1,9 +1,9 @@
 ---
 title: "Botas de bombero HAIX Fire Flash: guía técnica para operación estructural"
-description: "Botas de bombero NFPA 1971 México: suela térmica, GORE-TEX, plantilla de acero inoxidable, cuero ignífugo y diferencia crítica con bota industrial."
+description: "Botas de bombero NFPA 1970 México: suela térmica, GORE-TEX, plantilla de acero inoxidable, cuero ignífugo y diferencia crítica con bota industrial."
 pubDate: 2026-05-20
 author: "FIREFIGHTER México"
-tags: ["botas bombero", "HAIX Fire Flash", "NFPA 1971", "EPP estructural"]
+tags: ["botas bombero", "HAIX Fire Flash", "NFPA 1970", "EPP estructural"]
 draft: false
 ---
 
@@ -51,17 +51,17 @@ El upper de la Fire Flash está fabricado en cuero de vacuno tratado específica
 
 Un cuero sin tratamiento ignífugo puede encenderse, arder y continuar ardiendo una vez retirado de la fuente de calor. El cuero ignífugo tratado puede carbonizarse en la superficie pero resiste la propagación de la combustión y mantiene su función de barrera estructural.
 
-La verificación práctica: el fabricante debe indicar explícitamente que el cuero está tratado para conformidad con NFPA 1971. Si la ficha técnica solo dice "cuero genuino" o "cuero de alta calidad" sin referencia al tratamiento termoprocesado, no es bota de combate estructural.
+La verificación práctica: el fabricante debe indicar explícitamente que el cuero está tratado para conformidad con NFPA 1970. Si la ficha técnica solo dice "cuero genuino" o "cuero de alta calidad" sin referencia al tratamiento termoprocesado, no es bota de combate estructural.
 
-## Tabla comparativa: bota estándar vs bota estructural NFPA 1971
+## Tabla comparativa: bota estándar vs bota estructural NFPA 1970
 
-| Característica | Bota de seguridad industrial | Bota estructural NFPA 1971 |
+| Característica | Bota de seguridad industrial | Bota estructural NFPA 1970 |
 |---|---|---|
 | Suela antiderrapante | Sí (superficies frías) | Sí (con resistencia térmica HRO) |
 | Barrera de vapor | No | Sí (membrana GORE-TEX o equivalente) |
 | Plantilla antipunzante | Acero carbón generalmente | Acero inoxidable |
 | Cuero superior ignífugo | No especificado | Sí, tratamiento certificado |
-| Certificación térmica completa | No | Sí, NFPA 1971 |
+| Certificación térmica completa | No | Sí, NFPA 1970 |
 | Precio referencial (MXN) | $1,200–$2,800 | $8,500–$14,000 |
 | Protección en escombros calientes | Inadecuada | Certificada |
 
@@ -81,7 +81,7 @@ Las botas estructurales tienen vida útil definida y puntos de inspección que s
 - Inspección del upper en zona de flexión: el cuero puede cuartearse en esa zona con uso intensivo
 - Verificación de la membrana: después de intervenciones con exposición a productos químicos, la membrana puede estar comprometida sin evidencia visual externa
 - Plantilla: buscar deformación que indique que la plantilla absorbió impacto significativo
-- Fecha de fabricación: las botas estructurales tienen vida útil de 10 años desde fabricación bajo NFPA 1971
+- Fecha de fabricación: las botas estructurales tienen vida útil de 10 años desde fabricación bajo NFPA 1850
 
 Para mantener las propiedades del cuero ignífugo, usar exclusivamente productos de limpieza y acondicionamiento compatibles con cuero termoprocesado. Los productos comerciales para calzado estándar pueden contener componentes que degradan el tratamiento ignífugo.
 

@@ -85,7 +85,7 @@ La Estación 07 tiene jurisdicción sobre un área aproximada de **117 km²**, a
 ### Equipamiento Especializado
 
 **Protección Personal:**
-- Trajes estructurales certificados NFPA 1971
+- Trajes estructurales certificados NFPA 1970
 - Trajes de protección química Nivel B
 - Cascos con protección facial y térmica
 - Botas de seguridad con puntera de acero

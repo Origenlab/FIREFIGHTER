@@ -7,7 +7,7 @@ tags: ["kit-brigada-forestal", "equipamiento-forestal", "brigadas-forestales", "
 draft: false
 ---
 
-Equipar una brigada de 10 personas para incendios forestales parece una lista de compras. Hacerlo bien, dentro del presupuesto CONAFOR y cumpliendo NFPA 1977, requiere una estrategia. El orden importa. Las prioridades importan. Y los errores de una brigada nueva equipándose por primera vez son predecibles, repetibles y costosos.
+Equipar una brigada de 10 personas para incendios forestales parece una lista de compras. Hacerlo bien, dentro del presupuesto CONAFOR y cumpliendo NFPA 1950, requiere una estrategia. El orden importa. Las prioridades importan. Y los errores de una brigada nueva equipándose por primera vez son predecibles, repetibles y costosos.
 
 El error más frecuente: empezar por las herramientas. Las herramientas son el equipo más barato y más fácil de encontrar. El EPP individual certificado es lo más caro, lo más difícil de verificar correctamente y lo que más afecta la seguridad de los operadores si se hace mal.
 
@@ -30,8 +30,8 @@ Cada categoría tiene su secuencia de prioridad de compra cuando el presupuesto 
 
 ### Lista de EPP por persona
 
-- **1 overol FR certificado NFPA 1977** (Nomex o FR-cotton verificado)
-- **1 casco forestal certificado NFPA 1977** (Bullard Wildland o equivalente)
+- **1 overol FR certificado NFPA 1950** (Nomex o FR-cotton verificado)
+- **1 casco forestal certificado NFPA 1950** (Bullard Wildland o equivalente)
 - **1 par de guantes de cuero para trabajo forestal** (cuero curtido al cromo, puño largo mínimo 10 cm)
 - **1 par de botas de cuero de caña alta** (mínimo 20 cm de caña, suela antiderrapante, preferiblemente con protección metatarsal)
 - **1 par de gogles de protección forestal** (contra polvo, humo y partículas, compatible con casco)
@@ -97,7 +97,7 @@ La deshidratación es la causa más frecuente de incapacitación en brigadistas 
 
 | Ítem | Cantidad | Precio unitario MXN (2026) | Total MXN |
 |---|---|---|---|
-| Overol Nomex certificado NFPA 1977 | 10 | $3,500 | $35,000 |
+| Overol Nomex certificado NFPA 1950 | 10 | $3,500 | $35,000 |
 | Casco forestal Bullard o equivalente | 10 | $2,200 | $22,000 |
 | Guantes cuero forestal | 10 pares | $450 | $4,500 |
 | Botas caña alta 20 cm | 10 pares | $1,800 | $18,000 |
@@ -144,9 +144,9 @@ Esta secuencia prioriza la protección de la vida sobre la capacidad de combate.
 
 ## Los 5 errores más frecuentes en brigadas nuevas
 
-**Error 1: Comprar por precio, no por certificación.** El overol más barato del catálogo raramente es EPP certificado NFPA 1977. La diferencia de precio entre ropa de trabajo genérica y EPP certificado puede parecer injustificada hasta el primer incidente.
+**Error 1: Comprar por precio, no por certificación.** El overol más barato del catálogo raramente es EPP certificado NFPA 1950. La diferencia de precio entre ropa de trabajo genérica y EPP certificado puede parecer injustificada hasta el primer incidente.
 
-**Error 2: Asumir que cualquier casco sirve.** Como se describe en detalle en el artículo sobre [cascos forestales](/blog/cascos-forestales-msa-cairns-guia), un casco de construcción ANSI Z89.1 no es un casco forestal NFPA 1977.
+**Error 2: Asumir que cualquier casco sirve.** Como se describe en detalle en el artículo sobre [cascos forestales](/blog/cascos-forestales-msa-cairns-guia), un casco de construcción ANSI Z89.1 no es un casco forestal NFPA 1950.
 
 **Error 3: Ignorar el mantenimiento en el presupuesto.** El EPP tiene vida útil. El overol Nomex necesita reemplazarse cada 5 años. Las mochilas aspersoras necesitan refacciones. Sin presupuesto de mantenimiento, el equipo se degrada sin reemplazo.
 

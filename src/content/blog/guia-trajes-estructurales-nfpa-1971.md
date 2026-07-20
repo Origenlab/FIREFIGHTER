@@ -1,9 +1,9 @@
 ---
-title: "Guía definitiva de trajes estructurales NFPA 1971: todo lo que debes saber antes de equipar a tu brigada"
-description: "Guía técnica de alto nivel sobre trajes estructurales certificados NFPA 1971: arquitectura de capas, TPP, THL, materiales Nomex y PBI, selección por operación, ciclo de vida y mantenimiento. Para bomberos y brigadas industriales en México."
+title: "Guía definitiva de trajes estructurales NFPA 1970: todo lo que debes saber antes de equipar a tu brigada"
+description: "Guía técnica de alto nivel sobre trajes estructurales certificados NFPA 1970: arquitectura de capas, TPP, THL, materiales Nomex y PBI, selección por operación, ciclo de vida y mantenimiento. Para bomberos y brigadas industriales en México."
 pubDate: 2026-01-15
 author: "FIREFIGHTER México"
-tags: ["trajes estructurales", "NFPA 1971", "EPP bomberos", "Nomex", "PBI Gold", "equipos bomberos México"]
+tags: ["trajes estructurales", "NFPA 1970", "EPP bomberos", "Nomex", "PBI Gold", "equipos bomberos México"]
 draft: false
 ---
 
@@ -17,7 +17,7 @@ Esta guía existe para que las decisiones sobre equipamiento se tomen con criter
 
 ## Qué hace diferente a un traje estructural de cualquier otra ropa ignifuga
 
-La confusión más peligrosa en el mercado mexicano es equiparar un traje de tela FR (flame resistant) —suficiente para un soldador o un trabajador de una planta química— con un traje estructural NFPA 1971. Son productos fundamentalmente diferentes en diseño, rendimiento y propósito.
+La confusión más peligrosa en el mercado mexicano es equiparar un traje de tela FR (flame resistant) —suficiente para un soldador o un trabajador de una planta química— con un traje estructural NFPA 1970. Son productos fundamentalmente diferentes en diseño, rendimiento y propósito.
 
 Una chamarra de Nomex de uso industrial protege al portador durante una exposición momentánea a chispa o llama directa. Un traje estructural está diseñado para permitir que un bombero **trabaje durante 20 a 40 minutos** en un ambiente donde la temperatura radiante puede superar los 300°C, el suelo alcanza 260°C, el vapor y los gases calientes circulan activamente y la probabilidad de contacto con llama directa es alta.
 
@@ -32,7 +32,7 @@ Para entender por qué se necesita un sistema de cuatro capas, es necesario mape
 | Calor radiante ambiental | 150–400°C | Quemadura en 4–8 segundos | Outer shell reflectivo + thermal liner |
 | Contacto directo con llama | 800–1,100°C | Quemadura en < 1 segundo | Outer shell (TPP certificado) |
 | Vapor caliente (steam) | 100–180°C | Quemadura profunda en 2–4 segundos | Moisture barrier impermeable |
-| Flashover (ignición simultánea) | Pico de 600–900°C | Sistema completo bajo máxima presión | Los 17.5 segundos de NFPA 1971 |
+| Flashover (ignición simultánea) | Pico de 600–900°C | Sistema completo bajo máxima presión | Los 17.5 segundos de NFPA 1970 |
 | Calor de suelo y escombros | 260°C en contacto | Quemadura por conducción en segundos | Suela de bota + pantalón reforzado |
 | Acumulación de calor metabólico | 37→41°C corporal | Hipertermia en 15–35 minutos | THL del sistema completo |
 
@@ -40,13 +40,13 @@ El último punto —la acumulación de calor metabólico— es el menos intuituv
 
 ---
 
-## La norma NFPA 1971: el estándar que separa la protección real del marketing
+## La norma NFPA 1970: el estándar que separa la protección real del marketing
 
-La **NFPA 1971** (Standard on Protective Ensembles for Structural Fire Fighting and Proximity Fire Fighting) es publicada por la National Fire Protection Association y actualizada en ciclos de cinco años. La edición 2018 es la más exigente actualmente en vigor; introduce requisitos adicionales en resistencia química del moisture barrier y comunicación integrada en el casco.
+La **NFPA 1970** (Standard on Protective Ensembles for Structural Fire Fighting and Proximity Fire Fighting) es publicada por la National Fire Protection Association y actualizada en ciclos de cinco años. La edición 2018 es la más exigente actualmente en vigor; introduce requisitos adicionales en resistencia química del moisture barrier y comunicación integrada en el casco.
 
-En México, la **NOM-002-STPS-2010** referencia la NFPA 1971 como norma técnica aplicable para brigadas industriales. Esto convierte a la NFPA 1971 en el estándar de facto —y en el parámetro mínimo que cualquier proveedor serio debe poder certificar documentalmente.
+En México, la **NOM-002-STPS-2010** referencia la NFPA 1970 como norma técnica aplicable para brigadas industriales. Esto convierte a la NFPA 1970 en el estándar de facto —y en el parámetro mínimo que cualquier proveedor serio debe poder certificar documentalmente.
 
-> **Advertencia para compradores**: la frase "diseñado para cumplir NFPA 1971" en un catálogo de proveedor no tiene valor técnico ni legal. Solo el **certificado emitido por un laboratorio acreditado** (UL, Intertek, SGS, FM Approvals) para el modelo específico y número de lote ofertado acredita el cumplimiento real. Solicitar ese documento antes de firmar cualquier pedido no es una exigencia excesiva —es diligencia básica.
+> **Advertencia para compradores**: la frase "diseñado para cumplir NFPA 1970" en un catálogo de proveedor no tiene valor técnico ni legal. Solo el **certificado emitido por un laboratorio acreditado** (UL, Intertek, SGS, FM Approvals) para el modelo específico y número de lote ofertado acredita el cumplimiento real. Solicitar ese documento antes de firmar cualquier pedido no es una exigencia excesiva —es diligencia básica.
 
 ### Los dos parámetros maestros: TPP y THL
 
@@ -54,7 +54,7 @@ En México, la **NOM-002-STPS-2010** referencia la NFPA 1971 como norma técnica
 
 El **TPP** mide la protección total del sistema completo (las tres capas juntas, no cada capa por separado) contra quemaduras de segundo grado, expresada en cal/cm². Representa la energía térmica total que el sistema puede absorber antes de que la temperatura en la cara interna del liner alcance 55°C.
 
-- **Mínimo NFPA 1971**: 35 cal/cm²
+- **Mínimo NFPA 1970**: 35 cal/cm²
 - **Rango en trajes de alto rendimiento**: 38–50 cal/cm²
 - **Implicación en tiempo de escape**: a 35 cal/cm², el bombero tiene aproximadamente 17.5 segundos en condición de flashover. A 45 cal/cm², ese tiempo sube a 23–27 segundos —diferencia suficiente para encontrar una salida en un recinto de tamaño estándar
 
@@ -62,7 +62,7 @@ El **TPP** mide la protección total del sistema completo (las tres capas juntas
 
 El **THL** mide la capacidad del traje para disipar el calor corporal generado por el metabolismo del bombero durante trabajo físico, expresado en W/m².
 
-- **Mínimo NFPA 1971**: 130 W/m²
+- **Mínimo NFPA 1970**: 130 W/m²
 - **Rango en trajes modernos**: 130–200 W/m²
 - **La tensión de diseño**: TPP alto y THL alto son propiedades en conflicto. Más material de aislamiento = más protección térmica exterior = peor disipación del calor interior. Los mejores materiales del mercado (TenCate Defender®, PBI Gold®) buscan resolver este conflicto con tecnología de fibra avanzada
 
@@ -172,8 +172,8 @@ Para climas cálidos, priorizar THL ≥ 160 W/m² incluso si eso implica un TPP 
 | Factor | Traje básico sin PBI | Traje premium PBI Gold |
 |---|---|---|
 | Precio de compra estimado (MXN) | $18,000–22,000 | $40,000–52,000 |
-| Vida útil con uso activo regular | 5–7 años | 10–15 años |
-| Costo real por año de protección | $2,571–4,400 | $2,667–5,200 |
+| Vida útil con uso activo regular | 5–7 años | Hasta 10 años (retiro obligatorio NFPA 1850) |
+| Costo real por año de protección | $2,571–4,400 | $4,000–5,200 |
 | TPP del sistema | 35–38 cal/cm² | 42–50 cal/cm² |
 | Tiempo de escape en flashover | 17.5–19 seg | 22–27 seg |
 
@@ -183,17 +183,17 @@ El análisis de ciclo de vida muestra que la diferencia en costo anual es mínim
 
 Checklist de documentación mínima antes de cualquier compra:
 
-- [ ] Certificado de conformidad NFPA 1971 emitido por laboratorio acreditado (UL, Intertek, SGS, FM Approvals)
+- [ ] Certificado de conformidad NFPA 1970 emitido por laboratorio acreditado (UL, Intertek, SGS, FM Approvals)
 - [ ] Número de lote específico del pedido, rastreable en base de datos del fabricante
 - [ ] Ficha técnica con TPP y THL del **sistema completo** (no valores por capa individual)
 - [ ] Fecha de fabricación del lote (los materiales FR tienen fecha de inicio de degradación de rendimiento)
-- [ ] Declaración de la edición de NFPA 1971 bajo la que está certificado el sistema
+- [ ] Declaración de la edición de NFPA 1970 bajo la que está certificado el sistema
 
 ---
 
-## Mantenimiento obligatorio: NFPA 1851
+## Mantenimiento obligatorio: NFPA 1850
 
-La **NFPA 1851** (Standard on Selection, Care, and Maintenance of Protective Ensembles) establece que un traje sin el mantenimiento correcto puede perder hasta el **30% de su TPP** después de 10 usos en condiciones intensas sin limpieza adecuada. La deposición de hollín, aceites de combustión y residuos orgánicos en el outer shell actúa como conductor térmico, transfiriendo calor hacia las capas interiores con mayor eficiencia que el material original.
+La **NFPA 1850** (Standard on Selection, Care, and Maintenance of Protective Ensembles) establece que un traje sin el mantenimiento correcto puede perder hasta el **30% de su TPP** después de 10 usos en condiciones intensas sin limpieza adecuada. La deposición de hollín, aceites de combustión y residuos orgánicos en el outer shell actúa como conductor térmico, transfiriendo calor hacia las capas interiores con mayor eficiencia que el material original.
 
 ### Programa de mantenimiento por etapas
 
@@ -203,7 +203,7 @@ La **NFPA 1851** (Standard on Selection, Care, and Maintenance of Protective Ens
 | Limpieza básica | Después de cada uso con contaminación visible | Bombero o lavandería FR | Detergente FR, agua <40°C, sin suavizante, secado a temperatura ambiente |
 | Inspección avanzada | Cada 12 meses | Oficial de equipo designado | Revisión de todas las capas, costuras, moisture barrier, reflectivos (fotómetro) |
 | Limpieza avanzada | Mínimo cada 12 meses | Lavandería especializada FR certificada | Proceso documentado con registro de lote |
-| Inspección especializada | Cada 3 años o post-incidente grave | Tercero certificado NFPA 1851 | Pruebas de rendimiento de material, informe documentado |
+| Inspección especializada | Cada 3 años o post-incidente grave | Tercero certificado NFPA 1850 | Pruebas de rendimiento de material, informe documentado |
 
 ### Señales de retiro inmediato
 
@@ -229,7 +229,7 @@ Soporte en licitaciones públicas — documentación técnica completa para proc
 
 Capacitación de la brigada — uso correcto, inspección rutinaria y protocolo de retiro del servicio para el equipo adquirido. Incluida en compras de 5 trajes o más.
 
-Programa de mantenimiento anual — visitas programadas, limpieza avanzada y registro documentado para cumplimiento NFPA 1851.
+Programa de mantenimiento anual — visitas programadas, limpieza avanzada y registro documentado para cumplimiento NFPA 1850.
 
 Cobertura en los 32 estados de la República Mexicana.
 

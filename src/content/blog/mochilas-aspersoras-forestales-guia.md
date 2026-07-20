@@ -131,15 +131,15 @@ Al inicio de cada temporada y cada 10 usos durante la temporada:
 - Revisar y apretar todas las conexiones roscadas del sistema de bomba.
 - Probar la presión: bombear 10 ciclos completos y verificar que la boquilla en chorro directo alcanza al menos 4 metros.
 
-## Implicaciones de NFPA 1977 para mochilas aspersoras
+## Implicaciones de NFPA 1950 para mochilas aspersoras
 
-La norma NFPA 1977 (*Standard on Protective Clothing and Equipment for Wildland Fire Fighting*) cubre el equipo de protección personal, no las herramientas de trabajo. Esto significa que la mochila aspersora en sí misma no es un EPP bajo NFPA 1977.
+La norma NFPA 1950 (*Standard on Protective Clothing and Equipment for Wildland Fire Fighting*) cubre el equipo de protección personal, no las herramientas de trabajo. Esto significa que la mochila aspersora en sí misma no es un EPP bajo NFPA 1950.
 
-Sin embargo, la norma sí aplica a los overoles, cascos y guantes que el operador de mochila usa mientras trabaja. Y hay una implicación indirecta: el diseño ergonómico de la mochila y su sistema de arnés deben ser compatibles con el uso simultáneo de EPP certificado NFPA 1977 (overol de Nomex, casco con visera, guantes de cuero).
+Sin embargo, la norma sí aplica a los overoles, cascos y guantes que el operador de mochila usa mientras trabaja. Y hay una implicación indirecta: el diseño ergonómico de la mochila y su sistema de arnés deben ser compatibles con el uso simultáneo de EPP certificado NFPA 1950 (overol de Nomex, casco con visera, guantes de cuero).
 
-Un sistema de mochila con arnés de tiras delgadas no acolchadas interfiere con el overol FR y puede causar puntos de presión que aceleran la fatiga. Para brigadas que operan bajo protocolo NFPA 1977, el sistema de arnés ergonómico de la mochila no es un lujo: es una necesidad funcional.
+Un sistema de mochila con arnés de tiras delgadas no acolchadas interfiere con el overol FR y puede causar puntos de presión que aceleran la fatiga. Para brigadas que operan bajo protocolo NFPA 1950, el sistema de arnés ergonómico de la mochila no es un lujo: es una necesidad funcional.
 
-Para más detalle sobre los requisitos NFPA 1977 y cómo aplican en México, consulte el artículo sobre [NFPA 1977 y EPP para incendios forestales](/blog/nfpa-1977-epp-incendios-forestales).
+Para más detalle sobre los requisitos NFPA 1950 y cómo aplican en México, consulte el artículo sobre [NFPA 1950 y EPP para incendios forestales](/blog/nfpa-1977-epp-incendios-forestales).
 
 ## Lo que debe pedir antes de comprar
 

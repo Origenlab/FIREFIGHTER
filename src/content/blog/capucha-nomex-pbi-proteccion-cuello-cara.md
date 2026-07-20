@@ -1,9 +1,9 @@
 ---
 title: "Capucha Nomex y PBI: protección de cuello y cara en bomberos estructurales"
-description: "Guía técnica de capuchas Nomex y PBI para bomberos: brecha casco-máscara, doble capa, ajuste con SCBA, mantenimiento y criterios de retiro. México, NFPA 1971."
+description: "Guía técnica de capuchas Nomex y PBI para bomberos: brecha casco-máscara, doble capa, ajuste con SCBA, mantenimiento y criterios de retiro. México, NFPA 1970."
 pubDate: 2026-05-20
 author: "FIREFIGHTER México"
-tags: ["capucha Nomex", "PBI", "NFPA 1971", "protección cuello cara"]
+tags: ["capucha Nomex", "PBI", "NFPA 1970", "protección cuello cara"]
 draft: false
 ---
 
@@ -36,7 +36,7 @@ El costo diferencial entre ambas opciones es de $400–$800 MXN por capucha. En 
 
 ## Nomex vs Nomex/PBI: la diferencia que opera a 1,000°C
 
-Una capucha en Nomex puro (o Nomex IIIA) cumple con NFPA 1971. Protege. Funciona.
+Una capucha en Nomex puro (o Nomex IIIA) cumple con NFPA 1970. Protege. Funciona.
 
 Una capucha en tejido Nomex/PBI hace algo que la anterior no puede: mantiene integridad estructural como barrera a temperaturas donde el Nomex solo ya cedió.
 
@@ -76,7 +76,7 @@ Los criterios de retiro son más estrictos de lo que la mayoría aplica:
 - **Exposición a lejía o blanqueador:** retiro permanente. El daño al Nomex por exposición a cloro no es visible ni reversible.
 - **Lavados acumulados con suavizante:** si hay certeza de que se usó suavizante regularmente, la capucha debe reemplazarse.
 
-La vida útil de una capucha estructural bajo NFPA 1851 es de hasta 10 años desde fabricación, sujeta a los criterios de retiro anteriores. Una capucha con 3 años de uso pero lavada incorrectamente 20 veces tiene protección inferior a una capucha nueva.
+La vida útil de una capucha estructural bajo NFPA 1850 es de hasta 10 años desde fabricación, sujeta a los criterios de retiro anteriores. Una capucha con 3 años de uso pero lavada incorrectamente 20 veces tiene protección inferior a una capucha nueva.
 
 ## Integración con el ensemble: el orden correcto de equipamiento
 

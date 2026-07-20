@@ -1,6 +1,6 @@
 ---
-title: "Overall FR y Nomex para forestal: guía NFPA 1977 de ropa protectora"
-description: "Comparativa Nomex vs FR-cotton vs PBI para brigadistas forestales. Requisitos NFPA 1977, ensayos TPP y THL, mantenimiento correcto y cuándo reemplazar el overol."
+title: "Overall FR y Nomex para forestal: guía NFPA 1950 de ropa protectora"
+description: "Comparativa Nomex vs FR-cotton vs PBI para brigadistas forestales. Requisitos NFPA 1950, ensayos TPP y THL, mantenimiento correcto y cuándo reemplazar el overol."
 pubDate: 2026-05-20
 author: "FIREFIGHTER México"
 tags: ["overall-nomex", "FR-forestal", "NFPA-1977", "ropa-protectora-forestal"]
@@ -55,13 +55,13 @@ El PBI es el material de mayor protección térmica disponible en ropa protector
 
 En incendios forestales, el PBI es generalmente excesivo y su costo lo hace imprácticamente caro para brigadas forestales. Se menciona aquí porque aparece en catálogos de equipo de protección civil y puede confundir a compradores que no distinguen entre contextos de uso.
 
-## Requisitos NFPA 1977 para ropa protectora forestal
+## Requisitos NFPA 1950 para ropa protectora forestal
 
-La NFPA 1977 es la norma que define los requisitos de EPP para incendios forestales y también para interfaz urbano-forestal. Su sección de ropa (garments) establece:
+La NFPA 1950 es la norma que define los requisitos de EPP para incendios forestales y también para interfaz urbano-forestal. Su sección de ropa (garments) establece:
 
-**Ensayo TPP (Thermal Protective Performance)**: mide el tiempo hasta lesión de segundo grado en la piel cuando la prenda se expone a una fuente de calor estándar (combinación de llama y calor radiante). El requisito mínimo de NFPA 1977 para overoles forestales es TPP ≥ 20 cal/cm².
+**Ensayo TPP (Thermal Protective Performance)**: mide el tiempo hasta lesión de segundo grado en la piel cuando la prenda se expone a una fuente de calor estándar (combinación de llama y calor radiante). El requisito mínimo de NFPA 1950 para overoles forestales es TPP ≥ 20 cal/cm².
 
-**Ensayo THL (Total Heat Loss)**: mide la capacidad de la prenda de permitir que el calor corporal se disipe hacia el exterior. Un overol de alta protección térmica que no permita disipar calor corporal puede causar estrés térmico en condiciones de trabajo intenso. El requisito mínimo THL de NFPA 1977 es ≥ 130 W/m².
+**Ensayo THL (Total Heat Loss)**: mide la capacidad de la prenda de permitir que el calor corporal se disipe hacia el exterior. Un overol de alta protección térmica que no permita disipar calor corporal puede causar estrés térmico en condiciones de trabajo intenso. El requisito mínimo THL de NFPA 1950 es ≥ 130 W/m².
 
 **Ensayo de resistencia a la llama vertical**: la tela no debe continuar ardiendo más de 2 segundos después de retirar la llama, y el largo de carbonización no debe exceder 10 cm.
 
@@ -81,11 +81,11 @@ Estos ensayos se realizan en laboratorio acreditado sobre muestras de la tela, n
 | Compatibilidad lavado | Detergente neutro | Protocolo estricto | Sin restricción |
 | Vida útil ropa | 5-10 años con mantenimiento | 3-5 años con protocolo | No aplicable (no EPP) |
 | Precio referencial overol (2026) | $2,500 - $4,500 MXN | $1,200 - $2,200 MXN | $300 - $600 MXN |
-| Cumple NFPA 1977 | Sí (modelos certificados) | Condicional (ensayo necesario) | No |
+| Cumple NFPA 1950 | Sí (modelos certificados) | Condicional (ensayo necesario) | No |
 
 ## Colores y visibilidad
 
-Los overoles forestales certificados NFPA 1977 se fabrican en amarillo y naranja, no por estética sino por funcionalidad:
+Los overoles forestales certificados NFPA 1950 se fabrican en amarillo y naranja, no por estética sino por funcionalidad:
 
 - El **amarillo** (específicamente el amarillo "Nomex yellow" o amarillo-verde chartreuse) es el color de mayor contraste visual contra el fondo marrón-ocre del material quemado y el verde del entorno forestal
 - El **naranja** tiene mayor visibilidad en condiciones de humo moderado
@@ -129,7 +129,7 @@ El problema central en México no es la disponibilidad de overoles Nomex certifi
 
 En muchas brigadas municipales y comunitarias, el "overol forestal" que se compra es ropa de trabajo industrial de algodón sin tratar, adquirida en tiendas de seguridad industrial sin experiencia en EPP forestal. El precio es atractivo. El resultado es una brigada que trabaja con la percepción de tener EPP y la realidad de no tenerlo.
 
-Para verificar que el overol que está comprando cumple NFPA 1977, solicite al proveedor:
+Para verificar que el overol que está comprando cumple NFPA 1950, solicite al proveedor:
 - El reporte de ensayo de TPP (debe ser ≥ 20 cal/cm²)
 - El reporte de ensayo THL (debe ser ≥ 130 W/m²)
 - El certificado de ensayo de resistencia a la llama vertical
@@ -137,7 +137,7 @@ Para verificar que el overol que está comprando cumple NFPA 1977, solicite al p
 
 Si el proveedor no puede proporcionar estos documentos, no está vendiendo EPP forestal certificado.
 
-Para los requisitos completos de la norma, consulte el artículo sobre [NFPA 1977 y EPP para incendios forestales](/blog/nfpa-1977-epp-incendios-forestales).
+Para los requisitos completos de la norma, consulte el artículo sobre [NFPA 1950 y EPP para incendios forestales](/blog/nfpa-1977-epp-incendios-forestales).
 
 Para el equipamiento completo de una brigada incluyendo overol, casco y herramientas, consulte el artículo sobre el [kit de brigada forestal para 10 personas](/blog/kit-brigada-forestal-10-personas).
 
