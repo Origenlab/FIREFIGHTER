@@ -23,7 +23,7 @@ El alcance de NFPA 1950 cubre el EPP para:
 
 La norma **no cubre** EPP para:
 - Bomberos estructurales (cubierto por NFPA 1970)
-- Materiales peligrosos (NFPA 1991, 1992)
+- Materiales peligrosos (NFPA 1990)
 - Espacios confinados (normas específicas de SCBA)
 
 Esta delimitación importa porque el EPP de bombero estructural (certificado NFPA 1970) no es equivalente al EPP forestal certificado NFPA 1950. Son normas para contextos de riesgo diferentes.

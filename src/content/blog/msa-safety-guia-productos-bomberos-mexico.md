@@ -165,7 +165,7 @@ Adicionalmente, el Altair 5X detecta **CO₂** —relevante para monitoreo de am
 
 ### V-EDGE Harness: diseñado para operaciones de bombero
 
-El arnés **V-EDGE** de MSA está certificado simultáneamente bajo NFPA 1983 (Life Safety Rope and Equipment for Emergency Services) y EN 361 (arneses de cuerpo completo para trabajo en altura). Esta doble certificación lo convierte en la selección correcta para brigadas que realizan tanto operaciones de bombero como trabajos en altura en instalaciones industriales.
+El arnés **V-EDGE** de MSA está certificado simultáneamente bajo NFPA 2500 (cuerda de vida y equipo de rescate para servicios de emergencia) y EN 361 (arneses de cuerpo completo para trabajo en altura). Esta doble certificación lo convierte en la selección correcta para brigadas que realizan tanto operaciones de bombero como trabajos en altura en instalaciones industriales.
 
 **Características específicas para uso con traje estructural**:
 
@@ -178,7 +178,7 @@ El arnés **V-EDGE** de MSA está certificado simultáneamente bajo NFPA 1983 (L
 
 La línea retráctil **Gravity SRL** (Self-Retracting Lifeline) permite movilidad irrestricta del usuario mientras proporciona detención automática en caída libre mediante un sistema de freno centrífugo que se activa cuando la velocidad de extracción del cable supera 1.5 m/s.
 
-Disponible en versiones de **3.5, 6, 9 y 15 metros** de longitud, con carcasa de aluminio resistente al impacto y certificación ANSI Z359.14 y NFPA 1983.
+Disponible en versiones de **3.5, 6, 9 y 15 metros** de longitud, con carcasa de aluminio resistente al impacto y certificación ANSI Z359.14 y NFPA 2500.
 
 ---
 
