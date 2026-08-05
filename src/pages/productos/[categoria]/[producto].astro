@@ -88,16 +88,26 @@ const hermanos = (cat.productos ?? []).filter((p: any) => p.slug && p.slug !== p
 
 // ── Interlinking contextual del cuerpo editorial ──
 // Enlaza a las fichas L4 publicadas de este producto y a los artículos del blog.
+// Por cada ficha L4 publicada se generan dos términos: "marca modelo" (Bullard PX Series) y
+// la variante. El primero solo entra si es único entre las fichas —en trajes las cinco
+// comparten "SKÖLD HERÖ" y apuntaría a cinco destinos distintos—.
+const cardsConFicha = ((prod.l3?.catalogo?.cards ?? []) as any[]).filter((c) => c.slug && c.l4);
+const marcaModelo = (c: any) => `${c.marca} ${c.modelo}`;
+const reglasFichas = cardsConFicha
+  .flatMap((c) => {
+    const href = `${urlCat}/${prod.slug}/${c.slug}`;
+    const titulo = `${c.marca} ${c.modelo} · ${c.varianteLabel ?? 'configuración'} ${c.variante}`;
+    const unico = cardsConFicha.filter((o) => marcaModelo(o) === marcaModelo(c)).length === 1;
+    return [
+      ...(unico ? [{ termino: marcaModelo(c), href, titulo }] : []),
+      { termino: c.variante, href, titulo },
+    ];
+  })
+  .sort((a, b) => b.termino.length - a.termino.length);
+
 const il = crearInterlinker(
   [
-    ...((prod.l3?.catalogo?.cards ?? []) as any[])
-      .filter((c) => c.slug && c.l4)
-      .map((c) => ({
-        termino: c.variante,
-        href: `${urlCat}/${prod.slug}/${c.slug}`,
-        titulo: `${c.marca} ${c.modelo} · ${c.varianteLabel ?? 'configuración'} ${c.variante}`,
-      }))
-      .sort((a, b) => b.termino.length - a.termino.length),
+    ...reglasFichas,
     // Una ficha no se enlaza a sí misma: REGLAS_SITIO ya incluye las L3 publicadas.
     ...REGLAS_SITIO.filter((r) => r.href !== `${urlCat}/${prod.slug}`),
   ],
@@ -378,7 +388,7 @@ const faqSchema = faqs.length
                     {c.slug && c.l4 ? (
                       <a href={`${urlCat}/${prod.slug}/${c.slug}`} class="cg-btn">
                         <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        <span>Ver ficha de {c.variante}</span>
+                        <span>Ver ficha de {c.fichaLabel ?? c.variante}</span>
                       </a>
                     ) : (
                       <a href={wa(`${prod.nombre} · ${c.marca} ${c.modelo} ${c.variante}`)} target="_blank" rel="noopener" class="cg-btn">

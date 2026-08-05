@@ -32,6 +32,9 @@ export const REGLAS_CATALOGO = [
   // ── L4 · configuraciones de marca
   { termino: 'SKÖLD HERÖ', href: `${TRAJES}/skold-hero-pbi-max-7-0`, titulo: 'Traje estructural SKÖLD HERÖ con barrera PBI MAX 7.0' },
   { termino: 'PBI MAX', href: `${TRAJES}/skold-hero-pbi-max-7-0`, titulo: 'Traje estructural SKÖLD HERÖ con barrera PBI MAX 7.0' },
+  { termino: 'Bullard PX Series', href: `${CASCOS}/bullard-px-series`, titulo: 'Casco estructural Bullard PX Series' },
+  { termino: 'PX Series', href: `${CASCOS}/bullard-px-series`, titulo: 'Casco estructural Bullard PX Series' },
+  { termino: 'Bullard PX', href: `${CASCOS}/bullard-px-series`, titulo: 'Casco estructural Bullard PX Series' },
 
   // ── L3 · producto. Varias formas de decir lo mismo: cada post usa la suya, y como solo se
   // enlaza un destino por artículo, sumar variantes amplía cobertura sin subir densidad.

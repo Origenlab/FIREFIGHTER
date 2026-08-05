@@ -122,7 +122,11 @@ export function crearInterlinker(reglas: ReglaEnlace[], maxEnlaces = 12): Interl
  * que empieza antes y, a igualdad de inicio, el más largo.
  */
 export const REGLAS_SITIO: ReglaEnlace[] = [
-  // ── L3 · fichas de producto publicadas. Van primero: son las más específicas y
+  // ── L4 · configuraciones con ficha propia. Lo más específico del sitio.
+  { termino: 'Bullard PX Series', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa/bullard-px-series', titulo: 'Casco estructural Bullard PX Series' },
+  { termino: 'PX Series', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa/bullard-px-series', titulo: 'Casco estructural Bullard PX Series' },
+
+  // ── L3 · fichas de producto publicadas. Van después: son menos específicas y
   // la plantilla filtra la regla de la propia página para no autoenlazarse.
   { termino: 'cascos estructurales', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa', titulo: 'Cascos estructurales Bullard y MSA certificados' },
   { termino: 'casco estructural', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa', titulo: 'Cascos estructurales Bullard y MSA certificados' },
