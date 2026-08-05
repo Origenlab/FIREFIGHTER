@@ -122,6 +122,13 @@ export function crearInterlinker(reglas: ReglaEnlace[], maxEnlaces = 12): Interl
  * que empieza antes y, a igualdad de inicio, el más largo.
  */
 export const REGLAS_SITIO: ReglaEnlace[] = [
+  // ── L3 · fichas de producto publicadas. Van primero: son las más específicas y
+  // la plantilla filtra la regla de la propia página para no autoenlazarse.
+  { termino: 'cascos estructurales', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa', titulo: 'Cascos estructurales Bullard y MSA certificados' },
+  { termino: 'casco estructural', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa', titulo: 'Cascos estructurales Bullard y MSA certificados' },
+  { termino: 'trajes estructurales', href: '/productos/epp-para-bomberos/trajes-estructurales-nomex-pbi', titulo: 'Trajes estructurales Nomex y PBI certificados' },
+  { termino: 'traje estructural', href: '/productos/epp-para-bomberos/trajes-estructurales-nomex-pbi', titulo: 'Trajes estructurales Nomex y PBI certificados' },
+
   { termino: 'NFPA 1970', href: '/blog/nfpa-1971-mexico-norma-bomberos', titulo: 'NFPA 1970 en México: qué certifica y cómo leer un certificado' },
   { termino: 'NFPA 1971', href: '/blog/nfpa-1971-mexico-norma-bomberos', titulo: 'NFPA 1970 en México: qué certifica y cómo leer un certificado' },
   { termino: 'NFPA 1850', href: '/blog/mantenimiento-epp-estructural-nfpa-1851', titulo: 'Mantenimiento de EPP estructural bajo NFPA 1850' },

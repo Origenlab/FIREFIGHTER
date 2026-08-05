@@ -95,11 +95,12 @@ const il = crearInterlinker(
       .map((c: any) => ({
         termino: c.variante,
         href: `${urlProd}/${c.slug}`,
-        titulo: `${c.marca} ${c.modelo} con barrera ${c.variante}`,
+        titulo: `${c.marca} ${c.modelo} · ${c.varianteLabel ?? 'configuración'} ${c.variante}`,
       }))
       .sort((a: any, b: any) => b.termino.length - a.termino.length),
     { termino: prod.nombre, href: urlProd, titulo: `Todas las configuraciones de ${prod.nombre}` },
-    ...REGLAS_SITIO,
+    // La regla del producto padre ya está arriba: se evita duplicarla desde REGLAS_SITIO.
+    ...REGLAS_SITIO.filter((r) => r.href !== urlProd && r.href !== `${urlProd}/${card.slug}`),
   ],
   12,
 );

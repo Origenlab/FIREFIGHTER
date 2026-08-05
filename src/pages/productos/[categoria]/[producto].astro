@@ -73,7 +73,9 @@ const galeria = l3?.galeria ?? prod.galeria ?? [];
 const aplicaciones = l3?.aplicaciones ?? cat.aplicaciones ?? [];
 const faqs = l3?.faqs ?? cat.faqs ?? [];
 const datoClave = l3?.datoClave ?? null;
-const documentacion = cat.documentacion ?? [];
+// El expediente es por pieza: una ficha puede sobreescribir la lista de la categoría
+// (la del traje habla de tres capas y lavado; la del casco, de suspensión y coquilla).
+const documentacion = prod.l3?.documentacion ?? cat.documentacion ?? [];
 
 // Normas: las referenciadas por la ficha, resueltas contra el catálogo de la categoría
 const normasCat: any[] = cat.normas ?? [];
@@ -93,10 +95,11 @@ const il = crearInterlinker(
       .map((c) => ({
         termino: c.variante,
         href: `${urlCat}/${prod.slug}/${c.slug}`,
-        titulo: `${c.marca} ${c.modelo} con barrera ${c.variante}`,
+        titulo: `${c.marca} ${c.modelo} · ${c.varianteLabel ?? 'configuración'} ${c.variante}`,
       }))
       .sort((a, b) => b.termino.length - a.termino.length),
-    ...REGLAS_SITIO,
+    // Una ficha no se enlaza a sí misma: REGLAS_SITIO ya incluye las L3 publicadas.
+    ...REGLAS_SITIO.filter((r) => r.href !== `${urlCat}/${prod.slug}`),
   ],
   12,
 );
@@ -378,7 +381,7 @@ const faqSchema = faqs.length
                         <span>Ver ficha de {c.variante}</span>
                       </a>
                     ) : (
-                      <a href={wa(`traje estructural ${c.marca} ${c.modelo} ${c.variante}`)} target="_blank" rel="noopener" class="cg-btn">
+                      <a href={wa(`${prod.nombre} · ${c.marca} ${c.modelo} ${c.variante}`)} target="_blank" rel="noopener" class="cg-btn">
                         <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
                         <span>Cotizar {c.variante}</span>
                       </a>

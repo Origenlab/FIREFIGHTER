@@ -22,6 +22,7 @@ const MAX_ENLACES = 6;
 
 const P = '/productos';
 const TRAJES = `${P}/epp-para-bomberos/trajes-estructurales-nomex-pbi`;
+const CASCOS = `${P}/epp-para-bomberos/cascos-bullard-y-msa`;
 
 /**
  * El orden importa: lo más específico primero. En un solape gana el término que empieza antes
@@ -42,6 +43,17 @@ export const REGLAS_CATALOGO = [
   { termino: 'traje de bombero', href: TRAJES, titulo: 'Trajes estructurales Nomex y PBI certificados' },
   { termino: 'PBI Matrix', href: TRAJES, titulo: 'Trajes estructurales Nomex y PBI certificados' },
   { termino: 'Nomex IIIA', href: TRAJES, titulo: 'Trajes estructurales Nomex y PBI certificados' },
+
+  // Cascos. Se enlaza con marca o con el adjetivo "estructural" a propósito: "casco" o
+  // "cascos forestales" a secas mandarían a esta ficha desde artículos de otra línea.
+  { termino: 'cascos estructurales', href: CASCOS, titulo: 'Cascos estructurales Bullard y MSA certificados' },
+  { termino: 'casco estructural', href: CASCOS, titulo: 'Cascos estructurales Bullard y MSA certificados' },
+  { termino: 'cascos de bombero', href: CASCOS, titulo: 'Cascos estructurales Bullard y MSA certificados' },
+  { termino: 'casco de bombero', href: CASCOS, titulo: 'Cascos estructurales Bullard y MSA certificados' },
+  { termino: 'cascos para bomberos', href: CASCOS, titulo: 'Cascos estructurales Bullard y MSA certificados' },
+  { termino: 'casco para bombero', href: CASCOS, titulo: 'Cascos estructurales Bullard y MSA certificados' },
+  { termino: 'cascos Bullard', href: CASCOS, titulo: 'Cascos estructurales Bullard y MSA certificados' },
+  { termino: 'casco Bullard', href: CASCOS, titulo: 'Cascos estructurales Bullard y MSA certificados' },
 
   // ── L2 · categorías
   { termino: 'EPP para bomberos', href: `${P}/epp-para-bomberos`, titulo: 'EPP para bomberos certificado NFPA 1970' },
