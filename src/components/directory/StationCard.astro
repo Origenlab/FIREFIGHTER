@@ -68,7 +68,7 @@ const stationUrl = `/directorio/${data.stateSlug}/${station.id.split('/').pop()?
 const accentColor = data.stateSlug === 'estado-de-mexico' ? region.color : typeConfig.color;
 ---
 
-<article class="bg-white rounded-xl overflow-hidden transition-shadow duration-200 hover:shadow-lg" style="border: 1px solid #e2e8f0;">
+<article class="bg-white rounded-xl overflow-hidden hover:shadow-lg" style="border: 1px solid #e2e8f0;">
   <!-- Colored Top Bar - Uses regional color for differentiation -->
   <div class="h-1 w-full" style={`background-color: ${accentColor};`}></div>
 
@@ -123,7 +123,7 @@ const accentColor = data.stateSlug === 'estado-de-mexico' ? region.color : typeC
     <div class="flex gap-3">
       <a
         href={`tel:${data.phone}`}
-        class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold transition-colors"
+        class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold"
         style="background-color: #f8fafc; color: #334155; border: 1px solid #e2e8f0;"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -133,7 +133,7 @@ const accentColor = data.stateSlug === 'estado-de-mexico' ? region.color : typeC
       </a>
       <a
         href={stationUrl}
-        class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold transition-colors"
+        class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold"
         style={`background-color: ${accentColor}; color: white;`}
       >
         Ver detalles

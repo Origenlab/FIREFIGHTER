@@ -61,7 +61,7 @@ const waBase = 'https://wa.me/525500000000';
           class="filter-tab active"
           data-filter="categoria"
           data-value="todas"
-          style="padding:16px 20px; font-size:0.78rem; font-weight:600; color:#dc2626; border:none; background:transparent; border-bottom:2px solid #dc2626; cursor:pointer; white-space:nowrap; transition:color 0.2s, border-color 0.2s; flex-shrink:0;"
+          style="padding:16px 20px; font-size:0.78rem; font-weight:600; color:#dc2626; border:none; background:transparent; border-bottom:2px solid #dc2626; cursor:pointer; white-space:nowrap; flex-shrink:0;"
         >Todas</button>
 
         {categorias.map(c => (
@@ -69,7 +69,7 @@ const waBase = 'https://wa.me/525500000000';
             class="filter-tab"
             data-filter="categoria"
             data-value={c.slug}
-            style="padding:16px 20px; font-size:0.78rem; font-weight:600; color:#71717a; border:none; background:transparent; border-bottom:2px solid transparent; cursor:pointer; white-space:nowrap; transition:color 0.2s, border-color 0.2s; flex-shrink:0;"
+            style="padding:16px 20px; font-size:0.78rem; font-weight:600; color:#71717a; border:none; background:transparent; border-bottom:2px solid transparent; cursor:pointer; white-space:nowrap; flex-shrink:0;"
           >{c.nombre}</button>
         ))}
 
@@ -88,7 +88,7 @@ const waBase = 'https://wa.me/525500000000';
           </button>
           {normas.map(n => (
             <button class="filter-pill" data-filter="norma" data-value={n}
-              style="font-size:0.68rem; font-weight:600; padding:5px 12px; border-radius:99px; border:1px solid #e4e4e7; background:#fff; color:#52525b; cursor:pointer; transition:all 0.2s; white-space:nowrap;">
+              style="font-size:0.68rem; font-weight:600; padding:5px 12px; border-radius:99px; border:1px solid #e4e4e7; background:#fff; color:#52525b; cursor:pointer; white-space:nowrap;">
               {n}
             </button>
           ))}
@@ -102,7 +102,7 @@ const waBase = 'https://wa.me/525500000000';
           </button>
           {sectores.map(s => (
             <button class="filter-pill" data-filter="sector" data-value={s}
-              style="font-size:0.68rem; font-weight:600; padding:5px 12px; border-radius:99px; border:1px solid #e4e4e7; background:#fff; color:#52525b; cursor:pointer; transition:all 0.2s; white-space:nowrap;">
+              style="font-size:0.68rem; font-weight:600; padding:5px 12px; border-radius:99px; border:1px solid #e4e4e7; background:#fff; color:#52525b; cursor:pointer; white-space:nowrap;">
               {s}
             </button>
           ))}
@@ -140,7 +140,7 @@ const waBase = 'https://wa.me/525500000000';
             data-slug={cat.slug}
             data-norma={cat.norma}
             data-sectores={cat.sector.join('|')}
-            style="background:#fff; border:1px solid #e4e4e7; border-radius:14px; overflow:hidden; display:flex; flex-direction:column; transition:box-shadow 0.2s ease, transform 0.2s ease;"
+            style="background:#fff; border:1px solid #e4e4e7; border-radius:14px; overflow:hidden; display:flex; flex-direction:column;"
           >
             <!-- Header -->
             <div style="padding:24px 24px 0;">
@@ -196,7 +196,7 @@ const waBase = 'https://wa.me/525500000000';
               <div style="display:flex; gap:8px; margin-top:auto; padding-top:16px; border-top:1px solid #f4f4f5;">
                 <a
                   href={`/productos/${cat.slug}`}
-                  style="flex:1; display:flex; align-items:center; justify-content:center; gap:6px; padding:10px 14px; background:#09090b; color:#fff; font-size:0.75rem; font-weight:700; border-radius:8px; text-decoration:none; transition:background 0.2s;"
+                  style="flex:1; display:flex; align-items:center; justify-content:center; gap:6px; padding:10px 14px; background:#09090b; color:#fff; font-size:0.75rem; font-weight:700; border-radius:8px; text-decoration:none;"
                   onmouseover="this.style.background='#1a1a1a'"
                   onmouseout="this.style.background='#09090b'"
                 >
@@ -209,7 +209,7 @@ const waBase = 'https://wa.me/525500000000';
                   href={`${waBase}?text=Hola%2C%20necesito%20cotizar%20${encodeURIComponent(cat.nombre)}`}
                   target="_blank"
                   rel="noopener"
-                  style="display:flex; align-items:center; justify-content:center; padding:10px 12px; background:#25d366; color:#fff; font-size:0.75rem; font-weight:700; border-radius:8px; text-decoration:none; transition:background 0.2s; flex-shrink:0;"
+                  style="display:flex; align-items:center; justify-content:center; padding:10px 12px; background:#25d366; color:#fff; font-size:0.75rem; font-weight:700; border-radius:8px; text-decoration:none; flex-shrink:0;"
                   onmouseover="this.style.background='#1ebe5a'"
                   onmouseout="this.style.background='#25d366'"
                   title="Cotizar por WhatsApp"

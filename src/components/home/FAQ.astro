@@ -78,7 +78,7 @@ const faqs = [
         {faqs.map((faq, i) => (
           <div
             class="faq-item"
-            style="border:1px solid #e4e4e7; border-radius:12px; overflow:hidden; background:#fff; transition:border-color 0.2s;"
+            style="border:1px solid #e4e4e7; border-radius:12px; overflow:hidden; background:#fff;"
             data-index={i}
           >
             <button
@@ -87,13 +87,13 @@ const faqs = [
               aria-expanded="false"
             >
               <span style="font-size:0.875rem; font-weight:600; color:#09090b; line-height:1.4;">{faq.q}</span>
-              <span class="faq-icon" style="flex-shrink:0; width:24px; height:24px; border-radius:50%; background:#f4f4f5; display:flex; align-items:center; justify-content:center; transition:background 0.2s, transform 0.25s;">
+              <span class="faq-icon" style="flex-shrink:0; width:24px; height:24px; border-radius:50%; background:#f4f4f5; display:flex; align-items:center; justify-content:center;">
                 <svg width="12" height="12" fill="none" stroke="#52525b" stroke-width="2.5" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
                 </svg>
               </span>
             </button>
-            <div class="faq-body" style="max-height:0; overflow:hidden; transition:max-height 0.3s ease, padding 0.3s ease;">
+            <div class="faq-body" style="max-height:0; overflow:hidden;">
               <p style="font-size:0.84rem; color:#52525b; line-height:1.8; margin:0; padding:0 22px 20px;">{faq.a}</p>
             </div>
           </div>
@@ -123,7 +123,7 @@ const faqs = [
                 id="faq-nombre"
                 type="text"
                 placeholder="Tu nombre completo"
-                style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:8px; font-size:0.875rem; color:#09090b; background:#fff; outline:none; transition:border-color 0.2s; box-sizing:border-box;"
+                style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:8px; font-size:0.875rem; color:#09090b; background:#fff; outline:none; box-sizing:border-box;"
                 onfocus="this.style.borderColor='#dc2626'"
                 onblur="this.style.borderColor='#e4e4e7'"
               />
@@ -134,7 +134,7 @@ const faqs = [
                 id="faq-empresa"
                 type="text"
                 placeholder="Nombre de tu empresa"
-                style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:8px; font-size:0.875rem; color:#09090b; background:#fff; outline:none; transition:border-color 0.2s; box-sizing:border-box;"
+                style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:8px; font-size:0.875rem; color:#09090b; background:#fff; outline:none; box-sizing:border-box;"
                 onfocus="this.style.borderColor='#dc2626'"
                 onblur="this.style.borderColor='#e4e4e7'"
               />
@@ -147,7 +147,7 @@ const faqs = [
               id="faq-tel"
               type="tel"
               placeholder="+52 55 0000 0000"
-              style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:8px; font-size:0.875rem; color:#09090b; background:#fff; outline:none; transition:border-color 0.2s; box-sizing:border-box;"
+              style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:8px; font-size:0.875rem; color:#09090b; background:#fff; outline:none; box-sizing:border-box;"
               onfocus="this.style.borderColor='#dc2626'"
               onblur="this.style.borderColor='#e4e4e7'"
             />
@@ -157,7 +157,7 @@ const faqs = [
             <label for="faq-sector" style="display:block; font-size:0.7rem; font-weight:700; color:#3f3f46; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:8px;">Sector / Tipo de proyecto</label>
             <select
               id="faq-sector"
-              style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:8px; font-size:0.875rem; color:#09090b; background:#fff; outline:none; appearance:none; cursor:pointer; transition:border-color 0.2s; box-sizing:border-box;"
+              style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:8px; font-size:0.875rem; color:#09090b; background:#fff; outline:none; appearance:none; cursor:pointer; box-sizing:border-box;"
               onfocus="this.style.borderColor='#dc2626'"
               onblur="this.style.borderColor='#e4e4e7'"
             >
@@ -178,7 +178,7 @@ const faqs = [
               id="faq-mensaje"
               rows="4"
               placeholder="Cuéntanos qué equipo necesitas, para qué aplicación y cualquier duda que tengas…"
-              style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:8px; font-size:0.875rem; color:#09090b; background:#fff; outline:none; resize:vertical; line-height:1.6; transition:border-color 0.2s; box-sizing:border-box; font-family:inherit;"
+              style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:8px; font-size:0.875rem; color:#09090b; background:#fff; outline:none; resize:vertical; line-height:1.6; box-sizing:border-box; font-family:inherit;"
               onfocus="this.style.borderColor='#dc2626'"
               onblur="this.style.borderColor='#e4e4e7'"
             ></textarea>

@@ -55,9 +55,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.cs-shot:hover img { transform: scale(1.045); }
 
 .cs-shot-big img { aspect-ratio: 4 / 3; }
 .cs-shot-sm img  { aspect-ratio: 4 / 3; }
@@ -91,15 +89,8 @@
   border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .cs-shot img,
-  .cs-cta,
-  .cs-cta-ghost { transition: none !important; }
-  .cs-shot:hover img { transform: none; }
-}
-
 /* ══════════ L2 · Página de categoría ══════════ */
-.l2-crumb { font-size: 0.72rem; color: #71717a; text-decoration: none; transition: color 0.18s ease; }
+.l2-crumb { font-size: 0.72rem; color: #71717a; text-decoration: none; }
 .l2-crumb:hover { color: #fafafa; }
 
 .l2-cta,
@@ -120,9 +111,8 @@
 .l2-prod {
   background: #fff; border: 1px solid #e4e4e7; border-radius: 14px;
   padding: 24px; display: flex; flex-direction: column;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
-.l2-prod:hover { border-color: #d4d4d8; box-shadow: 0 12px 28px -18px rgba(9,9,11,0.35); transform: translateY(-2px); }
+.l2-prod:hover { border-color: #d4d4d8; box-shadow: 0 12px 28px -18px rgba(9,9,11,0.35); }
 
 /* Fila de norma */
 .l2-norm {
@@ -133,9 +123,8 @@
 /* Card de sector */
 .l2-sector {
   background: #fff; border: 1px solid #e4e4e7; border-radius: 14px; padding: 26px;
-  transition: border-color 0.2s ease, transform 0.2s ease;
 }
-.l2-sector:hover { border-color: #dc2626; transform: translateY(-2px); }
+.l2-sector:hover { border-color: #dc2626; }
 
 /* Acordeón FAQ — sin JS */
 .l2-faq { border-bottom: 1px solid #e4e4e7; }
@@ -143,11 +132,10 @@
   list-style: none; cursor: pointer; padding: 20px 0;
   display: flex; align-items: flex-start; justify-content: space-between; gap: 20px;
   font-size: 0.95rem; font-weight: 700; color: #09090b;
-  transition: color 0.18s ease;
 }
 .l2-faq summary::-webkit-details-marker { display: none; }
 .l2-faq summary:hover { color: #dc2626; }
-.l2-faq summary svg { flex-shrink: 0; margin-top: 3px; transition: transform 0.25s cubic-bezier(0.4,0,0.2,1); color: #dc2626; }
+.l2-faq summary svg { flex-shrink: 0; margin-top: 3px; color: #dc2626; }
 .l2-faq[open] summary svg { transform: rotate(45deg); }
 .l2-faq-body { padding: 0 0 22px; font-size: 0.88rem; color: #52525b; line-height: 1.85; max-width: 74ch; }
 
@@ -156,16 +144,9 @@
   display: flex; align-items: center; justify-content: space-between; gap: 14px;
   background: #fff; border: 1px solid #e4e4e7; border-radius: 12px;
   padding: 18px 20px; text-decoration: none;
-  transition: border-color 0.18s ease, transform 0.18s ease;
 }
-.l2-other:hover { border-color: #dc2626; transform: translateX(3px); }
-.l2-other svg { color: #dc2626; flex-shrink: 0; transition: transform 0.2s ease; }
-.l2-other:hover svg { transform: translateX(3px); }
-
-@media (prefers-reduced-motion: reduce) {
-  .l2-prod, .l2-sector, .l2-other, .l2-cta, .l2-cta-ghost, .l2-faq summary svg { transition: none !important; }
-  .l2-prod:hover, .l2-sector:hover, .l2-other:hover, .l2-cta:hover { transform: none; }
-}
+.l2-other:hover { border-color: #dc2626; }
+.l2-other svg { color: #dc2626; flex-shrink: 0; }
 
 /* ══════════ L2 · Menú extendido bajo el hero (full-bleed) ══════════ */
 .l2-nav {
@@ -199,7 +180,6 @@
   padding: 20px 24px;
   text-decoration: none;
   position: relative;
-  transition: background 0.18s ease;
 }
 .l2-nav-item::after {
   content: '';
@@ -209,20 +189,17 @@
   background: #dc2626;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.26s cubic-bezier(0.34, 1.3, 0.64, 1);
 }
 .l2-nav-item:hover { background: #141417; }
 .l2-nav-item:hover::after { transform: scaleX(1); }
 
 .l2-nav-label {
-  font-size: 0.84rem; font-weight: 700; color: #e4e4e7; line-height: 1.2;
-  transition: color 0.18s ease; white-space: nowrap;
+  font-size: 0.84rem; font-weight: 700; color: #e4e4e7; line-height: 1.2; white-space: nowrap;
 }
 .l2-nav-item:hover .l2-nav-label { color: #fff; }
 .l2-nav-sub {
   font-size: 0.66rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-  color: #52525b; white-space: nowrap; transition: color 0.18s ease;
-}
+  color: #52525b; white-space: nowrap;}
 .l2-nav-item:hover .l2-nav-sub { color: #a1a1aa; }
 
 /* Celda CTA */
@@ -231,16 +208,11 @@
 .l2-nav-item.is-cta::after { display: none; }
 .l2-nav-item.is-cta .l2-nav-label { color: #fff; display: flex; align-items: center; gap: 8px; }
 .l2-nav-item.is-cta .l2-nav-sub { color: rgba(255,255,255,0.72); }
-.l2-nav-item.is-cta svg { transition: transform 0.2s ease; }
-.l2-nav-item.is-cta:hover svg { transform: translateX(3px); }
+.l2-nav-item.is-cta svg { }
 
 /* Anclas: el offset lo da `scroll-padding-top` de html en global.css.
    Sumar scroll-margin aquí duplicaría el desplazamiento. */
 .l2-anchor { scroll-margin-top: 0; }
-
-@media (prefers-reduced-motion: reduce) {
-  .l2-nav-item, .l2-nav-item::after, .l2-nav-item.is-cta svg { transition: none !important; }
-}
 
 /* ══════════ CategoryGrid — card de categoría homologada ══════════ */
 .cg-card {
@@ -250,11 +222,9 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
 }
-.cg-card:hover { transform: translateY(-4px); box-shadow: 0 18px 36px -22px rgba(9, 9, 11, 0.45); border-color: #d4d4d8; }
+.cg-card:hover { box-shadow: 0 18px 36px -22px rgba(9, 9, 11, 0.45); border-color: #d4d4d8; }
 .cg-card.is-active { border-color: #dc2626; box-shadow: 0 0 0 1px #dc2626; }
-.cg-card.is-active:hover { transform: none; }
 
 /* Media */
 .cg-media {
@@ -266,7 +236,7 @@
   background-position: center;
 }
 .cg-veil { position: absolute; inset: 0; background: rgba(9, 9, 11, 0.42); }
-.cg-card:hover .cg-veil { background: rgba(9, 9, 11, 0.3); transition: background 0.25s ease; }
+.cg-card:hover .cg-veil { background: rgba(9, 9, 11, 0.3); }
 
 .cg-badge {
   position: absolute; top: 12px; left: 12px; z-index: 1;
@@ -322,18 +292,12 @@
   font-size: 0.8rem; font-weight: 600; color: #dc2626; text-decoration: none;
 }
 .cg-cta > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.cg-cta svg { flex-shrink: 0; transition: transform 0.2s ease; }
-.cg-cta:hover svg { transform: translateX(3px); }
+.cg-cta svg { flex-shrink: 0; }
 .cg-cta.is-current { color: #a1a1aa; cursor: default; }
 .cg-cta.is-current svg { color: #dc2626; }
 
 /* Las cards del grid arrancan con 18px de aire sobre el CTA */
 .cg-body > .cg-highlight { margin-bottom: 0; }
-
-@media (prefers-reduced-motion: reduce) {
-  .cg-card, .cg-veil, .cg-cta svg { transition: none !important; }
-  .cg-card:hover { transform: none; }
-}
 
 /* Specs dentro de la card de producto (L2) */
 .cg-specs { list-style: none; margin: 0 0 18px; padding: 0; display: flex; flex-direction: column; gap: 7px; }
@@ -366,7 +330,6 @@
   width: 100%; font-size: 0.88rem; font-family: inherit; color: #09090b;
   background: #fafafa; border: 1px solid #e4e4e7; border-radius: 9px;
   padding: 11px 13px; outline: none;
-  transition: border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
 }
 .l2-field textarea { resize: vertical; min-height: 84px; line-height: 1.6; }
 .l2-field input::placeholder, .l2-field textarea::placeholder { color: #a1a1aa; }
@@ -386,7 +349,6 @@
 .l2-check input {
   appearance: none; -webkit-appearance: none; width: 17px; height: 17px; flex-shrink: 0; margin-top: 1px;
   border: 1px solid #d4d4d8; border-radius: 4px; background: #fff; cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease;
 }
 .l2-check input:checked {
   background: #dc2626; border-color: #dc2626;
@@ -412,17 +374,11 @@
 
 .l2-form-foot { display: grid; grid-template-columns: 1fr; gap: 1px; background: #e4e4e7; border-top: 1px solid #e4e4e7; }
 @media (min-width: 520px) { .l2-form-foot { grid-template-columns: 1fr 1fr; } }
-.l2-form-foot a { display: flex; flex-direction: column; gap: 3px; background: #fafafa; padding: 16px 20px; text-decoration: none; transition: background 0.18s ease; }
+.l2-form-foot a { display: flex; flex-direction: column; gap: 3px; background: #fafafa; padding: 16px 20px; text-decoration: none; }
 .l2-form-foot a:hover { background: #f4f4f5; }
 .l2-form-foot span { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #a1a1aa; }
-.l2-form-foot strong { font-size: 0.86rem; font-weight: 700; color: #09090b; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; transition: color 0.18s ease; }
+.l2-form-foot strong { font-size: 0.86rem; font-weight: 700; color: #09090b; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .l2-form-foot a:hover strong { color: #dc2626; }
-
-@media (prefers-reduced-motion: reduce) {
-  .l2-form-cta, .l2-field input, .l2-field select, .l2-field textarea,
-  .l2-check input, .l2-form-foot a { transition: none !important; }
-  .l2-form-cta:hover { transform: none; }
-}
 
 /* ══════════════════════════════════════════════════════════
    BREADCRUMBS — banda clara bajo el header
@@ -487,7 +443,6 @@
   padding: 5px 9px;
   border-radius: 7px;
   white-space: nowrap;
-  transition: color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
 }
 .crumb-link:hover {
   color: #dc2626;
@@ -551,7 +506,6 @@
   border-radius: 8px;
   white-space: nowrap;
   flex-shrink: 0;
-  transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
 }
 .crumb-back:hover { color: #dc2626; border-color: #fecaca; background: #fef2f2; }
 .crumb-back svg { width: 13px; height: 13px; flex-shrink: 0; }
@@ -592,9 +546,8 @@
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 0.82rem; font-weight: 700; color: #dc2626; text-decoration: none; white-space: nowrap;
 }
-.l2-related-all svg { transition: transform 0.2s ease; }
+.l2-related-all svg { }
 .l2-related-all:hover { color: #ef4444; }
-.l2-related-all:hover svg { transform: translateX(3px); }
 
 .l2-related { display: grid; grid-template-columns: 1fr; gap: 8px; }
 @media (min-width: 640px)  { .l2-related { grid-template-columns: 1fr 1fr; } }
@@ -604,15 +557,13 @@
   display: flex; align-items: center; gap: 12px;
   background: #0c0c0f; border: 1px solid #1f1f23; border-radius: 11px;
   padding: 14px 16px; text-decoration: none;
-  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
 }
-.l2-related-item:hover { background: #141417; border-color: #dc2626; transform: translateY(-2px); }
+.l2-related-item:hover { background: #141417; border-color: #dc2626; }
 
 .l2-related-ico {
   width: 32px; height: 32px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
   border-radius: 8px; background: #18181b; border: 1px solid #27272a; color: #dc2626;
-  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
 }
 .l2-related-ico svg { width: 16px; height: 16px; }
 .l2-related-item:hover .l2-related-ico { background: #dc2626; color: #fff; border-color: #dc2626; }
@@ -620,8 +571,8 @@
 .l2-related-body { display: flex; flex-direction: column; min-width: 0; flex: 1; }
 .l2-related-name { font-size: 0.82rem; font-weight: 700; color: #fafafa; line-height: 1.25; }
 .l2-related-norm { font-size: 0.66rem; color: #71717a; margin-top: 3px; }
-.l2-related-arrow { color: #52525b; flex-shrink: 0; transition: transform 0.2s ease, color 0.18s ease; }
-.l2-related-item:hover .l2-related-arrow { color: #dc2626; transform: translateX(3px); }
+.l2-related-arrow { color: #52525b; flex-shrink: 0; }
+.l2-related-item:hover .l2-related-arrow { color: #dc2626; }
 
 /* Enlace al catálogo dentro del mega menú del header */
 .sh-mega-all {
@@ -629,14 +580,7 @@
   margin-top: 12px; padding: 11px 14px; border-radius: 8px;
   background: #18181b; border: 1px solid #27272a;
   font-size: 0.78rem; font-weight: 700; color: #e4e4e7; text-decoration: none;
-  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
 }
-.sh-mega-all svg { transition: transform 0.2s ease; }
+.sh-mega-all svg { }
 .sh-mega-all:hover { background: #141417; border-color: #dc2626; color: #fff; }
-.sh-mega-all:hover svg { transform: translateX(3px); }
 
-@media (prefers-reduced-motion: reduce) {
-  .l2-related-item, .l2-related-ico, .l2-related-arrow,
-  .l2-related-all svg, .sh-mega-all { transition: none !important; }
-  .l2-related-item:hover { transform: none; }
-}

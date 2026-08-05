@@ -42,7 +42,7 @@ const getPageUrl = (page: number) => {
     {currentPage > 1 ? (
       <a
         href={getPageUrl(currentPage - 1)}
-        class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:border-slate-300 transition-all"
+        class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:border-slate-300"
         rel="prev"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -74,7 +74,7 @@ const getPageUrl = (page: number) => {
         ) : (
           <a
             href={getPageUrl(page)}
-            class="flex items-center justify-center w-10 h-10 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-fire-50 hover:border-fire-200 hover:text-fire-600 transition-all"
+            class="flex items-center justify-center w-10 h-10 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-fire-50 hover:border-fire-200 hover:text-fire-600"
           >
             {page}
           </a>
@@ -86,7 +86,7 @@ const getPageUrl = (page: number) => {
     {currentPage < totalPages ? (
       <a
         href={getPageUrl(currentPage + 1)}
-        class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:border-slate-300 transition-all"
+        class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 hover:border-slate-300"
         rel="next"
       >
         <span class="hidden sm:inline">Siguiente</span>

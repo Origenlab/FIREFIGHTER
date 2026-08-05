@@ -210,8 +210,7 @@
 
   .card-interactive {
     @apply bg-white rounded-xl border border-slate-200
-           hover:border-slate-300 hover:shadow-md
-           transition-shadow duration-200;
+           hover:border-slate-300 hover:shadow-md;
   }
 
   .card-highlight {
@@ -322,8 +321,7 @@
 @layer components {
   .nav-link {
     @apply px-4 py-2 text-slate-600 font-medium rounded-lg
-           hover:text-slate-900 hover:bg-slate-100
-           transition-colors duration-200;
+           hover:text-slate-900 hover:bg-slate-100;
   }
 
   .nav-link-active {
@@ -333,8 +331,7 @@
   .dropdown {
     @apply absolute top-full left-0 mt-2
            bg-white border border-slate-200 rounded-xl shadow-lg
-           opacity-0 invisible
-           transition-all duration-200;
+           opacity-0 invisible;
   }
 
   .dropdown-open {
@@ -343,8 +340,7 @@
 
   .dropdown-item {
     @apply block px-4 py-2.5 text-slate-600
-           hover:bg-slate-50 hover:text-slate-900
-           transition-colors duration-200;
+           hover:bg-slate-50 hover:text-slate-900;
   }
 }
 
@@ -504,4 +500,13 @@
   .card, .card-elevated {
     @apply border border-slate-300 shadow-none;
   }
+}
+
+/* La única animación del sitio vive en los botones.
+   Si el usuario pide movimiento reducido, también se apaga. */
+@media (prefers-reduced-motion: reduce) {
+  .btn, .sh-cta, .cs-cta, .cs-cta-ghost, .l2-cta, .l2-cta-ghost, .l2-form-cta {
+    transition: none !important;
+  }
+  .sh-cta:hover, .cs-cta:hover, .l2-cta:hover, .l2-form-cta:hover { transform: none; }
 }

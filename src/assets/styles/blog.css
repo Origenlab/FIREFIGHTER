@@ -42,7 +42,6 @@
   color: #3f3f46;
   text-decoration: none;
   white-space: nowrap;
-  transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
 }
 .blog-chip:hover { color: #dc2626; border-color: #fecaca; background: #fef2f2; }
 .blog-chip-n { font-size: 0.66rem; font-weight: 700; color: #a1a1aa; }
@@ -66,10 +65,8 @@
   border-radius: 14px;
   padding: 24px;
   text-decoration: none;
-  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
 }
 .blog-card:hover {
-  transform: translateY(-3px);
   box-shadow: 0 12px 28px -18px rgba(9, 9, 11, 0.45);
   border-color: #d4d4d8;
 }
@@ -109,7 +106,6 @@
   line-height: 1.32;
   margin: 0 0 10px;
   letter-spacing: -0.01em;
-  transition: color 0.18s ease;
 }
 .blog-card:hover h3 { color: #dc2626; }
 .blog-card p {
@@ -151,7 +147,6 @@
   margin-bottom: 28px;
   text-decoration: none;
   border: 1px solid #1f1f23;
-  transition: border-color 0.2s ease;
 }
 .blog-featured:hover { border-color: #dc2626; }
 @media (min-width: 768px) { .blog-featured { grid-template-columns: 1.35fr 1fr; gap: 36px; align-items: center; } }
@@ -219,7 +214,6 @@
   padding: 9px 10px 9px 12px;
   border-radius: 8px;
   text-decoration: none;
-  transition: background 0.15s ease, box-shadow 0.15s ease;
 }
 .blog-list-row::before {
   content: '';
@@ -231,7 +225,6 @@
   height: 0;
   border-radius: 2px;
   background: #dc2626;
-  transition: height 0.18s ease;
 }
 .blog-list-row:hover { background: #f8fafc; }
 .blog-list-row:hover::before { height: 60%; }
@@ -260,7 +253,6 @@
   color: #09090b;
   margin: 0 0 5px;
   line-height: 1.4;
-  transition: color 0.15s ease;
 }
 .blog-link-item:hover .t { color: #dc2626; }
 .blog-link-item .m { font-size: 0.69rem; color: #a1a1aa; margin: 0; display: flex; align-items: center; gap: 8px; }
@@ -278,7 +270,6 @@
   flex-shrink: 0;
   margin-right: 10px;
   margin-top: 1px;
-  transition: background 0.15s ease, color 0.15s ease;
 }
 .blog-link-item:hover .blog-rank { background: #fef2f2; color: #dc2626; }
 .blog-rank.is-top { background: #fef2f2; color: #dc2626; }
@@ -318,7 +309,6 @@
   padding: 12px 18px;
   border-radius: 9px;
   text-decoration: none;
-  transition: background 0.18s ease;
 }
 .blog-btn-wa:hover { background: #1eb85a; }
 .blog-btn-ghost {
@@ -333,7 +323,6 @@
   padding: 10px;
   border: 1px solid #27272a;
   border-radius: 9px;
-  transition: color 0.18s ease, border-color 0.18s ease;
 }
 .blog-btn-ghost:hover { color: #fafafa; border-color: #52525b; }
 
@@ -362,7 +351,6 @@
   font-weight: 600;
   color: #52525b;
   text-decoration: none;
-  transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
 }
 .blog-page:hover { color: #dc2626; border-color: #fecaca; background: #fef2f2; }
 .blog-page.is-current { background: #dc2626; border-color: #dc2626; color: #fff; }
@@ -378,7 +366,6 @@
   width: 0;
   background: linear-gradient(90deg, #dc2626, #f87171);
   z-index: 70;
-  transition: width 0.1s linear;
 }
 
 /* ══════════ ARTICULO: TOC ══════════ */
@@ -391,7 +378,6 @@
   line-height: 1.5;
   color: #52525b;
   text-decoration: none;
-  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
 }
 .art-toc a:hover { color: #dc2626; border-left-color: #dc2626; background: #fef2f2; }
 .art-toc a.lvl-3 { padding-left: 24px; font-size: 0.73rem; color: #71717a; }
@@ -519,7 +505,6 @@
   border: 1px solid #e4e4e7;
   background: #fff;
   color: #71717a;
-  transition: color 0.18s ease, border-color 0.18s ease;
 }
 .art-share a:hover { color: #dc2626; border-color: #fecaca; }
 .art-share svg { width: 15px; height: 15px; }
@@ -550,8 +535,7 @@
   border-radius: 12px;
   padding: 18px 20px;
   text-decoration: none;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
-.art-prod:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -18px rgba(9, 9, 11, 0.5); }
+.art-prod:hover { box-shadow: 0 10px 24px -18px rgba(9, 9, 11, 0.5); }
 .art-prod .t { font-size: 0.9rem; font-weight: 700; color: #09090b; margin: 0 0 4px; }
 .art-prod .d { font-size: 0.75rem; color: #71717a; margin: 0; line-height: 1.6; }
