@@ -1,0 +1,44 @@
+---
+/**
+ * Autoria institucional + politica editorial (senales E-E-A-T).
+ */
+import { waLink } from '../../lib/blog';
+
+interface Props {
+  compacto?: boolean;
+}
+const { compacto = false } = Astro.props;
+---
+
+<div style="background:#fff; border:1px solid #e4e4e7; border-radius:16px; padding:28px; display:grid; grid-template-columns:1fr; gap:24px;" class={compacto ? '' : 'md:grid-cols-[auto_1fr]'}>
+
+  <div style="display:flex; align-items:flex-start; gap:16px;">
+    <span style="display:flex; align-items:center; justify-content:center; width:52px; height:52px; border-radius:12px; background:#09090b; flex-shrink:0;">
+      <svg width="24" height="24" fill="none" stroke="#dc2626" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+    </span>
+    <div style="min-width:0;">
+      <span style="display:block; font-size:0.63rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#dc2626; margin-bottom:6px;">Quién escribe esto</span>
+      <p style="font-size:1rem; font-weight:800; color:#09090b; margin:0 0 4px; line-height:1.3;">Área técnica de FIREFIGHTER México</p>
+      <p style="font-size:0.78rem; color:#71717a; margin:0; line-height:1.6;">Distribuidores autorizados de MSA Safety, Scott, Bullard, Holmatro y Amerex</p>
+    </div>
+  </div>
+
+  <div>
+    <p style="font-size:0.87rem; color:#52525b; line-height:1.85; margin:0 0 14px;">
+      No somos un blog: somos la gente que cotiza, entrega y da mantenimiento a este equipo en los 32 estados. Cada guía sale de preguntas que nos hicieron por teléfono o en una junta de aclaraciones, y la revisa quien arma las propuestas técnicas antes de publicarse.
+    </p>
+    <p style="font-size:0.87rem; color:#52525b; line-height:1.85; margin:0 0 18px;">
+      Cuando una norma cambia, actualizamos el artículo y lo decimos en la fecha. <strong style="color:#09090b; font-weight:600;">Si encuentras un dato mal, escríbenos</strong>: lo corregimos y te lo agradecemos: preferimos quedar en ridículo aquí que en tu operación.
+    </p>
+
+    <div style="display:flex; flex-wrap:wrap; gap:9px;">
+      <a href={waLink('vi un dato en el blog que quiero comentar')} target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:7px; font-size:0.78rem; font-weight:700; color:#fff; background:#09090b; padding:9px 15px; border-radius:8px; text-decoration:none;">
+        Corregir o preguntar algo
+      </a>
+      <a href="/contacto" style="display:inline-flex; align-items:center; gap:7px; font-size:0.78rem; font-weight:600; color:#52525b; border:1px solid #e4e4e7; padding:9px 15px; border-radius:8px; text-decoration:none;">
+        Hablar con el área técnica
+      </a>
+    </div>
+  </div>
+
+</div>

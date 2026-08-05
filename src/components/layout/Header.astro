@@ -1,18 +1,31 @@
 ---
 /**
- * Header Component - Professional Design
- * Clean, visible, and fully responsive
+ * Header FIREFIGHTER México
+ * Sticky · fondo oscuro sólido · mega menú de productos · scroll-spy
+ * Los estilos viven en src/assets/styles/header.css (importado desde BaseLayout).
  */
+
+import catalogo from '../../data/productos.json';
 
 const currentPath = Astro.url.pathname;
 
 const navItems = [
   { href: '/', label: 'Inicio' },
-  { href: '/#productos', label: 'Productos' },
+  { href: '/productos', label: 'Productos', mega: true },
   { href: '/directorio', label: 'Directorio' },
   { href: '/mapa', label: 'Mapa' },
   { href: '/blog', label: 'Blog' },
 ];
+
+const WA = 'https://wa.me/525500000000?text=Hola%2C%20necesito%20cotizar%20';
+
+const megaCategories = catalogo.map((c) => ({
+  slug: c.slug,
+  title: c.nombre,
+  norm: c.badge,
+  desc: c.cardDesc.split('.')[0],
+  icon: c.icon,
+}));
 
 const isActive = (href: string) => {
   if (href === '/') return currentPath === '/';
@@ -20,268 +33,326 @@ const isActive = (href: string) => {
 };
 ---
 
-<!-- Topbar - Dark -->
-<div class="bg-slate-900 border-b border-slate-800">
-  <div class="container-custom">
-    <div class="flex items-center justify-between h-10">
-      <!-- Left: Contact Info -->
-      <div class="flex items-center gap-4 text-sm">
-        <a href="mailto:contacto@firefighter.com.mx" class="hidden sm:flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-          </svg>
-          <span>contacto@firefighter.com.mx</span>
-        </a>
-        <span class="hidden sm:flex items-center gap-2 text-slate-400">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
-          <span>24/7</span>
-        </span>
-        <!-- Mobile Emergency -->
-        <a href="tel:911" class="sm:hidden flex items-center gap-2 text-white font-medium">
-          <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-          <span>911</span>
-        </a>
-      </div>
+<div id="site-header" class="site-header">
 
-      <!-- Right: Social + Emergency -->
-      <div class="flex items-center gap-3">
-        <!-- Social Icons -->
-        <div class="hidden md:flex items-center gap-1">
-          <a href="https://facebook.com" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-slate-500 hover:text-white rounded transition-colors" aria-label="Facebook">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  <!-- ═════════ TOPBAR ═════════ -->
+  <div class="sh-topbar">
+    <div class="container-custom">
+      <div class="sh-topbar-inner">
+        <div class="sh-top-left">
+          <a href="mailto:contacto@firefighter.com.mx" class="sh-top-link sh-hide-md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span>contacto@firefighter.com.mx</span>
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-slate-500 hover:text-white rounded transition-colors" aria-label="X">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-        </div>
-        <!-- Emergency Link -->
-        <a href="tel:911" class="hidden sm:flex items-center gap-2 text-white font-semibold text-sm hover:text-red-400 transition-colors">
-          <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+          <span class="sh-top-muted sh-hide-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Atención 24/7</span>
           </span>
-          <span>Emergencias: <strong class="text-red-400">911</strong></span>
-        </a>
+          <span class="sh-top-muted sh-hide-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>Envíos a los 32 estados</span>
+          </span>
+          <a href="tel:911" class="sh-emerg sh-emerg-mobile"><span class="sh-dot"></span><span>911</span></a>
+        </div>
+
+        <div class="sh-top-right">
+          <span class="sh-top-muted sh-hide-lg sh-certs">NFPA · NOM · UL · FM Approvals</span>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="sh-social sh-hide-md" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" class="sh-social sh-hide-md" aria-label="X">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="tel:911" class="sh-emerg sh-emerg-desktop"><span class="sh-dot"></span><span>Emergencias <strong>911</strong></span></a>
+        </div>
       </div>
     </div>
   </div>
+
+  <!-- ═════════ BARRA PRINCIPAL ═════════ -->
+  <header class="sh-main">
+    <div class="container-custom">
+      <div class="sh-bar">
+
+        <!-- Logo: escudo de marca en color sólido + wordmark -->
+        <a href="/" class="sh-logo" aria-label="FIREFIGHTER México — Inicio">
+          <span class="sh-logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 50 50">
+              <path d="M25 4 L42 10 L42 28 C42 36 34 44 25 48 C16 44 8 36 8 28 L8 10 Z" fill="#dc2626"/>
+              <path d="M25 7.5 L39 12.5 L39 27 C39 34 32 40.5 25 43.5 C18 40.5 11 34 11 27 L11 12.5 Z" fill="#09090b"/>
+              <path d="M25 14 C25 14 30 20 30 26 C30 30 28 33 25 33 C22 33 20 30 20 26 C20 20 25 14 25 14 Z" fill="#dc2626"/>
+              <path d="M25 20.5 C25 20.5 28 24 28 27 C28 29 27 30 25 30 C23 30 22 29 22 27 C22 24 25 20.5 25 20.5 Z" fill="#fff"/>
+            </svg>
+          </span>
+          <span class="sh-logo-text">
+            <span class="sh-logo-name">FIREFIGHTER<span class="sh-logo-mx">MX</span></span>
+            <span class="sh-logo-sub">Equipo contra incendios y bomberos</span>
+          </span>
+        </a>
+
+        <!-- Navegación -->
+        <nav class="sh-nav" aria-label="Navegación principal">
+          <ul>
+            {navItems.map(({ href, label, mega }) => (
+              <li class={mega ? 'sh-has-mega' : undefined}>
+                <a
+                  href={href}
+                  class:list={['sh-nav-link', isActive(href) && 'is-active']}
+                  data-nav={href}
+                  aria-current={isActive(href) ? 'page' : undefined}
+                  aria-haspopup={mega ? 'true' : undefined}
+                  aria-expanded={mega ? 'false' : undefined}
+                  id={mega ? 'mega-trigger' : undefined}
+                >
+                  <span>{label}</span>
+                  {mega && (
+                    <svg class="sh-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                  )}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <!-- Acciones -->
+        <div class="sh-actions">
+          <button type="button" id="search-btn" class="sh-icon-btn" aria-label="Buscar (⌘K)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </button>
+
+          <a href="tel:5555555555" class="sh-phone">
+            <span class="sh-phone-label">Ventas</span>
+            <span class="sh-phone-num">55 5555 5555</span>
+          </a>
+
+          <a href={WA + 'equipo%20contra%20incendios'} target="_blank" rel="noopener" class="sh-cta">
+            <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>
+            <span class="sh-cta-text">Cotizar</span>
+          </a>
+
+          <button type="button" id="mobile-menu-btn" class="sh-icon-btn sh-burger" aria-label="Menú" aria-expanded="false">
+            <svg id="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg id="close-icon" class="is-hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═════════ MEGA MENÚ ═════════ -->
+    <div id="mega-panel" class="sh-mega" role="region" aria-labelledby="mega-trigger">
+      <div class="container-custom">
+        <div class="sh-mega-inner">
+
+          <div class="sh-mega-grid">
+            {megaCategories.map((c) => (
+              <a href={`/productos/${c.slug}`} class="sh-mega-item">
+                <span class="sh-mega-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d={c.icon}/></svg>
+                </span>
+                <span class="sh-mega-body">
+                  <span class="sh-mega-title">{c.title}</span>
+                  <span class="sh-mega-desc">{c.desc}</span>
+                </span>
+                <span class="sh-mega-norm">{c.norm}</span>
+              </a>
+            ))}
+          </div>
+
+          <aside class="sh-mega-aside">
+            <span class="sh-mega-eyebrow">Asesoría técnica</span>
+            <p class="sh-mega-copy">
+              Ingenieros certificados en <strong>NFPA y NOM-002-STPS</strong> arman tu propuesta
+              con normativa, precios y tiempos en menos de 24 horas hábiles.
+            </p>
+            <a href={WA + 'una%20asesor%C3%ADa%20t%C3%A9cnica'} target="_blank" rel="noopener" class="sh-mega-cta">
+              Solicitar cotización
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="/productos" class="sh-mega-all">
+              <span>Ver el catálogo completo</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="tel:5555555555" class="sh-mega-tel">
+              <span>Ventas directas</span>
+              <strong>55 5555 5555</strong>
+            </a>
+          </aside>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="sh-progress" aria-hidden="true"><span id="sh-progress-bar"></span></div>
+  </header>
+
+  <!-- ═════════ MENÚ MÓVIL ═════════ -->
+  <div id="mobile-menu" class="sh-mobile is-hidden">
+    <div class="container-custom sh-mobile-inner">
+      <nav>
+        <ul>
+          {navItems.map(({ href, label }) => (
+            <li><a href={href} class:list={['sh-mobile-link', isActive(href) && 'is-active']}>{label}</a></li>
+          ))}
+        </ul>
+      </nav>
+      <div class="sh-mobile-cats">
+        <span class="sh-mega-eyebrow">Catálogo</span>
+        <div class="sh-mobile-catgrid">
+          {megaCategories.map((c) => (
+            <a href={`/productos/${c.slug}`} class="sh-mobile-cat">{c.title}</a>
+          ))}
+        </div>
+      </div>
+      <a href="tel:911" class="sh-mobile-emerg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        <span>Llamar al 911</span>
+      </a>
+    </div>
+  </div>
+
+  <div id="mega-backdrop" class="sh-backdrop" aria-hidden="true"></div>
 </div>
 
-<!-- Main Header -->
-<header class="bg-white sticky top-0 z-50 border-b border-slate-200 shadow-sm">
-  <div class="container-custom">
-    <div class="flex items-center justify-between h-16 lg:h-[72px]">
-
-      <!-- Logo - Always Visible -->
-      <a href="/" class="flex items-center gap-3 flex-shrink-0">
-        <!-- Logo Icon -->
-        <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%); box-shadow: 0 4px 14px rgba(239, 68, 68, 0.4);">
-          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="white">
-            <path d="M12 2C12 2 7 8 7 13C7 16.866 9.23858 20 12 20C14.7614 20 17 16.866 17 13C17 8 12 2 12 2Z"/>
-          </svg>
-        </div>
-        <!-- Logo Text -->
-        <div class="flex flex-col">
-          <span class="font-bold text-xl leading-none" style="color: #0f172a;">Firefighter</span>
-          <span class="text-[10px] font-bold tracking-[0.2em] uppercase mt-0.5" style="color: #64748b;">México</span>
-        </div>
-      </a>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden lg:block">
-        <ul class="flex items-center gap-1">
-          {navItems.map(({ href, label }) => (
-            <li>
-              <a
-                href={href}
-                class:list={[
-                  'px-4 py-2 text-sm font-medium rounded-lg transition-colors',
-                  isActive(href)
-                    ? 'text-red-600 bg-red-50'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100',
-                ]}
-              >
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <!-- Actions - Always Visible -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        <!-- Search Button -->
-        <button
-          type="button"
-          id="search-btn"
-          class="w-10 h-10 flex items-center justify-center rounded-lg transition-colors"
-          style="color: #64748b;"
-          aria-label="Buscar"
-        >
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-          </svg>
-        </button>
-
-        <!-- WhatsApp CTA - Always Visible -->
-        <a
-          href="https://wa.me/525500000000?text=Hola%20FIREFIGHTER%2C%20necesito%20cotizar%20equipo%20contra%20incendios"
-          target="_blank"
-          rel="noopener"
-          class="flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl font-bold text-sm transition-colors"
-          style="background-color: #16a34a; color: white; box-shadow: 0 4px 14px rgba(22, 163, 74, 0.4);"
-        >
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          <span class="hidden sm:inline">Cotizar</span>
-        </a>
-
-        <!-- Mobile Menu Button -->
-        <button
-          type="button"
-          id="mobile-menu-btn"
-          class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg transition-colors"
-          style="color: #475569;"
-          aria-label="Menú"
-          aria-expanded="false"
-        >
-          <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
-        </button>
+<!-- ═════════ BÚSQUEDA ═════════ -->
+<div id="search-modal" class="sh-search is-hidden">
+  <div class="sh-search-backdrop" id="search-backdrop"></div>
+  <div class="sh-search-wrap">
+    <div class="sh-search-box">
+      <div class="sh-search-field">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <input type="search" id="search-input" placeholder="Buscar estaciones, estados o productos..." autocomplete="off" />
       </div>
-    </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 bg-white">
-    <div class="container-custom py-4">
-      <nav>
-        <ul class="space-y-1">
-          {navItems.map(({ href, label }) => (
-            <li>
-              <a
-                href={href}
-                class:list={[
-                  'flex items-center px-4 py-3 rounded-xl font-medium transition-colors',
-                  isActive(href)
-                    ? 'text-red-600 bg-red-50'
-                    : 'text-slate-700 hover:bg-slate-50',
-                ]}
-              >
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <div class="mt-4 pt-4 border-t border-slate-100">
-        <a
-          href="tel:911"
-          class="flex items-center justify-center gap-2 w-full py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl transition-colors"
-        >
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-          </svg>
-          <span>Llamar al 911</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- Search Modal -->
-<div id="search-modal" class="fixed inset-0 z-[100] hidden">
-  <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="search-backdrop"></div>
-  <div class="relative flex items-start justify-center pt-24 px-4">
-    <div class="w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden">
-      <!-- Search Input -->
-      <div class="p-4">
-        <div class="relative">
-          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-          </svg>
-          <input
-            type="search"
-            id="search-input"
-            placeholder="Buscar estaciones de bomberos..."
-            class="w-full h-14 pl-12 pr-4 text-lg text-slate-900 placeholder-slate-400 bg-slate-100 border-0 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500"
-            autocomplete="off"
-          />
+      <div class="sh-search-quick">
+        <span class="sh-mega-eyebrow">Populares</span>
+        <div>
+          <a href="/directorio/ciudad-de-mexico" class="sh-quick">Ciudad de México</a>
+          <a href="/directorio/jalisco" class="sh-quick">Jalisco</a>
+          <a href="/directorio/nuevo-leon" class="sh-quick">Nuevo León</a>
         </div>
       </div>
-
-      <!-- Quick Links -->
-      <div class="px-4 pb-4">
-        <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Populares</p>
-        <div class="flex flex-wrap gap-2">
-          <a href="/directorio/ciudad-de-mexico" class="px-4 py-2 text-sm font-medium text-slate-600 bg-slate-100 hover:bg-red-50 hover:text-red-600 rounded-lg transition-colors">Ciudad de México</a>
-          <a href="/directorio/jalisco" class="px-4 py-2 text-sm font-medium text-slate-600 bg-slate-100 hover:bg-red-50 hover:text-red-600 rounded-lg transition-colors">Jalisco</a>
-          <a href="/directorio/nuevo-leon" class="px-4 py-2 text-sm font-medium text-slate-600 bg-slate-100 hover:bg-red-50 hover:text-red-600 rounded-lg transition-colors">Nuevo León</a>
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <div class="px-4 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-        <span class="flex items-center gap-2">
-          <kbd class="px-2 py-1 bg-white border border-slate-200 rounded text-xs">↵</kbd>
-          <span>buscar</span>
-        </span>
-        <span class="flex items-center gap-2">
-          <kbd class="px-2 py-1 bg-white border border-slate-200 rounded text-xs">esc</kbd>
-          <span>cerrar</span>
-        </span>
+      <div class="sh-search-foot">
+        <span><kbd>↵</kbd> buscar</span>
+        <span><kbd>esc</kbd> cerrar</span>
       </div>
     </div>
   </div>
 </div>
 
 <script is:inline>
-  // Mobile Menu Toggle
-  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const menuIcon = document.getElementById('menu-icon');
-  const closeIcon = document.getElementById('close-icon');
+  (() => {
+    const header = document.getElementById('site-header');
+    const progress = document.getElementById('sh-progress-bar');
+    let ticking = false;
 
-  mobileMenuBtn?.addEventListener('click', () => {
-    const isHidden = mobileMenu?.classList.toggle('hidden');
-    menuIcon?.classList.toggle('hidden', !isHidden);
-    closeIcon?.classList.toggle('hidden', isHidden);
-    mobileMenuBtn.setAttribute('aria-expanded', String(!isHidden));
-  });
-
-  // Search Modal
-  const searchBtn = document.getElementById('search-btn');
-  const searchModal = document.getElementById('search-modal');
-  const searchBackdrop = document.getElementById('search-backdrop');
-  const searchInput = /** @type {HTMLInputElement | null} */ (document.getElementById('search-input'));
-
-  function openSearch() {
-    searchModal?.classList.remove('hidden');
-    setTimeout(() => searchInput?.focus(), 100);
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeSearch() {
-    searchModal?.classList.add('hidden');
-    document.body.style.overflow = '';
-  }
-
-  searchBtn?.addEventListener('click', openSearch);
-  searchBackdrop?.addEventListener('click', closeSearch);
-
-  document.addEventListener('keydown', (e) => {
-    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-      e.preventDefault();
-      openSearch();
+    /* ── Compactación + progreso ── */
+    function onScroll() {
+      const y = window.scrollY || document.documentElement.scrollTop || 0;
+      if (header) header.classList.toggle('is-scrolled', y > 20);
+      if (progress) {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.width = (max > 0 ? Math.min(100, (y / max) * 100) : 0) + '%';
+      }
+      spy();
+      ticking = false;
     }
-    if (e.key === 'Escape') closeSearch();
-  });
+
+    /* ── Scroll-spy: resalta la seccion visible ── */
+    const spyHome = document.querySelector('.sh-nav-link[data-nav="/"]');
+    const spyProd = document.querySelector('.sh-nav-link[data-nav="/productos"]');
+    // #productos se renderiza DESPUES del header, por eso se resuelve en cada tick
+    let spySection = null;
+
+    function spy() {
+      if (!spyHome || !spyProd) return;
+      if (!spySection) spySection = document.getElementById('productos');
+      if (!spySection) return;
+      const r = spySection.getBoundingClientRect();
+      const line = (window.innerHeight || 0) * 0.28;   // linea de lectura
+      const inProducts = r.top <= line && r.bottom > line;
+      spyProd.classList.toggle('is-active', inProducts);
+      spyHome.classList.toggle('is-active', !inProducts);
+    }
+    function requestTick() {
+      if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+    }
+    window.addEventListener('scroll', requestTick, { passive: true });
+    window.addEventListener('resize', requestTick, { passive: true });
+    onScroll();
+
+    /* ── Mega menú ── */
+    const trigger = document.getElementById('mega-trigger');
+    const mega = document.getElementById('mega-panel');
+    const backdrop = document.getElementById('mega-backdrop');
+    let megaTimer = null;
+
+    function openMega() {
+      clearTimeout(megaTimer);
+      header?.classList.add('mega-open');
+      trigger?.setAttribute('aria-expanded', 'true');
+    }
+    function closeMega(delay) {
+      clearTimeout(megaTimer);
+      megaTimer = setTimeout(() => {
+        header?.classList.remove('mega-open');
+        trigger?.setAttribute('aria-expanded', 'false');
+      }, delay || 0);
+    }
+
+    const megaZone = trigger?.closest('li');
+    megaZone?.addEventListener('mouseenter', openMega);
+    megaZone?.addEventListener('mouseleave', () => closeMega(140));
+    mega?.addEventListener('mouseenter', openMega);
+    mega?.addEventListener('mouseleave', () => closeMega(140));
+    backdrop?.addEventListener('click', () => closeMega(0));
+    // cerrar al scrollear (comportamiento estandar de mega menus)
+    window.addEventListener('scroll', () => {
+      if (header?.classList.contains('mega-open')) closeMega(0);
+    }, { passive: true });
+
+    trigger?.addEventListener('click', (e) => {
+      if (window.matchMedia('(min-width: 1024px)').matches) {
+        e.preventDefault();
+        header?.classList.contains('mega-open') ? closeMega(0) : openMega();
+      }
+    });
+    trigger?.addEventListener('focus', openMega);
+
+    /* ── Menú móvil ── */
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuBtn?.addEventListener('click', () => {
+      const hidden = mobileMenu?.classList.toggle('is-hidden');
+      menuIcon?.classList.toggle('is-hidden', !hidden);
+      closeIcon?.classList.toggle('is-hidden', hidden);
+      mobileMenuBtn.setAttribute('aria-expanded', String(!hidden));
+    });
+
+    /* ── Búsqueda ── */
+    const searchBtn = document.getElementById('search-btn');
+    const searchModal = document.getElementById('search-modal');
+    const searchBackdrop = document.getElementById('search-backdrop');
+    const searchInput = document.getElementById('search-input');
+
+    function openSearch() {
+      searchModal?.classList.remove('is-hidden');
+      setTimeout(() => searchInput?.focus(), 80);
+      document.body.style.overflow = 'hidden';
+    }
+    function closeSearch() {
+      searchModal?.classList.add('is-hidden');
+      document.body.style.overflow = '';
+    }
+    searchBtn?.addEventListener('click', openSearch);
+    searchBackdrop?.addEventListener('click', closeSearch);
+
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); openSearch(); }
+      if (e.key === 'Escape') { closeSearch(); closeMega(0); }
+    });
+  })();
 </script>

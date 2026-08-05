@@ -1,161 +1,224 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Button from '../components/ui/Button.astro';
+import PageHero from '../components/layout/PageHero.astro';
+import { waLink } from '../lib/blog';
+
+const SITE = 'https://firefighter.com.mx';
+
+const canales = [
+  {
+    eyebrow: 'Lo más rápido',
+    titulo: 'Cotización por WhatsApp',
+    texto: 'Mándanos qué necesitas —aunque sea una foto del equipo o el anexo técnico de la convocatoria— y te contesta quien arma las propuestas. Sin formularios de por medio.',
+    accion: 'Abrir WhatsApp',
+    href: waLink('necesito una cotización'),
+    externo: true,
+    destacado: true,
+  },
+  {
+    eyebrow: 'Compra pública',
+    titulo: 'Licitaciones y CompraNet',
+    texto: 'Carta de distribuidor autorizado, certificados de laboratorio, fichas técnicas y propuesta desglosada por partida con clave CABMS. Escríbenos con la convocatoria.',
+    accion: 'licitaciones@firefighter.com.mx',
+    href: 'mailto:licitaciones@firefighter.com.mx',
+    externo: false,
+    destacado: false,
+  },
+  {
+    eyebrow: 'Ventas',
+    titulo: 'Correo comercial',
+    texto: 'Para pedidos, seguimiento de una propuesta en curso o programar mantenimiento, recarga y pruebas del equipo que ya tienes en servicio.',
+    accion: 'ventas@firefighter.com.mx',
+    href: 'mailto:ventas@firefighter.com.mx',
+    externo: false,
+    destacado: false,
+  },
+  {
+    eyebrow: 'Directorio',
+    titulo: 'Correcciones del directorio',
+    texto: 'Si una estación cambió de domicilio o teléfono, o falta alguna, dinos. El directorio es gratuito y se mantiene con avisos como el tuyo.',
+    accion: 'Sugerir una estación',
+    href: '/agregar-estacion',
+    externo: false,
+    destacado: false,
+  },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contacto — FIREFIGHTER México',
+  url: `${SITE}/contacto`,
+  inLanguage: 'es-MX',
+  mainEntity: {
+    '@type': 'Organization',
+    name: 'FIREFIGHTER México',
+    url: SITE,
+    contactPoint: [
+      { '@type': 'ContactPoint', contactType: 'sales', email: 'ventas@firefighter.com.mx', areaServed: 'MX', availableLanguage: 'es' },
+      { '@type': 'ContactPoint', contactType: 'bidding', email: 'licitaciones@firefighter.com.mx', areaServed: 'MX', availableLanguage: 'es' },
+    ],
+  },
+};
 ---
 
 <BaseLayout
-  title="Contacto"
-  description="Contáctanos para sugerencias, correcciones o información sobre el directorio de estaciones de bomberos de México."
+  title="Contacto: cotizaciones y licitaciones"
+  description="Cotiza equipo contra incendios y para bomberos, solicita documentación para licitaciones o programa mantenimiento. Respuesta en menos de 24 horas hábiles."
+  canonicalUrl={`${SITE}/contacto`}
   breadcrumbs={[{ label: 'Contacto' }]}
 >
-  <!-- Hero Section -->
-  <section class="bg-slate-900">
-    <div class="container-custom py-20 md:py-28">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <!-- Left Content -->
-        <div class="text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-fire-600 rounded-full mb-6">
-            <span class="w-2 h-2 bg-white rounded-full"></span>
-            <span class="text-white text-sm font-medium">Estamos para ayudarte</span>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </Fragment>
+
+  <PageHero
+    eyebrow="Hablemos"
+    badge="Respuesta en 24 h hábiles"
+    h1="Cuéntanos qué tienes<br>que resolver"
+    lead="No hace falta que llegues con una lista de partidas. Con que nos digas qué operación tienes que cubrir y con cuánto cuentas, podemos empezar."
+    bloques={[
+      {
+        label: 'Cómo respondemos',
+        texto: 'Te contesta el área técnica, no un call center. Si tu caso no es lo nuestro te lo decimos y, cuando podemos, te orientamos hacia quién sí lo resuelve.',
+      },
+      {
+        label: 'Esto no es una línea de emergencia',
+        texto: 'Si hay un incendio o un accidente en curso, marca <strong style="color:#e4e4e7; font-weight:600;">911</strong>. Es gratuito, opera las 24 horas y coordina bomberos, ambulancia y protección civil.',
+      },
+    ]}
+  >
+    <div slot="ctas" style="display:flex; flex-wrap:wrap; gap:10px;">
+      <a href={waLink('necesito una cotización')} target="_blank" rel="noopener" class="l2-cta">
+        <span>Cotizar por WhatsApp</span>
+      </a>
+      <a href="#formulario" class="l2-cta-ghost">
+        <span>Escribir un mensaje</span>
+      </a>
+    </div>
+  </PageHero>
+
+  <!-- ══ CANALES ══ -->
+  <section style="background:#fff; padding:64px 0; border-bottom:1px solid #e4e4e7;">
+    <div class="container-custom">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:28px;">
+        <span style="display:block; width:24px; height:2px; background:#dc2626; border-radius:2px;"></span>
+        <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Elige por dónde</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {canales.map(c => (
+          <div style={`background:${c.destacado ? '#09090b' : '#fff'}; border:1px solid ${c.destacado ? '#1f1f23' : '#e4e4e7'}; border-radius:14px; padding:26px; display:flex; flex-direction:column;`}>
+            <span style="font-size:0.63rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#dc2626; margin-bottom:12px;">{c.eyebrow}</span>
+            <h2 style={`font-size:1.08rem; font-weight:800; margin:0 0 10px; line-height:1.3; color:${c.destacado ? '#fafafa' : '#09090b'};`}>{c.titulo}</h2>
+            <p style={`font-size:0.85rem; line-height:1.8; margin:0 0 22px; flex:1; color:${c.destacado ? '#a1a1aa' : '#71717a'};`}>{c.texto}</p>
+            <a
+              href={c.href}
+              target={c.externo ? '_blank' : undefined}
+              rel={c.externo ? 'noopener' : undefined}
+              style={`display:inline-flex; align-items:center; justify-content:space-between; gap:10px; font-size:0.82rem; font-weight:700; text-decoration:none; padding:11px 16px; border-radius:9px; ${c.destacado ? 'background:#25d366; color:#fff;' : 'background:#fef2f2; color:#b91c1c; border:1px solid #fecaca;'}`}
+            >
+              <span>{c.accion}</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
           </div>
-
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-[1.1]">
-            <span class="text-fire-500">Contacto</span>
-          </h1>
-
-          <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-            ¿Tienes sugerencias, correcciones o quieres agregar una estación?
-            <span class="text-white font-semibold">Escríbenos y te responderemos lo antes posible.</span>
-          </p>
-        </div>
-
-        <!-- Right Side - Info -->
-        <div class="hidden lg:block">
-          <p class="text-slate-300 text-lg leading-relaxed mb-6">
-            Queremos mantener el directorio <strong class="text-white">actualizado y preciso</strong>. Tu retroalimentación es fundamental para lograrlo. Si encuentras información incorrecta o conoces una estación que no está registrada, háznoslo saber.
-          </p>
-          <p class="text-slate-300 text-lg leading-relaxed">
-            <strong class="text-white">Importante:</strong> Este no es un servicio de emergencias. En caso de emergencia, llama al <strong class="text-fire-400">911</strong>.
-          </p>
-        </div>
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- Main Content -->
-  <section class="section bg-slate-50">
+  <!-- ══ FORMULARIO ══ -->
+  <section id="formulario" style="background:#f8fafc; padding:72px 0;">
     <div class="container-custom">
-      <div class="max-w-3xl mx-auto">
-        <!-- Form Card -->
-        <div class="bg-white rounded-xl overflow-hidden" style="border: 1px solid #e2e8f0;">
-          <div class="h-1 w-full" style="background-color: #dc2626;"></div>
-          <div class="p-8">
-            <form name="contact" method="POST" data-netlify="true" class="space-y-6">
-              <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label for="name" class="block text-sm font-medium text-slate-700 mb-2">
-                    Nombre *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    class="input"
-                    placeholder="Tu nombre"
-                  />
-                </div>
-                <div>
-                  <label for="email" class="block text-sm font-medium text-slate-700 mb-2">
-                    Correo electrónico *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    class="input"
-                    placeholder="tu@email.com"
-                  />
-                </div>
-              </div>
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-12" style="align-items:start;">
 
+        <div style="background:#fff; border:1px solid #e4e4e7; border-radius:16px; padding:32px;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px;">
+            <span style="display:block; width:24px; height:2px; background:#dc2626; border-radius:2px;"></span>
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Formulario</span>
+          </div>
+          <h2 style="font-size:1.5rem; font-weight:800; color:#09090b; margin:0 0 10px; letter-spacing:-0.02em;">Escríbenos con calma</h2>
+          <p style="font-size:0.88rem; color:#52525b; line-height:1.8; margin:0 0 28px;">
+            Entre más nos cuentes del contexto —tipo de operación, superficie, cuántas personas, si hay una convocatoria de por medio— más precisa sale la propuesta.
+          </p>
+
+          <form name="contact" method="POST" data-netlify="true" style="display:flex; flex-direction:column; gap:20px;">
+            <input type="hidden" name="form-name" value="contact" />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div>
-                <label for="subject" class="block text-sm font-medium text-slate-700 mb-2">
-                  Asunto *
-                </label>
-                <select id="subject" name="subject" required class="input">
-                  <option value="">Selecciona una opción</option>
-                  <option value="agregar-estacion">Agregar nueva estación</option>
-                  <option value="correccion">Corrección de datos</option>
-                  <option value="sugerencia">Sugerencia</option>
-                  <option value="colaboracion">Colaboración</option>
-                  <option value="otro">Otro</option>
-                </select>
+                <label for="nombre" style="display:block; font-size:0.78rem; font-weight:700; color:#3f3f46; margin-bottom:8px;">Nombre *</label>
+                <input type="text" id="nombre" name="nombre" required style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:9px; font-size:0.88rem; color:#09090b; background:#fff;" />
               </div>
-
               <div>
-                <label for="message" class="block text-sm font-medium text-slate-700 mb-2">
-                  Mensaje *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows="5"
-                  class="input"
-                  placeholder="Escribe tu mensaje aquí..."
-                ></textarea>
+                <label for="organizacion" style="display:block; font-size:0.78rem; font-weight:700; color:#3f3f46; margin-bottom:8px;">Institución o empresa</label>
+                <input type="text" id="organizacion" name="organizacion" style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:9px; font-size:0.88rem; color:#09090b; background:#fff;" />
               </div>
+            </div>
 
-              <div class="flex items-center gap-4">
-                <Button type="submit" variant="primary">
-                  Enviar mensaje
-                </Button>
-                <span class="text-sm text-slate-500">* Campos requeridos</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div>
+                <label for="email" style="display:block; font-size:0.78rem; font-weight:700; color:#3f3f46; margin-bottom:8px;">Correo electrónico *</label>
+                <input type="email" id="email" name="email" required style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:9px; font-size:0.88rem; color:#09090b; background:#fff;" />
               </div>
-            </form>
+              <div>
+                <label for="telefono" style="display:block; font-size:0.78rem; font-weight:700; color:#3f3f46; margin-bottom:8px;">Teléfono o WhatsApp</label>
+                <input type="tel" id="telefono" name="telefono" style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:9px; font-size:0.88rem; color:#09090b; background:#fff;" />
+              </div>
+            </div>
+
+            <div>
+              <label for="asunto" style="display:block; font-size:0.78rem; font-weight:700; color:#3f3f46; margin-bottom:8px;">¿Qué necesitas? *</label>
+              <select id="asunto" name="asunto" required style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:9px; font-size:0.88rem; color:#09090b; background:#fff;">
+                <option value="">Selecciona una opción</option>
+                <option value="cotizacion">Cotizar equipo</option>
+                <option value="licitacion">Documentación para una licitación</option>
+                <option value="mantenimiento">Mantenimiento, recarga o pruebas</option>
+                <option value="capacitacion">Capacitación o instalación</option>
+                <option value="asesoria">Asesoría para especificar</option>
+                <option value="directorio">Corrección del directorio de estaciones</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="mensaje" style="display:block; font-size:0.78rem; font-weight:700; color:#3f3f46; margin-bottom:8px;">Cuéntanos el contexto *</label>
+              <textarea id="mensaje" name="mensaje" rows="6" required style="width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:9px; font-size:0.88rem; color:#09090b; background:#fff; resize:vertical;"></textarea>
+            </div>
+
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+              <button type="submit" style="display:inline-flex; align-items:center; gap:9px; background:#dc2626; color:#fff; font-size:0.88rem; font-weight:700; padding:13px 22px; border:0; border-radius:9px; cursor:pointer;">
+                Enviar mensaje
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </button>
+              <span style="font-size:0.74rem; color:#a1a1aa;">* Campos obligatorios · Datos tratados según el <a href="/privacidad" style="color:#dc2626; font-weight:600;">aviso de privacidad</a></span>
+            </div>
+          </form>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <div style="background:#09090b; border-radius:16px; padding:26px;">
+            <div style="display:flex; align-items:center; gap:8px; padding-bottom:14px; margin-bottom:16px; border-bottom:1px solid #27272a;">
+              <span style="width:7px; height:7px; background:#22c55e; border-radius:50%; display:block;"></span>
+              <span style="font-size:0.64rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:#a1a1aa;">Horario de atención</span>
+            </div>
+            <p style="font-size:0.87rem; color:#a1a1aa; line-height:1.85; margin:0 0 18px;">
+              Contestamos correos y WhatsApp en horario hábil, y las cotizaciones salen en menos de 24 horas hábiles. Si escribes un viernes por la tarde, lo verás el lunes temprano.
+            </p>
+            <a href={waLink('tengo una duda')} target="_blank" rel="noopener" class="blog-btn-wa">Escribir por WhatsApp</a>
+          </div>
+
+          <div style="background:#fef2f2; border:1px solid #fecaca; border-radius:16px; padding:26px; text-align:center;">
+            <p style="font-size:0.92rem; font-weight:800; color:#09090b; margin:0 0 8px;">¿Es una emergencia?</p>
+            <p style="font-size:0.8rem; color:#52525b; line-height:1.75; margin:0 0 18px;">
+              Este no es un servicio de emergencias. Marca 911 desde cualquier teléfono: es gratuito y opera las 24 horas.
+            </p>
+            <a href="tel:911" style="display:flex; align-items:center; justify-content:center; gap:9px; background:#dc2626; color:#fff; font-size:0.95rem; font-weight:800; padding:12px; border-radius:9px; text-decoration:none;">
+              Llamar al 911
+            </a>
           </div>
         </div>
 
-        <!-- Additional info -->
-        <div class="mt-12 grid md:grid-cols-2 gap-6">
-          <div class="bg-white rounded-xl overflow-hidden" style="border: 1px solid #e2e8f0;">
-            <div class="h-1 w-full" style="background-color: #dc2626;"></div>
-            <div class="p-6 text-center">
-              <div class="w-12 h-12 bg-fire-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <svg class="w-6 h-6 text-fire-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                </svg>
-              </div>
-              <h3 class="font-display font-semibold text-slate-800 mb-2">Agregar Estación</h3>
-              <p class="text-sm text-slate-600 mb-4">
-                ¿Conoces una estación que no está en nuestro directorio?
-              </p>
-              <a href="/agregar-estacion" class="text-fire-600 hover:text-fire-700 font-medium text-sm">
-                Sugerir estación →
-              </a>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl overflow-hidden" style="border: 1px solid #e2e8f0;">
-            <div class="h-1 w-full" style="background-color: #f59e0b;"></div>
-            <div class="p-6 text-center">
-              <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
-                </svg>
-              </div>
-              <h3 class="font-display font-semibold text-slate-800 mb-2">¿Emergencia?</h3>
-              <p class="text-sm text-slate-600 mb-4">
-                Este no es un servicio de emergencias. En caso de emergencia:
-              </p>
-              <a href="tel:911" class="text-2xl font-display font-bold text-fire-600">
-                Llama al 911
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>

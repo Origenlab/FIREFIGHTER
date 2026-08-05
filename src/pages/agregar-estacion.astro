@@ -1,142 +1,86 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Button from '../components/ui/Button.astro';
+import PageHero from '../components/layout/PageHero.astro';
 import states from '../data/states.json';
 
+const SITE = 'https://firefighter.com.mx';
 const sortedStates = [...states].sort((a, b) => a.name.localeCompare(b.name));
+
+const inputStyle = 'width:100%; padding:11px 14px; border:1px solid #e4e4e7; border-radius:9px; font-size:0.88rem; color:#09090b; background:#fff;';
+const labelStyle = 'display:block; font-size:0.78rem; font-weight:700; color:#3f3f46; margin-bottom:8px;';
 ---
 
 <BaseLayout
-  title="Agregar Estación de Bomberos"
-  description="Sugiere una nueva estación de bomberos para agregar al directorio nacional de Firefighter México."
+  title="Sugerir una estación de bomberos"
+  description="Ayúdanos a completar el directorio de estaciones de bomberos de México. Envíanos los datos de una estación que falte o corrige la información publicada."
+  canonicalUrl={`${SITE}/agregar-estacion`}
   breadcrumbs={[{ label: 'Agregar Estación' }]}
 >
-  <!-- Hero Section -->
-  <section class="bg-slate-900">
-    <div class="container-custom py-20 md:py-28">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <!-- Left Content -->
-        <div class="text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-fire-600 rounded-full mb-6">
-            <span class="w-2 h-2 bg-white rounded-full"></span>
-            <span class="text-white text-sm font-medium">Colabora con nosotros</span>
-          </div>
+  <PageHero
+    eyebrow="Colabora con el directorio"
+    badge="Gratuito y abierto"
+    h1="¿Falta una estación<br>en el directorio?"
+    lead="El directorio se arma con fuentes públicas y con avisos de gente que conoce su zona. Si sabes de una estación que no aparece —o de un dato que ya cambió—, mándanoslo."
+    bloques={[
+      {
+        label: 'Qué hacemos con tu aviso',
+        texto: 'Verificamos la información antes de publicarla. Si algo no cuadra, buscamos confirmarlo con la propia estación o con protección civil del municipio.',
+      },
+      {
+        label: 'No pedimos nada a cambio',
+        texto: 'El directorio es gratuito y no tiene publicidad. Lo mantenemos como aporte a la comunidad de bomberos con la que trabajamos todos los días.',
+      },
+    ]}
+  />
 
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-[1.1]">
-            Agregar
-            <span class="text-fire-500">Estación</span>
-          </h1>
-
-          <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-            ¿Conoces una estación de bomberos que no está en nuestro directorio?
-            <span class="text-white font-semibold">Ayúdanos a mantener la información actualizada.</span>
-          </p>
-        </div>
-
-        <!-- Right Side - Info -->
-        <div class="hidden lg:block">
-          <p class="text-slate-300 text-lg leading-relaxed mb-6">
-            Tu colaboración es <strong class="text-white">invaluable</strong> para mantener el directorio completo y actualizado. Al sugerir una estación, nos ayudas a que más personas puedan encontrar información de emergencia cuando la necesiten.
-          </p>
-          <p class="text-slate-300 text-lg leading-relaxed">
-            Revisaremos cada sugerencia y la agregaremos al directorio una vez que <strong class="text-white">verifiquemos la información</strong>. Gracias por contribuir.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Content -->
-  <section class="section bg-slate-50">
+  <section style="background:#f8fafc; padding:64px 0;">
     <div class="container-custom">
-      <div class="max-w-2xl mx-auto">
-        <!-- Form Card -->
-        <div class="bg-white rounded-xl overflow-hidden" style="border: 1px solid #e2e8f0;">
-          <div class="h-1 w-full" style="background-color: #dc2626;"></div>
-          <div class="p-8">
-            <form name="add-station" method="POST" data-netlify="true" class="space-y-6">
-              <!-- Station Info -->
-              <div>
-                <h2 class="text-lg font-display font-semibold text-slate-800 mb-4">
-                  Información de la estación
-                </h2>
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-12" style="align-items:start;">
 
-                <div class="space-y-4">
+        <div style="background:#fff; border:1px solid #e4e4e7; border-radius:16px; padding:32px;">
+          <form name="add-station" method="POST" data-netlify="true" style="display:flex; flex-direction:column; gap:26px;">
+            <input type="hidden" name="form-name" value="add-station" />
+
+            <div>
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:18px;">
+                <span style="font-size:0.66rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#dc2626;">Datos de la estación</span>
+                <div style="flex:1; height:1px; background:#f4f4f5;"></div>
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:18px;">
+                <div>
+                  <label for="station-name" style={labelStyle}>Nombre de la estación *</label>
+                  <input type="text" id="station-name" name="station-name" required style={inputStyle} />
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
-                    <label for="station-name" class="block text-sm font-medium text-slate-700 mb-2">
-                      Nombre de la estación *
-                    </label>
-                    <input
-                      type="text"
-                      id="station-name"
-                      name="station-name"
-                      required
-                      class="input"
-                      placeholder="Ej: Estación Central de Bomberos"
-                    />
+                    <label for="state" style={labelStyle}>Estado *</label>
+                    <select id="state" name="state" required style={inputStyle}>
+                      <option value="">Selecciona un estado</option>
+                      {sortedStates.map(state => <option value={state.slug}>{state.name}</option>)}
+                    </select>
                   </div>
-
-                  <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label for="state" class="block text-sm font-medium text-slate-700 mb-2">
-                        Estado *
-                      </label>
-                      <select id="state" name="state" required class="input">
-                        <option value="">Selecciona un estado</option>
-                        {sortedStates.map((state) => (
-                          <option value={state.slug}>{state.name}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label for="city" class="block text-sm font-medium text-slate-700 mb-2">
-                        Ciudad/Municipio *
-                      </label>
-                      <input
-                        type="text"
-                        id="city"
-                        name="city"
-                        required
-                        class="input"
-                        placeholder="Ej: Guadalajara"
-                      />
-                    </div>
-                  </div>
-
                   <div>
-                    <label for="address" class="block text-sm font-medium text-slate-700 mb-2">
-                      Dirección completa *
-                    </label>
-                    <input
-                      type="text"
-                      id="address"
-                      name="address"
-                      required
-                      class="input"
-                      placeholder="Calle, número, colonia, código postal"
-                    />
+                    <label for="city" style={labelStyle}>Ciudad o municipio *</label>
+                    <input type="text" id="city" name="city" required style={inputStyle} />
                   </div>
+                </div>
 
+                <div>
+                  <label for="address" style={labelStyle}>Dirección completa *</label>
+                  <input type="text" id="address" name="address" required style={inputStyle} />
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
-                    <label for="phone" class="block text-sm font-medium text-slate-700 mb-2">
-                      Teléfono *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      class="input"
-                      placeholder="Ej: +52 33 1234 5678"
-                    />
+                    <label for="phone" style={labelStyle}>Teléfono *</label>
+                    <input type="tel" id="phone" name="phone" required style={inputStyle} />
                   </div>
-
                   <div>
-                    <label for="service-type" class="block text-sm font-medium text-slate-700 mb-2">
-                      Tipo de servicio
-                    </label>
-                    <select id="service-type" name="service-type" class="input">
-                      <option value="">Selecciona si conoces</option>
+                    <label for="service-type" style={labelStyle}>Tipo de servicio</label>
+                    <select id="service-type" name="service-type" style={inputStyle}>
+                      <option value="">Selecciona si lo conoces</option>
                       <option value="profesional">Profesional</option>
                       <option value="voluntario">Voluntario</option>
                       <option value="industrial">Industrial</option>
@@ -145,70 +89,65 @@ const sortedStates = [...states].sort((a, b) => a.name.localeCompare(b.name));
                   </div>
                 </div>
               </div>
+            </div>
 
-              <!-- Your Info -->
-              <div class="pt-6 border-t border-slate-200">
-                <h2 class="text-lg font-display font-semibold text-slate-800 mb-4">
-                  Tu información
-                </h2>
+            <div>
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:18px;">
+                <span style="font-size:0.66rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#dc2626;">Tus datos</span>
+                <div style="flex:1; height:1px; background:#f4f4f5;"></div>
+              </div>
 
-                <div class="space-y-4">
-                  <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label for="your-name" class="block text-sm font-medium text-slate-700 mb-2">
-                        Tu nombre *
-                      </label>
-                      <input
-                        type="text"
-                        id="your-name"
-                        name="your-name"
-                        required
-                        class="input"
-                      />
-                    </div>
-                    <div>
-                      <label for="your-email" class="block text-sm font-medium text-slate-700 mb-2">
-                        Tu correo *
-                      </label>
-                      <input
-                        type="email"
-                        id="your-email"
-                        name="your-email"
-                        required
-                        class="input"
-                      />
-                    </div>
-                  </div>
-
+              <div style="display:flex; flex-direction:column; gap:18px;">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
-                    <label for="notes" class="block text-sm font-medium text-slate-700 mb-2">
-                      Notas adicionales
-                    </label>
-                    <textarea
-                      id="notes"
-                      name="notes"
-                      rows="3"
-                      class="input"
-                      placeholder="Cualquier información adicional que pueda ser útil..."
-                    ></textarea>
+                    <label for="your-name" style={labelStyle}>Tu nombre *</label>
+                    <input type="text" id="your-name" name="your-name" required style={inputStyle} />
+                  </div>
+                  <div>
+                    <label for="your-email" style={labelStyle}>Tu correo *</label>
+                    <input type="email" id="your-email" name="your-email" required style={inputStyle} />
                   </div>
                 </div>
+                <div>
+                  <label for="notes" style={labelStyle}>Notas adicionales</label>
+                  <textarea id="notes" name="notes" rows="4" style={`${inputStyle} resize:vertical;`}></textarea>
+                </div>
               </div>
+            </div>
 
-              <div class="flex items-center gap-4 pt-4">
-                <Button type="submit" variant="primary">
-                  Enviar sugerencia
-                </Button>
-                <span class="text-sm text-slate-500">* Campos requeridos</span>
-              </div>
-            </form>
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding-top:6px; border-top:1px solid #f4f4f5;">
+              <button type="submit" style="display:inline-flex; align-items:center; gap:9px; background:#dc2626; color:#fff; font-size:0.88rem; font-weight:700; padding:13px 22px; border:0; border-radius:9px; cursor:pointer; margin-top:20px;">
+                Enviar sugerencia
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </button>
+              <span style="font-size:0.74rem; color:#a1a1aa; margin-top:20px;">* Campos obligatorios</span>
+            </div>
+          </form>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <div style="background:#fff; border:1px solid #e4e4e7; border-radius:16px; padding:24px;">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
+              <span style="display:block; width:20px; height:2px; background:#dc2626; border-radius:2px;"></span>
+              <span style="font-size:0.66rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#dc2626;">Qué nos sirve más</span>
+            </div>
+            <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px;">
+              {['Teléfono administrativo vigente', 'Dirección con referencias claras', 'Si es estación profesional, voluntaria o industrial', 'Nombre del comandante, si lo conoces'].map(item => (
+                <li style="display:flex; align-items:flex-start; gap:9px; font-size:0.82rem; color:#3f3f46; line-height:1.65;">
+                  <svg width="13" height="13" fill="none" stroke="#dc2626" stroke-width="2.5" viewBox="0 0 24 24" style="flex-shrink:0; margin-top:4px;" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div style="background:#fef2f2; border:1px solid #fecaca; border-radius:16px; padding:24px; text-align:center;">
+            <p style="font-size:0.9rem; font-weight:800; color:#09090b; margin:0 0 8px;">¿Es una emergencia?</p>
+            <p style="font-size:0.78rem; color:#52525b; line-height:1.75; margin:0 0 16px;">Este formulario no atiende emergencias. Marca 911 desde cualquier teléfono.</p>
+            <a href="tel:911" style="display:block; background:#dc2626; color:#fff; font-size:0.92rem; font-weight:800; padding:11px; border-radius:9px; text-decoration:none;">Llamar al 911</a>
           </div>
         </div>
 
-        <p class="text-center text-sm text-slate-500 mt-6">
-          Revisaremos tu sugerencia y la agregaremos al directorio si es válida.
-          Gracias por contribuir a mantener el directorio actualizado.
-        </p>
       </div>
     </div>
   </section>

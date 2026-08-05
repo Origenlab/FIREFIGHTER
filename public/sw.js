@@ -3,6 +3,18 @@
  * Provides offline caching and PWA functionality
  */
 
+// Guard: nunca operar en desarrollo local (rompe HMR de Vite/Astro)
+const IS_LOCAL = ['localhost', '127.0.0.1', '[::1]'].includes(self.location.hostname);
+if (IS_LOCAL) {
+  self.addEventListener('install', () => self.skipWaiting());
+  self.addEventListener('activate', (e) => e.waitUntil(
+    caches.keys()
+      .then((k) => Promise.all(k.map((n) => caches.delete(n))))
+      .then(() => self.registration.unregister())
+      .then(() => self.clients.claim())
+  ));
+}
+
 const CACHE_NAME = 'firefighter-mx-v1';
 const STATIC_CACHE = 'firefighter-static-v1';
 const DYNAMIC_CACHE = 'firefighter-dynamic-v1';
@@ -54,6 +66,7 @@ self.addEventListener('activate', (event) => {
 
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
+  if (IS_LOCAL) return;
   const { request } = event;
   const url = new URL(request.url);
 

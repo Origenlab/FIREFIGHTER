@@ -79,3 +79,6 @@ Estudio_Competencia_FIREFIGHTER_2026.docx
 # worktrees: copias de trabajo, nunca se versionan
 .worktrees/
 .claude/worktrees/
+
+# artefactos de herramientas de sesión
+.superpowers/

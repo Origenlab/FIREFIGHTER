@@ -85,7 +85,7 @@ La NOM establece que la válvula de control no debe estar a más de 1.5 metros d
 
 Los almacenes con racks de más de 4 metros de altura presentan un desafío especial: el fuego que se inicia en un nivel alto no puede alcanzarse con una manguera de 30 metros desde el piso. Para estos casos, NFPA 13 y NFPA 14 recomiendan la combinación de gabinetes perimetrales con sistemas de sprinklers en rack. Los gabinetes solos son insuficientes para control de incendio en rack de gran altura.
 
-Para instalaciones que combinan gabinetes con sistemas de supresión automática, consulte nuestra guía de [sistemas de sprinklers NFPA 13](/blog/sistemas-sprinklers-nfpa-13-mexico).
+Para instalaciones que combinan gabinetes con sistemas de supresión automática, consulte nuestra guía de [sistemas de sprinklers NFPA 13](/blog/sprinklers-nfpa-13-guia-instalacion).
 
 ### Áreas Exteriores y Patios de Maniobra
 

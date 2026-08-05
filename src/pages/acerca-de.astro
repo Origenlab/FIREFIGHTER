@@ -1,135 +1,220 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/layout/PageHero.astro';
+import Servicios from '../components/blog/Servicios.astro';
+import categorias from '../data/productos.json';
+import { getCollection } from 'astro:content';
+import { waLink } from '../lib/blog';
+
+const SITE = 'https://firefighter.com.mx';
+const estacionesPublicadas = (await getCollection('stations')).length;
+
+const principios = [
+  {
+    titulo: 'Decimos que no cuando toca',
+    texto: 'Si lo que necesitas no es lo que vendemos —o si con lo que ya tienes es suficiente—, te lo decimos. Perder una venta cuesta menos que perder a un cliente que se sintió mal asesorado.',
+  },
+  {
+    titulo: 'Cotizamos con norma y número de parte',
+    texto: 'Nada de "traje para bombero" en la propuesta. Cada partida lleva marca, modelo, norma aplicable y número de parte, para que puedas comparar contra cualquier otro proveedor sin adivinar.',
+  },
+  {
+    titulo: 'La documentación va incluida',
+    texto: 'Carta de distribuidor autorizado, certificados de laboratorio y factura desglosada por partida vienen con el pedido, no como extra. Es lo que revisa la auditoría y lo que pide una licitación.',
+  },
+  {
+    titulo: 'Contestamos nosotros',
+    texto: 'Quien te responde el WhatsApp es la misma persona que arma la propuesta técnica y la que va a estar cuando haya que reponer una pieza. No hay call center intermedio.',
+  },
+];
+
+const pasos = [
+  { n: '01', t: 'Nos cuentas la operación', d: 'Qué tipo de intervención, qué ambiente, cuánta gente y con cuánto presupuesto cuentas. Con eso ya se descarta la mitad del catálogo.' },
+  { n: '02', t: 'Te devolvemos la especificación', d: 'Propuesta técnica con norma aplicable, alcance y cantidades dimensionadas por riesgo. En menos de 24 horas hábiles.' },
+  { n: '03', t: 'Entregamos y capacitamos', d: 'Entrega en cualquiera de los 32 estados, con capacitación de uso y pruebas de ajuste facial cuando el equipo lo requiere.' },
+  { n: '04', t: 'Seguimos después de la venta', d: 'Recarga, prueba hidrostática, mantenimiento en banco y la bitácora que necesitas el día de la inspección.' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'Acerca de FIREFIGHTER México',
+  url: `${SITE}/acerca-de`,
+  inLanguage: 'es-MX',
+  mainEntity: {
+    '@type': 'Organization',
+    name: 'FIREFIGHTER México',
+    url: SITE,
+    areaServed: { '@type': 'Country', name: 'México' },
+    description: 'Distribuidor de equipo para bomberos y equipos contra incendios en México, con asesoría técnica, documentación para licitaciones, mantenimiento y capacitación.',
+  },
+};
 ---
 
 <BaseLayout
-  title="Acerca de Firefighter México"
-  description="Conoce más sobre el proyecto Firefighter México, el directorio nacional de estaciones de bomberos más completo del país."
+  title="Quiénes somos: distribución contra incendios"
+  description="Equipamos cuerpos de bomberos, brigadas industriales y proyectos contra incendios en los 32 estados, con distribución autorizada y asesoría técnica."
+  canonicalUrl={`${SITE}/acerca-de`}
   breadcrumbs={[{ label: 'Acerca de' }]}
 >
-  <!-- Hero Section -->
-  <section class="bg-slate-900">
-    <div class="container-custom py-20 md:py-28">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <!-- Left Content -->
-        <div class="text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-fire-600 rounded-full mb-6">
-            <span class="w-2 h-2 bg-white rounded-full"></span>
-            <span class="text-white text-sm font-medium">Proyecto Independiente</span>
-          </div>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </Fragment>
 
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-[1.1]">
-            Acerca de
-            <span class="text-fire-500">Firefighter México</span>
-          </h1>
+  <PageHero
+    eyebrow="Quiénes somos"
+    badge="Distribución autorizada"
+    h1="Equipamos a quien entra<br>cuando todos los demás salen"
+    lead="FIREFIGHTER México es una empresa de equipamiento contra incendios: vendemos, entregamos, capacitamos y damos mantenimiento a equipo para cuerpos de bomberos, brigadas industriales y proyectos de protección contra incendio en los 32 estados."
+    bloques={[
+      {
+        label: 'Lo que hacemos',
+        texto: 'Distribuimos equipo de <strong style="color:#e4e4e7; font-weight:600;">MSA Safety, Scott, Bullard, Holmatro y Amerex</strong>, entre otras marcas, con la documentación que piden las licitaciones públicas, las auditorías de protección civil y las verificaciones de la STPS.',
+      },
+      {
+        label: 'Lo que no hacemos',
+        texto: 'No somos un servicio de emergencias ni una autoridad. Si tienes una emergencia en curso, marca <strong style="color:#e4e4e7; font-weight:600;">911</strong>. Nosotros preparamos a quien va a responder esa llamada.',
+      },
+    ]}
+  >
+    <div slot="ctas" style="display:flex; flex-wrap:wrap; gap:10px;">
+      <a href={waLink('quiero saber más sobre FIREFIGHTER')} target="_blank" rel="noopener" class="l2-cta">
+        <span>Hablar con nosotros</span>
+      </a>
+      <a href="/productos" class="l2-cta-ghost">
+        <span>Ver catálogo</span>
+      </a>
+    </div>
+  </PageHero>
 
-          <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-            El directorio más completo de estaciones de bomberos en la República Mexicana.
-            <span class="text-white font-semibold">Facilitamos el acceso a información de emergencia.</span>
-          </p>
+  <!-- ══ STATS ══ -->
+  <section style="background:#fff; border-bottom:1px solid #e4e4e7;">
+    <div class="container-custom">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-px" style="background:#e4e4e7; border-left:1px solid #e4e4e7; border-right:1px solid #e4e4e7;">
+        <div style="background:#fff; padding:26px 22px; text-align:center;">
+          <div style="font-size:1.8rem; font-weight:800; color:#09090b; line-height:1;">32</div>
+          <div style="font-size:0.76rem; font-weight:600; color:#3f3f46; margin-top:6px;">Estados con cobertura</div>
         </div>
-
-        <!-- Right Side - Info -->
-        <div class="hidden lg:block">
-          <p class="text-slate-300 text-lg leading-relaxed mb-6">
-            Firefighter México nace de la necesidad de <strong class="text-white">centralizar información</strong> de los cuerpos de bomberos en todo el país. Nuestro objetivo es que cualquier ciudadano pueda encontrar rápidamente la estación de bomberos más cercana.
-          </p>
-          <p class="text-slate-300 text-lg leading-relaxed">
-            Somos un <strong class="text-white">proyecto independiente no gubernamental</strong> que recopila información de fuentes públicas para ponerla al alcance de todos los mexicanos.
-          </p>
+        <div style="background:#fff; padding:26px 22px; text-align:center;">
+          <div style="font-size:1.8rem; font-weight:800; color:#09090b; line-height:1;">{categorias.length}</div>
+          <div style="font-size:0.76rem; font-weight:600; color:#3f3f46; margin-top:6px;">Categorías en catálogo</div>
+        </div>
+        <div style="background:#fff; padding:26px 22px; text-align:center;">
+          <div style="font-size:1.8rem; font-weight:800; color:#09090b; line-height:1;">24 h</div>
+          <div style="font-size:0.76rem; font-weight:600; color:#3f3f46; margin-top:6px;">Respuesta a cotización</div>
+        </div>
+        <div style="background:#fff; padding:26px 22px; text-align:center;">
+          <div style="font-size:1.8rem; font-weight:800; color:#09090b; line-height:1;">{estacionesPublicadas}</div>
+          <div style="font-size:0.76rem; font-weight:600; color:#3f3f46; margin-top:6px;">Estaciones en el directorio</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Main Content -->
-  <section class="section bg-slate-50">
+  <!-- ══ CÓMO TRABAJAMOS ══ -->
+  <section style="background:#f8fafc; padding:72px 0; border-bottom:1px solid #e4e4e7;">
     <div class="container-custom">
-      <div class="max-w-3xl mx-auto">
-        <!-- Mission Card -->
-        <div class="bg-white rounded-xl overflow-hidden mb-8" style="border: 1px solid #e2e8f0;">
-          <div class="h-1 w-full" style="background-color: #dc2626;"></div>
-          <div class="p-8">
-            <h2 class="text-2xl font-display font-semibold text-slate-800 mb-4">
-              Nuestra Misión
-            </h2>
-            <p class="text-slate-600">
-              Proporcionar a la ciudadanía mexicana una herramienta confiable y actualizada para localizar estaciones de bomberos. Creemos que el acceso rápido a esta información puede salvar vidas en situaciones de emergencia.
-            </p>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" style="align-items:start; margin-bottom:44px;">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+            <span style="display:block; width:24px; height:2px; background:#dc2626; border-radius:2px;"></span>
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Cómo compramos juntos</span>
           </div>
+          <h2 style="font-size:clamp(1.7rem,2.6vw,2.4rem); font-weight:800; color:#09090b; line-height:1.12; margin:0; letter-spacing:-0.02em;">
+            Cuatro pasos, sin<br>sorpresas en el camino
+          </h2>
         </div>
+        <p style="font-size:0.95rem; color:#52525b; line-height:1.85; margin:0;">
+          Hemos visto compras grandes terminar guardadas en su caja y brigadas pequeñas quedar bien equipadas con la mitad del presupuesto. La diferencia casi nunca es el dinero: es cuánto se entendió la operación antes de cotizar. Por eso el primer paso no es enseñarte catálogo.
+        </p>
+      </div>
 
-        <!-- What We Offer -->
-        <div class="bg-white rounded-xl overflow-hidden mb-8" style="border: 1px solid #e2e8f0;">
-          <div class="h-1 w-full" style="background-color: #dc2626;"></div>
-          <div class="p-8">
-            <h2 class="text-2xl font-display font-semibold text-slate-800 mb-6">
-              ¿Qué ofrecemos?
-            </h2>
-            <ul class="space-y-4">
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-fire-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-slate-600">Directorio con información de más de 700 estaciones de bomberos</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-fire-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-slate-600">Cobertura de los 32 estados de la República</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-fire-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-slate-600">Mapa interactivo para ubicar estaciones cercanas</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-fire-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-slate-600">Información de contacto directo y servicios disponibles</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-fire-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-slate-600">Actualización constante de datos</span>
-              </li>
-            </ul>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        {pasos.map(p => (
+          <div style="background:#fff; border:1px solid #e4e4e7; border-radius:14px; padding:24px; display:flex; flex-direction:column;">
+            <span style="font-size:0.72rem; font-weight:800; letter-spacing:0.1em; color:#dc2626; margin-bottom:14px;">{p.n}</span>
+            <h3 style="font-size:1rem; font-weight:700; color:#09090b; margin:0 0 10px; line-height:1.35;">{p.t}</h3>
+            <p style="font-size:0.8rem; color:#71717a; line-height:1.75; margin:0;">{p.d}</p>
           </div>
-        </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-        <!-- Important Notice -->
-        <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-8">
-          <h3 class="font-display font-semibold text-amber-800 mb-2">
-            Aviso Importante
-          </h3>
-          <p class="text-amber-700 text-sm">
-            Firefighter México es un <strong>proyecto independiente no gubernamental</strong>. La información proporcionada es recopilada de fuentes públicas y puede no estar siempre actualizada. En caso de emergencia, siempre llama al <strong>911</strong>.
+  <!-- ══ PRINCIPIOS ══ -->
+  <section style="background:#fff; padding:72px 0;">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" style="align-items:start; margin-bottom:44px;">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+            <span style="display:block; width:24px; height:2px; background:#dc2626; border-radius:2px;"></span>
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Cómo nos gusta trabajar</span>
+          </div>
+          <h2 style="font-size:clamp(1.7rem,2.6vw,2.4rem); font-weight:800; color:#09090b; line-height:1.12; margin:0; letter-spacing:-0.02em;">
+            Cuatro cosas que puedes<br>exigirnos por escrito
+          </h2>
+        </div>
+        <p style="font-size:0.95rem; color:#52525b; line-height:1.85; margin:0;">
+          Este oficio tiene mala fama por buenas razones: propuestas sin especificar, equipo sin certificado y proveedores que desaparecen después de facturar. No podemos arreglar el mercado, pero sí podemos comprometernos con estas cuatro y que nos las reclames.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {principios.map(p => (
+          <div style="background:#fff; border:1px solid #e4e4e7; border-left:3px solid #dc2626; border-radius:14px; padding:26px;">
+            <h3 style="font-size:1.05rem; font-weight:800; color:#09090b; margin:0 0 10px; line-height:1.35;">{p.titulo}</h3>
+            <p style="font-size:0.87rem; color:#52525b; line-height:1.8; margin:0;">{p.texto}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SERVICIOS ══ -->
+  <Servicios fondo="#f8fafc" titulo="En qué te podemos<br>ayudar exactamente" />
+
+  <!-- ══ DIRECTORIO ══ -->
+  <section style="background:#fff; border-top:1px solid #e4e4e7; padding:72px 0;">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" style="align-items:center;">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+            <span style="display:block; width:24px; height:2px; background:#dc2626; border-radius:2px;"></span>
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Lo que devolvemos</span>
+          </div>
+          <h2 style="font-size:clamp(1.6rem,2.4vw,2.2rem); font-weight:800; color:#09090b; line-height:1.15; margin:0 0 18px; letter-spacing:-0.02em;">
+            El directorio de estaciones<br>es gratis y siempre lo será
+          </h2>
+          <p style="font-size:0.95rem; color:#52525b; line-height:1.85; margin:0 0 16px;">
+            Trabajando con cuerpos de bomberos de todo el país nos dimos cuenta de algo absurdo: no existía un lugar donde encontrar rápido la estación más cercana. Así que armamos uno, con <strong style="color:#09090b; font-weight:600;">{estacionesPublicadas} estaciones publicadas</strong> y recopiladas de fuentes públicas y creciendo.
           </p>
+          <p style="font-size:0.95rem; color:#52525b; line-height:1.85; margin:0 0 24px;">
+            No vendemos nada ahí ni pedimos datos a cambio. Si conoces una estación que falta o ves un dato equivocado, avísanos: nos ayuda a mantenerlo vivo.
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:10px;">
+            <a href="/directorio" style="display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; font-weight:700; color:#fff; background:#dc2626; padding:11px 18px; border-radius:9px; text-decoration:none;">
+              Ver el directorio
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="/agregar-estacion" style="display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; font-weight:600; color:#52525b; border:1px solid #e4e4e7; padding:11px 18px; border-radius:9px; text-decoration:none;">
+              Sugerir una estación
+            </a>
+          </div>
         </div>
 
-        <!-- Collaborate -->
-        <div class="bg-white rounded-xl overflow-hidden" style="border: 1px solid #e2e8f0;">
-          <div class="h-1 w-full" style="background-color: #dc2626;"></div>
-          <div class="p-8">
-            <h2 class="text-2xl font-display font-semibold text-slate-800 mb-4">
-              Colabora con nosotros
-            </h2>
-            <p class="text-slate-600 mb-6">
-              Si conoces una estación de bomberos que no está en nuestro directorio, o si encuentras información incorrecta, te invitamos a colaborar con nosotros.
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <a href="/agregar-estacion" class="btn btn-primary">
-                Sugerir estación
-              </a>
-              <a href="/contacto" class="btn btn-outline">
-                Contactar
-              </a>
-            </div>
+        <div style="background:#09090b; border-radius:16px; padding:32px;">
+          <div style="display:flex; align-items:center; gap:9px; margin-bottom:18px;">
+            <span style="width:8px; height:8px; background:#dc2626; border-radius:50%; display:block;"></span>
+            <span style="font-size:0.66rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:#a1a1aa;">Importante</span>
           </div>
+          <p style="font-size:1.05rem; font-weight:800; color:#fff; margin:0 0 12px; line-height:1.4;">Este sitio no atiende emergencias</p>
+          <p style="font-size:0.87rem; color:#a1a1aa; line-height:1.85; margin:0 0 22px;">
+            Ni el directorio ni nuestro WhatsApp son una línea de auxilio. Si hay un incendio, un accidente o cualquier emergencia en curso, marca 911 desde cualquier teléfono: la llamada es gratuita y atiende las 24 horas.
+          </p>
+          <a href="tel:911" style="display:flex; align-items:center; justify-content:center; gap:10px; background:#dc2626; color:#fff; font-size:1rem; font-weight:800; padding:14px; border-radius:10px; text-decoration:none;">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Llamar al 911
+          </a>
         </div>
       </div>
     </div>

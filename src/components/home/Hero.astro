@@ -2,29 +2,18 @@
 /**
  * Hero Component — FIREFIGHTER México
  * Two-column professional layout | 50 años de experiencia
+ * Fondo sólido, sin texturas ni gradientes.
  */
 ---
 
 <section
   class="relative overflow-hidden"
-  style="background: #0b1120;"
+  style="background: #09090b;"
   aria-label="FIREFIGHTER México — Equipos Contra Incendios"
 >
 
-  <!-- Subtle grid texture -->
-  <div
-    class="absolute inset-0 pointer-events-none"
-    style="background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 48px 48px;"
-  ></div>
-
-  <!-- Red glow top-left -->
-  <div
-    class="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full pointer-events-none"
-    style="background: radial-gradient(circle, rgba(220,38,38,0.18) 0%, transparent 70%);"
-  ></div>
-
-  <!-- Red accent line top -->
-  <div class="absolute top-0 left-0 right-0 h-[3px]" style="background: linear-gradient(90deg, transparent 0%, #dc2626 30%, #ef4444 50%, #dc2626 70%, transparent 100%);"></div>
+  <!-- Red accent line top (sólida) -->
+  <div class="absolute top-0 left-0 right-0" style="height:3px; background:#dc2626;"></div>
 
   <div class="container-custom relative z-10">
 
@@ -36,12 +25,12 @@
            ════════════════════════════════ -->
       <div
         class="flex flex-col justify-center py-20 lg:py-28 lg:pr-16"
-        style="border-right: 1px solid rgba(255,255,255,0.06);"
+        style="border-right: 1px solid #1f1f23;"
       >
         <!-- Eyebrow badge -->
         <div class="flex items-center gap-3 mb-8">
-          <div class="flex items-center gap-2 px-3 py-1.5 rounded-full" style="background: rgba(220,38,38,0.12); border: 1px solid rgba(220,38,38,0.35);">
-            <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background:#ef4444;"></span>
+          <div class="flex items-center gap-2 px-3 py-1.5 rounded-full" style="background:#18181b; border:1px solid #dc2626;">
+            <span class="w-1.5 h-1.5 rounded-full" style="background:#ef4444;"></span>
             <span class="text-xs font-bold tracking-widest uppercase" style="color:#fca5a5;">50 Años Protegiendo México</span>
           </div>
         </div>
@@ -49,7 +38,7 @@
         <!-- Main headline -->
         <h1
           class="font-bold leading-[1.06] mb-7"
-          style="font-size: clamp(2.1rem, 4.2vw, 3.4rem); color: #f1f5f9; letter-spacing: -0.02em;"
+          style="font-size: clamp(2.1rem, 4.2vw, 3.4rem); color: #fafafa; letter-spacing: -0.02em;"
         >
           Equipos Profesionales<br>
           para <em class="not-italic" style="color:#ef4444;">Bomberos</em> y<br>
@@ -57,9 +46,9 @@
         </h1>
 
         <!-- Description paragraph -->
-        <p class="leading-relaxed" style="font-size: clamp(1rem, 1.2vw, 1.125rem); color: #94a3b8; max-width: 480px;">
+        <p class="leading-relaxed" style="font-size: clamp(1rem, 1.2vw, 1.125rem); color:#a1a1aa; max-width:480px;">
           Proveedor integral de equipo para bomberos, brigadas industriales y sistemas
-          contra incendio. Certificaciones <strong style="color:#e2e8f0; font-weight:600;">NFPA, NOM, UL</strong>.
+          contra incendio. Certificaciones <strong style="color:#e4e4e7; font-weight:600;">NFPA, NOM, UL</strong>.
           Cobertura nacional en México.
         </p>
 
@@ -73,27 +62,24 @@
         <!-- Decorative number -->
         <div
           class="text-[7rem] font-black leading-none select-none mb-6 hidden lg:block"
-          style="color: rgba(220,38,38,0.06); letter-spacing: -0.04em; line-height: 1;"
+          style="color:#141417; letter-spacing:-0.04em; line-height:1;"
           aria-hidden="true"
         >50</div>
 
         <!-- Párrafo 1 — Trayectoria e identidad -->
         <div class="mb-8 relative">
-          <div
-            class="absolute left-0 top-0 bottom-0 w-[3px] rounded-full"
-            style="background: linear-gradient(180deg, #dc2626 0%, rgba(220,38,38,0.2) 100%);"
-          ></div>
+          <div class="absolute left-0 top-0 bottom-0 rounded-full" style="width:3px; background:#dc2626;"></div>
           <div class="pl-6">
             <span
               class="block text-xs font-bold tracking-widest uppercase mb-3"
               style="color:#dc2626;"
             >Nuestra Historia</span>
-            <p style="font-size: clamp(0.95rem, 1.1vw, 1.05rem); color:#94a3b8; line-height: 1.8;">
-              Con <strong style="color:#e2e8f0; font-weight:600;">más de 50 años de experiencia</strong> en el mercado
+            <p style="font-size: clamp(0.95rem, 1.1vw, 1.05rem); color:#a1a1aa; line-height: 1.8;">
+              Con <strong style="color:#e4e4e7; font-weight:600;">más de 50 años de experiencia</strong> en el mercado
               mexicano, FIREFIGHTER se ha consolidado como el proveedor de referencia en equipos contra
               incendios y equipo para bomberos en toda la República. Desde nuestros inicios, hemos
               equipado cuerpos de bomberos profesionales, brigadas industriales y dependencias de protección
-              civil en los <strong style="color:#e2e8f0; font-weight:600;">32 estados de México</strong>,
+              civil en los <strong style="color:#e4e4e7; font-weight:600;">32 estados de México</strong>,
               respaldando cada operación con tecnología certificada, asesoría técnica especializada y
               el compromiso inquebrantable de proteger vidas y salvaguardar instalaciones en cualquier
               tipo de emergencia.
@@ -103,23 +89,20 @@
 
         <!-- Párrafo 2 — Catálogo, certificaciones y alcance -->
         <div class="relative">
-          <div
-            class="absolute left-0 top-0 bottom-0 w-[3px] rounded-full"
-            style="background: linear-gradient(180deg, #3b82f6 0%, rgba(59,130,246,0.2) 100%);"
-          ></div>
+          <div class="absolute left-0 top-0 bottom-0 rounded-full" style="width:3px; background:#3f3f46;"></div>
           <div class="pl-6">
             <span
               class="block text-xs font-bold tracking-widest uppercase mb-3"
-              style="color:#3b82f6;"
+              style="color:#a1a1aa;"
             >Nuestro Compromiso</span>
-            <p style="font-size: clamp(0.95rem, 1.1vw, 1.05rem); color:#94a3b8; line-height: 1.8;">
-              Nuestra cartera incluye <strong style="color:#e2e8f0; font-weight:600;">más de 500 productos certificados</strong>
+            <p style="font-size: clamp(0.95rem, 1.1vw, 1.05rem); color:#a1a1aa; line-height: 1.8;">
+              Nuestra cartera incluye <strong style="color:#e4e4e7; font-weight:600;">más de 500 productos certificados</strong>
               bajo normas NFPA&nbsp;1970, NFPA&nbsp;1950, NOM-002-STPS,
               UL y FM&nbsp;Approvals, que abarcan trajes estructurales, equipos de respiración autónoma
               SCBA, extintores industriales, herramientas hidráulicas de rescate y sistemas completos de
               supresión y detección. Trabajamos con los principales fabricantes internacionales para
               garantizar que cada equipo supere los más altos estándares de seguridad —porque cuando
-              se trata de <strong style="color:#e2e8f0; font-weight:600;">proteger vidas</strong>,
+              se trata de <strong style="color:#e4e4e7; font-weight:600;">proteger vidas</strong>,
               solo lo mejor es suficiente.
             </p>
           </div>

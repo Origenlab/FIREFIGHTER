@@ -57,6 +57,11 @@ const siteUrl = 'https://firefighter.com.mx';
 const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 const fullTitle = `${title} | ${siteName}`;
 
+// og:image:width/height honestos: el catálogo nombra sus archivos {id}-{w}x{h}.webp
+const ogDims = fullImageUrl.match(/-(\d{3,4})x(\d{3,4})\.\w+$/);
+const ogImageWidth = ogDims ? ogDims[1] : '1200';
+const ogImageHeight = ogDims ? ogDims[2] : '630';
+
 // og:image:type honesto según la extensión real de la imagen resuelta
 const ogExt = (fullImageUrl.split('.').pop() ?? '').toLowerCase();
 const ogImageType =
@@ -143,8 +148,8 @@ if (type === 'article' && article && publishedDate) {
 <meta property="og:image" content={fullImageUrl} />
 <meta property="og:image:type" content={ogImageType} />
 <meta property="og:image:alt" content={imageAlt} />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+<meta property="og:image:width" content={ogImageWidth} />
+<meta property="og:image:height" content={ogImageHeight} />
 <meta property="og:site_name" content={siteName} />
 <meta property="og:locale" content="es_MX" />
 

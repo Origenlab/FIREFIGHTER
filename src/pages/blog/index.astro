@@ -1,109 +1,64 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Badge from '../../components/ui/Badge.astro';
-import { getCollection } from 'astro:content';
+import BlogIndexPage from '../../components/blog/BlogIndexPage.astro';
+import { getPosts, PER_PAGE } from '../../lib/blogData';
+import { SERVICIOS } from '../../lib/servicios';
 
-const posts = (await getCollection('blog', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const SITE = 'https://firefighter.com.mx';
+const posts = await getPosts();
+const totalPaginas = Math.ceil(posts.length / PER_PAGE);
+const visibles = posts.slice(0, PER_PAGE);
 
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  '@id': `${SITE}/blog#blog`,
+  name: 'Blog técnico FIREFIGHTER México',
+  description: 'Guías técnicas sobre equipos contra incendios, equipo para bomberos y cumplimiento normativo NFPA y NOM en México.',
+  url: `${SITE}/blog`,
+  inLanguage: 'es-MX',
+  publisher: { '@type': 'Organization', name: 'FIREFIGHTER México', url: SITE },
+  blogPost: posts.slice(0, 20).map(p => ({
+    '@type': 'BlogPosting',
+    headline: p.title,
+    description: p.description,
+    datePublished: p.pubDate.toISOString(),
+    dateModified: (p.updatedDate ?? p.pubDate).toISOString(),
+    author: { '@type': 'Organization', name: p.author },
+    url: `${SITE}/blog/${p.slug}`,
+  })),
+};
+const serviciosSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Servicios de FIREFIGHTER México',
+  itemListElement: SERVICIOS.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Service',
+      name: s.nombre,
+      description: `${s.promesa} ${s.copy}`,
+      serviceType: s.nombre,
+      areaServed: { '@type': 'Country', name: 'México' },
+      audience: { '@type': 'Audience', audienceType: s.paraQuien },
+      provider: { '@type': 'Organization', name: 'FIREFIGHTER México', url: SITE },
+    },
+  })),
+};
 ---
 
 <BaseLayout
-  title="Blog - Artículos sobre Bomberos y Seguridad"
-  description="Artículos, guías y noticias sobre bomberos, prevención de incendios y seguridad en México."
+  title="Blog técnico contra incendios"
+  description="Guías técnicas sobre equipo para bomberos, extintores, SCBA, sistemas contra incendio y normativa NFPA y NOM en México. Escritas por distribuidores autorizados."
+  canonicalUrl={`${SITE}/blog`}
   breadcrumbs={[{ label: 'Blog' }]}
 >
-  <!-- Hero Section -->
-  <section class="bg-slate-900">
-    <div class="container-custom py-20 md:py-28">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <!-- Left Content -->
-        <div class="text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-fire-600 rounded-full mb-6">
-            <span class="w-2 h-2 bg-white rounded-full"></span>
-            <span class="text-white text-sm font-medium">Recursos y Guías</span>
-          </div>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(blogSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviciosSchema)} />
+    {totalPaginas > 1 && <link rel="next" href={`${SITE}/blog/pagina/2`} />}
+  </Fragment>
 
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-[1.1]">
-            <span class="text-fire-500">Blog</span>
-          </h1>
-
-          <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-            Artículos, guías y recursos sobre bomberos,
-            <span class="text-white font-semibold">prevención de incendios</span> y seguridad en México.
-          </p>
-        </div>
-
-        <!-- Right Side - Info -->
-        <div class="hidden lg:block">
-          <p class="text-slate-300 text-lg leading-relaxed mb-6">
-            Encuentra información útil sobre <strong class="text-white">prevención de incendios</strong>, consejos de seguridad, y noticias relevantes del mundo de los bomberos en México.
-          </p>
-          <p class="text-slate-300 text-lg leading-relaxed">
-            Nuestro objetivo es <strong class="text-white">educar y concientizar</strong> a la ciudadanía sobre la importancia de la prevención y cómo actuar en caso de emergencia.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Content -->
-  <section class="section bg-slate-50">
-    <div class="container-custom">
-      {posts.length > 0 ? (
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((post) => (
-            <article class="bg-white rounded-xl overflow-hidden" style="border: 1px solid #e2e8f0;">
-              <div class="h-1 w-full" style="background-color: #dc2626;"></div>
-              {post.data.image && (
-                <img
-                  src={post.data.image}
-                  alt={post.data.imageAlt || post.data.title}
-                  class="w-full h-48 object-cover"
-                  loading="lazy"
-                />
-              )}
-              <div class="p-6">
-                <div class="flex flex-wrap gap-2 mb-3">
-                  {post.data.tags.slice(0, 2).map((tag) => (
-                    <Badge variant="slate" size="sm">{tag}</Badge>
-                  ))}
-                </div>
-                <h2 class="text-xl font-display font-semibold text-slate-800 mt-2 mb-3 hover:text-fire-600 transition-colors">
-                  <a href={`/blog/${post.id}`}>{post.data.title}</a>
-                </h2>
-                <p class="text-slate-600 text-sm mb-4 line-clamp-2">
-                  {post.data.description}
-                </p>
-                <a
-                  href={`/blog/${post.id}`}
-                  class="text-fire-600 hover:text-fire-700 font-medium text-sm flex items-center gap-1"
-                >
-                  Leer más
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
-      ) : (
-        <div class="bg-white rounded-xl overflow-hidden max-w-md mx-auto" style="border: 1px solid #e2e8f0;">
-          <div class="h-1 w-full" style="background-color: #dc2626;"></div>
-          <div class="p-12 text-center">
-            <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
-              </svg>
-            </div>
-            <h3 class="text-lg font-semibold text-slate-800 mb-2">Próximamente</h3>
-            <p class="text-slate-500">
-              Estamos preparando contenido valioso sobre seguridad y prevención de incendios.
-            </p>
-          </div>
-        </div>
-      )}
-    </div>
-  </section>
+  <BlogIndexPage posts={posts} visibles={visibles} pagina={1} totalPaginas={totalPaginas} />
 </BaseLayout>

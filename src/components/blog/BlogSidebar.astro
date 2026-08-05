@@ -1,0 +1,176 @@
+---
+/**
+ * Sidebar del blog — motor de trafico interno:
+ * CTA WhatsApp -> catalogo -> temas -> mas consultados -> recientes -> licitaciones.
+ */
+import categorias from '../../data/productos.json';
+import { TEMAS, getTema, waLink, formatFechaCorta } from '../../lib/blog';
+import type { PostIdx } from '../../lib/blogData';
+import { conteoPorTema, masConsultados } from '../../lib/blogData';
+
+interface Props {
+  posts: PostIdx[];
+  temaActivo?: string;
+  slugActual?: string;
+  /** Producto sugerido segun el tema del articulo. */
+  temaProducto?: string;
+  sticky?: boolean;
+  /** Version corta: sin "publicaciones recientes". Para paginas con poco contenido. */
+  compacto?: boolean;
+}
+
+const { posts, temaActivo, slugActual, temaProducto, sticky = true, compacto = false } = Astro.props;
+
+const conteo = conteoPorTema(posts);
+const populares = masConsultados(posts.filter(p => p.slug !== slugActual), 5);
+const recientes = posts.filter(p => p.slug !== slugActual).slice(0, 4);
+
+const temaCat = temaProducto ? getTema(temaProducto) : null;
+const catRelacionada = temaCat?.productoSlug
+  ? (categorias as any[]).find(c => c.slug === temaCat.productoSlug)
+  : null;
+---
+
+<aside class={sticky ? 'blog-aside' : 'blog-aside is-static'}>
+
+  <!-- 1 · CTA principal -->
+  <div class="blog-box blog-box-dark">
+    <div class="blog-cta-label">
+      <span class="dot"></span>
+      <span class="txt">Asesoría técnica</span>
+    </div>
+    <p class="blog-cta-title">¿Necesitas equipar tu brigada?</p>
+    <p class="blog-cta-copy">Propuesta técnica con partidas, norma aplicable y número de parte. Distribución autorizada, no reventa.</p>
+    <div class="blog-cta-facts">
+      <span class="blog-cta-fact">
+        <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+        Respuesta en menos de 24 h hábiles
+      </span>
+      <span class="blog-cta-fact">
+        <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+        Cobertura en los 32 estados
+      </span>
+      <span class="blog-cta-fact">
+        <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+        Documentación para licitaciones
+      </span>
+    </div>
+    <a href={waLink('necesito asesoría para equipar mi brigada')} target="_blank" rel="noopener" class="blog-btn-wa" style="margin-bottom:8px;">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
+      Cotizar por WhatsApp
+    </a>
+    <a href="/contacto" class="blog-btn-ghost">Enviar solicitud formal</a>
+  </div>
+
+  <!-- 2 · Producto ligado al tema -->
+  {catRelacionada && (
+    <div class="blog-box blog-box-red">
+      <div class="blog-box-head">
+        <span class="bar"></span>
+        <span class="txt">Producto del tema</span>
+      </div>
+      <p style="font-size:0.92rem; font-weight:800; color:#09090b; margin:0 0 6px;">{catRelacionada.nombre}</p>
+      <p style="font-size:0.76rem; color:#52525b; line-height:1.7; margin:0 0 14px;">{catRelacionada.cardDesc ?? catRelacionada.descripcion}</p>
+      <div style="display:flex; flex-wrap:wrap; gap:5px; margin-bottom:16px;">
+        {(catRelacionada.marcas ?? []).slice(0, 4).map((m: string) => (
+          <span style="font-size:0.66rem; font-weight:600; color:#b91c1c; background:#fff; border:1px solid #fecaca; padding:3px 9px; border-radius:99px;">{m}</span>
+        ))}
+      </div>
+      <a href={`/productos/${catRelacionada.slug}`} style="display:flex; align-items:center; justify-content:space-between; gap:8px; background:#dc2626; color:#fff; font-size:0.8rem; font-weight:700; padding:11px 15px; border-radius:9px; text-decoration:none;">
+        <span>Ver {catRelacionada.nombre}</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  )}
+
+  <!-- 3 · Catalogo completo -->
+  <div class="blog-box">
+    <div class="blog-box-head">
+      <span class="bar"></span>
+      <span class="txt">Catálogo de productos</span>
+    </div>
+    <ul class="blog-list">
+      {(categorias as any[]).map(cat => (
+        <li>
+          <a href={`/productos/${cat.slug}`} class="blog-list-row">
+            <span class="lbl">{cat.nombre}</span>
+            <span class="tag">{cat.norma}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <!-- 4 · Temas -->
+  <div class="blog-box">
+    <div class="blog-box-head">
+      <span class="bar"></span>
+      <span class="txt">Temas del blog</span>
+    </div>
+    <ul class="blog-list">
+      {TEMAS.map(t => (
+        <li>
+          <a href={`/blog/tema/${t.slug}`} class="blog-list-row" style={temaActivo === t.slug ? 'background:#fef2f2;' : ''}>
+            <span class="lbl" style={temaActivo === t.slug ? 'color:#dc2626;' : ''}>{t.nombre}</span>
+            <span class="tag">{conteo[t.slug] ?? 0}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <!-- 5 · Mas consultados -->
+  <div class="blog-box">
+    <div class="blog-box-head">
+      <span class="bar"></span>
+      <span class="txt">Los más consultados</span>
+    </div>
+    <ul class="blog-list">
+      {populares.map((p, i) => (
+        <li>
+          <a href={`/blog/${p.slug}`} class="blog-link-item" style="display:flex; align-items:flex-start;">
+            <span class={`blog-rank ${i < 3 ? 'is-top' : ''}`}>{i + 1}</span>
+            <span style="min-width:0;">
+              <span class="t" style="display:block;">{p.title}</span>
+              <span class="m">{getTema(p.tema).corto} · {p.minutos} min</span>
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <!-- 6 · Recientes -->
+  {!compacto && (
+  <div class="blog-box">
+    <div class="blog-box-head">
+      <span class="bar"></span>
+      <span class="txt">Publicaciones recientes</span>
+    </div>
+    <ul class="blog-list">
+      {recientes.map(p => (
+        <li>
+          <a href={`/blog/${p.slug}`} class="blog-link-item">
+            <span class="t" style="display:block;">{p.title}</span>
+            <span class="m">{formatFechaCorta(p.pubDate)} · {getTema(p.tema).corto}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+  )}
+
+  <!-- 7 · Licitaciones y ficha tecnica -->
+  <div class="blog-box blog-box-red" style="text-align:center;">
+    <svg width="30" height="30" fill="#dc2626" viewBox="0 0 20 20" style="margin:0 auto 10px;" aria-hidden="true"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg>
+    <p style="font-size:0.9rem; font-weight:800; color:#09090b; margin:0 0 6px;">¿Licitación o compra pública?</p>
+    <p style="font-size:0.75rem; color:#52525b; margin:0 0 14px; line-height:1.7;">Fichas técnicas, certificados NFPA/UL y documentación lista para CompraNet y licitaciones estatales.</p>
+    <a href="mailto:licitaciones@firefighter.com.mx" style="display:block; font-size:0.78rem; font-weight:700; color:#dc2626; text-decoration:none; padding:10px; border:1px solid #fca5a5; border-radius:9px; background:#fff; margin-bottom:8px;">
+      licitaciones@firefighter.com.mx
+    </a>
+    <a href={waLink('necesito la ficha técnica de un producto para una licitación')} target="_blank" rel="noopener" style="font-size:0.74rem; font-weight:600; color:#b91c1c; text-decoration:underline;">
+      Solicitar ficha técnica por WhatsApp
+    </a>
+  </div>
+
+</aside>

@@ -1,0 +1,33 @@
+---
+import { getTema, formatFechaCorta } from '../../lib/blog';
+import type { PostIdx } from '../../lib/blogData';
+
+interface Props { post: PostIdx; }
+const { post } = Astro.props;
+const tema = getTema(post.tema);
+---
+
+<a href={`/blog/${post.slug}`} class="blog-card">
+  <div class="blog-card-top">
+    <span class="blog-tema-badge">{tema.corto}</span>
+    <span class="blog-norma">{tema.badge}</span>
+  </div>
+
+  <h3>{post.title}</h3>
+  <p>{post.description}</p>
+
+  <div class="blog-meta">
+    <span>
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+      {formatFechaCorta(post.pubDate)}
+    </span>
+    <span>
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      {post.minutos} min
+    </span>
+    <span class="blog-meta-cta">
+      Leer
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </span>
+  </div>
+</a>

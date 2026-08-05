@@ -1,54 +1,56 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Button from '../components/ui/Button.astro';
+
+const destinos = [
+  { t: 'Catálogo de productos', d: '8 categorías certificadas NFPA, NOM y UL', h: '/productos' },
+  { t: 'Blog técnico', d: 'Guías de selección, normas y mantenimiento', h: '/blog' },
+  { t: 'Directorio de bomberos', d: 'Estaciones por estado, con teléfono y ubicación', h: '/directorio' },
+  { t: 'Contacto', d: 'Cotizaciones, licitaciones y servicio', h: '/contacto' },
+];
 ---
 
 <BaseLayout
   title="Página no encontrada"
-  description="La página que buscas no existe o ha sido movida."
+  description="La página que buscas no existe o cambió de dirección. Encuentra el catálogo de equipo contra incendios, el directorio de estaciones y el blog desde aquí."
   noindex={true}
 >
-  <section class="min-h-[70vh] flex items-center justify-center bg-slate-50">
-    <div class="container-custom py-20 text-center">
-      <div class="max-w-md mx-auto">
-        <!-- Icon -->
-        <div class="w-24 h-24 bg-fire-100 rounded-full flex items-center justify-center mx-auto mb-8">
-          <svg class="w-12 h-12 text-fire-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path>
-          </svg>
-        </div>
+  <section style="background:#09090b; padding:72px 0 80px;">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" style="align-items:start;">
 
-        <!-- Error code -->
-        <div class="text-8xl font-display font-bold text-fire-600 mb-4">404</div>
-
-        <h1 class="text-2xl font-display font-bold text-slate-800 mb-4">
-          Página no encontrada
-        </h1>
-
-        <p class="text-slate-600 mb-8">
-          Lo sentimos, la página que buscas no existe o ha sido movida.
-          Pero no te preocupes, puedes encontrar lo que necesitas desde el inicio.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button href="/" variant="primary">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-            </svg>
-            Ir al inicio
-          </Button>
-          <Button href="/directorio" variant="outline">
-            Ver directorio
-          </Button>
-        </div>
-
-        <!-- Emergency reminder -->
-        <div class="mt-12 p-4 bg-gold-100 rounded-lg">
-          <p class="text-sm text-slate-700">
-            <strong>¿Emergencia?</strong> Llama al <a href="tel:911" class="text-fire-600 font-bold">911</a>
+        <div class="lg:pr-14 lg:border-r lg:border-[#1f1f23]">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+            <span style="display:block; width:24px; height:2px; background:#dc2626; border-radius:2px;"></span>
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Error 404</span>
+          </div>
+          <h1 style="font-size:clamp(2rem,3.6vw,3rem); font-weight:800; color:#fafafa; line-height:1.08; margin:0 0 18px; letter-spacing:-0.02em;">
+            Esta página no existe<br>o cambió de dirección
+          </h1>
+          <p style="font-size:1rem; color:#a1a1aa; line-height:1.8; margin:0 0 28px;">
+            Puede que el enlace esté viejo o que hayamos movido el contenido al reorganizar el catálogo. Desde aquí llegas a lo que probablemente buscabas.
           </p>
+          <div style="display:flex; flex-wrap:wrap; gap:10px;">
+            <a href="/" class="l2-cta"><span>Ir al inicio</span></a>
+            <a href="/productos" class="l2-cta-ghost"><span>Ver catálogo</span></a>
+          </div>
         </div>
+
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          {destinos.map(d => (
+            <a href={d.h} style="display:flex; align-items:center; justify-content:space-between; gap:14px; background:#111113; border:1px solid #27272a; border-radius:12px; padding:16px 20px; text-decoration:none;">
+              <span style="min-width:0;">
+                <span style="display:block; font-size:0.9rem; font-weight:700; color:#fafafa; margin-bottom:3px;">{d.t}</span>
+                <span style="display:block; font-size:0.76rem; color:#71717a; line-height:1.6;">{d.d}</span>
+              </span>
+              <svg width="16" height="16" fill="none" stroke="#dc2626" stroke-width="2.5" viewBox="0 0 24 24" style="flex-shrink:0;" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          ))}
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; background:#fef2f2; border:1px solid #fecaca; border-radius:12px; padding:16px 20px; margin-top:10px;">
+            <span style="font-size:0.85rem; font-weight:700; color:#09090b;">¿Es una emergencia?</span>
+            <a href="tel:911" style="font-size:0.95rem; font-weight:800; color:#dc2626; text-decoration:none;">Llama al 911</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

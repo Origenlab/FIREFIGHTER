@@ -1,0 +1,189 @@
+---
+import { tituloSeo } from '../../../lib/seoText';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PostCard from '../../../components/blog/PostCard.astro';
+import BlogSidebar from '../../../components/blog/BlogSidebar.astro';
+import categorias from '../../../data/productos.json';
+import { TEMAS, getTema, waLink } from '../../../lib/blog';
+import { getPosts, conteoPorTema } from '../../../lib/blogData';
+import Servicios from '../../../components/blog/Servicios.astro';
+import AutorBox from '../../../components/blog/AutorBox.astro';
+import { servicioDeTema } from '../../../lib/servicios';
+
+export async function getStaticPaths() {
+  const { TEMAS } = await import('../../../lib/blog');
+  return TEMAS.map(t => ({ params: { tema: t.slug } }));
+}
+
+const SITE = 'https://firefighter.com.mx';
+const slugTema = Astro.params.tema as string;
+const tema = getTema(slugTema);
+
+const posts = await getPosts();
+const delTema = posts.filter(p => p.tema === slugTema);
+const conteo = conteoPorTema(posts);
+const url = `${SITE}/blog/tema/${tema.slug}`;
+
+const categoria = tema.productoSlug
+  ? (categorias as any[]).find(c => c.slug === tema.productoSlug)
+  : null;
+
+const servicio = servicioDeTema(tema.slug);
+
+const listSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  '@id': `${url}#collection`,
+  name: `${tema.nombre} — Blog técnico FIREFIGHTER México`,
+  description: tema.descripcion,
+  url,
+  inLanguage: 'es-MX',
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: delTema.length,
+    itemListElement: delTema.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: p.title,
+      url: `${SITE}/blog/${p.slug}`,
+    })),
+  },
+};
+const servicioSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: servicio.nombre,
+  description: `${servicio.promesa} ${servicio.copy}`,
+  serviceType: servicio.nombre,
+  areaServed: { '@type': 'Country', name: 'México' },
+  audience: { '@type': 'Audience', audienceType: servicio.paraQuien },
+  provider: { '@type': 'Organization', name: 'FIREFIGHTER México', url: SITE },
+};
+---
+
+<BaseLayout
+  title={tituloSeo(`${tema.nombre}: guías y normativa`)}
+  description={tema.descripcion}
+  canonicalUrl={url}
+  breadcrumbs={[{ label: 'Blog', href: '/blog' }, { label: tema.nombre }]}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(listSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(servicioSchema)} />
+  </Fragment>
+
+  <!-- HERO DEL TEMA -->
+  <section style="background:#09090b; padding:52px 0 62px;">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" style="align-items:start;">
+
+        <div class="lg:pr-14 lg:border-r lg:border-[#1f1f23]">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+            <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">{tema.eyebrow}</span>
+          </div>
+
+          <span style="display:inline-block; background:#dc2626; color:#fff; font-size:0.62rem; font-weight:800; letter-spacing:0.07em; padding:4px 11px; border-radius:4px; text-transform:uppercase; margin-bottom:18px;">{tema.badge}</span>
+
+          <h1 style="font-size:clamp(1.8rem,3.2vw,2.7rem); font-weight:800; color:#fafafa; line-height:1.1; margin:0 0 18px; letter-spacing:-0.02em;">
+            {tema.nombre}: guías técnicas y normativa aplicable en México
+          </h1>
+
+          <p style="font-size:0.98rem; color:#a1a1aa; line-height:1.8; margin:0 0 28px;">{tema.intro}</p>
+
+          <div style="display:flex; flex-wrap:wrap; gap:10px;">
+            {categoria && (
+              <a href={`/productos/${categoria.slug}`} class="l2-cta">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                <span>Ver productos de {tema.corto}</span>
+              </a>
+            )}
+            <a href={waLink(`necesito información sobre ${tema.nombre}`)} target="_blank" rel="noopener" class="l2-cta-ghost">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4-.8L3 21l1.9-3.8A7.94 7.94 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+              <span>Hablar con un ingeniero</span>
+            </a>
+          </div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:22px;">
+          <div style="background:#111113; border:1px solid #27272a; border-radius:14px; padding:22px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding-bottom:14px; border-bottom:1px solid #27272a;">
+              <span style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#71717a;">Artículos en este tema</span>
+              <span style="font-size:1.3rem; font-weight:800; color:#fafafa; line-height:1;">{delTema.length}</span>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 0; border-bottom:1px solid #27272a;">
+              <span style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#71717a;">Norma de referencia</span>
+              <span style="font-size:0.85rem; font-weight:700; color:#e4e4e7;">{tema.badge}</span>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding-top:14px;">
+              <span style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#71717a;">Categoría ligada</span>
+              <span style="font-size:0.85rem; font-weight:700; color:#e4e4e7;">{tema.productoNombre ?? 'Catálogo general'}</span>
+            </div>
+          </div>
+
+          <div style="position:relative;">
+            <span style="position:absolute; left:0; top:4px; bottom:4px; width:3px; border-radius:2px; background:#dc2626;" aria-hidden="true"></span>
+            <div style="padding-left:20px;">
+              <span style="font-size:0.7rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#dc2626; display:block; margin-bottom:10px;">Para qué sirve este tema</span>
+              <p style="font-size:0.9rem; color:#a1a1aa; line-height:1.85; margin:0;">{tema.descripcion}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LISTADO -->
+  <section style="background:#f8fafc; padding:48px 0 88px;">
+    <div class="container-custom">
+      <div class="blog-shell">
+
+        <div style="min-width:0;">
+          <nav class="blog-temas" aria-label="Temas del blog">
+            <a href="/blog" class="blog-chip">Todos <span class="blog-chip-n">{posts.length}</span></a>
+            {TEMAS.map(t => (
+              <a href={`/blog/tema/${t.slug}`} class={`blog-chip ${t.slug === tema.slug ? 'is-active' : ''}`}>
+                {t.nombre} <span class="blog-chip-n">{conteo[t.slug] ?? 0}</span>
+              </a>
+            ))}
+          </nav>
+
+          <div class="blog-grid">
+            {delTema.map(p => <PostCard post={p} />)}
+          </div>
+
+          <div class="art-cta" style="margin-top:36px;">
+            <div>
+              <h3>¿Prefieres que lo veamos contigo?</h3>
+              <p>
+                {servicio.promesa} Cuéntanos qué operación tienes que cubrir y con cuánto cuentas; si tu caso no es lo nuestro, te lo decimos y te orientamos igual.
+              </p>
+            </div>
+            <div class="art-cta-actions">
+              <a href={waLink(`leí el tema de ${tema.nombre} y quiero asesoría`)} target="_blank" rel="noopener" class="l2-cta">
+                <span>Escribirnos por WhatsApp</span>
+              </a>
+              {categoria && (
+                <a href={`/productos/${categoria.slug}`} class="l2-cta-ghost">
+                  <span>Ver {tema.corto} en el catálogo</span>
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <BlogSidebar posts={posts} temaActivo={tema.slug} temaProducto={tema.slug} compacto />
+
+      </div>
+    </div>
+  </section>
+
+  <Servicios temaActivo={tema.slug} fondo="#fff" titulo={`Cómo te podemos ayudar<br>con ${tema.nombre.toLowerCase()}`} />
+
+  <section style="background:#f8fafc; border-top:1px solid #e4e4e7; padding:64px 0;">
+    <div class="container-custom">
+      <AutorBox />
+    </div>
+  </section>
+</BaseLayout>

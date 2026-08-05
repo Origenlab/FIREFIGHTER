@@ -124,7 +124,7 @@ Si el proveedor dice "cumple NFPA 1950" pero no puede entregar el reporte de ens
 
 Esta es la confusión más frecuente en el mercado mexicano de EPP de emergencias.
 
-**NFPA 1970**: EPP para bomberos estructurales. Cubre el trabajo en estructuras en llamas con exposición potencial a temperatura extrema de corto plazo, gases tóxicos y entorno de confinamiento. Los trajes estructurales certificados NFPA 1970 tienen mayor masa térmica (son más pesados y gruesos) y mayor nivel de protección contra exposición directa corta. Para más información sobre EPP estructural, consulte el artículo sobre [trajes estructurales para bomberos NFPA 1970](/blog/trajes-estructurales-bomberos-nfpa-1971).
+**NFPA 1970**: EPP para bomberos estructurales. Cubre el trabajo en estructuras en llamas con exposición potencial a temperatura extrema de corto plazo, gases tóxicos y entorno de confinamiento. Los trajes estructurales certificados NFPA 1970 tienen mayor masa térmica (son más pesados y gruesos) y mayor nivel de protección contra exposición directa corta. Para más información sobre EPP estructural, consulte el artículo sobre [trajes estructurales para bomberos NFPA 1970](/blog/guia-trajes-estructurales-nfpa-1971).
 
 **NFPA 1950**: EPP para brigadistas forestales e interfaz. Cubre trabajo en exterior con exposición prolongada a calor radiante moderado, trabajo físico intenso y necesidad de alta movilidad. Los overoles forestales son más livianos, más transpirables (THL mayor) y optimizados para jornadas largas de trabajo aeróbico.
 

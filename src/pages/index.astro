@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/home/Hero.astro';
 import QuickNav from '../components/home/QuickNav.astro';
 import ProductCategories from '../components/home/ProductCategories.astro';
+import CategorySpotlight from '../components/home/CategorySpotlight.astro';
 import WhyFirefighter from '../components/home/WhyFirefighter.astro';
 import Sectors from '../components/home/Sectors.astro';
 import HowItWorks from '../components/home/HowItWorks.astro';
@@ -12,8 +13,8 @@ import FAQ from '../components/home/FAQ.astro';
 ---
 
 <BaseLayout
-  title="FIREFIGHTER México | Equipos Contra Incendios y Equipo para Bomberos"
-  description="Venta de equipos contra incendios y equipos para bomberos en México. Trajes, SCBA, extintores, herramientas de rescate certificados NFPA, NOM y UL. Cotiza en 24h."
+  title="Equipos Contra Incendios y para Bomberos"
+  description="Equipo contra incendios y para bomberos en México: trajes, SCBA, extintores y herramientas de rescate certificados NFPA, NOM y UL. Cotiza en 24 h."
   includeWebsiteSchema={true}
 >
   <!-- 1. Hero comercial: propuesta de valor + CTAs -->
@@ -24,6 +25,300 @@ import FAQ from '../components/home/FAQ.astro';
 
   <!-- 3. Catálogo de categorías de producto -->
   <ProductCategories />
+
+  <!-- 3b. Ficha destacada: EPP para Bomberos -->
+  <CategorySpotlight
+    id="epp-para-bomberos"
+    eyebrow="Línea destacada"
+    badge="NFPA 1970"
+    title="EPP para Bomberos"
+    fichaHref="/productos/epp-para-bomberos"
+    desc={[
+      'El <strong>equipo de protección personal para bomberos</strong> es la última barrera entre el operativo y el fuego, y por eso cada pieza que distribuimos cumple <strong>NFPA 1970</strong> —la norma que desde 2025 consolida los antiguos estándares 1971, 1975, 1981 y 1982— además de los requisitos de la <strong>NOM-017-STPS</strong> en materia de selección y uso de EPP.',
+      'La línea cubre el ensamble estructural completo: <strong>chaquetón y pantalón en Nomex o PBI</strong> con barrera térmica y de humedad, <strong>cascos Bullard y MSA</strong> con visera y protector de nuca, <strong>botas dieléctricas</strong> con plantilla antipunción, guantes de intervención, capuchas y caretas. Todo disponible en tallas para cuerpos de bomberos municipales, brigadas industriales y unidades de protección civil.',
+      'Cada envío llega con certificado de origen, número de serie trazable y ficha técnica en español —la documentación que piden las licitaciones públicas, las auditorías de protección civil y las verificaciones STPS—. Sumamos asesoría de un ingeniero certificado para dimensionar el pedido según el riesgo real de tu operación, y damos servicio en los 32 estados de la República.',
+    ]}
+    products={[
+      'Trajes Nomex / PBI',
+      'Cascos Bullard / MSA',
+      'Botas dieléctricas',
+      'Guantes de intervención',
+      'Protector de cuello',
+      'Viseras y caretas',
+    ]}
+    sectors={['Bomberos', 'Brigadas ind.', 'Protección civil']}
+    highlight="Distribución MSA Safety y Scott"
+    waText="EPP%20para%20Bomberos"
+    images={[
+      {
+        src: '/images/catalogo/1592235905030-1000x750.webp',
+        alt: 'Bombero con traje estructural completo, casco y equipo de respiración autónoma',
+        caption: 'Traje estructural completo — chaquetón, pantalón, casco y accesorios certificados NFPA 1970',
+      },
+      {
+        src: '/images/catalogo/1575507371089-600x450.webp',
+        alt: 'Chaquetones y cascos de bombero colgados en la estación',
+        caption: 'Chaquetones y cascos',
+      },
+      {
+        src: '/images/catalogo/1705503831904-600x450.webp',
+        alt: 'Detalle de cintas reflejantes y lámpara de intervención sobre traje estructural',
+        caption: 'Cintas reflejantes y accesorios',
+      },
+    ]}
+  />
+
+  <!-- 3.2 Ficha: Equipos de Respiración -->
+  <CategorySpotlight
+    id="equipos-de-respiracion"
+    eyebrow="Protección respiratoria"
+    badge="NFPA 1970"
+    title="Equipos de Respiración"
+    fichaHref="/productos/equipos-de-respiracion"
+    desc={[
+      'En un incendio estructural el humo mata antes que el fuego. Los <strong>equipos de respiración autónoma (SCBA)</strong> que distribuimos operan en circuito abierto con presión positiva conforme a <strong>NFPA 1970</strong> —que desde 2025 integra los antiguos estándares 1981 de SCBA y 1982 de dispositivos PASS— y cumplen la <strong>NOM-017-STPS</strong> para uso de EPP en centros de trabajo.',
+      'La línea incluye <strong>SCBA Scott Air-Pak</strong> con máscara facial completa y regulador de demanda, <strong>cilindros de 30, 45 y 60 minutos</strong> en fibra de carbono, sistemas RIT para rescate de binomios, reguladores, válvulas y maletines de mantenimiento. También manejamos máscaras de cara completa con filtro para atmósferas conocidas y trabajos en espacios confinados.',
+      'Cada equipo se entrega probado en banco, con certificado de origen y bitácora de servicio. Damos capacitación de uso, pruebas de ajuste facial y programa de mantenimiento preventivo —requisitos que revisan las auditorías STPS y las verificaciones de protección civil—. Atendemos cuerpos de bomberos, industria química y brigadas de espacios confinados en todo México.',
+    ]}
+    products={['SCBA Scott Air-Pak', 'Máscaras completas 3M', 'Cilindros 30 / 45 / 60 min', 'Sistemas RIT de rescate', 'Reguladores y válvulas', 'Maletines de mantenimiento']}
+    sectors={['Bomberos', 'Esp. confinados', 'Ind. química']}
+    highlight="Distribuidor autorizado Scott"
+    waText="Equipos%20de%20Respiraci%C3%B3n"
+    background="#ffffff"
+    images={[
+      {
+        src: '/images/catalogo/1606613816768-1000x750.webp',
+        alt: 'Dos bomberos con equipo de respiración autónoma y cilindros SCBA',
+        caption: 'Equipo de respiración autónoma en circuito abierto con presión positiva',
+      },
+      {
+        src: '/images/catalogo/1606613640173-600x450.webp',
+        alt: 'Bombero con cilindro SCBA en la espalda durante una intervención',
+        caption: 'Cilindros de fibra de carbono',
+      },
+      {
+        src: '/images/catalogo/1705503828024-600x450.webp',
+        alt: 'Detalle del arnés y regulador de un equipo SCBA',
+        caption: 'Arneses y reguladores',
+      },
+    ]}
+  />
+
+  <!-- 3.3 Ficha: Extintores y Extinción -->
+  <CategorySpotlight
+    id="extintores-y-extincion"
+    eyebrow="Extinción portátil y fija"
+    badge="NOM-154"
+    title="Extintores y Extinción"
+    fichaHref="/productos/extintores-y-extincion"
+    desc={[
+      'El extintor correcto depende del tipo de fuego, no del presupuesto. Nuestra línea de <strong>extintores portátiles e industriales</strong> cubre las clases <strong>A, B, C, D y K</strong> bajo <strong>NOM-154-SCFI</strong> para servicio, mantenimiento y recarga, y responde a lo que exige la <strong>NOM-002-STPS</strong> en prevención y protección contra incendios en centros de trabajo.',
+      'Manejamos <strong>extintores de PQS de 6 a 50 kg</strong>, <strong>CO₂</strong> para tableros y equipo electrónico, <strong>Clase K</strong> a base de acetato de potasio para cocinas comerciales, extintores de agua y agente humectante, sistemas de <strong>espuma AFFF</strong> y supresión limpia con Halotron para cuartos de servidores y archivos críticos.',
+      'Además del suministro damos el ciclo completo: cálculo de la cantidad y capacidad por área según carga de fuego, instalación con señalización NOM-026-STPS, recarga y prueba hidrostática con reporte fechado. Trabajamos con <strong>Amerex, Buckeye y Kidde</strong>, y damos servicio a industria, cocinas comerciales, oficinas y comercios en los 32 estados.',
+    ]}
+    products={['Extintores PQS 6–50 kg', 'Extintores CO₂', 'Extintores Clase K', 'Extintores de agua', 'Sistemas de espuma AFFF', 'Supresión Halotron']}
+    sectors={['Industria', 'Cocinas comerc.', 'Oficinas y comercios']}
+    highlight="Amerex · Buckeye · Kidde"
+    waText="Extintores%20y%20Extinci%C3%B3n"
+    background="#f8fafc"
+    images={[
+      {
+        src: '/images/catalogo/1649836215936-1000x750.webp',
+        alt: 'Fila de extintores portátiles montados en pared',
+        caption: 'Extintores portátiles por clase de fuego: A, B, C, D y K',
+      },
+      {
+        src: '/images/catalogo/1592838754746-600x450.webp',
+        alt: 'Detalle de la etiqueta de certificación de un extintor',
+        caption: 'Etiqueta y certificación',
+      },
+      {
+        src: '/images/catalogo/1722227089176-600x450.webp',
+        alt: 'Gabinete rojo con extintor instalado y señalizado',
+        caption: 'Gabinetes y señalización',
+      },
+    ]}
+  />
+
+  <!-- 3.4 Ficha: Herramientas de Rescate -->
+  <CategorySpotlight
+    id="herramientas-de-rescate"
+    eyebrow="Extricación y rescate"
+    badge="NFPA 1936"
+    title="Herramientas de Rescate"
+    fichaHref="/productos/herramientas-de-rescate"
+    desc={[
+      'En un rescate vehicular la hora dorada se gana con herramienta que no falla. Nuestro <strong>equipo hidráulico de rescate</strong> cumple <strong>NFPA 1936</strong>, el estándar de herramientas motorizadas de rescate que fija los requisitos de fuerza, resistencia y desempeño bajo carga que debe sostener cada pieza en operación real.',
+      'La línea abarca <strong>spreaders y cortadoras Holmatro</strong> con bombas eléctricas o de combustión, <strong>pistones de rescate</strong> telescópicos, <strong>air bags</strong> de alta presión para levantamiento y estabilización, hachas de combate, barras Halligan y kits de apertura rápida para acceso forzado en estructuras.',
+      'Antes de cotizar evaluamos el parque vehicular y el tipo de siniestro que atiende tu unidad: no es lo mismo extricación en carretera federal que rescate urbano en derrumbe. Entregamos con capacitación de operación, refacciones y servicio de calibración. Atendemos bomberos, protección civil y equipos de rescate industrial.',
+    ]}
+    products={['Spreaders hidráulicos', 'Cortadoras Holmatro', 'Pistones de rescate', 'Air bags de rescate', 'Hachas de combate', 'Kits de apertura rápida']}
+    sectors={['Rescate vehicular', 'Derrumbes', 'Rescate urbano']}
+    highlight="Distribuidor Holmatro"
+    waText="Herramientas%20de%20Rescate"
+    background="#ffffff"
+    images={[
+      {
+        src: '/images/catalogo/1776784163560-1000x750.webp',
+        alt: 'Bombero operando una cortadora hidráulica en extricación vehicular',
+        caption: 'Extricación vehicular con herramienta hidráulica certificada NFPA 1936',
+      },
+      {
+        src: '/images/catalogo/1584033376442-600x450.webp',
+        alt: 'Cortadora hidráulica de rescate en primer plano',
+        caption: 'Cortadoras y spreaders',
+      },
+      {
+        src: '/images/catalogo/1700182611928-600x450.webp',
+        alt: 'Compartimento de unidad de bomberos con herramientas de rescate',
+        caption: 'Herramienta manual y de apoyo',
+      },
+    ]}
+  />
+
+  <!-- 3.5 Ficha: Sistemas Contra Incendio -->
+  <CategorySpotlight
+    id="sistemas-contra-incendio"
+    eyebrow="Proyectos e instalación"
+    badge="NFPA 13"
+    title="Sistemas Contra Incendio"
+    fichaHref="/productos/sistemas-contra-incendio"
+    desc={[
+      'Un sistema fijo bien calculado apaga el conato antes de que llegue la primera unidad. Diseñamos y suministramos <strong>sistemas contra incendio</strong> bajo <strong>NFPA 13</strong> para rociadores automáticos, <strong>NFPA 14</strong> para tomas siamesas y redes de manguera, y <strong>NFPA 20</strong> para bombas contra incendio, alineados con la <strong>NOM-002-STPS</strong>.',
+      'Suministramos <strong>gabinetes tipo I y II</strong> equipados, <strong>mangueras de 1½" y 2½"</strong> con acoplamientos NST, <strong>bombas contra incendio</strong> eléctricas y diésel con su controlador certificado, sprinklers de respuesta rápida, pitones de chorro regulable, válvulas OS&Y, siamesas y supresión limpia con <strong>FM-200</strong> para cuartos eléctricos y centros de datos.',
+      'El servicio va del cálculo hidráulico y los planos para trámite ante protección civil hasta la instalación, las pruebas de aceptación y la puesta en marcha con reporte firmado por ingeniero. Trabajamos en obra nueva y en remodelación de industria, edificios corporativos y hospitales, donde la continuidad de operación no es negociable.',
+    ]}
+    products={['Gabinetes tipo I y II', 'Mangueras 1½" y 2½"', 'Bombas contra incendio', 'Supresión FM-200', 'Sprinklers y pitones', 'Válvulas y conectores']}
+    sectors={['Industria', 'Edificios', 'Hospitales']}
+    highlight="Diseño + suministro + instalación"
+    waText="Sistemas%20Contra%20Incendio"
+    background="#f8fafc"
+    images={[
+      {
+        src: '/images/catalogo/1632576201861-1000x750.webp',
+        alt: 'Cuarto de bombas contra incendio con red de tubería y válvulas',
+        caption: 'Red hidráulica, bombas y control bajo NFPA 13, 14 y 20',
+      },
+      {
+        src: '/images/catalogo/1585585825759-600x450.webp',
+        alt: 'Gabinete de manguera contra incendio instalado en muro',
+        caption: 'Gabinetes y mangueras',
+      },
+      {
+        src: '/images/catalogo/1542041424505-600x450.webp',
+        alt: 'Volante de válvula de control de una red contra incendio',
+        caption: 'Válvulas y conectores',
+      },
+    ]}
+  />
+
+  <!-- 3.6 Ficha: Equipo Forestal -->
+  <CategorySpotlight
+    id="equipo-forestal"
+    eyebrow="Combate en zonas naturales"
+    badge="NFPA 1977"
+    title="Equipo Forestal"
+    fichaHref="/productos/equipo-forestal"
+    desc={[
+      'El combate forestal exige lo contrario que el estructural: equipo ligero, transpirable y resistente a jornadas de doce horas. Nuestra línea sigue <strong>NFPA 1977</strong>, el estándar de ropa y equipo de protección para incendios forestales, y se ajusta a los lineamientos operativos de la <strong>CONAFOR</strong> para brigadas oficiales y voluntarias.',
+      'Incluye <strong>trajes forestales en Nomex</strong> de dos piezas con costuras selladas, <strong>mochilas aspersoras de 20 litros</strong>, herramienta manual tipo pulaski, McLeod y batefuegos bajo especificación CONAFOR, cascos ligeros con barboquejo, goggles antiempañantes, mascarillas para humo y <strong>bombas portátiles</strong> para toma de agua en cuerpos naturales.',
+      'Preparamos paquetes por brigada —no por pieza suelta— calculando consumibles, repuestos y tallas para la temporada de estiaje completa. Damos servicio a brigadas de CONAFOR, brigadas ejidales y comunitarias, y a administradores de áreas naturales protegidas que necesitan comprobar equipamiento ante auditoría.',
+    ]}
+    products={['Trajes forestales Nomex', 'Mochilas aspersoras 20 L', 'Herramientas CONAFOR', 'Cascos forestales', 'Goggles y mascarillas', 'Bombas portátiles']}
+    sectors={['CONAFOR', 'Brigadas ejidales', 'Áreas naturales']}
+    highlight="Equipo certificado CONAFOR"
+    waText="Equipo%20Forestal"
+    background="#ffffff"
+    images={[
+      {
+        src: '/images/catalogo/1677934245112-1000x750.webp',
+        alt: 'Unidad y brigadistas forestales trabajando entre humo en un camino de bosque',
+        caption: 'Operación de brigada forestal en zona de estiaje',
+      },
+      {
+        src: '/images/catalogo/1594984820817-600x450.webp',
+        alt: 'Brigadistas forestales avanzando entre humo junto a la línea de fuego',
+        caption: 'Brigadas en línea de fuego',
+      },
+      {
+        src: '/images/catalogo/1729904884750-600x450.webp',
+        alt: 'Incendio de superficie en bosque de pino durante labores de control',
+        caption: 'Control de incendio de superficie',
+      },
+    ]}
+  />
+
+  <!-- 3.7 Ficha: Detección y Alarma -->
+  <CategorySpotlight
+    id="deteccion-y-alarma"
+    eyebrow="Detección temprana"
+    badge="NFPA 72"
+    title="Detección y Alarma"
+    fichaHref="/productos/deteccion-y-alarma"
+    desc={[
+      'Detectar tres minutos antes cambia por completo el desenlace de un incendio. Proyectamos e instalamos <strong>sistemas de detección y alarma</strong> bajo <strong>NFPA 72</strong>, el código de alarmas y señalización que define espaciamiento de detectores, niveles de audibilidad y supervisión de circuitos, en línea con la <strong>NOM-002-STPS</strong>.',
+      'Manejamos <strong>detectores de humo</strong> fotoeléctricos e iónicos, <strong>detectores de calor</strong> de temperatura fija y termovelocimétricos, <strong>detectores de gas</strong> CO y GLP, <strong>centrales addressables y convencionales</strong> de Honeywell y Notifier, sirenas, estrobos, estaciones manuales y módulos de monitoreo para integrar con sistemas existentes.',
+      'El sistema se entrega con memoria de cálculo, planos as-built, matriz causa-efecto y prueba punto por punto documentada —lo que pide protección civil al dictaminar—. Damos mantenimiento programado y monitoreo remoto para edificios corporativos, hoteles, hospitales y plantas industriales de cualquier escala.',
+    ]}
+    products={['Detectores de humo iónicos', 'Detectores de calor fijo', 'Centrales addressables', 'Detectores de gas CO/GLP', 'Sirenas y estrobos', 'Paneles de control']}
+    sectors={['Edificios', 'Hoteles', 'Industria']}
+    highlight="Sistemas Honeywell · Notifier"
+    waText="Detecci%C3%B3n%20y%20Alarma"
+    background="#f8fafc"
+    images={[
+      {
+        src: '/images/catalogo/1607668552058-1000x750.webp',
+        alt: 'Detector de humo instalado en techo con acabado industrial',
+        caption: 'Detección puntual con supervisión de circuito bajo NFPA 72',
+      },
+      {
+        src: '/images/catalogo/1585367437379-600x450.webp',
+        alt: 'Sirena estroboscópica de alarma contra incendio montada en muro',
+        caption: 'Sirenas y estrobos',
+      },
+      {
+        src: '/images/catalogo/1767672857994-600x450.webp',
+        alt: 'Bases de detectores de humo nuevas antes de su instalación',
+        caption: 'Detectores y bases',
+      },
+    ]}
+  />
+
+  <!-- 3.8 Ficha: Señalética y Seguridad -->
+  <CategorySpotlight
+    id="senaletica-y-seguridad"
+    eyebrow="Cumplimiento y evacuación"
+    badge="NOM-003"
+    title="Señalética y Seguridad"
+    fichaHref="/productos/senaletica-y-seguridad"
+    desc={[
+      'La señalización es lo que la gente sigue cuando ya no ve. Nuestra línea cumple <strong>NOM-003-SEGOB</strong> para señales y avisos de protección civil y <strong>NOM-026-STPS</strong> en colores y señales de seguridad, que es exactamente el par de normas que revisa el verificador cuando dictamina un inmueble.',
+      'Incluye <strong>señalética fotoluminiscente</strong> de alta persistencia que sigue visible tras un corte de energía, <strong>luces de evacuación LED</strong> y lámparas de emergencia con batería de respaldo, botiquines equipados conforme a <strong>NOM-005-STPS</strong>, kits de evacuación y <strong>planos de emergencia</strong> impresos y montados en acrílico.',
+      'Levantamos el inmueble, definimos rutas de evacuación y puntos de reunión, y entregamos el paquete señalizado y colocado con memoria fotográfica para el expediente del Sistema de Gestión de Protección Civil. Es el trámite que más rebota por detalles de formato, así que lo dejamos listo para presentar. Servicio a comercios, escuelas y oficinas corporativas.',
+    ]}
+    products={['Señalética fotoluminiscente', 'Luces de evacuación LED', 'Lámparas de emergencia', 'Botiquines NOM-005', 'Kits de evacuación', 'Planos de emergencia']}
+    sectors={['Comercios', 'Escuelas', 'Oficinas corporativas']}
+    highlight="Cumplimiento NOM + SGPC"
+    waText="Se%C3%B1al%C3%A9tica%20y%20Seguridad"
+    background="#ffffff"
+    images={[
+      {
+        src: '/images/catalogo/1561715608-56-1000x750.webp',
+        alt: 'Señal iluminada de salida de emergencia con pictograma de evacuación',
+        caption: 'Señalización de ruta de evacuación conforme a NOM-003-SEGOB',
+      },
+      {
+        src: '/images/catalogo/1647451969544-600x450.webp',
+        alt: 'Señales de salida de emergencia y ruta de evacuación en muro',
+        caption: 'Rutas y salidas de emergencia',
+      },
+      {
+        src: '/images/catalogo/1732812837481-600x450.webp',
+        alt: 'Señal verde iluminada de salida sobre una puerta de evacuación',
+        caption: 'Señalética fotoluminiscente y LED',
+      },
+    ]}
+  />
 
   <!-- 4. Por qué FIREFIGHTER: diferenciadores -->
   <WhyFirefighter />

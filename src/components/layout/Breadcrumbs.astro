@@ -1,8 +1,8 @@
 ---
 /**
- * Breadcrumbs Component - Professional Design
- * Positioned below header with subtle styling
- * Compatible with SEO BreadcrumbList schema
+ * Breadcrumbs — banda clara full-width bajo el header.
+ * Estilos en src/assets/styles/modules.css (.crumb-*).
+ * El schema BreadcrumbList lo emite SEOHead desde BaseLayout.
  */
 export interface BreadcrumbItem {
   label: string;
@@ -15,49 +15,49 @@ interface Props {
 
 const { items } = Astro.props;
 
-// Generate breadcrumb data for SEO (passed to parent via data attribute)
-const breadcrumbsForSEO = [
-  { name: 'Inicio', url: '/' },
-  ...items.map(item => ({
-    name: item.label,
-    url: item.href || '',
-  })),
-];
+// Link "volver": ultimo item navegable antes del actual.
+// Si no hay padre, no se muestra (seria redundante con el crumb "Inicio").
+const parent = items.slice(0, -1).filter((i) => i.href).pop();
 ---
 
-<div class="bg-neutral-100 border-b border-neutral-200" data-breadcrumbs={JSON.stringify(breadcrumbsForSEO)}>
+<div class="crumb-band">
   <div class="container-custom">
-    <nav aria-label="Breadcrumb" class="py-3">
-      <ol class="flex items-center flex-wrap gap-1 text-sm">
-        <li class="flex items-center">
-          <a href="/" class="flex items-center gap-1.5 text-neutral-500 hover:text-fire-red transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-            </svg>
-            <span class="hidden sm:inline">Inicio</span>
-          </a>
-        </li>
-
-        {items.map((item, index) => (
-          <li class="flex items-center">
-            <svg class="w-4 h-4 text-neutral-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-            </svg>
-            {item.href && index < items.length - 1 ? (
-              <a
-                href={item.href}
-                class="text-neutral-500 hover:text-fire-red transition-colors"
-              >
-                {item.label}
-              </a>
-            ) : (
-              <span class="text-navy font-medium" aria-current="page">
-                {item.label}
-              </span>
-            )}
+    <div class="crumb-inner">
+      <nav aria-label="Ruta de navegación" style="min-width:0;">
+        <ol class="crumb-list">
+          <li class="crumb-li">
+            <span class="crumb-tick" aria-hidden="true"></span>
+            <a href="/" class="crumb-link">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+              <span>Inicio</span>
+            </a>
           </li>
-        ))}
-      </ol>
-    </nav>
+
+          {items.map((item, index) => (
+            <li class="crumb-li">
+              <svg class="crumb-sep" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+              {item.href && index < items.length - 1 ? (
+                <a href={item.href} class="crumb-link">{item.label}</a>
+              ) : (
+                <span class="crumb-current" aria-current="page" title={item.label}><span class="crumb-current-txt">{item.label}</span></span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </nav>
+
+      {parent && (
+        <a href={parent.href} class="crumb-back">
+          <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+          </svg>
+          <span>Volver a {parent.label}</span>
+        </a>
+      )}
+    </div>
   </div>
 </div>

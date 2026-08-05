@@ -1,0 +1,237 @@
+---
+/**
+ * Cuerpo compartido del indice del blog (/blog y /blog/pagina/N).
+ */
+import PostCard from './PostCard.astro';
+import BlogSidebar from './BlogSidebar.astro';
+import Servicios from './Servicios.astro';
+import AutorBox from './AutorBox.astro';
+import { TEMAS, getTema, waLink, formatFechaCorta } from '../../lib/blog';
+import { conteoPorTema } from '../../lib/blogData';
+import type { PostIdx } from '../../lib/blogData';
+
+interface Props {
+  posts: PostIdx[];
+  visibles: PostIdx[];
+  pagina: number;
+  totalPaginas: number;
+}
+
+const { posts, visibles, pagina, totalPaginas } = Astro.props;
+
+const conteo = conteoPorTema(posts);
+const destacado = pagina === 1 ? visibles[0] : null;
+const listado = pagina === 1 ? visibles.slice(1) : visibles;
+
+const urlPagina = (n: number) => (n === 1 ? '/blog' : `/blog/pagina/${n}`);
+const paginas = Array.from({ length: totalPaginas }, (_, i) => i + 1)
+  .filter(n => n === 1 || n === totalPaginas || Math.abs(n - pagina) <= 1);
+---
+
+<!-- ══════════ 1 · HERO ══════════ -->
+<section style="background:#09090b; padding:56px 0 68px;">
+  <div class="container-custom">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" style="align-items:start;">
+
+      <div class="lg:pr-14 lg:border-r lg:border-[#1f1f23]">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+          <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+          <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Lo escribe quien entrega el equipo</span>
+        </div>
+
+        <span style="display:inline-block; background:#dc2626; color:#fff; font-size:0.62rem; font-weight:800; letter-spacing:0.07em; padding:4px 11px; border-radius:4px; text-transform:uppercase; margin-bottom:18px;">NFPA · NOM · UL</span>
+
+        <h1 style="font-size:clamp(1.9rem,3.4vw,3rem); font-weight:800; color:#fafafa; line-height:1.08; margin:0 0 18px; letter-spacing:-0.02em;">
+          Blog técnico de equipos contra incendios y equipo para bomberos
+        </h1>
+
+        <p style="font-size:1rem; color:#a1a1aa; line-height:1.8; margin:0 0 30px;">
+          {posts.length} guías que empezaron como una llamada. Alguien nos preguntó qué traje pedir, cuántos extintores exige la norma o por qué se cayó su propuesta en la licitación, y en vez de contestar una sola vez lo escribimos aquí. Si después de leer sigues con dudas, contéstanos el WhatsApp: es la misma gente.
+        </p>
+
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+          <a href={waLink('vengo del blog y necesito una cotización')} target="_blank" rel="noopener" class="l2-cta">
+            <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+            <span>Cotizar equipo</span>
+          </a>
+          <a href="/productos" class="l2-cta-ghost">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <span>Ver catálogo completo</span>
+          </a>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:30px;">
+        <div style="position:relative;">
+          <span style="position:absolute; left:0; top:4px; bottom:4px; width:3px; border-radius:2px; background:#dc2626;" aria-hidden="true"></span>
+          <div style="padding-left:20px;">
+            <span style="font-size:0.7rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#dc2626; display:block; margin-bottom:10px;">Escribimos de lo que sí hacemos</span>
+            <p style="font-size:0.92rem; color:#a1a1aa; line-height:1.85; margin:0;">
+              Somos distribuidores autorizados de <strong style="color:#e4e4e7; font-weight:600;">MSA Safety, Scott, Bullard, Holmatro y Amerex</strong>. Eso nos da acceso a la información del fabricante y, sobre todo, a lo que pasa después: qué observó la unidad verificadora, qué se rompió en campo y qué se tuvo que reponer al año.
+            </p>
+          </div>
+        </div>
+        <div style="position:relative;">
+          <span style="position:absolute; left:0; top:4px; bottom:4px; width:3px; border-radius:2px; background:#3f3f46;" aria-hidden="true"></span>
+          <div style="padding-left:20px;">
+            <span style="font-size:0.7rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#e4e4e7; display:block; margin-bottom:10px;">Puedes leernos y no comprarnos</span>
+            <p style="font-size:0.92rem; color:#a1a1aa; line-height:1.85; margin:0;">
+              Las guías están completas a propósito: si con eso armas tu especificación y le compras a otro, cumplieron su función. Y si prefieres que lo hagamos contigo, ahí entran nuestros servicios de <strong style="color:#e4e4e7; font-weight:600;">asesoría, licitaciones, mantenimiento y capacitación</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 2 · STATS ══════════ -->
+<section style="background:#fff; border-bottom:1px solid #e4e4e7; padding:0;">
+  <div class="container-custom">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-px" style="background:#e4e4e7; border-left:1px solid #e4e4e7; border-right:1px solid #e4e4e7;">
+      <div style="background:#fff; padding:26px 22px; text-align:center;">
+        <div style="font-size:1.8rem; font-weight:800; color:#09090b; line-height:1; letter-spacing:-0.02em;">{posts.length}</div>
+        <div style="font-size:0.76rem; font-weight:600; color:#3f3f46; margin-top:6px;">Guías técnicas</div>
+        <div style="font-size:0.67rem; color:#a1a1aa; margin-top:3px;">Cada una revisada por el área técnica</div>
+      </div>
+      <div style="background:#fff; padding:26px 22px; text-align:center;">
+        <div style="font-size:1.8rem; font-weight:800; color:#09090b; line-height:1; letter-spacing:-0.02em;">{TEMAS.length}</div>
+        <div style="font-size:0.76rem; font-weight:600; color:#3f3f46; margin-top:6px;">Temas especializados</div>
+        <div style="font-size:0.67rem; color:#a1a1aa; margin-top:3px;">Ligados al catálogo</div>
+      </div>
+      <div style="background:#fff; padding:26px 22px; text-align:center;">
+        <div style="font-size:1.8rem; font-weight:800; color:#09090b; line-height:1; letter-spacing:-0.02em;">14+</div>
+        <div style="font-size:0.76rem; font-weight:600; color:#3f3f46; margin-top:6px;">Normas cubiertas</div>
+        <div style="font-size:0.67rem; color:#a1a1aa; margin-top:3px;">NFPA, NOM-STPS, UL</div>
+      </div>
+      <div style="background:#fff; padding:26px 22px; text-align:center;">
+        <div style="font-size:1.8rem; font-weight:800; color:#09090b; line-height:1; letter-spacing:-0.02em;">24 h</div>
+        <div style="font-size:0.76rem; font-weight:600; color:#3f3f46; margin-top:6px;">Respuesta a cotización</div>
+        <div style="font-size:0.67rem; color:#a1a1aa; margin-top:3px;">Contesta quien arma la propuesta</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 3 · LISTADO + SIDEBAR ══════════ -->
+<section style="background:#f8fafc; padding:52px 0 88px;">
+  <div class="container-custom">
+    <div class="blog-shell">
+
+      <div style="min-width:0;">
+
+        <!-- Chips de tema -->
+        <nav class="blog-temas" aria-label="Temas del blog">
+          <span class="blog-chip is-active">Todos <span class="blog-chip-n">{posts.length}</span></span>
+          {TEMAS.map(t => (
+            <a href={`/blog/tema/${t.slug}`} class="blog-chip">
+              {t.nombre} <span class="blog-chip-n">{conteo[t.slug] ?? 0}</span>
+            </a>
+          ))}
+        </nav>
+
+        <!-- Destacado -->
+        {destacado && (
+          <a href={`/blog/${destacado.slug}`} class="blog-featured">
+            <div>
+              <div style="display:flex; align-items:center; gap:9px; margin-bottom:14px;">
+                <span style="display:inline-block; background:#dc2626; color:#fff; font-size:0.6rem; font-weight:800; letter-spacing:0.08em; padding:3px 9px; border-radius:4px; text-transform:uppercase;">Lo más reciente</span>
+                <span style="font-size:0.68rem; font-weight:700; letter-spacing:0.06em; color:#71717a; text-transform:uppercase;">{getTema(destacado.tema).nombre}</span>
+              </div>
+              <h2>{destacado.title}</h2>
+              <p>{destacado.description}</p>
+            </div>
+            <div class="blog-featured-side">
+              <div class="blog-featured-row"><span>Publicado</span><strong>{formatFechaCorta(destacado.pubDate)}</strong></div>
+              <div class="blog-featured-row"><span>Lectura</span><strong>{destacado.minutos} min</strong></div>
+              <div class="blog-featured-row"><span>Norma</span><strong>{getTema(destacado.tema).badge}</strong></div>
+              <span style="display:flex; align-items:center; justify-content:center; gap:8px; margin-top:6px; background:#dc2626; color:#fff; font-size:0.82rem; font-weight:700; padding:11px 16px; border-radius:9px;">
+                Leer la guía completa
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </span>
+            </div>
+          </a>
+        )}
+
+        <!-- Grid -->
+        <div class="blog-grid">
+          {listado.map(p => <PostCard post={p} />)}
+        </div>
+
+        <!-- Paginacion -->
+        {totalPaginas > 1 && (
+          <nav class="blog-pager" aria-label="Paginación del blog">
+            <a href={urlPagina(Math.max(1, pagina - 1))} class={`blog-page ${pagina === 1 ? 'is-off' : ''}`} rel="prev" aria-label="Página anterior">←</a>
+            {paginas.map((n, i) => (
+              <>
+                {i > 0 && n - paginas[i - 1] > 1 && <span class="blog-page-dots">…</span>}
+                <a href={urlPagina(n)} class={`blog-page ${n === pagina ? 'is-current' : ''}`} aria-current={n === pagina ? 'page' : undefined}>{n}</a>
+              </>
+            ))}
+            <a href={urlPagina(Math.min(totalPaginas, pagina + 1))} class={`blog-page ${pagina === totalPaginas ? 'is-off' : ''}`} rel="next" aria-label="Página siguiente">→</a>
+          </nav>
+        )}
+
+      </div>
+
+      <BlogSidebar posts={posts} />
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 4 · SEO + CTA ══════════ -->
+<section style="background:#fff; border-top:1px solid #e4e4e7; padding:72px 0;">
+  <div class="container-custom">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" style="align-items:start;">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+          <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+          <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Por qué existe este blog</span>
+        </div>
+        <h2 style="font-size:clamp(1.7rem,2.6vw,2.4rem); font-weight:800; color:#09090b; line-height:1.12; margin:0 0 18px; letter-spacing:-0.02em;">
+          Comprar equipo sin criterio<br>se paga dos veces
+        </h2>
+        <p style="font-size:0.95rem; color:#52525b; line-height:1.85; margin:0 0 16px;">
+          La primera cuando llega un equipo que no cumple la norma que aplicaba. La segunda cuando hay que reponerlo tras una observación de la <strong style="color:#09090b; font-weight:600;">STPS</strong> o de protección civil —y eso es el buen escenario, porque el malo es enterarte durante una intervención.
+        </p>
+        <p style="font-size:0.95rem; color:#52525b; line-height:1.85; margin:0 0 16px;">
+          Lo hemos visto de los dos lados: brigadas que compraron bien con la mitad del presupuesto y compras grandes que terminaron guardadas porque nadie preguntó cómo se iba a usar el equipo. Por eso escribimos con el nivel de detalle con el que nos gustaría que nos explicaran a nosotros.
+        </p>
+        <p style="font-size:0.95rem; color:#52525b; line-height:1.85; margin:0;">
+          Aquí encuentras cómo comparar <strong style="color:#09090b; font-weight:600;">trajes estructurales NFPA 1970</strong>, cuándo un <strong style="color:#09090b; font-weight:600;">SCBA</strong> ya no debe salir a servicio, cuántos <strong style="color:#09090b; font-weight:600;">extintores</strong> exige la NOM para tu superficie y qué anexo suele faltar en una propuesta de licitación.
+        </p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        {TEMAS.slice(0, 4).map(t => (
+          <a href={`/blog/tema/${t.slug}`} class="art-prod">
+            <span style="min-width:0;">
+              <span class="t" style="display:block;">{t.nombre}</span>
+              <span class="d" style="display:block;">{t.descripcion}</span>
+            </span>
+            <svg width="16" height="16" fill="none" stroke="#dc2626" stroke-width="2.5" viewBox="0 0 24 24" style="flex-shrink:0;" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        ))}
+        <a href="/productos" style="display:flex; align-items:center; justify-content:space-between; gap:12px; background:#09090b; border-radius:12px; padding:18px 20px; text-decoration:none;">
+          <span>
+            <span style="display:block; font-size:0.9rem; font-weight:700; color:#fafafa; margin-bottom:4px;">Catálogo completo de productos</span>
+            <span style="display:block; font-size:0.75rem; color:#a1a1aa; line-height:1.6;">8 categorías certificadas NFPA, NOM y UL con documentación técnica</span>
+          </span>
+          <svg width="16" height="16" fill="none" stroke="#dc2626" stroke-width="2.5" viewBox="0 0 24 24" style="flex-shrink:0;" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 5 · SERVICIOS ══════════ -->
+<Servicios fondo="#f8fafc" />
+
+<!-- ══════════ 6 · AUTORÍA ══════════ -->
+<section style="background:#fff; border-top:1px solid #e4e4e7; padding:64px 0;">
+  <div class="container-custom">
+    <AutorBox />
+  </div>
+</section>

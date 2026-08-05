@@ -1,99 +1,345 @@
 ---
+/**
+ * L2 — Página de categoría de producto
+ * Homologada con el diseño del index: colores sólidos, patrón de card universal,
+ * alternancia de fondo #ffffff / #f8fafc, bloques oscuros #09090b.
+ */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import categorias from '../../data/productos.json';
 
 export function getStaticPaths() {
-  return categorias.map(cat => ({
+  return categorias.map((cat) => ({
     params: { categoria: cat.slug },
     props: { cat },
   }));
 }
 
 const { cat } = Astro.props;
+
+const SITE = 'https://firefighter.com.mx';
 const waBase = 'https://wa.me/525500000000';
-const otrasCategs = categorias.filter(c => c.slug !== cat.slug);
+const wa = (t: string) => `${waBase}?text=${encodeURIComponent(`Hola, necesito cotizar ${t}`)}`;
+
+const url = `${SITE}/productos/${cat.slug}`;
+const tieneFaqs = Array.isArray(cat.faqs) && cat.faqs.length > 0;
+const otras = categorias.filter((c) => c.slug !== cat.slug);
+const tieneDetalle = cat.productos?.some((p: any) => p.desc);
+
+// ── Schema.org ──
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: cat.nombre,
+  description: cat.descripcion,
+  url,
+  numberOfItems: cat.productos.length,
+  itemListElement: cat.productos.map((p: any, i: number) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Product',
+      name: p.nombre,
+      description: p.desc || cat.descripcion,
+      category: cat.nombre,
+      ...(p.img ? { image: `${SITE}${p.img}` } : {}),
+      ...(p.slug ? { url: `${url}#${p.slug}` } : {}),
+      brand: { '@type': 'Brand', name: cat.marcas?.[0] ?? 'FIREFIGHTER México' },
+      offers: {
+        '@type': 'Offer',
+        availability: 'https://schema.org/InStock',
+        priceCurrency: 'MXN',
+        seller: { '@type': 'Organization', name: 'FIREFIGHTER México' },
+        url,
+      },
+    },
+  })),
+};
+
+const faqSchema = tieneFaqs
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: cat.faqs.map((f: any) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    }
+  : null;
 ---
 
 <BaseLayout
-  title={`${cat.nombre} — FIREFIGHTER México | Equipos Certificados ${cat.badge}`}
-  description={cat.descripcion}
+  title={cat.seoTitle}
+  description={cat.seoDescription}
+  canonicalUrl={url}
+  image={cat.imagenes.hero.src}
+  imageAlt={cat.imagenes.hero.alt}
+  breadcrumbs={[
+    { label: 'Catálogo de Productos', href: '/productos' },
+    { label: cat.nombre },
+  ]}
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)} />
+    {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  </Fragment>
 
-  <!-- ══ HERO CATEGORÍA ══ -->
-  <section style="background:#09090b; padding:64px 0 52px; border-bottom:1px solid #1f1f1f;">
+  <!-- ══════════ 1 · HERO DE CATEGORÍA ══════════ -->
+  <section style="background:#09090b; padding:56px 0 72px;">
     <div class="container-custom">
 
-      <!-- Breadcrumb -->
-      <div style="display:flex; align-items:center; gap:8px; margin-bottom:28px; flex-wrap:wrap;">
-        <a href="/" style="font-size:0.72rem; color:#71717a; text-decoration:none; transition:color 0.2s;"
-           onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#71717a'">Inicio</a>
-        <svg width="12" height="12" fill="none" stroke="#3f3f46" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-        </svg>
-        <a href="/productos" style="font-size:0.72rem; color:#71717a; text-decoration:none; transition:color 0.2s;"
-           onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#71717a'">Catálogo</a>
-        <svg width="12" height="12" fill="none" stroke="#3f3f46" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-        </svg>
-        <span style="font-size:0.72rem; color:#a1a1aa; font-weight:600;">{cat.nombre}</span>
-      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" style="align-items:start;">
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12" style="align-items:center;">
+        <!-- Columna izquierda: identidad de la categoría -->
+        <div style="padding-right:0;" class="lg:pr-14 lg:border-r lg:border-[#1f1f23]">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+            <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">{cat.eyebrow}</span>
+          </div>
 
-        <div>
-          <span style="display:inline-block; background:#dc2626; color:#fff; font-size:0.65rem; font-weight:800; letter-spacing:0.08em; padding:4px 12px; border-radius:4px; text-transform:uppercase; margin-bottom:20px;">
-            {cat.badge}
-          </span>
-          <h1 style="font-size:clamp(1.8rem,3vw,2.8rem); font-weight:800; color:#fff; line-height:1.1; margin:0 0 20px; letter-spacing:-0.02em;">
-            {cat.nombre}
-          </h1>
-          <p style="font-size:0.9rem; color:#71717a; line-height:1.85; margin:0 0 28px; max-width:480px;">
-            {cat.descripcion}
-          </p>
-          <div style="display:flex; gap:12px; flex-wrap:wrap;">
-            <a
-              href={`${waBase}?text=Hola%2C%20necesito%20cotizar%20${encodeURIComponent(cat.nombre)}`}
-              target="_blank"
-              rel="noopener"
-              style="display:inline-flex; align-items:center; gap:8px; padding:13px 24px; background:#dc2626; color:#fff; font-size:0.85rem; font-weight:700; border-radius:9px; text-decoration:none; transition:background 0.2s;"
-              onmouseover="this.style.background='#b91c1c'" onmouseout="this.style.background='#dc2626'"
-            >
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-              Solicitar cotización
+          <span style="display:inline-block; background:#dc2626; color:#fff; font-size:0.62rem; font-weight:800; letter-spacing:0.07em; padding:4px 11px; border-radius:4px; text-transform:uppercase; margin-bottom:18px;">{cat.badge}</span>
+
+          <h1 style="font-size:clamp(1.9rem,3.4vw,3rem); font-weight:800; color:#fafafa; line-height:1.08; margin:0 0 18px; letter-spacing:-0.02em;">{cat.h1}</h1>
+
+          <p style="font-size:1rem; color:#a1a1aa; line-height:1.8; margin:0 0 30px;">{cat.subtitulo}</p>
+
+          <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:26px;">
+            <a href={wa(cat.nombre)} target="_blank" rel="noopener" class="l2-cta">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+              <span>Cotizar {cat.nombre}</span>
             </a>
-            <a
-              href="mailto:ventas@firefighter.mx"
-              style="display:inline-flex; align-items:center; gap:8px; padding:13px 24px; background:transparent; color:#a1a1aa; font-size:0.85rem; font-weight:600; border-radius:9px; text-decoration:none; border:1px solid #2a2a2a; transition:border-color 0.2s, color 0.2s;"
-              onmouseover="this.style.borderColor='#71717a'; this.style.color='#fff';"
-              onmouseout="this.style.borderColor='#2a2a2a'; this.style.color='#a1a1aa';"
-            >
-              ventas@firefighter.mx
+            <a href="tel:5555555555" class="l2-cta-ghost">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <span>Hablar con un ingeniero</span>
             </a>
+          </div>
+
+          <div style="display:inline-flex; align-items:center; gap:8px; padding:9px 14px; border-radius:8px; background:#18181b; border:1px solid #27272a;">
+            <svg width="13" height="13" fill="#dc2626" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg>
+            <span style="font-size:0.75rem; font-weight:600; color:#e4e4e7;">{cat.highlight}</span>
           </div>
         </div>
 
-        <!-- Info rápida -->
-        <div style="background:#111; border:1px solid #1f1f1f; border-radius:14px; padding:28px 32px; display:flex; flex-direction:column; gap:18px;">
-          <div>
-            <span style="font-size:0.62rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#3f3f46; display:block; margin-bottom:8px;">Norma aplicable</span>
-            <span style="font-size:0.9rem; font-weight:700; color:#dc2626;">{cat.norma}</span>
+        <!-- Columna derecha: dos bloques de contexto -->
+        <div style="display:flex; flex-direction:column; gap:30px;">
+          {cat.heroBloques.map((b: any, i: number) => (
+            <div style="position:relative;">
+              <span style={`position:absolute; left:0; top:4px; bottom:4px; width:3px; border-radius:2px; background:${i === 0 ? '#dc2626' : '#3f3f46'};`} aria-hidden="true"></span>
+              <div style="padding-left:22px;">
+                <span style={`display:block; font-size:0.68rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:${i === 0 ? '#dc2626' : '#a1a1aa'}; margin-bottom:11px;`}>{b.label}</span>
+                <p set:html={b.texto} style="font-size:0.94rem; color:#a1a1aa; line-height:1.85; margin:0;"></p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════ 1b · MENÚ EXTENDIDO (full-bleed) ══════════ -->
+  <nav class="l2-nav" aria-label={`Secciones de ${cat.nombre}`}>
+    <div class="l2-nav-grid">
+      {[
+        { href: '#componentes',   label: 'Componentes',   sub: `${cat.productos.length} productos` },
+        { href: '#la-linea',      label: 'La línea',      sub: 'Qué cubre' },
+        { href: '#normas',        label: 'Normas',        sub: 'Cumplimiento', show: cat.normas?.length > 0 },
+        { href: '#sectores',      label: 'Aplica para',   sub: 'Sectores', show: cat.aplicaciones?.length > 0 },
+        { href: '#documentacion', label: 'Documentación', sub: 'Licitaciones' },
+        { href: '#preguntas',     label: 'Preguntas',     sub: 'Dudas frecuentes', show: tieneFaqs },
+      ].filter((i) => i.show !== false).map((i) => (
+        <a href={i.href} class="l2-nav-item">
+          <span class="l2-nav-label">{i.label}</span>
+          <span class="l2-nav-sub">{i.sub}</span>
+        </a>
+      ))}
+
+      <a href={wa(cat.nombre)} target="_blank" rel="noopener" class="l2-nav-item is-cta">
+        <span class="l2-nav-label">
+          Cotizar ahora
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </span>
+        <span class="l2-nav-sub">Respuesta en 24 h</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ══════════ 1c · COMPONENTES DE LA LÍNEA (cards) ══════════ -->
+  <section id="componentes" class="l2-anchor" style="background:#ffffff; padding:88px 0; border-bottom:1px solid #e4e4e7;">
+    <div class="container-custom">
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16" style="align-items:center; margin-bottom:48px;">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+            <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Equipo incluido</span>
           </div>
-          <div style="height:1px; background:#1f1f1f;"></div>
+          <h2 style="font-size:clamp(1.9rem,2.8vw,2.7rem); font-weight:800; color:#09090b; line-height:1.1; margin:0; letter-spacing:-0.02em;">
+            Componentes de<br>la línea
+          </h2>
+        </div>
+        <div>
+          <span style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px; display:block;">Cotización por pieza o por paquete</span>
+          <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">
+            Puedes cotizar un componente suelto o el <strong style="color:#09090b; font-weight:600;">paquete completo por elemento o por brigada</strong>. Dimensionamos el pedido según el riesgo real de tu operación, no según un catálogo genérico.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {cat.productos.map((p: any) => (
+          <article class="cg-card">
+            <div class="cg-media" style={`background-image:url('${p.img}');`} role="img" aria-label={p.alt}>
+              <span class="cg-veil" aria-hidden="true"></span>
+              <span class="cg-badge">{p.norma}</span>
+              <span class="cg-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.9"><path stroke-linecap="round" stroke-linejoin="round" d={cat.icon}/></svg>
+              </span>
+            </div>
+
+            <div class="cg-body">
+              <h3 class="cg-title">{p.nombre}</h3>
+              {p.desc && <p class="cg-desc">{p.desc}</p>}
+
+              {p.specs?.length > 0 && (
+                <>
+                  <div class="cg-sep"><span>Especificaciones</span><i></i></div>
+                  <ul class="cg-specs">
+                    {p.specs.map((sp: string) => (
+                      <li>
+                        <svg width="12" height="12" fill="#dc2626" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg>
+                        <span>{sp}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+
+              <a href={p.intro ? `#${p.slug}` : wa(p.nombre)} target={p.intro ? undefined : '_blank'} rel={p.intro ? undefined : 'noopener'} class="cg-cta">
+                <span>{p.intro ? `Ver ${p.nombre}` : `Cotizar ${p.nombre}`}</span>
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 1d · MÓDULO POR PRODUCTO ══════════ -->
+  {cat.productos.filter((p: any) => p.intro).map((p: any, i: number) => (
+    <section id={p.slug} class="l2-anchor" style={`background:${i % 2 === 0 ? '#f8fafc' : '#ffffff'}; padding:88px 0; border-top:1px solid #e4e4e7;`}>
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" style="align-items:start;">
+
+          <!-- Columna 1 — información -->
           <div>
-            <span style="font-size:0.62rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#3f3f46; display:block; margin-bottom:10px;">Sectores que aplica</span>
-            <div style="display:flex; flex-wrap:wrap; gap:6px;">
-              {cat.sector.map(s => (
-                <span style="font-size:0.7rem; color:#a1a1aa; background:#1a1a1a; border:1px solid #2a2a2a; padding:4px 10px; border-radius:99px;">{s}</span>
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+              <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+              <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">{p.eyebrow}</span>
+            </div>
+
+            <span style="display:inline-block; background:#dc2626; color:#fff; font-size:0.62rem; font-weight:800; letter-spacing:0.06em; padding:4px 10px; border-radius:4px; text-transform:uppercase; margin-bottom:16px;">{p.norma}</span>
+
+            <h2 style="font-size:clamp(1.7rem,2.5vw,2.4rem); font-weight:800; color:#09090b; line-height:1.12; margin:0 0 18px; letter-spacing:-0.02em;">{p.nombre}</h2>
+
+            <div style="margin:0 0 30px;">
+              {p.intro.map((par: string, k: number) => (
+                <p set:html={par} style={`font-size:0.95rem; color:#52525b; line-height:1.85; width:100%; margin:${k === 0 ? '0' : '16px 0 0'};`}></p>
+              ))}
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+              <span style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#a1a1aa;">Especificaciones</span>
+              <div style="flex:1; height:1px; background:#e4e4e7;"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2" style="margin-bottom:30px;">
+              {p.specs.map((sp: string) => (
+                <span style="display:flex; align-items:center; gap:8px; font-size:0.78rem; color:#3f3f46; background:#fff; border:1px solid #e4e4e7; padding:9px 12px; border-radius:7px;">
+                  <svg width="12" height="12" fill="#dc2626" viewBox="0 0 20 20" style="flex-shrink:0;" aria-hidden="true"><use href="#i-check"/></svg>
+                  <span>{sp}</span>
+                </span>
+              ))}
+            </div>
+
+            <div style="display:flex; flex-wrap:wrap; gap:10px;">
+              <a href={wa(p.nombre)} target="_blank" rel="noopener" class="cs-cta">
+                <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+                <span>Cotizar {p.nombre}</span>
+              </a>
+              <a href="#componentes" class="cs-cta-ghost">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 16l-4-4m0 0l4-4m-4 4h18"/></svg>
+                <span>Volver a componentes</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Columna 2 — galería -->
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <figure class="cs-shot cs-shot-big">
+              <img src={p.galeria[0].src} alt={p.galeria[0].alt} width="800" height="600" loading="lazy" decoding="async" />
+              <figcaption>{p.galeria[0].caption}</figcaption>
+              <span class="cs-shot-badge">{p.norma}</span>
+            </figure>
+            <div class="grid grid-cols-2 gap-3">
+              {p.galeria.slice(1).map((im: any) => (
+                <figure class="cs-shot cs-shot-sm">
+                  <img src={im.src} alt={im.alt} width="400" height="300" loading="lazy" decoding="async" />
+                  <figcaption>{im.caption}</figcaption>
+                </figure>
               ))}
             </div>
           </div>
-          <div style="height:1px; background:#1f1f1f;"></div>
-          <div>
-            <span style="font-size:0.62rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#3f3f46; display:block; margin-bottom:8px;">Productos disponibles</span>
-            <span style="font-size:1.6rem; font-weight:800; color:#fff; letter-spacing:-0.02em;">{cat.productos.length}</span>
-            <span style="font-size:0.75rem; color:#52525b; margin-left:6px;">en esta categoría</span>
+
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- ══════════ 2 · INTRO + GALERÍA ══════════ -->
+  <section id="la-linea" class="l2-anchor" style="background:#ffffff; padding:96px 0; border-top:1px solid #e4e4e7;">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" style="align-items:start;">
+
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+            <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">La línea</span>
+          </div>
+          <h2 style="font-size:clamp(1.7rem,2.4vw,2.3rem); font-weight:800; color:#09090b; line-height:1.15; margin:0 0 20px; letter-spacing:-0.02em;">
+            Qué cubre {cat.nombre}
+          </h2>
+          {cat.intro.map((p: string, i: number) => (
+            <p set:html={p} style={`font-size:0.95rem; color:#52525b; line-height:1.85; width:100%; margin:${i === 0 ? '0' : '16px 0 0'};`}></p>
+          ))}
+
+          <!-- Marcas -->
+          {cat.marcas?.length > 0 && (
+            <div style="margin-top:32px; padding-top:26px; border-top:1px solid #e4e4e7;">
+              <span style="display:block; font-size:0.62rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#a1a1aa; margin-bottom:12px;">Marcas que distribuimos</span>
+              <div style="display:flex; flex-wrap:wrap; gap:7px;">
+                {cat.marcas.map((m: string) => (
+                  <span style="font-size:0.75rem; font-weight:600; color:#3f3f46; background:#f4f4f5; border:1px solid #e4e4e7; padding:7px 14px; border-radius:99px;">{m}</span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        <!-- Galería 1 grande + 2 chicas -->
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <figure class="cs-shot cs-shot-big">
+            <img src={cat.imagenes.a.src} alt={cat.imagenes.a.alt} width="800" height="600" loading="lazy" decoding="async" />
+            {cat.imagenes.a.caption && <figcaption>{cat.imagenes.a.caption}</figcaption>}
+            <span class="cs-shot-badge">{cat.badge}</span>
+          </figure>
+          <div class="grid grid-cols-2 gap-3">
+            {[cat.imagenes.b, cat.imagenes.c].filter(Boolean).map((im: any) => (
+              <figure class="cs-shot cs-shot-sm">
+                <img src={im.src} alt={im.alt} width="400" height="300" loading="lazy" decoding="async" />
+                {im.caption && <figcaption>{im.caption}</figcaption>}
+              </figure>
+            ))}
           </div>
         </div>
 
@@ -101,169 +347,326 @@ const otrasCategs = categorias.filter(c => c.slug !== cat.slug);
     </div>
   </section>
 
-  <!-- ══ GRID DE PRODUCTOS ══ -->
-  <section style="background:#f8fafc; padding:72px 0 96px;">
-    <div class="container-custom">
+  <!-- ══════════ 4 · NORMAS Y CERTIFICACIONES ══════════ -->
+  {cat.normas?.length > 0 && (
+    <section id="normas" class="l2-anchor" style="background:#ffffff; padding:96px 0; border-top:1px solid #e4e4e7;">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16" style="align-items:start;">
 
-      <div style="margin-bottom:40px;">
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
-          <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
-          <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Productos</span>
-        </div>
-        <h2 style="font-size:clamp(1.5rem,2.4vw,2.2rem); font-weight:800; color:#09090b; line-height:1.1; margin:0; letter-spacing:-0.02em;">
-          {cat.nombre} — Catálogo completo
-        </h2>
-      </div>
+          <div>
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+              <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+              <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Cumplimiento</span>
+            </div>
+            <h2 style="font-size:clamp(1.9rem,2.8vw,2.7rem); font-weight:800; color:#09090b; line-height:1.1; margin:0 0 20px; letter-spacing:-0.02em;">
+              Normas que<br>debe cumplir
+            </h2>
+            <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">
+              Un equipo sin certificación vigente no pasa una verificación y no protege. Estas son las normas que aplican a esta línea y que respaldan cada pieza que entregamos.
+            </p>
+          </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {cat.productos.map(prod => (
-          <div style="background:#fff; border:1px solid #e4e4e7; border-radius:14px; overflow:hidden; display:flex; flex-direction:column; transition:box-shadow 0.2s ease, transform 0.2s ease;"
-               class="hover:-translate-y-1 hover:shadow-lg">
-
-            <!-- Header producto -->
-            <div style="padding:24px 24px 0;">
-              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; flex-wrap:wrap; gap:6px;">
-                <span style="display:inline-block; background:#dc2626; color:#fff; font-size:0.6rem; font-weight:800; letter-spacing:0.06em; padding:3px 9px; border-radius:4px; text-transform:uppercase;">
-                  {prod.norma}
-                </span>
-                <span style="font-size:0.65rem; font-weight:700; color:#52525b; background:#f4f4f5; padding:3px 8px; border-radius:4px;">
-                  {prod.marca}
-                </span>
+          <div>
+            {cat.normas.map((n: any) => (
+              <div class="l2-norm">
+                <span style="flex-shrink:0; display:inline-block; background:#09090b; color:#fff; font-size:0.62rem; font-weight:800; letter-spacing:0.05em; padding:6px 11px; border-radius:5px; height:fit-content; min-width:112px; text-align:center;">{n.code}</span>
+                <p style="font-size:0.86rem; color:#52525b; line-height:1.75; margin:0;">{n.desc}</p>
               </div>
-              <h3 style="font-size:1rem; font-weight:700; color:#09090b; margin:0 0 10px; line-height:1.3;">
-                {prod.nombre}
-              </h3>
-              <p style="font-size:0.77rem; color:#71717a; line-height:1.7; margin:0 0 18px;">
-                {prod.descripcion}
+            ))}
+          </div>
+
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ══════════ 5 · APLICA PARA ══════════ -->
+  {cat.aplicaciones?.length > 0 && (
+    <section id="sectores" class="l2-anchor" style="background:#f8fafc; padding:96px 0; border-top:1px solid #e4e4e7;">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16" style="align-items:center; margin-bottom:48px;">
+          <div>
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+              <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+              <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Aplica para</span>
+            </div>
+            <h2 style="font-size:clamp(1.9rem,2.8vw,2.7rem); font-weight:800; color:#09090b; line-height:1.1; margin:0; letter-spacing:-0.02em;">
+              Quién usa<br>esta línea
+            </h2>
+          </div>
+          <div>
+            <span style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px; display:block;">Cada sector pide algo distinto</span>
+            <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">
+              No es lo mismo equipar un cuerpo municipal que una brigada de planta. Ajustamos especificación, volumen y documentación al <strong style="color:#09090b; font-weight:600;">marco normativo que le aplica a cada cliente</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {cat.aplicaciones.map((a: any) => (
+            <div class="l2-sector">
+              <div style="display:flex; align-items:center; gap:9px; margin-bottom:14px;">
+                <span style="display:block; width:18px; height:2px; background:#dc2626; border-radius:2px;"></span>
+                <h3 style="font-size:0.98rem; font-weight:700; color:#09090b; margin:0; line-height:1.3;">{a.sector}</h3>
+              </div>
+              <p style="font-size:0.83rem; color:#52525b; line-height:1.8; margin:0;">{a.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ══════════ 6 · DOCUMENTACIÓN (bloque oscuro) ══════════ -->
+  <section id="documentacion" class="l2-anchor" style="background:#09090b; padding:88px 0;">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" style="align-items:center;">
+
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+            <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Documentación</span>
+          </div>
+          <h2 style="font-size:clamp(1.7rem,2.4vw,2.3rem); font-weight:800; color:#fafafa; line-height:1.12; margin:0 0 18px; letter-spacing:-0.02em;">
+            Todo lo que pide una licitación, incluido
+          </h2>
+          <p style="font-size:0.92rem; color:#a1a1aa; line-height:1.85; margin:0 0 28px; max-width:52ch;">
+            La mayoría de los procesos no se pierden por precio, se pierden por un documento faltante. Cada envío sale con el expediente completo y sin costo adicional.
+          </p>
+          <a href="mailto:licitaciones@firefighter.com.mx" class="l2-cta">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span>Escribir a licitaciones</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {cat.documentacion.map((d: string) => (
+            <div style="display:flex; align-items:flex-start; gap:10px; background:#141417; border:1px solid #27272a; border-radius:10px; padding:15px 16px;">
+              <svg width="14" height="14" fill="#dc2626" viewBox="0 0 20 20" style="flex-shrink:0; margin-top:2px;" aria-hidden="true"><use href="#i-check"/></svg>
+              <span style="font-size:0.82rem; color:#e4e4e7; font-weight:500; line-height:1.5;">{d}</span>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 7 · FAQ ══════════ -->
+  <!-- ══════════ 7 · FAQ + FORMULARIO A WHATSAPP ══════════ -->
+  {tieneFaqs && (
+    <section id="preguntas" class="l2-anchor" style="background:#ffffff; padding:96px 0; border-top:1px solid #e4e4e7;">
+      <div class="container-custom">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16" style="align-items:center; margin-bottom:52px;">
+          <div>
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+              <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+              <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Preguntas frecuentes</span>
+            </div>
+            <h2 style="font-size:clamp(1.9rem,2.8vw,2.7rem); font-weight:800; color:#09090b; line-height:1.1; margin:0; letter-spacing:-0.02em;">
+              Dudas sobre<br>{cat.nombre}
+            </h2>
+          </div>
+          <div>
+            <span style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px; display:block;">Responde un ingeniero, no un vendedor</span>
+            <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">
+              Las {cat.faqs.length} preguntas que más nos llegan sobre esta línea, contestadas con el criterio técnico que aplicaríamos en tu proyecto. Si tu caso no está aquí, el formulario arma el mensaje por ti y te contesta un <strong style="color:#09090b; font-weight:600;">ingeniero certificado en NFPA y NOM-002-STPS</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" style="align-items:start;">
+
+          <!-- Columna 1 — acordeón -->
+          <div>
+            {cat.faqs.map((f: any, i: number) => (
+              <details class="l2-faq" open={i === 0}>
+                <summary>
+                  <span>{f.q}</span>
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                </summary>
+                <div class="l2-faq-body">{f.a}</div>
+              </details>
+            ))}
+          </div>
+
+          <!-- Columna 2 — formulario -->
+          <div class="l2-form">
+            <div class="l2-form-head">
+              <span class="l2-form-eyebrow">Cotización sin compromiso</span>
+              <h3 class="l2-form-title">Cuéntanos qué necesitas</h3>
+              <p class="l2-form-sub">
+                Completa los campos y el botón abre WhatsApp con tu solicitud ya redactada.
+                Respondemos con propuesta técnica en menos de <strong>24 horas hábiles</strong>.
               </p>
             </div>
 
-            <!-- Body producto -->
-            <div style="padding:0 24px 24px; display:flex; flex-direction:column; flex:1;">
-
-              <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
-                <span style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#a1a1aa;">Características</span>
-                <div style="flex:1; height:1px; background:#f4f4f5;"></div>
-              </div>
-              <div style="display:flex; flex-direction:column; gap:5px; margin-bottom:18px;">
-                {prod.caracteristicas.map(c => (
-                  <div style="display:flex; align-items:flex-start; gap:8px;">
-                    <svg width="10" height="10" fill="#dc2626" viewBox="0 0 20 20" style="flex-shrink:0; margin-top:3px;">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                    </svg>
-                    <span style="font-size:0.72rem; color:#3f3f46; line-height:1.5;">{c}</span>
-                  </div>
-                ))}
+            <form id="faq-form" class="l2-form-body" novalidate>
+              <div class="l2-field">
+                <label for="ff-nombre">Nombre y cargo <span aria-hidden="true">*</span></label>
+                <input id="ff-nombre" name="nombre" type="text" required autocomplete="name" placeholder="Ing. Roberto Garza · Jefe de Seguridad" />
               </div>
 
-              <!-- Aplicación -->
-              <div style="display:flex; align-items:center; gap:7px; padding:9px 12px; border-radius:8px; background:#fef2f2; margin-bottom:18px;">
-                <svg width="12" height="12" fill="#dc2626" viewBox="0 0 20 20" style="flex-shrink:0;">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                <span style="font-size:0.68rem; font-weight:600; color:#dc2626;">{prod.aplicacion}</span>
+              <div class="l2-field">
+                <label for="ff-org">Institución o empresa <span aria-hidden="true">*</span></label>
+                <input id="ff-org" name="org" type="text" required autocomplete="organization" placeholder="H. Cuerpo de Bomberos de Monterrey" />
               </div>
 
-              <!-- CTA -->
-              <a
-                href={`${waBase}?text=Hola%2C%20necesito%20cotizar%20*${encodeURIComponent(prod.nombre)}*%20de%20${encodeURIComponent(prod.marca)}.%20Norma%3A%20${encodeURIComponent(prod.norma)}`}
-                target="_blank"
-                rel="noopener"
-                style="margin-top:auto; border-top:1px solid #f4f4f5; padding-top:16px; display:flex; align-items:center; justify-content:space-between; font-size:0.8rem; font-weight:600; color:#dc2626; text-decoration:none;"
-              >
-                <span>Solicitar cotización</span>
-                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
+              <div class="l2-grid-2">
+                <div class="l2-field">
+                  <label for="ff-tipo">Tipo de cliente</label>
+                  <select id="ff-tipo" name="tipo">
+                    <option>Cuerpo de bomberos</option>
+                    <option>Brigada industrial</option>
+                    <option>Protección civil</option>
+                    <option>Gobierno · licitación</option>
+                    <option>Empresa privada</option>
+                    <option>Otro</option>
+                  </select>
+                </div>
+                <div class="l2-field">
+                  <label for="ff-vol">Elementos a equipar</label>
+                  <select id="ff-vol" name="volumen">
+                    <option>1 a 5</option>
+                    <option>6 a 20</option>
+                    <option>21 a 50</option>
+                    <option>Más de 50</option>
+                    <option>Por definir</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="l2-grid-2">
+                <div class="l2-field">
+                  <label for="ff-ciudad">Ciudad y estado</label>
+                  <input id="ff-ciudad" name="ciudad" type="text" autocomplete="address-level2" placeholder="Monterrey, Nuevo León" />
+                </div>
+                <div class="l2-field">
+                  <label for="ff-contacto">Teléfono o correo <span aria-hidden="true">*</span></label>
+                  <input id="ff-contacto" name="contacto" type="text" required autocomplete="email" placeholder="55 1234 5678" />
+                </div>
+              </div>
+
+              <div class="l2-field">
+                <label for="ff-msg">¿Qué equipo necesitas?</label>
+                <textarea id="ff-msg" name="mensaje" rows="3" placeholder="Ej. 25 ensambles estructurales completos con casco y botas, entrega antes de diciembre."></textarea>
+              </div>
+
+              <label class="l2-check">
+                <input id="ff-lic" name="licitacion" type="checkbox" />
+                <span>Requiero documentación para licitación pública</span>
+              </label>
+
+              <button type="submit" class="l2-form-cta">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+                <span>Enviar por WhatsApp</span>
+              </button>
+
+              <p class="l2-form-legal">
+                Al enviar se abre WhatsApp con el mensaje redactado; tú decides si lo mandas.
+                No almacenamos tus datos en este sitio. Consulta el <a href="/privacidad">aviso de privacidad</a>.
+              </p>
+            </form>
+
+            <div class="l2-form-foot">
+              <a href="tel:5555555555">
+                <span>Ventas directas</span>
+                <strong>55 5555 5555</strong>
               </a>
-
+              <a href="mailto:licitaciones@firefighter.com.mx">
+                <span>Licitaciones</span>
+                <strong>licitaciones@firefighter.com.mx</strong>
+              </a>
             </div>
           </div>
-        ))}
+
+        </div>
       </div>
 
-    </div>
-  </section>
+      <!-- define:vars NO funciona con is:inline: los valores viajan en data-* -->
+      <span id="faq-form-data" data-wa="525500000000" data-cat={cat.nombre} hidden></span>
 
-  <!-- ══ OTRAS CATEGORÍAS ══ -->
-  <section style="background:#fff; padding:72px 0; border-top:1px solid #e4e4e7;">
+      <script is:inline>
+        (() => {
+          const form = document.getElementById('faq-form');
+          const data = document.getElementById('faq-form-data');
+          if (!form || !data) return;
+
+          const WA = data.dataset.wa;
+          const CATEGORIA = data.dataset.cat;
+          const val = (id) => (document.getElementById(id)?.value || '').trim();
+
+          form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            let ok = true;
+            ['ff-nombre', 'ff-org', 'ff-contacto'].forEach((id) => {
+              const el = document.getElementById(id);
+              const campo = el?.closest('.l2-field');
+              const vacio = !el || !el.value.trim();
+              campo?.classList.toggle('has-error', vacio);
+              if (vacio && ok) { el?.focus(); ok = false; }
+            });
+            if (!ok) return;
+
+            const lic = document.getElementById('ff-lic')?.checked;
+            const msg = val('ff-msg');
+
+            const lineas = [
+              'Hola FIREFIGHTER, solicito cotizacion de ' + CATEGORIA + '.',
+              '',
+              'Nombre: ' + val('ff-nombre'),
+              'Institucion: ' + val('ff-org'),
+              'Tipo de cliente: ' + val('ff-tipo'),
+              'Elementos a equipar: ' + val('ff-vol'),
+            ];
+            if (val('ff-ciudad')) lineas.push('Ubicacion: ' + val('ff-ciudad'));
+            lineas.push('Contacto: ' + val('ff-contacto'));
+            if (msg) lineas.push('', 'Requerimiento: ' + msg);
+            if (lic) lineas.push('', 'Requiero documentacion para licitacion publica.');
+
+            window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(lineas.join('\n')), '_blank', 'noopener');
+          });
+
+          form.querySelectorAll('input, select, textarea').forEach((el) => {
+            el.addEventListener('input', () => el.closest('.l2-field')?.classList.remove('has-error'));
+          });
+        })();
+      </script>
+    </section>
+  )}
+
+  <!-- ══════════ 8 · CATÁLOGO RELACIONADO (interlinking) ══════════ -->
+  <section style="background:#09090b; padding:64px 0;">
     <div class="container-custom">
-
-      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:36px; flex-wrap:wrap; gap:12px;">
-        <div>
-          <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
-            <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
-            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Más categorías</span>
-          </div>
-          <h2 style="font-size:clamp(1.3rem,2vw,1.8rem); font-weight:800; color:#09090b; margin:0; letter-spacing:-0.02em;">
-            Explora el catálogo completo
-          </h2>
-        </div>
-        <a href="/productos" style="font-size:0.8rem; font-weight:600; color:#dc2626; text-decoration:none; display:flex; align-items:center; gap:6px;">
-          Ver todas
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+        <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Seguir explorando</span>
+      </div>
+      <div class="l2-related-head">
+        <h2 style="font-size:clamp(1.4rem,2vw,1.9rem); font-weight:800; color:#fafafa; line-height:1.2; margin:0; letter-spacing:-0.02em;">
+          Las otras {otras.length} líneas del catálogo
+        </h2>
+        <a href="/productos" class="l2-related-all">
+          <span>Ver catálogo completo</span>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        {otrasCategs.slice(0, 4).map(c => (
-          <a
-            href={`/productos/${c.slug}`}
-            style="background:#f8fafc; border:1px solid #e4e4e7; border-radius:12px; padding:20px; display:flex; flex-direction:column; gap:10px; text-decoration:none; transition:box-shadow 0.2s ease, transform 0.2s ease;"
-            class="hover:-translate-y-1 hover:shadow-md"
-          >
-            <span style="display:inline-block; background:#dc2626; color:#fff; font-size:0.6rem; font-weight:800; letter-spacing:0.06em; padding:3px 8px; border-radius:4px; text-transform:uppercase; width:fit-content;">
-              {c.badge}
+      <div class="l2-related">
+        {otras.map((c) => (
+          <a href={`/productos/${c.slug}`} class="l2-related-item">
+            <span class="l2-related-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path stroke-linecap="round" stroke-linejoin="round" d={c.icon}/></svg>
             </span>
-            <span style="font-size:0.9rem; font-weight:700; color:#09090b; line-height:1.3;">{c.nombre}</span>
-            <span style="font-size:0.72rem; color:#71717a; line-height:1.5;">{c.productos.length} productos disponibles</span>
-            <div style="display:flex; align-items:center; gap:6px; font-size:0.75rem; font-weight:600; color:#dc2626; margin-top:4px;">
-              Ver productos
-              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-              </svg>
-            </div>
+            <span class="l2-related-body">
+              <span class="l2-related-name">{c.nombre}</span>
+              <span class="l2-related-norm">{c.badge}</span>
+            </span>
+            <svg class="l2-related-arrow" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
         ))}
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══ CTA FINAL ══ -->
-  <section style="background:#09090b; padding:64px 0; border-top:1px solid #1f1f1f;">
-    <div class="container-custom" style="text-align:center;">
-      <div style="display:inline-flex; align-items:center; gap:10px; margin-bottom:20px;">
-        <span style="display:block; width:24px; height:2px; background:#dc2626; border-radius:2px;"></span>
-        <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Asesoría sin costo</span>
-        <span style="display:block; width:24px; height:2px; background:#dc2626; border-radius:2px;"></span>
-      </div>
-      <h2 style="font-size:clamp(1.6rem,2.5vw,2.4rem); font-weight:800; color:#fff; line-height:1.1; margin:0 0 16px; letter-spacing:-0.02em;">
-        ¿Necesitas asesoría técnica<br>para seleccionar el equipo correcto?
-      </h2>
-      <p style="font-size:0.9rem; color:#71717a; line-height:1.85; margin:0 0 32px; max-width:520px; margin-left:auto; margin-right:auto;">
-        Ingenieros especializados en <strong style="color:#a1a1aa;">NFPA y NOM-002-STPS</strong> analizan tu riesgo y te recomiendan el equipo exacto. Sin costo, sin compromiso de compra.
-      </p>
-      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-        <a
-          href={`${waBase}?text=Hola%2C%20necesito%20asesor%C3%ADa%20t%C3%A9cnica%20para%20${encodeURIComponent(cat.nombre)}`}
-          target="_blank"
-          rel="noopener"
-          style="display:inline-flex; align-items:center; gap:10px; padding:14px 28px; background:#dc2626; color:#fff; font-size:0.9rem; font-weight:700; border-radius:10px; text-decoration:none;"
-        >
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          Hablar con un especialista
-        </a>
-        <a
-          href="/productos"
-          style="display:inline-flex; align-items:center; gap:10px; padding:14px 28px; background:transparent; color:#a1a1aa; font-size:0.9rem; font-weight:600; border-radius:10px; text-decoration:none; border:1px solid #2a2a2a;"
-        >
-          Ver catálogo completo
-        </a>
       </div>
     </div>
   </section>

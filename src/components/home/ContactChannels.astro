@@ -12,7 +12,7 @@ const channels = [
     items: ['Fichas CABMS / COG', 'Cert. de laboratorio', 'Carta de distribuidor', 'Núm. de serie trazable', 'Especificaciones NOM', 'Factura desglosada'],
     sectors: ['Gobierno federal', 'Gobiernos estatales', 'Municipios'],
     highlight: 'Documentación lista para licitación',
-    cta: { text: 'Escribir a licitaciones', href: 'mailto:licitaciones@firefighter.mx', type: 'email' },
+    cta: { text: 'Escribir a licitaciones', href: 'mailto:licitaciones@firefighter.com.mx', type: 'email' },
   },
   {
     label: 'Sin costo · Respuesta inmediata',
@@ -30,7 +30,7 @@ const channels = [
     items: ['Refacciones originales', 'Gestión de garantía', 'Atención a recalls', 'Diagnóstico en campo', 'Soporte OEM directo', 'Reporte técnico'],
     sectors: ['Post-compra', 'Mantenimiento', 'Emergencias campo'],
     highlight: 'Soporte directo con el fabricante',
-    cta: { text: 'Escribir a soporte', href: 'mailto:soporte@firefighter.mx', type: 'email' },
+    cta: { text: 'Escribir a soporte', href: 'mailto:soporte@firefighter.com.mx', type: 'email' },
   },
 ];
 ---
@@ -104,9 +104,7 @@ const channels = [
             </div>
 
             <div style="display:flex; align-items:center; gap:7px; padding:9px 12px; border-radius:8px; background:#fef2f2;">
-              <svg width="12" height="12" fill="#dc2626" viewBox="0 0 20 20" style="flex-shrink:0;">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
+              <svg width="12" height="12" fill="#dc2626" viewBox="0 0 20 20" style="flex-shrink:0;"><use href="#i-check"/></svg>
               <span style="font-size:0.68rem; font-weight:600; color:#dc2626;">{ch.highlight}</span>
             </div>
 

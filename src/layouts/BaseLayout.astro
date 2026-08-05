@@ -6,6 +6,9 @@ import SEOHead from '../components/seo/SEOHead.astro';
 import JsonLd from '../components/seo/JsonLd.astro';
 import type { StationData, BreadcrumbItem as SEOBreadcrumb } from '../lib/seo';
 import '../assets/styles/global.css';
+import '../assets/styles/header.css';
+import '../assets/styles/modules.css';
+import '../assets/styles/blog.css';
 
 interface BreadcrumbItem {
   label: string;
@@ -58,10 +61,13 @@ const {
 } = Astro.props;
 
 // Convert breadcrumbs to SEO format
-const seoBreadcrumbs: SEOBreadcrumb[] | undefined = breadcrumbs?.map(item => ({
-  name: item.label,
-  url: item.href || '',
-}));
+// El componente Breadcrumbs antepone "Inicio" visualmente: el schema debe coincidir.
+const seoBreadcrumbs: SEOBreadcrumb[] | undefined = breadcrumbs
+  ? [
+      { name: 'Inicio', url: '/' },
+      ...breadcrumbs.map(item => ({ name: item.label, url: item.href || '' })),
+    ]
+  : undefined;
 ---
 
 <!doctype html>
@@ -124,6 +130,12 @@ const seoBreadcrumbs: SEOBreadcrumb[] | undefined = breadcrumbs?.map(item => ({
     <slot name="head" />
   </head>
   <body class="min-h-screen flex flex-col">
+    <!-- Sprite de iconos repetidos. Ahorra ~40 KB por página frente al SVG inline. -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <symbol id="i-check" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></symbol>
+      <symbol id="i-star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></symbol>
+      <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></symbol>
+    </svg>
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-fire-600 focus:text-white focus:rounded-lg">
       Saltar al contenido principal
     </a>
@@ -140,19 +152,29 @@ const seoBreadcrumbs: SEOBreadcrumb[] | undefined = breadcrumbs?.map(item => ({
 
     <Footer />
 
-    <!-- Service Worker Registration -->
+    <!-- Service Worker: solo en produccion. En local se desregistra y se limpia cache. -->
     <script is:inline>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then((registration) => {
-              console.log('SW registered:', registration.scope);
-            })
-            .catch((error) => {
-              console.log('SW registration failed:', error);
-            });
-        });
-      }
+      (function () {
+        if (!('serviceWorker' in navigator)) return;
+        var h = location.hostname;
+        var isLocal = h === 'localhost' || h === '127.0.0.1' || h === '[::1]' || h.endsWith('.local');
+        if (isLocal) {
+          navigator.serviceWorker.getRegistrations().then(function (regs) {
+            var had = regs.length > 0;
+            return Promise.all(regs.map(function (r) { return r.unregister(); }))
+              .then(function () {
+                return window.caches ? caches.keys().then(function (k) {
+                  return Promise.all(k.map(function (n) { return caches.delete(n); }));
+                }) : null;
+              })
+              .then(function () { if (had) location.reload(); });
+          }).catch(function () {});
+        } else {
+          window.addEventListener('load', function () {
+            navigator.serviceWorker.register('/sw.js').catch(function () {});
+          });
+        }
+      })();
     </script>
   </body>
 </html>

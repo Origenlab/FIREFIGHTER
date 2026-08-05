@@ -137,7 +137,8 @@ export function generateWebSiteSchema(baseUrl: string = 'https://firefighter.com
     '@type': 'WebSite',
     '@id': `${baseUrl}/#website`,
     name: 'Firefighter.com.mx',
-    description: 'Directorio Nacional de Estaciones de Bomberos en México',
+    description:
+      'Equipo contra incendios y para bomberos en México: EPP, SCBA, extintores, sistemas, detección y rescate certificados NFPA, NOM y UL. Incluye el directorio nacional de estaciones de bomberos.',
     url: baseUrl,
     inLanguage: 'es-MX',
     potentialAction: {
@@ -168,7 +169,8 @@ export function generateOrganizationSchema(baseUrl: string = 'https://firefighte
       width: 200,
       height: 50,
     },
-    description: 'Directorio Nacional de Estaciones de Bomberos en México. Encuentra la estación más cercana a tu ubicación.',
+    description:
+      'Distribuidor de equipo contra incendios y para bomberos en México: EPP estructural, SCBA, extintores, sistemas contra incendio, detección y alarma, rescate, forestal y señalética, con documentación para licitaciones.',
     areaServed: {
       '@type': 'Country',
       name: 'Mexico',

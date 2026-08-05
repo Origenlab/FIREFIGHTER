@@ -58,12 +58,22 @@ function lastmodForUrl(url) {
   return null;
 }
 
+// Slugs antiguos que solo existen como redirect: no deben indexarse ni ir al sitemap
+const SLUGS_REDIRIGIDOS = [
+  'equipos-bomberos', 'scba-respiracion', 'extintores', 'sistemas-fijos',
+  'herramientas-rescate', 'deteccion-alarma', 'gabinetes-mangueras',
+].map((s) => `/productos/${s}`);
+
 export default defineConfig({
   site: 'https://firefighter.com.mx',
   integrations: [
     sitemap({
       changefreq: 'weekly',
       priority: 0.7,
+      filter: (page) => {
+        const path = new URL(page).pathname.replace(/\/$/, '');
+        return !SLUGS_REDIRIGIDOS.includes(path);
+      },
       serialize: (item) => {
         // lastmod real por archivo fuente; si no se resuelve, se omite
         const lm = lastmodForUrl(item.url);
@@ -76,6 +86,17 @@ export default defineConfig({
       },
     }),
   ],
+  // Slugs antiguos de /productos → taxonomía unificada con el homepage
+  redirects: {
+    '/productos/equipos-bomberos': '/productos/epp-para-bomberos',
+    '/productos/scba-respiracion': '/productos/equipos-de-respiracion',
+    '/productos/extintores': '/productos/extintores-y-extincion',
+    '/productos/sistemas-fijos': '/productos/sistemas-contra-incendio',
+    '/productos/herramientas-rescate': '/productos/herramientas-de-rescate',
+    '/productos/deteccion-alarma': '/productos/deteccion-y-alarma',
+    '/productos/gabinetes-mangueras': '/productos/sistemas-contra-incendio',
+  },
+
   markdown: {
     shikiConfig: {
       theme: 'github-dark',

@@ -1,0 +1,76 @@
+---
+/**
+ * CategoryGrid — Grid homologado de las 8 categorías de producto.
+ * Fuente única de verdad: src/data/productos.json
+ * Se usa en el index (ProductCategories) y en cada L2 de categoría.
+ */
+import categorias from '../../data/productos.json';
+
+interface Props {
+  /** slug de la categoría en la que estamos: se marca como activa y sin enlace */
+  activeSlug?: string;
+  /** columnas en desktop */
+  cols?: 3 | 4;
+}
+
+const { activeSlug, cols = 4 } = Astro.props;
+const gridCols = cols === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-4';
+---
+
+<div class:list={['grid', 'grid-cols-1', 'sm:grid-cols-2', gridCols, 'gap-6']}>
+  {categorias.map((cat) => {
+    const activa = cat.slug === activeSlug;
+    const href = `/productos/${cat.slug}`;
+    return (
+      <article
+        class:list={['cg-card', activa && 'is-active']}
+        aria-current={activa ? 'page' : undefined}
+      >
+        <!-- Header: foto + velo sólido -->
+        <div class="cg-media" style={`background-image:url('${cat.imagenes.hero.src}');`}>
+          <span class="cg-veil" aria-hidden="true"></span>
+          <span class="cg-badge">{cat.badge}</span>
+          {activa && <span class="cg-here">Estás aquí</span>}
+          <span class="cg-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.9">
+              <path stroke-linecap="round" stroke-linejoin="round" d={cat.icon} />
+            </svg>
+          </span>
+        </div>
+
+        <!-- Body -->
+        <div class="cg-body">
+          <h3 class="cg-title">{cat.nombre}</h3>
+          <p class="cg-desc">{cat.cardDesc}</p>
+
+          <div class="cg-sep"><span>Productos</span><i></i></div>
+          <div class="cg-pills">
+            {cat.items.map((prod: string) => <span class="cg-pill">{prod}</span>)}
+          </div>
+
+          <div class="cg-sep"><span>Aplica para</span><i></i></div>
+          <div class="cg-sectors">
+            {cat.sector.map((s: string) => <span class="cg-sector">{s}</span>)}
+          </div>
+
+          <div class="cg-highlight">
+            <svg width="12" height="12" fill="#dc2626" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg>
+            <span>{cat.highlight}</span>
+          </div>
+
+          {activa ? (
+            <span class="cg-cta is-current">
+              <span>Categoría actual</span>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-check"/></svg>
+            </span>
+          ) : (
+            <a href={href} class="cg-cta">
+              <span>Ver {cat.nombre}</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          )}
+        </div>
+      </article>
+    );
+  })}
+</div>

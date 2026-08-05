@@ -31,7 +31,7 @@ Para hoteles de cadena internacional y edificios de más de 4 pisos, el NFPA 14 
 
 ### NFPA 13 (Sistemas de Sprinklers)
 
-Para hoteles de cierta altura o tamaño (generalmente más de 3 pisos o más de 4,000 m² por planta), los sistemas de sprinklers automáticos son frecuentemente requeridos tanto por las normas locales de construcción como por los aseguradores. Los gabinetes CI son complementarios al sistema de sprinklers, no sustitutos. Para instalaciones con sprinklers, consulte nuestra guía sobre [sistemas de sprinklers NFPA 13 en México](/blog/sistemas-sprinklers-nfpa-13-mexico).
+Para hoteles de cierta altura o tamaño (generalmente más de 3 pisos o más de 4,000 m² por planta), los sistemas de sprinklers automáticos son frecuentemente requeridos tanto por las normas locales de construcción como por los aseguradores. Los gabinetes CI son complementarios al sistema de sprinklers, no sustitutos. Para instalaciones con sprinklers, consulte nuestra guía sobre [sistemas de sprinklers NFPA 13 en México](/blog/sprinklers-nfpa-13-guia-instalacion).
 
 ### Reglamento de Construcción Local
 

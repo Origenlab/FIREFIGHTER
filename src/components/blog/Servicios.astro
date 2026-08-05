@@ -1,0 +1,92 @@
+---
+/**
+ * Modulo de servicios: que hace la empresa ademas de vender el equipo.
+ * Se usa en /blog y en las paginas de tema (ahi se destaca el servicio afin).
+ */
+import { SERVICIOS } from '../../lib/servicios';
+import { waLink } from '../../lib/blog';
+
+interface Props {
+  temaActivo?: string;
+  titulo?: string;
+  fondo?: string;
+}
+
+const {
+  temaActivo,
+  titulo = 'Lo que hacemos<br>además de vender el equipo',
+  fondo = '#fff',
+} = Astro.props;
+
+const destacado = temaActivo
+  ? SERVICIOS.find(s => s.temas.includes(temaActivo))?.slug
+  : undefined;
+---
+
+<section style={`background:${fondo}; border-top:1px solid #e4e4e7; padding:72px 0;`}>
+  <div class="container-custom">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" style="align-items:start; margin-bottom:44px;">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+          <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+          <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Cómo trabajamos</span>
+        </div>
+        <h2 style="font-size:clamp(1.7rem,2.6vw,2.4rem); font-weight:800; color:#09090b; line-height:1.12; margin:0; letter-spacing:-0.02em;" set:html={titulo}></h2>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <p style="font-size:0.95rem; color:#52525b; line-height:1.85; margin:0;">
+          Vender el equipo es la parte fácil. Lo que hace la diferencia el día de la auditoría, de la licitación o de la intervención es todo lo que pasa antes y después: <strong style="color:#09090b; font-weight:600;">especificar bien, documentar bien y darle mantenimiento</strong>.
+        </p>
+        <p style="font-size:0.95rem; color:#52525b; line-height:1.85; margin:0;">
+          Estos cuatro servicios son la razón por la que escribimos el blog: las mismas preguntas que resolvemos por teléfono todas las semanas, publicadas para que puedas resolverlas tú aunque al final no nos compres.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+      {SERVICIOS.map(s => (
+        <div style={`background:#fff; border:1px solid ${destacado === s.slug ? '#fecaca' : '#e4e4e7'}; border-left:3px solid ${destacado === s.slug ? '#dc2626' : '#e4e4e7'}; border-radius:14px; padding:26px; display:flex; flex-direction:column;`}>
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px;">
+            <span style="font-size:0.63rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#dc2626;">{s.eyebrow}</span>
+            {destacado === s.slug && (
+              <span style="font-size:0.6rem; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; color:#fff; background:#dc2626; padding:3px 9px; border-radius:4px;">Aplica a este tema</span>
+            )}
+          </div>
+
+          <h3 style="font-size:1.08rem; font-weight:800; color:#09090b; margin:0 0 10px; line-height:1.3; letter-spacing:-0.01em;">{s.nombre}</h3>
+          <p style="font-size:0.85rem; font-weight:600; color:#3f3f46; line-height:1.65; margin:0 0 12px;">{s.promesa}</p>
+          <p style="font-size:0.82rem; color:#71717a; line-height:1.8; margin:0 0 20px;">{s.copy}</p>
+
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+            <span style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#a1a1aa;">Qué recibes</span>
+            <div style="flex:1; height:1px; background:#f4f4f5;"></div>
+          </div>
+          <ul style="list-style:none; margin:0 0 20px; padding:0; display:flex; flex-direction:column; gap:8px;">
+            {s.entregables.map(e => (
+              <li style="display:flex; align-items:flex-start; gap:9px; font-size:0.79rem; color:#3f3f46; line-height:1.6;">
+                <svg width="13" height="13" fill="none" stroke="#dc2626" stroke-width="2.5" viewBox="0 0 24 24" style="flex-shrink:0; margin-top:3px;" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>{e}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div style="margin-top:auto; padding-top:16px; border-top:1px solid #f4f4f5;">
+            <p style="font-size:0.72rem; color:#a1a1aa; line-height:1.6; margin:0 0 14px;"><strong style="color:#71717a; font-weight:600;">Para quién:</strong> {s.paraQuien}</p>
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <a href={s.cta} style="display:inline-flex; align-items:center; gap:7px; font-size:0.78rem; font-weight:700; color:#fff; background:#dc2626; padding:9px 15px; border-radius:8px; text-decoration:none;">
+                {s.ctaTexto}
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+              <a href={waLink(`quiero saber más sobre ${s.nombre.toLowerCase()}`)} target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:7px; font-size:0.78rem; font-weight:600; color:#52525b; background:#fff; border:1px solid #e4e4e7; padding:9px 15px; border-radius:8px; text-decoration:none;">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

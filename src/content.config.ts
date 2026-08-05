@@ -77,6 +77,9 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    // Overrides opcionales para SERP; si faltan se derivan con src/lib/seoText.ts
+    seoTitle: z.string().max(44).optional(),
+    seoDescription: z.string().max(158).optional(),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     author: z.string().default('Firefighter México'),

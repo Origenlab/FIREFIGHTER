@@ -1,6 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/layout/PageHero.astro';
 import states from '../../data/states.json';
+import { getCollection } from 'astro:content';
+
+// Conteo real de fichas publicadas (no la estimacion de states.json).
+const publicadas = (await getCollection('stations')).length;
 
 // Sort states alphabetically
 const sortedStates = [...states].sort((a, b) => a.name.localeCompare(b.name));
@@ -28,63 +33,41 @@ const regionNames: Record<string, string> = {
 ---
 
 <BaseLayout
-  title="Directorio Nacional de Estaciones de Bomberos"
+  title="Directorio de Estaciones de Bomberos"
   description="Explora el directorio completo de estaciones de bomberos en los 32 estados de México. Encuentra información de contacto, ubicación y servicios."
   breadcrumbs={[{ label: 'Directorio' }]}
 >
-  <!-- Hero Section -->
-  <section class="bg-slate-900">
-    <div class="container-custom py-20 md:py-28">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <!-- Left Content -->
-        <div class="text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-fire-600 rounded-full mb-6">
-            <span class="w-2 h-2 bg-white rounded-full"></span>
-            <span class="text-white text-sm font-medium">{totalStations}+ Estaciones en México</span>
-          </div>
-
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-[1.1]">
-            Directorio
-            <span class="text-fire-500">Nacional</span>
-          </h1>
-
-          <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-            Explora el directorio completo de estaciones de bomberos en los
-            <span class="text-white font-semibold">32 estados de México</span>. Información de contacto, ubicación y servicios.
-          </p>
-
-          <!-- Search Bar -->
-          <form action="/directorio" method="GET" class="max-w-lg mx-auto lg:mx-0 mb-8">
-            <div class="flex items-center bg-white rounded-2xl p-2 shadow-xl">
-              <svg class="w-6 h-6 ml-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-              </svg>
-              <input
-                type="search"
-                name="q"
-                placeholder="Buscar estado, ciudad o estación..."
-                class="flex-1 px-4 py-4 text-slate-800 placeholder-slate-400 bg-transparent border-0 focus:outline-none focus:ring-0 text-lg"
-                aria-label="Buscar estaciones de bomberos"
-              />
-              <button type="submit" class="px-6 py-4 bg-fire-600 text-white font-semibold rounded-xl hover:bg-fire-700 transition-colors">
-                Buscar
-              </button>
-            </div>
-          </form>
-        </div>
-
-        <!-- Right Side - Info -->
-        <div class="hidden lg:block">
-          <p class="text-slate-300 text-lg leading-relaxed mb-6">
-            Firefighter México es la <strong class="text-white">plataforma de referencia</strong> para localizar estaciones de bomberos en toda la República Mexicana. Nuestro directorio reúne información detallada de más de {totalStations} estaciones, incluyendo datos de contacto directo, ubicación exacta con coordenadas GPS, servicios especializados y horarios de atención.
-          </p>
-          <p class="text-slate-300 text-lg leading-relaxed">
-            Cada ficha de estación incluye información sobre el <strong class="text-white">tipo de cuerpo de bomberos</strong> (profesional, voluntario, industrial o aeroportuario), su equipamiento, áreas de cobertura y servicios de emergencia disponibles.
-          </p>
-        </div>
+  <PageHero
+    eyebrow="Directorio nacional"
+    badge={`${publicadas} estaciones publicadas`}
+    h1="Encuentra la estación<br>de bomberos más cercana"
+    lead="Directorio abierto y gratuito de estaciones de bomberos en México: teléfono administrativo, dirección, ubicación GPS y servicios de cada estación."
+    bloques={[
+      {
+        label: 'Cómo se arma',
+        texto: 'Recopilamos la información de <strong style="color:#e4e4e7; font-weight:600;">fuentes públicas</strong> y de avisos de gente que conoce su zona. Verificamos cada ficha antes de publicarla y seguimos sumando estados.',
+      },
+      {
+        label: 'Para una emergencia, 911',
+        texto: 'Este directorio sirve para trámites, capacitación o contacto administrativo. Si hay una emergencia en curso, marca <strong style="color:#e4e4e7; font-weight:600;">911</strong>: es gratuito y opera las 24 horas.',
+      },
+    ]}
+  >
+    <form slot="ctas" action="/directorio" method="GET" style="max-width:520px;">
+      <div style="display:flex; align-items:center; gap:8px; background:#fff; border-radius:12px; padding:6px;">
+        <svg width="18" height="18" fill="none" stroke="#a1a1aa" stroke-width="2" viewBox="0 0 24 24" style="margin-left:10px; flex-shrink:0;" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <input
+          type="search"
+          name="q"
+          placeholder="Buscar estado, ciudad o estación..."
+          style="flex:1; min-width:0; padding:11px 6px; font-size:0.9rem; color:#09090b; background:transparent; border:0; outline:none;"
+          aria-label="Buscar estaciones de bomberos"
+        />
+        <button type="submit" style="background:#dc2626; color:#fff; font-size:0.85rem; font-weight:700; padding:11px 20px; border:0; border-radius:9px; cursor:pointer;">Buscar</button>
       </div>
-    </div>
-  </section>
+    </form>
+  </PageHero>
+
 
   <!-- Emergency Banner -->
   <div class="bg-fire-600">

@@ -19,7 +19,7 @@ const reasons = [
     num: '02',
     title: 'Certificaciones vigentes',
     desc: 'Todo el catálogo certificado bajo las normas internacionales y mexicanas vigentes. Fichas técnicas con número de certificación incluidas en cada venta, sin costo adicional.',
-    items: ['NFPA 1970 (cap. 5–9)', 'NFPA 1970 (cap. 15–19) / 1977', 'NOM-002-STPS', 'NOM-154-SCFI', 'UL Listed', 'FM Approvals'],
+    items: ['NFPA 1970 estructural', 'NFPA 1950 [1977] forestal', 'NOM-002-STPS', 'NOM-154-SCFI', 'UL Listed', 'FM Approvals'],
     sectors: ['Protección civil', 'Industria', 'Gobierno federal'],
     highlight: 'Fichas técnicas incluidas en cada venta',
     cta: 'Ver certificaciones',
@@ -31,7 +31,7 @@ const reasons = [
     desc: 'Ingenieros especializados en NFPA y protección civil analizan tu tipo de riesgo, norma aplicable y presupuesto para recomendar el equipo exacto. Sin compromiso de compra.',
     items: ['Análisis de riesgo', 'Norma aplicable', 'Selección de equipo', 'Propuesta técnica', 'Ing. certificados', 'Sin compromiso'],
     sectors: ['Bomberos', 'Brigadas ind.', 'Constructoras'],
-    highlight: 'Respuesta en menos de 2 horas',
+    highlight: 'Primera respuesta el mismo día hábil',
     cta: 'Solicitar asesoría',
     link: 'asesor%C3%ADa%20t%C3%A9cnica%20gratuita',
   },
@@ -140,9 +140,7 @@ const reasons = [
 
             <!-- Highlight -->
             <div style="display:flex; align-items:center; gap:7px; padding:9px 12px; border-radius:8px; background:#fef2f2; margin-bottom:0;">
-              <svg width="12" height="12" fill="#dc2626" viewBox="0 0 20 20" style="flex-shrink:0;">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
+              <svg width="12" height="12" fill="#dc2626" viewBox="0 0 20 20" style="flex-shrink:0;"><use href="#i-check"/></svg>
               <span style="font-size:0.68rem; font-weight:600; color:#dc2626;">{r.highlight}</span>
             </div>
 
@@ -165,14 +163,14 @@ const reasons = [
     </div>
 
     <!-- Strip de stats -->
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;border:1px solid #e4e4e7;border-radius:12px;overflow:hidden;">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-px" style="background:#e4e4e7;margin-top:48px;border:1px solid #e4e4e7;border-radius:12px;overflow:hidden;">
       {[
         { n: '500+', label: 'Productos en catálogo' },
         { n: '50+', label: 'Años en el mercado' },
         { n: '32', label: 'Estados con cobertura' },
         { n: '<24h', label: 'Tiempo de cotización' },
-      ].map((s, i) => (
-        <div style={`padding:28px 24px;text-align:center;background:#fff;${i < 3 ? 'border-right:1px solid #e4e4e7;' : ''}`}>
+      ].map((s) => (
+        <div style="padding:28px 24px;text-align:center;background:#fff;">
           <div style="font-size:1.75rem;font-weight:800;color:#09090b;line-height:1;">{s.n}</div>
           <div style="font-size:0.75rem;color:#71717a;margin-top:6px;font-weight:500;">{s.label}</div>
         </div>

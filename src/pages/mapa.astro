@@ -67,44 +67,36 @@ const statesWithColors = [...new Set(stations.map(s => s.data.stateSlug))]
 ---
 
 <BaseLayout
-  title="Mapa de Estaciones de Bomberos en México"
-  description="Mapa interactivo con todas las estaciones de bomberos de México. Encuentra la estación más cercana a tu ubicación."
+  title="Mapa de estaciones de bomberos en México"
+  description="Mapa interactivo de estaciones de bomberos en México. Ubica la estación más cercana, consulta su teléfono administrativo y abre la ruta en Google Maps."
+  canonicalUrl="https://firefighter.com.mx/mapa"
 >
   <div class="h-screen flex flex-col">
-    <!-- Header -->
-    <div class="bg-white border-b border-slate-200 px-4 py-3">
-      <div class="flex items-center justify-between container-custom">
-        <div>
-          <h1 class="text-xl font-display font-bold text-slate-800">
-            Mapa Nacional
+    <!-- Barra superior homologada -->
+    <div style="background:#09090b; border-bottom:1px solid #1f1f23;">
+      <div class="container-custom" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:14px 0;">
+        <div style="min-width:0;">
+          <div style="display:flex; align-items:center; gap:9px; margin-bottom:5px;">
+            <span style="display:block; width:20px; height:2px; background:#dc2626; border-radius:2px;"></span>
+            <span style="font-size:0.64rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:#dc2626;">Mapa nacional</span>
+          </div>
+          <h1 style="font-size:1.15rem; font-weight:800; color:#fafafa; margin:0; letter-spacing:-0.01em;">
+            Estaciones de bomberos en México
           </h1>
-          <p class="text-sm text-slate-500">
-            {stations.length} estaciones en {statesWithColors.length} estados
+          <p style="font-size:0.76rem; color:#71717a; margin:4px 0 0;">
+            {stations.length} estaciones publicadas en {statesWithColors.length} estados · Para una emergencia, marca <a href="tel:911" style="color:#e4e4e7; font-weight:700; text-decoration:none;">911</a>
           </p>
         </div>
-        <div class="flex items-center gap-3">
-          <button
-            id="legend-btn"
-            class="btn btn-outline btn-sm"
-            title="Ver leyenda"
-          >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
-            </svg>
+        <div style="display:flex; align-items:center; gap:9px; flex-wrap:wrap;">
+          <button id="legend-btn" title="Ver leyenda" style="display:inline-flex; align-items:center; gap:7px; font-size:0.78rem; font-weight:600; color:#a1a1aa; background:transparent; border:1px solid #27272a; padding:9px 15px; border-radius:9px; cursor:pointer;">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
             <span class="hidden sm:inline">Leyenda</span>
           </button>
-          <button
-            id="locate-btn"
-            class="btn btn-outline btn-sm"
-            title="Mi ubicación"
-          >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
+          <button id="locate-btn" title="Mi ubicación" style="display:inline-flex; align-items:center; gap:7px; font-size:0.78rem; font-weight:600; color:#a1a1aa; background:transparent; border:1px solid #27272a; padding:9px 15px; border-radius:9px; cursor:pointer;">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
             <span class="hidden sm:inline">Mi ubicación</span>
           </button>
-          <a href="/directorio" class="btn btn-primary btn-sm">
+          <a href="/directorio" style="display:inline-flex; align-items:center; gap:7px; font-size:0.78rem; font-weight:700; color:#fff; background:#dc2626; padding:9px 16px; border-radius:9px; text-decoration:none;">
             Ver directorio
           </a>
         </div>

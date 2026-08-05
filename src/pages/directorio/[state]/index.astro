@@ -1,5 +1,7 @@
 ---
+import { tituloSeo } from '../../../lib/seoText';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/layout/PageHero.astro';
 import StationCard from '../../../components/directory/StationCard.astro';
 import Pagination from '../../../components/ui/Pagination.astro';
 import { getCollection } from 'astro:content';
@@ -55,7 +57,7 @@ const municipalityLabel = getMunicipalityLabel(state.name);
 ---
 
 <BaseLayout
-  title={`Estaciones de Bomberos en ${state.name}`}
+  title={tituloSeo(`Estaciones de Bomberos en ${state.name}`)}
   description={`Directorio completo de ${stateStations.length} estaciones de bomberos en ${state.name}. Encuentra teléfonos, direcciones, ubicación GPS y servicios de emergencia.`}
   breadcrumbs={[
     { label: 'Directorio', href: '/directorio' },
@@ -66,76 +68,43 @@ const municipalityLabel = getMunicipalityLabel(state.name);
     stationCount: stateStations.length,
   }}
 >
-  <!-- Hero Section - Identical to Index -->
-  <section class="bg-slate-900">
-    <div class="container-custom py-20 md:py-28">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-
-        <!-- Left Content -->
-        <div class="text-center lg:text-left">
-          <!-- Badge -->
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-fire-600 rounded-full mb-6">
-            <span class="w-2 h-2 bg-white rounded-full"></span>
-            <span class="text-white text-sm font-medium">{stateStations.length} Estaciones en {state.name}</span>
-          </div>
-
-          <!-- Main Heading -->
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-[1.1]">
-            Bomberos en
-            <span class="text-fire-500">{state.name}</span>
-          </h1>
-
-          <!-- Description -->
-          <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-            Directorio completo con información de contacto, ubicación GPS y servicios de
-            <span class="text-white font-semibold">{stateStations.length} estaciones</span> en {municipalities.length} {municipalityLabel}.
-          </p>
-
-          <!-- Search Bar -->
-          <form action="/directorio" method="GET" class="max-w-lg mx-auto lg:mx-0 mb-8">
-            <div class="flex items-center bg-white rounded-2xl p-2 shadow-xl">
-              <svg class="w-6 h-6 ml-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-              </svg>
-              <input
-                type="search"
-                name="q"
-                placeholder={`Buscar en ${state.name}...`}
-                class="flex-1 px-4 py-4 text-slate-800 placeholder-slate-400 bg-transparent border-0 focus:outline-none focus:ring-0 text-lg"
-                aria-label="Buscar estaciones de bomberos"
-              />
-              <button type="submit" class="px-6 py-4 bg-fire-600 text-white font-semibold rounded-xl hover:bg-fire-700 transition-colors">
-                Buscar
-              </button>
-            </div>
-          </form>
-
-          <!-- Breadcrumbs as Quick Links -->
-          <div class="flex flex-wrap justify-center lg:justify-start gap-3">
-            <a href="/directorio" class="px-3 py-1 text-sm text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 rounded-full transition-colors">← Todos los estados</a>
-            <a href="#estaciones" class="px-3 py-1 text-sm text-fire-400 hover:text-fire-300 transition-colors">Ver estaciones ↓</a>
-          </div>
+  <PageHero
+    eyebrow={`Directorio · ${state.name}`}
+    badge={`${stateStations.length} estaciones`}
+    h1={`Estaciones de bomberos<br>en ${state.name}`}
+    lead={`Teléfono, dirección, ubicación GPS y servicios de ${stateStations.length} estaciones en ${municipalities.length} ${municipalityLabel}.`}
+    bloques={[
+      {
+        label: 'Qué encuentras en cada ficha',
+        texto: 'Tipo de cuerpo de bomberos —profesional, voluntario, industrial o aeroportuario—, equipamiento, área de cobertura y <strong style="color:#e4e4e7; font-weight:600;">contacto administrativo</strong>.',
+      },
+      {
+        label: 'Para una emergencia, 911',
+        texto: 'Estos teléfonos son administrativos. Si hay un incendio o accidente en curso, marca <strong style="color:#e4e4e7; font-weight:600;">911</strong>: es gratuito, opera 24 horas y coordina la respuesta.',
+      },
+    ]}
+  >
+    <div slot="ctas" style="display:flex; flex-direction:column; gap:16px; max-width:520px;">
+      <form action="/directorio" method="GET">
+        <div style="display:flex; align-items:center; gap:8px; background:#fff; border-radius:12px; padding:6px;">
+          <svg width="18" height="18" fill="none" stroke="#a1a1aa" stroke-width="2" viewBox="0 0 24 24" style="margin-left:10px; flex-shrink:0;" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <input
+            type="search"
+            name="q"
+            placeholder={`Buscar en ${state.name}...`}
+            style="flex:1; min-width:0; padding:11px 6px; font-size:0.9rem; color:#09090b; background:transparent; border:0; outline:none;"
+            aria-label="Buscar estaciones de bomberos"
+          />
+          <button type="submit" style="background:#dc2626; color:#fff; font-size:0.85rem; font-weight:700; padding:11px 20px; border:0; border-radius:9px; cursor:pointer;">Buscar</button>
         </div>
-
-        <!-- Right Side - Marketing Text -->
-        <div class="hidden lg:block">
-          <p class="text-slate-300 text-lg leading-relaxed mb-6">
-            Directorio completo de estaciones de bomberos en <strong class="text-white">{state.name}</strong>. Nuestro directorio incluye información detallada de {stateStations.length} estaciones distribuidas en {municipalities.length} {municipalityLabel}, con datos de contacto directo, ubicación exacta con coordenadas GPS, servicios especializados y horarios de atención las 24 horas.
-          </p>
-          <p class="text-slate-300 text-lg leading-relaxed">
-            Cada estación cuenta con información sobre el <strong class="text-white">tipo de cuerpo de bomberos</strong> (profesional, voluntario, industrial o aeroportuario), equipamiento disponible, áreas de cobertura y servicios de emergencia. Facilitamos que ciudadanos, empresas e instituciones en {state.name} puedan contactar rápidamente a la estación más cercana.
-          </p>
-        </div>
-      </div>
-
-      <!-- Mobile Marketing Text -->
-      <div class="lg:hidden mt-10">
-        <p class="text-slate-400 text-sm leading-relaxed">
-          Directorio completo de estaciones de bomberos en {state.name}. Información de contacto, ubicación GPS y servicios de las {stateStations.length} estaciones en {municipalities.length} {municipalityLabel}.
-        </p>
+      </form>
+      <div style="display:flex; flex-wrap:wrap; gap:9px;">
+        <a href="/directorio" style="font-size:0.78rem; font-weight:600; color:#a1a1aa; background:#18181b; border:1px solid #27272a; padding:7px 14px; border-radius:99px; text-decoration:none;">← Todos los estados</a>
+        <a href="#estaciones" style="font-size:0.78rem; font-weight:600; color:#dc2626; background:#18181b; border:1px solid #27272a; padding:7px 14px; border-radius:99px; text-decoration:none;">Ver estaciones ↓</a>
       </div>
     </div>
-  </section>
+  </PageHero>
+
 
   <!-- Emergency Banner -->
   <div class="bg-fire-600">
