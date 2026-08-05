@@ -1,0 +1,373 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/layout/PageHero.astro';
+import { tituloSeo } from '../../../lib/seoText';
+import { waLink } from '../../../lib/blog';
+import { NORMAS, UMBRALES, REVISADO, AVISO_LEGAL, pesos } from '../../../lib/cumplimiento';
+
+const SITE = 'https://firefighter.com.mx';
+const norma = NORMAS.find(n => n.slug === 'nom-002-stps-2010')!;
+const url = `${SITE}/cumplimiento/normas/${norma.slug}`;
+
+const descripcion =
+  'Qué obliga la NOM-002-STPS-2010 a tu centro de trabajo: clasificación de riesgo ordinario o alto, número y distancia de extintores, brigadas, simulacros y registros. Con el numeral exacto de cada obligación.';
+
+const toc = [
+  { id: 'que-es', t: 'Qué es y a quién aplica' },
+  { id: 'clasificacion', t: 'Riesgo ordinario o alto' },
+  { id: 'obligaciones', t: 'Las 12 obligaciones del patrón' },
+  { id: 'extintores', t: 'Cuántos extintores y a qué distancia' },
+  { id: 'brigadas', t: 'Brigadas y simulacros' },
+  { id: 'registros', t: 'Qué te va a pedir el inspector' },
+  { id: 'mitos', t: 'Cinco cosas que la norma no dice' },
+  { id: 'sanciones', t: 'Qué pasa si no cumples' },
+];
+
+const obligaciones = [
+  { n: '5.1', t: 'Clasificar el riesgo de incendio conforme al Apéndice A', todos: true },
+  { n: '5.2', t: 'Croquis, plano o mapa general actualizado, con siete contenidos mínimos', todos: true },
+  { n: '5.3', t: 'Instrucciones de seguridad por área, difundidas a trabajadores, contratistas y visitantes', todos: true },
+  { n: '5.4', t: 'Cumplir las condiciones de prevención y protección del capítulo 7', todos: true },
+  { n: '5.5', t: 'Plan de atención a emergencias de incendio', todos: true },
+  { n: '5.6', t: 'Brigadas contra incendio', todos: false },
+  { n: '5.7', t: 'Simulacros: uno al año en riesgo ordinario, dos en riesgo alto', todos: true },
+  { n: '5.8', t: 'Programa anual de capacitación teórico-práctico', todos: true },
+  { n: '5.9', t: 'Dotar de EPP a los brigadistas conforme a la NOM-017-STPS', todos: false },
+  { n: '5.10', t: 'Detección y equipos contra incendio. En riesgo alto, además, sistemas fijos y alarmas', todos: true },
+  { n: '5.11', t: 'Acta del Programa de Autogestión, dictamen de unidad de verificación o acta de protección civil', todos: false },
+  { n: '5.12', t: 'Exhibir los documentos a la autoridad del trabajo cuando los solicite', todos: true },
+];
+
+const distancias = [
+  { r: 'Ordinario', acd: '23 m', b: '15 m', k: '10 m' },
+  { r: 'Alto', acd: '23 m', b: '10 m *', k: '10 m' },
+];
+
+const mitos = [
+  {
+    t: 'No existe el "riesgo bajo"',
+    d: 'La NOM-002-STPS-2010 define exactamente dos categorías: riesgo de incendio ordinario y riesgo de incendio alto. La categoría "bajo" pertenecía a la NOM-002-STPS-2000, derogada. Un estudio que entregue "riesgo bajo" no está hecho conforme a la norma vigente.',
+  },
+  {
+    t: 'No obliga a instalar red de hidrantes',
+    d: 'La palabra hidrante solo aparece en las Guías de Referencia, que declaran expresamente no ser de cumplimiento obligatorio. El numeral 5.10 exige, en riesgo alto, sistemas fijos de protección contra incendio y alarmas, sin prescribir la tecnología. Las especificaciones de presión, caudal y cisterna que circulan como obligatorias están en la Guía de Referencia V, redactada en términos de recomendación.',
+  },
+  {
+    t: 'No fija un número mínimo de brigadistas',
+    d: 'El capítulo 9 solo enumera tres criterios de dimensionamiento: trabajadores por turno, rotación entre turnos y resultados de los simulacros. Cualquier cifra tipo "cinco por ciento del personal" o "dos brigadistas por turno" no proviene de esta norma.',
+  },
+  {
+    t: 'No clasifica los simulacros en gabinete, parcial y total',
+    d: 'Esa taxonomía viene de la doctrina de protección civil. Lo que la norma distingue, en los numerales 10.1 y 10.2, es simulacro integral o por áreas, y con o sin previo aviso.',
+  },
+  {
+    t: 'Mantenimiento no es lo mismo que recarga',
+    d: 'El numeral 7.18 exige mantenimiento al menos una vez al año. La recarga es la operación del numeral 7.19 y procede después del uso o cuando el mantenimiento así lo determine. La "recarga anual obligatoria" es una simplificación del sector, no un requisito de la norma.',
+  },
+];
+
+const faqs = [
+  {
+    q: '¿La NOM-002-STPS-2010 sigue vigente en 2026?',
+    a: 'Sí. Fue publicada en el Diario Oficial de la Federación el 9 de diciembre de 2010 y entró en vigor el 9 de junio de 2011. Su revisión sistemática del 8 de julio de 2021 tuvo como resultado la confirmación de la norma. No existe un proyecto de nueva versión publicado en 2025 ni en 2026.',
+  },
+  {
+    q: '¿Mi oficina de 200 m² tiene que cumplir la NOM-002?',
+    a: 'Sí. La norma aplica a todo centro de trabajo sin importar su tamaño ni su giro. Lo que cambia con el tamaño es la clasificación de riesgo y, con ella, el nivel de exigencia. Una oficina pequeña será casi siempre de riesgo ordinario, lo que significa un simulacro al año, un extintor por cada 300 m² o fracción, croquis, instrucciones de seguridad, plan de emergencias y registros, sin brigada obligatoria ni sistemas fijos.',
+  },
+  {
+    q: '¿Cómo cuento los sólidos combustibles de una oficina?',
+    a: 'El numeral A.1.3 inciso c) permite estimarlos: se considera un promedio de 60 kilogramos por cada trabajador del centro de trabajo, sin contar a quienes hacen su trabajo fuera del inmueble, como conductores, repartidores o vendedores en campo. También puedes usar la cantidad real existente si prefieres medirla.',
+  },
+  {
+    q: '¿Cada cuánto debo rehacer la clasificación de riesgo?',
+    a: 'El numeral A.1.6 lo dice: cuando se modifiquen los inventarios máximos registrados en el transcurso de un año. No es un trámite periódico de calendario, sino un disparador por cambio real de condiciones. En la práctica conviene revisarlo al menos una vez al año junto con el resto del programa.',
+  },
+  {
+    q: '¿Puedo tener menos extintores si tengo rociadores?',
+    a: 'Sí. El numeral 7.17 inciso e) permite reducir a la mitad el número de extintores requeridos si el centro de trabajo o el área cuenta con sistemas automáticos de supresión, siempre que los extintores tengan una capacidad nominal de al menos seis kilogramos o nueve litros.',
+  },
+  {
+    q: '¿Cuánto tiempo debo conservar los registros?',
+    a: 'Tres años. El numeral 13.6 establece que las evidencias documentales y los registros pueden exhibirse de forma impresa o en medios magnéticos, y deben conservarse durante ese periodo. La norma acepta expresamente el formato digital.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(f => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const artSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  '@id': `${url}#article`,
+  headline: 'NOM-002-STPS-2010: qué obliga y cómo se cumple',
+  description: descripcion,
+  url,
+  inLanguage: 'es-MX',
+  about: { '@type': 'Legislation', name: norma.clave, legislationJurisdiction: 'México' },
+  publisher: { '@type': 'Organization', name: 'FIREFIGHTER México', url: SITE },
+};
+---
+
+<BaseLayout
+  title={tituloSeo('NOM-002-STPS-2010: qué obliga a tu empresa y cómo se cumple')}
+  description={descripcion}
+  canonicalUrl={url}
+  breadcrumbs={[
+    { label: 'Cumplimiento', href: '/cumplimiento' },
+    { label: 'Normas', href: '/cumplimiento#normas' },
+    { label: norma.clave },
+  ]}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(artSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <PageHero
+    eyebrow="Norma · STPS"
+    badge={norma.clave}
+    h1="NOM-002-STPS-2010:<br>prevención y protección<br>contra incendios"
+    lead="Es la norma madre del cumplimiento contra incendios en México. Aplica a <strong style='color:#e4e4e7;'>todo centro de trabajo, sin importar giro ni tamaño</strong>, y de su clasificación de riesgo cuelga todo lo demás: cuántos extintores, si necesitas brigada, cuántos simulacros al año y si te exigen sistemas fijos."
+    bloques={[
+      { label: 'Publicación', texto: 'Diario Oficial de la Federación, <strong style="color:#e4e4e7;">9 de diciembre de 2010</strong>. En vigor desde el 9 de junio de 2011. Revisión sistemática del 8 de julio de 2021: confirmación.' },
+      { label: 'Qué encontrarás aquí', texto: 'El numeral exacto de cada obligación, los umbrales de la Tabla A.1, la tabla de distancias del numeral 7.17 y cinco cosas que se le atribuyen a esta norma y no están en su texto.' },
+    ]}
+  >
+    <div slot="ctas" style="display:flex; flex-wrap:wrap; gap:10px;">
+      <a href="#clasificacion" class="l2-cta">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>
+        <span>¿Soy riesgo ordinario o alto?</span>
+      </a>
+      <a href={waLink('quiero ayuda con la clasificación de riesgo de incendio de mi empresa')} target="_blank" rel="noopener" class="l2-cta-ghost">
+        <span>Hablar con un ingeniero</span>
+      </a>
+    </div>
+  </PageHero>
+
+  <section style="background:#f8fafc; padding:48px 0 88px;">
+    <div class="container-custom">
+      <div class="l3-shell">
+
+        <!-- ══ CUERPO ══ -->
+        <div class="l3-body">
+
+          <div class="l3-sec" id="que-es">
+            <div class="l3-sec-eyebrow"><i></i><span>Punto de partida</span></div>
+            <h2 class="l3-sec-title">Qué es y a quién aplica</h2>
+            <p class="l3-p">La NOM-002-STPS-2010 establece las condiciones de prevención y protección contra incendios que debe cumplir un centro de trabajo en México. Su campo de aplicación no admite excepciones por tamaño ni por giro: aplica a una oficina de tres personas igual que a una planta con ochocientas.</p>
+            <p class="l3-p">Lo que sí cambia es el <strong>nivel de exigencia</strong>, y eso lo decide un solo dato: la clasificación de riesgo de incendio. Por eso el numeral 5.1 es el primero de la lista de obligaciones del patrón. Sin esa clasificación hecha y documentada, ninguna de las decisiones siguientes tiene sustento.</p>
+            <div class="l3-box l3-box-red">
+              <span class="l3-box-title">La confusión más común</span>
+              <p class="l3-box-copy">Cumplir la NOM-002 <strong>no</strong> acredita el Programa Interno de Protección Civil, ni al revés. Son dos autoridades distintas con dos lógicas distintas: la STPS verifica por inspección, sin licencia previa; protección civil opera por registro previo y visitas de verificación. La única pasarela entre ambas está en el numeral 5.11, que acepta el acta circunstanciada de la autoridad local de protección civil como una de las tres formas de acreditar el cumplimiento en centros de riesgo alto.</p>
+            </div>
+          </div>
+
+          <div class="l3-sec" id="clasificacion">
+            <div class="l3-sec-eyebrow"><i></i><span>Apéndice A</span></div>
+            <h2 class="l3-sec-title">Riesgo ordinario o riesgo alto</h2>
+            <p class="l3-p">La norma define <strong>dos</strong> categorías, no tres. La Tabla A.1 fija los umbrales, y basta superar cualquiera de ellos para caer en riesgo alto.</p>
+
+            <div class="l3-tabla-wrap">
+              <table class="l3-tabla">
+                <thead><tr><th>Concepto</th><th>Ordinario</th><th>Alto</th></tr></thead>
+                <tbody>
+                  {UMBRALES.map(u => (
+                    <tr><td>{u.concepto}</td><td>{u.ordinario}</td><td><strong style="color:#09090b;">{u.alto}</strong></td></tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <p class="l3-p">Hay un matiz que casi siempre se pierde: cuando el centro de trabajo tiene <strong>dos o más de estos conceptos a la vez</strong>, el numeral A.1.3 inciso e) no permite evaluarlos por separado. Se normaliza cada inventario contra su umbral y se suman las fracciones. Si el resultado llega a uno, el centro es de riesgo alto aunque ningún concepto individual haya superado su límite.</p>
+
+            <div class="l3-box">
+              <span class="l3-box-title">Para oficinas y áreas administrativas</span>
+              <p class="l3-box-copy">El numeral A.1.3 inciso c) permite estimar los sólidos combustibles con un promedio de <strong>60 kilogramos por trabajador</strong>, sin contar a quienes trabajan fuera del inmueble. Con ese criterio, se necesitarían 250 personas para llegar a los 15 000 kg del umbral: la mayoría de las oficinas cae en riesgo ordinario por inventario, y solo pasa a alto si supera los 3 000 m² construidos.</p>
+            </div>
+
+            <p class="l3-p">La clasificación se rehace <strong>cuando cambian los inventarios máximos</strong> registrados en el transcurso de un año (numeral A.1.6), no en una fecha de calendario. Y debe documentarse en escrito libre con once datos, incluido el cálculo desarrollado y el nombre del responsable.</p>
+          </div>
+
+          <div class="l3-sec" id="obligaciones">
+            <div class="l3-sec-eyebrow"><i></i><span>Capítulo 5</span></div>
+            <h2 class="l3-sec-title">Las 12 obligaciones del patrón</h2>
+            <p class="l3-p">Nueve aplican a todo centro de trabajo. Tres solo a los de riesgo alto.</p>
+            <div class="cmp-obl">
+              {obligaciones.map(o => (
+                <div class={`cmp-obl-row ${o.todos ? '' : 'is-alto'}`}>
+                  <span class="cmp-obl-n">{o.n}</span>
+                  <span class="cmp-obl-t">{o.t}</span>
+                  <span class="cmp-obl-tag">{o.todos ? 'Todos' : 'Solo riesgo alto'}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="l3-sec" id="extintores">
+            <div class="l3-sec-eyebrow"><i></i><span>Numeral 7.17</span></div>
+            <h2 class="l3-sec-title">Cuántos extintores y a qué distancia</h2>
+            <p class="l3-p">Son <strong>dos reglas que se cumplen al mismo tiempo</strong>, no una u otra. Primero la de superficie, después la de distancia de recorrido: si al colocar los extintores por superficie queda un punto que excede la distancia máxima, hay que agregar más.</p>
+
+            <div class="l3-strip">
+              <div class="l3-strip-grid">
+                <div class="l3-strip-cell">
+                  <span class="l3-strip-label">Riesgo ordinario</span>
+                  <span class="l3-strip-val">1 extintor por cada 300 m² o fracción</span>
+                </div>
+                <div class="l3-strip-cell">
+                  <span class="l3-strip-label">Riesgo alto</span>
+                  <span class="l3-strip-val">1 extintor por cada 200 m² o fracción</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="l3-p">La segunda regla es la distancia máxima de recorrido hasta cualquier extintor, y depende de la clase de fuego:</p>
+
+            <div class="l3-tabla-wrap">
+              <table class="l3-tabla">
+                <thead><tr><th>Riesgo</th><th>Clases A, C y D</th><th>Clase B</th><th>Clase K</th></tr></thead>
+                <tbody>
+                  {distancias.map(d => (
+                    <tr><td><strong style="color:#09090b;">{d.r}</strong></td><td>{d.acd}</td><td>{d.b}</td><td>{d.k}</td></tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <p class="l3-nota">* En riesgo alto con fuego clase B se permite hasta 15 m siempre que el extintor sea del tipo móvil.</p>
+
+            <p class="l3-p">Tres detalles del mismo numeral que se pasan por alto con frecuencia:</p>
+            <ul class="l3-p" style="padding-left:20px;">
+              <li style="margin-bottom:8px;">La distancia se mide <strong>tomando en cuenta las vueltas y rodeos necesarios</strong>. Es recorrido real caminando, no línea recta sobre el plano.</li>
+              <li style="margin-bottom:8px;">Con sistema automático de supresión puedes <strong>reducir a la mitad</strong> el número de extintores, siempre que sean de al menos 6 kg o 9 litros.</li>
+              <li>La altura máxima de 1.50 m se mide hasta <strong>la parte más alta</strong> del extintor, no hasta la manija.</li>
+            </ul>
+
+            <div class="l3-box l3-box-dark">
+              <span class="l3-box-title">Mantenimiento no es recarga</span>
+              <p class="l3-box-copy">El numeral 7.18 exige mantenimiento <strong>al menos una vez por año</strong>, garantizado conforme a la NOM-154-SCFI-2005. La recarga es otra cosa: el numeral 7.19 la exige después del uso y, en su caso, como resultado del mantenimiento. Y hay una obligación que casi nadie cumple: cuando un extintor sale a mantenimiento, <strong>debe reemplazarse en su misma ubicación</strong> por otro cuando menos del mismo tipo y capacidad. No se puede dejar el hueco.</p>
+            </div>
+          </div>
+
+          <div class="l3-sec" id="brigadas">
+            <div class="l3-sec-eyebrow"><i></i><span>Capítulos 9 y 10</span></div>
+            <h2 class="l3-sec-title">Brigadas y simulacros</h2>
+            <p class="l3-p">La <strong>brigada contra incendio solo es obligatoria en centros de riesgo alto</strong>. Así lo establece el numeral 5.6 y lo confirma el capítulo 13 en su columna de observaciones. En riesgo ordinario no hay obligación de constituirla, aunque el plan de atención a emergencias siga siendo exigible para todos.</p>
+            <p class="l3-p">El capítulo 9 no fija un número mínimo de brigadistas. Solo enumera tres criterios que el patrón debe considerar para dimensionarla: trabajadores por turno, rotación entre turnos y resultados de los simulacros frente a los accidentes previsibles más graves. La selección debe hacerse entre trabajadores <strong>con disposición para participar</strong> y aptitud física y mental.</p>
+            <p class="l3-p">Los simulacros sí tienen frecuencia fija: <strong>uno al año en riesgo ordinario, dos al año en riesgo alto</strong>. La planeación debe constar por escrito con seis contenidos mínimos, y el resultado debe registrarse con ocho datos, incluidos las desviaciones detectadas, la duración y las recomendaciones para actualizar el plan.</p>
+          </div>
+
+          <div class="l3-sec" id="registros">
+            <div class="l3-sec-eyebrow"><i></i><span>Evidencia</span></div>
+            <h2 class="l3-sec-title">Qué te va a pedir el inspector</h2>
+            <p class="l3-p">En una inspección, el hecho que se sanciona no es solo incumplir: es <strong>no poder acreditarlo documentalmente en el plazo señalado</strong>. Esta es la carpeta mínima:</p>
+            <div class="cmp-check">
+              <div><span>Estudio de clasificación de riesgo de incendio, con el cálculo desarrollado y el responsable</span></div>
+              <div><span>Croquis, plano o mapa general actualizado y colocado en entradas y puntos de reunión</span></div>
+              <div><span>Instrucciones de seguridad por área y constancia de su difusión</span></div>
+              <div><span>Plan de atención a emergencias de incendio</span></div>
+              <div><span>Programa anual de revisión mensual de extintores, y el registro de cada revisión</span></div>
+              <div><span>Programa anual de revisión y pruebas a equipos contra incendio, con sus resultados</span></div>
+              <div><span>Programa anual de revisión a instalaciones eléctricas y a instalaciones de gas</span></div>
+              <div><span>Programa anual de capacitación teórico-práctico y las constancias correspondientes</span></div>
+              <div><span>Planeación y registro de resultados de cada simulacro</span></div>
+              <div><span>Riesgo alto: acta de integración de brigada y evidencia del EPP entregado</span></div>
+              <div><span>Riesgo alto: acta del Programa de Autogestión, dictamen de unidad de verificación o acta de protección civil</span></div>
+            </div>
+            <p class="l3-p" style="margin-top:18px;">Todo eso se conserva <strong>tres años</strong> (numeral 13.6), y la norma acepta expresamente el medio magnético: una carpeta digital bien ordenada vale igual que el archivero.</p>
+          </div>
+
+          <div class="l3-sec" id="mitos">
+            <div class="l3-sec-eyebrow"><i></i><span>Correcciones</span></div>
+            <h2 class="l3-sec-title">Cinco cosas que la norma no dice</h2>
+            <p class="l3-p">Todas estas afirmaciones circulan en material técnico y comercial en México. Ninguna está en el texto de la NOM-002-STPS-2010.</p>
+            <div style="display:flex; flex-direction:column; gap:14px; margin-top:20px;">
+              {mitos.map((m, i) => (
+                <div class="cmp-mito">
+                  <span class="cmp-mito-n">{String(i + 1).padStart(2, '0')}</span>
+                  <div style="min-width:0;">
+                    <strong class="cmp-mito-t">{m.t}</strong>
+                    <p class="cmp-mito-d">{m.d}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="l3-sec" id="sanciones">
+            <div class="l3-sec-eyebrow"><i></i><span>Consecuencias</span></div>
+            <h2 class="l3-sec-title">Qué pasa si no cumples</h2>
+            <p class="l3-p">El artículo 994 fracción V de la Ley Federal del Trabajo sanciona con <strong>250 a 5 000 UMA</strong> al patrón que no observe en la instalación de sus establecimientos las normas de seguridad e higiene. Con la UMA vigente, eso son <strong>{pesos(250)} a {pesos(5000)}</strong>.</p>
+            <p class="l3-p">Pero el Reglamento Federal de Seguridad y Salud en el Trabajo desagrega el cumplimiento contra incendios en tramos con rangos muy distintos, y ahí está el dato útil: <strong>no tener brigada, no hacer simulacros, no tener detección o equipos, o tener rutas de evacuación bloqueadas</strong> cae en el rango de 250 a 5 000 UMA. En cambio, no tener el <em>papel</em> del programa de revisión cae en el rango de 50 a 100 UMA. El equipo y la brigada pesan cincuenta veces más que el documento.</p>
+            <p class="l3-p">Y la multa no es un pago único. El artículo 992 de la Ley Federal del Trabajo impone la sanción <strong>por cada trabajador afectado</strong>, aplica de manera independiente cada infracción concurrente y <strong>duplica</strong> el monto por reincidencia dentro de los dos años siguientes. El artículo 126 del reglamento lo duplica otra vez si no acreditas haber subsanado en el plazo señalado, sin perjuicio de que la autoridad proceda conforme al artículo 512-D de la Ley, que permite restringir el acceso o limitar la operación.</p>
+          </div>
+
+          <div class="l3-sec">
+            <div class="l3-sec-eyebrow"><i></i><span>Preguntas frecuentes</span></div>
+            <h2 class="l3-sec-title">Dudas que nos llegan seguido</h2>
+            {faqs.map(f => (
+              <details class="l2-faq">
+                <summary>
+                  {f.q}
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="transition:transform 0.2s ease;" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                </summary>
+                <div class="l2-faq-body">{f.a}</div>
+              </details>
+            ))}
+          </div>
+
+          <p class="cmp-legal" style="margin-top:34px;">
+            <strong>Aviso.</strong> {AVISO_LEGAL} Última revisión normativa de esta ficha: {REVISADO}.
+          </p>
+        </div>
+
+        <!-- ══ SIDEBAR ══ -->
+        <aside class="l3-aside">
+
+          <div class="l3-box">
+            <span class="l3-box-title">Ficha de la norma</span>
+            <dl class="cmp-ficha">
+              <div><dt>Clave</dt><dd>{norma.clave}</dd></div>
+              <div><dt>Emisor</dt><dd>{norma.emisor}</dd></div>
+              <div><dt>Publicación</dt><dd>{norma.dof}</dd></div>
+              <div><dt>Estado</dt><dd><span class="cmp-estado">{norma.estado}</span></dd></div>
+              <div><dt>Aplica a</dt><dd>{norma.aplica}</dd></div>
+            </dl>
+          </div>
+
+          <nav class="l3-toc" aria-label="Contenido de la ficha">
+            <span class="l3-box-title">En esta ficha</span>
+            {toc.map(s => <a href={`#${s.id}`}>{s.t}</a>)}
+          </nav>
+
+          <div class="l3-box l3-box-red">
+            <span class="l3-box-title">Lo que decide todo</span>
+            <p class="l3-box-copy">Si superas <strong>3 000 m² construidos</strong>, eres riesgo alto sin importar tus inventarios. Eso significa brigada obligatoria, dos simulacros al año, sistemas fijos, alarmas y un extintor por cada 200 m².</p>
+          </div>
+
+          <div class="l3-box l3-box-dark">
+            <span class="l3-box-title">¿Te ayudamos a aterrizarlo?</span>
+            <p class="l3-box-copy">Te decimos qué te aplica realmente según tu instalación, qué te falta y qué no necesitas comprar. Si tu caso no es lo nuestro, te lo decimos y te orientamos igual.</p>
+            <a href={waLink('leí la ficha de la NOM-002 y quiero revisar mi caso')} target="_blank" rel="noopener" class="l3-btn-wa">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+              <span>Escribirnos por WhatsApp</span>
+            </a>
+            <a href="/productos/extintores-y-extincion" class="l3-btn-ghost">
+              <span>Ver extintores y extinción</span>
+            </a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

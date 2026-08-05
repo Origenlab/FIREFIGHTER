@@ -16,15 +16,25 @@ interface Props {
   lead?: string;
   bloques?: HeroBloque[];
   padding?: string;
+  /** 'start' (por defecto) o 'center': alineación vertical de las dos columnas */
+  alinear?: 'start' | 'center';
+  /** Justifica el lead y los párrafos de los bloques */
+  justificado?: boolean;
 }
 
-const { eyebrow, badge, h1, lead, bloques = [], padding = '56px 0 68px' } = Astro.props;
+const {
+  eyebrow, badge, h1, lead, bloques = [],
+  padding = '56px 0 68px',
+  alinear = 'start',
+  justificado = false,
+} = Astro.props;
 const tieneDerecha = bloques.length > 0 || Astro.slots.has('derecha');
+const txt = justificado ? 'text-align:justify; text-justify:inter-word; hyphens:auto;' : '';
 ---
 
 <section style={`background:#09090b; padding:${padding};`}>
   <div class="container-custom">
-    <div class={tieneDerecha ? 'grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16' : ''} style="align-items:start;">
+    <div class={tieneDerecha ? 'grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16' : ''} style={`align-items:${alinear};`}>
 
       <div class={tieneDerecha ? 'lg:pr-14 lg:border-r lg:border-[#1f1f23]' : ''}>
         <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
@@ -39,7 +49,7 @@ const tieneDerecha = bloques.length > 0 || Astro.slots.has('derecha');
         <h1 style="font-size:clamp(1.9rem,3.4vw,2.9rem); font-weight:800; color:#fafafa; line-height:1.1; margin:0 0 18px; letter-spacing:-0.02em;" set:html={h1}></h1>
 
         {lead && (
-          <p style="font-size:1rem; color:#a1a1aa; line-height:1.8; margin:0 0 28px;" set:html={lead}></p>
+          <p style={`font-size:1rem; color:#a1a1aa; line-height:1.8; margin:0 0 28px; ${txt}`} set:html={lead}></p>
         )}
 
         <slot name="ctas" />
@@ -53,7 +63,7 @@ const tieneDerecha = bloques.length > 0 || Astro.slots.has('derecha');
               <span style={`position:absolute; left:0; top:4px; bottom:4px; width:3px; border-radius:2px; background:${i === 0 ? '#dc2626' : '#3f3f46'};`} aria-hidden="true"></span>
               <div style="padding-left:20px;">
                 <span style={`font-size:0.7rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; display:block; margin-bottom:10px; color:${i === 0 ? '#dc2626' : '#e4e4e7'};`}>{b.label}</span>
-                <p style="font-size:0.92rem; color:#a1a1aa; line-height:1.85; margin:0;" set:html={b.texto}></p>
+                <p style={`font-size:0.92rem; color:#a1a1aa; line-height:1.85; margin:0; ${txt}`} set:html={b.texto}></p>
               </div>
             </div>
           ))}

@@ -12,6 +12,7 @@ const currentPath = Astro.url.pathname;
 const navItems = [
   { href: '/', label: 'Inicio' },
   { href: '/productos', label: 'Productos', mega: true },
+  { href: '/cumplimiento', label: 'Cumplimiento' },
   { href: '/directorio', label: 'Directorio' },
   { href: '/mapa', label: 'Mapa' },
   { href: '/blog', label: 'Blog' },
@@ -169,6 +170,10 @@ const isActive = (href: string) => {
             <a href={WA + 'una%20asesor%C3%ADa%20t%C3%A9cnica'} target="_blank" rel="noopener" class="sh-mega-cta">
               Solicitar cotización
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="/cumplimiento" class="sh-mega-all">
+              <span>Qué exige la ley a tu empresa</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
             <a href="/productos" class="sh-mega-all">
               <span>Ver el catálogo completo</span>

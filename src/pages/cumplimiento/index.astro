@@ -1,0 +1,388 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/layout/PageHero.astro';
+import { tituloSeo } from '../../lib/seoText';
+import { waLink } from '../../lib/blog';
+import {
+  NORMAS, GIROS, TRAMITES, CALENDARIO, UMBRALES,
+  REVISADO, UMA, pesos, AVISO_LEGAL,
+} from '../../lib/cumplimiento';
+
+const SITE = 'https://firefighter.com.mx';
+const url = `${SITE}/cumplimiento`;
+
+const descripcion =
+  'Qué normas, trámites y plazos debe cumplir una empresa en México en materia de protección contra incendios. NOM-002-STPS, protección civil, calendario de cumplimiento y sanciones, con la fuente oficial de cada dato.';
+
+const faqs = [
+  {
+    q: '¿Qué necesita como mínimo cualquier negocio en México en materia de incendios?',
+    a: 'Clasificar su riesgo de incendio conforme al Apéndice A de la NOM-002-STPS-2010, tener extintores del tipo y número que corresponda a esa clasificación, croquis con rutas de evacuación, instrucciones de seguridad, plan de atención a emergencias, al menos un simulacro al año y los registros que acrediten todo lo anterior. Las brigadas y los sistemas fijos solo son obligatorios cuando el centro de trabajo es de riesgo alto.',
+  },
+  {
+    q: '¿Cómo sé si mi empresa es de riesgo de incendio ordinario o alto?',
+    a: 'Con la Tabla A.1 de la NOM-002-STPS-2010. Basta superar cualquiera de los umbrales para caer en riesgo alto: 3 000 m² construidos, 3 000 litros de gases inflamables, 1 400 de líquidos inflamables, 2 000 de líquidos combustibles o 15 000 kilogramos de sólidos combustibles. Los materiales pirofóricos y explosivos disparan riesgo alto en cualquier cantidad. Cuando hay varios conceptos a la vez, la norma no los evalúa por separado: se normalizan y se suman, y si el resultado llega a uno, el centro es de riesgo alto.',
+  },
+  {
+    q: '¿La STPS y Protección Civil piden lo mismo?',
+    a: 'No, y confundirlos es el error más caro. La STPS regula el inmueble como centro de trabajo y lo verifica por inspección, sin licencia previa. Protección Civil regula el inmueble como establecimiento y opera por registro previo del Programa Interno más visitas de verificación. Cumplir con una no acredita la otra, aunque el acta de Protección Civil sí sirve como una de las tres opciones del numeral 5.11 de la NOM-002 para centros de riesgo alto.',
+  },
+  {
+    q: '¿Cuánto puede costar no cumplir?',
+    a: `El artículo 994 fracción V de la Ley Federal del Trabajo va de 250 a 5 000 UMA, hoy ${pesos(250)} a ${pesos(5000)}. Pero no es un pago único: el artículo 992 impone la sanción por cada trabajador afectado, aplica de manera independiente cada infracción concurrente y duplica la multa por reincidencia dentro de los dos años siguientes. El Reglamento Federal de Seguridad y Salud en el Trabajo agrega, en su artículo 126, que la multa se duplica si no acreditas haber subsanado en el plazo señalado.`,
+  },
+  {
+    q: '¿Las normas NFPA son obligatorias en México?',
+    a: 'Por sí mismas no. NFPA, UL, FM y NIOSH son normas extranjeras. Se vuelven exigibles cuando una NOM las referencia, cuando un reglamento estatal o municipal las adopta, o cuando la aseguradora o el corporativo las incorporan al contrato. Son la referencia técnica de facto del sector, pero el fundamento legal en México sigue siendo la NOM.',
+  },
+  {
+    q: '¿La NOM-002 obliga a instalar red de hidrantes?',
+    a: 'No. La palabra hidrante solo aparece en las Guías de Referencia de la norma, que declaran expresamente no ser de cumplimiento obligatorio. Lo que el numeral 5.10 exige en áreas de riesgo alto son sistemas fijos de protección contra incendio y alarmas, sin prescribir la tecnología: pueden ser rociadores, agentes limpios, espuma, CO₂ o red hidráulica. La obligación de hidrantes, cuando existe, viene del reglamento de construcción local o del programa interno de protección civil.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(f => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const colSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  '@id': `${url}#collection`,
+  name: 'Directorio de cumplimiento contra incendios para empresas en México',
+  description: descripcion,
+  url,
+  inLanguage: 'es-MX',
+  isPartOf: { '@type': 'WebSite', name: 'FIREFIGHTER México', url: SITE },
+};
+
+const capas = [
+  { n: '01', t: 'Laboral federal', quien: 'STPS', que: 'El inmueble como centro de trabajo: extintores, brigadas, simulacros, EPP.', como: 'Inspección. No hay licencia previa.' },
+  { n: '02', t: 'Protección civil', quien: 'SEGOB, estados y municipios', que: 'Programa Interno, unidad interna, brigadas, señalización.', como: 'Registro previo y visitas de verificación.' },
+  { n: '03', t: 'Construcción', quien: 'Cada estado y municipio', que: 'Salidas de emergencia, escaleras, resistencia al fuego, rociadores.', como: 'Licencia de obra, DRO, visto bueno de seguridad y operación.' },
+  { n: '04', t: 'Sectorial', quien: 'Salud, SEP, ASEA, SENER', que: 'Lo que exige tu giro en particular.', como: 'La autoridad del sector.' },
+];
+---
+
+<BaseLayout
+  title={tituloSeo('Normativa contra incendios para empresas: qué exige la ley en México')}
+  description={descripcion}
+  canonicalUrl={url}
+  breadcrumbs={[{ label: 'Cumplimiento' }]}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(colSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <PageHero
+    eyebrow="Centro de cumplimiento"
+    badge="Actualizado a agosto 2026"
+    h1="Qué exige la ley mexicana<br>a tu empresa en materia<br>de protección contra incendios"
+    lead="En México no existe un solo reglamento de incendios. El cumplimiento de cualquier negocio se arma con <strong style='color:#e4e4e7;'>cuatro capas que aplican al mismo tiempo</strong>, y la mayoría de los dueños de negocio solo conoce una. Aquí está cada una, con el artículo y la fuente oficial de la que sale."
+    alinear="center"
+    justificado
+    bloques={[
+      {
+        label: 'El problema de fondo',
+        texto:
+          'La normativa mexicana contra incendios está repartida entre la Secretaría del Trabajo, las autoridades de protección civil de cada estado, los reglamentos de construcción municipales y las disposiciones propias de cada sector. Ninguna de esas cuatro instancias publica una lista consolidada de lo que le toca a un negocio en particular, y cumplir con una <strong style="color:#e4e4e7;">no acredita el cumplimiento de las otras tres</strong>. El resultado es predecible: empresas que invierten en equipo que no necesitaban mientras siguen expuestas en lo que sí les aplica, y hallazgos de inspección sobre obligaciones que nadie les había señalado. Esta sección existe para cerrar ese hueco de información.',
+      },
+      {
+        label: 'Cómo está construido',
+        texto:
+          `Cada obligación, cifra y frecuencia de este centro está tomada del texto normativo publicado en el Diario Oficial de la Federación y contrastada contra el catálogo oficial de la Secretaría de Economía, el marco normativo de la STPS y los valores vigentes del INEGI, con el <strong style="color:#e4e4e7;">numeral exacto</strong> a la vista para que puedas verificarlo por tu cuenta. Cuando una práctica extendida en el mercado no tiene respaldo en la norma, lo señalamos en lugar de repetirla; y cuando un requisito depende del estado o del municipio, lo decimos en vez de generalizar. Lo que no pudimos confirmar en fuente oficial simplemente no se publica. Última revisión normativa: <strong style="color:#e4e4e7;">${REVISADO}</strong>.`,
+      },
+    ]}
+  >
+    <div slot="ctas" style="display:flex; flex-wrap:wrap; gap:10px;">
+      <a href="#calendario" class="l2-cta">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        <span>Ver el calendario de cumplimiento</span>
+      </a>
+      <a href={waLink('quiero una revisión de cumplimiento en mi empresa')} target="_blank" rel="noopener" class="l2-cta-ghost">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4-.8L3 21l1.9-3.8A7.94 7.94 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        <span>Hablar con un ingeniero</span>
+      </a>
+    </div>
+  </PageHero>
+
+  <!-- ══ LAS 4 CAPAS ══ -->
+  <section style="background:#fff; padding:80px 0;">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16" style="align-items:center; margin-bottom:52px;">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+            <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Cómo funciona</span>
+          </div>
+          <h2 style="font-size:clamp(1.9rem,2.8vw,2.7rem); font-weight:800; color:#09090b; line-height:1.1; margin:0; letter-spacing:-0.02em;">
+            Cuatro autoridades distintas<br>revisan tu negocio
+          </h2>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:28px;">
+          <div>
+            <span style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px; display:block;">Por qué importa</span>
+            <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">Cumplir con una capa <strong style="color:#09090b; font-weight:600;">no acredita las otras tres</strong>. Es común encontrar empresas con el Programa Interno de Protección Civil al día y una inspección de la STPS en contra, o al revés.</p>
+          </div>
+          <div style="padding-top:28px; border-top:1px solid #f0f0f0;">
+            <span style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px; display:block;">Dónde empezar</span>
+            <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">Por la <strong style="color:#09090b; font-weight:600;">clasificación de riesgo de incendio</strong>. De ese estudio depende todo lo demás: cuántos extintores, si necesitas brigada y cuántos simulacros al año.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cmp-capas">
+        {capas.map(c => (
+          <div class="cmp-capa">
+            <span class="cmp-capa-n">{c.n}</span>
+            <h3 class="cmp-capa-t">{c.t}</h3>
+            <span class="cmp-capa-quien">{c.quien}</span>
+            <p class="cmp-capa-que">{c.que}</p>
+            <div class="cmp-capa-como"><span>Cómo se verifica</span>{c.como}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ NORMAS ══ -->
+  <section id="normas" style="background:#f8fafc; border-top:1px solid #e4e4e7; padding:80px 0; scroll-margin-top:96px;">
+    <div class="container-custom">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px;">
+        <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+        <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Por norma</span>
+      </div>
+      <h2 style="font-size:clamp(1.7rem,2.4vw,2.3rem); font-weight:800; color:#09090b; line-height:1.15; margin:0 0 12px; letter-spacing:-0.02em;">Las normas que te aplican</h2>
+      <p style="font-size:0.92rem; color:#52525b; line-height:1.85; margin:0 0 36px; max-width:70ch;">Cada ficha explica a quién aplica, qué obliga y qué documento te va a pedir el inspector. El estatus de vigencia está verificado contra el catálogo oficial.</p>
+
+      <div class="cmp-grid">
+        {NORMAS.map(n => (
+          <article class="cmp-card">
+            <div class="cmp-card-top">
+              <span class="cmp-clave">{n.clave}</span>
+              <span class={`cmp-estado ${n.estado === 'Vigente' ? '' : 'is-warn'}`}>{n.estado}</span>
+            </div>
+            <h3 class="cmp-card-t">{n.corto}</h3>
+            <p class="cmp-card-d">{n.resumen}</p>
+            <dl class="cmp-meta">
+              <div><dt>Emisor</dt><dd>{n.emisor}</dd></div>
+              <div><dt>Publicación</dt><dd>{n.dof}</dd></div>
+              <div><dt>Aplica a</dt><dd>{n.aplica}</dd></div>
+            </dl>
+            {n.listo ? (
+              <a href={`/cumplimiento/normas/${n.slug}`} class="cmp-card-cta">
+                <span>Ver la ficha completa</span>
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            ) : (
+              <span class="cmp-card-cta is-soon">Ficha en preparación</span>
+            )}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CALENDARIO ══ -->
+  <section id="calendario" style="background:#fff; border-top:1px solid #e4e4e7; padding:80px 0; scroll-margin-top:96px;">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16" style="align-items:center; margin-bottom:40px;">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+            <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Calendario</span>
+          </div>
+          <h2 style="font-size:clamp(1.9rem,2.8vw,2.7rem); font-weight:800; color:#09090b; line-height:1.1; margin:0; letter-spacing:-0.02em;">Qué se vence<br>y cada cuánto</h2>
+        </div>
+        <div>
+          <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">Cada frecuencia de esta tabla sale del <strong style="color:#09090b; font-weight:600;">texto oficial de la norma que la exige</strong>, con su numeral. Donde el sector repite una frecuencia que la norma no fija, lo decimos en la ficha correspondiente en vez de rellenar el hueco.</p>
+        </div>
+      </div>
+
+      <div class="l3-tabla-wrap">
+        <table class="l3-tabla">
+          <thead>
+            <tr><th>Actividad</th><th>Frecuencia</th><th>Fundamento</th></tr>
+          </thead>
+          <tbody>
+            {CALENDARIO.map(f => (
+              <tr>
+                <td>{f.destacada ? <strong>{f.actividad}</strong> : f.actividad}</td>
+                <td><strong style="color:#09090b;">{f.frecuencia}</strong></td>
+                <td style="color:#71717a;">{f.fundamento}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p style="font-size:0.78rem; color:#a1a1aa; line-height:1.75; margin:16px 0 0;">
+        Nota sobre extintores: la NOM-002 exige <strong style="color:#52525b;">mantenimiento</strong> anual. La <strong style="color:#52525b;">recarga</strong> es una operación distinta, regulada por la NOM-154-SCFI-2005, y procede cuando el extintor se usó, perdió presión o el mantenimiento así lo determina. No son lo mismo, aunque el sector los use como sinónimos.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══ UMBRALES ══ -->
+  <section style="background:#09090b; padding:80px 0;">
+    <div class="container-custom">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px;">
+        <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+        <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">El dato que decide todo</span>
+      </div>
+      <h2 style="font-size:clamp(1.7rem,2.4vw,2.3rem); font-weight:800; color:#fafafa; line-height:1.15; margin:0 0 12px; letter-spacing:-0.02em;">Riesgo ordinario o riesgo alto</h2>
+      <p style="font-size:0.92rem; color:#a1a1aa; line-height:1.85; margin:0 0 34px; max-width:74ch;">Tabla A.1 del Apéndice A de la NOM-002-STPS-2010. <strong style="color:#e4e4e7;">Basta superar cualquiera de estos umbrales</strong> para ser riesgo alto. Y cuando hay varios conceptos a la vez, no se evalúan por separado: se normalizan y se suman.</p>
+
+      <div class="cmp-umbrales">
+        <div class="cmp-umb-head">
+          <span>Concepto</span><span>Riesgo ordinario</span><span>Riesgo alto</span>
+        </div>
+        {UMBRALES.map(u => (
+          <div class="cmp-umb-row">
+            <span class="cmp-umb-c">{u.concepto}</span>
+            <span class="cmp-umb-o">{u.ordinario}</span>
+            <span class="cmp-umb-a">{u.alto}</span>
+          </div>
+        ))}
+      </div>
+
+      <div class="cmp-nota-dark">
+        <strong>Lo que cambia si eres riesgo alto:</strong> un extintor por cada 200 m² en vez de cada 300, brigada contra incendio obligatoria, dos simulacros al año en vez de uno, y sistemas fijos de protección más alarmas de incendio. Además necesitas uno de estos tres documentos: acta del Programa de Autogestión de la STPS, dictamen de unidad de verificación acreditada, o acta circunstanciada de la autoridad local de protección civil.
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ GIROS ══ -->
+  <section style="background:#f8fafc; border-top:1px solid #e4e4e7; padding:80px 0;">
+    <div class="container-custom">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px;">
+        <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+        <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Por giro</span>
+      </div>
+      <h2 style="font-size:clamp(1.7rem,2.4vw,2.3rem); font-weight:800; color:#09090b; line-height:1.15; margin:0 0 12px; letter-spacing:-0.02em;">Checklist según tu tipo de negocio</h2>
+      <p style="font-size:0.92rem; color:#52525b; line-height:1.85; margin:0 0 32px; max-width:70ch;">Las cuatro capas aplican a todos, pero cada giro tiene requisitos propios y errores de cumplimiento que se repiten. Estas guías están en preparación.</p>
+
+      <div class="cmp-giros">
+        {GIROS.map(g => (
+          <div class="cmp-giro">
+            <span class="cmp-giro-i" aria-hidden="true">{g.icono}</span>
+            <div style="min-width:0;">
+              <strong class="cmp-giro-n">{g.nombre}</strong>
+              <span class="cmp-giro-g">{g.gancho}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TRÁMITES + SANCIONES ══ -->
+  <section style="background:#fff; border-top:1px solid #e4e4e7; padding:80px 0;">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14" style="align-items:start;">
+
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px;">
+            <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Por trámite</span>
+          </div>
+          <h2 style="font-size:1.5rem; font-weight:800; color:#09090b; line-height:1.2; margin:0 0 10px; letter-spacing:-0.01em;">Qué papeles necesitas</h2>
+          <p style="font-size:0.88rem; color:#52525b; line-height:1.85; margin:0 0 24px;">Casi todos los trámites de apertura y operación son <strong style="color:#09090b; font-weight:600;">municipales</strong>. No existe un visto bueno de bomberos federal único: cambia por municipio.</p>
+          <div style="display:flex; flex-direction:column; gap:9px;">
+            {TRAMITES.map(t => (
+              <div class="cmp-tram">
+                <div style="min-width:0;">
+                  <strong>{t.nombre}</strong>
+                  <span>{t.gancho}</span>
+                </div>
+                <em>{t.autoridad}</em>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px;">
+            <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Consecuencias</span>
+          </div>
+          <h2 style="font-size:1.5rem; font-weight:800; color:#09090b; line-height:1.2; margin:0 0 10px; letter-spacing:-0.01em;">Cuánto cuesta no cumplir</h2>
+          <p style="font-size:0.88rem; color:#52525b; line-height:1.85; margin:0 0 24px;">Artículo 994 fracción V de la Ley Federal del Trabajo, calculado con la UMA vigente de <strong style="color:#09090b; font-weight:600;">${UMA.diaria}</strong> diarios ({UMA.fuente}, vigente desde el {UMA.vigenciaDesde}).</p>
+
+          <div class="cmp-multa">
+            <div class="cmp-multa-row">
+              <span>Mínimo — 250 UMA</span><strong>{pesos(250)}</strong>
+            </div>
+            <div class="cmp-multa-row">
+              <span>Máximo — 5 000 UMA</span><strong>{pesos(5000)}</strong>
+            </div>
+            <div class="cmp-multa-row is-hot">
+              <span>Máximo con 10 trabajadores afectados</span><strong>{pesos(50000)}</strong>
+            </div>
+            <div class="cmp-multa-row is-hot">
+              <span>Lo anterior, duplicado por reincidencia</span><strong>{pesos(100000)}</strong>
+            </div>
+          </div>
+
+          <p style="font-size:0.82rem; color:#52525b; line-height:1.8; margin:16px 0 0;">
+            La multa <strong style="color:#09090b; font-weight:600;">no es un pago único</strong>. El artículo 992 impone la sanción por cada trabajador afectado, aplica de manera independiente cada infracción concurrente y duplica el monto por reincidencia dentro de los dos años siguientes. El artículo 126 del Reglamento Federal de Seguridad y Salud en el Trabajo lo duplica otra vez si no acreditas haber subsanado en el plazo señalado.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FAQ ══ -->
+  <section style="background:#f8fafc; border-top:1px solid #e4e4e7; padding:80px 0;">
+    <div class="container-custom">
+      <div style="max-width:920px;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px;">
+          <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+          <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Preguntas frecuentes</span>
+        </div>
+        <h2 style="font-size:clamp(1.7rem,2.4vw,2.3rem); font-weight:800; color:#09090b; line-height:1.15; margin:0 0 30px; letter-spacing:-0.02em;">Lo que más nos preguntan</h2>
+
+        {faqs.map(f => (
+          <details class="l2-faq">
+            <summary>
+              {f.q}
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="transition:transform 0.2s ease;" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+            </summary>
+            <div class="l2-faq-body">{f.a}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA + AVISO ══ -->
+  <section style="background:#fff; border-top:1px solid #e4e4e7; padding:72px 0;">
+    <div class="container-custom">
+      <div class="art-cta">
+        <div>
+          <h3>¿Quieres saber en qué estás fallando antes de que llegue el inspector?</h3>
+          <p>Nos dedicamos a equipar, no a vender miedo. Cuéntanos qué tipo de instalación tienes y te decimos qué te aplica realmente, qué te falta y qué no necesitas comprar.</p>
+        </div>
+        <div class="art-cta-actions">
+          <a href={waLink('quiero saber qué normativa contra incendios le aplica a mi empresa')} target="_blank" rel="noopener" class="l2-cta">
+            <span>Escribirnos por WhatsApp</span>
+          </a>
+          <a href="/productos" class="l2-cta-ghost">
+            <span>Ver el catálogo</span>
+          </a>
+        </div>
+      </div>
+
+      <p class="cmp-legal">
+        <strong>Aviso.</strong> {AVISO_LEGAL} Última revisión normativa de esta sección: {REVISADO}.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
