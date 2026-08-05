@@ -98,7 +98,7 @@ Ninguno de esos pasos funciona si el PASS estaba apagado en el paso 1.
 - Exposición a agua de inmersión (si el modelo no tiene certificación de impermeabilidad)
 - Baterías no reemplazadas en el período especificado por el fabricante
 
-Para revisar la integración del PASS en el [SCBA MSA G1](/blog/scba-msa-g1-guia-tecnica), los requisitos de la [norma NFPA 1970](/blog/nfpa-1981-mexico-equipos-respiracion), y el uso de SCBA en [espacios confinados](/blog/espacios-confinados-proteccion-respiratoria) donde el PASS tiene consideraciones adicionales, consulta los artículos específicos. Los [equipos SCBA disponibles con PASS integrado](/productos/scba-respiracion) tienen la documentación técnica para cada modelo.
+Para revisar la integración del PASS en el [SCBA MSA G1](/blog/scba-msa-g1-guia-tecnica), los requisitos de la [norma NFPA 1970](/blog/nfpa-1981-mexico-equipos-respiracion), y el uso de SCBA en [espacios confinados](/blog/espacios-confinados-proteccion-respiratoria) donde el PASS tiene consideraciones adicionales, consulta los artículos específicos. Los [equipos SCBA disponibles con PASS integrado](/productos/equipos-de-respiracion) tienen la documentación técnica para cada modelo.
 
 
 ## Tabla comparativa: PASS separado vs PASS integrado

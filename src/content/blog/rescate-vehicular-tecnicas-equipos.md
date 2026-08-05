@@ -97,4 +97,4 @@ La formación correcta no reemplaza al equipamiento correcto. Las dos cosas son 
 
 Para los estándares de certificación de las herramientas y por qué importan para la brigada, consulta [NFPA 1936: herramientas de rescate certificadas](/blog/nfpa-1936-herramientas-rescate-certificadas). El [Holmatro Combi Tool V300](/blog/holmatro-combi-tool-v300-guia) es el punto de partida para el equipamiento de herramientas de corte. Y para la visión completa del equipamiento de una unidad, [equipamiento de unidad de rescate completa](/blog/equipamiento-unidad-rescate-completa) tiene el análisis por componente.
 
-El tiempo de excarcelación no es solo una estadística. Es el resultado de cada decisión de equipamiento y cada hora de entrenamiento que el equipo de brigada hizo antes del día que lo necesitó. Consulta el catálogo en [herramientas de rescate](/productos/herramientas-rescate).
+El tiempo de excarcelación no es solo una estadística. Es el resultado de cada decisión de equipamiento y cada hora de entrenamiento que el equipo de brigada hizo antes del día que lo necesitó. Consulta el catálogo en [herramientas de rescate](/productos/herramientas-de-rescate).

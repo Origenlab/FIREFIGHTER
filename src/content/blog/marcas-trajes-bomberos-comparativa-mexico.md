@@ -54,7 +54,7 @@ Dicho sin rodeos: elige primero la configuración correcta y el respaldo, y deja
 
 Distribuir una marca no es revender una caja con un logo; es responder por ese traje durante toda su vida útil, que es justo cuando el cliente descubre si eligió bien al proveedor. Trabajamos con distribución autorizada de **MSA**, dueña de las líneas estructurales **Globe** y **Bristol**, con respaldo documental de origen y garantía de fabricante. Mantenemos acceso real a refacciones OEM y reparación certificada en México —el factor que más influye en el costo por año de vida útil y el que más se ignora al comparar marcas—. Antes de venderte, te ayudamos a elegir la configuración correcta de capas para tu clima, tu sector y tu frecuencia operativa, en lugar de empujarte al modelo de mayor margen. Entregamos certificación verificable por modelo y edición —NFPA 1971-2018 o NFPA 1970— lista para auditoría y licitación, ofrecemos programa de tallaje para cuerpos y brigadas completas, y damos cobertura nacional con respuesta en menos de 24 horas y experiencia probada en [licitaciones públicas](/blog/licitaciones-equipos-contra-incendios-mexico).
 
-Consulta los modelos disponibles en [equipos para bomberos](/productos/equipos-bomberos) o escríbenos a **ventas@firefighter.mx**. Para gobierno, **licitaciones@firefighter.mx**.
+Consulta los modelos disponibles en [equipos para bomberos](/productos/epp-para-bomberos) o escríbenos a **ventas@firefighter.mx**. Para gobierno, **licitaciones@firefighter.mx**.
 
 ## Conclusión sobre marcas
 

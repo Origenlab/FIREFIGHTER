@@ -120,6 +120,6 @@ Para adquirir trajes de bombero estructural en México con criterio técnico rea
 - Fecha de fabricación en la etiqueta permanente (no fecha de compra)
 - Disponibilidad de reparaciones certificadas en México
 
-Para revisar el [EPP completo de un kit de bombero profesional](/blog/epp-completo-kit-bombero-profesional) con todos los componentes certificados y su compatibilidad de ensemble, consulta nuestra guía integral. Los [equipos disponibles para brigadas en México](/productos/equipos-bomberos) están en nuestra sección de productos con fichas técnicas completas.
+Para revisar el [EPP completo de un kit de bombero profesional](/blog/epp-completo-kit-bombero-profesional) con todos los componentes certificados y su compatibilidad de ensemble, consulta nuestra guía integral. Los [equipos disponibles para brigadas en México](/productos/epp-para-bomberos) están en nuestra sección de productos con fichas técnicas completas.
 
 El traje de bombero es la única pieza de equipo cuyo fallo no tiene segunda oportunidad. La decisión de compra basada en precio sin verificación técnica no es una decisión económica. Es una decisión de cuánto riesgo estás dispuesto a transferir a quien lo usa.

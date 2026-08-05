@@ -584,3 +584,297 @@
 .sh-mega-all svg { }
 .sh-mega-all:hover { background: #141417; border-color: #dc2626; color: #fff; }
 
+
+/* ═══════════════════════════════════════════════════════════════════
+   L3 · FICHA DE PRODUCTO
+   Hereda tokens de la L2. Shell de dos columnas con sidebar sticky.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Strip de especificaciones bajo el hero ── */
+.l3-strip {
+  background: #0c0c0f;
+  border-top: 1px solid #1f1f23;
+  border-bottom: 1px solid #1f1f23;
+}
+.l3-strip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: #1f1f23;
+}
+@media (min-width: 768px)  { .l3-strip-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1024px) { .l3-strip-grid { grid-template-columns: repeat(6, 1fr); } }
+
+.l3-strip-cell { background: #0c0c0f; padding: 20px 18px; }
+.l3-strip-label {
+  display: block; font-size: 0.6rem; font-weight: 800; letter-spacing: 0.12em;
+  text-transform: uppercase; color: #dc2626; margin-bottom: 8px;
+}
+.l3-strip-val { display: block; font-size: 0.82rem; font-weight: 600; color: #e4e4e7; line-height: 1.45; }
+
+/* ── Shell: contenido + sidebar ── */
+.l3-shell { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start; }
+@media (min-width: 1024px) {
+  .l3-shell { grid-template-columns: minmax(0, 1fr) 340px; gap: 48px; }
+}
+/* Columna lateral en el flujo de la pagina, sin scroll propio.
+   El sidebar completo NO se ancla (es mas alto que el viewport y se rompe);
+   se ancla solo su ultima caja, que acompana al cuerpo largo y llena el hueco. */
+.l3-aside { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+@media (min-width: 1024px) {
+  .l3-shell { align-items: stretch; }
+  .l3-aside > :last-child { position: sticky; top: 96px; }
+}
+
+/* ── Cuerpo editorial ── */
+.l3-body {
+  background: #fff; border: 1px solid #e4e4e7; border-radius: 16px;
+  padding: 40px 44px; min-width: 0;
+}
+@media (max-width: 767px) { .l3-body { padding: 26px 22px; border-radius: 14px; } }
+
+.l3-sec { scroll-margin-top: 110px; }
+.l3-sec + .l3-sec { margin-top: 44px; padding-top: 38px; border-top: 1px solid #f0f0f0; }
+
+.l3-sec-eyebrow { display: flex; align-items: center; gap: 9px; margin-bottom: 14px; }
+.l3-sec-eyebrow i { display: block; width: 20px; height: 2px; background: #dc2626; border-radius: 2px; flex-shrink: 0; }
+.l3-sec-eyebrow span {
+  font-size: 0.65rem; font-weight: 800; letter-spacing: 0.13em;
+  text-transform: uppercase; color: #dc2626;
+}
+.l3-sec-title {
+  font-size: clamp(1.3rem, 2vw, 1.62rem); font-weight: 800; color: #09090b;
+  letter-spacing: -0.02em; line-height: 1.22; margin: 0 0 16px;
+}
+.l3-p { font-size: 0.95rem; color: #52525b; line-height: 1.85; margin: 0 0 16px; }
+.l3-p:last-child { margin-bottom: 0; }
+.l3-p strong { color: #09090b; font-weight: 650; }
+
+/* Lista definición: título + descripción */
+.l3-defs { display: flex; flex-direction: column; gap: 2px; margin: 22px 0 4px; }
+.l3-def {
+  display: grid; grid-template-columns: 1fr; gap: 4px;
+  padding: 15px 0; border-top: 1px solid #f0f0f0;
+}
+@media (min-width: 640px) { .l3-def { grid-template-columns: 190px 1fr; gap: 18px; } }
+.l3-def-t {
+  display: flex; align-items: flex-start; gap: 8px;
+  font-size: 0.84rem; font-weight: 700; color: #09090b; line-height: 1.4;
+}
+.l3-def-t svg { width: 13px; height: 13px; flex-shrink: 0; margin-top: 3px; }
+.l3-def-d { font-size: 0.86rem; color: #52525b; line-height: 1.75; }
+
+/* Tabla comparativa */
+.l3-tabla-wrap { overflow-x: auto; margin: 22px 0 6px; border: 1px solid #e4e4e7; border-radius: 11px; }
+.l3-tabla { width: 100%; border-collapse: collapse; font-size: 0.83rem; min-width: 560px; }
+.l3-tabla thead th {
+  background: #09090b; color: #fafafa; text-align: left;
+  font-size: 0.66rem; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase;
+  padding: 13px 16px; white-space: nowrap;
+}
+.l3-tabla tbody td { padding: 13px 16px; border-top: 1px solid #f0f0f0; color: #52525b; line-height: 1.6; vertical-align: top; }
+.l3-tabla tbody tr:nth-child(even) { background: #fafafa; }
+.l3-tabla tbody th {
+  padding: 13px 16px; border-top: 1px solid #f0f0f0;
+  text-align: left; vertical-align: top;
+  font-weight: 650; color: #18181b; line-height: 1.6;
+  white-space: normal; min-width: 132px;
+}
+
+/* Enlace contextual dentro del cuerpo editorial (ver src/lib/interlink.ts) */
+.l3-il {
+  color: #b91c1c; font-weight: 600; text-decoration: underline;
+  text-decoration-color: #fecaca; text-decoration-thickness: 1.5px; text-underline-offset: 3px;
+}
+.l3-il:hover { color: #dc2626; text-decoration-color: #dc2626; }
+.l3-nota .l3-il { color: #991b1b; }
+
+/* Nota / callout */
+.l3-nota {
+  display: flex; gap: 12px; margin: 22px 0 0;
+  background: #fef2f2; border: 1px solid #fecaca; border-left: 3px solid #dc2626;
+  border-radius: 0 11px 11px 0; padding: 16px 18px;
+}
+.l3-nota svg { width: 15px; height: 15px; flex-shrink: 0; margin-top: 3px; color: #dc2626; }
+.l3-nota p { font-size: 0.85rem; color: #52525b; line-height: 1.75; margin: 0; }
+.l3-nota p strong { color: #991b1b; font-weight: 650; }
+
+/* Galería dentro del cuerpo */
+.l3-gal { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 22px; }
+@media (min-width: 768px) { .l3-gal { grid-template-columns: repeat(4, 1fr); } }
+
+/* ── Sidebar: cajas ── */
+.l3-box { background: #fff; border: 1px solid #e4e4e7; border-radius: 14px; padding: 20px; }
+.l3-box-dark { background: #09090b; border-color: #1f1f23; }
+.l3-box-red { background: #fef2f2; border-color: #fecaca; }
+.l3-box-head { display: flex; align-items: center; gap: 8px; margin-bottom: 15px; }
+.l3-box-head i { display: block; width: 18px; height: 2px; background: #dc2626; border-radius: 2px; flex-shrink: 0; }
+.l3-box-head span {
+  font-size: 0.64rem; font-weight: 800; letter-spacing: 0.12em;
+  text-transform: uppercase; color: #dc2626;
+}
+.l3-box-dark .l3-box-head { padding-bottom: 13px; margin-bottom: 15px; border-bottom: 1px solid #27272a; }
+.l3-box-title { font-size: 0.96rem; font-weight: 800; color: #fafafa; line-height: 1.35; margin: 0 0 8px; letter-spacing: -0.01em; }
+.l3-box-copy { font-size: 0.79rem; color: #a1a1aa; line-height: 1.7; margin: 0 0 14px; }
+.l3-facts { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.l3-fact { display: flex; align-items: flex-start; gap: 8px; font-size: 0.75rem; color: #d4d4d8; line-height: 1.5; }
+.l3-fact svg { width: 13px; height: 13px; flex-shrink: 0; margin-top: 2px; color: #dc2626; }
+
+/* Índice de la ficha */
+.l3-toc { display: flex; flex-direction: column; }
+.l3-toc a {
+  display: block; padding: 8px 10px 8px 12px; border-left: 2px solid #e4e4e7;
+  font-size: 0.78rem; line-height: 1.45; color: #52525b; text-decoration: none;
+}
+.l3-toc a:hover { color: #dc2626; border-left-color: #dc2626; background: #fef2f2; }
+.l3-toc a.is-active { color: #dc2626; border-left-color: #dc2626; font-weight: 650; }
+
+/* Normas en el sidebar */
+.l3-norma { display: flex; gap: 10px; padding: 11px 0; border-top: 1px solid #f4f4f5; }
+.l3-norma:first-of-type { border-top: 0; padding-top: 0; }
+.l3-norma code {
+  flex-shrink: 0; display: inline-block; background: #09090b; color: #fff;
+  font-family: inherit; font-size: 0.6rem; font-weight: 800; letter-spacing: 0.04em;
+  padding: 5px 8px; border-radius: 5px; height: fit-content; min-width: 96px; text-align: center;
+}
+.l3-norma span { font-size: 0.73rem; color: #52525b; line-height: 1.6; }
+
+/* Hermanos de la categoría en el sidebar */
+.l3-sib {
+  display: flex; align-items: center; gap: 11px; padding: 11px 0;
+  border-top: 1px solid #f4f4f5; text-decoration: none;
+}
+.l3-sib:first-of-type { border-top: 0; padding-top: 0; }
+.l3-sib-ico {
+  width: 30px; height: 30px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+  border-radius: 8px; background: #f4f4f5; border: 1px solid #e4e4e7; color: #71717a;
+}
+.l3-sib-ico svg { width: 15px; height: 15px; }
+.l3-sib:hover .l3-sib-ico { background: #fef2f2; border-color: #fecaca; color: #dc2626; }
+.l3-sib-body { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+.l3-sib-name { font-size: 0.79rem; font-weight: 650; color: #09090b; line-height: 1.35; }
+.l3-sib:hover .l3-sib-name { color: #dc2626; }
+.l3-sib-norm { font-size: 0.65rem; color: #a1a1aa; margin-top: 2px; }
+.l3-sib.is-here { opacity: 0.55; pointer-events: none; }
+
+/* Botones del sidebar */
+.l3-btn-wa {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: #25d366; color: #fff; font-size: 0.83rem; font-weight: 700;
+  padding: 12px 16px; border-radius: 9px; text-decoration: none;
+}
+.l3-btn-wa:hover { background: #1eb85a; }
+.l3-btn-ghost {
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  font-size: 0.77rem; font-weight: 600; color: #a1a1aa; text-decoration: none;
+  padding: 10px; border: 1px solid #27272a; border-radius: 9px; margin-top: 8px;
+}
+.l3-btn-ghost:hover { color: #fafafa; border-color: #52525b; }
+
+/* Grid de hermanos a ancho completo (sección de cierre) */
+.l3-hermanos { display: grid; grid-template-columns: 1fr; gap: 8px; }
+@media (min-width: 640px)  { .l3-hermanos { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .l3-hermanos { grid-template-columns: repeat(5, 1fr); } }
+.l3-herm-item {
+  display: flex; flex-direction: column; gap: 8px;
+  background: #0c0c0f; border: 1px solid #1f1f23; border-radius: 11px;
+  padding: 16px; text-decoration: none;
+}
+.l3-herm-item:hover { background: #141417; border-color: #dc2626; }
+.l3-herm-ico {
+  width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
+  border-radius: 8px; background: #18181b; border: 1px solid #27272a; color: #dc2626;
+}
+.l3-herm-ico svg { width: 16px; height: 16px; }
+.l3-herm-item:hover .l3-herm-ico { background: #dc2626; color: #fff; border-color: #dc2626; }
+.l3-herm-name { font-size: 0.82rem; font-weight: 700; color: #fafafa; line-height: 1.3; }
+.l3-herm-norm { font-size: 0.65rem; color: #71717a; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   L3 · CATÁLOGO POR MARCA
+   Vive en la columna izquierda del shell, arriba del cuerpo editorial,
+   así comparte el sidebar. Las cards son las MISMAS .cg-card del index:
+   aquí solo van el encabezado, el grid, el sello de foto y el botón.
+   Agregar una marca = agregar cards a `l3.catalogo.cards`. Nada de CSS nuevo.
+   ═══════════════════════════════════════════════════════════════════ */
+.l3-cat { min-width: 0; }
+.l3-cat-title {
+  font-size: clamp(1.55rem, 2.4vw, 2.05rem); font-weight: 800; color: #09090b;
+  letter-spacing: -0.02em; line-height: 1.14; margin: 0 0 16px;
+}
+.l3-cat-lead { font-size: 0.93rem; color: #52525b; line-height: 1.85; margin: 0 0 30px; max-width: 68ch; }
+.l3-cat-lead strong { color: #09090b; font-weight: 650; }
+
+/* Grid: 1 / 2 / 3 por fila. Los 3 arrancan en 1280 porque antes de eso
+   la columna izquierda del shell no da el ancho mínimo de card. */
+.l3-cat-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+@media (min-width: 560px)  { .l3-cat-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1280px) { .l3-cat-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* Marca sobre la foto, esquina opuesta al badge de norma */
+.cg-marca {
+  position: absolute; top: 12px; right: 12px; z-index: 1;
+  background: rgba(255, 255, 255, 0.94); color: #09090b;
+  font-size: 0.57rem; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase;
+  padding: 4px 9px; border-radius: 4px;
+}
+/* Sello de foto de referencia, abajo a la izquierda */
+.cg-ref {
+  position: absolute; left: 12px; bottom: 12px; z-index: 1;
+  display: flex; align-items: center; gap: 5px;
+  font-size: 0.6rem; font-weight: 600; color: rgba(255, 255, 255, 0.78);
+}
+.cg-ref svg { width: 11px; height: 11px; flex-shrink: 0; }
+
+/* Rótulo de la configuración, arriba del título */
+.cg-variante {
+  display: flex; align-items: baseline; gap: 7px; flex-wrap: wrap; margin-bottom: 8px;
+}
+.cg-variante-label {
+  font-size: 0.55rem; font-weight: 700; letter-spacing: 0.13em;
+  text-transform: uppercase; color: #a1a1aa;
+}
+.cg-variante-val { font-size: 0.72rem; font-weight: 700; color: #dc2626; }
+
+/* CTA sólido para las cards de catálogo. Variante de .cg-cta, mismo lugar en la card. */
+.cg-btn {
+  margin-top: auto;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: #dc2626; color: #fff;
+  font-size: 0.79rem; font-weight: 700; line-height: 1;
+  padding: 12px 14px; border-radius: 9px; text-decoration: none;
+}
+.cg-btn:hover { background: #b91c1c; }
+.cg-btn svg { flex-shrink: 0; }
+.cg-btn > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* En columna angosta la card respira menos */
+.l3-cat-grid .cg-body { padding: 20px; }
+.l3-cat-grid .cg-title { font-size: 0.97rem; }
+
+/* Nota normativa bajo el grid */
+.l3-cat-nota {
+  display: flex; gap: 12px; margin-top: 24px;
+  background: #fff; border: 1px solid #e4e4e7; border-left: 3px solid #dc2626;
+  border-radius: 0 12px 12px 0; padding: 18px 20px;
+}
+.l3-cat-nota svg { width: 15px; height: 15px; flex-shrink: 0; margin-top: 3px; color: #dc2626; }
+.l3-cat-nota p { font-size: 0.82rem; color: #52525b; line-height: 1.75; margin: 0; }
+.l3-cat-nota p strong { color: #09090b; font-weight: 650; }
+
+/* Separación entre el catálogo y el cuerpo editorial de la misma columna */
+.l3-cat + .l3-body { margin-top: 32px; }
+
+/* Chip de configuración L4 dentro del módulo de producto de la L2.
+   Le da a cada ficha un enlace entrante desde la página más fuerte de la línea. */
+.l2-config-chip {
+  display: inline-flex; align-items: baseline; gap: 7px;
+  background: #fff; border: 1px solid #e4e4e7; border-radius: 99px;
+  padding: 7px 14px; text-decoration: none;
+  font-size: 0.76rem; font-weight: 600; color: #3f3f46; line-height: 1.3;
+}
+.l2-config-chip .marca {
+  font-size: 0.58rem; font-weight: 800; letter-spacing: 0.1em;
+  text-transform: uppercase; color: #dc2626;
+}
+.l2-config-chip:hover { border-color: #dc2626; color: #09090b; background: #fef2f2; }

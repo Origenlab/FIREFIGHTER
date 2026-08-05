@@ -103,6 +103,6 @@ Para el mantenimiento del sistema una vez instalado, NFPA 25 define las frecuenc
 
 Las [válvulas OS&Y](/blog/valvulas-osy-funcionamiento-mantenimiento) son el componente de control cuya posición determina si el sistema puede operar. En el 80% de los incendios donde el sistema de sprinklers no respondió como se esperaba, la causa fue una válvula cerrada.
 
-Para diseño, suministro e instalación de sistemas de rociadores certificados, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-fijos).
+Para diseño, suministro e instalación de sistemas de rociadores certificados, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-contra-incendio).
 
 Un sistema de sprinklers bien diseñado, instalado y mantenido es la mejor inversión en protección contra incendios disponible para la mayoría de las ocupaciones. Un sistema mal seleccionado, con diseño hidráulico incorrecto o sin mantenimiento, es una falsa sensación de seguridad con costo de instalación incluido.

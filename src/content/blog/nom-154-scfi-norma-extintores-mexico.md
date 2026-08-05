@@ -99,6 +99,6 @@ Para el programa de mantenimiento que asegure que los extintores certificados pe
 
 Para el [plan de mantenimiento anual](/blog/plan-mantenimiento-anual-extintores) que documente el estado de los equipos y la trazabilidad de mantenimiento que protege al responsable en caso de auditoría o siniestro, la documentación completa es tan importante como la certificación del equipo.
 
-La línea de extintores certificados con verificación de origen disponible en [productos/extintores](/productos/extintores) incluye la información de certificación necesaria para cualquier auditoría.
+La línea de extintores certificados con verificación de origen disponible en [productos/extintores](/productos/extintores-y-extincion) incluye la información de certificación necesaria para cualquier auditoría.
 
 Tener extintores en la pared no es cumplimiento. Tener extintores certificados, mantenidos y correctos para el riesgo específico de cada espacio: eso es cumplimiento. La diferencia no es burocrática — es la diferencia entre equipos que funcionan cuando se necesitan y equipos que parecen funcionales hasta que importa.

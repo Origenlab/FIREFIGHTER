@@ -83,7 +83,7 @@ Si eres responsable de seguridad en una empresa que tiene instalaciones cerca de
 
 Los bomberos voluntarios protegen las mismas comunidades donde operan las plantas industriales, los parques logísticos, los desarrollos habitacionales. No es filantropía abstracta. Es inversión en la capacidad de respuesta del sistema que protege la operación.
 
-El [EPP completo estructural](/blog/epp-completo-kit-bombero-profesional) y los estándares [NFPA 1970](/blog/nfpa-1971-mexico-norma-bomberos) que debe cumplir son los mismos para voluntarios que para profesionales — la norma no hace distinción. Y la [guía para equipar brigadas industriales](/blog/equipar-brigada-industrial-mexico-guia) tiene herramientas que aplican también para brigadas voluntarias. Los [equipos certificados disponibles en México](/productos/equipos-bomberos) incluyen opciones para diferentes niveles de presupuesto.
+El [EPP completo estructural](/blog/epp-completo-kit-bombero-profesional) y los estándares [NFPA 1970](/blog/nfpa-1971-mexico-norma-bomberos) que debe cumplir son los mismos para voluntarios que para profesionales — la norma no hace distinción. Y la [guía para equipar brigadas industriales](/blog/equipar-brigada-industrial-mexico-guia) tiene herramientas que aplican también para brigadas voluntarias. Los [equipos certificados disponibles en México](/productos/epp-para-bomberos) incluyen opciones para diferentes niveles de presupuesto.
 
 Un voluntario mal equipado que responde a un incendio en tu instalación es un riesgo adicional para ti, para él, y para la operación. Uno bien equipado es parte de tu sistema de respuesta.
 

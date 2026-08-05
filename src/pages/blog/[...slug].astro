@@ -39,6 +39,50 @@ const categoria = tema.productoSlug
   ? (categorias as any[]).find(c => c.slug === tema.productoSlug)
   : null;
 
+/**
+ * Ficha de producto (L3) y sus configuraciones de marca (L4) ligadas a este artículo.
+ *
+ * El plugin `rehypeInterlink` ya enlaza términos del catálogo dentro del cuerpo, pero solo
+ * puede enlazar lo que el texto menciona: ningún post nombra "SKÖLD HERÖ", así que las fichas
+ * L4 nunca recibirían enlace desde el blog. Este bloque cierra ese circuito.
+ *
+ * Se muestra únicamente si el artículo es realmente de ese producto. La prueba es el
+ * **sustantivo principal** del nombre del producto —"trajes" → raíz "traje"— buscado en el slug,
+ * el título y los tags del post. Coincidir con una palabra secundaria no alcanza: "estructural"
+ * aparece en artículos de guantes y de botas, y esos no deben empujar la ficha de trajes.
+ */
+const textoPost = `${post.id} ${post.data.title} ${(post.data.tags ?? []).join(' ')}`.toLowerCase();
+
+/** Raíz del sustantivo principal, sin plural: "Trajes estructurales…" → "traje". */
+const raizProducto = (nombre: string) =>
+  String(nombre)
+    .toLowerCase()
+    .split(/[^a-záéíóúñ0-9]+/)
+    .filter(Boolean)[0]
+    ?.replace(/(es|s)$/, '') ?? '';
+
+const fichaRelacionada = (() => {
+  if (!categoria) return null;
+  for (const p of (categoria.productos ?? []) as any[]) {
+    if (!p.l3 || !p.slug) continue;
+    const raiz = raizProducto(p.nombre);
+    if (!raiz || !textoPost.includes(raiz)) continue;
+    return {
+      href: `/productos/${categoria.slug}/${p.slug}`,
+      nombre: p.nombre,
+      desc: p.desc ?? p.l3?.seoDescription,
+      configs: ((p.l3?.catalogo?.cards ?? []) as any[])
+        .filter((c) => c.slug && c.l4)
+        .map((c) => ({
+          href: `/productos/${categoria.slug}/${p.slug}/${c.slug}`,
+          marca: c.marca,
+          etiqueta: `${c.modelo} · ${c.variante}`,
+        })),
+    };
+  }
+  return null;
+})();
+
 const servicio = servicioDeTema(tema.slug);
 const url = `${SITE}/blog/${post.id}`;
 const encabezados = (headings ?? []).filter(h => h.depth === 2 || h.depth === 3);
@@ -157,6 +201,15 @@ const compartirFB = `https://www.facebook.com/sharer/sharer.php?u=${encodeURICom
                   <span style="font-size:0.66rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#dc2626;">Productos mencionados en esta guía</span>
                 </div>
                 <div style="display:grid; grid-template-columns:1fr; gap:12px;" class="sm:grid-cols-2">
+                  {fichaRelacionada && (
+                    <a href={fichaRelacionada.href} class="art-prod">
+                      <span style="min-width:0;">
+                        <span class="t" style="display:block;">{fichaRelacionada.nombre}</span>
+                        <span class="d" style="display:block;">{fichaRelacionada.desc}</span>
+                      </span>
+                      <svg width="16" height="16" fill="none" stroke="#dc2626" stroke-width="2.5" viewBox="0 0 24 24" style="flex-shrink:0;" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                  )}
                   <a href={`/productos/${categoria.slug}`} class="art-prod">
                     <span style="min-width:0;">
                       <span class="t" style="display:block;">{categoria.nombre}</span>
@@ -172,6 +225,23 @@ const compartirFB = `https://www.facebook.com/sharer/sharer.php?u=${encodeURICom
                     <svg width="16" height="16" fill="none" stroke="#dc2626" stroke-width="2.5" viewBox="0 0 24 24" style="flex-shrink:0;" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                   </a>
                 </div>
+
+                {fichaRelacionada && fichaRelacionada.configs.length > 0 && (
+                  <div style="margin-top:16px;">
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:11px;">
+                      <span style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#a1a1aa;">Configuraciones con ficha técnica</span>
+                      <div style="flex:1; height:1px; background:#e4e4e7;"></div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:7px;">
+                      {fichaRelacionada.configs.map((c: any) => (
+                        <a href={c.href} class="l2-config-chip">
+                          <span class="marca">{c.marca}</span>
+                          <span>{c.etiqueta}</span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
 

@@ -96,7 +96,7 @@ Implicaciones prácticas para instalaciones en México:
 
 Para la aplicación específica de agentes limpios en salas de servidores con detección temprana VESDA, el artículo sobre [supresión automática en salas de servidores](/blog/supresion-automatica-salas-servidores) detalla el diseño completo. Para la comparativa entre FM-200 y CO₂ con la decisión de seguridad humana de fondo, el artículo sobre [FM-200 vs CO₂](/blog/fm200-vs-co2-supresion-limpia) desarrolla los argumentos completos.
 
-Para diseño de sistemas de agentes limpios bajo NFPA 2001 con selección de agente correcta para el horizonte de vida de tu instalación, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-fijos).
+Para diseño de sistemas de agentes limpios bajo NFPA 2001 con selección de agente correcta para el horizonte de vida de tu instalación, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-contra-incendio).
 
 La selección del agente limpio correcto no es una decisión técnica que el instalador puede tomar unilateralmente. Es una decisión del propietario o responsable de la instalación, tomada con información sobre los tres criterios que importan: eficacia de extinción para el riesgo específico, seguridad para los ocupantes bajo el peor escenario plausible, y perfil regulatorio y de disponibilidad a lo largo de la vida útil del sistema.
 

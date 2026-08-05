@@ -103,7 +103,7 @@ Un bombero que usa EPP no certificado bajo NFPA 1970 no tiene la protección que
 
 La institución que adquirió ese equipo tiene responsabilidad legal ante esa falla — IMSS (accidente de trabajo), STPS (infracción a normas de seguridad), y potencialmente demanda civil. La defensa de "el proveedor dijo que era certificado" no funciona si no hay documentación que lo pruebe.
 
-El [EPP completo certificado](/blog/epp-completo-kit-bombero-profesional) y el [programa de mantenimiento bajo NFPA 1850](/blog/mantenimiento-epp-estructural-nfpa-1851) son las dos herramientas que, juntas, protegen tanto al bombero como a la institución. Los [equipos certificados disponibles en México](/productos/equipos-bomberos) incluyen documentación técnica completa para cada producto.
+El [EPP completo certificado](/blog/epp-completo-kit-bombero-profesional) y el [programa de mantenimiento bajo NFPA 1850](/blog/mantenimiento-epp-estructural-nfpa-1851) son las dos herramientas que, juntas, protegen tanto al bombero como a la institución. Los [equipos certificados disponibles en México](/productos/epp-para-bomberos) incluyen documentación técnica completa para cada producto.
 
 
 ## Tabla comparativa: NFPA 1971:2013 vs NFPA 1971:2018

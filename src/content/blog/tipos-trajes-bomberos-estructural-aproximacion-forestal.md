@@ -62,7 +62,7 @@ Hay una capa de decisión que en México pesa más que en casi cualquier otro me
 
 Vender el tipo equivocado es facilísimo —basta con despachar lo que el cliente pidió por nombre—; acertarle exige preguntar antes de cotizar, y eso es exactamente lo que hacemos. Nuestra asesoría empieza por la amenaza y no por el catálogo: definimos contigo el tipo correcto —estructural, forestal, aproximación o ARFF— a partir de tu operación, tu sector y tu clima. Manejamos los cuatro tipos con marcas de distribución autorizada —MSA, dueña de **Globe** y **Bristol**— y certificación verificable por edición de norma, y cuando un cuerpo necesita más de un tipo, algo habitual en municipios que combinan estructura y forestal, lo cotizamos de forma integral en lugar de venderte dos compras desconectadas. Entregamos la documentación que corresponda —NFPA 1970 (antes NFPA 1971) para estructural y *proximity*, NFPA 1950 para forestal— lista para tu cumplimiento interno y para licitación, con cobertura en los 32 estados y respuesta en menos de 24 horas.
 
-Explora [equipos para bomberos](/productos/equipos-bomberos) y [equipo forestal](/productos/equipo-forestal), o escríbenos a **ventas@firefighter.mx** para que definamos juntos el tipo correcto antes de hablar de precio.
+Explora [equipos para bomberos](/productos/epp-para-bomberos) y [equipo forestal](/productos/equipo-forestal), o escríbenos a **ventas@firefighter.mx** para que definamos juntos el tipo correcto antes de hablar de precio.
 
 ## En resumen
 

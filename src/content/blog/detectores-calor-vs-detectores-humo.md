@@ -91,4 +91,4 @@ Señales de que el sistema tiene detectores en el espacio equivocado:
 
 Para el contexto normativo completo de la selección de detectores, consulta [NFPA 72 en México: sistemas de alarma](/blog/nfpa-72-mexico-sistemas-alarma). Si el proyecto es un hospital con sus requisitos específicos, el análisis está en [diseño de detección de incendio en hospitales](/blog/diseno-deteccion-incendio-hospitales). Y para los detectores de humo fotoeléctrico del tipo correcto para espacios habitados, la guía técnica del [SD355](/blog/detectores-opticos-humo-sd355-guia) tiene las especificaciones completas.
 
-Consulta disponibilidad y compatibilidad de detectores en [detección y alarma](/productos/deteccion-alarma).
+Consulta disponibilidad y compatibilidad de detectores en [detección y alarma](/productos/deteccion-y-alarma).

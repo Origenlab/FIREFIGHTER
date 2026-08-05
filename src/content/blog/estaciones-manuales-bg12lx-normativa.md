@@ -93,4 +93,4 @@ La llave de rearme debe estar:
 
 Para el contexto normativo completo que rige la instalación de la BG12LX, consulta [NFPA 72 en México: sistemas de alarma](/blog/nfpa-72-mexico-sistemas-alarma). La integración de la estación con sirenas y estrobos — la parte del sistema que notifica a los ocupantes después de la activación — está en [sirenas y estrobos SpectralAlert](/blog/sirenas-estrobos-spectralert-guia). Y la programación del panel que recibe la señal de la estación manual está en [panel Notifier NFS2-3030](/blog/panel-notifier-nfs2-3030-programacion).
 
-Consulta disponibilidad y compatibilidad de la BG12LX en [detección y alarma](/productos/deteccion-alarma).
+Consulta disponibilidad y compatibilidad de la BG12LX en [detección y alarma](/productos/deteccion-y-alarma).

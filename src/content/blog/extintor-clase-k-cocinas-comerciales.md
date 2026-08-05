@@ -95,4 +95,4 @@ Para el programa completo de mantenimiento que incluya los extintores Clase K de
 
 Si tu instalación incluye cocinas comerciales con aceite, sea en hotel, restaurante de cadena, cafetería corporativa, hospital o comedor industrial, el extintor Clase K no es un lujo ni una recomendación — es la protección mínima aceptable para ese riesgo específico.
 
-Para seleccionar el modelo y capacidad correctos para tu cocina, consulta nuestra línea en [productos/extintores](/productos/extintores). La diferencia entre el extintor correcto y el incorrecto en una cocina comercial no se mide en pesos —se mide en segundos de diferencia entre contener el fuego y evacuar el edificio.
+Para seleccionar el modelo y capacidad correctos para tu cocina, consulta nuestra línea en [productos/extintores](/productos/extintores-y-extincion). La diferencia entre el extintor correcto y el incorrecto en una cocina comercial no se mide en pesos —se mide en segundos de diferencia entre contener el fuego y evacuar el edificio.

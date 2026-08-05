@@ -102,6 +102,6 @@ Para determinar cuántos extintores necesita tu instalación y dónde colocarlos
 
 Para verificar que los extintores que ya tienes instalados cumplen con certificación real, la [NOM-154-SCFI](/blog/nom-154-scfi-norma-extintores-mexico) define qué debe estar en la etiqueta y cómo verificarlo.
 
-El catálogo completo de extintores por tipo de agente, con capacidades certificadas para las aplicaciones descritas en este artículo, está disponible en [productos/extintores](/productos/extintores).
+El catálogo completo de extintores por tipo de agente, con capacidades certificadas para las aplicaciones descritas en este artículo, está disponible en [productos/extintores](/productos/extintores-y-extincion).
 
 Comprar el extintor más barato del mercado sin analizar el riesgo no es ahorro. Es diferir el costo del problema al momento en que el extintor va a fallar en el uso para el que no fue diseñado.

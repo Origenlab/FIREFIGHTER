@@ -106,4 +106,4 @@ El registro de mantenimiento no es una garantía de que la herramienta no fallar
 
 Para la selección inicial de herramientas con la certificación correcta, consulta [NFPA 1936: herramientas de rescate certificadas](/blog/nfpa-1936-herramientas-rescate-certificadas). El mantenimiento del [generador hidráulico P50](/blog/generadores-hidraulicos-rescate-guia) sigue protocolos complementarios que deben sincronizarse con el mantenimiento de las herramientas. Y el [Holmatro Combi Tool V300](/blog/holmatro-combi-tool-v300-guia) tiene notas de mantenimiento específicas para la tecnología CORE que no aplican a herramientas de generación anterior.
 
-FIREFIGHTER México tiene el respaldo técnico de Holmatro para servicio y mantenimiento mayor en México. Consulta disponibilidad de servicio certificado y refacciones en [herramientas de rescate](/productos/herramientas-rescate).
+FIREFIGHTER México tiene el respaldo técnico de Holmatro para servicio y mantenimiento mayor en México. Consulta disponibilidad de servicio certificado y refacciones en [herramientas de rescate](/productos/herramientas-de-rescate).

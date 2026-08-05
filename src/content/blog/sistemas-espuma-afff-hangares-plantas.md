@@ -98,6 +98,6 @@ Para la protección portátil con extintores AFFF como primera intervención mie
 
 Para el diseño completo de sistemas contra incendio que incluya el análisis de riesgo específico de tu instalación, el artículo sobre [diseño de sistemas contra incendio NFPA 13](/blog/diseno-sistemas-contra-incendio-nfpa-13) aborda el proceso de diseño en el contexto mexicano.
 
-Para diseño, suministro e instalación de sistemas de espuma fija certificados, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-fijos).
+Para diseño, suministro e instalación de sistemas de espuma fija certificados, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-contra-incendio).
 
 Un hangar sin sistema fijo de espuma activo no es un hangar protegido. Es un hangar esperando el incidente que confirme por qué el sistema era necesario.

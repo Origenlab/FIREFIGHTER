@@ -1,0 +1,160 @@
+/**
+ * rehype-interlink — enlaza términos del catálogo dentro del cuerpo de los artículos del blog.
+ *
+ * Por qué un plugin de rehype y no editar los .md a mano:
+ *   · aplica a los 106 posts a la vez y a cualquiera que se escriba después
+ *   · trabaja sobre el árbol HAST, no sobre cadenas de texto, así que **no puede romper el HTML**
+ *   · si cambia una URL del catálogo se corrige en un solo lugar
+ *
+ * Dirección del enlace: blog → catálogo. Es la que importa, porque el blog tiene más páginas y
+ * más antigüedad que las fichas de producto. El camino inverso (ficha → blog) ya lo cubren el
+ * sidebar de guías y el interlinker de `src/lib/interlink.ts`.
+ *
+ * Reglas:
+ *   · solo la PRIMERA aparición de cada término, y un enlace por destino por artículo
+ *   · tope de MAX_ENLACES por artículo para que no se lea como sobreoptimización
+ *   · nunca dentro de <a>, <code>, <pre>, <h1>…<h6> ni <blockquote>
+ *   · nunca enlaza un artículo a sí mismo ni a la página en la que ya está
+ *   · solo apunta a páginas indexables: las L3/L4 en borrador con noindex quedan fuera
+ */
+
+const MAX_ENLACES = 6;
+
+const P = '/productos';
+const TRAJES = `${P}/epp-para-bomberos/trajes-estructurales-nomex-pbi`;
+
+/**
+ * El orden importa: lo más específico primero. En un solape gana el término que empieza antes
+ * y, a igualdad de inicio, el más largo.
+ */
+export const REGLAS_CATALOGO = [
+  // ── L4 · configuraciones de marca
+  { termino: 'SKÖLD HERÖ', href: `${TRAJES}/skold-hero-pbi-max-7-0`, titulo: 'Traje estructural SKÖLD HERÖ con barrera PBI MAX 7.0' },
+  { termino: 'PBI MAX', href: `${TRAJES}/skold-hero-pbi-max-7-0`, titulo: 'Traje estructural SKÖLD HERÖ con barrera PBI MAX 7.0' },
+
+  // ── L3 · producto. Varias formas de decir lo mismo: cada post usa la suya, y como solo se
+  // enlaza un destino por artículo, sumar variantes amplía cobertura sin subir densidad.
+  { termino: 'trajes estructurales', href: TRAJES, titulo: 'Trajes estructurales Nomex y PBI certificados' },
+  { termino: 'traje estructural', href: TRAJES, titulo: 'Trajes estructurales Nomex y PBI certificados' },
+  { termino: 'trajes para bomberos', href: TRAJES, titulo: 'Trajes estructurales Nomex y PBI certificados' },
+  { termino: 'traje para bombero', href: TRAJES, titulo: 'Trajes estructurales Nomex y PBI certificados' },
+  { termino: 'trajes de bombero', href: TRAJES, titulo: 'Trajes estructurales Nomex y PBI certificados' },
+  { termino: 'traje de bombero', href: TRAJES, titulo: 'Trajes estructurales Nomex y PBI certificados' },
+  { termino: 'PBI Matrix', href: TRAJES, titulo: 'Trajes estructurales Nomex y PBI certificados' },
+  { termino: 'Nomex IIIA', href: TRAJES, titulo: 'Trajes estructurales Nomex y PBI certificados' },
+
+  // ── L2 · categorías
+  { termino: 'EPP para bomberos', href: `${P}/epp-para-bomberos`, titulo: 'EPP para bomberos certificado NFPA 1970' },
+  { termino: 'EPP estructural', href: `${P}/epp-para-bomberos`, titulo: 'EPP para bomberos certificado NFPA 1970' },
+  { termino: 'equipo de protección personal', href: `${P}/epp-para-bomberos`, titulo: 'EPP para bomberos certificado NFPA 1970' },
+  { termino: 'equipos de respiración autónoma', href: `${P}/equipos-de-respiracion`, titulo: 'Equipos de respiración autónoma SCBA' },
+  { termino: 'equipo de respiración autónoma', href: `${P}/equipos-de-respiracion`, titulo: 'Equipos de respiración autónoma SCBA' },
+  { termino: 'protección respiratoria', href: `${P}/equipos-de-respiracion`, titulo: 'Equipos de respiración autónoma SCBA' },
+  { termino: 'SCBA', href: `${P}/equipos-de-respiracion`, titulo: 'Equipos de respiración autónoma SCBA' },
+  { termino: 'sistemas fijos', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'rescate vehicular', href: `${P}/herramientas-de-rescate`, titulo: 'Herramientas de rescate hidráulicas y manuales' },
+  { termino: 'incendios forestales', href: `${P}/equipo-forestal`, titulo: 'Equipo para incendios forestales' },
+  { termino: 'herramientas de rescate', href: `${P}/herramientas-de-rescate`, titulo: 'Herramientas de rescate hidráulicas y manuales' },
+  { termino: 'sistemas contra incendio', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'detección y alarma', href: `${P}/deteccion-y-alarma`, titulo: 'Sistemas de detección y alarma de incendio' },
+  { termino: 'equipo forestal', href: `${P}/equipo-forestal`, titulo: 'Equipo para incendios forestales' },
+  { termino: 'extintores', href: `${P}/extintores-y-extincion`, titulo: 'Extintores y equipos de extinción' },
+  { termino: 'señalética', href: `${P}/senaletica-y-seguridad`, titulo: 'Señalética y seguridad' },
+];
+
+/** Nodos cuyo interior no se toca. */
+const PROHIBIDOS = new Set(['a', 'code', 'pre', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote']);
+
+const escapar = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+/** Límite de palabra tolerante con acentos: \b de JS no los maneja. */
+const construirRegex = (t) =>
+  new RegExp(`(^|[^\\p{L}\\p{N}_-])(${escapar(t)})(?![\\p{L}\\p{N}_-])`, 'iu');
+
+export default function rehypeInterlink(opciones = {}) {
+  const reglas = opciones.reglas ?? REGLAS_CATALOGO;
+  const max = opciones.max ?? MAX_ENLACES;
+
+  return function transformador(tree, file) {
+    // La página en la que estamos: para no enlazarla a sí misma
+    const rutaArchivo = String(file?.history?.[0] ?? file?.path ?? '');
+    const propio = rutaArchivo.split('/').pop()?.replace(/\.mdx?$/, '') ?? '';
+
+    const pendientes = reglas
+      .filter((r) => !r.href.endsWith(`/${propio}`))
+      .map((r) => ({ ...r, re: construirRegex(r.termino) }));
+
+    const usados = new Set();
+    let insertados = 0;
+
+    const enlazarTexto = (valor) => {
+      const cands = [];
+      for (const r of pendientes) {
+        if (usados.has(r.href)) continue;
+        if (insertados + cands.length >= max) break;
+        const m = r.re.exec(valor);
+        if (!m) continue;
+        cands.push({
+          inicio: m.index + m[1].length,
+          largo: m[2].length,
+          texto: m[2],
+          href: r.href,
+          titulo: r.titulo,
+        });
+      }
+      if (!cands.length) return null;
+
+      cands.sort((a, b) => a.inicio - b.inicio || b.largo - a.largo);
+
+      // descartar solapes
+      const firmes = [];
+      let corte = -1;
+      for (const c of cands) {
+        if (c.inicio < corte) continue;
+        firmes.push(c);
+        corte = c.inicio + c.largo;
+      }
+
+      // reconstruir como lista de nodos
+      const nodos = [];
+      let cursor = 0;
+      for (const c of firmes) {
+        if (c.inicio > cursor) nodos.push({ type: 'text', value: valor.slice(cursor, c.inicio) });
+        nodos.push({
+          type: 'element',
+          tagName: 'a',
+          properties: { href: c.href, className: ['art-il'], title: c.titulo },
+          children: [{ type: 'text', value: c.texto }],
+        });
+        usados.add(c.href);
+        insertados++;
+        cursor = c.inicio + c.largo;
+      }
+      if (cursor < valor.length) nodos.push({ type: 'text', value: valor.slice(cursor) });
+      return nodos;
+    };
+
+    const visitar = (nodo) => {
+      if (!nodo.children?.length) return;
+      if (nodo.type === 'element' && PROHIBIDOS.has(nodo.tagName)) return;
+
+      const salida = [];
+      let cambio = false;
+      for (const hijo of nodo.children) {
+        if (hijo.type === 'text' && insertados < max && hijo.value.trim()) {
+          const nodos = enlazarTexto(hijo.value);
+          if (nodos) {
+            salida.push(...nodos);
+            cambio = true;
+            continue;
+          }
+        }
+        salida.push(hijo);
+        if (hijo.type === 'element') visitar(hijo);
+      }
+      if (cambio) nodo.children = salida;
+    };
+
+    visitar(tree);
+  };
+}

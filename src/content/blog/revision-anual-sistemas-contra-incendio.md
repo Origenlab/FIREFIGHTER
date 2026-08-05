@@ -93,6 +93,6 @@ Los números reales de pérdidas por incendio en instalaciones industriales mexi
 
 Para el sistema de sprinklers cuyo mantenimiento debe incluirse en el programa NFPA 25, el artículo sobre [sprinklers NFPA 13](/blog/sprinklers-nfpa-13-guia-instalacion) cubre el diseño correcto. Para las bombas que deben probarse semanalmente, el artículo sobre [bombas contra incendio NFPA 20](/blog/bombas-contra-incendio-nfpa-20-guia) detalla el protocolo de prueba y registro. Para las válvulas OS&Y cuyo estado de posición debe verificarse en cada ronda de inspección, el artículo sobre [válvulas OS&Y](/blog/valvulas-osy-funcionamiento-mantenimiento) cubre el protocolo correcto.
 
-Para contratos de mantenimiento NFPA 25 con técnicos certificados y documentación completa para auditoría, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-fijos).
+Para contratos de mantenimiento NFPA 25 con técnicos certificados y documentación completa para auditoría, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-contra-incendio).
 
 Un sistema de protección contra incendios que nunca se prueba bajo carga real es como una póliza de seguros sin pagar la prima. La protección parece estar ahí. El día que se necesita, resulta que no estaba.

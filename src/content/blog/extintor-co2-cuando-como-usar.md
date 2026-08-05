@@ -118,6 +118,6 @@ No instalar como único extintor en:
 - Cocinas
 - Almacenes con riesgo Clase A dominante
 
-La elección del extintor correcto para cada espacio de tu instalación no es una decisión que deba tomar el proveedor más barato del mercado. Para una evaluación de riesgo real, contacta nuestra área técnica a través de [productos/extintores](/productos/extintores).
+La elección del extintor correcto para cada espacio de tu instalación no es una decisión que deba tomar el proveedor más barato del mercado. Para una evaluación de riesgo real, contacta nuestra área técnica a través de [productos/extintores](/productos/extintores-y-extincion).
 
 El CO₂ es una herramienta de precisión. Instalado en el lugar correcto, por personas con el entrenamiento correcto, es el mejor extintor portátil disponible para electrónica. Instalado en el lugar equivocado, es un riesgo adicional que no compensa lo que protege.

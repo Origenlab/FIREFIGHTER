@@ -102,4 +102,4 @@ Este sistema requiere diseño de distribución de parlantes similar al diseño d
 
 Para la programación del panel que controla toda esta integración, la guía técnica está en [panel Notifier NFS2-3030](/blog/panel-notifier-nfs2-3030-programacion). El contexto normativo completo de NFPA 72 y su relación con los reglamentos mexicanos está en [NFPA 72 en México: sistemas de alarma](/blog/nfpa-72-mexico-sistemas-alarma). Y para el tipo de detectores correcto en cada espacio hospitalario, la guía de selección está en [detectores ópticos de humo SD355](/blog/detectores-opticos-humo-sd355-guia).
 
-Consulta proyectos de detección hospitalaria y soporte de diseño en [detección y alarma](/productos/deteccion-alarma).
+Consulta proyectos de detección hospitalaria y soporte de diseño en [detección y alarma](/productos/deteccion-y-alarma).

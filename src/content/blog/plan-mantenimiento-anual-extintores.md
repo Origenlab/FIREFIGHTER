@@ -128,6 +128,6 @@ Para instalaciones con 100 o más extintores, el tiempo de gestión manual justi
 
 La [NOM-154-SCFI](/blog/nom-154-scfi-norma-extintores-mexico) define los requisitos de certificación de los extintores que entran a ese programa. La [recarga y mantenimiento correctos](/blog/recarga-mantenimiento-extintores) detalla lo que debe incluir el mantenimiento anual del Nivel 2. Y la distribución correcta de extintores según [cuántos necesita tu empresa](/blog/cuantos-extintores-necesita-empresa) define qué equipos deben estar en ese programa.
 
-Para asesoría en el diseño de tu programa de mantenimiento y contratos de servicio con técnicos certificados, contacta a FIREFIGHTER México en [productos/extintores](/productos/extintores).
+Para asesoría en el diseño de tu programa de mantenimiento y contratos de servicio con técnicos certificados, contacta a FIREFIGHTER México en [productos/extintores](/productos/extintores-y-extincion).
 
 Un programa de mantenimiento documentado es el mínimo no negociable. No porque lo pida la STPS — aunque sí lo pide. Sino porque sin él, los extintores en las paredes son equipos cuya condición real en cualquier momento dado es desconocida. Y en protección contra incendios, lo desconocido es exactamente lo más peligroso.

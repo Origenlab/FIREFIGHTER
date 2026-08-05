@@ -147,4 +147,4 @@ Una brigada que compra $800,000 en equipamiento sin presupuestar el mantenimient
 
 Para los protocolos específicos de mantenimiento, consulta [mantenimiento de herramientas Holmatro](/blog/mantenimiento-herramientas-holmatro). Para entender las especificaciones técnicas de la herramienta principal, [Holmatro Combi Tool V300](/blog/holmatro-combi-tool-v300-guia) tiene el análisis completo. La norma que regula la certificación del equipamiento está en [NFPA 1936: herramientas de rescate certificadas](/blog/nfpa-1936-herramientas-rescate-certificadas).
 
-Consulta cotizaciones y disponibilidad de equipamiento completo en [herramientas de rescate](/productos/herramientas-rescate).
+Consulta cotizaciones y disponibilidad de equipamiento completo en [herramientas de rescate](/productos/herramientas-de-rescate).

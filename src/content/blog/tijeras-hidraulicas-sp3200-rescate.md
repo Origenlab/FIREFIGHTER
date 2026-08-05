@@ -86,4 +86,4 @@ La inspección del pasador de articulación de la cabeza es el segundo punto cr�
 
 Para la secuencia completa de rescate vehicular y cómo las SP 3200 encajan con el [Holmatro Combi Tool V300](/blog/holmatro-combi-tool-v300-guia) en operaciones donde se necesitan ambas herramientas, consulta [rescate vehicular: técnicas y equipos](/blog/rescate-vehicular-tecnicas-equipos). La certificación que exige la especificación técnica de las SP 3200 está documentada en [NFPA 1936: herramientas de rescate certificadas](/blog/nfpa-1936-herramientas-rescate-certificadas).
 
-Las tijeras son tan buenas como el sistema que las alimenta. Revisa el catálogo completo en [herramientas de rescate](/productos/herramientas-rescate).
+Las tijeras son tan buenas como el sistema que las alimenta. Revisa el catálogo completo en [herramientas de rescate](/productos/herramientas-de-rescate).

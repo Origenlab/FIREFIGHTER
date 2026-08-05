@@ -88,6 +88,6 @@ Para una descripción completa de los agentes reconocidos bajo NFPA 2001 y su es
 
 Para la protección específica de salas de servidores y equipos TI, donde la selección del agente tiene consideraciones adicionales de compatibilidad y tiempo de respuesta, el artículo sobre [supresión automática en salas de servidores](/blog/supresion-automatica-salas-servidores) detalla el diseño correcto por tipo de instalación.
 
-Para diseño y suministro de sistemas de supresión limpia, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-fijos).
+Para diseño y suministro de sistemas de supresión limpia, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-contra-incendio).
 
 El costo del agente limpio correcto es mayor que el del CO₂. El costo de un accidente con CO₂ en un espacio con ocupación humana —legal, humano, operativo— no tiene precio en ninguna dirección favorable. La decisión sobre qué agente usar no es una decisión técnica del diseñador. Es una decisión del propietario o responsable de la instalación, tomada con la información correcta. Esta guía es esa información.

@@ -91,6 +91,6 @@ La prueba de hermeticidad (room integrity test) debería ser requisito del comis
 
 Para los componentes específicos del sistema — sprinklers y su selección correcta por temperatura y tipo — el artículo sobre [sprinklers NFPA 13](/blog/sprinklers-nfpa-13-guia-instalacion) cubre el criterio de selección. Para las bombas que proveen el caudal y presión del diseño, el artículo sobre [bombas contra incendio NFPA 20](/blog/bombas-contra-incendio-nfpa-20-guia) detalla la selección correcta. Para las válvulas de control, el artículo sobre [válvulas OS&Y](/blog/valvulas-osy-funcionamiento-mantenimiento) cubre el componente que más frecuentemente causa fallas del sistema en operación.
 
-Para diseño de sistemas contra incendio con cálculo hidráulico correcto y coordinación del proceso de aprobación, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-fijos).
+Para diseño de sistemas contra incendio con cálculo hidráulico correcto y coordinación del proceso de aprobación, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-contra-incendio).
 
 El diseño correcto no es el más barato. Tampoco es necesariamente el más caro. Es el que corresponde al riesgo real de la instalación, con cálculo que resiste una revisión técnica independiente, con especificaciones que el instalador puede ejecutar sin ambigüedad, y con documentación que la autoridad puede verificar. Eso es lo que separa un sistema que funciona de un sistema que aparece en el papel.

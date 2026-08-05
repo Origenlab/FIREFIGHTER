@@ -100,6 +100,6 @@ Un casco sale de servicio ante:
 
 El último punto es importante: el termoplástico de la carcasa envejece y pierde propiedades mecánicas con el tiempo, independientemente del uso. Un casco fabricado en 2013 que "nunca se ha usado" no debe estar en servicio activo en 2026.
 
-Para ver cómo el casco se integra en el [EPP completo estructural](/blog/traje-bombero-nomex-guia-completa), incluyendo compatibilidad de ensemble con traje, capucha y SCBA, consulta nuestras guías específicas. Los [equipos de bombero disponibles en México](/productos/equipos-bomberos) incluyen cascos con certificación NFPA 1970 verificada.
+Para ver cómo el casco se integra en el [EPP completo estructural](/blog/traje-bombero-nomex-guia-completa), incluyendo compatibilidad de ensemble con traje, capucha y SCBA, consulta nuestras guías específicas. Los [equipos de bombero disponibles en México](/productos/epp-para-bomberos) incluyen cascos con certificación NFPA 1970 verificada.
 
 La diferencia entre el casco correcto y el incorrecto no se mide en el precio de compra. Se mide en lo que sucede en los 30 segundos posteriores al derrumbe que nadie previó.

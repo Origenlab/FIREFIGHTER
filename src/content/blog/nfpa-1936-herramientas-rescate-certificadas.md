@@ -86,4 +86,4 @@ La certificación NFPA 1936 es también la garantía de que el mantenimiento de 
 
 Para la selección del equipamiento completo de la unidad, incluyendo cómo la certificación se integra en los criterios de compra, [rescate vehicular: técnicas y equipos](/blog/rescate-vehicular-tecnicas-equipos) provee el contexto operacional completo. Y el [Holmatro Combi Tool V300](/blog/holmatro-combi-tool-v300-guia) es el referente de herramienta certificada NFPA 1936 para el segmento de combi tools.
 
-Consulta herramientas certificadas disponibles en México en [herramientas de rescate](/productos/herramientas-rescate).
+Consulta herramientas certificadas disponibles en México en [herramientas de rescate](/productos/herramientas-de-rescate).

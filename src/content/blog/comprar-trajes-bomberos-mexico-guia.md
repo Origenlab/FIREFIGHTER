@@ -71,7 +71,7 @@ No vendemos trajes sueltos; equipamos operaciones que no admiten un segundo erro
 
 Trabajamos con distribución autorizada de marca —MSA, que es dueña de las líneas de trajes estructurales **Globe** y **Bristol**— con respaldo documental de origen, garantía de fabricante y acceso real a refacciones; no improvisamos un "equivalente importado". Antes de cotizar, un ingeniero pregunta por tu clima, tu frecuencia de intervención y tu tipo de operación, porque nuestro trabajo no es venderte el traje más caro, sino el correcto. Entregamos la documentación completa —certificados con modelo y edición, fichas de las tres capas, valores de TPP y THL y fechas de fabricación— precisamente para que puedas cumplir y, llegado el caso, defender la compra ante quien la audite. Respondemos con propuesta técnica formal en menos de 24 horas, entregamos en los 32 estados y, después de la venta, acompañamos tu programa [NFPA 1850](/blog/mantenimiento-epp-estructural-nfpa-1851) con refacciones OEM para que el traje proteja durante toda su vida útil. Y conocemos por dentro los requisitos de gobierno —LAASSP, CABMS, documentación de licitación—, como detallamos en la [guía de licitaciones de equipo contra incendio](/blog/licitaciones-equipos-contra-incendios-mexico).
 
-Para ver modelos y solicitar fichas técnicas, consulta nuestra sección de [equipos para bomberos](/productos/equipos-bomberos) o escríbenos a **ventas@firefighter.mx**. Para procesos de gobierno, **licitaciones@firefighter.mx**.
+Para ver modelos y solicitar fichas técnicas, consulta nuestra sección de [equipos para bomberos](/productos/epp-para-bomberos) o escríbenos a **ventas@firefighter.mx**. Para procesos de gobierno, **licitaciones@firefighter.mx**.
 
 ## Antes de firmar: el traje no viaja solo
 

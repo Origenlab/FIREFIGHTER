@@ -84,6 +84,6 @@ Para los extintores sobre ruedas AFFF de mayor capacidad que se usan en instalac
 
 Para sistemas fijos de espuma en hangares y plantas con tanques de combustible, el artículo sobre [sistemas de espuma AFFF para hangares y plantas](/blog/sistemas-espuma-afff-hangares-plantas) aborda el diseño y los estándares aplicables.
 
-La línea de extintores AFFF certificados para diferentes tipos de combustible está disponible en [productos/extintores](/productos/extintores).
+La línea de extintores AFFF certificados para diferentes tipos de combustible está disponible en [productos/extintores](/productos/extintores-y-extincion).
 
 El extintor AFFF no es el equipo para cualquier instalación — es el equipo correcto para riesgos específicos de combustibles líquidos donde el PQS llega tarde o se queda corto. Identificar correctamente qué instalaciones de tu empresa tienen ese riesgo es el primer paso. El segundo es tener el equipo antes de necesitarlo.

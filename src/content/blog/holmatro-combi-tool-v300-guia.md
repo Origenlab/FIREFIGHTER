@@ -102,4 +102,4 @@ Para el contexto operacional completo — cómo el V300 encaja en la secuencia d
 
 El V300 no es la herramienta más barata del mercado. Es la herramienta correcta para el parque vehicular que existe en México hoy. La diferencia de costo frente a alternativas no certificadas o de generación anterior se recupera en el primer rescate donde los cuarenta segundos vs cuatro minutos son la variable que determina si la víctima llega al quirófano a tiempo.
 
-Consulta el catálogo completo en [herramientas de rescate Holmatro](/productos/herramientas-rescate).
+Consulta el catálogo completo en [herramientas de rescate Holmatro](/productos/herramientas-de-rescate).

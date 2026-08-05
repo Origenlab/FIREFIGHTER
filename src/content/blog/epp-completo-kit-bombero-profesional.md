@@ -98,7 +98,7 @@ Con menos de $45,000 MXN es prácticamente imposible equipar correctamente a un 
 
 Lo que no es opción: comprar equipo no certificado o incompleto y llamarlo "EPP de bombero".
 
-La [norma NFPA 1970 y sus implicaciones para México](/blog/nfpa-1971-mexico-norma-bomberos) explica en detalle cómo leer certificados y qué exigir en licitaciones. Los [equipos certificados disponibles](/productos/equipos-bomberos) incluyen opciones para diferentes niveles de presupuesto con documentación técnica completa.
+La [norma NFPA 1970 y sus implicaciones para México](/blog/nfpa-1971-mexico-norma-bomberos) explica en detalle cómo leer certificados y qué exigir en licitaciones. Los [equipos certificados disponibles](/productos/epp-para-bomberos) incluyen opciones para diferentes niveles de presupuesto con documentación técnica completa.
 
 
 ## Señales de que tu ensemble está mal ensamblado

@@ -95,4 +95,4 @@ Las demás tareas post-operación obligatorias:
 
 El [Holmatro Combi Tool V300](/blog/holmatro-combi-tool-v300-guia) tiene su propio protocolo de mantenimiento que complementa el del generador. El mantenimiento del sistema completo, incluyendo herramientas, mangueras y generador, está en [mantenimiento de herramientas Holmatro](/blog/mantenimiento-herramientas-holmatro). Y para el contexto de cómo el generador encaja en el equipamiento total de la unidad, consulta [equipamiento de unidad de rescate completa](/blog/equipamiento-unidad-rescate-completa).
 
-El generador no es el componente visible del rescate — nadie fotografía el P50. Pero es el componente que determina si el resto del equipo rinde como fue diseñado. Revisa disponibilidad y configuraciones en [herramientas de rescate](/productos/herramientas-rescate).
+El generador no es el componente visible del rescate — nadie fotografía el P50. Pero es el componente que determina si el resto del equipo rinde como fue diseñado. Revisa disponibilidad y configuraciones en [herramientas de rescate](/productos/herramientas-de-rescate).

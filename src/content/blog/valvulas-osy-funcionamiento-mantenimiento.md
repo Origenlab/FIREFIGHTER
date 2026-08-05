@@ -88,6 +88,6 @@ En revisión de proyectos y en auditorías de instalaciones existentes, estos so
 
 Para el sistema completo de bombas que provee el agua que las válvulas controlan, el artículo sobre [bombas contra incendio NFPA 20](/blog/bombas-contra-incendio-nfpa-20-guia) cubre la selección y mantenimiento correctos. Para el programa de inspección y prueba de todo el sistema bajo NFPA 25, el artículo sobre [revisión anual de sistemas contra incendio](/blog/revision-anual-sistemas-contra-incendio) integra todos los componentes en el programa de mantenimiento.
 
-Para suministro de válvulas OS&Y certificadas con switch de supervisión incluido, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-fijos).
+Para suministro de válvulas OS&Y certificadas con switch de supervisión incluido, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-contra-incendio).
 
 Una válvula OS&Y bien instalada, supervisada eléctricamente y con procedimiento de candado correcto es el componente más simple y más crítico del sistema. Su costo es mínimo. El costo de tenerla cerrada sin saberlo cuando ocurre el incendio es incalculable.

@@ -25,6 +25,20 @@ const tieneFaqs = Array.isArray(cat.faqs) && cat.faqs.length > 0;
 const otras = categorias.filter((c) => c.slug !== cat.slug);
 const tieneDetalle = cat.productos?.some((p: any) => p.desc);
 
+// L3: si la categoría está habilitada, las cards y los módulos apuntan a la ficha del producto.
+const fichaHref = (p: any) => ((cat as any).l3ok && p.slug && p.intro ? `/productos/${cat.slug}/${p.slug}` : null);
+
+// L4: configuraciones de marca con página propia. Se listan en el módulo del producto para que
+// la L2 —que es la página más fuerte de la línea— les pase enlace directo y no solo a la L3.
+const configsL4 = (p: any) =>
+  ((p.l3?.catalogo?.cards ?? []) as any[])
+    .filter((c) => c.slug && c.l4)
+    .map((c) => ({
+      href: `/productos/${cat.slug}/${p.slug}/${c.slug}`,
+      etiqueta: `${c.modelo} · ${c.variante}`,
+      marca: c.marca,
+    }));
+
 // ── Schema.org ──
 const itemListSchema = {
   '@context': 'https://schema.org',
@@ -42,7 +56,7 @@ const itemListSchema = {
       description: p.desc || cat.descripcion,
       category: cat.nombre,
       ...(p.img ? { image: `${SITE}${p.img}` } : {}),
-      ...(p.slug ? { url: `${url}#${p.slug}` } : {}),
+      ...(fichaHref(p) ? { url: `${SITE}${fichaHref(p)}` } : p.slug ? { url: `${url}#${p.slug}` } : {}),
       brand: { '@type': 'Brand', name: cat.marcas?.[0] ?? 'FIREFIGHTER México' },
       offers: {
         '@type': 'Offer',
@@ -215,8 +229,8 @@ const faqSchema = tieneFaqs
                 </>
               )}
 
-              <a href={p.intro ? `#${p.slug}` : wa(p.nombre)} target={p.intro ? undefined : '_blank'} rel={p.intro ? undefined : 'noopener'} class="cg-cta">
-                <span>{p.intro ? `Ver ${p.nombre}` : `Cotizar ${p.nombre}`}</span>
+              <a href={fichaHref(p) ?? (p.intro ? `#${p.slug}` : wa(p.nombre))} target={fichaHref(p) || p.intro ? undefined : '_blank'} rel={fichaHref(p) || p.intro ? undefined : 'noopener'} class="cg-cta">
+                <span>{fichaHref(p) || p.intro ? `Ver ${p.nombre}` : `Cotizar ${p.nombre}`}</span>
                 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
             </div>
@@ -262,14 +276,38 @@ const faqSchema = tieneFaqs
               ))}
             </div>
 
+            {configsL4(p).length > 0 && (
+              <div style="margin:0 0 26px;">
+                <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+                  <span style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#a1a1aa;">Configuraciones con ficha</span>
+                  <div style="flex:1; height:1px; background:#e4e4e7;"></div>
+                </div>
+                <div style="display:flex; flex-wrap:wrap; gap:7px;">
+                  {configsL4(p).map((c: any) => (
+                    <a href={c.href} class="l2-config-chip">
+                      <span class="marca">{c.marca}</span>
+                      <span>{c.etiqueta}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div style="display:flex; flex-wrap:wrap; gap:10px;">
-              <a href={wa(p.nombre)} target="_blank" rel="noopener" class="cs-cta">
-                <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
-                <span>Cotizar {p.nombre}</span>
-              </a>
-              <a href="#componentes" class="cs-cta-ghost">
-                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 16l-4-4m0 0l4-4m-4 4h18"/></svg>
-                <span>Volver a componentes</span>
+              {fichaHref(p) ? (
+                <a href={fichaHref(p)} class="cs-cta">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                  <span>Ver ficha completa</span>
+                </a>
+              ) : (
+                <a href={wa(p.nombre)} target="_blank" rel="noopener" class="cs-cta">
+                  <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+                  <span>Cotizar {p.nombre}</span>
+                </a>
+              )}
+              <a href={wa(p.nombre)} target="_blank" rel="noopener" class="cs-cta-ghost">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+                <span>Cotizar por WhatsApp</span>
               </a>
             </div>
           </div>

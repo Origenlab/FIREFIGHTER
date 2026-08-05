@@ -88,4 +88,4 @@ Para detectores que han estado en servicio más de 7 años, la limpieza no es su
 
 Para el diseño correcto del sistema de detección del que forman parte los SD355, consulta [NFPA 72 en México: sistemas de alarma](/blog/nfpa-72-mexico-sistemas-alarma). Si tu proyecto es un hospital u ocupación de salud, los requisitos específicos están en [diseño de detección de incendio en hospitales](/blog/diseno-deteccion-incendio-hospitales). Y para la decisión entre fotoeléctrico y calor en espacios específicos, [detectores de calor vs detectores de humo](/blog/detectores-calor-vs-detectores-humo) tiene el análisis completo por tipo de espacio.
 
-Consulta disponibilidad y compatibilidad con tu panel en [detección y alarma](/productos/deteccion-alarma).
+Consulta disponibilidad y compatibilidad con tu panel en [detección y alarma](/productos/deteccion-y-alarma).

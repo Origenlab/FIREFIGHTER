@@ -105,6 +105,6 @@ Si un brigadista sufre lesiones en operación y el EPP no estaba certificado, no
 
 La documentación que mitiga esa exposición legal: certificados de conformidad del EPP, registros de mantenimiento bajo NFPA 1850, capacitación documentada de los brigadistas, y el programa de prevención y protección contra incendios actualizado.
 
-Para dimensionar el [EPP completo del ensemble estructural](/blog/epp-completo-kit-bombero-profesional) y los [estándares NFPA 1970](/blog/nfpa-1971-mexico-norma-bomberos) que aplican, consulta nuestras guías específicas. La línea completa de [equipos para brigadas industriales](/productos/equipos-bomberos) incluye opciones para cada nivel de riesgo, con documentación técnica y certificaciones verificables.
+Para dimensionar el [EPP completo del ensemble estructural](/blog/epp-completo-kit-bombero-profesional) y los [estándares NFPA 1970](/blog/nfpa-1971-mexico-norma-bomberos) que aplican, consulta nuestras guías específicas. La línea completa de [equipos para brigadas industriales](/productos/epp-para-bomberos) incluye opciones para cada nivel de riesgo, con documentación técnica y certificaciones verificables.
 
 El cumplimiento de NOM-002 es el piso, no el techo. La protección real de tu brigada depende de cuánto por encima de ese piso estás dispuesto a construir.

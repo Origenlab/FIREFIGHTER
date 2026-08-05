@@ -123,7 +123,2481 @@
             "caption": "Desempeño en intervención"
           }
         ],
-        "slug": "trajes-estructurales-nomex-pbi"
+        "slug": "trajes-estructurales-nomex-pbi",
+        "l3": {
+          "seoTitle": "Trajes estructurales Nomex y PBI NFPA 1970",
+          "seoDescription": "Chaquetón y pantalón de tres capas en Nomex IIIA o PBI Matrix certificados NFPA 1970. Tallas XS a 4XL, corte hombre y mujer y cotización en 24 horas.",
+          "h1": "Trajes estructurales para bombero en Nomex y PBI",
+          "subtitulo": "Chaquetón y pantalón de tres capas certificados NFPA 1970: capa exterior en Nomex IIIA o PBI Matrix, barrera de humedad y barrera térmica, en tallas de XS a 4XL con corte para hombre y mujer.",
+          "heroImg": {
+            "src": "/images/catalogo/1592235905030-1000x750.webp",
+            "alt": "Bombero con traje estructural completo, casco y equipo de respiración autónoma certificado NFPA 1970",
+            "caption": "Ensamble estructural completo en operación"
+          },
+          "heroBloques": [
+            {
+              "label": "Por qué la especificación importa",
+              "texto": "Un <strong>traje estructural para bombero</strong> mal especificado no falla en la bodega: falla dentro de una estructura, cuando una barrera de humedad vencida deja pasar vapor sobrecalentado y el elemento se quema con un ensamble que en papel cumplía. La verificación en México llega por dos frentes —<strong>NFPA 1970</strong> sobre el ensamble y <strong>NOM-017-STPS</strong> sobre su entrega y capacitación—, y un expediente incompleto detiene una licitación antes de que alguien mire el precio."
+            },
+            {
+              "label": "Distribución autorizada, no reventa",
+              "texto": "Distribuimos chaquetón y pantalón en <strong>Nomex IIIA y PBI Matrix</strong> directo de fabricante, en tallas de XS a 4XL con corte para hombre y mujer, con certificado del ensamble, número de serie trazable y ficha técnica en español. Entregamos <strong>propuesta técnica en menos de 24 horas hábiles</strong> y equipamos cuerpos de bomberos, brigadas industriales y unidades de protección civil en los <strong>32 estados de la República</strong>."
+            }
+          ],
+          "heroDatos": [
+            {
+              "label": "Certificación",
+              "valor": "NFPA 1970, edición vigente"
+            },
+            {
+              "label": "Retiro obligatorio",
+              "valor": "10 años desde fabricación"
+            }
+          ],
+          "specStrip": [
+            {
+              "label": "Capa exterior",
+              "valor": "Nomex IIIA o PBI Matrix"
+            },
+            {
+              "label": "Barrera de humedad",
+              "valor": "Membrana laminada ePTFE"
+            },
+            {
+              "label": "Barrera térmica",
+              "valor": "Fieltro aramídico multicapa"
+            },
+            {
+              "label": "Costura",
+              "valor": "Hilo aramídico, doble pespunte"
+            },
+            {
+              "label": "Visibilidad",
+              "valor": "Cinta reflejante trilaminada"
+            },
+            {
+              "label": "Tallas",
+              "valor": "XS a 4XL, hombre y mujer"
+            }
+          ],
+          "catalogo": {
+            "eyebrow": "Catálogo por marca",
+            "titulo": "Trajes estructurales<br>por marca y configuración",
+            "intro": "Cada marca nombra distinto lo mismo: unas venden por <strong>modelo</strong>, otras por <strong>barrera exterior</strong> y otras por presentación. Aquí cada card es una configuración cotizable, con la norma que declara el fabricante y el dato que hay que pedir antes de compararla contra otra. Hoy está publicado el <strong>SKÖLD HERÖ</strong> con sus cinco barreras exteriores; el catálogo crece por marca.",
+            "imgRef": "Imagen de referencia del conjunto",
+            "nota": "La certificación UL publicada por SKÖLD para el HERÖ está declarada bajo <strong>NFPA 1971 edición 2018</strong>, expediente <strong>MH60435</strong>. Esa edición fue consolidada en <strong>NFPA 1970 (1971) edición 2025</strong> y la transición cerró el 18 de marzo de 2026, por lo que un certificado emitido hoy debe referirse a la edición vigente. El inventario ya etiquetado no se invalida —su uso en campo se rige por NFPA 1850 (1851)—, pero en la compra hay que precisar qué edición ampara el certificado que se entrega. La verificación es por unidad: expediente, edición, modelo, configuración de barreras, talla y etiqueta cosida.",
+            "cards": [
+              {
+                "marca": "SKÖLD",
+                "modelo": "HERÖ",
+                "variante": "PBI MAX 7.0",
+                "varianteLabel": "Barrera exterior",
+                "slug": "skold-hero-pbi-max-7-0",
+                "badge": "NFPA 1971 · 2018",
+                "estado": "documentada",
+                "img": "/images/catalogo/1592235905030-1000x750.webp",
+                "alt": "Bombero con ensamble estructural completo, casco y equipo de respiración autónoma",
+                "desc": "La única configuración del HERÖ con composición y gramaje publicados. Exterior PBI MAX de 7 oz en <strong>70 % PBI y 30 % Kevlar</strong>, con Stedair 3000 y Defender M. Es la referencia contra la que se compara cualquier otra propuesta.",
+                "specs": [
+                  "Exterior 70 % PBI y 30 % Kevlar, 7 oz",
+                  "Barrera de humedad Stedair 3000",
+                  "Barrera térmica Defender M",
+                  "Tallas S a 4X · chaquetón, pantalón o completo"
+                ],
+                "chip": "Certificación UL · expediente MH60435",
+                "l4": {
+                  "seoTitle": "Traje SKÖLD HERÖ PBI MAX 7.0 certificado UL",
+                  "seoDescription": "Traje estructural SKÖLD HERÖ con barrera PBI MAX de 7 oz, Stedair 3000 y Defender M. Certificación UL, expediente MH60435, tallas S a 4X y cotización en 24 h.",
+                  "h1": "Traje estructural SKÖLD HERÖ con barrera PBI MAX 7.0",
+                  "subtitulo": "Chaquetón y pantalón del conjunto HERÖ en su única configuración documentada: exterior PBI MAX de 7 oz en 70 % PBI y 30 % Kevlar, barrera de humedad Stedair 3000 y barrera térmica Defender M, con certificación de laboratorio UL bajo el expediente MH60435.",
+                  "heroImg": {
+                    "src": "/images/catalogo/1592235905030-1000x750.webp",
+                    "alt": "Bombero con ensamble estructural completo, casco y equipo de respiración autónoma"
+                  },
+                  "heroBloques": [
+                    {
+                      "label": "Por qué esta configuración es la referencia",
+                      "texto": "SKÖLD lista cinco barreras exteriores para el HERÖ y <strong>solo esta publica composición y gramaje</strong>. La diferencia no es de marketing: cuando una convocatoria pide “traje estructural de PBI”, un anexo técnico se puede sostener con números —7 oz, 70 % PBI, 30 % Kevlar, Stedair 3000, Defender M— o se puede sostener con adjetivos. Solo lo primero aguanta una aclaración de bases o una impugnación."
+                    },
+                    {
+                      "label": "Distribución autorizada, no reventa",
+                      "texto": "Entregamos el conjunto con <strong>certificado de laboratorio, expediente UL, número de serie y fecha de fabricación por prenda</strong>, etiqueta permanente con la composición de las tres capas y ficha técnica en español. Propuesta con partidas y clave de producto en menos de <strong>24 horas hábiles</strong>, con cobertura en los <strong>32 estados de la República</strong>."
+                    }
+                  ],
+                  "heroDatos": [
+                    {
+                      "label": "Certificación",
+                      "valor": "UL · expediente MH60435"
+                    },
+                    {
+                      "label": "Edición declarada",
+                      "valor": "NFPA 1971 · 2018"
+                    },
+                    {
+                      "label": "Tallas",
+                      "valor": "S a 4X"
+                    }
+                  ],
+                  "specStrip": [
+                    {
+                      "label": "Capa exterior",
+                      "valor": "PBI MAX 7 oz · 70 % PBI, 30 % Kevlar"
+                    },
+                    {
+                      "label": "Barrera de humedad",
+                      "valor": "Stedair 3000"
+                    },
+                    {
+                      "label": "Barrera térmica",
+                      "valor": "Defender M"
+                    },
+                    {
+                      "label": "Certificación",
+                      "valor": "UL · expediente MH60435"
+                    },
+                    {
+                      "label": "Colores",
+                      "valor": "Oro y negro"
+                    },
+                    {
+                      "label": "Presentaciones",
+                      "valor": "Chaquetón, pantalón o completo"
+                    }
+                  ],
+                  "secciones": [
+                    {
+                      "id": "el-conjunto",
+                      "eyebrow": "Qué estás comprando",
+                      "titulo": "El HERÖ y por qué esta configuración se puede defender por escrito",
+                      "parrafos": [
+                        "El <strong>SKÖLD HERÖ</strong> es un conjunto de protección para combate estructural: chaquetón y pantalón que se cotizan por separado o como traje completo, cada uno con su propia clave de producto. Sobre ese mismo conjunto el fabricante permite elegir entre cinco barreras exteriores —esta, más <strong>Advance</strong>, <strong>Kombat Flex</strong>, <strong>Pioneer</strong> y <strong>Defender 750</strong>—, y ahí es donde la mayoría de las comparaciones se rompe: dos propuestas pueden decir “HERÖ” y no ser el mismo traje.",
+                        "Esta configuración —la de la ficha técnica <strong>FT_HEROPBI_2023(B)</strong>— es la única del modelo con composición y gramaje publicados capa por capa. Eso permite algo que en el mercado mexicano de EPP es más raro de lo que debería: escribir un anexo técnico con números verificables en lugar de una descripción que cualquier proveedor puede jurar que cumple."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Exterior PBI MAX, 7 oz",
+                          "d": "70 % PBI y 30 % Kevlar. El PBI no se funde ni gotea: carboniza y conserva la forma del tejido bajo llama directa. El Kevlar aporta la resistencia mecánica —desgarre y abrasión— que el PBI solo no da. El gramaje de 7 oz es el que define cuánto pesa el ensamble armado."
+                        },
+                        {
+                          "t": "Barrera de humedad Stedair 3000",
+                          "d": "Membrana laminada que impide el paso de agua y de vapor sobrecalentado hacia la piel sin bloquear la salida del sudor. Es la capa que se degrada primero, la que casi nadie inspecciona y la responsable de la mayoría de las quemaduras por escaldadura dentro de un traje certificado."
+                        },
+                        {
+                          "t": "Barrera térmica Defender M",
+                          "d": "Define el tiempo real de tolerancia térmica antes de que el elemento sienta el calor. Más barrera es más protección y también más carga térmica acumulada: por eso se especifica junto con las otras dos y no de forma aislada."
+                        }
+                      ],
+                      "nota": "Las tres capas se certifican como <strong>ensamble</strong>. Sustituir una por otra “equivalente” invalida la certificación del conjunto, aunque la capa nueva esté aprobada por su cuenta."
+                    },
+                    {
+                      "id": "certificacion",
+                      "eyebrow": "Certificación",
+                      "titulo": "Expediente MH60435: certificación de tercera parte, no autodeclaración",
+                      "parrafos": [
+                        "La ficha técnica del HERÖ declara <strong>certificación por laboratorio UL bajo NFPA 1971, edición 2018</strong>, y publica el expediente <strong>MH60435</strong> impreso en todas las páginas del documento. Eso lo vuelve rastreable: el número se puede consultar en UL Product iQ y confirmar alcance, modelo y edición amparados. Es una diferencia de fondo frente a un proveedor que solo dice “cumple NFPA”.",
+                        "Vale la pena separar dos afirmaciones que el fabricante hace por separado y que se suelen leer como una sola: que <strong>las telas exceden</strong> los requisitos de la norma, y que <strong>existe certificación UL</strong> bajo esa norma. La primera habla de materiales; la segunda, del alcance certificado del conjunto. Las dos apuntan a la edición 2018."
+                      ],
+                      "nota": "La verificación siempre es <strong>por unidad</strong>, no por catálogo: expediente, edición, modelo, configuración de barreras, talla y etiqueta permanente cosida al interior. Un certificado del modelo no acredita la prenda que llegó a tu estación."
+                    },
+                    {
+                      "id": "edicion-normativa",
+                      "eyebrow": "Edición vigente",
+                      "titulo": "NFPA 1971 edición 2018 frente a NFPA 1970 edición 2025",
+                      "parrafos": [
+                        "NFPA 1971 fue consolidada en <strong>NFPA 1970 (1971) edición 2025</strong>, junto con las antiguas 1975, 1981 y 1982, y la transición <strong>cerró el 18 de marzo de 2026</strong>. En consecuencia, ningún organismo puede emitir hoy una certificación nueva contra la edición 2018.",
+                        "Eso no invalida el inventario ya etiquetado: su permanencia en servicio se rige por <strong>NFPA 1850 (1851)</strong> —inspección, cuidado y retiro—, no por la edición de certificación. Lo que sí obliga es a precisar en la compra qué edición ampara el certificado que se entrega, y a no aceptar que se presente un traje certificado en 2018 como si estuviera certificado bajo la edición vigente."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Si compras hoy",
+                          "d": "Pide por escrito la edición del certificado que acompaña a las prendas y confirma si el fabricante ya liberó claves de producto referidas a la edición 2025."
+                        },
+                        {
+                          "t": "Si ya tienes inventario",
+                          "d": "No hay que retirarlo por el cambio de edición. Se rige por NFPA 1850 (1851): inspección documentada y retiro a los 10 años de la fecha de fabricación."
+                        },
+                        {
+                          "t": "Si estás en licitación",
+                          "d": "Que las bases digan qué edición se exige. Un anexo que solo dice “NFPA” abre la puerta a comparar equipos que no son comparables."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "construccion",
+                      "eyebrow": "Construcción",
+                      "titulo": "Dónde puso SKÖLD el material",
+                      "parrafos": [
+                        "Un traje se encarece en los lugares donde se rompe. Estos son los elementos que el fabricante identifica en el HERÖ y que conviene revisar contra la prenda física cuando llega, porque la presencia de una característica en la familia visual del modelo no demuestra que venga en la unidad entregada."
+                      ],
+                      "lista": [
+                        {
+                          "t": "DRD integrado",
+                          "d": "Drag Rescue Device alojado en la espalda del chaquetón para extraer a un elemento inconsciente. Debe inspeccionarse, mantenerse accesible y usarse solo conforme a capacitación y procedimiento."
+                        },
+                        {
+                          "t": "Cuello tipo escudo 360°",
+                          "d": "Diseño de cobertura total sin partes expuestas alrededor del cuello. Su desempeño real depende del ajuste y de la interfaz con capucha, casco y chaquetón."
+                        },
+                        {
+                          "t": "Refuerzos Stedshield y Ultrashield",
+                          "d": "En mangas, hombros, codos y rodillas del chaquetón, y Stedshield en los tobillos del pantalón: las zonas de gateo, arrastre y apoyo."
+                        },
+                        {
+                          "t": "Arnés de Kevlar integrado",
+                          "d": "Incorporado a la prenda, no accesorio externo."
+                        },
+                        {
+                          "t": "Costura de Kevlar doble y triple",
+                          "d": "Hilo aramídico en todo el conjunto. El hilo común se derrite y abre un puente térmico donde se supone que hay costura."
+                        },
+                        {
+                          "t": "Puño de Kevlar con ojillo para pulgar",
+                          "d": "Mantiene la manga en posición al levantar el brazo y evita que el guante y el chaquetón dejen de traslaparse."
+                        },
+                        {
+                          "t": "Cierre frontal con salida de escape",
+                          "d": "Combinación de cremallera y velcro FR con cierre de escape. Define la velocidad de vestido y la hermeticidad del frente."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "visibilidad",
+                      "eyebrow": "Visibilidad",
+                      "titulo": "La cinta está especificada por serie, no descrita con adjetivos",
+                      "parrafos": [
+                        "La ficha del HERÖ especifica cinta <strong>ORALITE® Ultra Brilliance™ serie FTP2575-S de 3″</strong> en amarillo verdoso fluorescente, más bies reflejante plata en pecho, espalda, brazos, bolsas y tobillos. Ese nivel de detalle importa por una razón práctica: la cinta reflejante es la pieza que más se degrada con el lavado y la que más se sustituye por una genérica en reparaciones fuera de taller autorizado.",
+                        "Cuando la ficha nombra la serie, la reposición se puede pedir igual dentro de cinco años. Cuando solo dice “cinta reflejante de alta visibilidad”, la reposición es lo que haya. Color, patrón y ubicación final se confirman en la orden."
+                      ]
+                    },
+                    {
+                      "id": "bolsas-y-corte",
+                      "eyebrow": "Ergonomía",
+                      "titulo": "Bolsas, tirantes y corte: la parte que el elemento sí nota",
+                      "parrafos": [
+                        "La protección la define el ensamble; la aceptación en la estación la definen los detalles. Un traje que protege pero estorba se acaba usando mal, y un traje usado mal protege menos que uno de menor especificación bien puesto."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Chaquetón · porta-radios",
+                          "d": "Bolsa tipo fuelle para radio, dos bolsillos inferiores y porta linternas."
+                        },
+                        {
+                          "t": "Pantalón · sujeción",
+                          "d": "Tirantes acolchados con conexión rápida y ajuste elástico posterior. La conexión rápida es lo que permite vestirse en la unidad en movimiento."
+                        },
+                        {
+                          "t": "Pantalón · corte tipo diamante",
+                          "d": "Corte en la entrepierna que amplía el rango de movimiento al subir, gatear y montar escalera."
+                        },
+                        {
+                          "t": "Pantalón · bolsillos",
+                          "d": "Dos bolsillos laterales tipo parche."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "claves",
+                      "eyebrow": "Cómo se pide",
+                      "titulo": "Claves de producto y tallas publicadas",
+                      "parrafos": [
+                        "El chaquetón y el pantalón se cotizan por separado o como traje completo, y cada presentación tiene claves distintas. Poner la clave en la requisición es lo que evita que llegue una configuración distinta a la que se aprobó."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Presentación",
+                          "Claves",
+                          "Tallas"
+                        ],
+                        "rows": [
+                          [
+                            "Chaquetón HERÖ 2018 PBI oro",
+                            "CHB910-S · -M · -L · -XL · -2X · -3X · -4X",
+                            "Siete tallas, de S a 4X"
+                          ],
+                          [
+                            "Pantalón HERÖ 2018 oro",
+                            "PB910-S · -M · -L · -XL · -2X · -3X · -4X",
+                            "Siete tallas, de S a 4X"
+                          ],
+                          [
+                            "Traje completo HERÖ 2018 PBI MAX",
+                            "TB910-M · -L · -XL · TB-910-2XL · -3XL · -4XL",
+                            "Seis tallas, de M a 4XL"
+                          ],
+                          [
+                            "Combos de traje con bota",
+                            "FP-COM9/910 en L-BB08 · XL-BB09 · XL-B9.5 · XL-BB10 · L-BB11",
+                            "Asocian talla de traje con número de bota"
+                          ]
+                        ]
+                      },
+                      "nota": "Las claves incluyen “2018” porque identifican <strong>la edición normativa bajo la que se certificó la configuración</strong>. Al cotizar conviene confirmar si el fabricante ya liberó claves referidas a NFPA 1970 (1971) edición 2025."
+                    },
+                    {
+                      "id": "medidas",
+                      "eyebrow": "Tallaje",
+                      "titulo": "La tabla de medidas UL y por qué no sustituye medir al elemento",
+                      "parrafos": [
+                        "La ficha publica la tabla de medidas UL del exterior para las tallas S a 3XL. Son medidas de la <strong>prenda extendida</strong>, no del cuerpo del usuario: sirven para verificar que llegó lo que se pidió, no para asignar tallas."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Prenda",
+                          "Medida",
+                          "Rango publicado",
+                          "Tolerancia"
+                        ],
+                        "rows": [
+                          [
+                            "Chaquetón",
+                            "Contorno de pecho",
+                            "47″ a 58″",
+                            "±½″"
+                          ],
+                          [
+                            "Chaquetón",
+                            "Contorno de faldón",
+                            "47″ a 57″",
+                            "±½″"
+                          ],
+                          [
+                            "Chaquetón",
+                            "Contorno de cuello",
+                            "Según talla",
+                            "±¼″"
+                          ],
+                          [
+                            "Pantalón",
+                            "Contorno de cintura",
+                            "41″ a 51″",
+                            "±½″"
+                          ],
+                          [
+                            "Pantalón",
+                            "Largo de entrepierna",
+                            "28″ a 32″ (sin diamante)",
+                            "±½″"
+                          ]
+                        ]
+                      },
+                      "nota": "El tallaje se define midiendo a cada bombero <strong>con las capas que llevará en operación</strong> y verificando alcance, movilidad e interfaz con casco, capucha, guantes, botas y equipo de respiración. Enviamos juego de tallas de muestra antes de cerrar un pedido de brigada."
+                    },
+                    {
+                      "id": "cbrn",
+                      "eyebrow": "Lo que el fabricante no publica",
+                      "titulo": "La declaración CBRN: qué dice y qué no",
+                      "parrafos": [
+                        "SKÖLD indica que el HERÖ cuenta con barreras interiores resistentes a agentes <strong>químicos, bacteriológicos, radiológicos y nucleares</strong>. Es una afirmación del fabricante, y la ficha <strong>no publica el ensayo, la norma ni el alcance</strong> de esa resistencia.",
+                        "Nuestra postura es decirlo así: si tu operación necesita capacidad CBRN acreditada, hay que pedir evidencia específica antes de asumirla, y probablemente hablar de un ensamble distinto. Repetir la frase del catálogo como si fuera una certificación es la clase de atajo que se cobra en una auditoría, no en la venta."
+                      ],
+                      "nota": "Mismo criterio aplica a las otras cuatro barreras exteriores del HERÖ: están listadas por el fabricante, pero sin composición ni gramaje publicados. No las comparamos contra esta configuración hasta tener su ficha, y cada una tiene su propia página con lo que sí se puede exigir mientras tanto."
+                    },
+                    {
+                      "id": "cuidado",
+                      "eyebrow": "Ciclo de vida",
+                      "titulo": "Cuidado bajo NFPA 1850 (1851) y retiro a los diez años",
+                      "parrafos": [
+                        "Antes y después de cada uso hay que revisar contaminación, daño térmico, abrasión, cortes, costuras, cierres, cintas, refuerzos, DRD, barreras y etiquetado conforme a las instrucciones del fabricante. Además de la revisión rutinaria del propio elemento, la norma pide <strong>inspección avanzada documentada al menos una vez al año</strong> y lavado especializado. Lavadora doméstica, cloro y suavizante destruyen la barrera de humedad sin dejar señal visible.",
+                        "El retiro es obligatorio a los <strong>10 años de la fecha de fabricación</strong>, no de la compra. Entregamos con número de serie y fecha por prenda en bitácora para que la reposición se escalone por año y no llegue toda junta al mismo ejercicio presupuestal."
+                      ],
+                      "nota": "La reparación la hace el fabricante o un taller verificado por él, con material e hilo del mismo tipo certificado. Un parche cosido con hilo común anula la certificación del ensamble."
+                    }
+                  ],
+                  "galeria": [
+                    {
+                      "src": "/images/catalogo/1776648120640-1000x750.webp",
+                      "alt": "Trajes estructurales y cascos colgados en el vestidor de la estación",
+                      "caption": "Ensamble completo por turno"
+                    },
+                    {
+                      "src": "/images/catalogo/1669209285616-600x450.webp",
+                      "alt": "Chaquetones estructurales en rack de estación",
+                      "caption": "Chaquetón y pantalón por clave"
+                    },
+                    {
+                      "src": "/images/catalogo/1662121396496-600x400.webp",
+                      "alt": "Chaquetones estructurales colgados en el vestidor de la estación",
+                      "caption": "Control de tallas"
+                    },
+                    {
+                      "src": "/images/catalogo/1584033376442-600x450.webp",
+                      "alt": "Bombero equipado con herramienta de intervención durante una maniobra",
+                      "caption": "Desempeño en maniobra"
+                    }
+                  ],
+                  "aplicaciones": [
+                    {
+                      "sector": "Cuerpos de bomberos",
+                      "desc": "Dotación por elemento con clave de producto, talla verificada contra la tabla UL y bitácora por número de serie. La configuración documentada facilita la comprobación ante protección civil."
+                    },
+                    {
+                      "sector": "Brigadas industriales",
+                      "desc": "Para brigadas cuya matriz de riesgo y nivel de entrenamiento incluyan intervención estructural. El conjunto no sustituye equipo de respiración, evaluación atmosférica, comunicaciones ni respaldo."
+                    },
+                    {
+                      "sector": "Licitación pública",
+                      "desc": "Anexo técnico redactado con números publicados —gramaje, composición, barreras, expediente UL— en lugar de descripciones que cualquier proveedor puede declarar que cumple."
+                    }
+                  ],
+                  "datoClave": {
+                    "titulo": "Pide el expediente por escrito",
+                    "texto": "<strong>UL MH60435</strong> se puede rastrear en UL Product iQ. Un proveedor que no te entrega el número de expediente no está vendiendo certificación: está vendiendo una afirmación."
+                  },
+                  "referencias": [
+                    {
+                      "code": "UL · MH60435",
+                      "desc": "Expediente de certificación publicado por SKÖLD en la ficha del HERÖ. Permite confirmar alcance, modelo y edición amparados. Pídelo por escrito en la propuesta."
+                    },
+                    {
+                      "code": "NFPA 1971 · 2018",
+                      "desc": "Edición bajo la que está declarada la certificación UL de esta configuración. Fue sustituida."
+                    },
+                    {
+                      "code": "NFPA 1970 · 2025",
+                      "desc": "Estándar vigente que consolidó NFPA 1971, 1975, 1981 y 1982. La transición cerró el 18 de marzo de 2026."
+                    },
+                    {
+                      "code": "NFPA 1850 · 2026",
+                      "desc": "Selección, cuidado y mantenimiento del conjunto en servicio. Es la norma que rige la permanencia del inventario, no la edición de certificación."
+                    },
+                    {
+                      "code": "NOM-017-STPS",
+                      "desc": "Selección, entrega y capacitación en el uso del equipo de protección personal según el riesgo del puesto."
+                    }
+                  ],
+                  "blog": [
+                    "guia-trajes-estructurales-nfpa-1971",
+                    "marcas-trajes-bomberos-comparativa-mexico",
+                    "mantenimiento-epp-estructural-nfpa-1851",
+                    "equipar-brigada-trajes-bomberos-tallaje-licitacion",
+                    "nfpa-1971-mexico-norma-bomberos",
+                    "precio-trajes-bomberos-mexico-2026"
+                  ],
+                  "faqs": [
+                    {
+                      "q": "¿Qué diferencia real hay entre PBI MAX 7.0 y las otras cuatro barreras del HERÖ?",
+                      "a": "La diferencia verificable es de información, no necesariamente de desempeño. PBI MAX 7.0 es la única configuración cuya ficha publica composición y gramaje: 70 % PBI, 30 % Kevlar, 7 oz, con Stedair 3000 y Defender M. Advance, Kombat Flex, Pioneer y Defender 750 están listadas por el fabricante como barreras seleccionables, pero sin esos datos no se puede comparar peso ni carga térmica. Antes de ponerlas en la misma tabla pedimos la ficha de cada configuración; comparar contra un dato que no existe es inventarlo."
+                    },
+                    {
+                      "q": "¿Por qué 70 % PBI y 30 % Kevlar y no 100 % PBI?",
+                      "a": "Porque cada fibra resuelve un problema distinto. El PBI aguanta la llama sin fundirse ni gotear —carboniza y conserva la forma del tejido—, pero por sí solo no da la resistencia mecánica que necesita una capa exterior sometida a desgarre, abrasión y arrastre. El Kevlar aporta esa tenacidad. La mezcla es la que permite que el traje siga siendo una barrera después de engancharse con una lámina, no solo después de una exposición térmica."
+                    },
+                    {
+                      "q": "¿El expediente MH60435 se puede verificar y cómo?",
+                      "a": "Sí. Es un número de expediente de UL, y por eso es una certificación de tercera parte y no una declaración de conformidad del propio fabricante. Se consulta en UL Product iQ contra el número de expediente y ahí se confirma alcance, modelo y edición amparados. Te entregamos el número en la propuesta y el certificado con el envío; si un proveedor no te da el expediente, no tienes con qué verificar nada."
+                    },
+                    {
+                      "q": "¿Sirve un traje certificado bajo NFPA 1971 edición 2018 si la vigente es NFPA 1970 edición 2025?",
+                      "a": "Para uso en servicio, sí: la permanencia del equipo se rige por NFPA 1850 (1851) —inspección, cuidado y retiro a los diez años de fabricación—, no por la edición de certificación. Lo que ya no ocurre es que se emitan certificaciones nuevas contra la edición 2018, porque la transición cerró el 18 de marzo de 2026. Para una compra hoy hay que precisar por escrito qué edición ampara el certificado que se entrega y no aceptar que se presente un certificado 2018 como si fuera de la edición vigente."
+                    },
+                    {
+                      "q": "¿Qué es el DRD y por qué importa que venga integrado?",
+                      "a": "El DRD —Drag Rescue Device— es un arnés de arrastre alojado en la espalda del chaquetón que permite extraer a un elemento inconsciente jalando de un punto diseñado para eso, en lugar de improvisar con la prenda. Que venga integrado significa que no depende de un accesorio que alguien recuerde colocar. A cambio, exige inspección: si el DRD está mal replegado o inaccesible, existe en el catálogo y no en la emergencia."
+                    },
+                    {
+                      "q": "¿Puedo comprar solo el chaquetón o solo el pantalón?",
+                      "a": "Sí. El chaquetón, el pantalón y el traje completo tienen claves de producto distintas —CHB910, PB910 y TB910— y se cotizan por separado. Es lo habitual cuando se repone por desgaste diferenciado: el pantalón suele salir antes por rodillas y tobillos. Solo hay que cuidar que la prenda nueva sea de la misma configuración de barreras que la que sigue en servicio, para no quedarse con un ensamble mezclado."
+                    },
+                    {
+                      "q": "¿El HERÖ protege contra agentes CBRN?",
+                      "a": "El fabricante indica que cuenta con barreras interiores resistentes a agentes químicos, bacteriológicos, radiológicos y nucleares, pero la ficha no publica el ensayo, la norma ni el alcance de esa resistencia. Preferimos decirlo con claridad: es una declaración, no una certificación acreditada. Si tu operación requiere capacidad CBRN comprobable, hay que pedir evidencia específica al fabricante y muy probablemente evaluar un ensamble diseñado para ese escenario."
+                    },
+                    {
+                      "q": "¿Qué datos necesitan para cotizar y de qué depende el tiempo de entrega?",
+                      "a": "Necesitamos número de usuarios y funciones, presentación por partida —chaquetón, pantalón o completo—, tallas o disposición para recibir juego de muestra, color, edición normativa y certificado que exige tu compra, accesorios, y fecha objetivo. El plazo depende de si las claves salen de inventario o entran a programa de producción del fabricante: tallas medias en configuración estándar suelen salir en días, y bordado institucional o tallas extremas entran a fabricación. Te damos fecha comprometida por partida y te decimos de qué depende, en lugar de un plazo único que después no se cumple."
+                    }
+                  ]
+                }
+              },
+              {
+                "marca": "SKÖLD",
+                "modelo": "HERÖ",
+                "variante": "Advance",
+                "varianteLabel": "Barrera exterior",
+                "slug": "skold-hero-advance",
+                "badge": "NFPA 1971 · 2018",
+                "estado": "sin-ficha",
+                "img": "/images/catalogo/1575507371089-600x450.webp",
+                "alt": "Chaquetones y cascos estructurales colgados en la estación de bomberos",
+                "desc": "Barrera exterior seleccionable del HERÖ. La ficha del modelo no publica composición ni gramaje, y sin gramaje no se puede comparar peso ni carga térmica contra PBI MAX.",
+                "specs": [
+                  "Barrera exterior seleccionable del HERÖ",
+                  "Composición y gramaje no publicados",
+                  "Mismo conjunto: DRD, cuello 360°, arnés Kevlar",
+                  "Se solicita ficha de la configuración"
+                ],
+                "chip": "Requiere ficha por configuración",
+                "l4": {
+                  "seoTitle": "Traje SKÖLD HERÖ con barrera Advance",
+                  "seoDescription": "Barrera exterior Advance del conjunto SKÖLD HERÖ: qué está documentado, qué no publica el fabricante y las preguntas que hay que resolver antes de cotizar.",
+                  "badge": "Alcance por confirmar",
+                  "h1": "Traje estructural SKÖLD HERÖ con barrera exterior Advance",
+                  "subtitulo": "Advance es una de las cinco barreras exteriores que SKÖLD ofrece sobre el conjunto HERÖ. Todo el ensamble —DRD integrado, cuello de cobertura 360°, arnés de Kevlar y refuerzos— es el del modelo; lo que cambia es la capa exterior, y esa es justo la que el fabricante no documenta en la ficha pública.",
+                  "heroImg": {
+                    "src": "/images/catalogo/1575507371089-600x450.webp",
+                    "alt": "Chaquetones y cascos estructurales colgados en la estación de bomberos"
+                  },
+                  "heroBloques": [
+                    {
+                      "label": "Por qué esta ficha se ve distinta",
+                      "texto": "No vamos a inventarte una tabla. SKÖLD lista <strong>Advance</strong> entre las barreras exteriores del HERÖ, pero la ficha del modelo <strong>no publica su composición ni su gramaje</strong>, y sin gramaje no se puede estimar el peso del ensamble ni la carga térmica sobre el elemento. Lo que sí podemos hacer —y es lo que esta página hace— es separar con precisión lo que está documentado de lo que hay que pedir, y darte las preguntas exactas para pedirlo."
+                    },
+                    {
+                      "label": "Gestionamos la ficha, no la suponemos",
+                      "texto": "Como distribuidores autorizados solicitamos al fabricante la <strong>ficha técnica de la configuración</strong> con composición, gramaje, barreras de humedad y térmica, valores de TPP y THL del ensamble armado y el alcance del certificado. Cuando llega, la propuesta sale con números; mientras no llega, te lo decimos así en lugar de copiar el catálogo. Cobertura en los <strong>32 estados de la República</strong>."
+                    }
+                  ],
+                  "heroDatos": [
+                    {
+                      "label": "Estado del dato",
+                      "valor": "Ficha por solicitar"
+                    },
+                    {
+                      "label": "Certificación del modelo",
+                      "valor": "UL · expediente MH60435"
+                    },
+                    {
+                      "label": "Alcance por configuración",
+                      "valor": "Por confirmar"
+                    }
+                  ],
+                  "specStrip": [
+                    {
+                      "label": "Capa exterior",
+                      "valor": "Advance · sin gramaje publicado"
+                    },
+                    {
+                      "label": "Barrera de humedad",
+                      "valor": "Por confirmar en la ficha"
+                    },
+                    {
+                      "label": "Barrera térmica",
+                      "valor": "Por confirmar en la ficha"
+                    },
+                    {
+                      "label": "Conjunto",
+                      "valor": "HERÖ · DRD, cuello 360°, Kevlar"
+                    },
+                    {
+                      "label": "Tallas",
+                      "valor": "S a 4X (nivel modelo)"
+                    },
+                    {
+                      "label": "Certificación",
+                      "valor": "UL MH60435 · alcance por confirmar"
+                    }
+                  ],
+                  "secciones": [
+                    {
+                      "id": "que-es",
+                      "eyebrow": "Qué estás evaluando",
+                      "titulo": "Advance no es otro traje: es otra capa exterior del mismo HERÖ",
+                      "parrafos": [
+                        "El <strong>SKÖLD HERÖ</strong> es un conjunto de protección para combate estructural, y sobre él el fabricante permite elegir entre cinco barreras exteriores: Advance, Kombat Flex, PBI MAX 7.0, Pioneer y Defender 750. Cuando cambias de barrera <strong>no cambias de traje</strong>: el DRD sigue en la espalda, el cuello sigue siendo el de cobertura 360°, el arnés sigue siendo de Kevlar y las claves de producto siguen la misma estructura.",
+                        "Eso tiene una consecuencia útil para quien compra: buena parte de lo que hay que verificar en una propuesta ya está documentado a nivel de modelo. Y una consecuencia incómoda: la capa que define el peso, la mano y la resistencia mecánica del traje es precisamente la que aquí queda sin números."
+                      ],
+                      "nota": "Dos propuestas pueden decir “SKÖLD HERÖ” y no ser el mismo traje. La configuración de barreras tiene que aparecer en la partida, no solo el modelo."
+                    },
+                    {
+                      "id": "lo-documentado",
+                      "eyebrow": "Lo que sí es exigible",
+                      "titulo": "El contrato se puede cerrar sobre esto",
+                      "parrafos": [
+                        "Aunque falte la ficha de la barrera, hay un cuerpo de especificaciones que el fabricante publica a nivel de modelo y que por lo tanto es <strong>exigible en el contrato</strong> con Advance igual que con cualquier otra configuración. Ponerlas en la partida ya te deja un anexo técnico defendible mientras llega el resto."
+                      ],
+                      "lista": [
+                        {
+                          "t": "DRD integrado",
+                          "d": "Exigible como característica de diseño del chaquetón, no como accesorio. La norma lo requiere en ensambles estructurales, así que su ausencia sería motivo de rechazo, no de negociación."
+                        },
+                        {
+                          "t": "Cuello de cobertura 360°",
+                          "d": "Exigible como diseño sin partes expuestas alrededor del cuello. Se comprueba visualmente en la recepción, con capucha y casco puestos."
+                        },
+                        {
+                          "t": "Arnés de Kevlar",
+                          "d": "Exigible como elemento integrado a la prenda. Si la propuesta lo ofrece como accesorio aparte, no es la misma especificación."
+                        },
+                        {
+                          "t": "Refuerzos en zonas de desgaste",
+                          "d": "Stedshield y Ultrashield en mangas, hombros, codos y rodillas; Stedshield en tobillos. Exigible por ubicación, que es lo verificable al tacto."
+                        },
+                        {
+                          "t": "Hilo aramídico",
+                          "d": "Costura doble y triple en Kevlar, con puño de Kevlar y ojillo para pulgar. Exigible por material del hilo: es lo que se pierde primero en reparaciones fuera de taller autorizado."
+                        },
+                        {
+                          "t": "Cinta reflejante por serie",
+                          "d": "ORALITE® Ultra Brilliance™ FTP2575-S de 3″ y bies plata. Exigible por número de serie, no por descripción: así la reposición se pide idéntica años después."
+                        },
+                        {
+                          "t": "Claves de producto y tallas",
+                          "d": "Chaquetón CHB910, pantalón PB910, traje completo TB910, de S a 4X. Exigible por clave, que es el nivel de precisión con el que el fabricante despacha."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "lo-no-publicado",
+                      "eyebrow": "Lo que falta",
+                      "titulo": "Los cinco datos que la ficha no publica y qué decide cada uno",
+                      "parrafos": [
+                        "Esta es la parte que ningún catálogo te va a poner por escrito, así que la ponemos nosotros. No es una lista de defectos: es el mapa de lo que hay que resolver antes de firmar, y sirve igual para evaluar a cualquier proveedor que te ofrezca esta configuración."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Dato ausente",
+                          "Qué decide",
+                          "Consecuencia de no tenerlo"
+                        ],
+                        "rows": [
+                          [
+                            "Composición de la tela",
+                            "Comportamiento ante llama y resistencia mecánica",
+                            "No se puede anticipar si encoge, si carboniza conservando estructura ni cómo responde al desgarre"
+                          ],
+                          [
+                            "Gramaje en oz/yd²",
+                            "Peso del ensamble y carga térmica",
+                            "No hay forma de comparar fatiga del elemento contra PBI MAX 7.0 ni contra otra marca"
+                          ],
+                          [
+                            "Barrera de humedad",
+                            "Paso de vapor sobrecalentado",
+                            "Es la capa que produce la mayoría de las quemaduras por escaldadura dentro de un traje certificado"
+                          ],
+                          [
+                            "Barrera térmica",
+                            "Tiempo real de tolerancia térmica",
+                            "Sin ella no hay TPP del conjunto, y el TPP se certifica sobre el ensamble armado"
+                          ],
+                          [
+                            "TPP y THL del ensamble",
+                            "Protección térmica y evacuación de calor metabólico",
+                            "Son los dos valores que la norma exige y que ordenan cualquier comparación seria"
+                          ]
+                        ]
+                      },
+                      "nota": "La ausencia del dato no es un defecto del producto, es un hueco en la documentación. La diferencia importa porque un hueco se llena pidiendo la ficha; un defecto no. Lo que no se hace es <strong>cerrarlo con supuestos</strong> y firmarlo como si fuera especificación."
+                    },
+                    {
+                      "id": "el-nombre",
+                      "eyebrow": "Autoridad técnica",
+                      "titulo": "“Advance” es un nombre comercial, no una especificación",
+                      "parrafos": [
+                        "En el mercado de telas para protección estructural el nombre Advance corresponde a una mezcla de aramidas, y las referencias que circulan <strong>no coinciden entre sí</strong>: una documentación forestal que manejamos la registra como 60 % Kevlar y 40 % Nomex en 7.0 oz, y hay tablas comparativas que la atribuyen a un fabricante de fibra distinto. Cualquiera de esas cifras puede ser correcta para el producto de otra familia y equivocada para esta.",
+                        "Por eso no trasladamos ningún número a la configuración Advance del HERÖ. Un mismo nombre comercial se usa en gramajes distintos y para prendas distintas —forestal y estructural no son la misma tela aunque compartan marca—, y la única cifra válida en una compra es la de <strong>la ficha de la configuración que estás cotizando</strong>."
+                      ],
+                      "nota": "Si un proveedor te entrega composición y gramaje de Advance para el HERÖ, pídele la fuente. Si viene de la ficha del fabricante, es un dato. Si viene de una tabla genérica de telas, es una suposición con formato de dato."
+                    },
+                    {
+                      "id": "preguntas-al-fabricante",
+                      "eyebrow": "Cómo se resuelve",
+                      "titulo": "Las ocho preguntas que hay que enviar al fabricante",
+                      "parrafos": [
+                        "Este es el cuestionario que usamos nosotros para pedir la ficha de una configuración sin ficha pública. Puedes copiarlo tal cual y mandarlo, con nosotros o con quien te esté cotizando. Las respuestas por escrito son lo que convierte una oferta en algo comparable."
+                      ],
+                      "lista": [
+                        {
+                          "t": "1 · Composición",
+                          "d": "¿Cuál es la composición exacta de la barrera exterior Advance en el HERÖ, con porcentajes por fibra?"
+                        },
+                        {
+                          "t": "2 · Gramaje",
+                          "d": "¿Cuál es el gramaje en oz/yd² de esa barrera exterior?"
+                        },
+                        {
+                          "t": "3 · Barreras interiores",
+                          "d": "¿Qué barrera de humedad y qué barrera térmica se combinan con Advance en la configuración estándar?"
+                        },
+                        {
+                          "t": "4 · TPP y THL",
+                          "d": "¿Cuáles son los valores de TPP y THL del ensamble armado con esa combinación de tres capas?"
+                        },
+                        {
+                          "t": "5 · Alcance del certificado",
+                          "d": "¿El expediente UL MH60435 cubre esta configuración específica, y bajo qué edición normativa?"
+                        },
+                        {
+                          "t": "6 · Claves de producto",
+                          "d": "¿Qué claves corresponden a chaquetón, pantalón y traje completo con Advance, y en qué tallas?"
+                        },
+                        {
+                          "t": "7 · Colores y opcionales",
+                          "d": "¿Qué colores están disponibles y qué opcionales cambian respecto a la configuración PBI MAX?"
+                        },
+                        {
+                          "t": "8 · Cuidado",
+                          "d": "¿El procedimiento de lavado y el criterio de retiro son los mismos que para el resto del modelo?"
+                        }
+                      ],
+                      "nota": "Con esas ocho respuestas se puede armar una tabla comparativa real contra PBI MAX 7.0 o contra cualquier otra marca. Sin ellas, cualquier comparación es una opinión bien redactada."
+                    },
+                    {
+                      "id": "certificacion",
+                      "eyebrow": "Certificación",
+                      "titulo": "Certificación de tercera parte y por qué eso ya es mucho",
+                      "parrafos": [
+                        "SKÖLD publica para el HERÖ certificación por laboratorio <strong>UL bajo NFPA 1971 edición 2018</strong> con expediente <strong>MH60435</strong>. La palabra clave es UL: el documento lo emite un organismo independiente y su registro se puede consultar sin depender del proveedor. En un mercado donde abundan las declaraciones de conformidad del propio fabricante, ese solo hecho ordena una comparación.",
+                        "Dicho eso, el expediente ampara <strong>ensambles</strong>, y la configuración que la ficha documenta es la de PBI MAX 7.0. Que el número exista no dice qué combinaciones cubre. Pídele al fabricante que lo declare por escrito para la configuración con Advance, con la edición normativa aplicable."
+                      ],
+                      "nota": "NFPA 1971 fue consolidada en <strong>NFPA 1970 (1971) edición 2025</strong>; la transición cerró el 18 de marzo de 2026. Traducido a compra: hoy nadie puede emitir un certificado nuevo contra la edición 2018, y un documento que la cite tiene que venir acompañado de su fecha de emisión para saber qué representa."
+                    },
+                    {
+                      "id": "anexo",
+                      "eyebrow": "Licitación",
+                      "titulo": "Cómo redactar la partida sin inventar datos",
+                      "parrafos": [
+                        "Si tu proceso ya está en marcha y no puedes esperar la ficha, hay una forma de escribir la partida que no te compromete con una cifra falsa ni te deja sin criterio de evaluación: especificar el conjunto y exigir el dato como entregable."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "En la partida escribe",
+                          "En lugar de"
+                        ],
+                        "rows": [
+                          [
+                            "Conjunto estructural con DRD integrado, cuello de cobertura 360° y arnés de Kevlar",
+                            "“Traje tipo SKÖLD”"
+                          ],
+                          [
+                            "Barrera exterior en mezcla de aramidas, composición y gramaje declarados por el fabricante en ficha técnica",
+                            "“Barrera exterior Advance de 7 oz”"
+                          ],
+                          [
+                            "Certificado de tercera parte con número de expediente y edición normativa vigente",
+                            "“Cumple NFPA”"
+                          ],
+                          [
+                            "TPP y THL del ensamble armado, declarados por el fabricante",
+                            "sin mención"
+                          ],
+                          [
+                            "Ficha técnica de la configuración en español como entregable de la propuesta",
+                            "sin mención"
+                          ]
+                        ]
+                      },
+                      "nota": "Redactada así, la partida es <strong>comparable y auditable</strong>: quien no pueda entregar la ficha queda fuera por incumplimiento documental, no por una discusión de opiniones sobre telas."
+                    },
+                    {
+                      "id": "cuando-conviene",
+                      "eyebrow": "Criterio de selección",
+                      "titulo": "En qué escenarios vale la pena pedir la ficha",
+                      "parrafos": [
+                        "La pregunta útil no es si Advance es buena, sino si tu proceso aguanta esperar el dato. Estos cuatro escenarios cubren la mayoría de los casos que nos llegan."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Sí, si tienes margen de tiempo",
+                          "d": "Tu calendario admite un ciclo de ida y vuelta con el fabricante antes de comprometer presupuesto. Ahí Advance entra en la comparación con todas las de la ley."
+                        },
+                        {
+                          "t": "Sí, si buscas costo o disponibilidad",
+                          "d": "Estás explorando alternativas a PBI MAX 7.0 por precio o por tiempos de entrega, y el criterio de decisión final será documental."
+                        },
+                        {
+                          "t": "Sí, si ya operas HERÖ",
+                          "d": "Ampliar flota manteniendo modelo, claves y procedimiento de cuidado tiene un valor operativo real que justifica pedir la ficha."
+                        },
+                        {
+                          "t": "No, si el anexo ya está cerrado",
+                          "d": "Licitación con especificación fija y fecha encima. Con la ficha pendiente el expediente queda expuesto: ahí PBI MAX 7.0 es la decisión sensata."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "siguiente-paso",
+                      "eyebrow": "Qué hacemos nosotros",
+                      "titulo": "De una barrera listada a una propuesta con números",
+                      "parrafos": [
+                        "Solicitamos al fabricante la ficha de la configuración con las ocho respuestas, confirmamos el alcance del certificado y la edición normativa, y te devolvemos la propuesta con partidas, claves de producto y tallas verificadas contra la tabla de medidas. Si la ficha no llega o llega incompleta, te lo decimos y comparamos contra PBI MAX 7.0 con lo que sí está publicado.",
+                        "Antes de cerrar cualquier pedido de brigada enviamos <strong>juego de tallas de muestra</strong>: la tabla UL describe la prenda extendida, no el cuerpo del elemento, y esa diferencia es la que produce la escena de veinte trajes correctos y cinco imposibles de usar."
+                      ]
+                    }
+                  ],
+                  "galeria": [
+                    {
+                      "src": "/images/catalogo/1669209285616-600x450.webp",
+                      "alt": "Chaquetones estructurales en rack de estación de bomberos",
+                      "caption": "El conjunto no cambia con la barrera"
+                    },
+                    {
+                      "src": "/images/catalogo/1503714964235-600x450.webp",
+                      "alt": "Bombero revisando y ajustando su equipo de protección antes de salir",
+                      "caption": "Verificación contra la prenda física"
+                    },
+                    {
+                      "src": "/images/catalogo/1606613817012-600x450.webp",
+                      "alt": "Bombero equipado junto a la unidad en escena",
+                      "caption": "Desempeño en operación"
+                    },
+                    {
+                      "src": "/images/catalogo/1662121396496-600x400.webp",
+                      "alt": "Chaquetones estructurales colgados en el vestidor de la estación",
+                      "caption": "Control de tallas por clave"
+                    }
+                  ],
+                  "aplicaciones": [
+                    {
+                      "sector": "Cuerpos de bomberos",
+                      "desc": "Para ampliar una flota que ya opera HERÖ manteniendo modelo, claves y procedimiento de cuidado. La barrera se define con la ficha en mano, no en la orden de compra."
+                    },
+                    {
+                      "sector": "Brigadas industriales",
+                      "desc": "Cuando el requerimiento se especifica por conjunto —DRD, cuello 360°, refuerzos— y la barrera exterior queda abierta a propuesta del proveedor con ficha respaldatoria."
+                    },
+                    {
+                      "sector": "Licitación pública",
+                      "desc": "Aquí conviene exigir la ficha de la configuración como entregable de la propuesta. Si el proceso no admite esperarla, la configuración documentada evita la impugnación."
+                    }
+                  ],
+                  "datoClave": {
+                    "titulo": "Sin gramaje no hay comparación",
+                    "texto": "El gramaje es lo que decide cuánto pesa el ensamble y cuánto tarda el elemento en agotarse. Dos trajes con la misma etiqueta de norma pueden diferir de forma notable en peso, y <strong>ese dato es justo el que no está publicado</strong> para esta barrera."
+                  },
+                  "referencias": [
+                    {
+                      "code": "UL · MH60435",
+                      "desc": "Expediente de certificación del HERÖ publicado por SKÖLD. Rastreable en UL Product iQ. Hay que confirmar si su alcance cubre la configuración Advance."
+                    },
+                    {
+                      "code": "NFPA 1971 · 2018",
+                      "desc": "Edición bajo la que está declarada la certificación UL del modelo. Fue sustituida."
+                    },
+                    {
+                      "code": "NFPA 1970 · 2025",
+                      "desc": "Estándar vigente que consolidó NFPA 1971, 1975, 1981 y 1982. La transición cerró el 18 de marzo de 2026."
+                    },
+                    {
+                      "code": "NFPA 1850 · 2026",
+                      "desc": "Selección, cuidado y mantenimiento del conjunto en servicio. Rige la permanencia del inventario, no la edición de certificación."
+                    },
+                    {
+                      "code": "NOM-017-STPS",
+                      "desc": "Selección, entrega y capacitación en el uso del equipo de protección personal según el riesgo del puesto."
+                    }
+                  ],
+                  "blog": [
+                    "guia-trajes-estructurales-nfpa-1971",
+                    "marcas-trajes-bomberos-comparativa-mexico",
+                    "equipar-brigada-trajes-bomberos-tallaje-licitacion",
+                    "licitaciones-equipos-contra-incendios-mexico",
+                    "nfpa-1971-mexico-norma-bomberos",
+                    "mantenimiento-epp-estructural-nfpa-1851"
+                  ],
+                  "faqs": [
+                    {
+                      "q": "¿Por qué esta ficha no trae composición ni gramaje?",
+                      "a": "Porque el fabricante no los publica para esta configuración. SKÖLD lista Advance entre las cinco barreras exteriores disponibles del HERÖ, pero la ficha técnica que documenta composición y gramaje capa por capa corresponde a la configuración PBI MAX 7.0. Podríamos copiar cifras de una tabla genérica de telas y presentarlas como especificación; no lo hacemos, porque en una licitación ese dato inventado lo firma el comprador, no el proveedor."
+                    },
+                    {
+                      "q": "¿Entonces Advance es peor que PBI MAX 7.0?",
+                      "a": "No hay base para afirmarlo, y tampoco lo contrario. La diferencia verificable hoy es de información, no de desempeño: de las cinco barreras del HERÖ solo PBI MAX publica sus números. Una barrera puede ser excelente y no tener ficha pública. Lo que no se puede es compararlas técnicamente mientras falten composición, gramaje, barreras interiores y los valores de TPP y THL del ensamble armado."
+                    },
+                    {
+                      "q": "¿Puedo comprar el HERÖ con barrera Advance de todas formas?",
+                      "a": "Sí. Es una configuración que el fabricante ofrece y la cotizamos. Lo que hacemos antes es solicitar la ficha de la configuración con las ocho preguntas que están en esta página, para que la propuesta salga con números y con el alcance del certificado confirmado. Si el proceso no admite esperar esa respuesta, te lo decimos y evaluamos ir a PBI MAX 7.0, que ya está documentada."
+                    },
+                    {
+                      "q": "¿Qué sí puedo exigir por escrito si elijo Advance?",
+                      "a": "Todo lo que el fabricante publica a nivel de modelo y que no depende de la barrera exterior: DRD integrado en la espalda, cuello de cobertura 360° sin partes expuestas, arnés de Kevlar integrado, refuerzos Stedshield y Ultrashield en mangas, hombros, codos, rodillas y tobillos, costura de Kevlar doble y triple, cinta ORALITE Ultra Brilliance serie FTP2575-S de 3″, configuración de bolsas y tirantes, tallas de S a 4X y las claves por presentación. Eso ya es un anexo técnico razonable."
+                    },
+                    {
+                      "q": "¿El expediente UL MH60435 cubre la configuración Advance?",
+                      "a": "Es exactamente lo que hay que confirmar por escrito. El expediente es del modelo HERÖ y la configuración documentada en la ficha que conocemos es la de PBI MAX 7.0. La certificación se emite sobre el ensamble completo, así que la existencia del expediente no acredita automáticamente cualquier combinación de las cinco barreras. Pedimos al fabricante que declare el alcance y la edición normativa aplicable a la configuración cotizada."
+                    },
+                    {
+                      "q": "Vi una tabla que dice que Advance es 60 % Kevlar y 40 % Nomex, ¿sirve?",
+                      "a": "Como referencia de industria sí; como especificación de compra, no. El nombre Advance aparece en documentación de prendas distintas —incluida ropa forestal, que no es la misma tela ni el mismo gramaje que una capa exterior estructural— y las fuentes que circulan no coinciden entre sí, ni siquiera en el fabricante de la fibra. Trasladar esa cifra a la configuración Advance del HERÖ sería una suposición con formato de dato. Si alguien te la entrega como especificación, pídele la fuente."
+                    },
+                    {
+                      "q": "¿Cómo redacto la partida si mi licitación ya está en curso?",
+                      "a": "Especifica el conjunto y exige el dato como entregable, en lugar de comprometerte con una cifra que no puedes sostener. Pide conjunto estructural con DRD, cuello 360° y arnés de Kevlar; barrera exterior en mezcla de aramidas con composición y gramaje declarados por el fabricante en ficha técnica; certificado de tercera parte con número de expediente y edición vigente; TPP y THL del ensamble armado; y la ficha de la configuración en español como entregable. Así la partida queda comparable y auditable."
+                    },
+                    {
+                      "q": "¿Cuánto tardan en conseguir la ficha y en cotizar?",
+                      "a": "La cotización sale en menos de 24 horas hábiles con lo que está publicado y con el estado de cada dato pendiente marcado como tal. El tiempo de la ficha depende del fabricante, y no vamos a prometerte un plazo que no controlamos: te decimos cuándo la solicitamos y te avisamos en cuanto llega o si no llega. Antes de cerrar un pedido de brigada enviamos juego de tallas de muestra."
+                    }
+                  ]
+                }
+              },
+              {
+                "marca": "SKÖLD",
+                "modelo": "HERÖ",
+                "variante": "Kombat Flex",
+                "varianteLabel": "Barrera exterior",
+                "slug": "skold-hero-kombat-flex",
+                "badge": "NFPA 1971 · 2018",
+                "estado": "sin-ficha",
+                "img": "/images/catalogo/1705503831904-600x450.webp",
+                "alt": "Detalle de cintas reflejantes trilaminadas y accesorios sobre un traje estructural",
+                "desc": "Barrera exterior seleccionable del HERÖ. El nombre comercial sugiere flexibilidad, pero el fabricante no publica ensayo que lo sostenga: no atribuimos desempeño a un nombre.",
+                "specs": [
+                  "Barrera exterior seleccionable del HERÖ",
+                  "Composición y gramaje no publicados",
+                  "Mismo conjunto: DRD, cuello 360°, arnés Kevlar",
+                  "Sin ensayo publicado de flexibilidad"
+                ],
+                "chip": "Requiere ficha por configuración",
+                "l4": {
+                  "seoTitle": "Traje SKÖLD HERÖ con barrera Kombat Flex",
+                  "seoDescription": "Barrera exterior Kombat Flex del SKÖLD HERÖ: qué documenta el fabricante, qué no, y el protocolo con el que sí se mide la movilidad de un traje estructural.",
+                  "badge": "Alcance por confirmar",
+                  "h1": "Traje estructural SKÖLD HERÖ con barrera exterior Kombat Flex",
+                  "subtitulo": "Kombat Flex es una de las cinco barreras exteriores seleccionables del conjunto HERÖ. El nombre sugiere flexibilidad, pero el fabricante no publica composición, gramaje ni ensayo que lo respalde: aquí está lo que sí se puede exigir y cómo comprobar la movilidad con la prenda en la mano.",
+                  "heroImg": {
+                    "src": "/images/catalogo/1705503831904-600x450.webp",
+                    "alt": "Detalle de cintas reflejantes y lámpara de intervención sobre un traje estructural"
+                  },
+                  "heroBloques": [
+                    {
+                      "label": "Un nombre no es un ensayo",
+                      "texto": "“Flex” es una promesa comercial, y en protección estructural las promesas se verifican o no valen. SKÖLD lista <strong>Kombat Flex</strong> entre las barreras exteriores del HERÖ, pero la ficha del modelo <strong>no publica composición, gramaje ni ningún ensayo de flexibilidad</strong> para esa configuración. No vamos a repetir el nombre como si fuera un dato: preferimos explicarte cómo se mide la movilidad de verdad."
+                    },
+                    {
+                      "label": "Lo que sí puedes comprobar tú mismo",
+                      "texto": "La movilidad de un traje se comprueba con el elemento vestido, no en un catálogo. En esta ficha está el <strong>protocolo de cinco pruebas</strong> que aplicamos en una demo: traslape con brazos arriba, gateo, montar escalera, alcance con guante y vestido cronometrado. Traemos prenda de muestra y <strong>juego de tallas</strong> antes de que cierres cualquier pedido de brigada, con cobertura en los <strong>32 estados</strong>."
+                    }
+                  ],
+                  "heroDatos": [
+                    {
+                      "label": "Estado del dato",
+                      "valor": "Ficha por solicitar"
+                    },
+                    {
+                      "label": "Ensayo de flexibilidad",
+                      "valor": "No publicado"
+                    },
+                    {
+                      "label": "Certificación del modelo",
+                      "valor": "UL · expediente MH60435"
+                    }
+                  ],
+                  "specStrip": [
+                    {
+                      "label": "Capa exterior",
+                      "valor": "Kombat Flex · sin gramaje publicado"
+                    },
+                    {
+                      "label": "Flexibilidad",
+                      "valor": "Sin ensayo declarado"
+                    },
+                    {
+                      "label": "Barreras interiores",
+                      "valor": "Por confirmar en la ficha"
+                    },
+                    {
+                      "label": "Conjunto",
+                      "valor": "HERÖ · DRD, cuello 360°, Kevlar"
+                    },
+                    {
+                      "label": "Movilidad verificable",
+                      "valor": "Protocolo de 5 pruebas en demo"
+                    },
+                    {
+                      "label": "Certificación",
+                      "valor": "UL MH60435 · alcance por confirmar"
+                    }
+                  ],
+                  "secciones": [
+                    {
+                      "id": "que-es",
+                      "eyebrow": "Qué estás evaluando",
+                      "titulo": "Kombat Flex es una capa exterior del HERÖ, no otro traje",
+                      "parrafos": [
+                        "El <strong>SKÖLD HERÖ</strong> admite cinco barreras exteriores: Advance, Kombat Flex, PBI MAX 7.0, Pioneer y Defender 750. Cambiar de barrera no cambia el conjunto —el DRD sigue en la espalda, el cuello sigue siendo el de cobertura 360° y el arnés sigue siendo de Kevlar—, cambia la capa que toca el fuego, que recibe la abrasión y que define cuánto pesa y cómo cae la prenda.",
+                        "De las cinco, esta es la que trae el nombre más sugestivo y la que menos respaldo público tiene. Eso no la descalifica: la obliga a demostrarse. Y como la variable en juego es movilidad —algo que sí se puede sentir con la prenda puesta—, es una de las pocas configuraciones donde una demo bien hecha vale más que una ficha."
+                      ],
+                      "nota": "En la partida tiene que aparecer <strong>la configuración de barreras</strong>, no solo el modelo. Dos propuestas pueden decir “SKÖLD HERÖ” y entregar trajes que no pesan ni caen igual."
+                    },
+                    {
+                      "id": "que-es-flexibilidad",
+                      "eyebrow": "Autoridad técnica",
+                      "titulo": "Qué significaría “flex” si estuviera medido",
+                      "parrafos": [
+                        "En ropa de protección estructural la movilidad no es una propiedad única ni la aporta la tela sola. Se construye —y se puede medir— en cuatro frentes distintos, y un nombre comercial no dice nada de ninguno de los cuatro."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Gramaje y mano de la tela",
+                          "d": "El peso por yarda cuadrada y la rigidez del tejido. Una capa exterior más ligera y de mano más suave se dobla con menos esfuerzo del elemento. Es el dato que ordena todo lo demás, y es justo el que no está publicado."
+                        },
+                        {
+                          "t": "Peso total del ensamble",
+                          "d": "La movilidad percibida depende de las tres capas juntas, no solo del exterior. Un exterior ligero con barrera térmica gruesa puede resultar más pesado que la combinación contraria."
+                        },
+                        {
+                          "t": "Corte y patronaje",
+                          "d": "Corte tipo diamante en la entrepierna, sisas amplias, largo de manga y traslape entre chaquetón y pantalón. Aquí sí hay datos del modelo, y son los que producen la mayor parte de la ganancia real de movimiento."
+                        },
+                        {
+                          "t": "Interfaces",
+                          "d": "Puño con ojillo para pulgar, tirantes con conexión rápida, sujeción del cuello. Un traje flexible con interfaces mal resueltas se siente rígido igual."
+                        }
+                      ],
+                      "nota": "Cuando un proveedor te ofrezca “mayor flexibilidad”, pregúntale <strong>en cuál de esos cuatro frentes</strong> y con qué dato lo sostiene. Si no puede responder, está vendiendo un adjetivo."
+                    },
+                    {
+                      "id": "lo-documentado",
+                      "eyebrow": "Lo que sí está documentado",
+                      "titulo": "El conjunto: aquí está la movilidad que SKÖLD sí publica",
+                      "parrafos": [
+                        "Estos elementos son a nivel de modelo, así que aplican también con Kombat Flex, y varios de ellos son precisamente los que producen ganancia de movimiento. Son los que puedes exigir por escrito y verificar contra la prenda cuando llegue."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Corte tipo diamante",
+                          "d": "En la entrepierna del pantalón. Amplía el rango al subir, gatear y montar escalera; es la mejora de movilidad más tangible del conjunto."
+                        },
+                        {
+                          "t": "Puño de Kevlar con ojillo para pulgar",
+                          "d": "Mantiene la manga en posición al levantar el brazo, así el traslape con el guante no se pierde en pleno movimiento."
+                        },
+                        {
+                          "t": "Tirantes acolchados con conexión rápida",
+                          "d": "Y ajuste elástico posterior en el pantalón. Permiten vestirse en la unidad en movimiento y sostienen el pantalón sin apretar la cintura."
+                        },
+                        {
+                          "t": "Refuerzos Stedshield y Ultrashield",
+                          "d": "En mangas, hombros, codos y rodillas del chaquetón, y Stedshield en los tobillos: exactamente las zonas de flexión y arrastre."
+                        },
+                        {
+                          "t": "DRD integrado",
+                          "d": "Drag Rescue Device en la espalda del chaquetón, alojado dentro de la prenda y no como accesorio externo que estorbe."
+                        },
+                        {
+                          "t": "Cuello tipo escudo 360°",
+                          "d": "Cobertura total sin partes expuestas. Su comportamiento real depende del ajuste y de la interfaz con capucha y casco."
+                        },
+                        {
+                          "t": "Tallas S a 4X",
+                          "d": "En chaquetón, pantalón o traje completo, cada presentación con clave propia. La tabla de medidas UL del exterior se publica para S a 3XL."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "lo-no-publicado",
+                      "eyebrow": "Lo que falta",
+                      "titulo": "Los datos ausentes y qué decide cada uno en movilidad",
+                      "parrafos": [
+                        "Esta tabla es el mapa de lo que hay que resolver antes de firmar, y sirve igual para evaluar a cualquier proveedor que te ofrezca esta configuración."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Dato ausente",
+                          "Qué decide",
+                          "Consecuencia de no tenerlo"
+                        ],
+                        "rows": [
+                          [
+                            "Gramaje en oz/yd²",
+                            "Peso del ensamble y esfuerzo de doblado",
+                            "No se puede estimar la fatiga del elemento ni comparar contra PBI MAX 7.0"
+                          ],
+                          [
+                            "Composición de la tela",
+                            "Rigidez, abrasión y comportamiento ante llama",
+                            "No se anticipa cómo cae la prenda ni cómo responde al desgarre"
+                          ],
+                          [
+                            "Ensayo de flexibilidad",
+                            "Si “Flex” es una propiedad medida o un nombre",
+                            "La afirmación no se puede sostener en un anexo técnico ni en una aclaración de bases"
+                          ],
+                          [
+                            "Barrera de humedad",
+                            "Paso de vapor sobrecalentado y transpirabilidad",
+                            "Es la capa que produce la mayoría de las quemaduras por escaldadura dentro de un traje certificado"
+                          ],
+                          [
+                            "Barrera térmica",
+                            "Tiempo de tolerancia térmica y volumen del conjunto",
+                            "Sin ella no hay TPP del ensamble, y es la que más suma rigidez percibida"
+                          ],
+                          [
+                            "TPP y THL del ensamble",
+                            "Protección térmica y evacuación de calor metabólico",
+                            "El THL bajo saca al elemento por fatiga antes de que el fuego lo toque"
+                          ]
+                        ]
+                      },
+                      "nota": "Ninguno de estos huecos vuelve al traje inseguro: lo vuelve <strong>incomparable</strong>. Y en movilidad eso pesa doble, porque el argumento comercial de la configuración descansa justo en los dos datos que faltan —gramaje y peso del ensamble—."
+                    },
+                    {
+                      "id": "protocolo",
+                      "eyebrow": "Cómo se comprueba",
+                      "titulo": "Protocolo de cinco pruebas para medir movilidad en una demo",
+                      "parrafos": [
+                        "Esto es lo que hacemos en una demostración y lo que puedes exigirle a cualquier proveedor antes de comprometer un presupuesto. Se corre con el elemento vestido con las capas que usará en operación —capucha, casco, guantes, botas y equipo de respiración— porque un traje probado sobre camiseta miente."
+                      ],
+                      "lista": [
+                        {
+                          "t": "1 · Traslape con brazos arriba",
+                          "d": "El elemento levanta los brazos por encima de la cabeza. El chaquetón no debe subir tanto que se pierda el traslape mínimo con el pantalón. Es la prueba que reprueban los trajes dos tallas grandes."
+                        },
+                        {
+                          "t": "2 · Gateo con carga",
+                          "d": "Recorrido en cuatro puntos con línea o herramienta. Se observa si el refuerzo de rodilla cae donde apoya y si el pantalón se enrolla en el tobillo."
+                        },
+                        {
+                          "t": "3 · Montar escalera",
+                          "d": "Tres o cuatro peldaños. Aquí se siente el corte tipo diamante: si la entrepierna limita el paso, el problema es patronaje, no tela."
+                        },
+                        {
+                          "t": "4 · Alcance con guante",
+                          "d": "Extender el brazo y sujetar una herramienta. Se verifica que el puño mantenga posición y que la manga y el guante sigan traslapados en extensión completa."
+                        },
+                        {
+                          "t": "5 · Vestido cronometrado",
+                          "d": "De rack a listo. Mide lo que suman en la práctica el cierre de escape, los tirantes con conexión rápida y la sujeción del cuello."
+                        }
+                      ],
+                      "nota": "Corre el protocolo con <strong>al menos dos tallas y dos complexiones distintas</strong>, incluyendo corte para mujer si tu cuerpo lo requiere. Una prueba con un solo elemento mide el ajuste de ese elemento, no el del traje."
+                    },
+                    {
+                      "id": "certificacion",
+                      "eyebrow": "Certificación",
+                      "titulo": "El certificado no dice nada sobre movilidad",
+                      "parrafos": [
+                        "Conviene tenerlo claro antes de leer cualquier propuesta: <strong>ningún certificado acredita flexibilidad</strong>. Lo que SKÖLD publica para el HERÖ es certificación por laboratorio UL bajo NFPA 1971 edición 2018, expediente <strong>MH60435</strong>, y lo que esa certificación cubre es desempeño térmico y de diseño del ensamble, no rango de movimiento.",
+                        "De ahí que esta ficha insista en la demo. El papel resuelve la pregunta de protección; la prueba con el elemento vestido resuelve la de movilidad. Necesitas las dos, y para la primera hay que pedirle al fabricante que declare si el expediente cubre la combinación con Kombat Flex y bajo qué edición."
+                      ],
+                      "nota": "El dato del certificado que sí se relaciona con movilidad es el <strong>THL</strong>: mide cuánto calor metabólico evacua el traje, y un THL bajo saca al elemento de operación por fatiga aunque el rango de movimiento sea excelente. Pídelo junto con el TPP."
+                    },
+                    {
+                      "id": "anexo",
+                      "eyebrow": "Licitación",
+                      "titulo": "Cómo pedir movilidad en una partida sin escribir un adjetivo",
+                      "parrafos": [
+                        "“Traje flexible” no es especificable ni evaluable: cualquier proveedor puede jurar que cumple. Estas son las formas de pedir lo mismo de manera comparable y auditable."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "En la partida escribe",
+                          "En lugar de"
+                        ],
+                        "rows": [
+                          [
+                            "Pantalón con corte tipo diamante en entrepierna",
+                            "“Pantalón de movimiento amplio”"
+                          ],
+                          [
+                            "Puño con ojillo para pulgar y traslape verificable con guante en extensión completa",
+                            "“Puño ergonómico”"
+                          ],
+                          [
+                            "Tirantes acolchados con conexión rápida y ajuste elástico posterior",
+                            "“Sujeción cómoda”"
+                          ],
+                          [
+                            "Gramaje de la capa exterior declarado en oz/yd² por el fabricante en ficha técnica",
+                            "“Barrera exterior Kombat Flex ligera”"
+                          ],
+                          [
+                            "Demostración con prenda de muestra y protocolo de movilidad como requisito de evaluación",
+                            "sin mención"
+                          ],
+                          [
+                            "TPP y THL del ensamble armado, declarados por el fabricante",
+                            "sin mención"
+                          ]
+                        ]
+                      },
+                      "nota": "Redactada así, la partida se evalúa con <strong>documento y prueba</strong>, no con opiniones sobre telas. Quien no pueda entregar la ficha ni presentar prenda queda fuera por incumplimiento, no por discusión técnica."
+                    },
+                    {
+                      "id": "cuando-conviene",
+                      "eyebrow": "Criterio de selección",
+                      "titulo": "Cuándo la demo justifica el esfuerzo",
+                      "parrafos": [
+                        "Esta configuración se decide en la prueba, no en la mesa. Estos son los casos donde montar la demo vale el tiempo que cuesta, y el caso donde no."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Vale la demo",
+                          "d": "Tu personal ya se quejó de movilidad y tienes la queja documentada. Una prueba con protocolo convierte una molestia en un criterio de compra."
+                        },
+                        {
+                          "t": "Vale la demo",
+                          "d": "Tu perfil operativo carga de rescate vehicular, espacios confinados o trabajo en posiciones forzadas, donde el rango de movimiento se cobra en cada salida."
+                        },
+                        {
+                          "t": "Vale la demo",
+                          "d": "Ya operas HERÖ y quieres comparar variantes sin cambiar modelo, claves ni taller de reparación."
+                        },
+                        {
+                          "t": "No vale esperar",
+                          "d": "Licitación con anexo cerrado y fecha encima. Ahí ni la demo ni la ficha llegan a tiempo, y PBI MAX 7.0 es la que sostiene el expediente."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "siguiente-paso",
+                      "eyebrow": "Qué hacemos nosotros",
+                      "titulo": "De un nombre comercial a una prueba con testigos",
+                      "parrafos": [
+                        "Solicitamos al fabricante la ficha de la configuración con composición, gramaje, barreras interiores, valores de TPP y THL del ensamble armado y el alcance del certificado. En paralelo organizamos la demo con prenda de muestra y corremos el protocolo con tu personal, para que la decisión tenga documento y experiencia y no solo una de las dos.",
+                        "Si la ficha no llega o llega incompleta, te lo decimos y comparamos contra PBI MAX 7.0 con lo que sí está publicado. Antes de cerrar un pedido de brigada enviamos <strong>juego de tallas de muestra</strong>: la tabla UL describe la prenda extendida, no el cuerpo del elemento."
+                      ]
+                    }
+                  ],
+                  "galeria": [
+                    {
+                      "src": "/images/catalogo/1690210795620-600x450.webp",
+                      "alt": "Bombero con guantes de intervención sujetando una herramienta de mango largo",
+                      "caption": "Alcance con guante en extensión"
+                    },
+                    {
+                      "src": "/images/catalogo/1563062067-9d-600x450.webp",
+                      "alt": "Bombero abriendo una puerta metálica con guantes de intervención",
+                      "caption": "Rango de movimiento en maniobra"
+                    },
+                    {
+                      "src": "/images/catalogo/1690210795713-600x450.webp",
+                      "alt": "Dos bomberos con casco y visera durante una operación",
+                      "caption": "El conjunto completo en operación"
+                    },
+                    {
+                      "src": "/images/catalogo/1666518809220-600x400.webp",
+                      "alt": "Manos con guantes de intervención sujetando equipo de bombero",
+                      "caption": "Interfaz manga y guante"
+                    }
+                  ],
+                  "aplicaciones": [
+                    {
+                      "sector": "Cuerpos de bomberos",
+                      "desc": "Cuando la movilidad es una queja documentada de tu personal y puedes correr una demo con protocolo antes de decidir. La barrera se define con ficha y prueba, no en la orden de compra."
+                    },
+                    {
+                      "sector": "Rescate y espacios confinados",
+                      "desc": "Operaciones con alta frecuencia de gateo, arrastre y trabajo en posiciones forzadas, donde el rango de movimiento se cobra en cada salida y conviene probar antes de comprar volumen."
+                    },
+                    {
+                      "sector": "Licitación pública",
+                      "desc": "Exige la ficha de la configuración y la demostración con prenda de muestra como requisitos de evaluación. Si el proceso no admite esperarlas, la configuración documentada evita la impugnación."
+                    }
+                  ],
+                  "datoClave": {
+                    "titulo": "“Flex” no es un valor de ensayo",
+                    "texto": "Ningún organismo certifica “flexibilidad” en un traje estructural. Lo que sí se mide es <strong>gramaje, peso del ensamble y THL</strong>, y lo que sí se comprueba es el rango de movimiento con la prenda puesta. Pide los tres primeros por escrito y el cuarto en demo."
+                  },
+                  "referencias": [
+                    {
+                      "code": "UL · MH60435",
+                      "desc": "Expediente de certificación del HERÖ publicado por SKÖLD. Rastreable en UL Product iQ. Hay que confirmar si su alcance cubre la configuración Kombat Flex."
+                    },
+                    {
+                      "code": "NFPA 1971 · 2018",
+                      "desc": "Edición bajo la que está declarada la certificación UL del modelo. Fue sustituida."
+                    },
+                    {
+                      "code": "NFPA 1970 · 2025",
+                      "desc": "Estándar vigente que consolidó NFPA 1971, 1975, 1981 y 1982. Establece los mínimos de TPP y THL del ensamble."
+                    },
+                    {
+                      "code": "NFPA 1850 · 2026",
+                      "desc": "Selección, cuidado y mantenimiento del conjunto en servicio. Rige la permanencia del inventario, no la edición de certificación."
+                    },
+                    {
+                      "code": "NOM-017-STPS",
+                      "desc": "Selección, entrega y capacitación en el uso del equipo de protección personal según el riesgo del puesto."
+                    }
+                  ],
+                  "blog": [
+                    "guia-trajes-estructurales-nfpa-1971",
+                    "equipar-brigada-trajes-bomberos-tallaje-licitacion",
+                    "marcas-trajes-bomberos-comparativa-mexico",
+                    "rescate-vehicular-tecnicas-equipos",
+                    "nfpa-1971-mexico-norma-bomberos",
+                    "mantenimiento-epp-estructural-nfpa-1851"
+                  ],
+                  "faqs": [
+                    {
+                      "q": "¿“Kombat Flex” significa que el traje es más flexible?",
+                      "a": "Significa que así se llama la tela. El fabricante no publica composición, gramaje ni ningún ensayo de flexibilidad para esta configuración, y ningún organismo certifica “flexibilidad” en un traje estructural. Lo que sí existe son datos que se relacionan con la movilidad —gramaje de la capa exterior, peso del ensamble armado y THL— y una comprobación práctica con la prenda puesta. Pedimos los datos al fabricante y organizamos la comprobación; lo que no hacemos es repetir el nombre como si fuera un resultado."
+                    },
+                    {
+                      "q": "¿Cómo mido la movilidad de un traje antes de comprar?",
+                      "a": "Con el elemento vestido con todas las capas que usará en operación, incluida capucha, casco, guantes, botas y equipo de respiración. En esta ficha está el protocolo de cinco pruebas que usamos: traslape con brazos arriba, gateo con carga, montar escalera, alcance con guante y vestido cronometrado. Córrelo con al menos dos tallas y dos complexiones distintas; una prueba con un solo elemento mide el ajuste de ese elemento, no el del traje."
+                    },
+                    {
+                      "q": "¿Qué aporta más movilidad, la tela o el corte?",
+                      "a": "En la práctica, el corte y las interfaces. El corte tipo diamante en la entrepierna, las sisas, el largo de manga, el puño con ojillo para pulgar y los tirantes con conexión rápida producen la mayor parte de la ganancia real de movimiento, y esos elementos sí están documentados a nivel de modelo. La tela influye por gramaje y mano, pero un exterior ligero con mal patronaje se siente rígido igual."
+                    },
+                    {
+                      "q": "¿Entonces Kombat Flex es peor que PBI MAX 7.0?",
+                      "a": "No hay base para afirmarlo, ni tampoco lo contrario. La diferencia verificable hoy es de información: de las cinco barreras del HERÖ solo PBI MAX publica composición y gramaje. Una barrera puede ser excelente y no tener ficha pública. Lo que no se puede es compararlas técnicamente mientras falten composición, gramaje, barreras interiores y los valores de TPP y THL del ensamble armado."
+                    },
+                    {
+                      "q": "¿Puedo comprar el HERÖ con Kombat Flex de todas formas?",
+                      "a": "Sí, es una configuración que el fabricante ofrece y la cotizamos. Antes solicitamos la ficha de la configuración y, si la movilidad es tu criterio de decisión, organizamos la demo con prenda de muestra. Si tu proceso no admite esperar la respuesta del fabricante, te lo decimos y evaluamos ir a PBI MAX 7.0, que ya está documentada."
+                    },
+                    {
+                      "q": "¿Qué sí puedo exigir por escrito si elijo Kombat Flex?",
+                      "a": "Todo lo que SKÖLD publica a nivel de modelo: DRD integrado en la espalda, cuello de cobertura 360° sin partes expuestas, arnés de Kevlar integrado, refuerzos Stedshield y Ultrashield en mangas, hombros, codos, rodillas y tobillos, costura de Kevlar doble y triple, puño de Kevlar con ojillo para pulgar, cinta ORALITE Ultra Brilliance serie FTP2575-S de 3″, corte tipo diamante, tirantes con conexión rápida, tallas de S a 4X y las claves por presentación."
+                    },
+                    {
+                      "q": "¿El expediente UL MH60435 cubre la configuración Kombat Flex?",
+                      "a": "Es lo que hay que confirmar por escrito. El expediente es del modelo HERÖ y la configuración documentada en la ficha que conocemos es la de PBI MAX 7.0. La certificación se emite sobre el ensamble completo, así que la existencia del expediente no acredita automáticamente cualquier combinación de las cinco barreras. Pedimos al fabricante que declare alcance y edición normativa aplicables a la configuración cotizada."
+                    },
+                    {
+                      "q": "¿Cuánto tardan en organizar una demo y en cotizar?",
+                      "a": "La cotización sale en menos de 24 horas hábiles con lo que está publicado y con el estado de cada dato pendiente marcado como tal. La demo depende de disponibilidad de prenda de muestra en la talla que necesitas y te damos fecha comprometida al confirmarla. El tiempo de respuesta del fabricante para la ficha no lo controlamos, así que no te prometemos un plazo: te decimos cuándo la solicitamos y te avisamos en cuanto llega."
+                    }
+                  ]
+                }
+              },
+              {
+                "marca": "SKÖLD",
+                "modelo": "HERÖ",
+                "variante": "Pioneer",
+                "varianteLabel": "Barrera exterior",
+                "slug": "skold-hero-pioneer",
+                "badge": "NFPA 1971 · 2018",
+                "estado": "sin-ficha",
+                "img": "/images/catalogo/1651368615152-600x450.webp",
+                "alt": "Rack de equipo de protección personal estructural listo por turno en la estación",
+                "desc": "Barrera exterior seleccionable del HERÖ. El certificado se emite sobre el <strong>ensamble completo</strong>: cambiar la capa exterior cambia el alcance del expediente.",
+                "specs": [
+                  "Barrera exterior seleccionable del HERÖ",
+                  "Composición y gramaje no publicados",
+                  "El certificado aplica al ensamble, no a la capa",
+                  "Se solicita ficha de la configuración"
+                ],
+                "chip": "Requiere ficha por configuración",
+                "l4": {
+                  "seoTitle": "Traje SKÖLD HERÖ con barrera Pioneer",
+                  "seoDescription": "Barrera exterior Pioneer del SKÖLD HERÖ: por qué el certificado se emite sobre el ensamble y no sobre la capa, cómo leerlo y qué exigir antes de comprar.",
+                  "badge": "Alcance por confirmar",
+                  "h1": "Traje estructural SKÖLD HERÖ con barrera exterior Pioneer",
+                  "subtitulo": "Pioneer es una de las cinco barreras exteriores seleccionables del conjunto HERÖ. El fabricante no publica su composición ni su gramaje, y hay algo más importante que eso: cambiar la capa exterior cambia el ensamble certificado, así que el alcance del certificado se confirma por configuración y no por modelo.",
+                  "heroImg": {
+                    "src": "/images/catalogo/1651368615152-600x450.webp",
+                    "alt": "Rack de equipo de protección personal estructural listo en una estación de bomberos"
+                  },
+                  "heroBloques": [
+                    {
+                      "label": "El error de compra más caro no es el precio",
+                      "texto": "Es aceptar un certificado que no ampara lo que te entregaron. NFPA no certifica telas: certifica <strong>el ensamble armado</strong> —capa exterior, barrera de humedad y barrera térmica trabajando juntas—. Sustituir una capa por otra “equivalente” produce un ensamble distinto que necesita su propio alcance certificado, aunque el modelo y el número de expediente sean los mismos."
+                    },
+                    {
+                      "label": "Pedimos el alcance por escrito, siempre",
+                      "texto": "Como distribuidores autorizados solicitamos al fabricante que declare si el expediente <strong>UL MH60435</strong> cubre la configuración con Pioneer y bajo qué edición normativa, además de composición, gramaje y barreras interiores. Con eso tu expediente de compra aguanta una auditoría de protección civil o una verificación STPS. Cobertura en los <strong>32 estados de la República</strong>."
+                    }
+                  ],
+                  "heroDatos": [
+                    {
+                      "label": "Estado del dato",
+                      "valor": "Ficha por solicitar"
+                    },
+                    {
+                      "label": "Certificación del modelo",
+                      "valor": "UL · expediente MH60435"
+                    },
+                    {
+                      "label": "Alcance del ensamble",
+                      "valor": "Por confirmar"
+                    }
+                  ],
+                  "specStrip": [
+                    {
+                      "label": "Capa exterior",
+                      "valor": "Pioneer · sin gramaje publicado"
+                    },
+                    {
+                      "label": "Barrera de humedad",
+                      "valor": "Por confirmar en la ficha"
+                    },
+                    {
+                      "label": "Barrera térmica",
+                      "valor": "Por confirmar en la ficha"
+                    },
+                    {
+                      "label": "Ensamble certificado",
+                      "valor": "Se confirma por configuración"
+                    },
+                    {
+                      "label": "Conjunto",
+                      "valor": "HERÖ · DRD, cuello 360°, Kevlar"
+                    },
+                    {
+                      "label": "Expediente",
+                      "valor": "UL MH60435 · rastreable"
+                    }
+                  ],
+                  "secciones": [
+                    {
+                      "id": "que-es",
+                      "eyebrow": "Qué estás evaluando",
+                      "titulo": "Pioneer es una capa exterior del HERÖ, y eso tiene consecuencias documentales",
+                      "parrafos": [
+                        "El <strong>SKÖLD HERÖ</strong> admite cinco barreras exteriores: Advance, Kombat Flex, PBI MAX 7.0, Pioneer y Defender 750. El conjunto no cambia —DRD en la espalda, cuello de cobertura 360°, arnés de Kevlar, refuerzos y claves de producto siguen siendo los del modelo—, pero sí cambia la combinación de tres capas que se certifica.",
+                        "Esa distinción es la que hace que esta ficha exista. No es un detalle burocrático: es la diferencia entre entregar un expediente que resiste una auditoría y entregar un expediente que se cae en la primera pregunta. Y aplica igual a cualquier marca, no solo a SKÖLD."
+                      ],
+                      "nota": "En la partida tiene que aparecer <strong>la configuración de barreras completa</strong>, no solo el modelo. “SKÖLD HERÖ” describe una familia, no un ensamble certificado."
+                    },
+                    {
+                      "id": "como-funciona",
+                      "eyebrow": "Autoridad técnica",
+                      "titulo": "Cómo funciona una certificación de ensamble",
+                      "parrafos": [
+                        "Los requisitos de desempeño térmico de un traje estructural no se pueden verificar capa por capa, porque el desempeño lo produce la interacción entre ellas. El aire atrapado entre capas, la conducción a través de las costuras y la forma en que la barrera de humedad frena el vapor solo existen en el conjunto armado.",
+                        "Por eso los dos números que la norma exige —<strong>TPP</strong>, que mide la protección térmica, y <strong>THL</strong>, que mide cuánto calor metabólico evacua el traje— se ensayan sobre el <strong>composite</strong>: la muestra de las tres capas en el orden y con los materiales de la configuración real. Cambia una capa y el composite es otro."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Certificado de tela ≠ certificado de traje",
+                          "d": "Un fabricante de tejidos puede acreditar que su tela cumple ciertos requisitos. Eso no acredita el ensamble, y una propuesta que presenta el certificado de la tela como certificado del traje está cambiando una cosa por otra."
+                        },
+                        {
+                          "t": "El expediente es del modelo; el alcance, de la configuración",
+                          "d": "Un mismo número de expediente puede amparar varias configuraciones, algunas o solo una. La existencia del expediente no dice cuáles. Eso se pregunta."
+                        },
+                        {
+                          "t": "Sustituir una capa invalida el conjunto certificado",
+                          "d": "Aunque la capa nueva esté aprobada por su cuenta. Aplica en compra y también en reparación: un parche con material distinto rompe el ensamble."
+                        },
+                        {
+                          "t": "La etiqueta permanente es la prueba por unidad",
+                          "d": "Cosida al interior, con fabricante, modelo, fecha, número de serie, composición de las tres capas y marca del organismo certificador. Sin etiqueta no hay certificación, por buena que sea la propuesta."
+                        }
+                      ],
+                      "nota": "Este criterio no es opinión nuestra: es la razón por la que NFPA especifica ensayos sobre el composite y no sobre materiales aislados. Sirve para evaluar a cualquier proveedor, incluidos nosotros."
+                    },
+                    {
+                      "id": "leer-certificado",
+                      "eyebrow": "Cómo se verifica",
+                      "titulo": "Cómo leer un certificado y rastrearlo",
+                      "parrafos": [
+                        "Un certificado útil se puede verificar sin depender de quien te lo entrega. Estos son los campos que hay que buscar y en ese orden; si falta uno, ese es el que hay que pedir."
+                      ],
+                      "lista": [
+                        {
+                          "t": "1 · Organismo certificador",
+                          "d": "Quién emitió el documento. Si el emisor es el propio fabricante, es una declaración de conformidad, no una certificación de tercera parte. Son cosas distintas y ambas tienen su lugar, pero no se sustituyen."
+                        },
+                        {
+                          "t": "2 · Número de expediente",
+                          "d": "En el HERÖ, UL MH60435. Es lo que permite rastrear el registro en UL Product iQ y confirmar alcance, modelo y edición amparados sin intermediarios."
+                        },
+                        {
+                          "t": "3 · Edición normativa citada",
+                          "d": "Debe decir norma y año. “Cumple NFPA” sin edición no es verificable, y una edición sustituida cambia lo que significa el documento."
+                        },
+                        {
+                          "t": "4 · Modelo y configuración amparados",
+                          "d": "Aquí es donde se confirma si tu combinación de barreras está incluida. Es el campo que más se omite y el que más importa en esta ficha."
+                        },
+                        {
+                          "t": "5 · Vigencia y trazabilidad a la unidad",
+                          "d": "Que lo declarado en el certificado coincida con la etiqueta permanente de la prenda que recibiste, incluyendo número de serie y fecha de fabricación."
+                        }
+                      ],
+                      "nota": "Guarda el certificado <strong>junto con la lista de números de serie recibidos</strong>. En una auditoría lo que se revisa es la correspondencia entre documento y prenda, no la existencia del documento."
+                    },
+                    {
+                      "id": "certificacion",
+                      "eyebrow": "Certificación",
+                      "titulo": "El caso concreto de Pioneer",
+                      "parrafos": [
+                        "Aplicando lo anterior a esta configuración: el expediente <strong>UL MH60435</strong> existe, es del modelo HERÖ y está declarado bajo NFPA 1971 edición 2018. La ficha que documenta un composite completo —capa exterior, barrera de humedad y barrera térmica— es la de PBI MAX 7.0. Para Pioneer, dos de las tres capas están sin declarar.",
+                        "Eso no significa que la configuración no esté certificada. Significa que <strong>no lo sabemos desde fuera</strong>, y que la única forma de saberlo es una declaración escrita del fabricante. Es la pregunta que hacemos antes de cotizar y la que te recomendamos incluir en tus bases."
+                      ],
+                      "nota": "Además hay que fechar el documento: NFPA 1971 fue consolidada en <strong>NFPA 1970 (1971) edición 2025</strong> y la transición cerró el 18 de marzo de 2026. Un certificado nuevo tiene que citar la edición vigente; uno anterior sigue siendo válido para el inventario que ampara, bajo el régimen de NFPA 1850 (1851)."
+                    },
+                    {
+                      "id": "lo-documentado",
+                      "eyebrow": "Lo que sí se verifica",
+                      "titulo": "Lo que se comprueba en la recepción, prenda por prenda",
+                      "parrafos": [
+                        "Estas características son de modelo, así que aplican con Pioneer, y todas comparten una propiedad útil: <strong>se pueden confrontar contra la prenda física y contra la etiqueta permanente</strong> el día de la entrega. Es la parte del expediente que no depende de que llegue la ficha de la barrera."
+                      ],
+                      "lista": [
+                        {
+                          "t": "DRD en la espalda",
+                          "d": "Abre el compartimento y confirma que el dispositivo está alojado y replegado. Un DRD inaccesible existe en el catálogo y no en la emergencia."
+                        },
+                        {
+                          "t": "Continuidad del cuello",
+                          "d": "Verifica con capucha y casco puestos que no queden partes expuestas alrededor del cuello. Es una comprobación de ajuste, no de ficha."
+                        },
+                        {
+                          "t": "Arnés integrado",
+                          "d": "Confirma que está incorporado a la prenda y no entregado como accesorio suelto. Son dos productos distintos con la misma descripción comercial."
+                        },
+                        {
+                          "t": "Ubicación de refuerzos",
+                          "d": "Stedshield y Ultrashield deben caer en mangas, hombros, codos y rodillas, y Stedshield en los tobillos. Se comprueba al tacto en dos minutos."
+                        },
+                        {
+                          "t": "Material del hilo",
+                          "d": "Costura de Kevlar doble y triple. Es lo primero que cambia una reparación no autorizada, así que conviene fotografiarlo en la recepción como línea base."
+                        },
+                        {
+                          "t": "Serie de la cinta",
+                          "d": "ORALITE® Ultra Brilliance™ FTP2575-S de 3″ más bies plata. Contrasta la serie contra la propuesta: es un dato verificable, no una descripción."
+                        },
+                        {
+                          "t": "Etiqueta permanente",
+                          "d": "Cosida al interior, con fabricante, modelo, fecha, número de serie, composición de las tres capas y marca del organismo certificador. Es la prueba por unidad de todo lo anterior."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "lo-no-publicado",
+                      "eyebrow": "Lo que falta",
+                      "titulo": "Sin las tres capas no se sabe qué composite se certificó",
+                      "parrafos": [
+                        "Los datos ausentes de esta configuración no son solo un problema de comparación: son exactamente los que definen el ensamble que un certificado tendría que amparar."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Dato ausente",
+                          "Qué decide",
+                          "Consecuencia de no tenerlo"
+                        ],
+                        "rows": [
+                          [
+                            "Composición de la capa exterior",
+                            "Comportamiento ante llama y abrasión",
+                            "No se identifica el material que forma parte del composite certificado"
+                          ],
+                          [
+                            "Gramaje en oz/yd²",
+                            "Peso del ensamble y carga térmica",
+                            "No hay forma de comparar fatiga del elemento contra PBI MAX 7.0"
+                          ],
+                          [
+                            "Barrera de humedad",
+                            "Paso de vapor sobrecalentado",
+                            "Es una de las tres capas del composite: sin ella el ensamble no está definido"
+                          ],
+                          [
+                            "Barrera térmica",
+                            "Tiempo real de tolerancia térmica",
+                            "Cierra el composite; sin las tres capas no hay TPP del conjunto"
+                          ],
+                          [
+                            "TPP y THL del ensamble",
+                            "Los dos valores que exige la norma",
+                            "Sin ellos no hay base técnica para aceptar ni rechazar la propuesta"
+                          ],
+                          [
+                            "Alcance del certificado",
+                            "Si el expediente ampara esta combinación",
+                            "El expediente puede existir y no cubrir la configuración entregada"
+                          ]
+                        ]
+                      },
+                      "nota": "Fíjate en el patrón: cuatro de los seis huecos son <strong>capas o valores del composite</strong>. No es casualidad. Sin las tres capas declaradas no hay ensamble definido, y sin ensamble definido no hay alcance certificado que pueda confirmarse."
+                    },
+                    {
+                      "id": "reparacion",
+                      "eyebrow": "Después de la compra",
+                      "titulo": "El ensamble también se rompe en el taller",
+                      "parrafos": [
+                        "El criterio de “certificación sobre el ensamble” no termina en la entrega. Cada reparación es una intervención sobre el conjunto certificado, y ahí es donde muchos cuerpos pierden sin saberlo la condición que pagaron.",
+                        "<strong>NFPA 1850 (1851)</strong> exige que la reparación la haga el fabricante o un taller verificado por él, con material e hilo del mismo tipo certificado. Un parche cosido con hilo común abre un puente térmico donde se supone que hay costura, y una cinta reflejante genérica sustituyendo la serie especificada cambia el conjunto que se evaluó."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Reparación con material equivalente",
+                          "d": "“Equivalente” no es una categoría certificada. El material tiene que ser el mismo tipo aprobado para ese ensamble."
+                        },
+                        {
+                          "t": "Cambio de barrera de humedad",
+                          "d": "Casi siempre significa reemplazo de la prenda, no reparación. Es la capa que más se degrada y la que menos se inspecciona."
+                        },
+                        {
+                          "t": "Lavado no especializado",
+                          "d": "Lavadora doméstica, cloro y suavizante destruyen la barrera de humedad sin dejar señal visible. El traje sigue viéndose bien y ya no protege igual."
+                        },
+                        {
+                          "t": "Retiro obligatorio",
+                          "d": "A los 10 años de la fecha de fabricación, no de la compra. Pide la fecha por número de serie antes de firmar."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "anexo",
+                      "eyebrow": "Licitación",
+                      "titulo": "Cómo exigir alcance certificado en una partida",
+                      "parrafos": [
+                        "Estas redacciones cierran la puerta a que te entreguen un certificado que no ampara lo que compraste, y son evaluables sin discutir de telas."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "En la partida escribe",
+                          "En lugar de"
+                        ],
+                        "rows": [
+                          [
+                            "Certificado de tercera parte con número de expediente, organismo emisor y edición normativa vigente",
+                            "“Cumple NFPA”"
+                          ],
+                          [
+                            "Declaración del fabricante de que el expediente ampara la configuración de barreras cotizada",
+                            "“Modelo certificado”"
+                          ],
+                          [
+                            "Composición de las tres capas declarada en ficha técnica y coincidente con la etiqueta permanente",
+                            "“Barrera exterior de aramida”"
+                          ],
+                          [
+                            "TPP y THL del ensamble armado, declarados por el fabricante",
+                            "sin mención"
+                          ],
+                          [
+                            "Listado de números de serie y fechas de fabricación por prenda entregada",
+                            "sin mención"
+                          ],
+                          [
+                            "Carta de taller autorizado para reparación con material del mismo tipo certificado",
+                            "sin mención"
+                          ]
+                        ]
+                      },
+                      "nota": "Con esas seis líneas la evaluación se vuelve <strong>documental y objetiva</strong>: quien no pueda entregarlas queda fuera por incumplimiento, no por una discusión de criterios."
+                    },
+                    {
+                      "id": "cuando-conviene",
+                      "eyebrow": "Criterio de selección",
+                      "titulo": "Cuándo el alcance se puede resolver a tiempo",
+                      "parrafos": [
+                        "Con esta configuración la decisión no es sobre la tela, es sobre si la documentación llega antes que tu fecha límite. Así lo ordenamos."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Adelante",
+                          "d": "El fabricante puede emitir la declaración de alcance dentro de tu calendario. Con ese documento en mano, Pioneer compite en igualdad."
+                        },
+                        {
+                          "t": "Adelante",
+                          "d": "Ya operas HERÖ y quieres ampliar flota conservando modelo, claves, taller autorizado y programa de cuidado."
+                        },
+                        {
+                          "t": "Adelante con reserva",
+                          "d": "Exploras costo o disponibilidad y tienes margen para verificar documentación antes de comprometer presupuesto."
+                        },
+                        {
+                          "t": "Mejor no",
+                          "d": "El expediente va a auditoría de protección civil o verificación STPS con fecha fija. Con dos capas sin declarar, ahí PBI MAX 7.0 es la opción que no te expone."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "siguiente-paso",
+                      "eyebrow": "Qué hacemos nosotros",
+                      "titulo": "De un expediente de modelo a un alcance por configuración",
+                      "parrafos": [
+                        "Solicitamos al fabricante la ficha de la configuración y, sobre todo, la declaración de alcance: si el expediente UL MH60435 cubre la combinación con Pioneer y bajo qué edición. Con esa respuesta te armamos la propuesta con partidas, claves de producto y tallas verificadas contra la tabla de medidas.",
+                        "Si el alcance no se confirma, te lo decimos y comparamos contra PBI MAX 7.0 con lo que sí está publicado. No vamos a presentarte un certificado de modelo como si fuera un certificado de tu configuración: ese atajo lo paga el comprador en la auditoría, no el proveedor en la venta."
+                      ]
+                    }
+                  ],
+                  "galeria": [
+                    {
+                      "src": "/images/catalogo/1563062067-77-600x450.webp",
+                      "alt": "Bombero con traje estructural completo frente a un incendio",
+                      "caption": "El ensamble en servicio"
+                    },
+                    {
+                      "src": "/images/catalogo/1592235905030-600x450.webp",
+                      "alt": "Bombero con máscara facial y capucha bajo el casco estructural",
+                      "caption": "Interfaz entre elementos del conjunto"
+                    },
+                    {
+                      "src": "/images/catalogo/1735107673023-600x400.webp",
+                      "alt": "Bombero con capucha aramídica y protector bajo el casco",
+                      "caption": "Continuidad de la protección"
+                    },
+                    {
+                      "src": "/images/catalogo/1575507371202-600x450.webp",
+                      "alt": "Cascos amarillos con visera abatible en primer plano",
+                      "caption": "Verificación por unidad"
+                    }
+                  ],
+                  "aplicaciones": [
+                    {
+                      "sector": "Licitación pública",
+                      "desc": "Aquí es donde el alcance del certificado decide el proceso. Exige declaración del fabricante de que el expediente ampara la configuración cotizada, y listado de números de serie contra el certificado entregado."
+                    },
+                    {
+                      "sector": "Cuerpos de bomberos",
+                      "desc": "Para ampliar una flota que ya opera HERÖ manteniendo modelo, claves y taller de reparación autorizado. El expediente de compra debe resistir una auditoría de protección civil."
+                    },
+                    {
+                      "sector": "Brigadas industriales",
+                      "desc": "Dotación conforme a NOM-002-STPS con expediente documental completo para auditoría interna y de cliente. La configuración de barreras se declara, no se asume."
+                    }
+                  ],
+                  "datoClave": {
+                    "titulo": "Un expediente no es un alcance",
+                    "texto": "<strong>UL MH60435</strong> es el expediente del modelo HERÖ. Que exista no acredita que cubra la combinación con Pioneer: la certificación se emite sobre el ensamble de tres capas. Pide la <strong>declaración de alcance por configuración</strong> por escrito."
+                  },
+                  "referencias": [
+                    {
+                      "code": "UL · MH60435",
+                      "desc": "Expediente de certificación del HERÖ publicado por SKÖLD. Rastreable en UL Product iQ: ahí se confirma alcance, modelo y edición amparados."
+                    },
+                    {
+                      "code": "NFPA 1971 · 2018",
+                      "desc": "Edición bajo la que está declarada la certificación UL del modelo. Establecía requisitos de diseño, desempeño, ensayo y certificación de conjuntos estructurales. Fue sustituida."
+                    },
+                    {
+                      "code": "NFPA 1970 · 2025",
+                      "desc": "Estándar vigente que consolidó NFPA 1971, 1975, 1981 y 1982. La transición cerró el 18 de marzo de 2026, así que un certificado emitido hoy debe citar esta edición."
+                    },
+                    {
+                      "code": "NFPA 1850 · 2026",
+                      "desc": "Selección, cuidado y mantenimiento. Es la norma que rige la permanencia del inventario en servicio y las condiciones de reparación."
+                    },
+                    {
+                      "code": "NOM-017-STPS",
+                      "desc": "Selección, entrega y capacitación en el uso del equipo de protección personal según el riesgo del puesto."
+                    }
+                  ],
+                  "blog": [
+                    "nfpa-1971-mexico-norma-bomberos",
+                    "guia-trajes-estructurales-nfpa-1971",
+                    "licitaciones-equipos-contra-incendios-mexico",
+                    "mantenimiento-epp-estructural-nfpa-1851",
+                    "marcas-trajes-bomberos-comparativa-mexico",
+                    "equipar-brigada-trajes-bomberos-tallaje-licitacion"
+                  ],
+                  "faqs": [
+                    {
+                      "q": "¿Por qué el certificado no se emite sobre la tela?",
+                      "a": "Porque el desempeño térmico de un traje lo produce la interacción entre las tres capas, no cada una por separado. El aire atrapado entre capas, la conducción a través de las costuras y la forma en que la barrera de humedad frena el vapor solo existen en el conjunto armado. Por eso los dos valores que exige la norma —TPP y THL— se ensayan sobre el composite: la muestra de las tres capas en el orden y con los materiales de la configuración real. Cambia una capa y el composite es otro."
+                    },
+                    {
+                      "q": "¿El expediente UL MH60435 cubre la configuración Pioneer?",
+                      "a": "Es exactamente lo que hay que confirmar por escrito, y es la razón de ser de esta ficha. El expediente es del modelo HERÖ y la configuración documentada en la ficha que conocemos es la de PBI MAX 7.0. Un mismo número de expediente puede amparar varias configuraciones, algunas o solo una, y su existencia no dice cuáles. Pedimos al fabricante que declare el alcance y la edición normativa aplicables a la configuración cotizada."
+                    },
+                    {
+                      "q": "¿Qué campos debe traer un certificado para que sirva?",
+                      "a": "Cinco: organismo certificador emisor —si lo emite el propio fabricante es una declaración de conformidad, no una certificación de tercera parte—, número de expediente rastreable, edición normativa con año, modelo y configuración amparados, y correspondencia con la etiqueta permanente de la prenda recibida, incluyendo número de serie y fecha de fabricación. Si falta uno, ese es el que hay que pedir."
+                    },
+                    {
+                      "q": "¿Puedo verificar la certificación por mi cuenta?",
+                      "a": "Sí, y conviene hacerlo. El número de expediente UL se consulta en UL Product iQ y ahí se confirma alcance, modelo y edición amparados sin depender de quien te entregó el documento. Esa posibilidad de verificación independiente es precisamente lo que distingue a una certificación de tercera parte de una declaración del fabricante. Te entregamos el número en la propuesta."
+                    },
+                    {
+                      "q": "Si repongo una prenda con otra barrera, ¿pasa algo?",
+                      "a": "Te queda una flota con ensambles mezclados y expedientes distintos, lo que complica la comprobación documental y la comparación de estado en la inspección anual. No es un problema de seguridad inmediato si cada prenda está certificada por su cuenta, pero sí de administración: cada configuración tiene su alcance y su ficha. Conviene reponer manteniendo la configuración que ya está en servicio."
+                    },
+                    {
+                      "q": "¿Qué pasa si el traje se repara con material distinto?",
+                      "a": "Se pierde la condición del ensamble certificado. NFPA 1850 (1851) exige que la reparación la haga el fabricante o un taller verificado por él, con material e hilo del mismo tipo certificado. Un parche cosido con hilo común abre un puente térmico donde se supone que hay costura, y una cinta reflejante genérica sustituyendo la serie especificada cambia el conjunto que se evaluó. Pide carta de taller autorizado como parte de la compra."
+                    },
+                    {
+                      "q": "¿Entonces Pioneer es peor que PBI MAX 7.0?",
+                      "a": "No hay base para afirmarlo, ni tampoco lo contrario. La diferencia verificable hoy es documental: de las cinco barreras del HERÖ solo PBI MAX publica composición, gramaje y la combinación de barreras interiores de su configuración. Una barrera puede ser excelente y no tener ficha pública. Lo que no se puede es compararlas técnicamente ni sostener su alcance certificado mientras falten esos datos."
+                    },
+                    {
+                      "q": "¿Cuánto tardan en conseguir la declaración de alcance y en cotizar?",
+                      "a": "La cotización sale en menos de 24 horas hábiles con lo que está publicado y con el estado de cada dato pendiente marcado como tal. El tiempo de respuesta del fabricante para la ficha y la declaración de alcance no lo controlamos y no vamos a prometerte un plazo: te decimos cuándo lo solicitamos y te avisamos en cuanto llega o si no llega. Si tu proceso no admite esperar, evaluamos PBI MAX 7.0."
+                    }
+                  ]
+                }
+              },
+              {
+                "marca": "SKÖLD",
+                "modelo": "HERÖ",
+                "variante": "Defender 750",
+                "varianteLabel": "Barrera exterior",
+                "slug": "skold-hero-defender-750",
+                "badge": "NFPA 1971 · 2018",
+                "estado": "sin-ficha",
+                "img": "/images/catalogo/1563062067-bb-600x450.webp",
+                "alt": "Bombero de perfil con ensamble estructural completo y equipo de respiración",
+                "desc": "Barrera exterior seleccionable del HERÖ. <strong>No confundir con Defender M</strong>, que es la barrera térmica de la configuración PBI MAX: son capas distintas del ensamble.",
+                "specs": [
+                  "Barrera exterior seleccionable del HERÖ",
+                  "Composición y gramaje no publicados",
+                  "Defender 750 es exterior; Defender M es térmica",
+                  "Se solicita ficha de la configuración"
+                ],
+                "chip": "Requiere ficha por configuración",
+                "l4": {
+                  "seoTitle": "Traje SKÖLD HERÖ con barrera Defender 750",
+                  "seoDescription": "Barrera exterior Defender 750 del SKÖLD HERÖ: por qué no es Defender M, qué documenta el fabricante y cómo evitar el error de nombre en una requisición.",
+                  "badge": "Alcance por confirmar",
+                  "h1": "Traje estructural SKÖLD HERÖ con barrera exterior Defender 750",
+                  "subtitulo": "Defender 750 es una de las cinco barreras exteriores seleccionables del conjunto HERÖ. Se confunde con Defender M, que es la barrera térmica de la configuración PBI MAX: son capas distintas del ensamble y pedir una creyendo pedir la otra cambia el traje que llega.",
+                  "heroImg": {
+                    "src": "/images/catalogo/1563062067-bb-600x450.webp",
+                    "alt": "Bombero de perfil con ensamble estructural completo y equipo de respiración"
+                  },
+                  "heroBloques": [
+                    {
+                      "label": "Dos nombres parecidos, dos capas distintas",
+                      "texto": "<strong>Defender 750</strong> es una capa <strong>exterior</strong>. <strong>Defender M</strong> es la barrera <strong>térmica</strong> de la configuración PBI MAX 7.0. No son alternativas entre sí: viven en posiciones diferentes del mismo ensamble. Pedir “Defender” sin más es la clase de ambigüedad que se resuelve en la entrega y no en la requisición, cuando ya no se puede corregir sin costo."
+                    },
+                    {
+                      "label": "Escribimos la partida contigo antes de cotizar",
+                      "texto": "Antes de mandarte un precio revisamos que la partida nombre <strong>capa por capa</strong> y no por familia comercial, y solicitamos al fabricante la ficha de la configuración con composición, gramaje y el alcance del certificado. Cuesta media hora y evita una aclaración de bases. Cobertura en los <strong>32 estados de la República</strong> con propuesta en menos de <strong>24 horas hábiles</strong>."
+                    }
+                  ],
+                  "heroDatos": [
+                    {
+                      "label": "Posición en el ensamble",
+                      "valor": "Capa exterior"
+                    },
+                    {
+                      "label": "No confundir con",
+                      "valor": "Defender M · barrera térmica"
+                    },
+                    {
+                      "label": "Estado del dato",
+                      "valor": "Ficha por solicitar"
+                    }
+                  ],
+                  "specStrip": [
+                    {
+                      "label": "Capa exterior",
+                      "valor": "Defender 750 · sin gramaje publicado"
+                    },
+                    {
+                      "label": "No es",
+                      "valor": "Defender M (barrera térmica)"
+                    },
+                    {
+                      "label": "Barrera de humedad",
+                      "valor": "Por confirmar en la ficha"
+                    },
+                    {
+                      "label": "Barrera térmica",
+                      "valor": "Por confirmar en la ficha"
+                    },
+                    {
+                      "label": "Conjunto",
+                      "valor": "HERÖ · DRD, cuello 360°, Kevlar"
+                    },
+                    {
+                      "label": "Certificación",
+                      "valor": "UL MH60435 · alcance por confirmar"
+                    }
+                  ],
+                  "secciones": [
+                    {
+                      "id": "que-es",
+                      "eyebrow": "Qué estás evaluando",
+                      "titulo": "Defender 750 es una capa exterior del HERÖ",
+                      "parrafos": [
+                        "El <strong>SKÖLD HERÖ</strong> admite cinco barreras exteriores: Advance, Kombat Flex, PBI MAX 7.0, Pioneer y Defender 750. El conjunto no cambia —DRD en la espalda, cuello de cobertura 360°, arnés de Kevlar, refuerzos y claves de producto son los del modelo—; lo que cambia es la capa que recibe la llama y la abrasión.",
+                        "Esta configuración tiene un problema adicional que no es técnico sino de nombre, y que en la práctica genera más errores de compra que cualquier discusión sobre telas. Lo abordamos primero porque es lo que más dinero cuesta cuando se pasa por alto."
+                      ],
+                      "nota": "En la partida tiene que aparecer <strong>la configuración de barreras completa</strong>, no solo el modelo ni la familia comercial. “SKÖLD HERÖ Defender” no describe un ensamble."
+                    },
+                    {
+                      "id": "no-es-defender-m",
+                      "eyebrow": "El error que cuesta",
+                      "titulo": "Defender 750 no es Defender M",
+                      "parrafos": [
+                        "Comparten familia de nombre y nada más. <strong>Defender 750</strong> es una de las barreras <strong>exteriores</strong> seleccionables del HERÖ. <strong>Defender M</strong> es la <strong>barrera térmica</strong> que el fabricante documenta en la configuración PBI MAX 7.0, es decir la capa interior que define el tiempo de tolerancia térmica.",
+                        "El error típico se ve así: una requisición pide “barrera Defender” pensando en la térmica documentada, el proveedor entrega la configuración con capa exterior Defender 750, y ninguno de los dos está mintiendo. La ambigüedad estaba en el papel. Y como la certificación se emite sobre el ensamble armado, el traje que llegó es un ensamble distinto del que se creyó comprar."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Capa del ensamble",
+                          "Función",
+                          "En la configuración PBI MAX 7.0",
+                          "En esta configuración"
+                        ],
+                        "rows": [
+                          [
+                            "Exterior",
+                            "Resiste llama directa, abrasión y desgarre; lleva las cintas reflejantes",
+                            "PBI MAX 7 oz · 70 % PBI, 30 % Kevlar",
+                            "Defender 750 · sin composición ni gramaje publicados"
+                          ],
+                          [
+                            "Barrera de humedad",
+                            "Impide el paso de agua y vapor sobrecalentado sin bloquear la salida del sudor",
+                            "Stedair 3000",
+                            "Por confirmar en la ficha"
+                          ],
+                          [
+                            "Barrera térmica",
+                            "Define el tiempo real de tolerancia térmica",
+                            "Defender M",
+                            "Por confirmar en la ficha"
+                          ]
+                        ]
+                      },
+                      "nota": "Si en tu expediente aparece “Defender” a secas, corrígelo antes de la entrega: escribe <strong>“capa exterior: …” y “barrera térmica: …”</strong> en renglones separados. Es la corrección más barata de todo el proceso de compra."
+                    },
+                    {
+                      "id": "mapa-nombres",
+                      "eyebrow": "Autoridad técnica",
+                      "titulo": "Mapa de nombres que se confunden en EPP estructural",
+                      "parrafos": [
+                        "Defender 750 y Defender M no son el único par problemático. Estas confusiones aparecen en requisiciones, en bases de licitación y en propuestas todo el tiempo, y cada una cambia lo que se compra o lo que se puede exigir."
+                      ],
+                      "lista": [
+                        {
+                          "t": "NFPA 1971 vs NFPA 1970",
+                          "d": "1971 era el estándar de conjuntos estructurales. 1970 es el vigente y consolidó 1971, 1975, 1981 y 1982. Citar 1971 en unas bases nuevas obliga a aclarar edición; citar 1970 sin año deja abierto qué se exige."
+                        },
+                        {
+                          "t": "NFPA 1851 vs NFPA 1850",
+                          "d": "1851 regía selección, cuidado y mantenimiento del conjunto. Quedó consolidada en 1850, que además cubre equipo de respiración. Es la norma del inventario en servicio, no la de certificación."
+                        },
+                        {
+                          "t": "Nomex vs Nomex IIIA",
+                          "d": "Nomex es la familia de meta-aramida. Nomex IIIA es una mezcla específica con fibra antiestática. Pedir “Nomex” no especifica cuál ni en qué gramaje."
+                        },
+                        {
+                          "t": "PBI vs PBI Matrix vs PBI MAX",
+                          "d": "PBI es la fibra. PBI Matrix y PBI MAX son construcciones de tela distintas, con mezclas y gramajes propios. “Traje de PBI” no dice cuál de las tres."
+                        },
+                        {
+                          "t": "Stedair vs Stedshield",
+                          "d": "Stedair es una familia de barreras de humedad —Stedair 3000 en la configuración documentada—. Stedshield es material de refuerzo en zonas de desgaste. Nombres parecidos, funciones opuestas."
+                        },
+                        {
+                          "t": "TPP vs THL",
+                          "d": "TPP mide protección térmica; THL mide cuánto calor metabólico evacua el traje. Van en direcciones contrarias: subir uno baja el otro. Pedir solo TPP produce trajes que cansan al elemento."
+                        }
+                      ],
+                      "nota": "Regla práctica: en un anexo técnico, <strong>ningún nombre comercial debe aparecer sin su función y su posición en el ensamble</strong>. “Barrera térmica: Defender M” es especificable. “Defender” no lo es."
+                    },
+                    {
+                      "id": "lo-documentado",
+                      "eyebrow": "Lo que sí tiene nombre propio",
+                      "titulo": "Cómo se nombra cada cosa sin margen de interpretación",
+                      "parrafos": [
+                        "Siguiendo la lógica de esta ficha, aquí está el conjunto documentado <strong>con el nombre que hay que escribir en la partida</strong> y no con la descripción que se usa al hablar. Cada línea es copiable tal cual a una requisición."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Escribe: “DRD integrado en espalda de chaquetón”",
+                          "d": "No “sistema de rescate” ni “arnés de arrastre”: DRD es la sigla que usa la norma y el fabricante. Drag Rescue Device, alojado dentro de la prenda."
+                        },
+                        {
+                          "t": "Escribe: “cuello con cobertura 360° sin partes expuestas”",
+                          "d": "No “cuello alto” ni “protector de cuello”, que en catálogo designan un accesorio distinto que se vende aparte."
+                        },
+                        {
+                          "t": "Escribe: “arnés de Kevlar integrado a la prenda”",
+                          "d": "La palabra integrado es la que evita que te entreguen un arnés externo cumpliendo la misma frase."
+                        },
+                        {
+                          "t": "Escribe: “refuerzo Stedshield / Ultrashield” por ubicación",
+                          "d": "Mangas, hombros, codos y rodillas en chaquetón; tobillos en pantalón. Refuerzo, no barrera: Stedshield y Stedair son familias distintas."
+                        },
+                        {
+                          "t": "Escribe: “costura con hilo de Kevlar, doble y triple”",
+                          "d": "Especifica el material del hilo, no “costura reforzada”. Es la diferencia que define si una reparación mantiene la certificación."
+                        },
+                        {
+                          "t": "Escribe: “cinta ORALITE® FTP2575-S de 3″”",
+                          "d": "Por serie y ancho, más bies reflejante plata. “Cinta reflejante de alta visibilidad” admite cualquier reposición."
+                        },
+                        {
+                          "t": "Escribe la clave, no la talla",
+                          "d": "CHB910-L, PB910-L, TB910-L. El fabricante despacha por clave; “talla L” es ambiguo entre presentaciones."
+                        }
+                      ],
+                      "nota": "Fíjate en el detalle de las claves: el propio fabricante mete la <strong>edición normativa dentro del código de producto</strong>. Ese es el nivel de precisión al que conviene llegar en la requisición."
+                    },
+                    {
+                      "id": "lo-no-publicado",
+                      "eyebrow": "Lo que falta",
+                      "titulo": "Los datos ausentes de esta configuración",
+                      "parrafos": [
+                        "Resuelta la ambigüedad de nombre, queda el vacío de información. Esta tabla es el mapa de lo que hay que pedir antes de firmar."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Dato ausente",
+                          "Qué decide",
+                          "Consecuencia de no tenerlo"
+                        ],
+                        "rows": [
+                          [
+                            "Composición de Defender 750",
+                            "Comportamiento ante llama y resistencia mecánica",
+                            "No se anticipa si carboniza conservando estructura ni cómo responde al desgarre"
+                          ],
+                          [
+                            "Gramaje en oz/yd²",
+                            "Peso del ensamble y carga térmica",
+                            "No hay forma de comparar fatiga del elemento contra PBI MAX 7.0"
+                          ],
+                          [
+                            "Barrera de humedad de la configuración",
+                            "Paso de vapor sobrecalentado",
+                            "No se sabe si es Stedair 3000 u otra: es una de las tres capas del ensamble"
+                          ],
+                          [
+                            "Barrera térmica de la configuración",
+                            "Tiempo real de tolerancia térmica",
+                            "Aquí es donde la confusión de nombres se vuelve un vacío real de dato"
+                          ],
+                          [
+                            "TPP y THL del ensamble",
+                            "Los dos valores que exige la norma",
+                            "Sin ellos no hay base técnica para aceptar ni rechazar la propuesta"
+                          ],
+                          [
+                            "Alcance del certificado",
+                            "Si el expediente ampara esta combinación",
+                            "El expediente puede existir y no cubrir la configuración entregada"
+                          ]
+                        ]
+                      },
+                      "nota": "Nota el orden de los problemas en esta configuración: primero el nombre, después el dato. Resolver la ambigüedad no llena los huecos, pero sin resolverla <strong>ni siquiera sabes qué estás pidiendo que te declaren</strong>."
+                    },
+                    {
+                      "id": "certificacion",
+                      "eyebrow": "Certificación",
+                      "titulo": "Dos de las tres capas sin declarar",
+                      "parrafos": [
+                        "SKÖLD publica para el HERÖ certificación por laboratorio <strong>UL bajo NFPA 1971 edición 2018</strong>, expediente <strong>MH60435</strong>, rastreable en UL Product iQ. Es certificación de tercera parte, no una declaración del propio fabricante, y eso cuenta.",
+                        "El punto delicado aquí es aritmético: la certificación se emite sobre el ensamble de tres capas y en esta configuración solo una está nombrada. Con la barrera de humedad y la térmica sin declarar, no hay forma externa de saber qué composite se evaluó. Es exactamente lo que hay que pedir por escrito antes de firmar."
+                      ],
+                      "nota": "Y hay que fechar el documento: NFPA 1971 quedó consolidada en <strong>NFPA 1970 (1971) edición 2025</strong>, con transición cerrada el 18 de marzo de 2026. Es otro par de números que se confunden —1971 y 1970— y que cambian lo que un certificado significa."
+                    },
+                    {
+                      "id": "anexo",
+                      "eyebrow": "Licitación",
+                      "titulo": "Cómo redactar la partida sin ambigüedad de nombres",
+                      "parrafos": [
+                        "Estas redacciones eliminan el margen de interpretación. Son las mismas que usamos cuando un cliente nos pide revisar sus bases antes de publicarlas."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "En la partida escribe",
+                          "En lugar de"
+                        ],
+                        "rows": [
+                          [
+                            "Capa exterior: nombre comercial, composición con porcentajes y gramaje en oz/yd²",
+                            "“Barrera Defender”"
+                          ],
+                          [
+                            "Barrera de humedad: nombre comercial y tipo de membrana",
+                            "sin mención"
+                          ],
+                          [
+                            "Barrera térmica: nombre comercial",
+                            "“Barrera térmica de alto desempeño”"
+                          ],
+                          [
+                            "TPP y THL del ensamble armado, declarados por el fabricante",
+                            "sin mención"
+                          ],
+                          [
+                            "Certificado de tercera parte con expediente, organismo emisor y edición normativa vigente",
+                            "“Cumple NFPA”"
+                          ],
+                          [
+                            "Clave de producto por presentación y talla, tal como la publica el fabricante",
+                            "“Talla L”"
+                          ]
+                        ]
+                      },
+                      "nota": "Tres renglones —una línea por capa— convierten una partida discutible en una partida <strong>evaluable</strong>. Quien no pueda llenarlos queda fuera por incumplimiento documental, no por criterio."
+                    },
+                    {
+                      "id": "cuando-conviene",
+                      "eyebrow": "Criterio de selección",
+                      "titulo": "Cuándo entra Defender 750 en la comparación",
+                      "parrafos": [
+                        "Con la partida bien escrita, la decisión se reduce a si la ficha de las tres capas llega a tiempo. Estos son los casos."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Entra",
+                          "d": "El fabricante puede entregar la ficha completa —las tres capas, no solo la exterior— dentro del plazo de tu proceso."
+                        },
+                        {
+                          "t": "Entra",
+                          "d": "Ya operas HERÖ y buscas alternativas de costo o disponibilidad conservando modelo, claves y programa de cuidado."
+                        },
+                        {
+                          "t": "Entra",
+                          "d": "Tus bases especifican por conjunto y dejan la configuración de barreras abierta a propuesta con ficha respaldatoria."
+                        },
+                        {
+                          "t": "No entra",
+                          "d": "Compra que va a auditoría o licitación con anexo cerrado. Con dos de las tres capas sin declarar el expediente queda débil, y PBI MAX 7.0 lo resuelve."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "siguiente-paso",
+                      "eyebrow": "Qué hacemos nosotros",
+                      "titulo": "Primero la partida, después el precio",
+                      "parrafos": [
+                        "Revisamos tu requisición o tus bases para que cada capa aparezca nombrada con su función y su posición en el ensamble, y solicitamos al fabricante la ficha de la configuración con composición, gramaje, barreras interiores, valores de TPP y THL del ensamble armado y la declaración de alcance del certificado.",
+                        "Si la ficha no llega o llega incompleta, te lo decimos y comparamos contra PBI MAX 7.0 con lo que sí está publicado. Antes de cerrar un pedido de brigada enviamos <strong>juego de tallas de muestra</strong>: la tabla de medidas UL describe la prenda extendida, no el cuerpo del elemento."
+                      ]
+                    }
+                  ],
+                  "galeria": [
+                    {
+                      "src": "/images/catalogo/1638401607229-600x450.webp",
+                      "alt": "Bombero con casco y protector facial junto a la unidad",
+                      "caption": "El ensamble completo en escena"
+                    },
+                    {
+                      "src": "/images/catalogo/1756112277157-1000x750.webp",
+                      "alt": "Rack con equipo estructural alineado en la estación de bomberos",
+                      "caption": "Control por clave y talla"
+                    },
+                    {
+                      "src": "/images/catalogo/1666518809220-1000x750.webp",
+                      "alt": "Manos con guantes de intervención sujetando equipo de bombero",
+                      "caption": "Interfaz entre elementos"
+                    },
+                    {
+                      "src": "/images/catalogo/1584033376442-600x450.webp",
+                      "alt": "Bombero equipado con herramienta de intervención durante una maniobra",
+                      "caption": "Desempeño en maniobra"
+                    }
+                  ],
+                  "aplicaciones": [
+                    {
+                      "sector": "Licitación pública",
+                      "desc": "Aquí la ambigüedad de nombres se cobra en aclaraciones e impugnaciones. Especifica una línea por capa —exterior, humedad y térmica— con nombre comercial, composición y gramaje declarados en ficha."
+                    },
+                    {
+                      "sector": "Cuerpos de bomberos",
+                      "desc": "Para ampliar una flota que ya opera HERÖ manteniendo modelo y claves. Conviene reponer con la misma configuración que está en servicio para no administrar ensambles mezclados."
+                    },
+                    {
+                      "sector": "Brigadas industriales",
+                      "desc": "Dotación conforme a NOM-002-STPS con expediente documental completo. La configuración de barreras se declara capa por capa, no por familia comercial."
+                    }
+                  ],
+                  "datoClave": {
+                    "titulo": "Nunca escribas “Defender” a secas",
+                    "texto": "<strong>Defender 750</strong> es capa exterior. <strong>Defender M</strong> es barrera térmica. Una requisición que dice solo “Defender” se resuelve en la entrega, no en el papel — y ahí ya no se corrige sin costo."
+                  },
+                  "referencias": [
+                    {
+                      "code": "UL · MH60435",
+                      "desc": "Expediente de certificación del HERÖ publicado por SKÖLD. Rastreable en UL Product iQ. Hay que confirmar si su alcance cubre la configuración con Defender 750."
+                    },
+                    {
+                      "code": "NFPA 1971 · 2018",
+                      "desc": "Edición bajo la que está declarada la certificación UL del modelo. Fue sustituida; su número sigue apareciendo en las claves de producto."
+                    },
+                    {
+                      "code": "NFPA 1970 · 2025",
+                      "desc": "Estándar vigente que consolidó NFPA 1971, 1975, 1981 y 1982. La transición cerró el 18 de marzo de 2026."
+                    },
+                    {
+                      "code": "NFPA 1850 · 2026",
+                      "desc": "Consolidó la antigua NFPA 1851. Rige selección, cuidado y mantenimiento del conjunto en servicio, no la certificación."
+                    },
+                    {
+                      "code": "NOM-017-STPS",
+                      "desc": "Selección, entrega y capacitación en el uso del equipo de protección personal según el riesgo del puesto."
+                    }
+                  ],
+                  "blog": [
+                    "guia-trajes-estructurales-nfpa-1971",
+                    "nfpa-1971-mexico-norma-bomberos",
+                    "equipar-brigada-trajes-bomberos-tallaje-licitacion",
+                    "licitaciones-equipos-contra-incendios-mexico",
+                    "marcas-trajes-bomberos-comparativa-mexico",
+                    "mantenimiento-epp-estructural-nfpa-1851"
+                  ],
+                  "faqs": [
+                    {
+                      "q": "¿Defender 750 y Defender M son lo mismo?",
+                      "a": "No, y esta es la confusión que más errores de requisición produce en esta línea. Defender 750 es una de las cinco barreras exteriores seleccionables del HERÖ: la capa que recibe la llama, la abrasión y las cintas reflejantes. Defender M es la barrera térmica que el fabricante documenta en la configuración PBI MAX 7.0: la capa interior que define el tiempo de tolerancia térmica. Comparten familia de nombre y ocupan posiciones distintas del mismo ensamble; no son alternativas entre sí."
+                    },
+                    {
+                      "q": "Mi requisición dice “barrera Defender”. ¿Qué me van a entregar?",
+                      "a": "Depende de cómo lo interprete quien la surta, y eso ya es el problema. Escrito así, el proveedor puede entregar la configuración con capa exterior Defender 750 mientras tú esperabas la barrera térmica Defender M de la configuración PBI MAX, y ninguno de los dos estaría mintiendo. Corrígelo antes de la entrega: escribe una línea por capa —“capa exterior: …”, “barrera de humedad: …”, “barrera térmica: …”—. Es la corrección más barata de todo el proceso."
+                    },
+                    {
+                      "q": "¿Por qué importa tanto nombrar cada capa por separado?",
+                      "a": "Porque la certificación se emite sobre el ensamble armado, no sobre la tela. Los dos valores que exige la norma —TPP y THL— se ensayan sobre la muestra de las tres capas en el orden y con los materiales de la configuración real. Si cambia una capa, el ensamble certificado es otro. Una partida que solo nombra una familia comercial no describe un ensamble y por lo tanto no describe nada certificable."
+                    },
+                    {
+                      "q": "¿Qué otros nombres se confunden en equipo estructural?",
+                      "a": "Varios, y todos cambian lo que se compra: NFPA 1971 frente a NFPA 1970, la vigente que la consolidó; NFPA 1851 frente a NFPA 1850, que rige el inventario en servicio; Nomex como familia frente a Nomex IIIA como mezcla específica; PBI como fibra frente a PBI Matrix y PBI MAX como construcciones de tela distintas; y Stedair, que es familia de barreras de humedad, frente a Stedshield, que es material de refuerzo. La regla es simple: ningún nombre comercial sin su función y su posición en el ensamble."
+                    },
+                    {
+                      "q": "¿Qué sí puedo exigir por escrito si elijo Defender 750?",
+                      "a": "Todo lo que SKÖLD publica a nivel de modelo: DRD integrado en la espalda, cuello de cobertura 360° sin partes expuestas, arnés de Kevlar integrado, refuerzos Stedshield y Ultrashield en mangas, hombros, codos, rodillas y tobillos, costura de Kevlar doble y triple, puño de Kevlar con ojillo para pulgar, cinta ORALITE Ultra Brilliance serie FTP2575-S de 3″, corte tipo diamante en el pantalón, tallas de S a 4X y las claves CHB910, PB910 y TB910 por presentación."
+                    },
+                    {
+                      "q": "¿El expediente UL MH60435 cubre la configuración Defender 750?",
+                      "a": "Es lo que hay que confirmar por escrito, y aquí pesa más que en otras configuraciones porque dos de las tres capas están sin declarar. El expediente es del modelo HERÖ y la configuración documentada en la ficha que conocemos es la de PBI MAX 7.0. Como la certificación se emite sobre el ensamble completo, su existencia no acredita automáticamente esta combinación. Pedimos al fabricante que declare alcance y edición normativa aplicables."
+                    },
+                    {
+                      "q": "¿Entonces Defender 750 es peor que PBI MAX 7.0?",
+                      "a": "No hay base para afirmarlo, ni tampoco lo contrario. La diferencia verificable hoy es de información: de las cinco barreras del HERÖ solo PBI MAX publica composición, gramaje y la combinación de barreras interiores de su configuración. Una barrera puede ser excelente y no tener ficha pública. Lo que no se puede es compararlas técnicamente ni sostener su alcance certificado mientras falten esos datos."
+                    },
+                    {
+                      "q": "¿Pueden revisar mis bases antes de que las publique?",
+                      "a": "Sí, y es lo que recomendamos hacer primero. Revisamos que cada capa aparezca nombrada con su función y su posición en el ensamble, que el certificado se pida con expediente, organismo emisor y edición, y que las claves de producto y tallas queden especificadas como el fabricante las publica. Después cotizamos. Cuesta media hora y evita una aclaración de bases o una impugnación."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "secciones": [
+            {
+              "id": "anatomia",
+              "eyebrow": "Anatomía del ensamble",
+              "titulo": "Las tres capas que definen el traje",
+              "parrafos": [
+                "Un <strong>traje estructural para bombero</strong> no es una prenda gruesa: es un sistema de tres capas que trabajan juntas y que fallan por separado. Cuando un comprador especifica solo “Nomex” está describiendo la capa exterior y dejando sin definir las dos que realmente determinan cuánto tiempo aguanta el elemento adentro. La mayoría de las quemaduras dentro de un traje certificado no vienen de la llama directa, vienen del <strong>vapor sobrecalentado</strong> que atraviesa una barrera de humedad vencida.",
+                "Cada capa se puede especificar y cotizar de forma independiente, y ahí es donde una propuesta técnica seria se distingue de una cotización copiada del catálogo del fabricante."
+              ],
+              "lista": [
+                {
+                  "t": "Capa exterior",
+                  "d": "Nomex IIIA o PBI Matrix. Resiste llama directa, abrasión y desgarre. No se funde ni gotea: carboniza. Es la capa que se ve, la que recibe el golpe mecánico y la que lleva las cintas reflejantes."
+                },
+                {
+                  "t": "Barrera de humedad",
+                  "d": "Membrana laminada de ePTFE. Impide que el agua de la propia línea de ataque y el vapor sobrecalentado lleguen a la piel, sin bloquear la salida del sudor. Es la capa que se degrada primero y la que casi nadie inspecciona."
+                },
+                {
+                  "t": "Barrera térmica",
+                  "d": "Fieltro aramídico multicapa. Define el tiempo real de tolerancia térmica antes de sentir el calor. Más barrera es más protección y también más carga térmica acumulada sobre el elemento."
+                }
+              ]
+            },
+            {
+              "id": "nomex-vs-pbi",
+              "eyebrow": "Decisión de material",
+              "titulo": "Nomex IIIA o PBI Matrix: cuál especificar",
+              "parrafos": [
+                "No hay un material mejor en abstracto, hay un material correcto para un perfil de uso. La pregunta útil no es “¿cuál protege más?” sino “¿cuántas salidas estructurales reales tiene este cuerpo al año y con qué presupuesto de reposición cuenta?”."
+              ],
+              "tabla": {
+                "head": [
+                  "Criterio",
+                  "Nomex IIIA",
+                  "PBI Matrix"
+                ],
+                "rows": [
+                  [
+                    "Comportamiento ante llama",
+                    "No se funde ni gotea, carboniza",
+                    "Carboniza conservando la estructura del tejido"
+                  ],
+                  [
+                    "Tras exposición severa",
+                    "Puede encoger y perder integridad",
+                    "Mantiene integridad aunque quede carbonizado"
+                  ],
+                  [
+                    "Peso del ensamble",
+                    "Menor, ensamble más ligero",
+                    "Ligeramente mayor"
+                  ],
+                  [
+                    "Tolerancia a ciclos térmicos",
+                    "Buena con lavado controlado",
+                    "Mayor en exposición repetida"
+                  ],
+                  [
+                    "Costo relativo",
+                    "Menor",
+                    "Mayor"
+                  ],
+                  [
+                    "Perfil de uso típico",
+                    "Municipal y brigada industrial con alto volumen de salidas",
+                    "Cuerpos con exposición estructural intensa y reposición programada"
+                  ]
+                ]
+              },
+              "nota": "En la práctica mexicana la mayoría de los cuerpos municipales especifican Nomex IIIA por costo total de flota, y reservan PBI para el turno de intervención o para la unidad de rescate. Es una decisión de asignación, no de calidad."
+            },
+            {
+              "id": "tpp-thl",
+              "eyebrow": "Cómo leer la etiqueta",
+              "titulo": "TPP y THL: los dos números que hay que pedir",
+              "parrafos": [
+                "Todo ensamble certificado se mide en dos escalas que jalan en direcciones opuestas. El <strong>TPP</strong> (Thermal Protective Performance) mide cuánto calor aguanta el conjunto antes de provocar quemadura de segundo grado; NFPA exige un mínimo de <strong>35</strong>. El <strong>THL</strong> (Total Heat Loss) mide cuánto calor metabólico puede evacuar el traje, es decir cuánto tarda el elemento en agotarse por estrés térmico; el mínimo es <strong>205 W/m²</strong>.",
+                "Subir el TPP agregando barrera térmica baja el THL, y un traje con THL bajo saca al elemento de operación por fatiga antes de que el fuego lo toque. Un proveedor que solo presume el TPP está mostrando la mitad del dato. Pide siempre los dos valores del ensamble armado —no de cada capa por separado— y el número de certificado del organismo que lo evaluó."
+              ],
+              "nota": "Los dos valores se certifican sobre el ensamble completo. Cambiar la barrera térmica por una equivalente “compatible” invalida la certificación del conjunto, aunque cada capa por sí sola esté aprobada."
+            },
+            {
+              "id": "tallaje",
+              "eyebrow": "Ajuste y tallaje",
+              "titulo": "El ajuste también es protección",
+              "parrafos": [
+                "Un traje que no ajusta no protege menos por el material, protege menos por geometría: al levantar los brazos el chaquetón sube y descubre la cintura, y la norma exige un traslape mínimo entre chaquetón y pantalón que se pierde con dos tallas de más. El corte diferenciado para mujer no es un tema comercial: un patrón masculino sobre torso femenino genera holgura en el pecho y presión en el hombro, y ahí empieza la pérdida de movilidad.",
+                "Para un pedido de brigada tomamos cuatro medidas por elemento y enviamos un juego de tallas de muestra antes de cerrar el pedido. Es el paso que evita la escena clásica de la entrega: veinte trajes correctos y cinco imposibles de usar."
+              ],
+              "lista": [
+                {
+                  "t": "Pecho",
+                  "d": "Contorno sobre la ropa de trabajo, no sobre camiseta. Define la talla del chaquetón."
+                },
+                {
+                  "t": "Cintura y cadera",
+                  "d": "Define la talla del pantalón y el tipo de sujeción: tirantes o pretina."
+                },
+                {
+                  "t": "Entrepierna",
+                  "d": "Determina el largo del pantalón sobre la bota. Un pantalón corto expone el empeine."
+                },
+                {
+                  "t": "Estatura y largo de manga",
+                  "d": "Define el traslape con el guante y la posición de la cinta reflejante."
+                }
+              ]
+            },
+            {
+              "id": "configuracion",
+              "eyebrow": "Configuración del pedido",
+              "titulo": "Lo que se define antes de fabricar",
+              "parrafos": [
+                "Dos cuerpos pueden comprar el mismo material y recibir trajes distintos. Estas son las opciones que se definen en el pedido y que conviene fijar por escrito en la requisición o en las bases de licitación, porque después no se modifican."
+              ],
+              "lista": [
+                {
+                  "t": "DRD integrado",
+                  "d": "Drag Rescue Device: arnés de arrastre cosido dentro del chaquetón para extraer a un elemento inconsciente. Exigido por la norma en ensambles estructurales."
+                },
+                {
+                  "t": "Bolsillos y portarradio",
+                  "d": "Configuración de bolsas de carga, portarradio con solapa y anillo de sujeción según el protocolo del cuerpo."
+                },
+                {
+                  "t": "Refuerzos",
+                  "d": "Rodilla, codo y hombro en material de mayor abrasión para operación en gateo y arrastre prolongado."
+                },
+                {
+                  "t": "Patrón de cintas",
+                  "d": "Distribución de cinta reflejante trilaminada y color: alta visibilidad nocturna o perfil táctico."
+                },
+                {
+                  "t": "Identificación",
+                  "d": "Bordado o parche de institución, apellido y número de elemento, con material y costura que no comprometan la barrera."
+                },
+                {
+                  "t": "Cierre frontal",
+                  "d": "Combinación de cierre, velcro y broches. Define la velocidad de vestido y la hermeticidad del frente."
+                }
+              ]
+            },
+            {
+              "id": "vida-util",
+              "eyebrow": "Ciclo de vida",
+              "titulo": "Vida útil, NFPA 1851 y reposición programada",
+              "parrafos": [
+                "NFPA obliga a retirar el ensamble a los <strong>10 años de la fecha de fabricación</strong>, no de la fecha de compra ni de la de puesta en servicio. Ese detalle mueve presupuesto: un lote adquirido con dos años de inventario del fabricante entra a la estación con ocho años de vida útil, y nadie lo nota hasta la auditoría.",
+                "Entre la compra y el retiro, <strong>NFPA 1851</strong> pide inspección rutinaria por el propio elemento después de cada uso e inspección avanzada documentada al menos una vez al año, además de lavado especializado. Lavadora doméstica, cloro y suavizante destruyen la barrera de humedad sin dejar señal visible. Entregamos cada prenda con número de serie y fecha de fabricación en bitácora para que la reposición se escalone por año y no llegue toda junta."
+              ],
+              "nota": "El hollín que queda en el traje después de un incendio contiene compuestos asociados a cáncer ocupacional en bomberos. El lavado posterior a la intervención no es mantenimiento del equipo, es protección del elemento —y es la razón por la que un segundo juego por elemento dejó de ser un lujo."
+            },
+            {
+              "id": "pfas",
+              "eyebrow": "Tendencia del mercado",
+              "titulo": "PFAS en la barrera de humedad: qué preguntar",
+              "parrafos": [
+                "Las barreras de humedad y los tratamientos repelentes que se usaron durante décadas se construyeron con fluoropolímeros de la familia <strong>PFAS</strong>. Varios cuerpos en Estados Unidos y Europa ya especifican ensambles PFAS-free en sus bases de compra, y los fabricantes están lanzando líneas alternas mientras la normativa se mueve. En México todavía no es un requisito, pero sí es una conversación que ya está ocurriendo dentro de las áreas de seguridad e higiene.",
+                "Nuestra postura es simple: te decimos qué barrera trae el ensamble que estás cotizando y si el fabricante tiene una declaración vigente al respecto. Un traje con barrera convencional sigue siendo certificable y seguro hoy; lo que no conviene es comprar a diez años sin saber qué estás comprando."
+              ]
+            }
+          ],
+          "galeria": [
+            {
+              "src": "/images/catalogo/1776648120640-1000x750.webp",
+              "alt": "Trajes estructurales y cascos colgados en el vestidor de la estación",
+              "caption": "Ensamble completo listo por turno"
+            },
+            {
+              "src": "/images/catalogo/1669209285616-600x450.webp",
+              "alt": "Chaquetones estructurales en rack de estación",
+              "caption": "Chaquetón y pantalón por elemento"
+            },
+            {
+              "src": "/images/catalogo/1563062067-77-600x450.webp",
+              "alt": "Bombero con traje estructural completo frente a un incendio",
+              "caption": "Desempeño en intervención"
+            },
+            {
+              "src": "/images/catalogo/1662121396496-600x400.webp",
+              "alt": "Chaquetones estructurales colgados en el vestidor de la estación",
+              "caption": "Control de tallas por turno"
+            }
+          ],
+          "aplicaciones": [
+            {
+              "sector": "Cuerpos de bomberos",
+              "desc": "Ensamble completo por elemento con control de tallas por turno, DRD integrado y bitácora por número de serie para escalonar la reposición a diez años."
+            },
+            {
+              "sector": "Brigadas industriales",
+              "desc": "Dotación conforme a NOM-002-STPS dimensionada por carga de fuego de la planta, con expediente listo para auditoría interna y de cliente."
+            },
+            {
+              "sector": "Protección civil",
+              "desc": "Trajes con ficha técnica en español, número de serie trazable y factura desglosada por partida y talla para comprobación de recurso público."
+            }
+          ],
+          "datoClave": {
+            "titulo": "El dato que mueve el presupuesto",
+            "texto": "Los 10 años de vida útil corren desde la <strong>fecha de fabricación</strong>, no desde la compra. Pide la fecha por número de serie antes de firmar: un lote con dos años de inventario llega con ocho de servicio."
+          },
+          "normasRef": [
+            "NFPA 1970",
+            "NFPA 1971",
+            "NFPA 1851",
+            "NOM-017-STPS",
+            "EN 469"
+          ],
+          "blog": [
+            "guia-trajes-estructurales-nfpa-1971",
+            "traje-bombero-nomex-guia-completa",
+            "marcas-trajes-bomberos-comparativa-mexico",
+            "equipar-brigada-trajes-bomberos-tallaje-licitacion",
+            "mantenimiento-epp-estructural-nfpa-1851",
+            "precio-trajes-bomberos-mexico-2026"
+          ],
+          "faqs": [
+            {
+              "q": "¿Qué incluye un traje estructural y qué se cotiza aparte?",
+              "a": "El ensamble estructural es chaquetón y pantalón con sus tres capas y el DRD integrado. Casco, botas, guantes, capucha y equipo de respiración autónoma son piezas independientes con su propia certificación y se cotizan por separado, aunque las entregamos como paquete por elemento si así conviene a tu requisición. Lo aclaramos partida por partida en la propuesta para que nadie descubra el faltante el día de la entrega."
+            },
+            {
+              "q": "¿Cuánto pesa un ensamble estructural completo?",
+              "a": "El chaquetón y el pantalón juntos rondan entre 4.5 y 6 kg según material, configuración de barreras y talla. Sumando casco, botas, guantes, capucha y equipo de respiración autónoma con cilindro, el elemento carga por encima de 20 kg. Ese número importa más de lo que parece: es la razón por la que el THL del traje decide cuánto tiempo real puede operar antes de rotar."
+            },
+            {
+              "q": "¿Cómo verifico que un traje sí cumple NFPA 1970 y no es solo “tipo NFPA”?",
+              "a": "Un ensamble certificado trae etiqueta permanente cosida al interior con el nombre del fabricante, el modelo, la fecha de fabricación, el número de serie, la composición de las tres capas y la marca del organismo certificador que lo evaluó. Sin esa etiqueta no hay certificación, por bonito que esté el catálogo. Pide además el certificado del laboratorio y la carta de distribuidor autorizado: los dos documentos viajan con nuestros envíos."
+            },
+            {
+              "q": "¿Se puede reparar un traje estructural o hay que reemplazarlo?",
+              "a": "Sí se repara, pero no en cualquier taller. NFPA 1851 exige que la reparación la haga el fabricante o un taller verificado por él, con material e hilo del mismo tipo certificado. Un parche cosido con hilo común abre un puente térmico y anula la certificación del ensamble. Rasgaduras en la capa exterior suelen ser reparables; daño en la barrera de humedad casi siempre significa reemplazo de la prenda."
+            },
+            {
+              "q": "¿Cuántos juegos por elemento debe tener un cuerpo de bomberos?",
+              "a": "El estándar operativo al que apuntan los cuerpos bien equipados es dos juegos por elemento: uno en servicio y uno disponible mientras el otro se lava o se inspecciona. Con un solo juego, el traje contaminado después de un incendio regresa a la salida siguiente sin lavarse, y eso convierte el hollín en exposición crónica. Si el presupuesto no alcanza para duplicar la flota, se puede escalonar por turno de intervención."
+            },
+            {
+              "q": "¿Un traje forestal o de aproximación sirve para incendio estructural?",
+              "a": "No. El overall forestal se certifica bajo NFPA 1950 —que consolidó la 1977— y está diseñado para exposición radiante prolongada con máxima transpirabilidad, sin barrera de humedad ni barrera térmica estructural. El traje de aproximación atiende otro escenario. Usar cualquiera de los dos en un incendio estructural deja al elemento sin la protección contra vapor sobrecalentado, que es justo lo que quema dentro de una estructura."
+            },
+            {
+              "q": "¿Cuánto tarda la entrega de un pedido de trajes?",
+              "a": "Depende de si las tallas salen de inventario o entran a fabricación. Configuraciones estándar en tallas medias suelen salir en días; pedidos con corte diferenciado, bordado institucional o tallas extremas entran a programa de producción del fabricante. En la propuesta te damos la fecha comprometida por partida y te decimos de qué depende, en lugar de prometer un plazo único que después no se cumple."
+            },
+            {
+              "q": "¿Qué documentación entregan para una licitación de trajes?",
+              "a": "Certificado del ensamble por fabricante, certificado del laboratorio que lo evaluó, carta de distribuidor autorizado, ficha técnica en español con composición de las tres capas, listado de número de serie y fecha de fabricación por prenda, procedimiento de lavado y retiro de servicio, y factura desglosada por partida y talla. Va completo y sin costo adicional; si la convocatoria pide un formato específico, lo armamos con ese formato."
+            }
+          ]
+        }
       },
       {
         "nombre": "Cascos Bullard y MSA",
@@ -373,7 +2847,8 @@
       }
     ],
     "icon": "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z",
-    "cardDesc": "Equipamiento de protección personal certificado NFPA para intervención estructural, rescate y operaciones de alto riesgo térmico."
+    "cardDesc": "Equipamiento de protección personal certificado NFPA para intervención estructural, rescate y operaciones de alto riesgo térmico.",
+    "l3ok": true
   },
   {
     "slug": "equipos-de-respiracion",

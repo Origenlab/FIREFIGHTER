@@ -102,4 +102,4 @@ Las situaciones donde se requiere otra estrategia principal:
 
 El [Holmatro Combi Tool V300](/blog/holmatro-combi-tool-v300-guia) resuelve el corte estructural inicial que precede muchas aplicaciones del ram. Los [expansores para vehículos pesados](/blog/expansores-hidraulicos-vehiculos-pesados) son la herramienta principal cuando el atrapamiento no es frontal. Y la secuencia completa, desde la llegada a escena hasta la transferencia de la víctima, está detallada en [rescate vehicular: técnicas y equipos](/blog/rescate-vehicular-tecnicas-equipos).
 
-El catálogo completo de rams y accesorios está disponible en [herramientas de rescate](/productos/herramientas-rescate).
+El catálogo completo de rams y accesorios está disponible en [herramientas de rescate](/productos/herramientas-de-rescate).

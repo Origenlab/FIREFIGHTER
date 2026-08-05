@@ -109,4 +109,4 @@ El desglose incluye inspección anual, limpieza semestral de detectores, reempla
 
 El contexto normativo que rige estos procedimientos está en [NFPA 72 en México: sistemas de alarma](/blog/nfpa-72-mexico-sistemas-alarma). La programación del panel que registra el historial de eventos necesario para la revisión del operador está en [panel Notifier NFS2-3030](/blog/panel-notifier-nfs2-3030-programacion). Y para la guía específica de limpieza semestral de detectores, consulta [detectores ópticos de humo SD355](/blog/detectores-opticos-humo-sd355-guia).
 
-Consulta programas de mantenimiento preventivo y contratos anuales en [detección y alarma](/productos/deteccion-alarma).
+Consulta programas de mantenimiento preventivo y contratos anuales en [detección y alarma](/productos/deteccion-y-alarma).

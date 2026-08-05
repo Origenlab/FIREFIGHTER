@@ -88,4 +88,4 @@ Para el contexto completo del equipamiento de una unidad de rescate y cómo enca
 
 El [Holmatro Combi Tool V300](/blog/holmatro-combi-tool-v300-guia) cubre la mayor parte de los rescates de automóviles de pasajeros. Para autobuses y vehículos pesados, el SP 5250 es la herramienta que hace posible el trabajo. Sin ella, el rescatista llega a escena con equipo que no fue diseñado para lo que tiene enfrente.
 
-Consulta disponibilidad y especificaciones en [herramientas de rescate](/productos/herramientas-rescate).
+Consulta disponibilidad y especificaciones en [herramientas de rescate](/productos/herramientas-de-rescate).

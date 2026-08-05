@@ -90,6 +90,6 @@ El G1 es el equipo correcto para combate estructural, industria de alto riesgo, 
 - Atmósferas con gases tóxicos a altísima concentración donde la autonomía sea crítica: considerar cilindros de mayor capacidad
 - Operaciones donde la autonomía de 45 minutos sea sistemáticamente insuficiente: evaluar cilindros de 60 minutos
 
-La [norma NFPA 1970 y su aplicación en México](/blog/nfpa-1981-mexico-equipos-respiracion) define los requisitos de certificación que cualquier SCBA debe cumplir para uso en combate de incendio. Los [SCBA y equipos de respiración disponibles](/productos/scba-respiracion) incluyen el G1 y otras opciones con fichas técnicas completas para cada perfil de aplicación.
+La [norma NFPA 1970 y su aplicación en México](/blog/nfpa-1981-mexico-equipos-respiracion) define los requisitos de certificación que cualquier SCBA debe cumplir para uso en combate de incendio. Los [SCBA y equipos de respiración disponibles](/productos/equipos-de-respiracion) incluyen el G1 y otras opciones con fichas técnicas completas para cada perfil de aplicación.
 
 La ingeniería del G1 no resuelve todos los problemas de operación. Pero reduce la fricción de los más críticos: el peso que fatiga, la información que llega tarde, el dispositivo de alarma que no se activó.

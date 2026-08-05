@@ -100,7 +100,7 @@ Un sistema de supresión para datacenter correcto tiene cobertura en el espacio 
 
 Para el cálculo de la cantidad de agente necesaria en el espacio total —incluyendo piso técnico y plenum—, el artículo sobre [agentes limpios NFPA 2001](/blog/nfpa-2001-agentes-limpios-mexico) cubre la metodología de cálculo y los factores de corrección por hermeticidad.
 
-Para el diseño completo del sistema — incluyendo la selección de detección, la lógica de activación, la selección del agente y la integración con los sistemas de control del datacenter — consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-fijos).
+Para el diseño completo del sistema — incluyendo la selección de detección, la lógica de activación, la selección del agente y la integración con los sistemas de control del datacenter — consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-contra-incendio).
 
 El costo de un sistema de supresión limpia bien diseñado para un datacenter de 200 m² está en el rango de $600,000 a $1,500,000 pesos dependiendo del agente y la complejidad. El costo de un incendio en ese datacenter, en términos de equipos perdidos, datos irrecuperables, tiempo de reconstitución y costo de reputación para el negocio que dependía de esa infraestructura, es un número que justifica el sistema con margen amplio.
 

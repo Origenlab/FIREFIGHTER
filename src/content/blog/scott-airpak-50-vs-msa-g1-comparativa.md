@@ -82,7 +82,7 @@ Pero incluso si el equipo está correctamente certificado, la pregunta de manten
 
 **Ambos sobre cualquier alternativa no certificada:** siempre. Sin excepción. El precio de un SCBA no certificado o sin soporte técnico verificable es cero, independientemente de cuánto cueste.
 
-Para ver los detalles técnicos del [MSA G1](/blog/scba-msa-g1-guia-tecnica), las especificaciones de [cilindros de fibra de carbono](/blog/cilindros-fibra-carbono-scba-guia) y el [programa de mantenimiento anual](/blog/mantenimiento-scba-programa-anual), consulta los artículos específicos. Los [SCBA disponibles en México](/productos/scba-respiracion) incluyen ambos modelos con documentación técnica completa.
+Para ver los detalles técnicos del [MSA G1](/blog/scba-msa-g1-guia-tecnica), las especificaciones de [cilindros de fibra de carbono](/blog/cilindros-fibra-carbono-scba-guia) y el [programa de mantenimiento anual](/blog/mantenimiento-scba-programa-anual), consulta los artículos específicos. Los [SCBA disponibles en México](/productos/equipos-de-respiracion) incluyen ambos modelos con documentación técnica completa.
 
 
 ## Preguntas que debes responder antes de elegir

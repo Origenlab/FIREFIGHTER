@@ -4,6 +4,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
 import { existsSync, statSync } from 'node:fs';
+import rehypeInterlink from './src/lib/rehypeInterlink.mjs';
 
 // ─── Sitemap lastmod dinámico ──────────────────────────────────────────────
 // Resuelve URL → archivo fuente → fecha real (git log → mtime → omitir).
@@ -64,6 +65,16 @@ const SLUGS_REDIRIGIDOS = [
   'herramientas-rescate', 'deteccion-alarma', 'gabinetes-mangueras',
 ].map((s) => `/productos/${s}`);
 
+// Fichas L3 en borrador (sin bloque `l3` en productos.json): salen con noindex,
+// asi que tampoco deben ir al sitemap. Se quitan de aqui al enriquecer la ficha.
+const L3_BORRADOR = [
+  '/productos/epp-para-bomberos/cascos-bullard-y-msa',
+  '/productos/epp-para-bomberos/botas-dielectricas',
+  '/productos/epp-para-bomberos/guantes-de-intervencion',
+  '/productos/epp-para-bomberos/protector-de-cuello-y-capucha',
+  '/productos/epp-para-bomberos/viseras-y-caretas',
+];
+
 export default defineConfig({
   site: 'https://firefighter.com.mx',
   integrations: [
@@ -72,7 +83,7 @@ export default defineConfig({
       priority: 0.7,
       filter: (page) => {
         const path = new URL(page).pathname.replace(/\/$/, '');
-        return !SLUGS_REDIRIGIDOS.includes(path);
+        return !SLUGS_REDIRIGIDOS.includes(path) && !L3_BORRADOR.includes(path);
       },
       serialize: (item) => {
         // lastmod real por archivo fuente; si no se resuelve, se omite
@@ -102,6 +113,9 @@ export default defineConfig({
       theme: 'github-dark',
       wrap: true,
     },
+    // Enlaza terminos del catalogo dentro del cuerpo de los articulos del blog.
+    // Trabaja sobre el arbol HAST, asi que no puede romper el HTML. Ver src/lib/rehypeInterlink.mjs
+    rehypePlugins: [rehypeInterlink],
   },
   build: {
     inlineStylesheets: 'auto',

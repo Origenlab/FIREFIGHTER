@@ -97,7 +97,7 @@ Señales de reemplazo inmediato:
 
 El sello no se repara. Se reemplaza. Los sellos de reposición son componentes estándar en los catálogos de MSA y Scott con disponibilidad en México.
 
-Para revisar el [SCBA MSA G1](/blog/scba-msa-g1-guia-tecnica) completo, los [dispositivos PASS integrados](/blog/pass-devices-nfpa-1982-seguridad) y los requisitos de la [norma NFPA 1970](/blog/nfpa-1981-mexico-equipos-respiracion), consulta los artículos correspondientes. Los [equipos de respiración autónoma disponibles](/productos/scba-respiracion) incluyen máscaras en múltiples tallas con especificaciones de sello documentadas.
+Para revisar el [SCBA MSA G1](/blog/scba-msa-g1-guia-tecnica) completo, los [dispositivos PASS integrados](/blog/pass-devices-nfpa-1982-seguridad) y los requisitos de la [norma NFPA 1970](/blog/nfpa-1981-mexico-equipos-respiracion), consulta los artículos correspondientes. Los [equipos de respiración autónoma disponibles](/productos/equipos-de-respiracion) incluyen máscaras en múltiples tallas con especificaciones de sello documentadas.
 
 
 ## Tabla comparativa de características clave por modelo

@@ -120,7 +120,7 @@ Antes de lavar un traje estructural, confirma:
 - Secado al aire, temperatura ambiente, sin luz solar directa
 - Inspección visual post-lavado antes de devolver al servicio
 
-El [traje de bombero Nomex](/blog/traje-bombero-nomex-guia-completa) que no recibe mantenimiento bajo NFPA 1850 pierde progresivamente la protección que justificó su costo. La [norma NFPA 1970](/blog/nfpa-1971-mexico-norma-bomberos) certifica el ensemble en condiciones de laboratorio — el programa NFPA 1850 es lo que mantiene esas condiciones en el mundo real. Los [equipos de bombero disponibles](/productos/equipos-bomberos) incluyen instrucciones de mantenimiento aprobadas por fabricante para cada modelo.
+El [traje de bombero Nomex](/blog/traje-bombero-nomex-guia-completa) que no recibe mantenimiento bajo NFPA 1850 pierde progresivamente la protección que justificó su costo. La [norma NFPA 1970](/blog/nfpa-1971-mexico-norma-bomberos) certifica el ensemble en condiciones de laboratorio — el programa NFPA 1850 es lo que mantiene esas condiciones en el mundo real. Los [equipos de bombero disponibles](/productos/epp-para-bomberos) incluyen instrucciones de mantenimiento aprobadas por fabricante para cada modelo.
 
 
 ## Tabla resumen: niveles NFPA 1850 con responsable y frecuencia

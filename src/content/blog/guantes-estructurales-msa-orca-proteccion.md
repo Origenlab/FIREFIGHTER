@@ -81,6 +81,6 @@ La palma del guante es la zona de desgaste primario. Los puntos de inspección c
 | Rescate vehicular | Piel de vaca reforzada | Obligatoria | Medio-alto |
 | Hazmat nivel A | Guante NFPA 1970 + sobreguante | Ver norma específica | Según operación |
 
-El guante forma parte del [ensemble completo certificado bajo NFPA 1970](/blog/epp-completo-kit-bombero-profesional). Su compatibilidad con el puño del [traje estructural](/blog/traje-bombero-nomex-guia-completa) determina si hay brecha de exposición en la zona de muñeca. La integración de puño-guante es uno de los puntos más frecuentemente comprometidos en ensembles ensamblados con piezas de diferentes marcas sin verificar compatibilidad. Los [equipos estructurales disponibles](/productos/equipos-bomberos) incluyen guantes certificados con ficha técnica completa.
+El guante forma parte del [ensemble completo certificado bajo NFPA 1970](/blog/epp-completo-kit-bombero-profesional). Su compatibilidad con el puño del [traje estructural](/blog/traje-bombero-nomex-guia-completa) determina si hay brecha de exposición en la zona de muñeca. La integración de puño-guante es uno de los puntos más frecuentemente comprometidos en ensembles ensamblados con piezas de diferentes marcas sin verificar compatibilidad. Los [equipos estructurales disponibles](/productos/epp-para-bomberos) incluyen guantes certificados con ficha técnica completa.
 
 La protección de manos no es el último renglón del presupuesto. Es el primer componente que el bombero usa activamente en cada intervención.

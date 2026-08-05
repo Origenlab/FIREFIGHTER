@@ -94,6 +94,6 @@ La verificación que cierra esa puerta: con el número de certificado que te ent
 
 Si el certificado no aparece en la base de datos del laboratorio, no es un certificado válido — sin importar cuánto parezca legítimo el documento en papel.
 
-El [SCBA MSA G1](/blog/scba-msa-g1-guia-tecnica) y el [Scott AirPak 50](/blog/scott-airpak-50-vs-msa-g1-comparativa) son referencias concretas de equipos con certificación verificable. Los [dispositivos PASS](/blog/pass-devices-nfpa-1982-seguridad) y sus requisitos normativos complementan el panorama de certificación del sistema completo. Los [equipos de respiración disponibles con documentación técnica completa](/productos/scba-respiracion) están en nuestra sección de productos.
+El [SCBA MSA G1](/blog/scba-msa-g1-guia-tecnica) y el [Scott AirPak 50](/blog/scott-airpak-50-vs-msa-g1-comparativa) son referencias concretas de equipos con certificación verificable. Los [dispositivos PASS](/blog/pass-devices-nfpa-1982-seguridad) y sus requisitos normativos complementan el panorama de certificación del sistema completo. Los [equipos de respiración disponibles con documentación técnica completa](/productos/equipos-de-respiracion) están en nuestra sección de productos.
 
 La edición de la norma no es detalle técnico menor. Es la línea que separa el equipo que tiene todas las características de seguridad que el estado del arte exige del equipo que tiene algunas de ellas.

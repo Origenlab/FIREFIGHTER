@@ -79,4 +79,4 @@ Los componentes correctos para áreas industriales con ruido de 80-100 dB:
 
 Para el contexto normativo que rige los requisitos de notificación, consulta [NFPA 72 en México: sistemas de alarma](/blog/nfpa-72-mexico-sistemas-alarma). La [estación manual BG12LX](/blog/estaciones-manuales-bg12lx-normativa) es el dispositivo que activa el sistema cuya notificación diseñamos aquí. Y la programación de las secuencias de notificación desde el panel está en [panel Notifier NFS2-3030](/blog/panel-notifier-nfs2-3030-programacion).
 
-Consulta disponibilidad de dispositivos SpectralAlert y configuraciones para tu proyecto en [detección y alarma](/productos/deteccion-alarma).
+Consulta disponibilidad de dispositivos SpectralAlert y configuraciones para tu proyecto en [detección y alarma](/productos/deteccion-y-alarma).

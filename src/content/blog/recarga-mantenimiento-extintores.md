@@ -104,6 +104,6 @@ El extintor Clase K es el único que requiere mantenimiento semestral en lugar d
 
 El programa completo de mantenimiento para instalaciones con 10 o más extintores — incluyendo la documentación que protege al responsable en caso de auditoría o siniestro — está en el artículo sobre [plan de mantenimiento anual de extintores](/blog/plan-mantenimiento-anual-extintores). La selección correcta de tipos de extintores según el riesgo de cada área está en [tipos de extintores y sus aplicaciones en México](/blog/tipos-extintores-aplicaciones-mexico).
 
-Para recargas con técnicos certificados y materiales de calidad documentada, contacta a FIREFIGHTER México a través de [productos/extintores](/productos/extintores).
+Para recargas con técnicos certificados y materiales de calidad documentada, contacta a FIREFIGHTER México a través de [productos/extintores](/productos/extintores-y-extincion).
 
 El extintor que vas a necesitar en el momento más crítico de tu vida laboral es ese que está en la pared ahora mismo. Vale la pena saber con certeza si está listo o si es solo una apariencia de protección.

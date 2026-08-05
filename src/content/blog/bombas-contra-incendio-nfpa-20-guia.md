@@ -75,6 +75,6 @@ Para las válvulas de control que determinan si el caudal de la bomba llega efec
 
 El sistema completo de sprinklers que la bomba alimenta está detallado en el artículo sobre [sprinklers NFPA 13](/blog/sprinklers-nfpa-13-guia-instalacion), y el programa de mantenimiento integral que incluye las pruebas de bomba dentro de un plan NFPA 25 está en el artículo sobre [revisión anual de sistemas contra incendio](/blog/revision-anual-sistemas-contra-incendio).
 
-Para selección, suministro e instalación de conjuntos de bombas contra incendio certificados bajo NFPA 20, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-fijos).
+Para selección, suministro e instalación de conjuntos de bombas contra incendio certificados bajo NFPA 20, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-contra-incendio).
 
 La bomba que nunca se arranca entre una auditoría y otra es la bomba que falla el día del incendio. NFPA 20 no se equivoca al pedir pruebas semanales — se basa en décadas de evidencia de lo que ocurre cuando esas pruebas no se hacen.

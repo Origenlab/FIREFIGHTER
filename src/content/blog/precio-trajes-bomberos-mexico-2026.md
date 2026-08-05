@@ -75,7 +75,7 @@ El precio importa, y por eso lo tratamos con la seriedad que merece: cotizamos p
 
 Respondemos con una cotización formal en menos de 24 horas que incluye modelo, marca, edición de norma y configuración de capas, no una cifra suelta. Para equipar brigadas y cuerpos completos abrimos precio por volumen real, con desglose por talla en lugar de "tallas surtidas". Trabajamos con distribución autorizada de marcas líderes —MSA, dueña de **Globe** y **Bristol**—, con garantía de fabricante y refacciones en México, lo que baja de manera medible tu costo por año de vida útil. Y antes de pasarte un número, un ingeniero te ayuda sin costo a elegir la gama correcta para tu clima y tu frecuencia, porque venderte de más es tan mal negocio para una relación de largo plazo como venderte de menos. Para gobierno trabajamos las condiciones de LAASSP y CABMS con documentación completa, como detallamos en la [guía de licitaciones](/blog/licitaciones-equipos-contra-incendios-mexico), y entregamos en los 32 estados con la logística ya considerada en la propuesta.
 
-Pide tu cotización en [equipos para bomberos](/productos/equipos-bomberos) o escríbenos a **ventas@firefighter.mx**. Para procesos de gobierno, **licitaciones@firefighter.mx**.
+Pide tu cotización en [equipos para bomberos](/productos/epp-para-bomberos) o escríbenos a **ventas@firefighter.mx**. Para procesos de gobierno, **licitaciones@firefighter.mx**.
 
 ## La conclusión sobre el precio
 

@@ -90,4 +90,4 @@ Para edificios de alta ocupación (hospitales, hoteles, centros comerciales, edi
 
 Para el diseño de los detectores que alimentan este sistema, el punto de partida es [detectores ópticos de humo SD355](/blog/detectores-opticos-humo-sd355-guia). El panel que centraliza toda la información está en [panel Notifier NFS2-3030](/blog/panel-notifier-nfs2-3030-programacion). Y para los proyectos de mayor complejidad, [diseño de detección de incendio en hospitales](/blog/diseno-deteccion-incendio-hospitales) aplica los requisitos de NFPA 72 al contexto de mayor exigencia normativa.
 
-Consulta proyectos de diseño e instalación conforme a NFPA 72 en [detección y alarma](/productos/deteccion-alarma).
+Consulta proyectos de diseño e instalación conforme a NFPA 72 en [detección y alarma](/productos/deteccion-y-alarma).

@@ -90,6 +90,6 @@ La selección entre modelos debe basarse en el número de puntos requerido con u
 
 Para el programa de mantenimiento anual del panel que incluya la verificación de todos los dispositivos del lazo y las pruebas de integración con supresión, el artículo sobre [revisión anual de sistemas contra incendio](/blog/revision-anual-sistemas-contra-incendio) cubre el alcance completo de la inspección NFPA 25. Para el sistema de sprinklers que el panel supervisa y activa, el artículo sobre [sprinklers NFPA 13](/blog/sprinklers-nfpa-13-guia-instalacion) detalla el diseño correcto.
 
-Para suministro, instalación y programación de paneles Notifier por técnicos certificados, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-fijos).
+Para suministro, instalación y programación de paneles Notifier por técnicos certificados, consulta nuestra área técnica en [productos/sistemas-fijos](/productos/sistemas-contra-incendio).
 
 Un panel de alarma correcto es el cerebro del sistema. Un cerebro mal configurado genera exactamente el tipo de respuesta incorrecta en el momento crítico. La programación no es la parte barata del proyecto — es la parte que determina si todo lo demás funciona como fue diseñado.

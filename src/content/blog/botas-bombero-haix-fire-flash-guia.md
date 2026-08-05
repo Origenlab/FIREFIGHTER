@@ -85,6 +85,6 @@ Las botas estructurales tienen vida útil definida y puntos de inspección que s
 
 Para mantener las propiedades del cuero ignífugo, usar exclusivamente productos de limpieza y acondicionamiento compatibles con cuero termoprocesado. Los productos comerciales para calzado estándar pueden contener componentes que degradan el tratamiento ignífugo.
 
-Estas botas forman parte del [ensemble completo del bombero profesional](/blog/epp-completo-kit-bombero-profesional). Su compatibilidad con los [guantes estructurales](/blog/guantes-estructurales-msa-orca-proteccion) y el traje determina si el sistema de protección es coherente de pies a cabeza. La línea completa de [equipos para bomberos disponibles en México](/productos/equipos-bomberos) incluye opciones certificadas para cada nivel de operación.
+Estas botas forman parte del [ensemble completo del bombero profesional](/blog/epp-completo-kit-bombero-profesional). Su compatibilidad con los [guantes estructurales](/blog/guantes-estructurales-msa-orca-proteccion) y el traje determina si el sistema de protección es coherente de pies a cabeza. La línea completa de [equipos para bomberos disponibles en México](/productos/epp-para-bomberos) incluye opciones certificadas para cada nivel de operación.
 
 La protección plantar no aparece en las fotografías de intervención. Tampoco aparecen los bomberos que fueron retrados de servicio por quemaduras en pies que una bota correcta habría prevenido.

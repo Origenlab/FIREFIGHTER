@@ -108,6 +108,6 @@ El entrenamiento correcto graba en el respondedor el principio irrenunciable: na
 | Amoníaco | 15% | 300 ppm | SCBA presión positiva |
 | CO2 | No inflamable | 40,000 ppm (desplaza O2) | SCBA presión positiva |
 
-Las [líneas de suministro de aire para operaciones largas en espacio confinado](/blog/lineas-suministro-aire-espacios-confinados), el [SCBA MSA G1](/blog/scba-msa-g1-guia-tecnica) como equipo de rescate exterior, y los [SCBA para brigadas industriales con enfoque en NOM-002](/blog/scba-brigadas-industriales-nom-002) son los artículos complementarios para este tema. Los [equipos de respiración autónoma disponibles](/productos/scba-respiracion) incluyen opciones para operación en espacios confinados con configuraciones de escape integrado.
+Las [líneas de suministro de aire para operaciones largas en espacio confinado](/blog/lineas-suministro-aire-espacios-confinados), el [SCBA MSA G1](/blog/scba-msa-g1-guia-tecnica) como equipo de rescate exterior, y los [SCBA para brigadas industriales con enfoque en NOM-002](/blog/scba-brigadas-industriales-nom-002) son los artículos complementarios para este tema. Los [equipos de respiración autónoma disponibles](/productos/equipos-de-respiracion) incluyen opciones para operación en espacios confinados con configuraciones de escape integrado.
 
 La diferencia entre la estadística de muertes en espacios confinados de este año y la del año siguiente se construye antes de que ocurran los accidentes. En el entrenamiento, en el equipo, en el protocolo. No después.

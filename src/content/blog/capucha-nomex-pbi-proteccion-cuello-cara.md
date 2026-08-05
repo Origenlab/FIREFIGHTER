@@ -91,7 +91,7 @@ Orden de equipamiento:
 
 Este orden garantiza que la capucha forme la capa continua que conecta el traje con la máscara y el casco. Si el orden se invierte — máscara primero, luego capucha — la cobertura de la barbilla y la zona periauricular queda comprometida.
 
-Para revisar la integración completa del ensemble, incluyendo compatibilidad entre [casco](/blog/casco-bombero-bullard-usrhb-guia), capucha, máscara y traje, consulta nuestra guía del [EPP completo del bombero profesional](/blog/epp-completo-kit-bombero-profesional). El [traje estructural](/blog/traje-bombero-nomex-guia-completa) y la capucha deben seleccionarse considerando la compatibilidad de materiales y las condiciones climáticas de operación. Los equipos certificados disponibles están en nuestra sección de [equipos para bomberos](/productos/equipos-bomberos).
+Para revisar la integración completa del ensemble, incluyendo compatibilidad entre [casco](/blog/casco-bombero-bullard-usrhb-guia), capucha, máscara y traje, consulta nuestra guía del [EPP completo del bombero profesional](/blog/epp-completo-kit-bombero-profesional). El [traje estructural](/blog/traje-bombero-nomex-guia-completa) y la capucha deben seleccionarse considerando la compatibilidad de materiales y las condiciones climáticas de operación. Los equipos certificados disponibles están en nuestra sección de [equipos para bomberos](/productos/epp-para-bomberos).
 
 
 ## Tabla comparativa: Nomex vs Nomex/PBI por perfil de brigada

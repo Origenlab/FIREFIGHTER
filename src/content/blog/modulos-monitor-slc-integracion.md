@@ -74,4 +74,4 @@ Los cuatro pasos del proceso:
 
 Para la programación del panel Notifier que recibe las señales de los módulos, la guía técnica está en [panel Notifier NFS2-3030](/blog/panel-notifier-nfs2-3030-programacion). El contexto normativo completo que rige la arquitectura del sistema es [NFPA 72 en México: sistemas de alarma](/blog/nfpa-72-mexico-sistemas-alarma). Para proyectos de hospitales donde la integración tiene requisitos adicionales relacionados con el protocolo de "defend in place", consulta [diseño de detección de incendio en hospitales](/blog/diseno-deteccion-incendio-hospitales).
 
-Consulta disponibilidad de módulos SLC y compatibilidad con tu panel en [detección y alarma](/productos/deteccion-alarma).
+Consulta disponibilidad de módulos SLC y compatibilidad con tu panel en [detección y alarma](/productos/deteccion-y-alarma).

@@ -119,4 +119,4 @@ El registro mensual del operador es la primera evidencia de gestión responsable
 
 Para el contexto normativo de la programación y lo que NFPA 72 requiere en términos de documentación, consulta [NFPA 72 en México: sistemas de alarma](/blog/nfpa-72-mexico-sistemas-alarma). La integración de módulos SLC con detectores convencionales legacy que alimentan el panel está en [módulos monitor SLC](/blog/modulos-monitor-slc-integracion). Y para proyectos hospitalarios donde la programación del panel debe reflejar el protocolo "defend in place", la guía técnica está en [diseño de detección de incendio en hospitales](/blog/diseno-deteccion-incendio-hospitales).
 
-Consulta proyectos con NFS2-3030 y soporte de programación en [detección y alarma](/productos/deteccion-alarma).
+Consulta proyectos con NFS2-3030 y soporte de programación en [detección y alarma](/productos/deteccion-y-alarma).

@@ -89,4 +89,4 @@ El detector que no ha sido calibrado en dos años puede estar activando ante con
 
 Para el contexto normativo de los detectores de gas en sistemas integrados, consulta [NFPA 72 en México: sistemas de alarma](/blog/nfpa-72-mexico-sistemas-alarma). La selección entre tipos de detector para los demás espacios está en [detectores de calor vs detectores de humo](/blog/detectores-calor-vs-detectores-humo). Para proyectos hospitalarios con requisitos adicionales, consulta [diseño de detección de incendio en hospitales](/blog/diseno-deteccion-incendio-hospitales).
 
-Consulta detectores disponibles y opciones de integración en [detección y alarma](/productos/deteccion-alarma).
+Consulta detectores disponibles y opciones de integración en [detección y alarma](/productos/deteccion-y-alarma).

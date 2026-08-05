@@ -79,4 +79,4 @@ El equipamiento de iluminación no opera de manera aislada. Forma parte del equi
 
 Para el presupuesto y la priorización de equipamiento cuando los recursos son limitados, [equipamiento de unidad de rescate completa](/blog/equipamiento-unidad-rescate-completa) tiene el análisis de qué comprar primero.
 
-Consulta opciones de iluminación disponibles en [herramientas de rescate](/productos/herramientas-rescate).
+Consulta opciones de iluminación disponibles en [herramientas de rescate](/productos/herramientas-de-rescate).

@@ -93,6 +93,6 @@ La capacitación con extintor sobre ruedas debe incluir práctica con equipo rea
 
 Para el mantenimiento de los extintores sobre ruedas y la integración en el programa de mantenimiento anual, los mismos principios del artículo sobre [plan de mantenimiento anual de extintores](/blog/plan-mantenimiento-anual-extintores) aplican, con la diferencia de que el volumen de agente y la complejidad de la válvula y manguera requieren técnico certificado en ambos mantenimientos anuales y en la prueba hidrostática quinquenal.
 
-La línea de extintores sobre ruedas para riesgo industrial está disponible en [productos/extintores](/productos/extintores), con especificaciones técnicas por capacidad y tipo de agente para la selección correcta según el riesgo específico de tu instalación.
+La línea de extintores sobre ruedas para riesgo industrial está disponible en [productos/extintores](/productos/extintores-y-extincion), con especificaciones técnicas por capacidad y tipo de agente para la selección correcta según el riesgo específico de tu instalación.
 
 Un extintor de 6 kg bien elegido y bien mantenido es protección real para el riesgo correcto. Un extintor sobre ruedas de 50 kg mal seleccionado para un riesgo que no lo necesita es dinero inmovilizado en equipo que nadie sabe operar. Y un riesgo industrial real sin el equipo adecuado es una fecha desconocida con consecuencias muy conocidas.

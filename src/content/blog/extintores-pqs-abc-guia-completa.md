@@ -117,6 +117,6 @@ Para que la recarga sea válida bajo la [NOM-154-SCFI](/blog/nom-154-scfi-norma-
 
 El [programa de mantenimiento anual](/blog/plan-mantenimiento-anual-extintores) documenta los tres niveles de responsabilidad: inspección mensual por usuario capacitado, mantenimiento anual por técnico certificado, y prueba hidrostática por laboratorio acreditado. Los tres son obligatorios. No son intercambiables.
 
-Para adquirir extintores PQS ABC con certificación verificable y la capacidad correcta para el riesgo real de tu instalación, revisa nuestra línea en [productos/extintores](/productos/extintores).
+Para adquirir extintores PQS ABC con certificación verificable y la capacidad correcta para el riesgo real de tu instalación, revisa nuestra línea en [productos/extintores](/productos/extintores-y-extincion).
 
 El extintor en la pared que nunca se ha agitado, nunca se ha probado y lleva tres años desde la última recarga real no es protección. Es tranquilidad falsa. En protección contra incendios, la tranquilidad falsa es exactamente lo más peligroso que puede existir.

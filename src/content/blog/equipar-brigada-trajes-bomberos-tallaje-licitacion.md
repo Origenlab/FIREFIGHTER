@@ -80,7 +80,7 @@ Antes de cerrar una compra por volumen, vale la pena confirmar que tienes resuel
 
 Una compra por volumen es donde más se nota la diferencia entre un proveedor que despacha cajas y uno que equipa operaciones, porque es donde más cosas pueden salir mal en silencio. Incluimos el programa de tallaje —nominal y con reserva operativa— para que cada traje ajuste a quien lo va a usar, y te ayudamos a redactar la especificación técnica que evita tanto el equipo de baja calidad como las cotizaciones que no se pueden comparar. Abrimos precio por volumen real y entregamos propuesta formal en menos de 24 horas. Trabajamos con distribución autorizada de marca —MSA, dueña de **Globe** y **Bristol**—, con certificación verificable y garantía de fabricante, y conocemos por dentro los procesos de gobierno: LAASSP, CABMS y la documentación completa que el sector exige. Coordinamos la logística en los 32 estados con verificación de talla y norma a la recepción, y después de la entrega acompañamos el programa NFPA 1850 de toda la flota de EPP con refacciones OEM, porque equipar una brigada no termina el día que llegan las cajas.
 
-Cuéntanos cuántos integrantes tiene tu brigada y en qué operación trabajan, en [equipos para bomberos](/productos/equipos-bomberos) o escribiendo a **ventas@firefighter.mx**. Para procesos de gobierno, **licitaciones@firefighter.mx**.
+Cuéntanos cuántos integrantes tiene tu brigada y en qué operación trabajan, en [equipos para bomberos](/productos/epp-para-bomberos) o escribiendo a **ventas@firefighter.mx**. Para procesos de gobierno, **licitaciones@firefighter.mx**.
 
 ## En resumen
 
