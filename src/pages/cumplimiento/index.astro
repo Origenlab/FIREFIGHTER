@@ -7,6 +7,7 @@ import {
   NORMAS, GIROS, TRAMITES, CALENDARIO, UMBRALES,
   ESTADOS, REGIONES, PANORAMA,
   REVISADO, UMA, pesos, AVISO_LEGAL,
+  etiquetaRiesgo, indice, ESTADOS_LISTOS,
 } from '../../lib/cumplimiento';
 
 const SITE = 'https://firefighter.com.mx';
@@ -193,6 +194,14 @@ const capas = [
               <li><i class="is-bom"></i><span>La etiqueta roja indica de quién dependen los bomberos: municipal, estatal, integrado con protección civil o patronato.</span></li>
             </ul>
           </div>
+
+          <nav class="cmp-side-box" aria-label="Otras rutas de la sección">
+            <span class="cmp-side-title">Entrar por otro eje</span>
+            <a href="#giros" class="cmp-side-link"><span>Por giro de negocio</span><em>{GIROS.length}</em></a>
+            <a href="#normas" class="cmp-side-link"><span>Por norma aplicable</span><em>{NORMAS.length}</em></a>
+            <a href="#calendario" class="cmp-side-link"><span>Calendario de vencimientos</span><em>{CALENDARIO.length}</em></a>
+            <a href="/directorio" class="cmp-side-link"><span>Directorio de bomberos</span><em>→</em></a>
+          </nav>
 
           <div class="cmp-side-box cmp-side-cta">
             <span class="cmp-side-title">¿Operas en varios estados?</span>
@@ -498,14 +507,15 @@ const capas = [
       </div>
 
       <div class="cmp-giros">
-        {GIROS.map(g => (
+        {GIROS.map((g, i) => (
           <a href={`/cumplimiento/giro/${g.slug}`} class="cmp-giro">
+            <div class="cmp-giro-top">
+              <span class={`cmp-giro-badge is-${g.riesgoNom}`}>{etiquetaRiesgo(g.riesgoNom)}</span>
+              <span class="cmp-giro-num">{indice(i)}</span>
+            </div>
             <div class="cmp-giro-head">
-              <span class="cmp-giro-i" aria-hidden="true">{g.icono}</span>
-              <div style="min-width:0;">
-                <h3 class="cmp-giro-n">{g.nombre}</h3>
-                <span class="cmp-giro-g">{g.gancho}</span>
-              </div>
+              <h3 class="cmp-giro-n">{g.nombre}</h3>
+              <span class="cmp-giro-g">{g.gancho}</span>
             </div>
 
             <p class="cmp-giro-r">{g.resumen}</p>
@@ -524,7 +534,7 @@ const capas = [
             </div>
 
             <div class="cmp-giro-err">
-              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M5.07 19H19a2 2 0 001.75-2.96l-6.93-12a2 2 0 00-3.46 0l-6.93 12A2 2 0 005.07 19z"/></svg>
+              <b>Error más frecuente</b>
               <span>{g.errores[0].titulo}</span>
             </div>
 
@@ -534,6 +544,25 @@ const capas = [
             </span>
           </a>
         ))}
+      </div>
+
+      <!-- ── Puente giro × estado ── -->
+      <div style="margin-top:44px; background:#fff; border:1px solid #e4e4e7; border-radius:14px; padding:28px 28px 24px;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+          <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+          <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Giro × estado</span>
+        </div>
+        <h3 style="font-size:1.35rem; font-weight:800; color:#09090b; line-height:1.2; margin:0 0 12px; letter-spacing:-0.01em;">Cada guía tiene su versión por entidad</h3>
+        <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0 0 20px; max-width:78ch;">La guía nacional te dice qué exige la <a href="/cumplimiento/normas/nom-002-stps-2010" style="color:#dc2626; font-weight:600; text-decoration:none;">NOM-002-STPS-2010</a> a tu giro. La versión por entidad cruza esa obligación federal con la ley de protección civil del estado y publica <strong style="color:#09090b; font-weight:600;">el número que efectivamente tienes que cumplir</strong>, que siempre es el más exigente de los dos. Son {GIROS.length} giros × {PANORAMA.total} entidades: entra por el giro y elige tu estado, o entra por el estado y elige tu giro.</p>
+        <div class="cmp-edo-lista">
+          {ESTADOS_LISTOS.slice(0, 12).map(e => (
+            <a href={`/cumplimiento/estado/${e.slug}`} class="cmp-edo">
+              <strong>{e.estado}</strong>
+              <span>{e.simulacrosMin > 0 ? `${e.simulacrosMin} simulacros` : 'sin mínimo'}</span>
+            </a>
+          ))}
+          <a href="#estados" class="cmp-edo"><strong>Ver las {PANORAMA.total} entidades</strong><span>→</span></a>
+        </div>
       </div>
 
     </div>

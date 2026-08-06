@@ -141,7 +141,14 @@ export interface ErrorDeGiro {
 export interface Giro {
   slug: string;
   nombre: string;
-  icono: string;
+  /** Nombre corto para títulos SEO y enlaces cruzados. */
+  nombreCorto: string;
+  /**
+   * DEPRECADO. Emoji heredado de la primera versión de las cards.
+   * Las cards de esta sección son tipográficas: NO se renderiza en ninguna
+   * plantilla y no debe volver a usarse. Se conserva solo para no romper el JSON.
+   */
+  icono?: string;
   /** Frase corta que define el riesgo del giro. Se usa como badge. */
   gancho: string;
   resumen: string;
@@ -377,3 +384,49 @@ export function cruce(estado: Estado, giro: Giro): Cruce {
 /** Etiqueta legible del riesgo del giro. */
 export const etiquetaRiesgo = (r: Giro['riesgoNom']) =>
   r === 'alto' ? 'Riesgo alto' : r === 'ordinario' ? 'Riesgo ordinario' : 'Riesgo variable';
+
+/** Clave de tres letras del riesgo, para la columna izquierda de los enlaces cruzados. */
+export const claveRiesgo = (r: Giro['riesgoNom']) =>
+  r === 'alto' ? 'ALT' : r === 'ordinario' ? 'ORD' : 'VAR';
+
+/* ════════════════════════════════════════════════════════════════════
+   INTERLINKING · helpers que usan TODAS las plantillas de /cumplimiento
+   La sección es una malla de tres ejes —norma, giro y estado— y cada
+   página tiene que poder saltar a los otros dos sin callejones sin salida.
+   Estos helpers son la única fuente de esos enlaces: si se cambia aquí,
+   cambia en las 363 páginas.
+   ════════════════════════════════════════════════════════════════════ */
+
+/** Estados con ficha indexable. Los de confianza media salen con noindex. */
+export const ESTADOS_LISTOS = ESTADOS.filter(e => e.listo);
+
+/** URL canónica de cada tipo de página de la sección. */
+export const rutaEstado = (e: Pick<Estado, 'slug'>) => `/cumplimiento/estado/${e.slug}`;
+export const rutaGiro = (g: Pick<Giro, 'slug'>) => `/cumplimiento/giro/${g.slug}`;
+export const rutaCruce = (e: Pick<Estado, 'slug'>, g: Pick<Giro, 'slug'>) =>
+  `/cumplimiento/estado/${e.slug}/${g.slug}`;
+
+/** Estados agrupados por región, en el orden de REGIONES. Sin regiones vacías. */
+export function estadosPorRegion(lista: Estado[] = ESTADOS) {
+  return REGIONES
+    .map(r => ({ ...r, estados: lista.filter(e => e.region === r.key) }))
+    .filter(r => r.estados.length > 0);
+}
+
+/** Los demás estados de la misma región. Enlace lateral de la ficha de estado. */
+export const vecinosDe = (e: Estado) =>
+  ESTADOS.filter(x => x.region === e.region && x.slug !== e.slug);
+
+/** Los demás giros, en el orden del catálogo. Enlace lateral de las fichas de giro. */
+export const otrosGiros = (g: Giro) => GIROS.filter(x => x.slug !== g.slug);
+
+/**
+ * Giros cuya guía apunta a una categoría del catálogo.
+ * Es el puente de /productos hacia /cumplimiento: sin él la sección normativa
+ * no recibe enlaces entrantes del catálogo, que es donde está el tráfico.
+ */
+export const girosDeCategoria = (productoSlug: string) =>
+  GIROS.filter(g => g.productoSlug === productoSlug);
+
+/** Índice de dos dígitos para la cabecera tipográfica de las cards. */
+export const indice = (i: number) => String(i + 1).padStart(2, '0');

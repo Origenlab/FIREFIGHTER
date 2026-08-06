@@ -3,7 +3,10 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import PageHero from '../../../components/layout/PageHero.astro';
 import { tituloSeo } from '../../../lib/seoText';
 import { waLink } from '../../../lib/blog';
-import { NORMAS, UMBRALES, REVISADO, AVISO_LEGAL, pesos } from '../../../lib/cumplimiento';
+import {
+  NORMAS, UMBRALES, REVISADO, AVISO_LEGAL, pesos,
+  GIROS, PANORAMA, claveRiesgo, etiquetaRiesgo,
+} from '../../../lib/cumplimiento';
 
 const SITE = 'https://firefighter.com.mx';
 const norma = NORMAS.find(n => n.slug === 'nom-002-stps-2010')!;
@@ -21,6 +24,8 @@ const toc = [
   { id: 'registros', t: 'Qué te va a pedir el inspector' },
   { id: 'mitos', t: 'Cinco cosas que la norma no dice' },
   { id: 'sanciones', t: 'Qué pasa si no cumples' },
+  { id: 'giros', t: 'Qué significa en tu giro' },
+  { id: 'estatal', t: 'El carril de protección civil' },
 ];
 
 const obligaciones = [
@@ -308,6 +313,50 @@ const artSchema = {
             <p class="l3-p">El artículo 994 fracción V de la Ley Federal del Trabajo sanciona con <strong>250 a 5 000 UMA</strong> al patrón que no observe en la instalación de sus establecimientos las normas de seguridad e higiene. Con la UMA vigente, eso son <strong>{pesos(250)} a {pesos(5000)}</strong>.</p>
             <p class="l3-p">Pero el Reglamento Federal de Seguridad y Salud en el Trabajo desagrega el cumplimiento contra incendios en tramos con rangos muy distintos, y ahí está el dato útil: <strong>no tener brigada, no hacer simulacros, no tener detección o equipos, o tener rutas de evacuación bloqueadas</strong> cae en el rango de 250 a 5 000 UMA. En cambio, no tener el <em>papel</em> del programa de revisión cae en el rango de 50 a 100 UMA. El equipo y la brigada pesan cincuenta veces más que el documento.</p>
             <p class="l3-p">Y la multa no es un pago único. El artículo 992 de la Ley Federal del Trabajo impone la sanción <strong>por cada trabajador afectado</strong>, aplica de manera independiente cada infracción concurrente y <strong>duplica</strong> el monto por reincidencia dentro de los dos años siguientes. El artículo 126 del reglamento lo duplica otra vez si no acreditas haber subsanado en el plazo señalado, sin perjuicio de que la autoridad proceda conforme al artículo 512-D de la Ley, que permite restringir el acceso o limitar la operación.</p>
+          </div>
+
+          <div class="l3-sec" id="giros">
+            <div class="l3-sec-eyebrow"><i></i><span>Cómo aterriza por giro</span></div>
+            <h2 class="l3-sec-title">Qué significa esta norma en tu tipo de negocio</h2>
+            <p class="l3-p">La norma es la misma para todos, pero no obliga a lo mismo a todos. La NOM-002 te dice cuántos extintores por metro cuadrado; no te dice que <strong>una cocina comercial necesita clase K y ningún otro agente sirve</strong>, que un hospital tiene que evacuar pacientes que no caminan, o que una gasolinera es riesgo alto desde el primer litro. El giro define el escenario, y el escenario define el equipo.</p>
+            <p class="l3-p">Cada guía de abajo traduce estos numerales al giro concreto, con las normas que se le suman, el expediente que revisa el inspector y los tres errores que más se repiten en esa actividad.</p>
+            <div class="cmp-cross is-3">
+              {GIROS.map(g => (
+                <a href={`/cumplimiento/giro/${g.slug}`} class="cmp-cx">
+                  <span class={`cmp-cx-k is-${g.riesgoNom}`}>{claveRiesgo(g.riesgoNom)}</span>
+                  <span style="min-width:0;">
+                    <span class="cmp-cx-n">{g.nombreCorto}</span>
+                    <span class="cmp-cx-s">{etiquetaRiesgo(g.riesgoNom)} · {g.riesgoNom === 'ordinario' ? '1 simulacro' : '2 simulacros'} federal{g.riesgoNom === 'ordinario' ? '' : 'es'}</span>
+                  </span>
+                  <span class="cmp-cx-m">Ver guía</span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div class="l3-sec" id="estatal">
+            <div class="l3-sec-eyebrow"><i></i><span>El otro carril</span></div>
+            <h2 class="l3-sec-title">Esta norma no es lo único que te aplica</h2>
+            <p class="l3-p">Todo lo anterior es el carril <strong>laboral federal</strong>: la STPS regula tu inmueble como centro de trabajo y lo verifica por inspección sorpresa, sin licencia previa. En paralelo corre el carril de <strong>protección civil</strong>, que opera al revés —registro previo del Programa Interno más visitas de verificación— y que cambia en cada una de las {PANORAMA.total} entidades. Cumplir con uno no acredita el otro.</p>
+            <p class="l3-p">Lo que cambia por estado es quién autoriza tu Programa Interno, cuánto dura, cuántos simulacros te exigen y si necesitas un consultor con registro estatal. Ese piso estatal a veces supera al federal, y entonces el número que manda es el del estado: en {PANORAMA.simulacrosMax === 6 ? 'el extremo más exigente son seis simulacros al año' : `el extremo más exigente son ${PANORAMA.simulacrosMax} simulacros al año`}, frente al mínimo federal de uno.</p>
+            <div class="cmp-cross">
+              <a href="/cumplimiento#estados" class="cmp-cx">
+                <span class="cmp-cx-k">EDO</span>
+                <span style="min-width:0;">
+                  <span class="cmp-cx-n">Lo que exige cada entidad</span>
+                  <span class="cmp-cx-s">{PANORAMA.total} fichas estatales, {PANORAMA.documentados} verificadas contra texto legal</span>
+                </span>
+                <span class="cmp-cx-m">Ver</span>
+              </a>
+              <a href="/cumplimiento#calendario" class="cmp-cx">
+                <span class="cmp-cx-k">CAL</span>
+                <span style="min-width:0;">
+                  <span class="cmp-cx-n">Calendario de cumplimiento</span>
+                  <span class="cmp-cx-s">Qué se vence y cada cuánto, con su numeral</span>
+                </span>
+                <span class="cmp-cx-m">Ver</span>
+              </a>
+            </div>
           </div>
 
           <div class="l3-sec">

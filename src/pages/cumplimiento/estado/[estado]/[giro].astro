@@ -5,8 +5,9 @@ import { tituloSeo } from '../../../../lib/seoText';
 import { waLink } from '../../../../lib/blog';
 import categorias from '../../../../data/productos.json';
 import {
-  ESTADOS, GIROS, getEstado, getGiro, cruce, etiquetaRiesgo,
-  REGIONES, REVISADO, AVISO_LEGAL,
+  ESTADOS, GIROS, getEstado, getGiro, cruce, etiquetaRiesgo, claveRiesgo,
+  REGIONES, REVISADO, AVISO_LEGAL, PANORAMA,
+  vecinosDe, otrosGiros as otrosGirosDe, rutaCruce, rutaGiro, rutaEstado,
 } from '../../../../lib/cumplimiento';
 
 export async function getStaticPaths() {
@@ -24,7 +25,12 @@ const url = `${SITE}/cumplimiento/estado/${e.slug}/${g.slug}`;
 
 const region = REGIONES.find(r => r.key === e.region)?.nombre ?? '';
 const categoria = (categorias as any[]).find(x => x.slug === g.productoSlug);
-const otrosGiros = GIROS.filter(x => x.slug !== g.slug).slice(0, 6);
+/* Los NUEVE giros restantes, no seis: una operación mixta puede ser cualquiera
+   de ellos y recortar la lista dejaba fichas sin enlaces entrantes laterales. */
+const otrosGiros = otrosGirosDe(g);
+/* El MISMO giro en los estados vecinos. Es el eje lateral de la malla:
+   sin él, las 320 fichas de cruce solo se alcanzan desde su estado padre. */
+const mismoGiroVecinos = vecinosDe(e);
 const nombreBajo = g.nombre.toLowerCase();
 
 const descripcion = `Qué exige la ley a un ${nombreBajo} en ${e.estado}: extintores, simulacros, brigada, Programa Interno de Protección Civil y los documentos que revisa el inspector. Obligación federal y estatal en una sola guía.`;
@@ -66,7 +72,7 @@ const cifras = [
 
   <PageHero
     eyebrow={`${e.estado} · ${region}`}
-    badge={`${g.icono} ${etiquetaRiesgo(g.riesgoNom)}`}
+    badge={etiquetaRiesgo(g.riesgoNom)}
     h1={`${g.nombre}<br>en ${e.estado}:<br>qué exige la ley`}
     lead={`Un ${nombreBajo} en ${e.estado} responde ante <strong style="color:#e4e4e7;">dos autoridades a la vez</strong>: la Secretaría del Trabajo, con obligaciones idénticas en todo el país, y la protección civil de ${e.estado}, con reglas propias. Esta guía cruza ambas y te dice el número que tienes que cumplir, que siempre es el más exigente de los dos.`}
     alinear="center"
@@ -154,7 +160,7 @@ const cifras = [
           <div class="l3-sec" id="equipo">
             <div class="l3-sec-eyebrow"><i></i><span>Equipo mínimo</span></div>
             <h2 class="l3-sec-title">Qué equipo te exige la ley</h2>
-            <p class="l3-p">Como {c.riesgo === 'ordinario' ? 'este giro suele clasificarse en riesgo ordinario' : c.riesgo === 'alto' ? 'este giro cae en riesgo alto' : 'la clasificación de este giro depende del plantel'}, la NOM-002-STPS-2010 pide <strong>un extintor por cada {c.m2PorExtintor} m² de superficie o fracción</strong> (numeral 7.17), sin exceder las distancias máximas de recorrido de su Tabla 1, medidas caminando y no en línea recta.</p>
+            <p class="l3-p">Como {c.riesgo === 'ordinario' ? 'este giro suele clasificarse en riesgo ordinario' : c.riesgo === 'alto' ? 'este giro cae en riesgo alto' : 'la clasificación de este giro depende del plantel'}, la <a class="l3-il" href="/cumplimiento/normas/nom-002-stps-2010">NOM-002-STPS-2010</a> pide <strong>un extintor por cada {c.m2PorExtintor} m² de superficie o fracción</strong> (numeral 7.17), sin exceder las distancias máximas de recorrido de su Tabla 1, medidas caminando y no en línea recta. El detalle de qué agente sirve para cada escenario de este giro, y cuál no, está en la <a class="l3-il" href={rutaGiro(g)}>guía nacional de {g.nombreCorto.toLowerCase()}</a>.</p>
 
             <ul class="cmp-lista">
               {g.extintores.map(x => (
@@ -164,6 +170,10 @@ const cifras = [
                 </li>
               ))}
             </ul>
+
+            {categoria && (
+              <p class="l3-p" style="margin-top:16px;">En catálogo, la línea que más se mueve para este giro es <a class="l3-il" href={`/productos/${categoria.slug}`}>{categoria.nombre.toLowerCase()}</a>. Conviene tener la clasificación de riesgo antes de cotizar: de ella dependen el número de extintores y si te aplican brigada y sistemas fijos.</p>
+            )}
 
             <h3 style="font-size:1rem; font-weight:700; color:#09090b; margin:28px 0 0;">Detección, alarma y sistemas fijos</h3>
             <ul class="cmp-lista">
@@ -197,7 +207,7 @@ const cifras = [
                 <div class="cmp-est-v"><p>{e.bomberos}</p></div>
               </div>
             </div>
-            <p class="l3-p" style="margin-top:16px;">El visto bueno de bomberos, la licencia de funcionamiento y el reglamento de construcción son en su mayoría <strong>municipales</strong> y cambian dentro del mismo estado. Confírmalos siempre con el ayuntamiento donde esté el inmueble.</p>
+            <p class="l3-p" style="margin-top:16px;">El visto bueno de bomberos, la licencia de funcionamiento y el reglamento de construcción son en su mayoría <strong>municipales</strong> y cambian dentro del mismo estado. Confírmalos siempre con el ayuntamiento donde esté el inmueble. El marco estatal completo —incluida la ley aplicable con su fecha de reforma y el enlace al texto oficial— está en la <a class="l3-il" href={rutaEstado(e)}>ficha de {e.estado}</a>.{e.totalStations > 0 && <> Para el directorio de emergencia del Programa Interno tenemos <a class="l3-il" href={`/directorio/${e.slug}`}>{e.totalStations} estaciones de bomberos documentadas en la entidad</a>.</>}</p>
           </div>
 
           <div class="l3-sec" id="evacuacion">
@@ -260,19 +270,82 @@ const cifras = [
             </div>
           </div>
 
-          <div class="l3-sec">
-            <div class="l3-sec-eyebrow"><i></i><span>Otros giros en {e.estado}</span></div>
-            <h2 class="l3-sec-title">¿Tu operación es mixta?</h2>
-            <p class="l3-p">Un hotel con restaurante o una planta con almacén responden por las dos cosas.</p>
-            <div class="cmp-vecinos">
-              {otrosGiros.map(o => (
-                <a href={`/cumplimiento/estado/${e.slug}/${o.slug}`} class="cmp-vecino">
-                  <span class="cmp-vecino-c" style="background:#fef2f2; color:#dc2626; font-size:0.85rem; padding:2px 6px;">{o.icono}</span>
-                  <span class="cmp-vecino-n">{o.nombre}</span>
-                </a>
-              ))}
+          <div class="l3-sec" id="mas">
+            <div class="l3-sec-eyebrow"><i></i><span>Seguir desde aquí</span></div>
+            <h2 class="l3-sec-title">Los tres caminos que continúan esta guía</h2>
+            <p class="l3-p">Esta página es el cruce de un giro con una entidad. Los otros dos ejes de la sección resuelven lo que aquí se resume: el <strong>detalle técnico del giro</strong>, que no cambia por estado, y el <strong>marco completo de {e.estado}</strong>, que aplica a cualquier giro que operes en la entidad.</p>
+            <div class="cmp-cross is-3">
+              <a href={rutaGiro(g)} class="cmp-cx">
+                <span class={`cmp-cx-k is-${g.riesgoNom}`}>{claveRiesgo(g.riesgoNom)}</span>
+                <span style="min-width:0;">
+                  <span class="cmp-cx-n">Guía nacional del giro</span>
+                  <span class="cmp-cx-s">{g.nombreCorto} · normas, agentes y errores</span>
+                </span>
+                <span class="cmp-cx-m">Ver</span>
+              </a>
+              <a href={rutaEstado(e)} class="cmp-cx">
+                <span class="cmp-cx-k">{e.code}</span>
+                <span style="min-width:0;">
+                  <span class="cmp-cx-n">Ficha completa de {e.estado}</span>
+                  <span class="cmp-cx-s">Ley estatal, PIPC, consultor y bomberos</span>
+                </span>
+                <span class="cmp-cx-m">Ver</span>
+              </a>
+              <a href="/cumplimiento/normas/nom-002-stps-2010" class="cmp-cx">
+                <span class="cmp-cx-k">NOM</span>
+                <span style="min-width:0;">
+                  <span class="cmp-cx-n">NOM-002-STPS-2010</span>
+                  <span class="cmp-cx-s">La obligación federal, numeral por numeral</span>
+                </span>
+                <span class="cmp-cx-m">Ver</span>
+              </a>
             </div>
           </div>
+
+          <div class="l3-sec" id="otros-giros">
+            <div class="l3-sec-eyebrow"><i></i><span>Otros giros en {e.estado}</span></div>
+            <h2 class="l3-sec-title">¿Tu operación es mixta?</h2>
+            <p class="l3-p">Un hotel con restaurante o una planta con almacén responden por las dos cosas. La autoridad no evalúa el giro que declaraste al darte de alta: evalúa lo que encuentra en el inmueble el día de la visita. Estas son las otras {otrosGiros.length} guías, ya cruzadas con la normativa de {e.estado}.</p>
+            <div class="cmp-cross">
+              {otrosGiros.map(o => {
+                const co = cruce(e, o);
+                return (
+                  <a href={rutaCruce(e, o)} class="cmp-cx">
+                    <span class={`cmp-cx-k is-${o.riesgoNom}`}>{claveRiesgo(o.riesgoNom)}</span>
+                    <span style="min-width:0;">
+                      <span class="cmp-cx-n">{o.nombreCorto}</span>
+                      <span class="cmp-cx-s">1 : {co.m2PorExtintor} m² · {co.simulacrosPlan} simulacros · brigada {co.brigadaObligatoria ? 'obligatoria' : 'no exigida'}</span>
+                    </span>
+                    <span class="cmp-cx-m">Ver</span>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+
+          {mismoGiroVecinos.length > 0 && (
+            <div class="l3-sec" id="otros-estados">
+              <div class="l3-sec-eyebrow"><i></i><span>El mismo giro, otra entidad</span></div>
+              <h2 class="l3-sec-title">Si tienes {nombreBajo} en más de un estado</h2>
+              <p class="l3-p">Las obligaciones federales viajan contigo; las de protección civil no. Cada entidad tiene su propia ley, su propia vigencia de Programa Interno y su propio padrón de consultores, así que una sucursal en regla en {e.estado} no acredita nada en la de al lado. Estas son las fichas del mismo giro en {REGIONES.find(r => r.key === e.region)?.nombre ?? 'la región'}.</p>
+              <div class="cmp-cross">
+                {mismoGiroVecinos.map(v => {
+                  const cv = cruce(v, g);
+                  return (
+                    <a href={rutaCruce(v, g)} class={`cmp-cx ${v.listo ? '' : ''}`}>
+                      <span class="cmp-cx-k">{v.code}</span>
+                      <span style="min-width:0;">
+                        <span class="cmp-cx-n">{g.nombreCorto} en {v.estado}</span>
+                        <span class="cmp-cx-s">{cv.simulacrosPlan} simulacros al año · {cv.simulacrosOrigen === 'estatal' ? 'manda la ley estatal' : cv.simulacrosOrigen === 'federal' ? 'manda la NOM-002' : 'coinciden ambas'}</span>
+                      </span>
+                      <span class="cmp-cx-m">Ver</span>
+                    </a>
+                  );
+                })}
+              </div>
+              <p class="l3-nota" style="margin-top:14px;">Fuera de esta región están las demás entidades: el <a class="l3-il" href={`${rutaGiro(g)}#estados`}>índice por estado de la guía de {g.nombreCorto.toLowerCase()}</a> las lista las {PANORAMA.total}, con los simulacros ya cruzados en cada una.</p>
+            </div>
+          )}
 
           <p class="cmp-legal" style="margin-top:34px;">
             <strong>Aviso.</strong> {AVISO_LEGAL} Esta guía cruza la obligación federal con el marco estatal de {e.estado}; los trámites municipales varían dentro del mismo estado. Última revisión normativa: {REVISADO}.
@@ -289,6 +362,9 @@ const cifras = [
             <a href="#evacuacion">Evacuación</a>
             <a href="#brigadas">Brigadas</a>
             <a href="#documentos">Qué pide el inspector</a>
+            <a href="#mas">Seguir desde aquí</a>
+            <a href="#otros-giros">Otros giros en {e.estado}</a>
+            {mismoGiroVecinos.length > 0 && <a href="#otros-estados">El mismo giro en otra entidad</a>}
           </nav>
 
           <div class="l3-box">

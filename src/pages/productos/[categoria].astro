@@ -6,6 +6,7 @@
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import categorias from '../../data/productos.json';
+import { girosDeCategoria, claveRiesgo, PANORAMA } from '../../lib/cumplimiento';
 
 export function getStaticPaths() {
   return categorias.map((cat) => ({
@@ -23,6 +24,10 @@ const wa = (t: string) => `${waBase}?text=${encodeURIComponent(`Hola, necesito c
 const url = `${SITE}/productos/${cat.slug}`;
 const tieneFaqs = Array.isArray(cat.faqs) && cat.faqs.length > 0;
 const otras = categorias.filter((c) => c.slug !== cat.slug);
+/* Guías de /cumplimiento que apuntan a esta categoría. Es el puente del catálogo
+   hacia la sección normativa: sin él, /cumplimiento no recibe enlaces entrantes
+   desde donde está el tráfico comercial. */
+const girosLigados = girosDeCategoria(cat.slug);
 const tieneDetalle = cat.productos?.some((p: any) => p.desc);
 
 // L3: si la categoría está habilitada, las cards y los módulos apuntan a la ficha del producto.
@@ -413,6 +418,65 @@ const faqSchema = tieneFaqs
             ))}
           </div>
 
+        </div>
+
+        <!-- ── Puente al centro de cumplimiento ── -->
+        <div style="margin-top:52px; padding-top:44px; border-top:1px solid #e4e4e7;">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16" style="align-items:start;">
+            <div>
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+                <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+                <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Antes de cotizar</span>
+              </div>
+              <h2 style="font-size:clamp(1.5rem,2.2vw,2rem); font-weight:800; color:#09090b; line-height:1.15; margin:0 0 16px; letter-spacing:-0.02em;">
+                Qué cantidad te exige<br>la ley, y por qué
+              </h2>
+              <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0 0 14px;">
+                La certificación del equipo resuelve la mitad del problema. La otra mitad es <strong style="color:#09090b; font-weight:600;">cuánto</strong> te exige tener la autoridad, y eso no lo decide la marca: lo decide la clasificación de riesgo de incendio de tu centro de trabajo conforme a la <a href="/cumplimiento/normas/nom-002-stps-2010" style="color:#dc2626; font-weight:600; text-decoration:none;">NOM-002-STPS-2010</a>, más lo que exija la ley de protección civil de tu estado.
+              </p>
+              <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0;">
+                Es el error más caro que vemos: empresas que compran equipo de sobra en una línea mientras siguen descubiertas en otra que sí les aplicaba.
+              </p>
+            </div>
+            <div>
+              <div class="cmp-cross">
+                <a href="/cumplimiento" class="cmp-cx">
+                  <span class="cmp-cx-k">HUB</span>
+                  <span style="min-width:0;">
+                    <span class="cmp-cx-n">Centro de cumplimiento</span>
+                    <span class="cmp-cx-s">Las cuatro capas de normativa, con su fuente oficial</span>
+                  </span>
+                  <span class="cmp-cx-m">Ver</span>
+                </a>
+                <a href="/cumplimiento/normas/nom-002-stps-2010#clasificacion" class="cmp-cx">
+                  <span class="cmp-cx-k">NOM</span>
+                  <span style="min-width:0;">
+                    <span class="cmp-cx-n">Riesgo ordinario o alto</span>
+                    <span class="cmp-cx-s">El estudio del que depende todo lo demás</span>
+                  </span>
+                  <span class="cmp-cx-m">Ver</span>
+                </a>
+                <a href="/cumplimiento#estados" class="cmp-cx">
+                  <span class="cmp-cx-k">EDO</span>
+                  <span style="min-width:0;">
+                    <span class="cmp-cx-n">Lo que exige tu estado</span>
+                    <span class="cmp-cx-s">{PANORAMA.total} entidades, con ley, vigencia y simulacros</span>
+                  </span>
+                  <span class="cmp-cx-m">Ver</span>
+                </a>
+                {girosLigados.map(g => (
+                  <a href={`/cumplimiento/giro/${g.slug}`} class="cmp-cx">
+                    <span class={`cmp-cx-k is-${g.riesgoNom}`}>{claveRiesgo(g.riesgoNom)}</span>
+                    <span style="min-width:0;">
+                      <span class="cmp-cx-n">{g.nombreCorto}</span>
+                      <span class="cmp-cx-s">Qué exige la ley a este giro</span>
+                    </span>
+                    <span class="cmp-cx-m">Guía</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

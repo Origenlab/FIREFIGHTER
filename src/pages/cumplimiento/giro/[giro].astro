@@ -4,7 +4,11 @@ import PageHero from '../../../components/layout/PageHero.astro';
 import { tituloSeo } from '../../../lib/seoText';
 import { waLink } from '../../../lib/blog';
 import categorias from '../../../data/productos.json';
-import { GIROS, getGiro, REVISADO, AVISO_LEGAL } from '../../../lib/cumplimiento';
+import {
+  GIROS, getGiro, REVISADO, AVISO_LEGAL,
+  ESTADOS, PANORAMA, cruce, etiquetaRiesgo, claveRiesgo,
+  estadosPorRegion, otrosGiros as otrosGirosDe, rutaCruce, rutaGiro,
+} from '../../../lib/cumplimiento';
 
 export async function getStaticPaths() {
   const { GIROS } = await import('../../../lib/cumplimiento');
@@ -17,7 +21,18 @@ const g = getGiro(slug)!;
 const url = `${SITE}/cumplimiento/giro/${g.slug}`;
 
 const categoria = (categorias as any[]).find(c => c.slug === g.productoSlug);
-const otros = GIROS.filter(x => x.slug !== g.slug);
+const otros = otrosGirosDe(g);
+
+/* Enlaces a la versión estatal de esta misma guía, agrupados por región.
+   Es el eje que convierte esta página en el padre real de las 32 fichas
+   /cumplimiento/estado/{estado}/{giro}: sin este bloque nacían huérfanas. */
+const porRegion = estadosPorRegion(ESTADOS);
+/* Los estados cuya norma local exige más simulacros que la NOM para este giro:
+   el dato que justifica entrar a la versión estatal. */
+const masExigentes = ESTADOS
+  .filter(e => cruce(e, g).simulacrosOrigen === 'estatal')
+  .sort((a, b) => b.simulacrosMin - a.simulacrosMin);
+const simulacrosFed = g.riesgoNom === 'ordinario' ? 1 : 2;
 
 const descripcion = `Qué exige la ley mexicana en materia de protección contra incendios a un ${g.nombre.toLowerCase()}: extintores, detección, evacuación, brigadas y los documentos que revisa el inspector.`;
 
@@ -78,11 +93,11 @@ const artSchema = {
     ]}
   >
     <div slot="ctas" style="display:flex; flex-wrap:wrap; gap:10px;">
-      <a href="#documentos" class="l2-cta">
-        <span>Qué te va a pedir el inspector</span>
+      <a href="#estados" class="l2-cta">
+        <span>Ver lo que exige mi estado</span>
       </a>
-      <a href={waLink(`tengo un ${g.nombre.toLowerCase()} y necesito cumplir con protección contra incendios`)} target="_blank" rel="noopener" class="l2-cta-ghost">
-        <span>Hablar con un ingeniero</span>
+      <a href="#documentos" class="l2-cta-ghost">
+        <span>Qué te va a pedir el inspector</span>
       </a>
     </div>
   </PageHero>
@@ -162,17 +177,79 @@ const artSchema = {
             </div>
           </div>
 
-          <div class="l3-sec">
+          <div class="l3-sec" id="estados">
+            <div class="l3-sec-eyebrow"><i></i><span>El carril estatal</span></div>
+            <h2 class="l3-sec-title">Lo que le exige cada estado a un {g.nombre.toLowerCase()}</h2>
+            <p class="l3-p">Todo lo anterior es la obligación <strong>federal</strong> de la <a class="l3-il" href="/cumplimiento/normas/nom-002-stps-2010">NOM-002-STPS-2010</a>, idéntica en las {PANORAMA.total} entidades. En paralelo corre el carril de <strong>protección civil</strong>, que sí cambia de un estado a otro: quién autoriza tu Programa Interno, cuánto dura, cuántos simulacros te exigen y si necesitas un consultor con registro estatal.</p>
+            <p class="l3-p">Cada ficha de abajo cruza las dos autoridades para este giro en concreto y publica <strong>el número que realmente tienes que planear</strong>, que siempre es el más exigente de los dos. La cifra al lado de cada estado son los simulacros anuales resultantes de ese cruce.</p>
+
+            {masExigentes.length > 0 && (
+              <div class="l3-box l3-box-red">
+                <span class="l3-box-title">Dónde no basta con cumplir la NOM</span>
+                <p class="l3-box-copy">Para un {g.nombre.toLowerCase()} la NOM-002 pide {simulacrosFed === 1 ? 'un simulacro' : `${simulacrosFed} simulacros`} al año. En {masExigentes.length} {masExigentes.length === 1 ? 'entidad' : 'entidades'} la ley estatal pide más, y ahí el número que manda es el estatal: {masExigentes.slice(0, 6).map((e, i) => (<>{i > 0 ? ', ' : ''}<a class="l3-il" href={rutaCruce(e, g)}>{e.estado}</a> ({e.simulacrosMin})</>))}{masExigentes.length > 6 ? ' y otras más' : ''}.</p>
+              </div>
+            )}
+
+            {porRegion.map(r => (
+              <div class="cmp-edo-region">
+                <div class="cmp-edo-head">
+                  <span>{r.nombre}</span>
+                  <i></i>
+                  <em>{r.estados.length}</em>
+                </div>
+                <div class="cmp-edo-lista">
+                  {r.estados.map(e => (
+                    <a href={rutaCruce(e, g)} class={`cmp-edo ${e.listo ? '' : 'is-draft'}`}>
+                      <strong>{e.estado}</strong>
+                      <span>{cruce(e, g).simulacrosPlan} sim.</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            <p class="l3-nota" style="margin-top:18px;">Las fichas con borde punteado están en verificación contra el texto legal consolidado y salen con <code>noindex</code>: úsalas como orientación y confírmalas con la autoridad estatal. También puedes entrar por el <a class="l3-il" href="/cumplimiento#estados">índice de las {PANORAMA.total} entidades</a> y elegir el giro desde ahí.</p>
+          </div>
+
+          <div class="l3-sec" id="otros-giros">
             <div class="l3-sec-eyebrow"><i></i><span>Otros giros</span></div>
             <h2 class="l3-sec-title">¿Tu operación es mixta?</h2>
-            <p class="l3-p">Un hotel con restaurante, una planta con almacén o una escuela con cocina responden por las dos cosas. Revisa también:</p>
-            <div class="cmp-vecinos">
+            <p class="l3-p">Un hotel con restaurante, una planta con almacén o una escuela con cocina responden por las dos cosas: la autoridad no evalúa el giro que declaraste, evalúa lo que encuentra en el inmueble. Revisa también la guía de la actividad secundaria.</p>
+            <div class="cmp-cross">
               {otros.map(o => (
-                <a href={`/cumplimiento/giro/${o.slug}`} class="cmp-vecino">
-                  <span class="cmp-vecino-c" style="background:#fef2f2; color:#dc2626; font-size:0.85rem; padding:2px 6px;">{o.icono}</span>
-                  <span class="cmp-vecino-n">{o.nombre}</span>
+                <a href={rutaGiro(o)} class="cmp-cx">
+                  <span class={`cmp-cx-k is-${o.riesgoNom}`}>{claveRiesgo(o.riesgoNom)}</span>
+                  <span style="min-width:0;">
+                    <span class="cmp-cx-n">{o.nombreCorto}</span>
+                    <span class="cmp-cx-s">{etiquetaRiesgo(o.riesgoNom)} · {o.normas.length} normas</span>
+                  </span>
+                  <span class="cmp-cx-m">Ver guía</span>
                 </a>
               ))}
+            </div>
+          </div>
+
+          <div class="l3-sec">
+            <div class="l3-sec-eyebrow"><i></i><span>Qué comprar</span></div>
+            <h2 class="l3-sec-title">El equipo que resuelve estos requisitos</h2>
+            <p class="l3-p">Los requisitos de arriba se traducen en equipo concreto. {categoria ? <>La línea que más pesa en este giro es <a class="l3-il" href={`/productos/${categoria.slug}`}>{categoria.nombre.toLowerCase()}</a>, pero casi ninguna instalación se resuelve con una sola categoría.</> : <>Casi ninguna instalación se resuelve con una sola categoría.</>} Antes de cotizar conviene tener la <a class="l3-il" href="/cumplimiento/normas/nom-002-stps-2010#clasificacion">clasificación de riesgo de incendio</a> hecha: de ese estudio dependen el número de extintores, la brigada y los sistemas fijos, y es lo primero que pide el inspector.</p>
+            <div class="cmp-cross">
+              <a href="/productos" class="cmp-cx">
+                <span class="cmp-cx-k">CAT</span>
+                <span style="min-width:0;">
+                  <span class="cmp-cx-n">Catálogo completo</span>
+                  <span class="cmp-cx-s">Ocho categorías de equipo certificado</span>
+                </span>
+                <span class="cmp-cx-m">Ver</span>
+              </a>
+              <a href="/cumplimiento#calendario" class="cmp-cx">
+                <span class="cmp-cx-k">CAL</span>
+                <span style="min-width:0;">
+                  <span class="cmp-cx-n">Calendario de cumplimiento</span>
+                  <span class="cmp-cx-s">Qué se vence y cada cuánto, con su numeral</span>
+                </span>
+                <span class="cmp-cx-m">Ver</span>
+              </a>
             </div>
           </div>
 
@@ -190,6 +267,8 @@ const artSchema = {
             <a href="#evacuacion">Evacuación y señalización</a>
             <a href="#brigadas">Brigadas y simulacros</a>
             <a href="#documentos">Qué pide el inspector</a>
+            <a href="#estados">Lo que exige cada estado</a>
+            <a href="#otros-giros">Otros giros</a>
           </nav>
 
           <div class="l3-box l3-box-red">
@@ -199,9 +278,10 @@ const artSchema = {
 
           <div class="l3-box">
             <span class="l3-box-title">Recuerda el otro carril</span>
-            <p class="l3-box-copy">La STPS y protección civil son autoridades distintas. Cumplir con una no acredita la otra.</p>
-            <a href="/cumplimiento/normas/nom-002-stps-2010" style="font-size:0.78rem; font-weight:600; color:#dc2626; text-decoration:none;">Ver la NOM-002-STPS-2010 →</a><br />
-            <a href="/cumplimiento#estados" style="font-size:0.78rem; font-weight:600; color:#dc2626; text-decoration:none;">Ver lo que exige tu estado →</a>
+            <p class="l3-box-copy">La STPS y protección civil son autoridades distintas. Cumplir con una no acredita la otra, y el carril estatal cambia en cada una de las {PANORAMA.total} entidades.</p>
+            <a href="/cumplimiento/normas/nom-002-stps-2010" style="display:block; font-size:0.78rem; font-weight:600; color:#dc2626; text-decoration:none; margin-bottom:6px;">Ver la NOM-002-STPS-2010 →</a>
+            <a href="#estados" style="display:block; font-size:0.78rem; font-weight:600; color:#dc2626; text-decoration:none; margin-bottom:6px;">Lo que exige cada estado →</a>
+            <a href="/cumplimiento" style="display:block; font-size:0.78rem; font-weight:600; color:#dc2626; text-decoration:none;">Volver al centro de cumplimiento →</a>
           </div>
 
           <div class="l3-box l3-box-dark">

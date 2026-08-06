@@ -3,7 +3,11 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import PageHero from '../../../components/layout/PageHero.astro';
 import { tituloSeo } from '../../../lib/seoText';
 import { waLink } from '../../../lib/blog';
-import { ESTADOS, GIROS, getEstado, cruce, etiquetaRiesgo, REGIONES, REVISADO, AVISO_LEGAL, UMBRALES } from '../../../lib/cumplimiento';
+import {
+  ESTADOS, GIROS, getEstado, cruce, etiquetaRiesgo, claveRiesgo,
+  REGIONES, REVISADO, AVISO_LEGAL, UMBRALES, PANORAMA,
+  vecinosDe, rutaGiro, rutaCruce, indice,
+} from '../../../lib/cumplimiento';
 
 export async function getStaticPaths() {
   const { ESTADOS } = await import('../../../lib/cumplimiento');
@@ -16,7 +20,11 @@ const e = getEstado(slug)!;
 const url = `${SITE}/cumplimiento/estado/${e.slug}`;
 
 const region = REGIONES.find(r => r.key === e.region)?.nombre ?? '';
-const vecinos = ESTADOS.filter(x => x.region === e.region && x.slug !== e.slug);
+const vecinos = vecinosDe(e);
+
+/* Giros donde la ley de este estado pide más simulacros que la NOM-002.
+   Es el argumento de por qué la ficha estatal no es redundante con la nacional. */
+const mandaElEstado = GIROS.filter(g => cruce(e, g).simulacrosOrigen === 'estatal');
 
 const descripcion = `Normativa de protección civil aplicable a empresas en ${e.estado}: ley estatal, quién autoriza el Programa Interno, vigencia, simulacros obligatorios y si se exige consultor registrado.`;
 
@@ -123,16 +131,16 @@ const artSchema = {
             <p class="l3-p">Las cifras de cada tarjeta ya combinan las dos autoridades: el mínimo de simulacros es el más exigente entre lo que pide la NOM-002 según el riesgo del giro y lo que exige {e.estado}. Entra a la guía de tu giro para el detalle de equipo, evacuación y expediente.</p>
 
             <div class="cmp-gestado">
-              {GIROS.map(g => {
+              {GIROS.map((g, i) => {
                 const c = cruce(e, g);
                 return (
                   <a href={`/cumplimiento/estado/${e.slug}/${g.slug}`} class="cmp-ge">
+                    <div class="cmp-ge-top">
+                      <span class={`cmp-ge-r is-${g.riesgoNom}`}>{etiquetaRiesgo(g.riesgoNom)}</span>
+                      <span class="cmp-ge-idx">{indice(i)}</span>
+                    </div>
                     <div class="cmp-ge-head">
-                      <span class="cmp-ge-i" aria-hidden="true">{g.icono}</span>
-                      <div style="min-width:0;">
-                        <strong class="cmp-ge-n">{g.nombre}</strong>
-                        <span class={`cmp-ge-r is-${g.riesgoNom}`}>{etiquetaRiesgo(g.riesgoNom)}</span>
-                      </div>
+                      <strong class="cmp-ge-n">{g.nombre}</strong>
                     </div>
                     <p class="cmp-ge-g">{g.gancho}</p>
                     <div class="cmp-ge-datos">
@@ -150,7 +158,32 @@ const artSchema = {
               })}
             </div>
 
-            <p class="l3-nota" style="margin-top:14px;">La clasificación de riesgo de cada tarjeta es la típica del giro conforme a la Tabla A.1 de la NOM-002-STPS-2010. Tu caso concreto se determina con tu superficie construida y tus inventarios reales: un restaurante de más de 3,000 m² es riesgo alto aunque el giro suela ser ordinario.</p>
+            <p class="l3-nota" style="margin-top:14px;">La clasificación de riesgo de cada tarjeta es la típica del giro conforme a la Tabla A.1 de la <a class="l3-il" href="/cumplimiento/normas/nom-002-stps-2010#clasificacion">NOM-002-STPS-2010</a>. Tu caso concreto se determina con tu superficie construida y tus inventarios reales: un restaurante de más de 3,000 m² es riesgo alto aunque el giro suela ser ordinario.</p>
+
+            {mandaElEstado.length > 0 && (
+              <div class="l3-box l3-box-red" style="margin-top:18px;">
+                <span class="l3-box-title">Dónde {e.estado} pide más que la norma federal</span>
+                <p class="l3-box-copy">En {mandaElEstado.length === GIROS.length ? 'los diez giros' : `${mandaElEstado.length} de los ${GIROS.length} giros`} el piso de simulacros que fija {e.estado} supera al de la NOM-002. Ahí el número que manda es el estatal: {mandaElEstado.slice(0, 5).map((g, i) => (<>{i > 0 ? ', ' : ''}<a class="l3-il" href={rutaCruce(e, g)}>{g.nombreCorto.toLowerCase()}</a></>))}{mandaElEstado.length > 5 ? ' y los demás' : ''}.</p>
+              </div>
+            )}
+          </div>
+
+          <div class="l3-sec" id="nacional">
+            <div class="l3-sec-eyebrow"><i></i><span>La otra entrada</span></div>
+            <h2 class="l3-sec-title">La guía nacional de cada giro</h2>
+            <p class="l3-p">Las tarjetas de arriba resuelven <strong>{e.estado}</strong>. Si lo que necesitas es el detalle técnico del giro —qué agente extintor sirve y cuál no, qué normas le aplican con su estatus real, qué se le atribuye a una NOM sin estar en ella— esa parte no cambia por entidad y vive en la guía nacional.</p>
+            <div class="cmp-cross is-3">
+              {GIROS.map(g => (
+                <a href={rutaGiro(g)} class="cmp-cx">
+                  <span class={`cmp-cx-k is-${g.riesgoNom}`}>{claveRiesgo(g.riesgoNom)}</span>
+                  <span style="min-width:0;">
+                    <span class="cmp-cx-n">{g.nombreCorto}</span>
+                    <span class="cmp-cx-s">{g.normas.length} normas aplicables</span>
+                  </span>
+                  <span class="cmp-cx-m">Guía</span>
+                </a>
+              ))}
+            </div>
           </div>
 
           <div class="l3-sec" id="federal">
@@ -195,16 +228,20 @@ const artSchema = {
             <div class="l3-sec">
               <div class="l3-sec-eyebrow"><i></i><span>Región {region}</span></div>
               <h2 class="l3-sec-title">Otros estados de la misma región</h2>
-              <p class="l3-p">Si operas en más de una entidad, revisa cada una: comparten región, no normativa.</p>
-              <div class="cmp-vecinos">
+              <p class="l3-p">Si operas en más de una entidad, revisa cada una: comparten región, no normativa. El padrón de consultores tampoco es nacional, así que un tercero acreditado en {e.estado} no habilita tu programa en el estado de al lado.</p>
+              <div class="cmp-cross">
                 {vecinos.map(v => (
-                  <a href={`/cumplimiento/estado/${v.slug}`} class="cmp-vecino">
-                    <span class="cmp-vecino-c">{v.code}</span>
-                    <span class="cmp-vecino-n">{v.estado}</span>
-                    <span class="cmp-vecino-b">{v.modeloBomberos}</span>
+                  <a href={`/cumplimiento/estado/${v.slug}`} class="cmp-cx">
+                    <span class="cmp-cx-k">{v.code}</span>
+                    <span style="min-width:0;">
+                      <span class="cmp-cx-n">{v.estado}</span>
+                      <span class="cmp-cx-s">Bomberos: {v.modeloBomberos.toLowerCase()} · {v.simulacrosMin > 0 ? `${v.simulacrosMin} simulacros` : 'sin mínimo en ley'}</span>
+                    </span>
+                    <span class="cmp-cx-m">Ver ficha</span>
                   </a>
                 ))}
               </div>
+              <p class="l3-nota" style="margin-top:14px;">Ninguna de las {REGIONES.length} regiones comparte criterio normativo: es un agrupamiento geográfico, no jurídico. El <a class="l3-il" href="/cumplimiento#estados">índice completo de las {PANORAMA.total} entidades</a> está en el centro de cumplimiento, con buscador y filtros por consultor obligatorio y por número de simulacros.</p>
             </div>
           )}
 
@@ -218,6 +255,7 @@ const artSchema = {
           <nav class="l3-toc" aria-label="Contenido de la ficha">
             <span class="l3-box-title">En esta ficha</span>
             <a href="#giros">Qué necesita tu giro</a>
+            <a href="#nacional">La guía nacional del giro</a>
             <a href="#federal">Lo federal aplica igual</a>
             <a href="#verificaciones">Antes de contratar</a>
           </nav>
