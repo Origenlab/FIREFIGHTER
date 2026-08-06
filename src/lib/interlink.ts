@@ -136,6 +136,8 @@ export const REGLAS_SITIO: ReglaEnlace[] = [
   // la plantilla filtra la regla de la propia página para no autoenlazarse.
   { termino: 'cascos estructurales', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa', titulo: 'Cascos estructurales Bullard y MSA certificados' },
   { termino: 'casco estructural', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa', titulo: 'Cascos estructurales Bullard y MSA certificados' },
+  { termino: 'capuchas de bloqueo de partículas', href: '/productos/epp-para-bomberos/protector-de-cuello-y-capucha', titulo: 'Capuchas con bloqueo de partículas certificadas' },
+  { termino: 'capucha de bloqueo de partículas', href: '/productos/epp-para-bomberos/protector-de-cuello-y-capucha', titulo: 'Capuchas con bloqueo de partículas certificadas' },
   { termino: 'botas estructurales', href: '/productos/epp-para-bomberos/botas-dielectricas', titulo: 'Botas estructurales para bombero certificadas' },
   { termino: 'bota estructural', href: '/productos/epp-para-bomberos/botas-dielectricas', titulo: 'Botas estructurales para bombero certificadas' },
   { termino: 'trajes estructurales', href: '/productos/epp-para-bomberos/trajes-estructurales-nomex-pbi', titulo: 'Trajes estructurales Nomex y PBI certificados' },

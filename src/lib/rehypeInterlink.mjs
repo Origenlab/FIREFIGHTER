@@ -24,6 +24,7 @@ const P = '/productos';
 const TRAJES = `${P}/epp-para-bomberos/trajes-estructurales-nomex-pbi`;
 const CASCOS = `${P}/epp-para-bomberos/cascos-bullard-y-msa`;
 const BOTAS = `${P}/epp-para-bomberos/botas-dielectricas`;
+const CAPUCHA = `${P}/epp-para-bomberos/protector-de-cuello-y-capucha`;
 
 /**
  * El orden importa: lo más específico primero. En un solape gana el término que empieza antes
@@ -76,6 +77,18 @@ export const REGLAS_CATALOGO = [
   { termino: 'bota de bombero', href: BOTAS, titulo: 'Botas estructurales para bombero certificadas' },
   { termino: 'botas para bomberos', href: BOTAS, titulo: 'Botas estructurales para bombero certificadas' },
   { termino: 'HAIX', href: BOTAS, titulo: 'Botas estructurales para bombero certificadas' },
+
+  // Capuchas. "capucha" a secas es demasiado genérico y ya está tomado por el post del blog;
+  // aquí se enlaza la ficha solo cuando el texto habla de bloqueo de partículas o de la pieza.
+  { termino: 'capuchas de bloqueo de partículas', href: CAPUCHA, titulo: 'Capuchas con bloqueo de partículas certificadas' },
+  { termino: 'capucha de bloqueo de partículas', href: CAPUCHA, titulo: 'Capuchas con bloqueo de partículas certificadas' },
+  { termino: 'capucha particulate blocking', href: CAPUCHA, titulo: 'Capuchas con bloqueo de partículas certificadas' },
+  { termino: 'protector de cuello', href: CAPUCHA, titulo: 'Capuchas con bloqueo de partículas certificadas' },
+  { termino: 'capuchas para bomberos', href: CAPUCHA, titulo: 'Capuchas con bloqueo de partículas certificadas' },
+  { termino: 'capuchas Nomex', href: CAPUCHA, titulo: 'Capuchas con bloqueo de partículas certificadas' },
+  { termino: 'capucha Nomex', href: CAPUCHA, titulo: 'Capuchas con bloqueo de partículas certificadas' },
+  { termino: 'capucha de Nomex', href: CAPUCHA, titulo: 'Capuchas con bloqueo de partículas certificadas' },
+  { termino: 'capucha aramídica', href: CAPUCHA, titulo: 'Capuchas con bloqueo de partículas certificadas' },
 
   // ── L2 · categorías
   { termino: 'EPP para bomberos', href: `${P}/epp-para-bomberos`, titulo: 'EPP para bomberos certificado NFPA 1970' },

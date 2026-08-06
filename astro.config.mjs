@@ -69,7 +69,6 @@ const SLUGS_REDIRIGIDOS = [
 // asi que tampoco deben ir al sitemap. Se quitan de aqui al enriquecer la ficha.
 const L3_BORRADOR = [
   '/productos/epp-para-bomberos/guantes-de-intervencion',
-  '/productos/epp-para-bomberos/protector-de-cuello-y-capucha',
   '/productos/epp-para-bomberos/viseras-y-caretas',
 ];
 
