@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Villa Guerrero | Capital de las Flores"
+metaTitle: "Estación de Bomberos Villa Guerrero | Capital las Flores"
 metaDescription: "Estación de Bomberos voluntarios de Villa Guerrero. Capital mexicana de la floricultura. Protección de invernaderos. Emergencias: 911."
 ---
 

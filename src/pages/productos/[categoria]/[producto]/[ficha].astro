@@ -315,13 +315,15 @@ const faqSchema = faqs.length
                 <div class="l3-tabla-wrap">
                   <table class="l3-tabla">
                     <thead>
-                      <tr>{sec.tabla.head.map((h: string) => <th scope="col">{h}</th>)}</tr>
+                      <tr>{sec.tabla.head.map((h: string) => <th scope="col" set:html={h}></th>)}</tr>
                     </thead>
                     <tbody>
+                      {/* Mismo criterio que en la L3: celdas con set:html para poder resaltar
+                          el dato que decide la fila, y sin interlinker dentro de la tabla. */}
                       {sec.tabla.rows.map((r: string[]) => (
                         <tr>
-                          <th scope="row">{r[0]}</th>
-                          {r.slice(1).map((c: string) => <td>{c}</td>)}
+                          <th scope="row" set:html={r[0]}></th>
+                          {r.slice(1).map((c: string) => <td set:html={c}></td>)}
                         </tr>
                       ))}
                     </tbody>

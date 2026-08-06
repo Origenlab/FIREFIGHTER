@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos 02 Santa María la Ribera | Heroico Cuerpo de Bomberos CDMX"
+metaTitle: "Estación de Bomberos 02 Santa María la Ribera | Heroico Cuerpo CDMX"
 metaDescription: "Estación de Bomberos 02 en Santa María la Ribera, Ciudad de México. Teléfono de emergencia, ubicación exacta, servicios especializados y área de cobertura. Emergencias: 911."
 ---
 

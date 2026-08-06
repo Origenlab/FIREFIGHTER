@@ -144,6 +144,9 @@ export const REGLAS_SITIO: ReglaEnlace[] = [
   { termino: 'traje estructural', href: '/productos/epp-para-bomberos/trajes-estructurales-nomex-pbi', titulo: 'Trajes estructurales Nomex y PBI certificados' },
   { termino: 'guantes estructurales', href: '/productos/epp-para-bomberos/guantes-de-intervencion', titulo: 'Guantes estructurales para bombero certificados' },
   { termino: 'guante estructural', href: '/productos/epp-para-bomberos/guantes-de-intervencion', titulo: 'Guantes estructurales para bombero certificados' },
+  { termino: 'protección facial', href: '/productos/epp-para-bomberos/viseras-y-caretas', titulo: 'Viseras, caretas y goggles para casco estructural' },
+  { termino: 'careta del casco', href: '/productos/epp-para-bomberos/viseras-y-caretas', titulo: 'Viseras, caretas y goggles para casco estructural' },
+  { termino: 'viseras y caretas', href: '/productos/epp-para-bomberos/viseras-y-caretas', titulo: 'Viseras, caretas y goggles para casco estructural' },
 
   { termino: 'NFPA 1970', href: '/blog/nfpa-1971-mexico-norma-bomberos', titulo: 'NFPA 1970 en México: qué certifica y cómo leer un certificado' },
   { termino: 'NFPA 1971', href: '/blog/nfpa-1971-mexico-norma-bomberos', titulo: 'NFPA 1970 en México: qué certifica y cómo leer un certificado' },

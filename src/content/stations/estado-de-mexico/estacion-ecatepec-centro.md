@@ -31,7 +31,7 @@ equipment:
   rescueVehicles: 2
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Ecatepec Centro | Estado de México"
+metaTitle: "Estación de Bomberos Ecatepec Centro | Estado México"
 metaDescription: "Estación de Bomberos de Ecatepec de Morelos. El municipio más poblado de México. Teléfono, ubicación y servicios. Emergencias: 911."
 ---
 

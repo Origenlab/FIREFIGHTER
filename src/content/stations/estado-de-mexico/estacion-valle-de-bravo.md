@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Valle de Bravo | Pueblo Mágico"
+metaTitle: "Estación de Bomberos Valle Bravo | Pueblo Mágico"
 metaDescription: "Estación de Bomberos de Valle de Bravo. Pueblo Mágico con lago y bosques. Rescate acuático especializado. Emergencias: 911."
 ---
 

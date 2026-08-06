@@ -1,5 +1,5 @@
 /*
- * Header FIREFIGHTER — sticky, fondo oscuro solido, mega menu.
+ * Header FIREFIGHTER.COM.MX — sticky, fondo oscuro solido, mega menu.
  * OJO: vive aqui y no en <style> del componente porque Astro no inyecta
  * de forma confiable los estilos de componente en este proyecto.
  */
@@ -81,13 +81,15 @@
 
 .sh-logo-text { display: flex; flex-direction: column; line-height: 1; min-width: 0; }
 .sh-logo-name {
-  font-size: 1.08rem; font-weight: 800; letter-spacing: 0.01em; color: #fafafa; white-space: nowrap;
+  font-size: 1.05rem; font-weight: 800; letter-spacing: -0.005em; color: #fafafa; white-space: nowrap;
 }
-.sh-logo-mx {
-  color: #dc2626; font-weight: 800; margin-left: 3px; font-size: 0.78em; letter-spacing: 0.04em;
+/* El dominio completo ES la marca: se lee de corrido, sin separacion,
+   con el TLD en rojo para que "FIREFIGHTER.COM.MX" quede como una sola unidad. */
+.sh-logo-tld {
+  color: #dc2626; font-weight: 800; letter-spacing: -0.005em;
 }
 .sh-logo-sub {
-  font-size: 0.6rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  font-size: 0.58rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase;
   color: #71717a; margin-top: 5px; white-space: nowrap; overflow: hidden;
   max-height: 12px; opacity: 1;
 }
@@ -290,7 +292,7 @@
   .sh-bar { gap: 10px; }
   .sh-logo { flex-shrink: 1; min-width: 0; }
   .sh-logo-sub { display: none; }
-  .sh-logo-name { font-size: 1rem; overflow: hidden; text-overflow: ellipsis; }
+  .sh-logo-name { font-size: 0.95rem; overflow: hidden; text-overflow: ellipsis; }
   .sh-actions { gap: 2px; }
   .sh-cta { padding: 0 12px; }
 }
@@ -325,3 +327,36 @@
   outline: 2px solid #ef4444; outline-offset: 2px;
 }
 
+
+/* ══════════ LOGO EN PANTALLAS ANGOSTAS ══════════
+   "FIREFIGHTER.COM.MX" son 18 caracteres: por debajo de 400px se reduce el
+   cuerpo en vez de dejar que el text-overflow corte el dominio a la mitad. */
+@media (max-width: 400px) {
+  .sh-logo { gap: 8px; }
+  .sh-logo-mark { width: 32px; height: 32px; }
+  .sh-logo-name { font-size: 0.82rem; letter-spacing: -0.01em; }
+}
+@media (max-width: 340px) {
+  .sh-logo-name { font-size: 0.74rem; }
+}
+
+/* ══════════ DATOS DE CONTACTO EN EL MENU MOVIL ══════════ */
+.sh-mobile-contacto {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: #1f1f23; border: 1px solid #1f1f23; border-radius: 10px;
+  overflow: hidden; margin-bottom: 14px;
+}
+.sh-mobile-dato {
+  background: #0c0c0f; padding: 11px 13px; text-decoration: none;
+  display: flex; flex-direction: column; gap: 3px; min-width: 0;
+}
+.sh-mobile-dato span {
+  font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: #52525b;
+}
+.sh-mobile-dato strong {
+  font-size: 0.74rem; font-weight: 600; color: #e4e4e7;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.sh-mobile-dato:not(.is-static):active { background: #141417; }
+.sh-mobile-dato.is-static strong { color: #a1a1aa; }

@@ -1,5 +1,6 @@
 ---
 title: "NFPA 1970 en México: ediciones, certificación real y cómo especificar SCBA en licitaciones"
+seoTitle: "NFPA 1970 para SCBA en México"
 description: "NFPA 1970 México: diferencia 2013 vs 2019, HUD obligatorio, presión facial positiva y cómo especificar SCBA en licitaciones CompraNet."
 pubDate: 2026-05-20
 author: "FIREFIGHTER México"

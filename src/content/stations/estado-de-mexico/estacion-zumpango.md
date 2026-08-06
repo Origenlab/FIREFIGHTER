@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Zumpango | Estado de México"
+metaTitle: "Estación de Bomberos Zumpango | Estado México"
 metaDescription: "Estación de Bomberos de Zumpango. Norte del Estado de México con laguna. Rescate acuático disponible. Emergencias: 911."
 ---
 

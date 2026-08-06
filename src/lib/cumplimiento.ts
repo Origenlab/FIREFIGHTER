@@ -7,6 +7,10 @@
  * Nada marcado "POR VERIFICAR" en esa investigación debe llegar a este archivo.
  */
 
+import estadosData from '../data/cumplimiento-estados.json';
+import statesGeo from '../data/states.json';
+import girosData from '../data/cumplimiento-giros.json';
+
 /** Fecha de última revisión normativa de la sección. Se muestra en cada página. */
 export const REVISADO = '5 de agosto de 2026';
 
@@ -123,24 +127,42 @@ export const NORMAS: Norma[] = [
   },
 ];
 
+export interface NormaDeGiro {
+  clave: string;
+  que: string;
+  estatus: 'obligatoria' | 'depende' | 'referencia';
+}
+
+export interface ErrorDeGiro {
+  titulo: string;
+  detalle: string;
+}
+
 export interface Giro {
   slug: string;
   nombre: string;
   icono: string;
+  /** Frase corta que define el riesgo del giro. Se usa como badge. */
   gancho: string;
-  listo: boolean;
+  resumen: string;
+  riesgoTipico: string;
+  /** Clasificación típica conforme a la Tabla A.1 de la NOM-002-STPS-2010. */
+  riesgoNom: 'alto' | 'ordinario' | 'variable';
+  normas: NormaDeGiro[];
+  extintores: string[];
+  sistemas: string[];
+  evacuacion: string[];
+  brigadas: string[];
+  documentos: string[];
+  errores: ErrorDeGiro[];
+  /** El matiz que el mercado explica mal. Cadena vacía si no aplica. */
+  aclaracion: string;
+  productoSlug: string;
 }
 
-export const GIROS: Giro[] = [
-  { slug: 'restaurante', nombre: 'Restaurante y cocina comercial', icono: '🍳', gancho: 'Extintor Clase K y supresión en campana', listo: false },
-  { slug: 'hotel', nombre: 'Hotel y hospedaje', icono: '🏨', gancho: 'Rutas de evacuación y detección por habitación', listo: false },
-  { slug: 'industria', nombre: 'Industria y manufactura', icono: '🏭', gancho: 'Riesgo alto casi siempre: brigada y sistemas fijos', listo: false },
-  { slug: 'almacen', nombre: 'Almacén y centro de distribución', icono: '📦', gancho: 'Altura de estiba, racks y carga combustible', listo: false },
-  { slug: 'hospital', nombre: 'Hospital y clínica', icono: '🏥', gancho: 'Evacuación de personas no ambulatorias', listo: false },
-  { slug: 'escuela', nombre: 'Escuela y guardería', icono: '🎓', gancho: 'Simulacros y programa interno reforzado', listo: false },
-  { slug: 'centro-comercial', nombre: 'Centro comercial y cine', icono: '🛍️', gancho: 'Afluencia masiva y salidas por aforo', listo: false },
-  { slug: 'oficina', nombre: 'Oficina corporativa', icono: '🏢', gancho: '60 kg de sólidos combustibles por trabajador', listo: false },
-];
+export const GIROS = girosData as Giro[];
+
+export const getGiro = (slug: string) => GIROS.find(g => g.slug === slug);
 
 export interface Tramite {
   slug: string;
@@ -192,3 +214,166 @@ export const UMBRALES = [
 
 export const AVISO_LEGAL =
   'Este contenido es informativo y no constituye asesoría jurídica. La normativa cambia y muchos requisitos varían por estado y municipio: verifica siempre con la autoridad local antes de tomar decisiones.';
+
+/* ════════════════════════════════════════════════════════════════════
+   ESTADOS · marco de protección civil por entidad federativa
+   Datos verificados contra congresos estatales, periódicos oficiales y
+   portales de protección civil. Ver docs/investigacion-cumplimiento/.
+   ════════════════════════════════════════════════════════════════════ */
+
+
+export interface EstadoNormativa {
+  estado: string;
+  slug: string;
+  ley: string;
+  leyFecha: string;
+  leyUrl: string;
+  autoridad: string;
+  bomberos: string;
+  pipcVigencia: string;
+  simulacros: string;
+  /** Mínimo anual que fija la norma estatal. 0 = la ley no lo fija. Se captura a mano en el JSON. */
+  simulacrosMin: number;
+  consultor: string;
+  distintivo: string;
+  confianza: 'alta' | 'media';
+}
+
+export interface EstadoGeo {
+  name: string;
+  slug: string;
+  code: string;
+  capital: string;
+  region: string;
+  totalStations: number;
+}
+
+export interface Estado extends EstadoNormativa {
+  code: string;
+  capital: string;
+  region: string;
+  totalStations: number;
+  /** Ficha indexable. Los de confianza media salen con noindex hasta cerrar su verificación. */
+  listo: boolean;
+  /** Etiqueta corta del modelo de bomberos, para la card del hub. */
+  modeloBomberos: string;
+  /** La norma estatal obliga a consultor o tercero acreditado registrado. */
+  exigeConsultor: boolean;
+  /** Nombre sin acentos ni mayúsculas, para el buscador del hub. */
+  busqueda: string;
+}
+
+const geo = statesGeo as EstadoGeo[];
+
+/** Resume el campo `bomberos` en una etiqueta de una palabra para las cards. */
+function modeloDeBomberos(txt: string): string {
+  const t = txt.toLowerCase();
+  if (t.startsWith('integrado') || t.includes('misma dependencia') || t.includes('dentro de la coordinación estatal') || t.includes('dirección de bomberos'))
+    return 'Integrado con PC';
+  if (t.startsWith('estatal')) return 'Estatal';
+  if (t.startsWith('no hay cuerpo') || t.includes('patronato')) return 'Patronato';
+  if (t.startsWith('coexisten')) return 'Mixto';
+  if (t.startsWith('municipal')) return 'Municipal';
+  if (t.startsWith('la ley') || t.startsWith('la nueva ley')) return 'Sin definir en ley';
+  return 'Municipal';
+}
+
+/** Quita acentos y baja a minúsculas, para el buscador. */
+const normaliza = (t: string) =>
+  t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+export const ESTADOS: Estado[] = (estadosData as EstadoNormativa[])
+  .map(e => {
+    const g = geo.find(x => x.slug === e.slug);
+    return {
+      ...e,
+      code: g?.code ?? '',
+      capital: g?.capital ?? '',
+      region: g?.region ?? 'centro',
+      totalStations: g?.totalStations ?? 0,
+      listo: e.confianza === 'alta',
+      modeloBomberos: modeloDeBomberos(e.bomberos),
+      exigeConsultor: /^s[ií]/i.test(e.consultor.trim()),
+      busqueda: normaliza(e.estado),
+    };
+  })
+  .sort((a, b) => a.estado.localeCompare(b.estado, 'es'));
+
+export const getEstado = (slug: string) => ESTADOS.find(e => e.slug === slug);
+
+/** Rutas de estado en borrador: salen con noindex y fuera del sitemap. */
+export const ESTADOS_BORRADOR = ESTADOS.filter(e => !e.listo).map(e => `/cumplimiento/estado/${e.slug}`);
+
+export const REGIONES: { key: string; nombre: string }[] = [
+  { key: 'centro', nombre: 'Centro' },
+  { key: 'centro-occidente', nombre: 'Centro-occidente' },
+  { key: 'noroeste', nombre: 'Noroeste' },
+  { key: 'norte', nombre: 'Norte' },
+  { key: 'noreste', nombre: 'Noreste' },
+  { key: 'sur', nombre: 'Sur' },
+  { key: 'sureste', nombre: 'Sureste' },
+  { key: 'peninsula', nombre: 'Península' },
+];
+
+/** Cifras del panorama estatal, calculadas de los datos — nunca a mano. */
+export const PANORAMA = {
+  total: ESTADOS.length,
+  documentados: ESTADOS.filter(e => e.listo).length,
+  bomberosMunicipales: ESTADOS.filter(e => e.modeloBomberos === 'Municipal').length,
+  consultorObligatorio: ESTADOS.filter(e => e.exigeConsultor).length,
+  simulacrosMax: Math.max(...ESTADOS.map(e => e.simulacrosMin)),
+};
+
+/* ════════════════════════════════════════════════════════════════════
+   CRUCE estado × giro
+   Combina las dos obligaciones que corren en paralelo: la federal de la
+   NOM-002-STPS-2010, que depende del riesgo del giro, y la estatal de
+   protección civil. El número que se publica es el más exigente de los dos,
+   porque cumplir el menor deja descubierta a la otra autoridad.
+   ════════════════════════════════════════════════════════════════════ */
+
+export interface Cruce {
+  /** Simulacros que exige la NOM-002 según el riesgo del giro. */
+  simulacrosFed: number;
+  /** Simulacros que exige la norma estatal. 0 = no fija mínimo. */
+  simulacrosEdo: number;
+  /** El mayor de los dos: lo que hay que planear para quedar bien con ambas. */
+  simulacrosPlan: number;
+  /** Quién manda en la cifra anterior. */
+  simulacrosOrigen: 'federal' | 'estatal' | 'ambas';
+  /** Superficie máxima por extintor, en m². */
+  m2PorExtintor: number;
+  /** Distancia máxima de recorrido a un extintor clase A, C o D, en metros. */
+  distanciaExtintor: number;
+  brigadaObligatoria: boolean;
+  sistemasFijos: boolean;
+  riesgo: 'alto' | 'ordinario' | 'variable';
+}
+
+export function cruce(estado: Estado, giro: Giro): Cruce {
+  const alto = giro.riesgoNom === 'alto';
+  const simulacrosFed = giro.riesgoNom === 'ordinario' ? 1 : 2;
+  const simulacrosEdo = estado.simulacrosMin;
+  const simulacrosPlan = Math.max(simulacrosFed, simulacrosEdo);
+
+  const simulacrosOrigen: Cruce['simulacrosOrigen'] =
+    simulacrosEdo > simulacrosFed ? 'estatal'
+    : simulacrosFed > simulacrosEdo ? 'federal'
+    : 'ambas';
+
+  return {
+    simulacrosFed,
+    simulacrosEdo,
+    simulacrosPlan,
+    simulacrosOrigen,
+    m2PorExtintor: alto ? 200 : 300,
+    distanciaExtintor: 23,
+    brigadaObligatoria: alto,
+    sistemasFijos: alto,
+    riesgo: giro.riesgoNom,
+  };
+}
+
+/** Etiqueta legible del riesgo del giro. */
+export const etiquetaRiesgo = (r: Giro['riesgoNom']) =>
+  r === 'alto' ? 'Riesgo alto' : r === 'ordinario' ? 'Riesgo ordinario' : 'Riesgo variable';

@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Texcoco | Estado de México"
+metaTitle: "Estación de Bomberos Texcoco | Estado México"
 metaDescription: "Estación de Bomberos de Texcoco de Mora. Sede de la Universidad Chapingo. Teléfono y servicios. Emergencias: 911."
 ---
 

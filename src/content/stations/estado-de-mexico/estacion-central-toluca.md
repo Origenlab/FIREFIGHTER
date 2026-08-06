@@ -33,7 +33,7 @@ equipment:
   rescueVehicles: 3
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación Central de Bomberos Toluca | Estado de México"
+metaTitle: "Estación Central de Bomberos Toluca | Estado México"
 metaDescription: "Estación Central de Bomberos de Toluca, capital del Estado de México. Teléfono, ubicación GPS y servicios de emergencia. Línea 911."
 ---
 

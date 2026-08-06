@@ -82,3 +82,7 @@ Estudio_Competencia_FIREFIGHTER_2026.docx
 
 # artefactos de herramientas de sesión
 .superpowers/
+
+# scratch de sesión
+_tmp/
+_to_delete/

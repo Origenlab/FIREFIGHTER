@@ -1,0 +1,226 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/layout/PageHero.astro';
+import { tituloSeo } from '../../../lib/seoText';
+import { waLink } from '../../../lib/blog';
+import categorias from '../../../data/productos.json';
+import { GIROS, getGiro, REVISADO, AVISO_LEGAL } from '../../../lib/cumplimiento';
+
+export async function getStaticPaths() {
+  const { GIROS } = await import('../../../lib/cumplimiento');
+  return GIROS.map(g => ({ params: { giro: g.slug } }));
+}
+
+const SITE = 'https://firefighter.com.mx';
+const slug = Astro.params.giro as string;
+const g = getGiro(slug)!;
+const url = `${SITE}/cumplimiento/giro/${g.slug}`;
+
+const categoria = (categorias as any[]).find(c => c.slug === g.productoSlug);
+const otros = GIROS.filter(x => x.slug !== g.slug);
+
+const descripcion = `Qué exige la ley mexicana en materia de protección contra incendios a un ${g.nombre.toLowerCase()}: extintores, detección, evacuación, brigadas y los documentos que revisa el inspector.`;
+
+const bloques = [
+  { id: 'extintores', t: 'Extintores y agentes', icono: 'M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z', items: g.extintores },
+  { id: 'sistemas', t: 'Detección, alarma y sistemas fijos', icono: 'M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9', items: g.sistemas },
+  { id: 'evacuacion', t: 'Evacuación y señalización', icono: 'M13 5l7 7-7 7M5 5l7 7-7 7', items: g.evacuacion },
+  { id: 'brigadas', t: 'Brigadas, simulacros y capacitación', icono: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z', items: g.brigadas },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: g.errores.map(e => ({
+    '@type': 'Question',
+    name: `${e.titulo} — ¿por qué es un problema en un ${g.nombre.toLowerCase()}?`,
+    acceptedAnswer: { '@type': 'Answer', text: e.detalle },
+  })),
+};
+
+const artSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  '@id': `${url}#article`,
+  headline: `Protección contra incendios en ${g.nombre.toLowerCase()}: qué exige la ley`,
+  description: descripcion,
+  url,
+  inLanguage: 'es-MX',
+  publisher: { '@type': 'Organization', name: 'FIREFIGHTER México', url: SITE },
+};
+---
+
+<BaseLayout
+  title={tituloSeo(`${g.nombreCorto} · normativa contra incendios en México`)}
+  description={descripcion}
+  canonicalUrl={url}
+  breadcrumbs={[
+    { label: 'Cumplimiento', href: '/cumplimiento' },
+    { label: 'Por giro', href: '/cumplimiento#giros' },
+    { label: g.nombre },
+  ]}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(artSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <PageHero
+    eyebrow="Por giro de negocio"
+    badge={g.gancho}
+    h1={`Protección contra incendios<br>en ${g.nombre.toLowerCase()}`}
+    lead={g.resumen}
+    alinear="center"
+    justificado
+    bloques={[
+      { label: 'Cómo clasifica la NOM-002 este giro', texto: g.riesgoTipico },
+      { label: 'Alcance de esta guía', texto: `Cubre la obligación <strong style="color:#e4e4e7;">federal</strong> de la STPS y, donde se indica, el reglamento de construcción de la Ciudad de México como referencia base. <strong style="color:#e4e4e7;">Cada estado tiene el suyo y los números cambian.</strong> Última revisión: ${REVISADO}.` },
+    ]}
+  >
+    <div slot="ctas" style="display:flex; flex-wrap:wrap; gap:10px;">
+      <a href="#documentos" class="l2-cta">
+        <span>Qué te va a pedir el inspector</span>
+      </a>
+      <a href={waLink(`tengo un ${g.nombre.toLowerCase()} y necesito cumplir con protección contra incendios`)} target="_blank" rel="noopener" class="l2-cta-ghost">
+        <span>Hablar con un ingeniero</span>
+      </a>
+    </div>
+  </PageHero>
+
+  <section style="background:#f8fafc; padding:48px 0 88px;">
+    <div class="container-custom">
+      <div class="l3-shell">
+
+        <div class="l3-body">
+
+          <div class="l3-sec">
+            <div class="l3-sec-eyebrow"><i></i><span>Marco aplicable</span></div>
+            <h2 class="l3-sec-title">Las normas que le aplican a este giro</h2>
+            <p class="l3-p">No todas pesan igual. Las <strong>NOM son obligatorias por ley</strong>; las normas extranjeras y los estándares de industria solo se vuelven exigibles cuando una NOM los referencia, cuando el reglamento local los adopta o cuando la aseguradora los pone en la póliza.</p>
+            <div class="cmp-normas">
+              {g.normas.map(n => (
+                <div class={`cmp-norma is-${n.estatus}`}>
+                  <div class="cmp-norma-top">
+                    <span class="cmp-norma-c">{n.clave}</span>
+                    <span class="cmp-norma-e">
+                      {n.estatus === 'obligatoria' ? 'Obligatoria' : n.estatus === 'depende' ? 'Depende del caso' : 'Referencia técnica'}
+                    </span>
+                  </div>
+                  <p>{n.que}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {g.aclaracion && (
+            <div class="l3-sec">
+              <div class="l3-sec-eyebrow"><i></i><span>El matiz que casi nadie explica</span></div>
+              <h2 class="l3-sec-title">Antes de que te vendan de más</h2>
+              <div class="l3-box l3-box-red">
+                <p class="l3-box-copy">{g.aclaracion}</p>
+              </div>
+            </div>
+          )}
+
+          {bloques.map(b => (
+            <div class="l3-sec" id={b.id}>
+              <div class="l3-sec-eyebrow"><i></i><span>Requisitos</span></div>
+              <h2 class="l3-sec-title">{b.t}</h2>
+              <ul class="cmp-lista">
+                {b.items.map(it => (
+                  <li>
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d={b.icono}/></svg>
+                    <span>{it}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          <div class="l3-sec" id="documentos">
+            <div class="l3-sec-eyebrow"><i></i><span>Expediente</span></div>
+            <h2 class="l3-sec-title">Qué te va a pedir el inspector</h2>
+            <p class="l3-p">En una inspección lo que se sanciona no es solo incumplir: es <strong>no poder acreditarlo documentalmente</strong> dentro del plazo señalado. Esta es la carpeta mínima de este giro.</p>
+            <div class="cmp-check">
+              {g.documentos.map(d => <div><span>{d}</span></div>)}
+            </div>
+          </div>
+
+          <div class="l3-sec">
+            <div class="l3-sec-eyebrow"><i></i><span>Lo que sale mal</span></div>
+            <h2 class="l3-sec-title">Los tres errores que más se repiten</h2>
+            <div style="display:flex; flex-direction:column; gap:14px; margin-top:20px;">
+              {g.errores.map((e, i) => (
+                <div class="cmp-mito">
+                  <span class="cmp-mito-n">{String(i + 1).padStart(2, '0')}</span>
+                  <div style="min-width:0;">
+                    <strong class="cmp-mito-t">{e.titulo}</strong>
+                    <p class="cmp-mito-d">{e.detalle}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="l3-sec">
+            <div class="l3-sec-eyebrow"><i></i><span>Otros giros</span></div>
+            <h2 class="l3-sec-title">¿Tu operación es mixta?</h2>
+            <p class="l3-p">Un hotel con restaurante, una planta con almacén o una escuela con cocina responden por las dos cosas. Revisa también:</p>
+            <div class="cmp-vecinos">
+              {otros.map(o => (
+                <a href={`/cumplimiento/giro/${o.slug}`} class="cmp-vecino">
+                  <span class="cmp-vecino-c" style="background:#fef2f2; color:#dc2626; font-size:0.85rem; padding:2px 6px;">{o.icono}</span>
+                  <span class="cmp-vecino-n">{o.nombre}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <p class="cmp-legal" style="margin-top:34px;">
+            <strong>Aviso.</strong> {AVISO_LEGAL} Los requisitos de construcción y de protección civil varían por estado y municipio. Última revisión normativa: {REVISADO}.
+          </p>
+        </div>
+
+        <aside class="l3-aside">
+
+          <nav class="l3-toc" aria-label="Contenido de la guía">
+            <span class="l3-box-title">En esta guía</span>
+            <a href="#extintores">Extintores y agentes</a>
+            <a href="#sistemas">Detección, alarma y sistemas fijos</a>
+            <a href="#evacuacion">Evacuación y señalización</a>
+            <a href="#brigadas">Brigadas y simulacros</a>
+            <a href="#documentos">Qué pide el inspector</a>
+          </nav>
+
+          <div class="l3-box l3-box-red">
+            <span class="l3-box-title">Lo que define este giro</span>
+            <p class="l3-box-copy">{g.gancho}.</p>
+          </div>
+
+          <div class="l3-box">
+            <span class="l3-box-title">Recuerda el otro carril</span>
+            <p class="l3-box-copy">La STPS y protección civil son autoridades distintas. Cumplir con una no acredita la otra.</p>
+            <a href="/cumplimiento/normas/nom-002-stps-2010" style="font-size:0.78rem; font-weight:600; color:#dc2626; text-decoration:none;">Ver la NOM-002-STPS-2010 →</a><br />
+            <a href="/cumplimiento#estados" style="font-size:0.78rem; font-weight:600; color:#dc2626; text-decoration:none;">Ver lo que exige tu estado →</a>
+          </div>
+
+          <div class="l3-box l3-box-dark">
+            <span class="l3-box-title">¿Te cotizamos lo que falta?</span>
+            <p class="l3-box-copy">Nos dedicamos a equipar, no a vender de más. Cuéntanos cómo es tu instalación y te decimos qué te aplica realmente y qué no necesitas comprar.</p>
+            <a href={waLink(`tengo un ${g.nombre.toLowerCase()} y quiero cotizar equipo contra incendios`)} target="_blank" rel="noopener" class="l3-btn-wa">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+              <span>Escribirnos por WhatsApp</span>
+            </a>
+            {categoria && (
+              <a href={`/productos/${categoria.slug}`} class="l3-btn-ghost">
+                <span>Ver {categoria.nombre.toLowerCase()}</span>
+              </a>
+            )}
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

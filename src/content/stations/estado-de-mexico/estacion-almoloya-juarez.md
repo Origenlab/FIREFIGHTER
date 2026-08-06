@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Almoloya de Juárez | CEFERESO"
+metaTitle: "Estación de Bomberos Almoloya Juárez | CEFERESO"
 metaDescription: "Estación de Bomberos de Almoloya de Juárez. Centro penitenciario federal Altiplano. Teléfono y servicios. Emergencias: 911."
 ---
 

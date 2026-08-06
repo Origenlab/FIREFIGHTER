@@ -31,7 +31,7 @@ equipment:
   rescueVehicles: 2
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Tlalnepantla | Estado de México"
+metaTitle: "Estación de Bomberos Tlalnepantla | Estado México"
 metaDescription: "Estación de Bomberos de Tlalnepantla de Baz. Cobertura de zona industrial y comercial. Teléfono y servicios. Emergencias: 911."
 ---
 

@@ -34,7 +34,7 @@ equipment:
   rescueVehicles: 2
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación Central de Bomberos CDMX | Heroico Cuerpo de Bomberos"
+metaTitle: "Estación Central de Bomberos CDMX | Heroico Cuerpo"
 metaDescription: "Estación Central de Bomberos de la Ciudad de México. Sede principal del Heroico Cuerpo. Teléfono, ubicación y servicios. Emergencias: 911."
 ---
 

@@ -456,3 +456,143 @@
 }
 .dir-empty h3 { font-size: 1rem; font-weight: 700; color: #09090b; margin: 0 0 8px; }
 .dir-empty p { font-size: 0.85rem; color: #71717a; margin: 0; }
+
+/* ══════════════════════════════════════════════════════════
+   FICHA DE ESTACIÓN (.est-*) — usa el mismo shell .dir-shell
+   ══════════════════════════════════════════════════════════ */
+.est-card {
+  background: #fff;
+  border: 1px solid #e4e4e7;
+  border-radius: 14px;
+  padding: 26px;
+}
+.est-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f4f4f5;
+  margin-bottom: 20px;
+}
+.est-bar {
+  width: 3px;
+  align-self: stretch;
+  min-height: 30px;
+  border-radius: 2px;
+  background: #dc2626;
+  flex-shrink: 0;
+}
+.est-h2 {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: #09090b;
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+.est-lead { font-size: 0.82rem; color: #71717a; margin: 5px 0 0; line-height: 1.6; }
+
+/* Servicios */
+.est-svc { display: grid; grid-template-columns: 1fr; gap: 8px; }
+@media (min-width: 640px) { .est-svc { grid-template-columns: 1fr 1fr; } }
+.est-svc-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8fafc;
+  border-radius: 9px;
+  padding: 11px 13px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: #3f3f46;
+  line-height: 1.4;
+}
+.est-svc-dot {
+  width: 22px; height: 22px;
+  border-radius: 6px;
+  background: #fef2f2;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Mapa */
+.est-mapa {
+  border: 1px solid #e4e4e7;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+.est-mapa iframe { display: block; width: 100%; height: 320px; border: 0; }
+.est-mapa-pie {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; padding: 13px 18px; border-top: 1px solid #f4f4f5;
+  flex-wrap: wrap;
+}
+.est-mapa-coord { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.72rem; color: #71717a; }
+.est-mapa-link { font-size: 0.78rem; font-weight: 700; color: #dc2626; text-decoration: none; }
+.est-mapa-link:hover { color: #b91c1c; }
+
+/* Contacto en el sidebar */
+.est-contact { display: flex; flex-direction: column; gap: 8px; }
+.est-contact a, .est-contact div.est-row {
+  display: flex; align-items: center; gap: 11px;
+  padding: 11px 12px; border-radius: 10px;
+  border: 1px solid #e4e4e7; background: #fff; text-decoration: none;
+}
+.est-contact a:hover { border-color: #fecaca; }
+.est-contact a.is-primary { background: #fef2f2; border-color: #fee2e2; }
+.est-contact-ico {
+  width: 32px; height: 32px; border-radius: 8px; background: #f4f4f5;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.est-contact a.is-primary .est-contact-ico { background: #dc2626; }
+.est-contact-k {
+  display: block; font-size: 0.63rem; color: #a1a1aa;
+  text-transform: uppercase; letter-spacing: 0.07em; font-weight: 700;
+}
+.est-contact a.is-primary .est-contact-k { color: #dc2626; }
+.est-contact-v { display: block; font-size: 0.84rem; font-weight: 700; color: #09090b; margin-top: 2px; word-break: break-word; }
+
+/* Estaciones cercanas / más en el estado */
+.est-near { display: flex; flex-direction: column; gap: 8px; }
+.est-near a {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 11px 12px; border: 1px solid #e4e4e7; border-radius: 10px;
+  background: #fff; text-decoration: none;
+}
+.est-near a:hover { border-color: #fecaca; background: #fef2f2; }
+.est-near-n { display: block; font-size: 0.8rem; font-weight: 700; color: #09090b; line-height: 1.35; }
+.est-near-m { display: block; font-size: 0.68rem; color: #a1a1aa; margin-top: 2px; }
+.est-near-km { font-size: 0.7rem; font-weight: 800; color: #dc2626; white-space: nowrap; }
+
+.est-links { display: flex; flex-direction: column; }
+.est-links a {
+  display: flex; align-items: center; gap: 9px;
+  padding: 10px 0; border-bottom: 1px solid #f4f4f5;
+  font-size: 0.8rem; color: #3f3f46; text-decoration: none; line-height: 1.4;
+}
+.est-links a:last-child { border-bottom: 0; padding-bottom: 0; }
+.est-links a:hover { color: #dc2626; }
+.est-links svg { flex-shrink: 0; }
+
+/* Aviso de verificación */
+.est-verif {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 13px 15px; border-radius: 12px;
+  background: #f0fdf4; border: 1px solid #dcfce7;
+}
+.est-verif.is-pend { background: #f8fafc; border-color: #e4e4e7; }
+.est-verif-t { font-size: 0.8rem; font-weight: 700; color: #15803d; margin: 0 0 3px; }
+.est-verif.is-pend .est-verif-t { color: #52525b; }
+.est-verif-s { font-size: 0.72rem; color: #16a34a; margin: 0; line-height: 1.5; }
+.est-verif.is-pend .est-verif-s { color: #a1a1aa; }
+
+/* Prosa de la ficha: hereda .art-prose del blog, solo ajustes de contenedor */
+.est-prose > *:first-child { margin-top: 0; }
+.est-prose h2:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+/* Tailwind preflight quita los marcadores: los devolvemos aquí */
+.est-prose ul { list-style: disc; }
+.est-prose ol { list-style: decimal; }
+.est-prose ul li, .est-prose ol li { display: list-item; }
+.est-prose table { width: 100%; }
+.est-prose hr { margin: 30px 0; }

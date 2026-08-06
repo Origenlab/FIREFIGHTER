@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Cuautitlán | Estado de México"
+metaTitle: "Estación de Bomberos Cuautitlán | Estado México"
 metaDescription: "Estación de Bomberos de Cuautitlán. Zona industrial del norte mexiquense. Especialistas HAZMAT. Emergencias: 911."
 ---
 

@@ -39,7 +39,7 @@ equipment:
 image: "/images/stations/puebla/estacion-central.jpg"
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Bomberos Puebla Central | Heroico Cuerpo de Bomberos de Puebla"
+metaTitle: "Bomberos Puebla Central | Heroico Cuerpo"
 metaDescription: "Estación Central del Heroico Cuerpo de Bomberos de Puebla. Teléfono 222 309-4700, ubicación GPS, servicios de emergencia 24/7. Centro Histórico, Popocatépetl."
 ---
 

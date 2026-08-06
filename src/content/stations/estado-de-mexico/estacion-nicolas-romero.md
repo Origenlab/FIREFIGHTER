@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Nicolás Romero | Estado de México"
+metaTitle: "Estación de Bomberos Nicolás Romero | Estado México"
 metaDescription: "Estación de Bomberos de Nicolás Romero. Zona boscosa y residencial. Especialistas en rescate forestal. Emergencias: 911."
 ---
 

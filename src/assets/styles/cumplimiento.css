@@ -101,18 +101,6 @@
 }
 .cmp-nota-dark strong { color: #fafafa; font-weight: 700; }
 
-/* ── Giros ── */
-.cmp-giros { display: grid; grid-template-columns: 1fr; gap: 10px; }
-@media (min-width: 640px) { .cmp-giros { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 1024px) { .cmp-giros { grid-template-columns: repeat(4, 1fr); } }
-.cmp-giro {
-  display: flex; gap: 13px; align-items: flex-start;
-  background: #fff; border: 1px solid #e4e4e7; border-radius: 12px; padding: 16px 18px;
-}
-.cmp-giro-i { font-size: 1.25rem; line-height: 1; flex-shrink: 0; }
-.cmp-giro-n { display: block; font-size: 0.83rem; font-weight: 700; color: #09090b; line-height: 1.35; margin-bottom: 4px; }
-.cmp-giro-g { display: block; font-size: 0.71rem; color: #71717a; line-height: 1.6; }
-
 /* ── Trámites ── */
 .cmp-tram {
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
@@ -202,3 +190,403 @@
   font-size: 0.74rem; color: #71717a; line-height: 1.75;
 }
 .cmp-legal strong { color: #52525b; font-weight: 700; }
+
+/* ══════════════════════════════════════════════════════════════════
+   CUMPLIMIENTO · bloque por estados
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── Strip de cifras ── */
+.cmp-stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: #e4e4e7; border: 1px solid #e4e4e7; border-radius: 14px;
+  overflow: hidden; margin-bottom: 44px;
+}
+@media (min-width: 1024px) { .cmp-stats { grid-template-columns: repeat(4, 1fr); } }
+.cmp-stats > div { background: #fff; padding: 26px 22px; text-align: center; }
+.cmp-stats strong {
+  display: block; font-size: 2rem; font-weight: 800; color: #09090b;
+  line-height: 1; letter-spacing: -0.03em;
+}
+.cmp-stats span { display: block; font-size: 0.79rem; font-weight: 600; color: #3f3f46; margin-top: 8px; line-height: 1.4; }
+.cmp-stats em { display: block; font-style: normal; font-size: 0.68rem; color: #a1a1aa; margin-top: 4px; line-height: 1.5; }
+
+/* ── Encabezado de región ── */
+.cmp-region + .cmp-region { margin-top: 36px; }
+.cmp-region-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.cmp-region-n {
+  font-size: 0.68rem; font-weight: 800; letter-spacing: 0.13em;
+  text-transform: uppercase; color: #09090b; white-space: nowrap;
+}
+.cmp-region-l { flex: 1; height: 1px; background: #e4e4e7; }
+.cmp-region-c {
+  font-size: 0.66rem; font-weight: 800; color: #a1a1aa;
+  background: #f4f4f5; border-radius: 99px; padding: 2px 9px;
+}
+
+/* ── Cards de estado ── */
+.cmp-estados { display: grid; grid-template-columns: 1fr; gap: 13px; }
+@media (min-width: 640px) { .cmp-estados { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .cmp-estados { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1400px) { .cmp-estados { grid-template-columns: repeat(4, 1fr); } }
+
+.cmp-est {
+  display: flex; flex-direction: column; text-decoration: none;
+  background: #fff; border: 1px solid #e4e4e7; border-radius: 13px;
+  padding: 18px 19px 16px;
+  transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+.cmp-est:hover { border-color: #dc2626; transform: translateY(-2px); box-shadow: 0 8px 22px rgba(220,38,38,0.08); }
+.cmp-est.is-draft { background: #fcfcfd; border-style: dashed; }
+.cmp-est.is-draft:hover { border-color: #a1a1aa; box-shadow: 0 8px 22px rgba(0,0,0,0.05); }
+
+.cmp-est-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 11px; }
+.cmp-est-code {
+  font-size: 0.62rem; font-weight: 800; letter-spacing: 0.08em; color: #fff;
+  background: #09090b; border-radius: 4px; padding: 3px 8px;
+}
+.cmp-est.is-draft .cmp-est-code { background: #a1a1aa; }
+.cmp-est-bom {
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+  color: #dc2626; background: #fef2f2; border: 1px solid #fecaca;
+  border-radius: 99px; padding: 2px 8px; white-space: nowrap;
+}
+.cmp-est-name { font-size: 0.96rem; font-weight: 700; color: #09090b; margin: 0 0 6px; line-height: 1.3; }
+.cmp-est-ley {
+  font-size: 0.71rem; color: #71717a; line-height: 1.6; margin: 0 0 13px;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+.cmp-est-datos { border-top: 1px solid #f4f4f5; padding-top: 11px; margin-bottom: 13px; flex: 1; }
+.cmp-est-datos > div {
+  font-size: 0.72rem; color: #3f3f46; line-height: 1.55; padding: 3px 0;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.cmp-est-datos span {
+  display: inline-block; min-width: 66px;
+  font-size: 0.59rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: #a1a1aa;
+}
+
+.cmp-est-cta {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  border-top: 1px solid #f4f4f5; padding-top: 12px;
+  font-size: 0.75rem; font-weight: 600; color: #dc2626;
+}
+.cmp-est.is-draft .cmp-est-cta { color: #a1a1aa; font-weight: 500; }
+
+/* ── Ficha de estado (página interior) ── */
+.cmp-est-fichas { border: 1px solid #e4e4e7; border-radius: 12px; overflow: hidden; margin-top: 18px; }
+.cmp-est-fila {
+  display: grid; grid-template-columns: 1fr; gap: 6px;
+  padding: 15px 18px; border-bottom: 1px solid #f4f4f5; background: #fff;
+}
+@media (min-width: 768px) {
+  .cmp-est-fila { grid-template-columns: 210px 1fr; gap: 22px; }
+}
+.cmp-est-fila:last-child { border-bottom: none; }
+.cmp-est-fila:nth-child(even) { background: #fcfcfd; }
+.cmp-est-k {
+  font-size: 0.63rem; font-weight: 800; letter-spacing: 0.09em;
+  text-transform: uppercase; color: #a1a1aa; padding-top: 3px;
+}
+.cmp-est-v p { font-size: 0.83rem; color: #3f3f46; line-height: 1.8; margin: 0; text-align: justify; hyphens: auto; }
+.cmp-est-sub { display: block; font-size: 0.71rem; color: #a1a1aa; margin-top: 6px; line-height: 1.6; }
+
+.cmp-fuente {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;
+  font-size: 0.79rem; font-weight: 600; color: #dc2626; text-decoration: none;
+}
+.cmp-fuente:hover { text-decoration: underline; }
+
+/* ── Vecinos de región ── */
+.cmp-vecinos { display: grid; grid-template-columns: 1fr; gap: 8px; margin-top: 16px; }
+@media (min-width: 640px) { .cmp-vecinos { grid-template-columns: 1fr 1fr; } }
+.cmp-vecino {
+  display: flex; align-items: center; gap: 11px; text-decoration: none;
+  background: #f8fafc; border: 1px solid #e4e4e7; border-radius: 10px; padding: 11px 14px;
+  transition: border-color 0.18s ease;
+}
+.cmp-vecino:hover { border-color: #dc2626; }
+.cmp-vecino-c {
+  font-size: 0.6rem; font-weight: 800; letter-spacing: 0.06em; color: #fff;
+  background: #09090b; border-radius: 4px; padding: 3px 7px; flex-shrink: 0;
+}
+.cmp-vecino-n { flex: 1; font-size: 0.81rem; font-weight: 600; color: #09090b; line-height: 1.35; min-width: 0; }
+.cmp-vecino-b {
+  flex-shrink: 0; font-size: 0.62rem; font-weight: 600; color: #71717a; white-space: nowrap;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   CUMPLIMIENTO · shell con navegación lateral del bloque por estados
+   El sidebar va integrado en el flujo: sin position:sticky y sin
+   scroll propio, igual que el sidebar del blog.
+   ══════════════════════════════════════════════════════════════════ */
+
+.cmp-shell { display: grid; grid-template-columns: 1fr; gap: 26px; align-items: start; }
+@media (min-width: 1024px) {
+  /* El aside va primero en el DOM (en movil los filtros deben preceder al
+     listado), pero en escritorio se coloca a la derecha con grid explicito. */
+  .cmp-shell { grid-template-columns: minmax(0, 1fr) 282px; gap: 34px; }
+  .cmp-main { grid-column: 1; grid-row: 1; }
+  .cmp-side { grid-column: 2; grid-row: 1; }
+}
+.cmp-side { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.cmp-main { min-width: 0; }
+
+.cmp-side-box {
+  background: #fff; border: 1px solid #e4e4e7; border-radius: 13px; padding: 17px 18px;
+}
+.cmp-side-title {
+  display: block; font-size: 0.63rem; font-weight: 800; letter-spacing: 0.12em;
+  text-transform: uppercase; color: #09090b; margin-bottom: 12px;
+}
+
+/* ── Buscador ── */
+.cmp-search { position: relative; }
+.cmp-search svg { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: #a1a1aa; pointer-events: none; }
+.cmp-search input {
+  width: 100%; font-family: inherit; font-size: 0.85rem; color: #09090b;
+  background: #f8fafc; border: 1px solid #e4e4e7; border-radius: 9px;
+  padding: 10px 12px 10px 33px; outline: none; transition: border-color 0.15s ease, background 0.15s ease;
+}
+.cmp-search input::placeholder { color: #a1a1aa; }
+.cmp-search input:focus { border-color: #dc2626; background: #fff; }
+.cmp-side-hint { margin: 10px 0 0; font-size: 0.71rem; color: #71717a; line-height: 1.5; }
+
+/* ── Chips de filtro ── */
+.cmp-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.cmp-chip {
+  font-family: inherit; font-size: 0.71rem; font-weight: 600; color: #52525b;
+  background: #f4f4f5; border: 1px solid transparent; border-radius: 99px;
+  padding: 6px 12px; cursor: pointer; transition: all 0.15s ease;
+}
+.cmp-chip:hover { background: #fff; border-color: #d4d4d8; }
+.cmp-chip.is-on { background: #dc2626; border-color: #dc2626; color: #fff; }
+
+/* ── Enlaces de región ── */
+.cmp-side-link {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 7px 10px; border-radius: 8px; text-decoration: none;
+  font-size: 0.79rem; font-weight: 500; color: #3f3f46;
+  border-left: 2px solid transparent; transition: all 0.15s ease;
+}
+.cmp-side-link:hover { background: #fef2f2; color: #dc2626; border-left-color: #dc2626; }
+.cmp-side-link em {
+  font-style: normal; font-size: 0.66rem; font-weight: 700; color: #a1a1aa;
+  background: #f4f4f5; border-radius: 99px; padding: 1px 8px;
+}
+.cmp-side-link:hover em { background: #fff; color: #dc2626; }
+
+/* ── Leyenda ── */
+.cmp-side-leg { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+.cmp-side-leg li { display: flex; gap: 10px; align-items: flex-start; }
+.cmp-side-leg i { flex-shrink: 0; width: 11px; height: 11px; border-radius: 3px; margin-top: 3px; }
+.cmp-side-leg i.is-ok { background: #09090b; }
+.cmp-side-leg i.is-draft { background: #fff; border: 1px dashed #a1a1aa; }
+.cmp-side-leg i.is-bom { background: #fef2f2; border: 1px solid #fecaca; }
+.cmp-side-leg span { font-size: 0.72rem; color: #52525b; line-height: 1.65; }
+.cmp-side-leg code {
+  font-size: 0.68rem; background: #f4f4f5; color: #be123c; padding: 1px 4px; border-radius: 3px;
+}
+
+/* ── CTA lateral ── */
+.cmp-side-cta { background: #09090b; border-color: #27272a; }
+.cmp-side-cta .cmp-side-title { color: #fafafa; }
+.cmp-side-cta p { margin: 0 0 14px; font-size: 0.77rem; color: #a1a1aa; line-height: 1.75; }
+.cmp-side-cta a {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  background: #dc2626; color: #fff; text-decoration: none;
+  font-size: 0.78rem; font-weight: 600; padding: 10px 14px; border-radius: 9px;
+  transition: background 0.15s ease;
+}
+.cmp-side-cta a:hover { background: #b91c1c; }
+
+/* ── Estado vacío del filtro ── */
+.cmp-vacio {
+  margin: 0; padding: 34px 20px; text-align: center;
+  background: #f8fafc; border: 1px dashed #d4d4d8; border-radius: 13px;
+  font-size: 0.85rem; color: #71717a; line-height: 1.7;
+}
+.cmp-vacio button {
+  font-family: inherit; font-size: 0.85rem; font-weight: 600; color: #dc2626;
+  background: none; border: none; cursor: pointer; text-decoration: underline; padding: 0;
+}
+.cmp-vacio[hidden] { display: none; }
+.cmp-region[hidden], .cmp-est[hidden], .cmp-side-link[hidden] { display: none; }
+
+/* ── Ajuste del grid de cards dentro del shell ── */
+@media (min-width: 1024px) { .cmp-estados { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1400px) { .cmp-estados { grid-template-columns: repeat(3, 1fr); } }
+
+/* ── Datos de la card, ahora en dos líneas legibles ── */
+.cmp-est-datos > div { display: flex; flex-direction: column; gap: 1px; padding: 4px 0; -webkit-line-clamp: unset; }
+.cmp-est-datos > div b {
+  font-size: 0.74rem; font-weight: 600; color: #3f3f46; line-height: 1.5;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.cmp-est-datos span { min-width: 0; }
+
+/* ══════════════════════════════════════════════════════════════════
+   CUMPLIMIENTO · bloque por giro de negocio
+   Reemplaza las cards mínimas anteriores de .cmp-giro
+   ══════════════════════════════════════════════════════════════════ */
+
+.cmp-giros { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 768px) { .cmp-giros { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1280px) { .cmp-giros { grid-template-columns: repeat(3, 1fr); } }
+
+.cmp-giro {
+  display: flex; flex-direction: column; text-decoration: none;
+  background: #fff; border: 1px solid #e4e4e7; border-radius: 14px;
+  padding: 22px 22px 18px;
+  transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+.cmp-giro:hover { border-color: #dc2626; transform: translateY(-2px); box-shadow: 0 10px 28px rgba(220,38,38,0.09); }
+
+.cmp-giro-head { display: flex; gap: 13px; align-items: flex-start; margin-bottom: 14px; }
+.cmp-giro-i {
+  flex-shrink: 0; font-size: 1.35rem; line-height: 1;
+  background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px;
+  width: 42px; height: 42px; display: flex; align-items: center; justify-content: center;
+}
+.cmp-giro-n { font-size: 1rem; font-weight: 700; color: #09090b; margin: 0 0 4px; line-height: 1.3; }
+.cmp-giro-g { display: block; font-size: 0.71rem; font-weight: 600; color: #dc2626; line-height: 1.5; }
+
+.cmp-giro-r {
+  font-size: 0.79rem; color: #52525b; line-height: 1.75; margin: 0 0 16px;
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+.cmp-giro-sep { display: flex; align-items: center; gap: 8px; margin-bottom: 9px; }
+.cmp-giro-sep span {
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.11em;
+  text-transform: uppercase; color: #a1a1aa; white-space: nowrap;
+}
+.cmp-giro-sep i { flex: 1; height: 1px; background: #f4f4f5; }
+
+.cmp-giro-items { list-style: none; margin: 0 0 16px; padding: 0; }
+.cmp-giro-items li {
+  position: relative; padding-left: 15px; margin-bottom: 6px;
+  font-size: 0.73rem; color: #3f3f46; line-height: 1.6;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.cmp-giro-items li::before {
+  content: ''; position: absolute; left: 0; top: 7px;
+  width: 5px; height: 5px; border-radius: 50%; background: #dc2626;
+}
+
+.cmp-giro-normas { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 16px; }
+.cmp-giro-norma {
+  font-size: 0.63rem; font-weight: 700; letter-spacing: 0.02em;
+  border-radius: 5px; padding: 3px 8px; white-space: nowrap;
+}
+.cmp-giro-norma.is-obligatoria { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+.cmp-giro-norma.is-depende { background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; }
+.cmp-giro-norma.is-referencia { background: #f4f4f5; color: #71717a; border: 1px solid #e4e4e7; }
+
+.cmp-giro-err {
+  display: flex; align-items: flex-start; gap: 8px; margin-bottom: 16px;
+  background: #fffbeb; border: 1px solid #fde68a; border-radius: 9px; padding: 9px 12px;
+}
+.cmp-giro-err svg { flex-shrink: 0; color: #b45309; margin-top: 1px; }
+.cmp-giro-err span { font-size: 0.71rem; font-weight: 600; color: #92400e; line-height: 1.5; }
+
+.cmp-giro-cta {
+  margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  border-top: 1px solid #f4f4f5; padding-top: 14px;
+  font-size: 0.79rem; font-weight: 600; color: #dc2626;
+}
+
+/* ── Ficha de giro: normas ── */
+.cmp-normas { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 18px; }
+@media (min-width: 768px) { .cmp-normas { grid-template-columns: 1fr 1fr; } }
+.cmp-norma {
+  background: #fff; border: 1px solid #e4e4e7; border-left: 3px solid #e4e4e7;
+  border-radius: 0 11px 11px 0; padding: 14px 16px;
+}
+.cmp-norma.is-obligatoria { border-left-color: #dc2626; }
+.cmp-norma.is-depende { border-left-color: #f59e0b; }
+.cmp-norma.is-referencia { border-left-color: #a1a1aa; }
+.cmp-norma-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 7px; }
+.cmp-norma-c { font-size: 0.78rem; font-weight: 700; color: #09090b; line-height: 1.3; }
+.cmp-norma-e {
+  flex-shrink: 0; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.05em;
+  text-transform: uppercase; border-radius: 99px; padding: 2px 8px; white-space: nowrap;
+}
+.cmp-norma.is-obligatoria .cmp-norma-e { background: #fef2f2; color: #dc2626; }
+.cmp-norma.is-depende .cmp-norma-e { background: #fff7ed; color: #c2410c; }
+.cmp-norma.is-referencia .cmp-norma-e { background: #f4f4f5; color: #71717a; }
+.cmp-norma p { margin: 0; font-size: 0.77rem; color: #52525b; line-height: 1.7; }
+
+/* ── Ficha de giro: listas de requisitos ── */
+.cmp-lista { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.cmp-lista li {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: #f8fafc; border: 1px solid #e4e4e7; border-radius: 10px; padding: 13px 15px;
+}
+.cmp-lista svg { flex-shrink: 0; color: #dc2626; margin-top: 2px; }
+.cmp-lista span { font-size: 0.83rem; color: #3f3f46; line-height: 1.8; text-align: justify; hyphens: auto; }
+
+/* ══════════════════════════════════════════════════════════════════
+   CUMPLIMIENTO · cruce estado × giro
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── Strip de cifras del cruce (fondo oscuro) ── */
+.cmp-cruce {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: #27272a; border: 1px solid #27272a; border-radius: 14px; overflow: hidden;
+}
+@media (min-width: 1024px) { .cmp-cruce { grid-template-columns: repeat(4, 1fr); } }
+.cmp-cruce > div { background: #0f0f11; padding: 24px 22px; text-align: center; }
+.cmp-cruce strong {
+  display: block; font-size: 1.85rem; font-weight: 800; color: #fafafa;
+  line-height: 1; letter-spacing: -0.03em;
+}
+.cmp-cruce span { display: block; font-size: 0.78rem; font-weight: 600; color: #e4e4e7; margin-top: 9px; line-height: 1.4; }
+.cmp-cruce em { display: block; font-style: normal; font-size: 0.68rem; color: #71717a; margin-top: 5px; line-height: 1.55; }
+
+/* ── Cards de giro dentro de la ficha de estado ── */
+.cmp-gestado { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 20px; }
+@media (min-width: 640px) { .cmp-gestado { grid-template-columns: 1fr 1fr; } }
+
+.cmp-ge {
+  display: flex; flex-direction: column; text-decoration: none;
+  background: #fff; border: 1px solid #e4e4e7; border-radius: 12px; padding: 16px 17px 14px;
+  transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+.cmp-ge:hover { border-color: #dc2626; transform: translateY(-2px); box-shadow: 0 8px 22px rgba(220,38,38,0.08); }
+
+.cmp-ge-head { display: flex; gap: 11px; align-items: flex-start; margin-bottom: 10px; }
+.cmp-ge-i {
+  flex-shrink: 0; font-size: 1.1rem; line-height: 1;
+  background: #fef2f2; border: 1px solid #fecaca; border-radius: 9px;
+  width: 34px; height: 34px; display: flex; align-items: center; justify-content: center;
+}
+.cmp-ge-n { display: block; font-size: 0.87rem; font-weight: 700; color: #09090b; line-height: 1.3; margin-bottom: 5px; }
+.cmp-ge-r {
+  display: inline-block; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.05em;
+  text-transform: uppercase; border-radius: 99px; padding: 2px 8px;
+}
+.cmp-ge-r.is-alto { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+.cmp-ge-r.is-ordinario { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
+.cmp-ge-r.is-variable { background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; }
+
+.cmp-ge-g { font-size: 0.72rem; color: #71717a; line-height: 1.6; margin: 0 0 12px; }
+
+.cmp-ge-datos {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: #f4f4f5; border: 1px solid #f4f4f5; border-radius: 8px;
+  overflow: hidden; margin-bottom: 13px;
+}
+.cmp-ge-datos > div { background: #fff; padding: 8px 10px; }
+.cmp-ge-datos span {
+  display: block; font-size: 0.56rem; font-weight: 700; letter-spacing: 0.09em;
+  text-transform: uppercase; color: #a1a1aa; margin-bottom: 2px;
+}
+.cmp-ge-datos b { font-size: 0.75rem; font-weight: 700; color: #09090b; line-height: 1.35; }
+
+.cmp-ge-cta {
+  margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  border-top: 1px solid #f4f4f5; padding-top: 11px;
+  font-size: 0.74rem; font-weight: 600; color: #dc2626;
+}

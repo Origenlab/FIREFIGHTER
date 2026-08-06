@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Ixtapaluca | Estado de México"
+metaTitle: "Estación de Bomberos Ixtapaluca | Estado México"
 metaDescription: "Estación de Bomberos de Ixtapaluca. Zona oriente de rápido crecimiento. Teléfono y servicios. Emergencias: 911."
 ---
 

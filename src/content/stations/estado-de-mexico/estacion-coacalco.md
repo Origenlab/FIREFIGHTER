@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Coacalco | Estado de México"
+metaTitle: "Estación de Bomberos Coacalco | Estado México"
 metaDescription: "Estación de Bomberos de Coacalco de Berriozábal. Zona norte del Valle de México. Teléfono y servicios. Emergencias: 911."
 ---
 

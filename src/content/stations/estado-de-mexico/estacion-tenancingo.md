@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Tenancingo | Sur del Estado de México"
+metaTitle: "Estación de Bomberos Tenancingo | Sur del Estado México"
 metaDescription: "Estación de Bomberos de Tenancingo. Región florícola del sur mexiquense. Teléfono y servicios. Emergencias: 911."
 ---
 

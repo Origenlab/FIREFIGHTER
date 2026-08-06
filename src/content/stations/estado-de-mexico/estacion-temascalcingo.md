@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Temascalcingo | Norte del Estado de México"
+metaTitle: "Estación de Bomberos Temascalcingo | Norte del Estado México"
 metaDescription: "Estación de Bomberos voluntarios de Temascalcingo. Zona mazahua del norte mexiquense. Emergencias: 911."
 ---
 

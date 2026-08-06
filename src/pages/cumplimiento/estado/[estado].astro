@@ -1,0 +1,262 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/layout/PageHero.astro';
+import { tituloSeo } from '../../../lib/seoText';
+import { waLink } from '../../../lib/blog';
+import { ESTADOS, GIROS, getEstado, cruce, etiquetaRiesgo, REGIONES, REVISADO, AVISO_LEGAL, UMBRALES } from '../../../lib/cumplimiento';
+
+export async function getStaticPaths() {
+  const { ESTADOS } = await import('../../../lib/cumplimiento');
+  return ESTADOS.map(e => ({ params: { estado: e.slug } }));
+}
+
+const SITE = 'https://firefighter.com.mx';
+const slug = Astro.params.estado as string;
+const e = getEstado(slug)!;
+const url = `${SITE}/cumplimiento/estado/${e.slug}`;
+
+const region = REGIONES.find(r => r.key === e.region)?.nombre ?? '';
+const vecinos = ESTADOS.filter(x => x.region === e.region && x.slug !== e.slug);
+
+const descripcion = `Normativa de protección civil aplicable a empresas en ${e.estado}: ley estatal, quién autoriza el Programa Interno, vigencia, simulacros obligatorios y si se exige consultor registrado.`;
+
+const fichas = [
+  { k: 'Ley aplicable', v: e.ley, sub: e.leyFecha },
+  { k: 'Quién autoriza el Programa Interno', v: e.autoridad },
+  { k: 'Vigencia y revalidación del PIPC', v: e.pipcVigencia },
+  { k: 'Simulacros que exige el estado', v: e.simulacros },
+  { k: 'Cuerpo de bomberos', v: e.bomberos },
+  { k: 'Consultor o tercero acreditado', v: e.consultor },
+];
+
+const artSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  '@id': `${url}#article`,
+  headline: `Normativa de protección civil para empresas en ${e.estado}`,
+  description: descripcion,
+  url,
+  inLanguage: 'es-MX',
+  spatialCoverage: { '@type': 'State', name: e.estado, containedInPlace: { '@type': 'Country', name: 'México' } },
+  publisher: { '@type': 'Organization', name: 'FIREFIGHTER México', url: SITE },
+};
+---
+
+<BaseLayout
+  title={tituloSeo(`${e.estado} · normativa contra incendios para empresas`)}
+  description={descripcion}
+  canonicalUrl={url}
+  noindex={!e.listo}
+  breadcrumbs={[
+    { label: 'Cumplimiento', href: '/cumplimiento' },
+    { label: 'Estados', href: '/cumplimiento#estados' },
+    { label: e.estado },
+  ]}
+>
+  <Fragment slot="head">
+    {e.listo && <script type="application/ld+json" set:html={JSON.stringify(artSchema)} />}
+  </Fragment>
+
+  <PageHero
+    eyebrow={`${region} · ${e.capital}`}
+    badge={e.code}
+    h1={`Cumplimiento contra incendios<br>para empresas en<br>${e.estado}`}
+    lead={`Las obligaciones federales de la <strong style="color:#e4e4e7;">NOM-002-STPS-2010</strong> aplican igual en todo el país. Lo que cambia de un estado a otro es el carril de protección civil: quién autoriza tu Programa Interno, cuánto dura, cuántos simulacros te exigen y si necesitas un consultor con registro. Esto es lo que aplica en ${e.estado}.`}
+    alinear="center"
+    justificado
+    bloques={[
+      { label: 'Lo distintivo de este estado', texto: e.distintivo },
+      { label: 'Alcance de esta ficha', texto: `Cubre el marco <strong style="color:#e4e4e7;">estatal</strong>. Los trámites de apertura, el visto bueno de bomberos y el reglamento de construcción son en su mayoría <strong style="color:#e4e4e7;">municipales</strong> y cambian dentro del mismo estado: verifícalos siempre con el ayuntamiento donde esté el inmueble. Última revisión: ${REVISADO}.` },
+    ]}
+  >
+    <div slot="ctas" style="display:flex; flex-wrap:wrap; gap:10px;">
+      <a href="/cumplimiento/normas/nom-002-stps-2010" class="l2-cta">
+        <span>Ver la obligación federal</span>
+      </a>
+      <a href={waLink(`necesito cumplir con protección civil en ${e.estado}`)} target="_blank" rel="noopener" class="l2-cta-ghost">
+        <span>Hablar con un ingeniero</span>
+      </a>
+    </div>
+  </PageHero>
+
+  {!e.listo && (
+    <div style="background:#fff7ed; border-bottom:1px solid #fed7aa; padding:14px 0;">
+      <div class="container-custom">
+        <p style="margin:0; font-size:0.8rem; color:#9a3412; line-height:1.7;">
+          <strong>Ficha en verificación.</strong> Los datos de {e.estado} provienen de fuentes de gobierno que no pudimos contrastar contra el texto legal consolidado. Trátalos como orientación y confírmalos con la autoridad estatal antes de tomar decisiones.
+        </p>
+      </div>
+    </div>
+  )}
+
+  <section style="background:#f8fafc; padding:48px 0 88px;">
+    <div class="container-custom">
+      <div class="l3-shell">
+
+        <div class="l3-body">
+
+          <div class="l3-sec">
+            <div class="l3-sec-eyebrow"><i></i><span>Marco estatal</span></div>
+            <h2 class="l3-sec-title">Lo que exige {e.estado}</h2>
+            <div class="cmp-est-fichas">
+              {fichas.map(f => (
+                <div class="cmp-est-fila">
+                  <span class="cmp-est-k">{f.k}</span>
+                  <div class="cmp-est-v">
+                    <p>{f.v}</p>
+                    {f.sub && <span class="cmp-est-sub">{f.sub}</span>}
+                  </div>
+                </div>
+              ))}
+            </div>
+            {e.leyUrl && e.leyUrl !== 'https://www.jalisco.gob.mx/' && e.leyUrl !== 'https://legislaturaqueretaro.gob.mx/' && (
+              <a href={e.leyUrl} target="_blank" rel="noopener nofollow" class="cmp-fuente">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                <span>Consultar el texto oficial de la ley</span>
+              </a>
+            )}
+          </div>
+
+          <div class="l3-sec" id="giros">
+            <div class="l3-sec-eyebrow"><i></i><span>Por tipo de negocio</span></div>
+            <h2 class="l3-sec-title">Qué necesita tu giro en {e.estado}</h2>
+            <p class="l3-p">Las cifras de cada tarjeta ya combinan las dos autoridades: el mínimo de simulacros es el más exigente entre lo que pide la NOM-002 según el riesgo del giro y lo que exige {e.estado}. Entra a la guía de tu giro para el detalle de equipo, evacuación y expediente.</p>
+
+            <div class="cmp-gestado">
+              {GIROS.map(g => {
+                const c = cruce(e, g);
+                return (
+                  <a href={`/cumplimiento/estado/${e.slug}/${g.slug}`} class="cmp-ge">
+                    <div class="cmp-ge-head">
+                      <span class="cmp-ge-i" aria-hidden="true">{g.icono}</span>
+                      <div style="min-width:0;">
+                        <strong class="cmp-ge-n">{g.nombre}</strong>
+                        <span class={`cmp-ge-r is-${g.riesgoNom}`}>{etiquetaRiesgo(g.riesgoNom)}</span>
+                      </div>
+                    </div>
+                    <p class="cmp-ge-g">{g.gancho}</p>
+                    <div class="cmp-ge-datos">
+                      <div><span>Extintores</span><b>1 : {c.m2PorExtintor} m²</b></div>
+                      <div><span>Simulacros</span><b>{c.simulacrosPlan} al año</b></div>
+                      <div><span>Brigada</span><b>{c.brigadaObligatoria ? 'Obligatoria' : 'No exigida'}</b></div>
+                      <div><span>Sistemas fijos</span><b>{c.sistemasFijos ? 'Obligatorios' : 'No exigidos'}</b></div>
+                    </div>
+                    <span class="cmp-ge-cta">
+                      Ver requisitos en {e.estado}
+                      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </span>
+                  </a>
+                );
+              })}
+            </div>
+
+            <p class="l3-nota" style="margin-top:14px;">La clasificación de riesgo de cada tarjeta es la típica del giro conforme a la Tabla A.1 de la NOM-002-STPS-2010. Tu caso concreto se determina con tu superficie construida y tus inventarios reales: un restaurante de más de 3,000 m² es riesgo alto aunque el giro suela ser ordinario.</p>
+          </div>
+
+          <div class="l3-sec" id="federal">
+            <div class="l3-sec-eyebrow"><i></i><span>El otro carril</span></div>
+            <h2 class="l3-sec-title">Lo federal aplica igual, vivas donde vivas</h2>
+            <p class="l3-p">Todo lo anterior es el carril de <strong>protección civil</strong>. En paralelo corre el carril <strong>laboral federal</strong>, que no cambia por estado y que la Secretaría del Trabajo verifica por inspección sorpresa, sin licencia previa. Cumplir con uno no acredita el otro.</p>
+            <p class="l3-p">La NOM-002-STPS-2010 clasifica tu centro de trabajo en riesgo <strong>ordinario</strong> o <strong>alto</strong>, y de ahí cuelga todo: cuántos extintores, si necesitas brigada, cuántos simulacros federales y si te exigen sistemas fijos. Basta superar uno de estos umbrales para ser riesgo alto:</p>
+
+            <div class="l3-tabla-wrap">
+              <table class="l3-tabla">
+                <thead><tr><th>Concepto</th><th>Ordinario</th><th>Alto</th></tr></thead>
+                <tbody>
+                  {UMBRALES.map(u => (
+                    <tr><td>{u.concepto}</td><td>{u.ordinario}</td><td><strong style="color:#09090b;">{u.alto}</strong></td></tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div class="l3-box l3-box-red">
+              <span class="l3-box-title">Cuidado con sumar simulacros</span>
+              <p class="l3-box-copy">Los simulacros que exige {e.estado} y los que exige la NOM-002 no son listas separadas que haya que duplicar, pero tampoco son automáticamente el mismo ejercicio: dependen de que el escenario, el alcance y la evidencia sirvan para ambas autoridades. Lo sensato es diseñar el calendario una sola vez, cubriendo el requisito más exigente de los dos.</p>
+            </div>
+
+            <a href="/cumplimiento/normas/nom-002-stps-2010" class="cmp-fuente">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              <span>Ver la ficha completa de la NOM-002-STPS-2010</span>
+            </a>
+          </div>
+
+          <div class="l3-sec" id="verificaciones">
+            <div class="l3-sec-eyebrow"><i></i><span>Antes de contratar</span></div>
+            <h2 class="l3-sec-title">Tres verificaciones que evitan repetir el trámite</h2>
+            <div class="cmp-check">
+              <div><span>Que el consultor tenga <strong>registro vigente en este estado</strong>. El registro no es nacional: un consultor acreditado en otra entidad no habilita tu programa aquí.</span></div>
+              <div><span>Que el municipio donde está el inmueble no imponga <strong>requisitos adicionales</strong> a los estatales. Es lo más común y lo que más retrasa la licencia.</span></div>
+              <div><span>Que el equipo que compres cumpla la <strong>NOM aplicable</strong> y no solo una norma internacional. NFPA y UL no sustituyen a la NOM ante un inspector mexicano.</span></div>
+            </div>
+          </div>
+
+          {vecinos.length > 0 && (
+            <div class="l3-sec">
+              <div class="l3-sec-eyebrow"><i></i><span>Región {region}</span></div>
+              <h2 class="l3-sec-title">Otros estados de la misma región</h2>
+              <p class="l3-p">Si operas en más de una entidad, revisa cada una: comparten región, no normativa.</p>
+              <div class="cmp-vecinos">
+                {vecinos.map(v => (
+                  <a href={`/cumplimiento/estado/${v.slug}`} class="cmp-vecino">
+                    <span class="cmp-vecino-c">{v.code}</span>
+                    <span class="cmp-vecino-n">{v.estado}</span>
+                    <span class="cmp-vecino-b">{v.modeloBomberos}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <p class="cmp-legal" style="margin-top:34px;">
+            <strong>Aviso.</strong> {AVISO_LEGAL} Esta ficha cubre el marco estatal; los trámites municipales varían dentro del mismo estado. Última revisión normativa: {REVISADO}.
+          </p>
+        </div>
+
+        <aside class="l3-aside">
+
+          <nav class="l3-toc" aria-label="Contenido de la ficha">
+            <span class="l3-box-title">En esta ficha</span>
+            <a href="#giros">Qué necesita tu giro</a>
+            <a href="#federal">Lo federal aplica igual</a>
+            <a href="#verificaciones">Antes de contratar</a>
+          </nav>
+
+
+          <div class="l3-box">
+            <span class="l3-box-title">Resumen de {e.estado}</span>
+            <dl class="cmp-ficha">
+              <div><dt>Capital</dt><dd>{e.capital}</dd></div>
+              <div><dt>Región</dt><dd>{region}</dd></div>
+              <div><dt>Modelo de bomberos</dt><dd>{e.modeloBomberos}</dd></div>
+              <div><dt>Vigencia del PIPC</dt><dd>{e.pipcVigencia.split('.')[0]}</dd></div>
+              <div><dt>Simulacros</dt><dd>{e.simulacros.split('.')[0]}</dd></div>
+            </dl>
+          </div>
+
+          {e.totalStations > 0 && (
+            <a href={`/directorio/${e.slug}`} class="l3-box" style="text-decoration:none; display:block;">
+              <span class="l3-box-title">Estaciones de bomberos</span>
+              <p class="l3-box-copy">Tenemos <strong>{e.totalStations}</strong> estaciones documentadas en {e.estado}. Útil para el directorio de emergencia de tu Programa Interno.</p>
+              <span style="font-size:0.78rem; font-weight:600; color:#dc2626;">Ver el directorio →</span>
+            </a>
+          )}
+
+          <div class="l3-box l3-box-dark">
+            <span class="l3-box-title">¿Te ayudamos a aterrizarlo?</span>
+            <p class="l3-box-copy">Equipamos empresas en los 32 estados. Cuéntanos qué instalación tienes en {e.estado} y te decimos qué te aplica, qué te falta y qué no necesitas comprar.</p>
+            <a href={waLink(`necesito cumplir con protección civil e incendios en ${e.estado}`)} target="_blank" rel="noopener" class="l3-btn-wa">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+              <span>Escribirnos por WhatsApp</span>
+            </a>
+            <a href="/productos" class="l3-btn-ghost">
+              <span>Ver el catálogo</span>
+            </a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

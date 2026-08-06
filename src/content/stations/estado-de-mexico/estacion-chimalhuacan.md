@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Chimalhuacán | Estado de México"
+metaTitle: "Estación de Bomberos Chimalhuacán | Estado México"
 metaDescription: "Estación de Bomberos de Chimalhuacán. Zona urbana de alta densidad. Teléfono y servicios. Emergencias: 911."
 ---
 

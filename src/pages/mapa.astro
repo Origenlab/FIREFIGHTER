@@ -39,28 +39,32 @@ const stateColors: Record<string, string> = {
 };
 
 const stations = await getCollection('stations');
-const stationsData = stations.map(s => ({
+// Solo entran al mapa las fichas con coordenadas publicadas.
+const stationsConGps = stations.filter(
+  (s) => s.data.latitude != null && s.data.longitude != null
+);
+const stationsData = stationsConGps.map(s => ({
   name: s.data.name,
   lat: s.data.latitude,
   lng: s.data.longitude,
   city: s.data.city,
   state: s.data.state,
   stateSlug: s.data.stateSlug,
-  phone: s.data.phone,
-  address: s.data.address,
+  phone: s.data.phone || '911',
+  address: s.data.address || 'Domicilio no publicado',
   slug: s.id.split('/').pop()?.replace('.md', ''),
   color: stateColors[s.data.stateSlug] || '#dc2626',
 }));
 
 // Get unique states with their colors for the legend
-const statesWithColors = [...new Set(stations.map(s => s.data.stateSlug))]
+const statesWithColors = [...new Set(stationsConGps.map(s => s.data.stateSlug))]
   .map(slug => {
-    const station = stations.find(s => s.data.stateSlug === slug);
+    const station = stationsConGps.find(s => s.data.stateSlug === slug);
     return {
       slug,
       name: station?.data.state || slug,
       color: stateColors[slug] || '#dc2626',
-      count: stations.filter(s => s.data.stateSlug === slug).length,
+      count: stationsConGps.filter(s => s.data.stateSlug === slug).length,
     };
   })
   .sort((a, b) => a.name.localeCompare(b.name));
@@ -84,7 +88,7 @@ const statesWithColors = [...new Set(stations.map(s => s.data.stateSlug))]
             Estaciones de bomberos en México
           </h1>
           <p style="font-size:0.76rem; color:#71717a; margin:4px 0 0;">
-            {stations.length} estaciones publicadas en {statesWithColors.length} estados · Para una emergencia, marca <a href="tel:911" style="color:#e4e4e7; font-weight:700; text-decoration:none;">911</a>
+            {stationsConGps.length} estaciones con ubicación GPS en {statesWithColors.length} estados · Para una emergencia, marca <a href="tel:911" style="color:#e4e4e7; font-weight:700; text-decoration:none;">911</a>
           </p>
         </div>
         <div style="display:flex; align-items:center; gap:9px; flex-wrap:wrap;">

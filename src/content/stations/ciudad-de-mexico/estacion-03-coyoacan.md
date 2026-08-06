@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos 03 Coyoacán | Heroico Cuerpo de Bomberos CDMX"
+metaTitle: "Estación de Bomberos 03 Coyoacán | Heroico Cuerpo CDMX"
 metaDescription: "Estación de Bomberos 03 en Coyoacán, Ciudad de México. Teléfono de emergencia, ubicación exacta y servicios especializados. Emergencias: 911."
 ---
 

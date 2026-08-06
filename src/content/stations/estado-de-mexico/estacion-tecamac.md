@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 2
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Tecámac | Estado de México"
+metaTitle: "Estación de Bomberos Tecámac | Estado México"
 metaDescription: "Estación de Bomberos de Tecámac. Zona de mayor crecimiento urbano en México. Teléfono y servicios. Emergencias: 911."
 ---
 

@@ -67,9 +67,9 @@ const SLUGS_REDIRIGIDOS = [
 
 // Fichas L3 en borrador (sin bloque `l3` en productos.json): salen con noindex,
 // asi que tampoco deben ir al sitemap. Se quitan de aqui al enriquecer la ficha.
-const L3_BORRADOR = [
-  '/productos/epp-para-bomberos/viseras-y-caretas',
-];
+// Ya no queda ninguna L3 en borrador dentro de EPP para bomberos: las seis fichas tienen
+// bloque `l3`. La lista se conserva porque es el mecanismo de alta de las próximas categorías.
+const L3_BORRADOR = [];
 
 // Fichas de estado sin verificacion contra texto legal consolidado (confianza != alta):
 // salen con noindex, asi que tampoco deben ir al sitemap. Se quitan de aqui solas

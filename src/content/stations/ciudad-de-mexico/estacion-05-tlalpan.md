@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 2
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos 05 Tlalpan | Heroico Cuerpo de Bomberos CDMX"
+metaTitle: "Estación de Bomberos 05 Tlalpan | Heroico Cuerpo CDMX"
 metaDescription: "Estación de Bomberos 05 en Tlalpan, Ciudad de México. Especializada en incendios forestales y rescate en áreas naturales. Emergencias: 911."
 ---
 

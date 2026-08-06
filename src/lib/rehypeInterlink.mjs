@@ -26,6 +26,7 @@ const CASCOS = `${P}/epp-para-bomberos/cascos-bullard-y-msa`;
 const BOTAS = `${P}/epp-para-bomberos/botas-dielectricas`;
 const CAPUCHA = `${P}/epp-para-bomberos/protector-de-cuello-y-capucha`;
 const GUANTES = `${P}/epp-para-bomberos/guantes-de-intervencion`;
+const VISERAS = `${P}/epp-para-bomberos/viseras-y-caretas`;
 
 /**
  * El orden importa: lo más específico primero. En un solape gana el término que empieza antes
@@ -103,6 +104,20 @@ export const REGLAS_CATALOGO = [
   { termino: 'guantes gauntlet', href: GUANTES, titulo: 'Guantes estructurales para bombero certificados' },
   { termino: 'Shelby', href: GUANTES, titulo: 'Guantes estructurales para bombero certificados' },
   { termino: 'Pro-Tech 8', href: GUANTES, titulo: 'Guantes estructurales para bombero certificados' },
+
+  // Viseras y caretas. "visera" a secas es ambigua en español mexicano —la NOM de cascos llama
+  // visera al ala—, así que se enlaza por la pieza óptica o por la función.
+  { termino: 'viseras y caretas', href: VISERAS, titulo: 'Viseras, caretas y goggles para casco estructural' },
+  { termino: 'visera del casco', href: VISERAS, titulo: 'Viseras, caretas y goggles para casco estructural' },
+  { termino: 'careta del casco', href: VISERAS, titulo: 'Viseras, caretas y goggles para casco estructural' },
+  { termino: 'careta de policarbonato', href: VISERAS, titulo: 'Viseras, caretas y goggles para casco estructural' },
+  { termino: 'visera abatible', href: VISERAS, titulo: 'Viseras, caretas y goggles para casco estructural' },
+  { termino: 'visera facial', href: VISERAS, titulo: 'Viseras, caretas y goggles para casco estructural' },
+  { termino: 'visera protectora', href: VISERAS, titulo: 'Viseras, caretas y goggles para casco estructural' },
+  { termino: 'protección ocular', href: VISERAS, titulo: 'Viseras, caretas y goggles para casco estructural' },
+  { termino: 'goggles para bombero', href: VISERAS, titulo: 'Viseras, caretas y goggles para casco estructural' },
+  { termino: 'goggles estructurales', href: VISERAS, titulo: 'Viseras, caretas y goggles para casco estructural' },
+  { termino: 'Bourkes', href: VISERAS, titulo: 'Viseras, caretas y goggles para casco estructural' },
 
   // ── L2 · categorías
   { termino: 'EPP para bomberos', href: `${P}/epp-para-bomberos`, titulo: 'EPP para bomberos certificado NFPA 1970' },

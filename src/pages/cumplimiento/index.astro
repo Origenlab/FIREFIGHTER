@@ -5,6 +5,7 @@ import { tituloSeo } from '../../lib/seoText';
 import { waLink } from '../../lib/blog';
 import {
   NORMAS, GIROS, TRAMITES, CALENDARIO, UMBRALES,
+  ESTADOS, REGIONES, PANORAMA,
   REVISADO, UMA, pesos, AVISO_LEGAL,
 } from '../../lib/cumplimiento';
 
@@ -112,6 +113,218 @@ const capas = [
       </a>
     </div>
   </PageHero>
+
+  <!-- ══ ESTADOS ══ -->
+  <section id="estados" style="background:#fff; padding:64px 0 86px; scroll-margin-top:96px;">
+    <div class="container-custom">
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16" style="align-items:center; margin-bottom:40px;">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+            <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Por estado</span>
+          </div>
+          <h2 style="font-size:clamp(1.9rem,2.8vw,2.7rem); font-weight:800; color:#09090b; line-height:1.1; margin:0; letter-spacing:-0.02em;">
+            Lo que exige<br>cada entidad federativa
+          </h2>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:26px;">
+          <div>
+            <span style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px; display:block;">Por qué importa el estado</span>
+            <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0; text-align:justify; hyphens:auto;">Las obligaciones de la STPS son idénticas en todo el país. El carril de <strong style="color:#09090b; font-weight:600;">protección civil no lo es</strong>: quién autoriza tu Programa Interno, cuánto dura, cuántos simulacros te exigen y si necesitas un consultor con registro cambian de una entidad a otra, y la diferencia entre la más laxa y la más estricta es de uno a seis simulacros al año.</p>
+          </div>
+          <div style="padding-top:26px; border-top:1px solid #f0f0f0;">
+            <span style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px; display:block;">Cómo usar estas fichas</span>
+            <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0; text-align:justify; hyphens:auto;">Cada ficha resuelve el marco <strong style="color:#09090b; font-weight:600;">estatal</strong>, con la ley aplicable y su fecha de reforma. Los trámites de apertura, el visto bueno de bomberos y el reglamento de construcción son en su mayoría municipales y cambian dentro del mismo estado: ahí la ficha te dice qué preguntar, no qué asumir.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cmp-stats">
+        <div><strong>{PANORAMA.total}</strong><span>Entidades federativas</span><em>Cobertura nacional</em></div>
+        <div><strong>{PANORAMA.documentados}</strong><span>Fichas verificadas</span><em>Contra texto legal oficial</em></div>
+        <div><strong>{PANORAMA.consultorObligatorio}</strong><span>Exigen consultor registrado</span><em>El registro no es nacional</em></div>
+        <div><strong>{PANORAMA.simulacrosMax}</strong><span>Simulacros al año, el máximo</span><em>Morelos. El mínimo es uno</em></div>
+      </div>
+
+      <div class="cmp-shell">
+
+        <!-- ── Navegación de la sección ── -->
+        <aside class="cmp-side" aria-label="Navegación por estado">
+
+          <div class="cmp-side-box">
+            <label class="cmp-side-title" for="q-estado">Encuentra tu estado</label>
+            <div class="cmp-search">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="M21 21l-4.3-4.3"/></svg>
+              <input id="q-estado" type="search" placeholder="Escribe un estado…" autocomplete="off" />
+            </div>
+            <p class="cmp-side-hint" id="cmp-conteo" role="status" aria-live="polite">Mostrando las {PANORAMA.total} entidades</p>
+          </div>
+
+          <div class="cmp-side-box">
+            <span class="cmp-side-title">Filtrar</span>
+            <div class="cmp-chips">
+              <button type="button" class="cmp-chip is-on" data-filtro="todos">Todos</button>
+              <button type="button" class="cmp-chip" data-filtro="verificada">Verificadas</button>
+              <button type="button" class="cmp-chip" data-filtro="consultor">Exigen consultor</button>
+              <button type="button" class="cmp-chip" data-filtro="exigente">3 o más simulacros</button>
+            </div>
+          </div>
+
+          <nav class="cmp-side-box" aria-label="Regiones">
+            <span class="cmp-side-title">Regiones</span>
+            {REGIONES.map(r => {
+              const n = ESTADOS.filter(e => e.region === r.key).length;
+              if (!n) return null;
+              return (
+                <a href={`#region-${r.key}`} class="cmp-side-link" data-region-link={r.key}>
+                  <span>{r.nombre}</span>
+                  <em>{n}</em>
+                </a>
+              );
+            })}
+          </nav>
+
+          <div class="cmp-side-box">
+            <span class="cmp-side-title">Cómo leer las fichas</span>
+            <ul class="cmp-side-leg">
+              <li><i class="is-ok"></i><span>Verificada contra el texto legal del congreso estatal o su periódico oficial.</span></li>
+              <li><i class="is-draft"></i><span>En verificación: viene de fuentes de gobierno que no pudimos contrastar. Sale con <code>noindex</code>.</span></li>
+              <li><i class="is-bom"></i><span>La etiqueta roja indica de quién dependen los bomberos: municipal, estatal, integrado con protección civil o patronato.</span></li>
+            </ul>
+          </div>
+
+          <div class="cmp-side-box cmp-side-cta">
+            <span class="cmp-side-title">¿Operas en varios estados?</span>
+            <p>Cada entidad tiene su propio criterio y su propio padrón de consultores. Te armamos el mapa de lo que aplica en cada planta o sucursal.</p>
+            <a href={waLink('opero en varios estados y necesito ordenar el cumplimiento')} target="_blank" rel="noopener">
+              <span>Escribirnos por WhatsApp</span>
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+
+        </aside>
+
+        <!-- ── Listado ── -->
+        <div class="cmp-main" id="cmp-listado">
+          {REGIONES.map(r => {
+            const delGrupo = ESTADOS.filter(e => e.region === r.key);
+            if (!delGrupo.length) return null;
+            return (
+              <div class="cmp-region" id={`region-${r.key}`} data-region={r.key}>
+                <div class="cmp-region-head">
+                  <span class="cmp-region-n">{r.nombre}</span>
+                  <span class="cmp-region-l"></span>
+                  <span class="cmp-region-c">{delGrupo.length}</span>
+                </div>
+                <div class="cmp-estados">
+                  {delGrupo.map(e => (
+                    <a
+                      href={`/cumplimiento/estado/${e.slug}`}
+                      class={`cmp-est ${e.listo ? '' : 'is-draft'}`}
+                      data-busqueda={e.busqueda}
+                      data-verificada={e.listo ? '1' : '0'}
+                      data-consultor={e.exigeConsultor ? '1' : '0'}
+                      data-simulacros={e.simulacrosMin}
+                    >
+                      <div class="cmp-est-top">
+                        <span class="cmp-est-code">{e.code}</span>
+                        <span class="cmp-est-bom">{e.modeloBomberos}</span>
+                      </div>
+                      <h3 class="cmp-est-name">{e.estado}</h3>
+                      <p class="cmp-est-ley">{e.ley}</p>
+                      <div class="cmp-est-datos">
+                        <div><span>PIPC</span><b>{e.pipcVigencia.split('.')[0].split(':')[0].split(';')[0].split('(')[0].trim()}</b></div>
+                        <div><span>Simulacros</span><b>{e.simulacrosMin > 0 ? `${e.simulacrosMin} al año` : 'La ley no fija mínimo'}</b></div>
+                      </div>
+                      <span class="cmp-est-cta">
+                        {e.listo ? 'Ver la ficha del estado' : 'Ficha en verificación'}
+                        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+          <p class="cmp-vacio" id="cmp-vacio" hidden>No hay estados que coincidan con ese filtro. <button type="button" id="cmp-reset">Ver los 32</button></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    (function () {
+      var input = document.getElementById('q-estado');
+      var conteo = document.getElementById('cmp-conteo');
+      var vacio = document.getElementById('cmp-vacio');
+      var reset = document.getElementById('cmp-reset');
+      if (!input) return;
+
+      var cards = Array.prototype.slice.call(document.querySelectorAll('.cmp-est'));
+      var regiones = Array.prototype.slice.call(document.querySelectorAll('.cmp-region'));
+      var chips = Array.prototype.slice.call(document.querySelectorAll('.cmp-chip'));
+      var filtro = 'todos';
+
+      function normaliza(t) {
+        return t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+      }
+
+      function pasa(card, q) {
+        if (q && card.getAttribute('data-busqueda').indexOf(q) === -1) return false;
+        if (filtro === 'verificada' && card.getAttribute('data-verificada') !== '1') return false;
+        if (filtro === 'consultor' && card.getAttribute('data-consultor') !== '1') return false;
+        if (filtro === 'exigente' && parseInt(card.getAttribute('data-simulacros'), 10) < 3) return false;
+        return true;
+      }
+
+      function aplicar() {
+        var q = normaliza(input.value);
+        var visibles = 0;
+        cards.forEach(function (c) {
+          var ok = pasa(c, q);
+          c.hidden = !ok;
+          if (ok) visibles++;
+        });
+        regiones.forEach(function (r) {
+          var vis = r.querySelectorAll('.cmp-est:not([hidden])').length;
+          r.hidden = vis === 0;
+          var c = r.querySelector('.cmp-region-c');
+          if (c) c.textContent = String(vis);
+        });
+        document.querySelectorAll('[data-region-link]').forEach(function (a) {
+          var key = a.getAttribute('data-region-link');
+          var grupo = document.querySelector('.cmp-region[data-region="' + key + '"]');
+          var vis = grupo ? grupo.querySelectorAll('.cmp-est:not([hidden])').length : 0;
+          a.hidden = vis === 0;
+          var em = a.querySelector('em');
+          if (em) em.textContent = String(vis);
+        });
+        vacio.hidden = visibles > 0;
+        conteo.textContent = visibles === 32
+          ? 'Mostrando las 32 entidades'
+          : visibles === 1 ? 'Una entidad coincide' : 'Coinciden ' + visibles + ' entidades';
+      }
+
+      input.addEventListener('input', aplicar);
+      chips.forEach(function (b) {
+        b.addEventListener('click', function () {
+          chips.forEach(function (x) { x.classList.remove('is-on'); });
+          b.classList.add('is-on');
+          filtro = b.getAttribute('data-filtro');
+          aplicar();
+        });
+      });
+      if (reset) reset.addEventListener('click', function () {
+        input.value = '';
+        filtro = 'todos';
+        chips.forEach(function (x) { x.classList.toggle('is-on', x.getAttribute('data-filtro') === 'todos'); });
+        aplicar();
+      });
+    })();
+  </script>
+
 
   <!-- ══ LAS 4 CAPAS ══ -->
   <section style="background:#fff; padding:80px 0;">
@@ -259,26 +472,70 @@ const capas = [
   </section>
 
   <!-- ══ GIROS ══ -->
-  <section style="background:#f8fafc; border-top:1px solid #e4e4e7; padding:80px 0;">
+  <section id="giros" style="background:#f8fafc; border-top:1px solid #e4e4e7; padding:80px 0; scroll-margin-top:96px;">
     <div class="container-custom">
-      <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px;">
-        <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
-        <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Por giro</span>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16" style="align-items:center; margin-bottom:44px;">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+            <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Por giro de negocio</span>
+          </div>
+          <h2 style="font-size:clamp(1.9rem,2.8vw,2.7rem); font-weight:800; color:#09090b; line-height:1.1; margin:0; letter-spacing:-0.02em;">
+            Qué equipo exige<br>tu tipo de negocio
+          </h2>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:26px;">
+          <div>
+            <span style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px; display:block;">Por qué no basta con la norma general</span>
+            <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0; text-align:justify; hyphens:auto;">La NOM-002 te dice cuántos extintores por metro cuadrado, pero no que <strong style="color:#09090b; font-weight:600;">una cocina comercial necesita clase K y ningún otro agente sirve</strong>, ni que un hospital tiene que evacuar pacientes que no caminan, ni que una gasolinera es riesgo alto desde el primer litro. El giro define el escenario, y el escenario define el equipo.</p>
+          </div>
+          <div style="padding-top:26px; border-top:1px solid #f0f0f0;">
+            <span style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#09090b; margin-bottom:10px; display:block;">Qué trae cada guía</span>
+            <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0; text-align:justify; hyphens:auto;">Normas aplicables con su estatus real —obligatoria, condicional o referencia técnica—, equipo mínimo, requisitos de evacuación, brigadas, el expediente que revisa el inspector y los tres errores que más se repiten en ese giro. <strong style="color:#09090b; font-weight:600;">Con la advertencia de qué se le atribuye a una NOM sin estar en ella.</strong></p>
+          </div>
+        </div>
       </div>
-      <h2 style="font-size:clamp(1.7rem,2.4vw,2.3rem); font-weight:800; color:#09090b; line-height:1.15; margin:0 0 12px; letter-spacing:-0.02em;">Checklist según tu tipo de negocio</h2>
-      <p style="font-size:0.92rem; color:#52525b; line-height:1.85; margin:0 0 32px; max-width:70ch;">Las cuatro capas aplican a todos, pero cada giro tiene requisitos propios y errores de cumplimiento que se repiten. Estas guías están en preparación.</p>
 
       <div class="cmp-giros">
         {GIROS.map(g => (
-          <div class="cmp-giro">
-            <span class="cmp-giro-i" aria-hidden="true">{g.icono}</span>
-            <div style="min-width:0;">
-              <strong class="cmp-giro-n">{g.nombre}</strong>
-              <span class="cmp-giro-g">{g.gancho}</span>
+          <a href={`/cumplimiento/giro/${g.slug}`} class="cmp-giro">
+            <div class="cmp-giro-head">
+              <span class="cmp-giro-i" aria-hidden="true">{g.icono}</span>
+              <div style="min-width:0;">
+                <h3 class="cmp-giro-n">{g.nombre}</h3>
+                <span class="cmp-giro-g">{g.gancho}</span>
+              </div>
             </div>
-          </div>
+
+            <p class="cmp-giro-r">{g.resumen}</p>
+
+            <div class="cmp-giro-sep"><span>Lo primero que revisan</span><i></i></div>
+            <ul class="cmp-giro-items">
+              {g.extintores.slice(0, 2).map(x => <li>{x}</li>)}
+              {g.sistemas.slice(0, 1).map(x => <li>{x}</li>)}
+            </ul>
+
+            <div class="cmp-giro-sep"><span>Normas que le aplican</span><i></i></div>
+            <div class="cmp-giro-normas">
+              {g.normas.slice(0, 4).map(n => (
+                <span class={`cmp-giro-norma is-${n.estatus}`}>{n.clave}</span>
+              ))}
+            </div>
+
+            <div class="cmp-giro-err">
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M5.07 19H19a2 2 0 001.75-2.96l-6.93-12a2 2 0 00-3.46 0l-6.93 12A2 2 0 005.07 19z"/></svg>
+              <span>{g.errores[0].titulo}</span>
+            </div>
+
+            <span class="cmp-giro-cta">
+              Ver la guía completa
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </span>
+          </a>
         ))}
       </div>
+
     </div>
   </section>
 

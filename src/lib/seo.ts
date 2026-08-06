@@ -5,18 +5,18 @@
 
 export interface StationData {
   name: string;
-  address: string;
-  neighborhood: string;
+  address?: string;
+  neighborhood?: string;
   municipality: string;
   city: string;
   state: string;
-  postalCode: string;
-  phone: string;
+  postalCode?: string;
+  phone?: string;
   emergencyPhone?: string;
   email?: string;
   website?: string;
-  latitude: number;
-  longitude: number;
+  latitude?: number;
+  longitude?: number;
   services: string[];
   operatingHours: string;
   description?: string;
@@ -61,19 +61,25 @@ export function generateEmergencyServiceSchema(
       `${station.name} - Estación de bomberos en ${station.municipality}, ${station.state}. Servicios: ${servicesDescription}. Emergencias: 911.`,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: `${station.address}, ${station.neighborhood}`,
+      ...(station.address
+        ? { streetAddress: [station.address, station.neighborhood].filter(Boolean).join(', ') }
+        : {}),
       addressLocality: station.municipality,
       addressRegion: station.state,
-      postalCode: station.postalCode,
+      ...(station.postalCode ? { postalCode: station.postalCode } : {}),
       addressCountry: 'MX',
     },
-    telephone: station.phone,
+    ...(station.phone ? { telephone: station.phone } : {}),
     url: pageUrl,
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: station.latitude,
-      longitude: station.longitude,
-    },
+    ...(station.latitude != null && station.longitude != null
+      ? {
+          geo: {
+            '@type': 'GeoCoordinates',
+            latitude: station.latitude,
+            longitude: station.longitude,
+          },
+        }
+      : {}),
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: [

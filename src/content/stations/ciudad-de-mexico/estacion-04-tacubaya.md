@@ -29,7 +29,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos 04 Tacubaya | Heroico Cuerpo de Bomberos CDMX"
+metaTitle: "Estación de Bomberos 04 Tacubaya | Heroico Cuerpo CDMX"
 metaDescription: "Estación de Bomberos 04 en Tacubaya, Miguel Hidalgo, Ciudad de México. Teléfono de emergencia, ubicación y servicios. Emergencias: 911."
 ---
 

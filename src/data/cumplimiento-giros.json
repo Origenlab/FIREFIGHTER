@@ -1,0 +1,962 @@
+[
+  {
+    "slug": "restaurante",
+    "nombre": "Restaurante y cocina comercial",
+    "icono": "🍳",
+    "gancho": "La grasa ardiendo no se apaga con polvo",
+    "resumen": "La línea de cocción concentra fuego clase K, instalación de gas L.P. y ductos con acumulación de grasa en un mismo punto del inmueble. La NOM-002-STPS-2010 fija para clase K la distancia de recorrido más corta de toda la norma, diez metros, y el reglamento de construcción exige campana conforme a NMX-J-521-2-31-ANCE con filtros y depósitos de grasa. La obligación central es sostener un extintor clase K con el agente correcto, la campana y el ducto limpios, y la instalación de gas dictaminada. El ducto engrasado es el vehículo que lleva el fuego de la cocina al resto del edificio.",
+    "riesgoTipico": "La mayoría de los restaurantes queda en riesgo ordinario conforme a la Tabla A.1 de la NOM-002-STPS-2010 por no rebasar los 3,000 m² construidos ni los inventarios de inflamables, aunque el recorrido de 10 m para clase K aplica igual en riesgo ordinario y en riesgo alto.",
+    "riesgoNom": "ordinario",
+    "normas": [
+      {
+        "clave": "NOM-002-STPS-2010",
+        "que": "Obliga a clasificar el riesgo de incendio, a colocar extintor clase K a máximo 10 m de recorrido y a documentar revisión mensual y mantenimiento anual.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-004-SEDG-2004",
+        "que": "Rige el diseño y construcción de la instalación de aprovechamiento de gas L.P. de la cocina y sus requisitos de extintores por capacidad.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NTCPA CDMX cap. 4",
+        "que": "Define para la ocupación de consumo de alimentos y bebidas los umbrales de rociadores, alarma, recorridos y las condiciones de la campana del numeral 4.8.",
+        "estatus": "depende"
+      },
+      {
+        "clave": "NMX-J-521-2-31-ANCE (2018)",
+        "que": "Establece las características de la campana industrial y es citada como obligatoria por el numeral 4.8 del reglamento de construcción de la CDMX.",
+        "estatus": "depende"
+      },
+      {
+        "clave": "NFPA 96 y UL 300",
+        "que": "Describen la ventilación, protección y los sistemas de supresión de cocinas comerciales, pero son normas extranjeras sin observancia obligatoria en México por sí mismas.",
+        "estatus": "referencia"
+      }
+    ],
+    "extintores": [
+      "El extintor clase K es obligatorio en la línea de cocción y su recorrido máximo es de 10 m conforme a la Tabla 1 de la NOM-002-STPS-2010, la distancia más corta de toda la norma.",
+      "Para fuego clase K la Tabla 4.4.4.1 del reglamento de construcción de la CDMX solo admite agentes especiales o químico húmedo, y excluye expresamente PQS ABC, PQS BC, CO₂, agua y espuma mecánica.",
+      "Se coloca clase A en el comedor y clase B/C en el cuarto eléctrico y en el almacén de licores.",
+      "La capacidad mínima general es de 6 kg o 9 L y la altura máxima de instalación es de 1.50 m del piso a la parte más alta del equipo, según el reglamento de la CDMX que se usa como base; los números pueden cambiar en su estado.",
+      "Si la instalación de gas L.P. es clase B, B1 o C de 5,000 L o más, o cuenta con vaporizadores, el numeral 10.1.1 de la NOM-004-SEDG-2004 exige al menos dos extintores de polvo químico seco de 9 kg.",
+      "La revisión de los extintores es mensual y documentada, y el mantenimiento se realiza al menos una vez al año conforme a la NOM-154-SCFI-2005."
+    ],
+    "sistemas": [
+      "La alarma sonora y visual es obligatoria en todos los casos, sin excepción por tamaño, conforme a la Tabla 4.4.1.1 del reglamento de construcción de la CDMX, tomado aquí como base.",
+      "Los rociadores y las conexiones de manguera son obligatorios salvo que el restaurante esté en el nivel de descarga de salida, con 500 m² o menos y 100 ocupantes o menos; cualquier local en planta alta o sótano los requiere sin importar su superficie.",
+      "Los espacios con equipos de combustión requieren extintores más sistema de detección, y además detectores de gas conforme al numeral 4.4.5.2.",
+      "La campana debe cumplir la NMX-J-521-2-31-ANCE con filtros y depósitos de grasa, separación mínima del filtro a la fuente de cocción de 15 cm en eléctrica, 60 cm en gas y 90 cm en carbón, y una salida de aire por cada 3.6 m de largo longitudinal.",
+      "El ducto de extracción debe operar a velocidad mínima de 2.5 m/s y construirse en acero calibre mínimo 16 o acero inoxidable calibre mínimo 28.",
+      "El sistema de supresión automática con químico húmedo bajo UL 300, con descarga sobre freidores, plancha y ducto e interlock de corte de gas y energía, es estándar de la industria y probable requisito de protección civil local o de la aseguradora, no mandato de una NOM federal."
+    ],
+    "evacuacion": [
+      "La carga de ocupantes se calcula con 1.4 m² por persona en área de mesas con asientos movibles y 0.55 m² por persona en áreas de pie como la barra, conforme al reglamento de la CDMX usado como referencia base.",
+      "El recorrido máximo a una salida es de 61 m sin rociadores y de 76 m con rociadores para la ocupación de reuniones públicas.",
+      "Se requieren dos rutas de evacuación por nivel hasta 500 ocupantes.",
+      "Las puertas abaten en dirección de la evacuación cuando sirven a más de 50 ocupantes y llevan barra antipánico cuando sirven a más de 100.",
+      "Las señales de salida deben estar iluminadas permanentemente en consumo de alimentos y bebidas, con fuente autónoma conforme a UL 924, referencia técnica citada por el reglamento de la CDMX.",
+      "Se permite el sistema de alarma de evacuación por voz como único sistema de aviso."
+    ],
+    "brigadas": [
+      "En riesgo ordinario la NOM-002-STPS-2010 pide un simulacro al año y no obliga a integrar brigada contra incendio, aunque en un giro con fuego abierto permanente resulta altamente recomendable.",
+      "El personal de cocina debe capacitarse en el uso del extintor clase K, cuya técnica es distinta: descarga suave y nunca directa sobre la grasa.",
+      "La capacitación incluye la activación manual del sistema de supresión y el corte de gas desde las válvulas de cierre rápido.",
+      "Todo el personal debe tener claro que nunca se aplica agua ni polvo químico seco sobre grasa ardiendo.",
+      "La rotación de personal es alta, por lo que la capacitación se refresca con cada ingreso y no solo una vez al año."
+    ],
+    "documentos": [
+      "Licencia de funcionamiento o aviso de declaración de apertura del establecimiento.",
+      "Programa Interno de Protección Civil o carta de corresponsabilidad, según el aforo y el reglamento local aplicable.",
+      "Clasificación del riesgo de incendio conforme a la NOM-002-STPS-2010 junto con el croquis del inmueble.",
+      "Bitácora mensual de revisión de extintores y constancia del mantenimiento anual conforme a la NOM-154-SCFI-2005.",
+      "Constancia de limpieza periódica de campana y ductos, con registro de la empresa que la realizó.",
+      "Dictamen vigente de la instalación de gas L.P. y dictamen de la instalación eléctrica.",
+      "Constancias de capacitación del personal de cocina y actas de los simulacros realizados.",
+      "Certificado de instalación y prueba semestral del sistema de supresión en campana, que es práctica estándar de la industria bajo NFPA 96 y no exigencia de una NOM; conviene confirmarlo con protección civil del municipio."
+    ],
+    "errores": [
+      {
+        "titulo": "Extintor ABC colocado como si fuera clase K",
+        "detalle": "Es el error número uno del giro. El polvo químico seco no saponifica la grasa, por lo que el fuego se reinflama en cuanto cesa la descarga. La tabla de agentes del reglamento de la CDMX es explícita en que clase K solo admite químico húmedo o agentes especiales."
+      },
+      {
+        "titulo": "Grasa acumulada en filtros y ductos",
+        "detalle": "La falta de limpieza programada convierte al ducto en el vehículo que lleva el fuego de la cocina al resto del inmueble. Se agrava cuando el sistema de supresión no tiene prueba ni recarga vigente y carece de interlock de corte de gas."
+      },
+      {
+        "titulo": "Restaurante en planta alta sin rociadores",
+        "detalle": "El operador asume que por ser un local pequeño no le aplica el requisito. La exención del reglamento de la CDMX cubre únicamente el nivel de descarga de salida, así que cualquier local en planta alta o sótano requiere rociadores sin importar su superficie."
+      }
+    ],
+    "aclaracion": "Revisado el texto íntegro del reglamento de construcción de la CDMX en su versión 2024, no existe mandato de sistema automático de supresión en campana. Lo que sí exige el numeral 4.8.2 es cumplir la NMX-J-521-2-31-ANCE, instalar filtros y depósitos de grasa, respetar distancias mínimas del filtro a la fuente de cocción y colocar una salida de aire cada 3.6 m. NFPA 96 y UL 300 son normas extranjeras y no son de observancia obligatoria en México por sí mismas: el sistema de supresión se exige en la práctica por criterios de protección civil local, por requisito de la aseguradora y por buena ingeniería, y así debe presentarse.",
+    "productoSlug": "extintores-y-extincion",
+    "nombreCorto": "Restaurantes"
+  },
+  {
+    "slug": "hotel",
+    "nombre": "Hotel y hospedaje",
+    "icono": "🏨",
+    "gancho": "Huéspedes dormidos que no conocen la ruta",
+    "resumen": "El hotel combina ocupación nocturna, huéspedes que desconocen el inmueble y personal distribuido en tres turnos. El reglamento de construcción marca alarma sonora y visual como obligatoria en todos los hoteles, sin excepción de tamaño, y el recorrido común más restrictivo de todos los giros, diez metros. Como centro de trabajo, el hotel también responde ante la NOM-002-STPS-2010 con clasificación de riesgo, extintores, simulacros y plan de emergencias. La obligación central es que cualquier huésped pueda salir sin ayuda, a cualquier hora, por una ruta libre y señalizada.",
+    "riesgoTipico": "La mayoría de los hoteles medianos y grandes cae en riesgo alto conforme a la NOM-002-STPS-2010 por rebasar los 3,000 m² de superficie construida, lo que activa brigada obligatoria, dos simulacros al año y sistemas fijos contra incendio.",
+    "riesgoNom": "alto",
+    "normas": [
+      {
+        "clave": "NOM-002-STPS-2010",
+        "que": "Trata al hotel como centro de trabajo y le exige clasificación de riesgo, extintores, rutas libres, plan de emergencias y simulacros.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-003-SEGOB-2011",
+        "que": "Rige las señales y avisos de protección civil: salida de emergencia, ruta de evacuación, punto de reunión, extintor, hidrante y alarma.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-004-SEDG-2004",
+        "que": "Aplica a la instalación de aprovechamiento de gas L.P. cuando hay cocina, calderas o lavandería.",
+        "estatus": "depende"
+      },
+      {
+        "clave": "NTCPA CDMX cap. 4",
+        "que": "Para la ocupación de hospedaje fija alarma obligatoria siempre, rociadores a partir de seis niveles, anchos de pasillo y recorridos máximos.",
+        "estatus": "depende"
+      },
+      {
+        "clave": "Ley General de Protección Civil",
+        "que": "Sustenta la exigencia del Programa Interno de Protección Civil, cuyos umbrales y vigencia define el reglamento estatal o municipal.",
+        "estatus": "obligatoria"
+      }
+    ],
+    "extintores": [
+      "Se coloca clase A en pasillos y habitaciones, clase B/C en cuartos de máquinas y eléctricos y clase K en la cocina del hotel.",
+      "La capacidad mínima es de 6 kg conforme al reglamento de construcción de la CDMX, tomado como base porque los valores cambian entre estados.",
+      "El recorrido máximo por reglamento de construcción es de 22 m, y por la NOM-002-STPS-2010 en riesgo ordinario es de 23 m para clase A, 15 m para clase B y 10 m para clase K; se cumple la regla más restrictiva de las dos.",
+      "La parte más alta del extintor queda a no más de 1.50 m sobre el nivel del piso.",
+      "En riesgo alto la densidad sube a un extintor por cada 200 m² frente a uno por cada 300 m² en riesgo ordinario.",
+      "La revisión es mensual y documentada, y el mantenimiento se hace al menos una vez al año conforme a la NOM-154-SCFI-2005."
+    ],
+    "sistemas": [
+      "La alarma sonora y visual es obligatoria en todos los hoteles, sin excepción por tamaño, conforme a la Tabla 4.4.1.1 del reglamento de construcción de la CDMX.",
+      "Los rociadores y las conexiones de manguera son obligatorios a partir de seis niveles, ya que la tabla exime únicamente hasta cinco niveles.",
+      "Cualquier nivel ocupable a más de 23 m sobre el nivel de acceso de los vehículos de bomberos requiere rociadores automáticos y conexiones de manguera.",
+      "La detección es opcional por tabla, pero obligatoria en ductos, vestíbulos de elevadores y cuartos de máquinas; los chutes de ropa y basura llevan rociadores.",
+      "La alarma por voz es obligatoria cuando el edificio supera los 23 m de altura.",
+      "Las conexiones de manguera se instalan a 63.5 mm en cubos de escalera protegidos y sin manguera montada, para evitar su uso por personal inexperto."
+    ],
+    "evacuacion": [
+      "Se requieren dos rutas de evacuación por nivel hasta 500 ocupantes, y la carga se calcula con 4.5 m² por persona en habitaciones.",
+      "El recorrido a una salida es de hasta 50 m sin rociadores y 100 m con rociadores, pero el recorrido común se limita a 10 m, el más restrictivo de todos los giros.",
+      "Los pasillos principales y los comunes a dos o más cuartos tienen ancho libre mínimo de 1,100 mm, con 5 mm de ancho por ocupante.",
+      "Las puertas de acceso principal miden al menos 1,200 mm, abaten en sentido de la evacuación si sirven a más de 50 ocupantes y llevan barra antipánico si sirven a más de 100.",
+      "La iluminación de emergencia entrega 100 luxes en escaleras y 10 luxes en el resto de las circulaciones.",
+      "Los edificios de más de 23 m requieren presurización o esclusas en los cubos de escalera.",
+      "Todas estas cifras provienen del reglamento de construcción de la CDMX, usado como referencia base; cada estado tiene su propio reglamento y los valores pueden diferir.",
+      "El plano de evacuación colocado en cada habitación es práctica estándar del sector, no un mandato federal identificado."
+    ],
+    "brigadas": [
+      "En riesgo ordinario basta un simulacro al año y la brigada contra incendio no es obligatoria por la NOM-002-STPS-2010.",
+      "En riesgo alto, donde cae la mayoría de los hoteles medianos y grandes, la brigada es obligatoria y los simulacros suben a dos al año, con plan de emergencias ampliado que incluye brigadas de primeros auxilios, comunicación y evacuación.",
+      "El personal de recepción, ama de llaves y seguridad se capacita en la evacuación de huéspedes con movilidad reducida y de huéspedes dormidos durante el turno nocturno.",
+      "La brigada debe estar operativa en los tres turnos y no solo en el matutino.",
+      "La documentación de la brigada y las listas de asistencia DC-3 forman parte del expediente que revisa el inspector federal."
+    ],
+    "documentos": [
+      "Clasificación del riesgo de incendio y croquis general con áreas de riesgo, rutas y ubicación del equipo contra incendio.",
+      "Programa Interno de Protección Civil vigente, aprobado o registrado ante protección civil local.",
+      "Bitácora mensual de extintores y constancia anual de mantenimiento conforme a la NOM-154-SCFI-2005.",
+      "Actas y evidencia fotográfica de los simulacros realizados.",
+      "Constancias DC-3 de los brigadistas.",
+      "Dictamen de la instalación eléctrica conforme a NOM-001-SEDE y de la instalación de gas L.P.",
+      "Certificado de pruebas del sistema de alarma y de los rociadores.",
+      "Dictamen estructural y de seguridad conforme al reglamento local aplicable."
+    ],
+    "errores": [
+      {
+        "titulo": "Salidas de emergencia cerradas por la noche",
+        "detalle": "Se cierran con llave o cadena por temor a robos, justo en el horario de mayor riesgo. Viola directamente el numeral 7.16 de la NOM-002-STPS-2010 y el 4.3.7.1 inciso c del reglamento de construcción, que prohíben cerraduras que interfieran en el sentido de salida."
+      },
+      {
+        "titulo": "Confundir cinco niveles con cinco pisos",
+        "detalle": "La exención de rociadores cubre hasta cinco niveles, no cinco pisos sobre banqueta. Al no contar el sótano o el estacionamiento como nivel, hoteles de seis o más niveles quedan sin rociadores obligatorios y sin saberlo."
+      },
+      {
+        "titulo": "Alarma ausente o únicamente sonora",
+        "detalle": "La tabla del reglamento marca la alarma como obligatoria en todos los hoteles. La parte visual, indispensable para huéspedes con discapacidad auditiva y para quien duerme, es la que casi siempre falta en la instalación."
+      }
+    ],
+    "aclaracion": "No se localizó una norma sectorial de turismo que imponga equipo contra incendio adicional al hotel: la exigencia real se arma con la NOM-002-STPS-2010 como centro de trabajo, el reglamento de construcción local y el Programa Interno de Protección Civil. El punto más ignorado es que la alarma sonora y visual no tiene umbral de exención: aplica a un hotel de cinco cuartos igual que a uno de quinientos.",
+    "productoSlug": "deteccion-y-alarma",
+    "nombreCorto": "Hoteles"
+  },
+  {
+    "slug": "industria",
+    "nombre": "Industria, manufactura y parque industrial",
+    "icono": "🏭",
+    "gancho": "Dos clasificaciones de riesgo, no una",
+    "resumen": "La planta industrial casi siempre queda en riesgo alto por superficie construida o por inventario de sustancias. Deben hacerse dos clasificaciones paralelas: la de la Tabla A.1 de la NOM-002-STPS-2010, que define brigadas, simulacros y sistemas fijos, y la del numeral 4.6 del reglamento de construcción, que clasifica por riesgo de explosión, deflagración, incendio o salud y define resistencia al fuego, recorridos y dispositivos. En riesgo alto no hay exención por tamaño: rociadores, mangueras, extintores, detección y alarma son todos obligatorios. La obligación central es sostener esa clasificación con evidencia documental y con sistemas efectivamente probados.",
+    "riesgoTipico": "La industria cae casi siempre en riesgo alto conforme a la NOM-002-STPS-2010, ya sea por rebasar los 3,000 m² construidos, los 1,400 L de líquidos inflamables o los 15,000 kg de sólidos combustibles; basta rebasar un solo criterio de la Tabla A.1.",
+    "riesgoNom": "alto",
+    "normas": [
+      {
+        "clave": "NOM-002-STPS-2010",
+        "que": "Determina la clasificación ordinario o alto y, en riesgo alto, obliga a brigada contra incendio, dos simulacros al año y sistemas fijos con alarma.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-018-STPS-2015",
+        "que": "Exige el sistema armonizado GHS de identificación de peligros, las hojas de datos de seguridad y la capacitación del personal expuesto.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-022-STPS-2015",
+        "que": "Regula el control de la electricidad estática, crítico en el trasiego de líquidos inflamables.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NTCPA CDMX num. 4.6",
+        "que": "Clasifica las edificaciones con sustancias peligrosas y fija áreas de control, ventilación, energía de emergencia y control de explosión.",
+        "estatus": "depende"
+      },
+      {
+        "clave": "NFPA 400",
+        "que": "Es admitida por el numeral 4.6.1.1 del reglamento de la CDMX como vía alternativa de cumplimiento junto con la NOM-018-STPS-2015, no como norma obligatoria por sí misma.",
+        "estatus": "referencia"
+      }
+    ],
+    "extintores": [
+      "En riesgo alto la NOM-002-STPS-2010 pide un extintor por cada 200 m² de superficie.",
+      "El recorrido para fuego clase B en riesgo alto baja a 10 m, o hasta 15 m siempre que el extintor sea del tipo móvil.",
+      "El reglamento de construcción de la CDMX, usado como base, es más estricto para industria y almacén de riesgo alto: recorrido máximo de 15 m y capacidad mínima de 9.5 kg o 14.35 L, frente al criterio general de 22 m y 6 kg.",
+      "La parte más alta del extintor queda a no más de 1.50 m del piso y, si se coloca en piso, la parte más baja a un mínimo de 0.10 m.",
+      "La revisión es mensual y documentada, y el mantenimiento anual se realiza conforme a la NOM-154-SCFI-2005.",
+      "Debe cumplirse siempre la más restrictiva entre la regla federal de la NOM-002 y la del reglamento de construcción local."
+    ],
+    "sistemas": [
+      "En riesgo alto conforme al reglamento de construcción, los rociadores, las conexiones de manguera, los extintores, la detección y la alarma son todos obligatorios, sin excepción de tamaño.",
+      "En riesgo bajo o medio con sustancias combustibles la exención solo alcanza a inmuebles de hasta 1,200 m² totales y dos niveles; por encima de ese umbral todo es obligatorio.",
+      "Se requieren hidrantes, red contra incendio, cisterna y bombas dimensionadas por cálculo hidráulico.",
+      "El numeral 4.6 obliga a control de explosión o deflagración, ventilación y sistemas de energía de emergencia, además de áreas de control para las sustancias que excedan los límites.",
+      "Los rociadores se diseñan conforme a NMX-S-066-SCFI y la detección y alarma conforme a NMX-S-069-SCFI, referencias obligatorias del reglamento de la CDMX.",
+      "La puesta a tierra y el control de electricidad estática conforme a la NOM-022-STPS-2015 son parte del sistema de prevención en el trasiego de inflamables."
+    ],
+    "evacuacion": [
+      "En industria de riesgo alto el recorrido a una salida no está permitido sin rociadores y se limita a 30 m con rociadores; el recorrido común y el pasillo sin salida no están permitidos.",
+      "El ancho por ocupante en riesgo alto es de 10 mm en puertas y 18 mm en escaleras, el valor más exigente del reglamento para escaleras.",
+      "Los pasillos industriales tienen ancho libre mínimo de 900 mm y las puertas de acceso principal, 1,200 mm.",
+      "En edificaciones con sustancias peligrosas las puertas abaten en sentido de la evacuación con más de cinco ocupantes y llevan barra antipánico con más de cinco ocupantes, umbral drásticamente menor que el general de 50 y 100.",
+      "El riesgo alto de explosión limita la edificación a un solo nivel en cualquier tiempo de resistencia al fuego.",
+      "La iluminación de emergencia entrega 100 luxes en escaleras y 10 luxes en el resto de las circulaciones.",
+      "Estos valores provienen del reglamento de construcción de la CDMX, tomado como referencia base; cada estado tiene el suyo y las cifras pueden cambiar."
+    ],
+    "brigadas": [
+      "El riesgo alto obliga a integrar brigada contra incendio y a realizar dos simulacros al año conforme a la NOM-002-STPS-2010.",
+      "Se integran brigadas de incendio, primeros auxilios, evacuación y comunicación, y en riesgo alto el numeral 11.3 exige capacitación adicional en procedimientos de emergencia, nociones de rescate, operación del equipo y manejo de materiales peligrosos.",
+      "El equipo de protección personal del brigadista se selecciona conforme a la NOM-017-STPS-2008, incluyendo traje de aproximación y equipo autónomo cuando aplique.",
+      "Los convenios de ayuda mutua con otras empresas del parque industrial y con bomberos están expresamente contemplados en el plan de atención a emergencias.",
+      "Todo el personal expuesto se capacita en NOM-018-STPS-2015 para lectura de hojas de datos de seguridad y señalización GHS.",
+      "Deben operar permisos de trabajo en caliente y de espacio confinado conforme a la NOM-033-STPS-2015."
+    ],
+    "documentos": [
+      "Clasificación de riesgo conforme a la NOM-002-STPS-2010 y clasificación por sustancias peligrosas conforme al reglamento de construcción.",
+      "Croquis o plano general con áreas de riesgo, rutas de evacuación, equipo contra incendio y medios de detección.",
+      "Inventario de sustancias químicas peligrosas con hojas de datos de seguridad completas conforme a la NOM-018-STPS-2015.",
+      "Estudio de análisis de riesgos de proceso conforme a la NOM-028-STPS-2012.",
+      "Plan de atención a emergencias y bitácoras mensuales de extintores con su mantenimiento anual.",
+      "Bitácoras de prueba y mantenimiento de la red contra incendio, las bombas y los rociadores.",
+      "Dictamen de la instalación eléctrica conforme a la NOM-029-STPS-2011 y verificación por unidad verificadora.",
+      "Registro de los dos simulacros anuales y constancias DC-3 de los brigadistas.",
+      "En riesgo alto, acta de verificación de la STPS, dictamen de unidad de verificación acreditada o acta de la autoridad local de protección civil."
+    ],
+    "errores": [
+      {
+        "titulo": "Clasificarse como riesgo ordinario habiendo rebasado un umbral",
+        "detalle": "Ocurre típicamente por superficie construida de 3,000 m² o más, o por el inventario de solventes. Basta rebasar un solo criterio de la Tabla A.1 para ser riesgo alto, y el error arrastra la ausencia de brigada, del segundo simulacro y de los sistemas fijos."
+      },
+      {
+        "titulo": "Rociadores obstruidos por el almacenamiento",
+        "detalle": "Las tarimas apiladas hasta el deflector impiden que el rociador distribuya el agua. Sumado a una red contra incendio sin prueba de flujo ni bitácora de la bomba, el sistema existe en el plano pero no operaría en un incendio real."
+      },
+      {
+        "titulo": "Inflamables sin área de control ni tierra",
+        "detalle": "El almacenamiento sin área de control y sin puesta a tierra en el trasiego concentra el riesgo de ignición. Se agrava con puertas que abren hacia adentro, cuando en edificación con sustancias peligrosas el umbral de abatimiento y barra antipánico baja a cinco ocupantes."
+      }
+    ],
+    "aclaracion": "Muchas plantas hacen una sola clasificación de riesgo y creen haber terminado. Son dos ejercicios paralelos y obligatorios: la Tabla A.1 de la NOM-002-STPS-2010 define el régimen laboral de brigadas, simulacros y sistemas fijos, mientras que los numerales 4.6.1.3 a 4.6.1.6 del reglamento de construcción clasifican el inmueble por riesgo de explosión, deflagración, incendio o salud, y de ahí salen la resistencia al fuego, los recorridos y los dispositivos exigidos. Una clasificación no sustituye a la otra.",
+    "productoSlug": "sistemas-contra-incendio",
+    "nombreCorto": "Industria"
+  },
+  {
+    "slug": "almacen",
+    "nombre": "Almacén, bodega y centro de distribución",
+    "icono": "📦",
+    "gancho": "La carga de fuego sube con cada tarima",
+    "resumen": "La bodega alcanza el riesgo alto con facilidad porque el criterio de 15,000 kg de sólidos combustibles de la NOM-002-STPS-2010 se rebasa con inventario ordinario. En riesgo alto el reglamento de construcción no admite exención por tamaño y fija el recorrido a salida más corto de toda su tabla, 23 m con rociadores. El diseño de rociadores depende de la clase de mercancía, la altura de almacenamiento y la altura de techo, de modo que cualquier cambio de producto o de altura obliga a recalcular. La obligación central es que el sistema instalado siga correspondiendo a lo que hoy se almacena.",
+    "riesgoTipico": "El almacén cae casi siempre en riesgo alto conforme a la NOM-002-STPS-2010 porque el inventario de sólidos combustibles rebasa los 15,000 kg o la superficie construida los 3,000 m², y una bodega de distribución típica queda además fuera de la exención de 1,200 m² del reglamento de construcción.",
+    "riesgoNom": "alto",
+    "normas": [
+      {
+        "clave": "NOM-002-STPS-2010",
+        "que": "Fija la clasificación de riesgo por inventario de sólidos combustibles y superficie, y en riesgo alto obliga a brigada, dos simulacros y sistemas fijos.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-018-STPS-2015",
+        "que": "Exige identificación GHS, hojas de datos de seguridad y segregación de materiales incompatibles.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-029-STPS-2011",
+        "que": "Rige el mantenimiento y el dictamen de las instalaciones eléctricas de la nave.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NMX-S-066-SCFI (2015)",
+        "que": "Es la norma mexicana de rociadores automáticos y la referencia obligatoria del reglamento de construcción de la CDMX para su diseño.",
+        "estatus": "depende"
+      },
+      {
+        "clave": "NFPA 13",
+        "que": "Se usa como estándar de diseño de facto para almacenamiento en racks, clasificación de mercancías y sistemas ESFR, pero no es obligatoria en México por sí misma.",
+        "estatus": "referencia"
+      }
+    ],
+    "extintores": [
+      "En riesgo alto el reglamento de construcción de la CDMX exige recorrido máximo de 15 m y capacidad mínima de 9.5 kg o 14.35 L.",
+      "En riesgo bajo o medio el criterio general es de 22 m de recorrido y 6 kg o 9 L de capacidad.",
+      "Por la NOM-002-STPS-2010 la densidad en riesgo alto es de un extintor por cada 200 m² de superficie construida.",
+      "La parte más alta del extintor se instala a no más de 1.50 m sobre el nivel de piso.",
+      "La revisión mensual documentada y el mantenimiento anual conforme a la NOM-154-SCFI-2005 son obligatorios en cualquier clasificación.",
+      "Los valores del reglamento de construcción corresponden a la CDMX, usada aquí como referencia base; conviene contrastarlos con el reglamento del estado donde opera la bodega."
+    ],
+    "sistemas": [
+      "En riesgo alto los rociadores, las conexiones de manguera, los extintores, la detección y la alarma son todos obligatorios, sin excepción por tamaño.",
+      "En riesgo bajo o medio con sustancias combustibles la exención llega solo hasta 1,200 m² totales y dos niveles, umbral que una bodega de distribución supera siempre.",
+      "Los rociadores para almacenamiento en racks se dimensionan por clase de mercancía, altura de almacenamiento y altura de techo, con sistemas ESFR o in-rack según el caso.",
+      "El diseño se sustenta en la NMX-S-066-SCFI, que es la referencia obligatoria del reglamento de construcción; la NFPA 13 se emplea como estándar de industria, no como norma obligatoria en México.",
+      "Las edificaciones con materiales peligrosos requieren áreas de control, ventilación, energía de emergencia y control de explosión o deflagración conforme al numeral 4.6.",
+      "Debe mantenerse la segregación de materiales incompatibles conforme a la NOM-018-STPS-2015 y a las hojas de datos de seguridad."
+    ],
+    "evacuacion": [
+      "En riesgo bajo o medio el recorrido a una salida es de 61 m sin rociadores y 75 m con rociadores.",
+      "En riesgo alto el recorrido no está permitido sin rociadores y se limita a 23 m con rociadores, la distancia más corta de toda la tabla de recorridos.",
+      "El ancho por ocupante en riesgo alto es de 18 mm en escaleras.",
+      "La carga de ocupantes de áreas de almacenamiento cerradas al público se calcula con 27.9 m² por persona.",
+      "Las salidas de emergencia deben distribuirse en todo el perímetro de la nave y no concentrarse en el andén de carga.",
+      "La señalización de tuberías y de riesgos se rige por NOM-026-STPS-2008 y NOM-003-SEGOB-2011, y se complementa con iluminación de emergencia.",
+      "Los recorridos y anchos citados provienen del reglamento de construcción de la CDMX, tomado como base; cada estado fija los suyos."
+    ],
+    "brigadas": [
+      "Al caer casi siempre en riesgo alto, la brigada contra incendio es obligatoria y se realizan dos simulacros al año.",
+      "Se capacita en el manejo de montacargas y su interacción con la ruta de evacuación y con la red de rociadores, por el riesgo de impacto a tubería y racks.",
+      "La brigada se entrena en evacuación de naves de gran superficie con baja visibilidad por humo y en el uso de hidrantes y mangueras.",
+      "El personal de recepción y despacho de materiales peligrosos se capacita conforme a la NOM-018-STPS-2015.",
+      "Debe existir procedimiento de trabajo en caliente para el mantenimiento de racks y estructura."
+    ],
+    "documentos": [
+      "Clasificación de riesgo conforme a la NOM-002-STPS-2010, con el cálculo del inventario de sólidos combustibles en kilogramos.",
+      "Layout de racks y memoria de cálculo del sistema de rociadores con clase de mercancía, densidad de diseño y área de operación.",
+      "Inventario de materiales peligrosos con hojas de datos de seguridad.",
+      "Bitácoras de extintores, red contra incendio, bomba contra incendio y rociadores, con su periodicidad de prueba.",
+      "Dictamen de la instalación eléctrica conforme a la NOM-029-STPS-2011 e informe de la unidad verificadora.",
+      "Plan de atención a emergencias y registros de los dos simulacros anuales.",
+      "Constancias DC-3 de brigadistas y de operadores de montacargas.",
+      "Programa Interno de Protección Civil vigente y, en riesgo alto, acta de verificación de la STPS, dictamen de unidad verificadora o acta de protección civil."
+    ],
+    "errores": [
+      {
+        "titulo": "Almacenar por encima de la altura de diseño",
+        "detalle": "La bodega crece, la mercancía sube y el sistema de rociadores permanece diseñado para la altura original. Obstruir los deflectores tiene el mismo efecto: el agua no llega al foco y el sistema deja de ser efectivo justo cuando se necesita."
+      },
+      {
+        "titulo": "Cambiar la clase de mercancía sin recalcular",
+        "detalle": "Pasar de producto en cartón a plástico expandido o aerosoles multiplica la carga de fuego. Un sistema de rociadores que cumplía con la mercancía anterior queda insuficiente sin que nadie modifique nada en la instalación."
+      },
+      {
+        "titulo": "Salidas bloqueadas por mercancía en tránsito",
+        "detalle": "Los pasillos de evacuación terminan usados como zona de estacionamiento de tarimas y el andén de carga bloquea la salida. Con un recorrido máximo de 23 m en riesgo alto, cualquier obstrucción resulta determinante."
+      }
+    ],
+    "aclaracion": "La NFPA 13 se cita en el mercado como si fuera obligatoria en México y no lo es por sí misma: la referencia obligatoria del reglamento de construcción de la CDMX es la NMX-S-066-SCFI. La NFPA 13 sí es el estándar de diseño de facto para almacenamiento en racks, clasificación de mercancías y sistemas ESFR o in-rack, y como tal conviene usarla, dejando claro al cliente que su exigibilidad depende de que el reglamento local la adopte.",
+    "productoSlug": "sistemas-contra-incendio",
+    "nombreCorto": "Almacenes y bodegas"
+  },
+  {
+    "slug": "hospital",
+    "nombre": "Hospital, clínica y consultorio",
+    "icono": "🏥",
+    "gancho": "El paciente no evacúa por su propio pie",
+    "resumen": "El hospital es la ocupación más estricta del reglamento de construcción porque sus ocupantes no pueden autoevacuar. La tabla de resistencia al fuego asigna a la ocupación de salud cero niveles máximos sin rociadores, lo que significa que un hospital no es viable sin sistema de rociadores. En segundo y tercer nivel de atención los rociadores, las conexiones de manguera, los extintores, la detección y la alarma son todos obligatorios, sin excepción de tamaño. La estrategia de evacuación es horizontal por compartimentación, de modo que las puertas resistentes al fuego y la brigada entrenada en traslado de pacientes son el núcleo del cumplimiento.",
+    "riesgoTipico": "Prácticamente todo hospital rebasa los 3,000 m² de superficie construida y queda en riesgo alto conforme a la NOM-002-STPS-2010, con brigada obligatoria y dos simulacros al año.",
+    "riesgoNom": "alto",
+    "normas": [
+      {
+        "clave": "NOM-016-SSA3-2012",
+        "que": "Fija la infraestructura mínima del establecimiento, exige manuales de emergencias y desastres y evalúa extintores, hidrantes y bitácoras a través del Índice de Seguridad Hospitalaria.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-002-STPS-2010",
+        "que": "Trata al hospital como centro de trabajo y le impone clasificación de riesgo, extintores, brigadas y simulacros.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-001-SEDE",
+        "que": "Rige la instalación eléctrica del establecimiento y es citada por los numerales 6.2 y 6.7.6 de la NOM-016-SSA3-2012.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NTCPA CDMX cap. 4",
+        "que": "Contiene el capítulo más estricto de la norma para la ocupación de salud: rociadores obligatorios, anchos de pasillo y recorridos.",
+        "estatus": "depende"
+      },
+      {
+        "clave": "NOM-003-SEGOB-2011",
+        "que": "Rige las señales de salida, ruta de evacuación, punto de reunión, extintor e hidrante.",
+        "estatus": "obligatoria"
+      }
+    ],
+    "extintores": [
+      "Se coloca clase A en áreas de encamados, clase C en áreas con equipo electromédico y clase K en la cocina hospitalaria.",
+      "El criterio general del reglamento de construcción de la CDMX es de 22 m de recorrido y capacidad mínima de 6 kg o 9 L, con la parte más alta a no más de 1.50 m del piso.",
+      "En riesgo alto la NOM-002-STPS-2010 exige un extintor por cada 200 m² de superficie.",
+      "La NOM-016-SSA3-2012 cita expresamente la bitácora de mantenimiento preventivo de extintores e hidrantes y la verificación de fechas de caducidad y llenado.",
+      "El mantenimiento anual se realiza conforme a la NOM-154-SCFI-2005 y la revisión es mensual y documentada.",
+      "La central de gases medicinales exige señalización de riesgo de comburente: el oxígeno no es agente extintor, es acelerante."
+    ],
+    "sistemas": [
+      "En hospitales de segundo y tercer nivel de atención los rociadores, las conexiones de manguera, los extintores, la detección y la alarma son todos obligatorios, sin excepción de tamaño.",
+      "En primer nivel de atención, clínicas y consultorios de hasta 1,200 m² y cinco niveles solo requieren extintores y alarma; por encima de ese umbral se suman rociadores, mangueras y detección.",
+      "La tabla de resistencia al fuego asigna a la ocupación de salud cero niveles máximos sin rociadores, lo que en la práctica hace inviable un hospital sin ese sistema; con rociadores admite hasta cinco niveles a dos horas de resistencia.",
+      "Se permite únicamente alarma visual en áreas de cuidados críticos, conforme al numeral 4.4.6.4.",
+      "La central de gases medicinales debe ser exclusiva y contar con manifolds, sensores de presión y alarmas audibles y visuales conforme a la NOM-016-SSA3-2012.",
+      "La planta de energía eléctrica conectada al sistema de emergencia es requisito del numeral 6.7.6 de la NOM-016-SSA3-2012.",
+      "Los valores de rociadores y umbrales provienen del reglamento de construcción de la CDMX, usado como referencia base; verifique el de su estado."
+    ],
+    "evacuacion": [
+      "En segundo y tercer nivel el recorrido a una salida no está permitido sin rociadores y se limita a 60 m con rociadores, con recorrido común de 30 m y pasillo sin salida de 10 m.",
+      "Los pasillos principales de segundo y tercer nivel miden 2,400 mm de ancho libre y los que tienen circulación de camillas, 1,800 mm.",
+      "Las escaleras por donde se transporten camillas tienen ancho libre mínimo de 1,800 mm.",
+      "El ancho por ocupante con rociadores es de 10 mm en puertas y 5 mm en escaleras; sin rociadores sube a 15 mm y 13 mm.",
+      "Las puertas de acceso a urgencias miden al menos 1,500 mm y las de salas de operaciones 1,200 mm.",
+      "La iluminación de emergencia opera al 100 por ciento en salas de operación y expulsión, laboratorios, cuarto séptico, central de esterilización, urgencias y salas de preparación, recuperación y curaciones, y al 50 por ciento en consultorios, encamados, elevadores, morgue y sanitarios.",
+      "La carga de ocupantes se calcula con 9 m² por persona en pacientes ambulatorios y 11.1 m² por persona en encamados.",
+      "Todas estas cifras corresponden al reglamento de construcción de la CDMX, tomado como base porque es el más detallado; cada estado tiene el propio."
+    ],
+    "brigadas": [
+      "Al rebasar los 3,000 m², el hospital queda en riesgo alto conforme a la NOM-002-STPS-2010, con brigada contra incendio obligatoria y dos simulacros al año.",
+      "El Comité Hospitalario para Emergencias y el Centro de Operaciones de Emergencia son evaluados dentro del Índice de Seguridad Hospitalaria de la NOM-016-SSA3-2012.",
+      "La evacuación es horizontal por compartimentación y no vertical, porque los pacientes no evacúan por sí mismos; la brigada debe entrenar el traslado de pacientes críticos, encamados y en quirófano.",
+      "Se capacita al personal en el corte de gases medicinales y en el riesgo de atmósfera enriquecida con oxígeno.",
+      "La brigada debe tener personal en los tres turnos, incluyendo noche y fines de semana."
+    ],
+    "documentos": [
+      "Licencia Sanitaria o Aviso de Funcionamiento y designación del Responsable Sanitario.",
+      "Índice de Seguridad Hospitalaria aplicado y documentado conforme a la NOM-016-SSA3-2012.",
+      "Manuales de procedimientos para el manejo de emergencias, contingencias y desastres internos y externos.",
+      "Plan de respuesta específico por incendios y explosiones, con personal capacitado y recursos para implementarlo.",
+      "Bitácora de mantenimiento preventivo de extintores e hidrantes, citada literalmente por la NOM-016-SSA3-2012.",
+      "Bitácora de visitas del personal de protección civil y Programa Interno de Protección Civil vigente.",
+      "Certificación de la planta de emergencia con sus pruebas de transferencia.",
+      "Dictamen eléctrico conforme a NOM-001-SEDE y certificación de la central de gases medicinales.",
+      "Registros de simulacros y constancias DC-3 de los brigadistas."
+    ],
+    "errores": [
+      {
+        "titulo": "Citar la NOM-197-SSA1-2000 como vigente",
+        "detalle": "El artículo transitorio de la NOM-016-SSA3-2012 la dejó sin efecto desde 2013. Sigue apareciendo en manuales internos y en material de proveedores, lo que produce expedientes sustentados en una norma derogada."
+      },
+      {
+        "titulo": "Puertas de compartimentación acuñadas abiertas",
+        "detalle": "Se amarran o acuñan por comodidad en la circulación de camillas. Eso anula la estrategia de evacuación horizontal por compartimentación, que es la única viable en un hospital donde el paciente no puede salir por su propio pie."
+      },
+      {
+        "titulo": "Agente extintor incompatible y cocina sin clase K",
+        "detalle": "Colocar CO₂ o polvo químico seco junto a la central de gases medicinales o en quirófano es un riesgo agregado. A la vez, la cocina hospitalaria queda sin extintor clase K porque no se le considera área médica."
+      }
+    ],
+    "aclaracion": "El cuerpo normativo de la NOM-016-SSA3-2012 contiene poco sobre incendio de forma directa: lo relevante son las instalaciones eléctricas, la central de gases medicinales con alarmas audibles y visuales, la planta de emergencia y los manuales de emergencias. El grueso del contenido de incendio está en el apéndice del Índice de Seguridad Hospitalaria, que califica cada rubro como bajo, medio o alto y exige plan de respuesta por incendios y explosiones con personal capacitado y recursos. El requisito duro de equipamiento viene del reglamento de construcción, no de la norma sanitaria.",
+    "productoSlug": "sistemas-contra-incendio",
+    "nombreCorto": "Hospitales y clínicas"
+  },
+  {
+    "slug": "escuela",
+    "nombre": "Escuela, guardería y estancia infantil",
+    "icono": "🏫",
+    "gancho": "Dos regímenes distintos bajo el mismo techo escolar",
+    "resumen": "Este giro se divide en dos regímenes que no deben mezclarse. Los centros de atención infantil se rigen por la NOM-009-SEGOB-2015, que fija dotación de extintores por grado de riesgo, detectores de humo, reglas estrictas de gas L.P. y simulacros cada dos meses. Las escuelas de educación básica, media y superior quedan fuera de esa norma y responden ante la NOM-002-STPS-2010 como centro de trabajo y ante el reglamento de construcción local. En ambos casos la densidad de ocupación es alta y el margen de error en la evacuación es mínimo.",
+    "riesgoTipico": "Las escuelas de 3,000 m² o más caen en riesgo alto conforme a la NOM-002-STPS-2010, con brigada obligatoria y dos simulacros al año; en centros de atención infantil, todo inmueble de 3,000 m² o más de construcción es automáticamente riesgo alto conforme al numeral 8.4 de la NOM-009-SEGOB-2015.",
+    "riesgoNom": "variable",
+    "normas": [
+      {
+        "clave": "NOM-009-SEGOB-2015",
+        "que": "Aplica exclusivamente a centros de atención infantil y regula extintores por grado de riesgo, detectores de humo, gas L.P., señalización, brigadas y simulacros bimestrales.",
+        "estatus": "depende"
+      },
+      {
+        "clave": "NOM-002-STPS-2010",
+        "que": "Aplica a la escuela como centro de trabajo para su personal, con clasificación de riesgo, extintores, rutas libres y simulacros.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "LGPSACDII",
+        "que": "Obliga al Programa Interno de Protección Civil aprobado, a inspección interna mensual de medidas de seguridad y a simulacros cada dos meses en centros de atención infantil.",
+        "estatus": "depende"
+      },
+      {
+        "clave": "NOM-003-SEGOB-2011",
+        "que": "Rige la señalización de ruta de evacuación, punto de reunión, salidas y extintores en ambos regímenes.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NTCPA CDMX cap. 4",
+        "que": "Define para la ocupación educación los umbrales de rociadores, el ancho de pasillos entre aulas y los recorridos máximos.",
+        "estatus": "depende"
+      }
+    ],
+    "extintores": [
+      "En centros de atención infantil de riesgo bajo se exigen al menos dos extintores ABC en el interior más uno tipo K en el área de preparación de alimentos, y con más de nueve salones, aulas u oficinas, uno por cada tres.",
+      "En riesgo medio se pide un extintor por cada cuatro aulas y oficinas, al menos dos unidades móviles ABC de 50 kg en las áreas de mayor riesgo y uno tipo K en preparación de alimentos.",
+      "En riesgo alto se exigen al menos cinco extintores ABC, o uno por cada tres aulas, salones u oficinas, lo que garantice el mayor número, más uno tipo K en preparación de alimentos.",
+      "En centros de atención infantil la capacidad mínima es de 4.5 kg, la altura máxima de 1.50 m del piso a la parte más alta, y los equipos deben quedar cargados, sin obstáculos y fuera del alcance de los niños.",
+      "En escuelas se coloca clase A en aulas y pasillos, clase B/C en laboratorios y cuarto eléctrico y clase K en cocina o cafetería, con recorrido máximo de 22 m y capacidad mínima de 6 kg conforme al reglamento de construcción de la CDMX usado como base.",
+      "La revisión mensual documentada y el mantenimiento anual conforme a la NOM-154-SCFI-2005 aplican en ambos regímenes."
+    ],
+    "sistemas": [
+      "En centros de atención infantil de riesgo alto se exigen rociadores automáticos en las áreas clasificadas de riesgo alto, de activación manual o automática, supervisados en la integridad de válvula solenoide y bombas, y con interruptor de prueba que permita probar el sistema sin activar los supresores.",
+      "Los centros de atención infantil requieren al menos un detector de humo en cada espacio destinado al cuidado de los niños y en cada aula, y al menos uno en administración, mantenimiento y almacenamiento de materiales peligrosos, con programa de mantenimiento revisado mensualmente.",
+      "En escuelas de educación básica, media superior y especial, el nivel de descarga de salida de hasta 1,200 m² solo requiere extintores y alarma; en cualquier otro nivel o superficie mayor, los rociadores, las mangueras y los extintores son obligatorios, de modo que un aula en planta alta ya implica rociadores.",
+      "En educación superior y extraescolar la exención llega hasta 1,200 m² totales y dos niveles; por encima de ese umbral todo es obligatorio.",
+      "La alarma sonora y visual es obligatoria siempre en la ocupación educación conforme al reglamento de construcción de la CDMX, tomado aquí como referencia base.",
+      "El gas L.P. en centros de atención infantil se limita a un máximo de dos cilindros portátiles de 20 kg cada uno, ubicados fuera del inmueble, ventilados, con regulador, tubería expuesta pintada de amarillo y al menos dos válvulas de cierre rápido, una interior y una exterior."
+    ],
+    "evacuacion": [
+      "Los pasillos comunes a dos o más aulas tienen ancho libre mínimo de 1,800 mm conforme al reglamento de construcción de la CDMX; cada estado fija el suyo.",
+      "El recorrido a una salida es de hasta 45 m sin rociadores y 60 m con rociadores, con recorrido común de 25 m y pasillo sin salida de 5 m.",
+      "La carga de ocupantes de aulas se calcula con 1.9 m² por persona de área neta, una densidad muy alta que dispara rápidamente el número de salidas requeridas.",
+      "Las puertas que sirven a más de 50 ocupantes abaten hacia afuera y las que sirven a más de 100 llevan barra antipánico; un aula de 60 alumnos ya lo requiere.",
+      "En centros de atención infantil las puertas que abran hacia el pasillo no deben reducirlo en más de 15 cm y ninguna puede invadir la superficie de evacuación en meseta de escalera o rampa.",
+      "Los centros de atención infantil requieren al menos una lámpara de emergencia automática por nivel, permanentemente cargada, sobre la ruta de evacuación; en escuelas la iluminación de emergencia es de 100 luxes en escaleras y 10 luxes en circulaciones.",
+      "La señalización incluye ruta de evacuación, punto de reunión, salidas y escaleras de emergencia, extintores y botiquín, además del letrero de sin salida en puertas que puedan inducir error."
+    ],
+    "brigadas": [
+      "Los centros de atención infantil deben integrar Unidad Interna de Protección Civil con brigadas de primeros auxilios, prevención y combate de incendios, evacuación, y búsqueda y rescate.",
+      "La capacitación en centros de atención infantil es anual, teórica y práctica, para todo el personal docente, de apoyo y de mantenimiento, e incluye primeros auxilios básicos para atención de menores y evacuación de menores.",
+      "Esa capacitación debe estar autorizada por la coordinación estatal, municipal o delegacional de protección civil e impartirse por persona registrada ante el gobierno de la entidad federativa: no sirve cualquier proveedor.",
+      "Los centros de atención infantil realizan simulacros al menos una vez cada dos meses, seis al año, con aviso escrito previo a protección civil indicando día, hora, lugar, tipo de simulacro e hipótesis.",
+      "Las escuelas de 3,000 m² o más quedan en riesgo alto y deben integrar brigada y realizar dos simulacros al año conforme a la NOM-002-STPS-2010.",
+      "Las escuelas participan en el macrosimulacro nacional del 19 de septiembre y en los que convoque protección civil local, con docentes capacitados como responsables de grupo durante la evacuación."
+    ],
+    "documentos": [
+      "Programa Interno de Protección Civil vigente y registrado; en centros de atención infantil debe estar aprobado por el Sistema Nacional de Protección Civil o por las direcciones estatales o municipales.",
+      "Clasificación de riesgo conforme a la NOM-002-STPS-2010 acompañada del croquis del inmueble.",
+      "Bitácora mensual de extintores y constancia del mantenimiento anual.",
+      "Actas de simulacros y evidencia de participación en el macrosimulacro nacional.",
+      "Constancias DC-3 de brigadistas y constancias de capacitación docente.",
+      "Dictamen de la instalación eléctrica y de gas, incluyendo laboratorios y cafetería.",
+      "Registro de la inspección interna de medidas de seguridad, exigida al menos una vez al mes en centros de atención infantil.",
+      "Dictamen estructural conforme al reglamento local aplicable."
+    ],
+    "errores": [
+      {
+        "titulo": "Falta el extintor tipo K en cocina",
+        "detalle": "La NOM-009-SEGOB-2015 lo exige en los tres grados de riesgo y es la falta más recurrente en centros de atención infantil. Se pretende cubrir con un extintor ABC, que no saponifica la grasa y deja el fuego expuesto a reinflamarse."
+      },
+      {
+        "titulo": "Gas L.P. mal instalado en centros infantiles",
+        "detalle": "Cilindros dentro del inmueble, ausencia de las dos válvulas de cierre rápido o recarga durante el horario de servicio. Cada uno es un incumplimiento independiente del numeral 9.3 y es el rubro más sancionado del régimen."
+      },
+      {
+        "titulo": "Simulacros anuales en lugar de bimestrales",
+        "detalle": "Se aplica por costumbre el criterio de la NOM-002-STPS-2010, de uno o dos al año. En centros de atención infantil la NOM-009-SEGOB-2015 y la LGPSACDII exigen uno cada dos meses, seis al año."
+      }
+    ],
+    "aclaracion": "La NOM-009-SEGOB-2015 no es una norma de escuelas seguras. Su título oficial se refiere a medidas de previsión, prevención y mitigación de riesgos en centros de atención infantil en modalidad pública, privada y mixta, y las escuelas de educación básica, media y superior no están en su campo de aplicación. No existe una NOM federal equivalente para escuelas: su marco se arma con la NOM-002-STPS-2010, el reglamento de construcción local y el Programa Interno de Protección Civil.",
+    "productoSlug": "extintores-y-extincion",
+    "nombreCorto": "Escuelas"
+  },
+  {
+    "slug": "centro-comercial",
+    "nombre": "Centro comercial, cine y lugar de espectáculos",
+    "icono": "🛍️",
+    "gancho": "Aforo masivo con salidas que se obstruyen",
+    "resumen": "El riesgo de este giro no está en la carga de fuego sino en el número de personas que deben salir al mismo tiempo por rutas que se ocupan con mobiliario comercial. El reglamento de construcción escala el número de rutas de evacuación con la ocupación, hasta cuatro por nivel con 1,000 ocupantes o más, y obliga a que las tiendas ancla tengan rutas independientes de las del centro comercial. La alarma sonora y visual es obligatoria en todos los casos y se admite el sistema de evacuación por voz como único medio de aviso. La obligación central es que el aforo real corresponda al aforo autorizado y que las salidas estén libres en todo momento.",
+    "riesgoTipico": "Un centro comercial cae en riesgo alto conforme a la NOM-002-STPS-2010 por rebasar los 3,000 m² de superficie construida, lo que activa brigada obligatoria, dos simulacros al año y sistemas fijos contra incendio con alarma.",
+    "riesgoNom": "alto",
+    "normas": [
+      {
+        "clave": "NOM-002-STPS-2010",
+        "que": "Aplica al inmueble como centro de trabajo y le exige clasificación de riesgo, extintores, brigada y simulacros.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-003-SEGOB-2011",
+        "que": "Rige las señales de salida de emergencia, ruta de evacuación, punto de reunión, extintor, hidrante y alarma.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "Ley General de Protección Civil",
+        "que": "Sustenta el Programa Interno de Protección Civil, obligatorio por afluencia, con umbrales y vigencia que define el reglamento local.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NTCPA CDMX cap. 4",
+        "que": "Define para comercio y abasto y para espectáculos los umbrales de rociadores, el número de rutas, la carga de ocupantes y las puertas.",
+        "estatus": "depende"
+      },
+      {
+        "clave": "UL 924 y UL 305",
+        "que": "Son referencias técnicas de fuente autónoma para señales de salida y de barras antipánico, citadas por el reglamento de construcción de la CDMX.",
+        "estatus": "referencia"
+      }
+    ],
+    "extintores": [
+      "Se coloca clase A en pasillos y locales, clase K en cada local de food court y clase B/C en cuartos técnicos y subestación.",
+      "El criterio general del reglamento de construcción de la CDMX es de 22 m de recorrido máximo y capacidad mínima de 6 kg o 9 L.",
+      "Por la NOM-002-STPS-2010 el extintor clase K debe quedar a no más de 10 m de recorrido, la distancia más corta de la norma, lo que condiciona la ubicación en el área de comidas.",
+      "En riesgo alto la densidad es de un extintor por cada 200 m² de superficie construida.",
+      "La parte más alta del extintor queda a no más de 1.50 m del nivel de piso, con revisión mensual documentada y mantenimiento anual conforme a la NOM-154-SCFI-2005.",
+      "Los valores de recorrido y capacidad del reglamento corresponden a la CDMX, tomada como referencia base; el reglamento de cada estado puede fijar otros."
+    ],
+    "sistemas": [
+      "En comercio y abasto la exención solo alcanza inmuebles de hasta 1,200 m² totales y dos niveles, de modo que todo centro comercial real requiere rociadores, mangueras, extintores y alarma.",
+      "En espectáculos y cines la exención solo aplica en el nivel de descarga de salida con hasta 1,200 m² y 300 ocupantes, por lo que toda sala en planta alta o de aforo mayor requiere rociadores y mangueras.",
+      "La alarma sonora y visual es obligatoria en todos los casos, y se permite el sistema de alarma de evacuación por voz como único sistema.",
+      "El sistema de alarma por voz es obligatorio en edificios de más de 23 m de altura.",
+      "Los estacionamientos cerrados requieren rociadores obligatorios con caudal mínimo de 8 L por minuto y por metro cuadrado.",
+      "Los rociadores se diseñan conforme a NMX-S-066-SCFI y la detección y alarma conforme a NMX-S-069-SCFI, referencias obligatorias del reglamento de la CDMX que se usa como base."
+    ],
+    "evacuacion": [
+      "El número de rutas por nivel es de dos hasta 500 ocupantes, tres de 500 a 1,000 y cuatro con 1,000 o más; un multiplex o una plaza superan fácilmente ese último umbral por nivel.",
+      "Las tiendas ancla deben tener rutas de evacuación independientes de las del centro comercial.",
+      "La carga de ocupantes de centros comerciales menores a 14,000 m² es de 2.8 m² por persona, escalando hasta 5.1 en los de 37,000 m² o más; el área de ventas en planta baja se calcula con 3 m², las áreas de pie con 0.55 m² y los asientos fijos como una persona por asiento.",
+      "El recorrido en corredores comerciales con techo es de 45 m sin rociadores y 120 m con rociadores, y en reuniones públicas de 61 m y 76 m respectivamente.",
+      "Las puertas de acceso principal a tiendas departamentales y centros comerciales miden 2,200 mm y las de autoservicio 1,500 mm, con barra antipánico obligatoria cuando sirven a más de 100 ocupantes.",
+      "Las puertas giratorias desalojan como máximo el 50 por ciento de los ocupantes con un tope de 50 personas por puerta, no son válidas en rutas accesibles y su fuerza de plegado no excede 60 kgf.",
+      "Las señales de salida deben estar iluminadas permanentemente en espectáculos, deportivos, culturales, cívicos y transporte, con fuente autónoma conforme a UL 924, y cada nivel distinto al de descarga requiere áreas de protección con señalización visual más sonora o táctil.",
+      "La separación entre salidas es de al menos la mitad de la diagonal del espacio servido, o un tercio si el edificio está totalmente protegido con rociadores; estas reglas provienen del reglamento de la CDMX."
+    ],
+    "brigadas": [
+      "El riesgo alto por superficie obliga a integrar brigada contra incendio y a realizar dos simulacros al año conforme a la NOM-002-STPS-2010.",
+      "Existe una doble estructura de brigadas, la del administrador del inmueble y la de cada local arrendatario, y el Programa Interno de Protección Civil debe integrar ambas definiendo mando único.",
+      "La capacitación debe cubrir manejo de multitudes y evacuación de aforo masivo, no solo el uso del extintor.",
+      "El personal de sala de cine se entrena para evacuar en oscuridad y con la proyección en curso.",
+      "La brigada debe estar operativa en horario extendido, incluidos fines de semana y días festivos, que son los de mayor afluencia."
+    ],
+    "documentos": [
+      "Programa Interno de Protección Civil del inmueble junto con los programas de los locales arrendatarios.",
+      "Aforo máximo autorizado y evidencia del control de acceso que lo mantiene.",
+      "Cálculo de la carga de ocupantes y memoria de las rutas de evacuación.",
+      "Clasificación de riesgo conforme a la NOM-002-STPS-2010 y croquis del inmueble.",
+      "Bitácoras de rociadores, bomba contra incendio, hidrantes y extintores.",
+      "Certificado de prueba del sistema de alarma por voz.",
+      "Actas de los dos simulacros anuales y del macrosimulacro.",
+      "Constancias DC-3 de brigadistas y del responsable de seguridad, más dictamen eléctrico y de instalaciones."
+    ],
+    "errores": [
+      {
+        "titulo": "Salidas obstruidas por kioscos y mobiliario",
+        "detalle": "Es la falta más frecuente del giro y la más grave por el aforo involucrado. El mobiliario promocional y la mercancía en pasillo reducen el ancho calculado de la ruta justo en el punto donde debe fluir el mayor número de personas."
+      },
+      {
+        "titulo": "Operar por encima del aforo autorizado",
+        "detalle": "El número de rutas de evacuación se calcula a partir de la carga de ocupantes. Al rebasar el aforo, las dos, tres o cuatro rutas por nivel dejan de corresponder a la ocupación real y el tiempo de desalojo se dispara."
+      },
+      {
+        "titulo": "Alarma por voz inaudible o sin cobertura",
+        "detalle": "El sistema no existe, queda tapado por la música ambiental o no cubre las salas de cine. A eso se suman tiendas ancla que descargan sobre la ruta del centro comercial en lugar de tener ruta independiente, como exige el reglamento de construcción."
+      }
+    ],
+    "aclaracion": "La regla que casi nadie aplica es la de rutas independientes para tiendas ancla: el reglamento de construcción de la CDMX exige en el numeral 4.3.1.4 que sus rutas de evacuación no dependan de las del centro comercial. Es un requisito de proyecto arquitectónico, no de equipamiento, así que no se resuelve comprando sistemas y suele detectarse hasta la revisión de protección civil.",
+    "productoSlug": "deteccion-y-alarma",
+    "nombreCorto": "Centros comerciales"
+  },
+  {
+    "slug": "gasolinera",
+    "nombre": "Gasolinera y estación de servicio",
+    "icono": "⛽",
+    "gancho": "Riesgo alto siempre, con ignición por estática",
+    "resumen": "Cualquier estación de servicio rebasa por mucho el umbral de 1,400 L de líquidos inflamables de la Tabla A.1, por lo que su clasificación conforme a la NOM-002-STPS-2010 es riesgo alto sin discusión. Eso significa brigada contra incendio obligatoria, dos simulacros al año y sistemas fijos contra incendio con alarma. El escenario de ignición más documentado del giro es la descarga del autotanque sin puesta a tierra, por lo que el control de electricidad estática y la instalación eléctrica a prueba de explosión en áreas clasificadas son el núcleo técnico. El cumplimiento sectorial se acredita con dictamen de unidad de verificación acreditada y aprobada.",
+    "riesgoTipico": "La estación de servicio es riesgo alto conforme a la NOM-002-STPS-2010 por el inventario de líquidos inflamables, que supera varias veces los 1,400 L de la Tabla A.1; ninguna estación, por pequeña que sea, puede clasificarse como riesgo ordinario.",
+    "riesgoNom": "alto",
+    "normas": [
+      {
+        "clave": "NOM-005-ASEA-2016",
+        "que": "Regula el diseño, construcción, operación y mantenimiento de estaciones de servicio para almacenamiento y expendio de diésel y gasolinas.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-002-STPS-2010",
+        "que": "Clasifica la estación como riesgo alto y le impone brigada, dos simulacros al año, sistemas fijos y alarma de incendio.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-022-STPS-2015",
+        "que": "Regula el control de la electricidad estática en la descarga del autotanque y en los dispensarios.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-001-SEDE-2012",
+        "que": "Rige la instalación eléctrica en áreas clasificadas, que debe ser a prueba de explosión y verificarse por unidad verificadora.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-003-SEGOB-2011",
+        "que": "Rige la señalización de protección civil de rutas, salidas, extintores y punto de reunión.",
+        "estatus": "obligatoria"
+      }
+    ],
+    "extintores": [
+      "Al ser riesgo alto, la NOM-002-STPS-2010 exige un extintor por cada 200 m² de superficie construida.",
+      "El recorrido máximo para fuego clase B en riesgo alto es de 10 m, o hasta 15 m siempre que el extintor sea del tipo móvil.",
+      "Para clases A, C y D el recorrido máximo es de 23 m.",
+      "La parte más alta del extintor se instala a no más de 1.50 m sobre el nivel de piso.",
+      "La revisión es mensual y documentada y el mantenimiento se realiza al menos una vez al año conforme a la NOM-154-SCFI-2005.",
+      "Todo el personal despachador debe saber ubicar los extintores y accionar el paro de emergencia."
+    ],
+    "sistemas": [
+      "Por tratarse de riesgo alto, los sistemas fijos contra incendio y la alarma de incendio son obligatorios conforme al numeral 5.10 de la NOM-002-STPS-2010.",
+      "La puesta a tierra y el control de electricidad estática conforme a la NOM-022-STPS-2015 son obligatorios en la descarga del autotanque y en los dispensarios, que es el punto de ignición más probable.",
+      "La instalación eléctrica en áreas clasificadas debe ser a prueba de explosión conforme a la NOM-001-SEDE-2012 y estar verificada por unidad de verificación de instalaciones eléctricas.",
+      "Los paros de emergencia deben estar accesibles, señalizados y probados.",
+      "En el reglamento de construcción de la CDMX la estación cae en servicios urbanos u otros, donde el proyectista especifica los dispositivos conforme a la nota de la Tabla 4.4.1.1; el reglamento de cada estado puede resolverlo de otra manera."
+    ],
+    "evacuacion": [
+      "La NOM-002-STPS-2010 exige rutas de evacuación libres de obstáculos y una distancia no mayor de 40 m desde el punto más alejado.",
+      "Las puertas de salida de emergencia abren en el sentido del flujo mediante operación simple de empuje, sin candados ni cerraduras que impidan su uso.",
+      "Las áreas de riesgo alto requieren puertas resistentes al fuego.",
+      "Debe haber iluminación de emergencia donde no exista luz natural suficiente.",
+      "La señalización se rige por la NOM-003-SEGOB-2011 para protección civil y por la NOM-026-STPS-2008 para colores, señales de seguridad e identificación de riesgos por fluidos en tuberías.",
+      "Los paros de emergencia deben estar señalizados y ubicados de modo que cualquier despachador pueda accionarlos sin recorrer la pista."
+    ],
+    "brigadas": [
+      "El riesgo alto obliga a brigada contra incendio y a dos simulacros al año conforme a la NOM-002-STPS-2010.",
+      "El numeral 11.3 exige capacitación en procedimientos de emergencia, nociones de rescate, operación del equipo contra incendio y manejo de materiales peligrosos.",
+      "El entrenamiento debe cubrir escenarios específicos: derrame en pista, incendio en dispensario y maniobra segura de descarga de autotanque.",
+      "Todo el personal despachador debe saber ubicar y accionar el paro de emergencia y los extintores.",
+      "Conviene formalizar convenio de ayuda mutua con los bomberos locales dentro del plan de atención a emergencias."
+    ],
+    "documentos": [
+      "Permiso de la Comisión Reguladora de Energía para expendio al público de petrolíferos.",
+      "Dictamen de cumplimiento de la NOM-005-ASEA-2016 emitido por unidad de verificación acreditada y aprobada.",
+      "Dictamen eléctrico por unidad de verificación de instalaciones eléctricas para las áreas clasificadas.",
+      "Pruebas de hermeticidad de tanques y líneas.",
+      "Clasificación de riesgo conforme a la NOM-002-STPS-2010, croquis y plan de atención a emergencias.",
+      "Bitácora mensual de extintores y constancia del mantenimiento anual.",
+      "Registros de los dos simulacros anuales y constancias DC-3 de brigadistas.",
+      "Acta de verificación de la STPS, dictamen de unidad verificadora o acta de protección civil local, conforme al numeral 5.11 de la NOM-002, más el Programa Interno de Protección Civil vigente."
+    ],
+    "errores": [
+      {
+        "titulo": "Clasificarse como riesgo ordinario",
+        "detalle": "Es frecuente en estaciones pequeñas que se consideran de bajo movimiento. Cualquier gasolinera rebasa por mucho los 1,400 L de líquidos inflamables de la Tabla A.1, de modo que le aplican brigada obligatoria, dos simulacros al año y sistemas fijos contra incendio."
+      },
+      {
+        "titulo": "Descarga de autotanque sin puesta a tierra",
+        "detalle": "La conexión falta, está dañada o el personal no la conecta por prisa. Es el escenario de ignición más documentado del giro y está expresamente cubierto por la NOM-022-STPS-2015 sobre electricidad estática."
+      },
+      {
+        "titulo": "Extintores insuficientes o mal ubicados en pista",
+        "detalle": "Se dejan a más de 10 m de recorrido para fuego clase B, cuando en riesgo alto esa es la distancia máxima salvo que el extintor sea del tipo móvil. Se acompaña de bitácoras mensuales sin firmar, que invalidan la evidencia ante el inspector."
+      }
+    ],
+    "aclaracion": "Ninguna estación de servicio puede sostener una clasificación de riesgo ordinario: el inventario de líquidos inflamables la coloca en riesgo alto desde el primer día y con ello activa el régimen completo de brigada, dos simulacros y sistemas fijos. Además, el cumplimiento de la NOM-005-ASEA-2016 no se autodeclara: se acredita con dictamen emitido por unidad de verificación acreditada y aprobada, que es el documento que revisa la autoridad sectorial.",
+    "productoSlug": "extintores-y-extincion",
+    "nombreCorto": "Gasolineras"
+  },
+  {
+    "slug": "oficina",
+    "nombre": "Oficina corporativa y edificio de oficinas",
+    "icono": "🏢",
+    "gancho": "Una oficina en piso dos ya requiere rociadores",
+    "resumen": "La oficina parece el giro de menor riesgo y es donde más se subestima el umbral normativo. La exención de rociadores solo cubre el nivel de descarga de salida con hasta 1,200 m² y 300 ocupantes, de modo que una oficina en un piso superior queda fuera de ella. Por encima de 23 m de altura se suman alarma por voz y presurización o esclusas en los cubos de escalera, y la única ruta viable es la escalera protegida. La obligación central es mantener ese cubo libre, cerrado y con reingreso disponible, además de una brigada con cobertura real por piso y turno.",
+    "riesgoTipico": "Muchos corporativos rebasan los 3,000 m² sumando pisos y quedan en riesgo alto conforme a la NOM-002-STPS-2010, con brigada obligatoria y dos simulacros al año, aunque su carga de fuego sea baja.",
+    "riesgoNom": "ordinario",
+    "normas": [
+      {
+        "clave": "NOM-002-STPS-2010",
+        "que": "Impone clasificación de riesgo, extintores, rutas libres, plan de atención a emergencias, brigadas y simulacros.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-029-STPS-2011",
+        "que": "Rige el mantenimiento y el dictamen de las instalaciones eléctricas del inmueble.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-003-SEGOB-2011",
+        "que": "Rige la señalización de salidas, rutas de evacuación, punto de reunión y equipo contra incendio.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NTCPA CDMX cap. 4",
+        "que": "Para servicios profesionales fija umbrales de rociadores, recorridos, anchos de escalera, áreas de protección y presurización por encima de 23 m.",
+        "estatus": "depende"
+      },
+      {
+        "clave": "NOM-035-STPS-2018",
+        "que": "No es una norma de incendio, pero se revisa en la misma inspección federal del centro de trabajo.",
+        "estatus": "referencia"
+      }
+    ],
+    "extintores": [
+      "Se coloca clase A en áreas administrativas, clase C en site o MDF y cuarto eléctrico, y clase K si hay comedor con cocción.",
+      "El recorrido máximo general es de 22 m con capacidad mínima de 6 kg conforme al reglamento de construcción de la CDMX, usado aquí como referencia base.",
+      "La parte más alta del extintor se instala a no más de 1.50 m sobre el nivel de piso.",
+      "En riesgo ordinario la densidad es de un extintor por cada 300 m² y en riesgo alto sube a uno por cada 200 m² conforme a la NOM-002-STPS-2010.",
+      "La revisión es mensual y documentada, y el mantenimiento anual se realiza conforme a la NOM-154-SCFI-2005.",
+      "El uso de agente limpio en centro de datos o site es buena práctica de industria para proteger el equipo, no un mandato de una NOM federal."
+    ],
+    "sistemas": [
+      "La exención de rociadores solo aplica en el nivel de descarga de salida con hasta 1,200 m² y 300 ocupantes; en ese supuesto bastan extintores y alarma.",
+      "En cualquier otro nivel, los rociadores, las conexiones de manguera, los extintores y la alarma son obligatorios: una oficina en el piso dos ya está fuera de la exención.",
+      "La alarma sonora y visual es obligatoria siempre en esta ocupación.",
+      "Por encima de 23 m de altura se exigen rociadores, conexiones de manguera, alarma por voz y presurización o esclusas en los cubos de escalera.",
+      "La detección es obligatoria en ductos, vestíbulos de elevadores y cuartos de máquinas.",
+      "Estos umbrales provienen del reglamento de construcción de la CDMX, tomado como base por ser el más detallado; cada estado tiene el propio y los valores pueden diferir."
+    ],
+    "evacuacion": [
+      "La carga de ocupantes se calcula con 9.3 m² por persona.",
+      "El recorrido a una salida es de hasta 60 m sin rociadores y 90 m con rociadores, con recorrido común de 25 m y pasillo sin salida de 5 m.",
+      "Los pasillos principales tienen ancho libre mínimo de 1,100 mm, con 5 mm de ancho por ocupante en puertas y 7.5 mm en escaleras.",
+      "Las escaleras miden 900 mm para 1 a 50 usuarios, 1,100 mm para 51 a 2,000 y 1,400 mm de 2,001 en adelante, con pasamanos intermedio cuando exceden 1.60 m de ancho.",
+      "Las puertas abaten hacia afuera con más de 50 ocupantes y llevan barra antipánico con más de 100; el cubo de escalera debe permitir reingreso al edificio cuando menos cada cuatro pisos.",
+      "Cada nivel distinto al de descarga requiere área de protección, y el cubo de escaleras debe señalizar el nivel actual y los niveles restantes a 1.50 m, en alto relieve y Braille.",
+      "La iluminación de emergencia entrega 100 luxes en escaleras y 10 luxes en circulaciones, con 20 por ciento de luminarias encendidas en áreas administrativas de más de 80 m² y 50 por ciento en recepción, vestíbulos y salas de espera.",
+      "Todas estas cifras corresponden al reglamento de construcción de la CDMX; verifique las equivalencias del reglamento de su estado."
+    ],
+    "brigadas": [
+      "Al rebasar los 3,000 m² el corporativo queda en riesgo alto, con brigada obligatoria y dos simulacros al año conforme a la NOM-002-STPS-2010.",
+      "Se integran brigadas de evacuación con jefe de piso y responsable de escalera por nivel, además de primeros auxilios, incendio y comunicación.",
+      "En edificios de arrendamiento múltiple el Programa Interno de Protección Civil del inmueble debe integrar a todos los inquilinos con mando único y simulacro conjunto, sin que ello releve a cada empresa de su propia obligación como centro de trabajo.",
+      "La capacitación cubre la evacuación por escaleras desde niveles altos y el papel del área de protección para personas con discapacidad, considerando que los elevadores no son medio de evacuación.",
+      "El simulacro debe incluir a los turnos de limpieza y de vigilancia nocturna, no solo al horario de oficina."
+    ],
+    "documentos": [
+      "Clasificación de riesgo conforme a la NOM-002-STPS-2010 con croquis por piso.",
+      "Programa Interno de Protección Civil del inmueble con la integración documentada de los inquilinos.",
+      "Bitácora mensual de extintores y constancia del mantenimiento anual.",
+      "Bitácoras de rociadores, bomba contra incendio y sistema de detección y alarma.",
+      "Certificado de prueba del sistema de presurización de escaleras en edificios de más de 23 m.",
+      "Dictamen de la instalación eléctrica conforme a la NOM-029-STPS-2011 e informe de la unidad verificadora.",
+      "Registros de simulacros y constancias DC-3 de brigadistas y jefes de piso.",
+      "Plan de atención a emergencias con directorio actualizado y dictamen estructural conforme al reglamento local."
+    ],
+    "errores": [
+      {
+        "titulo": "Puertas del cubo de escalera acuñadas abiertas",
+        "detalle": "Se dejan abiertas por ventilación o comodidad y se anula la protección del cubo, que es la única ruta viable en un edificio alto. Se agrava cuando además no se permite el reingreso al edificio cada cuatro pisos y el evacuado queda atrapado en la escalera."
+      },
+      {
+        "titulo": "Almacenar en el cubo de escaleras",
+        "detalle": "Cajas, archivo muerto y mobiliario terminan en el descanso porque parece espacio muerto. El reglamento de construcción es explícito en que las salidas son de uso exclusivo para evacuación y sin ninguna obstrucción."
+      },
+      {
+        "titulo": "Brigada sin cobertura real",
+        "detalle": "El roster está desactualizado, incluye brigadistas que ya no laboran en la empresa y no hay nadie asignado en turno nocturno ni en los pisos de arrendatarios pequeños. Sobre el papel la brigada existe; en una emergencia real no hay quien la active."
+      }
+    ],
+    "aclaracion": "El error de lectura más costoso del giro es creer que la exención de rociadores depende del tamaño de la oficina. Depende de tres condiciones simultáneas conforme al reglamento de construcción de la CDMX: estar en el nivel de descarga de salida, no exceder 1,200 m² y no exceder 300 ocupantes. Una oficina de 200 m² en un piso alto no está exenta, y cualquier nivel ocupable a más de 23 m sobre el acceso de los vehículos de bomberos nunca lo está.",
+    "productoSlug": "senaletica-y-seguridad",
+    "nombreCorto": "Oficinas"
+  },
+  {
+    "slug": "gas-lp",
+    "nombre": "Almacenamiento y manejo de gas L.P. y sustancias químicas",
+    "icono": "🛢️",
+    "gancho": "Cualquier cantidad de pirofórico ya es riesgo alto",
+    "resumen": "Este giro entra en riesgo alto por definición: cualquier cantidad de material pirofórico o explosivo lo clasifica así, y 3,000 L de gases inflamables bastan para lo mismo. La NOM-004-SEDG-2004 fija por capacidad los extintores, los hidrantes o monitores y el sistema de enfriamiento por aspersión, junto con el volumen de agua, el bombeo y las presiones mínimas. El reglamento de construcción añade la clasificación por tipo de sustancia, las áreas de control, la ventilación y el control de explosión, y limita a un nivel las edificaciones de alto riesgo de explosión. La obligación central es que el sistema contra incendio pueda operar aun sin energía eléctrica.",
+    "riesgoTipico": "Es riesgo alto por definición conforme a la NOM-002-STPS-2010: cualquier cantidad de material pirofórico o explosivo lo clasifica así y los gases inflamables lo hacen a partir de 3,000 L, con brigada obligatoria y dos simulacros al año.",
+    "riesgoNom": "alto",
+    "normas": [
+      {
+        "clave": "NOM-004-SEDG-2004",
+        "que": "Rige el diseño y construcción de instalaciones de aprovechamiento de gas L.P. y fija extintores, hidrantes, aspersión, agua contra incendio y bombeo por capacidad.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-002-STPS-2010",
+        "que": "Clasifica el centro de trabajo como riesgo alto y le impone brigada, dos simulacros al año y sistemas fijos con alarma.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NOM-018-STPS-2015",
+        "que": "Exige la identificación GHS de recipientes y áreas, las hojas de datos de seguridad y la capacitación del personal expuesto.",
+        "estatus": "obligatoria"
+      },
+      {
+        "clave": "NTCPA CDMX num. 4.6",
+        "que": "Clasifica las edificaciones con sustancias peligrosas y define áreas de control, ventilación, energía de emergencia y control de explosión o deflagración.",
+        "estatus": "depende"
+      },
+      {
+        "clave": "NFPA 400",
+        "que": "Es admitida por el reglamento de construcción de la CDMX como alternativa de cumplimiento junto con la NOM-018-STPS-2015, no como norma obligatoria por sí misma.",
+        "estatus": "referencia"
+      }
+    ],
+    "extintores": [
+      "Las instalaciones clases B, B1 y C de 5,000 L o más, y todas las que tengan vaporizadores, requieren al menos dos extintores de polvo químico seco de 9 kg conforme al numeral 10.1.1 de la NOM-004-SEDG-2004.",
+      "En riesgo alto el reglamento de construcción de la CDMX exige recorrido máximo de 15 m y capacidad mínima de 9.5 kg o 14.35 L.",
+      "Por la NOM-002-STPS-2010 la densidad en riesgo alto es de un extintor por cada 200 m² y la distancia para clase B baja a 10 m, o 15 m si el extintor es móvil.",
+      "La parte más alta del extintor se instala a no más de 1.50 m sobre el nivel de piso.",
+      "La revisión es mensual y documentada y el mantenimiento anual se realiza conforme a la NOM-154-SCFI-2005.",
+      "Se cumple siempre la regla más restrictiva entre la NOM-002-STPS-2010 y el reglamento de construcción local, que aquí se ejemplifica con el de la CDMX."
+    ],
+    "sistemas": [
+      "Las instalaciones clases B, B1 y C de 20,000 L o más de capacidad de agua requieren al menos dos hidrantes o monitores en el área de almacenamiento, y a partir de 90,000 L se exige sistema de enfriamiento por aspersión de agua.",
+      "La cisterna o tanque debe tener volumen útil mínimo de 21,000 L cuando el agua se aplique por hidrantes o monitores; con aspersión, el volumen resulta del cálculo hidráulico para 30 minutos de operación sobre el recipiente de mayor superficie.",
+      "Debe instalarse toma siamesa exterior de fácil acceso para inyección de bomberos, y si el agua se toma para otros usos, medios que impidan disminuir el volumen contra incendio.",
+      "El bombeo requiere una o más bombas con motor eléctrico y una o más con motor de combustión interna, y solo se acepta bombeo eléctrico si existe generación eléctrica exclusiva para el sistema contra incendio.",
+      "El gasto mínimo es de 350 L por minuto por cada hidrante o monitor y de 10 L por minuto por cada metro cuadrado cubierto por el cono de agua en aspersión, con presión mínima de 3 kgf/cm² en hidrantes y 7 kgf/cm² en monitores.",
+      "Las mangueras tienen longitud máxima de 30 m y diámetro nominal de 0.038 m, y los monitores estacionarios diámetro nominal de 0.063 m con chiflón que permita neblina.",
+      "El sistema de aspersión debe rociar directamente al menos el 90 por ciento de la superficie de la zona de vapor con el recipiente al 50 por ciento en fase líquida, con válvula de bloqueo por línea y círculos de aspersión que se toquen cuando menos en un punto.",
+      "En riesgo alto conforme al reglamento de construcción, los rociadores, las mangueras, los extintores, la detección y la alarma son todos obligatorios sin excepción de tamaño, y se requieren detectores de gas donde haya equipos de combustión."
+    ],
+    "evacuacion": [
+      "Las puertas abaten en sentido de la evacuación con más de cinco ocupantes y llevan barra antipánico con más de cinco ocupantes, umbral especial para edificaciones con sustancias peligrosas.",
+      "El alto riesgo de explosión limita la edificación a un máximo de un nivel en cualquier tiempo de resistencia al fuego.",
+      "Deben delimitarse áreas de control para las sustancias que excedan los límites, con ventilación y sistemas de energía de emergencia.",
+      "La NOM-002-STPS-2010 exige rutas libres de obstáculos, distancia no mayor de 40 m desde el punto más alejado y puertas de salida que abran en el sentido del flujo sin candados ni cerraduras.",
+      "La señalización GHS de recipientes y áreas se rige por la NOM-018-STPS-2015 y la identificación de tuberías por la NOM-026-STPS-2008.",
+      "Los umbrales de puertas, niveles y áreas de control provienen del reglamento de construcción de la CDMX, usado como referencia base; cada estado tiene el suyo."
+    ],
+    "brigadas": [
+      "Al ser riesgo alto por definición, la brigada contra incendio es obligatoria y se realizan dos simulacros al año conforme a la NOM-002-STPS-2010.",
+      "El numeral 11.3 exige capacitación reforzada en procedimientos de emergencia, nociones de rescate, operación del equipo contra incendio y manejo de materiales peligrosos.",
+      "El equipo de protección personal especializado se selecciona conforme a la NOM-017-STPS-2008 e incluye traje encapsulado, equipo de respiración autónoma y monitores de atmósfera.",
+      "Todo el personal expuesto se capacita en lectura de hojas de datos de seguridad y en el sistema de señalización GHS conforme a la NOM-018-STPS-2015.",
+      "Deben operar procedimientos de trabajo en caliente, espacio confinado conforme a la NOM-033-STPS-2015 y bloqueo y etiquetado.",
+      "El entrenamiento cubre escenarios de BLEVE, fuga de gas sin ignición y derrame químico, con criterios explícitos de cuándo no combatir y evacuar.",
+      "Conviene formalizar convenio de ayuda mutua y coordinación previa con bomberos y protección civil."
+    ],
+    "documentos": [
+      "Dictamen de la instalación de gas L.P. emitido por unidad de verificación acreditada.",
+      "Memoria de cálculo del sistema contra incendio con cisterna, bombeo, hidrantes o monitores y aspersión.",
+      "Bitácoras de prueba de las bombas eléctrica y de combustión interna y del sistema de aspersión.",
+      "Pruebas de hermeticidad y calibración de válvulas de relevo de los recipientes.",
+      "Inventario de sustancias químicas peligrosas con hojas de datos de seguridad completas y vigentes.",
+      "Estudio de análisis de riesgos de proceso conforme a la NOM-028-STPS-2012.",
+      "Clasificación de riesgo conforme a la NOM-002-STPS-2010, croquis y plan de atención a emergencias.",
+      "Bitácora mensual de extintores, registros de los dos simulacros anuales y constancias DC-3 de brigadistas.",
+      "Acta de verificación de la STPS, dictamen de unidad de verificación acreditada o acta de protección civil local, más el Programa Interno de Protección Civil vigente."
+    ],
+    "errores": [
+      {
+        "titulo": "Cisterna contra incendio compartida sin protección",
+        "detalle": "El agua contra incendio se usa también para servicios sanitarios o de proceso sin medio que impida disminuir el volumen reservado. La NOM-004-SEDG-2004 lo prohíbe expresamente y la omisión deja el sistema sin el volumen que la memoria de cálculo supone."
+      },
+      {
+        "titulo": "Solo bomba eléctrica en el sistema contra incendio",
+        "detalle": "Falta la bomba con motor de combustión interna y no existe generación eléctrica exclusiva para el sistema. Ante un corte de energía, escenario probable durante un incidente, el sistema completo queda inoperante justo cuando se requiere."
+      },
+      {
+        "titulo": "Hojas de datos de seguridad incompletas o en inglés",
+        "detalle": "Junto con recipientes sin señalización GHS, es el hallazgo más recurrente en inspección de la NOM-018-STPS-2015. Suele arrastrar consigo una clasificación de riesgo mal hecha, porque el inventario que la sustenta no está documentado."
+      }
+    ],
+    "aclaracion": "La NFPA 400 se ofrece a veces como si fuera la norma aplicable y no lo es por sí misma: el reglamento de construcción de la CDMX la admite como vía alternativa de cumplimiento junto con la NOM-018-STPS-2015. El requisito duro y verificable de este giro está en el capítulo 10 de la NOM-004-SEDG-2004, que fija por capacidad los extintores, los hidrantes o monitores, la aspersión, el volumen de agua, el gasto y las presiones mínimas.",
+    "productoSlug": "equipos-de-respiracion",
+    "nombreCorto": "Gas L.P. y químicos"
+  }
+]

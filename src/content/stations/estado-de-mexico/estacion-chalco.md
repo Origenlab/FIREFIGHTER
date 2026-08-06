@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Chalco | Estado de México"
+metaTitle: "Estación de Bomberos Chalco | Estado México"
 metaDescription: "Estación de Bomberos de Chalco de Díaz Covarrubias. Zona oriente del Valle de México. Teléfono y servicios. Emergencias: 911."
 ---
 

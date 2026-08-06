@@ -32,7 +32,7 @@ equipment:
   other: "Unidad HAZMAT para zona industrial"
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Bomberos San Martín Texmelucan | Cuerpo de Bomberos Puebla"
+metaTitle: "Bomberos San Martín Texmelucan | Cuerpo de Puebla"
 metaDescription: "Heroico Cuerpo de Bomberos de San Martín Texmelucan, corredor industrial Puebla-Tlaxcala. Teléfono 248 484-0088, emergencias 911. HAZMAT, rescate vehicular."
 ---
 

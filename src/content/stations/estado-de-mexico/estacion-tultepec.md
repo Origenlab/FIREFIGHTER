@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 2
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Tultepec | Capital de la Pirotecnia"
+metaTitle: "Estación de Bomberos Tultepec | Capital la Pirotecnia"
 metaDescription: "Estación de Bomberos de Tultepec. Especialistas en incidentes pirotécnicos. Capital mexicana de la pirotecnia. Emergencias: 911."
 ---
 

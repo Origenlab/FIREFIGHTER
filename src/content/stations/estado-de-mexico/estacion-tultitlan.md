@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 2
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Tultitlán | Estado de México"
+metaTitle: "Estación de Bomberos Tultitlán | Estado México"
 metaDescription: "Estación de Bomberos de Tultitlán. Zona industrial y comercial. Especialistas en materiales peligrosos. Emergencias: 911."
 ---
 

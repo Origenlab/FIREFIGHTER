@@ -29,7 +29,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Bomberos Libres | Región de los Llanos de Puebla"
+metaTitle: "Bomberos Libres | Región de los Llanos Puebla"
 metaDescription: "Cuerpo de Bomberos de Libres. Zona agrícola, carretera Puebla-Perote. Teléfono 276 473-5050, emergencias 911."
 ---
 

@@ -35,7 +35,7 @@ equipment:
   other: "Unidad de rescate en montaña, equipo para incendios forestales"
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Bomberos Tehuacán | Heroico Cuerpo de Bomberos Puebla"
+metaTitle: "Bomberos Tehuacán | Heroico Cuerpo de Puebla"
 metaDescription: "Heroico Cuerpo de Bomberos de Tehuacán, segunda ciudad más grande de Puebla. Teléfono 238 382-0033, emergencias 911. Rescate, incendios, HAZMAT."
 ---
 

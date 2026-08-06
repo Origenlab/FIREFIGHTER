@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Zinacantepec | Nevado de Toluca"
+metaTitle: "Estación de Bomberos Zinacantepec | Nevado Toluca"
 metaDescription: "Estación de Bomberos de Zinacantepec. Base para rescate en Nevado de Toluca. Especialistas en montaña. Emergencias: 911."
 ---
 

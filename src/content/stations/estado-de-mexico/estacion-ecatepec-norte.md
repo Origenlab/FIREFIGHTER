@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 2
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Ecatepec Norte | Estado de México"
+metaTitle: "Estación de Bomberos Ecatepec Norte | Estado México"
 metaDescription: "Segunda estación de Bomberos de Ecatepec, zona norte. Cobertura ampliada para el municipio más poblado. Emergencias: 911."
 ---
 

@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Ixtlahuaca | Norte del Valle de Toluca"
+metaTitle: "Estación de Bomberos Ixtlahuaca | Norte del Valle Toluca"
 metaDescription: "Estación de Bomberos de Ixtlahuaca. Centro regional del norte del Valle de Toluca. Emergencias: 911."
 ---
 

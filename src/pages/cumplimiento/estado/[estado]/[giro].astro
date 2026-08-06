@@ -1,0 +1,333 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import PageHero from '../../../../components/layout/PageHero.astro';
+import { tituloSeo } from '../../../../lib/seoText';
+import { waLink } from '../../../../lib/blog';
+import categorias from '../../../../data/productos.json';
+import {
+  ESTADOS, GIROS, getEstado, getGiro, cruce, etiquetaRiesgo,
+  REGIONES, REVISADO, AVISO_LEGAL,
+} from '../../../../lib/cumplimiento';
+
+export async function getStaticPaths() {
+  const { ESTADOS, GIROS } = await import('../../../../lib/cumplimiento');
+  return ESTADOS.flatMap(e =>
+    GIROS.map(g => ({ params: { estado: e.slug, giro: g.slug } })),
+  );
+}
+
+const SITE = 'https://firefighter.com.mx';
+const e = getEstado(Astro.params.estado as string)!;
+const g = getGiro(Astro.params.giro as string)!;
+const c = cruce(e, g);
+const url = `${SITE}/cumplimiento/estado/${e.slug}/${g.slug}`;
+
+const region = REGIONES.find(r => r.key === e.region)?.nombre ?? '';
+const categoria = (categorias as any[]).find(x => x.slug === g.productoSlug);
+const otrosGiros = GIROS.filter(x => x.slug !== g.slug).slice(0, 6);
+const nombreBajo = g.nombre.toLowerCase();
+
+const descripcion = `Qué exige la ley a un ${nombreBajo} en ${e.estado}: extintores, simulacros, brigada, Programa Interno de Protección Civil y los documentos que revisa el inspector. Obligación federal y estatal en una sola guía.`;
+
+const artSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  '@id': `${url}#article`,
+  headline: `Protección contra incendios para ${nombreBajo} en ${e.estado}`,
+  description: descripcion,
+  url,
+  inLanguage: 'es-MX',
+  spatialCoverage: { '@type': 'State', name: e.estado, containedInPlace: { '@type': 'Country', name: 'México' } },
+  publisher: { '@type': 'Organization', name: 'FIREFIGHTER México', url: SITE },
+};
+
+const cifras = [
+  { n: `1 : ${c.m2PorExtintor}`, l: 'Extintores', s: `Uno por cada ${c.m2PorExtintor} m² o fracción` },
+  { n: String(c.simulacrosPlan), l: 'Simulacros al año', s: c.simulacrosOrigen === 'estatal' ? `Lo fija ${e.estado}, no la NOM` : c.simulacrosOrigen === 'federal' ? 'Lo fija la NOM-002' : 'Coinciden ambas autoridades' },
+  { n: c.brigadaObligatoria ? 'Sí' : 'No', l: 'Brigada obligatoria', s: c.brigadaObligatoria ? 'Por riesgo alto, NOM-002 §5.6' : 'No la exige la NOM-002' },
+  { n: c.sistemasFijos ? 'Sí' : 'No', l: 'Sistemas fijos y alarma', s: c.sistemasFijos ? 'Por riesgo alto, NOM-002 §5.10' : 'Detección y equipos, sin sistemas fijos' },
+];
+---
+
+<BaseLayout
+  title={tituloSeo(`${g.nombreCorto} en ${e.estado} · normativa contra incendios`)}
+  description={descripcion}
+  canonicalUrl={url}
+  noindex={!e.listo}
+  breadcrumbs={[
+    { label: 'Cumplimiento', href: '/cumplimiento' },
+    { label: e.estado, href: `/cumplimiento/estado/${e.slug}` },
+    { label: g.nombre },
+  ]}
+>
+  <Fragment slot="head">
+    {e.listo && <script type="application/ld+json" set:html={JSON.stringify(artSchema)} />}
+  </Fragment>
+
+  <PageHero
+    eyebrow={`${e.estado} · ${region}`}
+    badge={`${g.icono} ${etiquetaRiesgo(g.riesgoNom)}`}
+    h1={`${g.nombre}<br>en ${e.estado}:<br>qué exige la ley`}
+    lead={`Un ${nombreBajo} en ${e.estado} responde ante <strong style="color:#e4e4e7;">dos autoridades a la vez</strong>: la Secretaría del Trabajo, con obligaciones idénticas en todo el país, y la protección civil de ${e.estado}, con reglas propias. Esta guía cruza ambas y te dice el número que tienes que cumplir, que siempre es el más exigente de los dos.`}
+    alinear="center"
+    justificado
+    bloques={[
+      { label: 'Por qué este giro', texto: g.riesgoTipico },
+      { label: `Lo distintivo de ${e.estado}`, texto: e.distintivo },
+    ]}
+  >
+    <div slot="ctas" style="display:flex; flex-wrap:wrap; gap:10px;">
+      <a href={waLink(`tengo un ${nombreBajo} en ${e.estado} y necesito cumplir con protección contra incendios`)} target="_blank" rel="noopener" class="l2-cta">
+        <span>Cotizar lo que me falta</span>
+      </a>
+      <a href={`/cumplimiento/giro/${g.slug}`} class="l2-cta-ghost">
+        <span>Ver la guía nacional del giro</span>
+      </a>
+    </div>
+  </PageHero>
+
+  {!e.listo && (
+    <div style="background:#fff7ed; border-bottom:1px solid #fed7aa; padding:14px 0;">
+      <div class="container-custom">
+        <p style="margin:0; font-size:0.8rem; color:#9a3412; line-height:1.7;">
+          <strong>Datos estatales en verificación.</strong> Lo federal de esta página está confirmado contra el texto de la NOM-002-STPS-2010. Lo específico de {e.estado} proviene de fuentes de gobierno que no pudimos contrastar contra el texto legal consolidado: confírmalo con la autoridad estatal.
+        </p>
+      </div>
+    </div>
+  )}
+
+  <!-- ══ CIFRAS DEL CRUCE ══ -->
+  <section style="background:#09090b; padding:44px 0;">
+    <div class="container-custom">
+      <div class="cmp-cruce">
+        {cifras.map(x => (
+          <div>
+            <strong>{x.n}</strong>
+            <span>{x.l}</span>
+            <em>{x.s}</em>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#f8fafc; padding:48px 0 88px;">
+    <div class="container-custom">
+      <div class="l3-shell">
+
+        <div class="l3-body">
+
+          <div class="l3-sec" id="simulacros">
+            <div class="l3-sec-eyebrow"><i></i><span>El cruce</span></div>
+            <h2 class="l3-sec-title">Cuántos simulacros te tocan realmente</h2>
+            <p class="l3-p">Es la pregunta que más confusión genera, porque cada autoridad da su propio número y nadie explica cómo se combinan.</p>
+
+            <div class="l3-tabla-wrap">
+              <table class="l3-tabla">
+                <thead><tr><th>Autoridad</th><th>Qué exige</th><th>Fundamento</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td><strong style="color:#09090b;">STPS — federal</strong></td>
+                    <td>{c.simulacrosFed} al año</td>
+                    <td>NOM-002-STPS-2010 §5.7, por {c.riesgo === 'ordinario' ? 'riesgo ordinario' : 'riesgo alto'}</td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#09090b;">Protección civil de {e.estado}</strong></td>
+                    <td>{c.simulacrosEdo > 0 ? `${c.simulacrosEdo} al año` : 'La norma estatal no fija mínimo'}</td>
+                    <td>{e.ley}</td>
+                  </tr>
+                  <tr style="background:#fef2f2;">
+                    <td><strong style="color:#dc2626;">Lo que debes planear</strong></td>
+                    <td><strong style="color:#dc2626;">{c.simulacrosPlan} al año</strong></td>
+                    <td>{c.simulacrosOrigen === 'estatal' ? `Manda ${e.estado}: su piso es más alto que el federal` : c.simulacrosOrigen === 'federal' ? 'Manda la NOM-002: el estado no llega a ese piso' : 'Ambas coinciden en la misma cifra'}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="l3-box l3-box-red">
+              <span class="l3-box-title">No son listas que se sumen</span>
+              <p class="l3-box-copy">Un mismo ejercicio puede servir a las dos autoridades siempre que el escenario, el alcance y la evidencia cumplan el requisito de ambas. Lo que no funciona es planear por el número menor: cubres a una autoridad y quedas descubierto ante la otra. Diseña el calendario una sola vez, contra el requisito más exigente.</p>
+            </div>
+          </div>
+
+          <div class="l3-sec" id="equipo">
+            <div class="l3-sec-eyebrow"><i></i><span>Equipo mínimo</span></div>
+            <h2 class="l3-sec-title">Qué equipo te exige la ley</h2>
+            <p class="l3-p">Como {c.riesgo === 'ordinario' ? 'este giro suele clasificarse en riesgo ordinario' : c.riesgo === 'alto' ? 'este giro cae en riesgo alto' : 'la clasificación de este giro depende del plantel'}, la NOM-002-STPS-2010 pide <strong>un extintor por cada {c.m2PorExtintor} m² de superficie o fracción</strong> (numeral 7.17), sin exceder las distancias máximas de recorrido de su Tabla 1, medidas caminando y no en línea recta.</p>
+
+            <ul class="cmp-lista">
+              {g.extintores.map(x => (
+                <li>
+                  <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+                  <span>{x}</span>
+                </li>
+              ))}
+            </ul>
+
+            <h3 style="font-size:1rem; font-weight:700; color:#09090b; margin:28px 0 0;">Detección, alarma y sistemas fijos</h3>
+            <ul class="cmp-lista">
+              {g.sistemas.map(x => (
+                <li>
+                  <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+                  <span>{x}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="l3-sec" id="proteccion-civil">
+            <div class="l3-sec-eyebrow"><i></i><span>Trámite estatal</span></div>
+            <h2 class="l3-sec-title">El Programa Interno en {e.estado}</h2>
+            <div class="cmp-est-fichas">
+              <div class="cmp-est-fila">
+                <span class="cmp-est-k">Quién lo autoriza</span>
+                <div class="cmp-est-v"><p>{e.autoridad}</p></div>
+              </div>
+              <div class="cmp-est-fila">
+                <span class="cmp-est-k">Vigencia y revalidación</span>
+                <div class="cmp-est-v"><p>{e.pipcVigencia}</p></div>
+              </div>
+              <div class="cmp-est-fila">
+                <span class="cmp-est-k">Consultor registrado</span>
+                <div class="cmp-est-v"><p>{e.consultor}</p></div>
+              </div>
+              <div class="cmp-est-fila">
+                <span class="cmp-est-k">Cuerpo de bomberos</span>
+                <div class="cmp-est-v"><p>{e.bomberos}</p></div>
+              </div>
+            </div>
+            <p class="l3-p" style="margin-top:16px;">El visto bueno de bomberos, la licencia de funcionamiento y el reglamento de construcción son en su mayoría <strong>municipales</strong> y cambian dentro del mismo estado. Confírmalos siempre con el ayuntamiento donde esté el inmueble.</p>
+          </div>
+
+          <div class="l3-sec" id="evacuacion">
+            <div class="l3-sec-eyebrow"><i></i><span>Salidas</span></div>
+            <h2 class="l3-sec-title">Evacuación y señalización</h2>
+            <ul class="cmp-lista">
+              {g.evacuacion.map(x => (
+                <li>
+                  <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"/></svg>
+                  <span>{x}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="l3-sec" id="brigadas">
+            <div class="l3-sec-eyebrow"><i></i><span>Personal</span></div>
+            <h2 class="l3-sec-title">Brigadas y capacitación</h2>
+            <div class="l3-box">
+              <span class="l3-box-title">Tu situación concreta</span>
+              <p class="l3-box-copy">
+                {c.brigadaObligatoria
+                  ? `Al ser un giro de riesgo alto, la brigada contra incendio es obligatoria por el numeral 5.6 de la NOM-002-STPS-2010. La norma no fija un número mínimo de brigadistas: pide dimensionarla por trabajadores por turno, rotación entre turnos y resultados de los simulacros.`
+                  : `La NOM-002-STPS-2010 solo obliga a constituir brigada en centros de riesgo alto, así que en este giro no es exigible por esa vía. El plan de atención a emergencias sí lo es para todos, y ${e.estado} puede exigir brigadas por su propio marco de protección civil.`}
+              </p>
+            </div>
+            <ul class="cmp-lista">
+              {g.brigadas.map(x => (
+                <li>
+                  <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  <span>{x}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="l3-sec" id="documentos">
+            <div class="l3-sec-eyebrow"><i></i><span>Expediente</span></div>
+            <h2 class="l3-sec-title">Qué te va a pedir el inspector</h2>
+            <p class="l3-p">Lo que se sanciona no es solo incumplir: es <strong>no poder acreditarlo</strong> en el plazo que fije la autoridad. Los registros de la NOM-002 se conservan tres años y se aceptan en medio digital.</p>
+            <div class="cmp-check">
+              {g.documentos.map(d => <div><span>{d}</span></div>)}
+              <div><span>Constancia del Programa Interno de Protección Civil registrado ante la autoridad de {e.estado}</span></div>
+            </div>
+          </div>
+
+          <div class="l3-sec">
+            <div class="l3-sec-eyebrow"><i></i><span>Lo que sale mal</span></div>
+            <h2 class="l3-sec-title">Los tres errores que más se repiten en este giro</h2>
+            <div style="display:flex; flex-direction:column; gap:14px; margin-top:20px;">
+              {g.errores.map((err, i) => (
+                <div class="cmp-mito">
+                  <span class="cmp-mito-n">{String(i + 1).padStart(2, '0')}</span>
+                  <div style="min-width:0;">
+                    <strong class="cmp-mito-t">{err.titulo}</strong>
+                    <p class="cmp-mito-d">{err.detalle}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="l3-sec">
+            <div class="l3-sec-eyebrow"><i></i><span>Otros giros en {e.estado}</span></div>
+            <h2 class="l3-sec-title">¿Tu operación es mixta?</h2>
+            <p class="l3-p">Un hotel con restaurante o una planta con almacén responden por las dos cosas.</p>
+            <div class="cmp-vecinos">
+              {otrosGiros.map(o => (
+                <a href={`/cumplimiento/estado/${e.slug}/${o.slug}`} class="cmp-vecino">
+                  <span class="cmp-vecino-c" style="background:#fef2f2; color:#dc2626; font-size:0.85rem; padding:2px 6px;">{o.icono}</span>
+                  <span class="cmp-vecino-n">{o.nombre}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <p class="cmp-legal" style="margin-top:34px;">
+            <strong>Aviso.</strong> {AVISO_LEGAL} Esta guía cruza la obligación federal con el marco estatal de {e.estado}; los trámites municipales varían dentro del mismo estado. Última revisión normativa: {REVISADO}.
+          </p>
+        </div>
+
+        <aside class="l3-aside">
+
+          <nav class="l3-toc" aria-label="Contenido de la guía">
+            <span class="l3-box-title">En esta guía</span>
+            <a href="#simulacros">Cuántos simulacros te tocan</a>
+            <a href="#equipo">Equipo mínimo</a>
+            <a href="#proteccion-civil">Programa Interno en {e.estado}</a>
+            <a href="#evacuacion">Evacuación</a>
+            <a href="#brigadas">Brigadas</a>
+            <a href="#documentos">Qué pide el inspector</a>
+          </nav>
+
+          <div class="l3-box">
+            <span class="l3-box-title">Resumen</span>
+            <dl class="cmp-ficha">
+              <div><dt>Giro</dt><dd>{g.nombre}</dd></div>
+              <div><dt>Estado</dt><dd>{e.estado}</dd></div>
+              <div><dt>Riesgo NOM-002</dt><dd>{etiquetaRiesgo(g.riesgoNom)}</dd></div>
+              <div><dt>Extintores</dt><dd>1 por cada {c.m2PorExtintor} m² o fracción</dd></div>
+              <div><dt>Simulacros</dt><dd>{c.simulacrosPlan} al año</dd></div>
+              <div><dt>Brigada</dt><dd>{c.brigadaObligatoria ? 'Obligatoria' : 'No exigida por la NOM-002'}</dd></div>
+            </dl>
+          </div>
+
+          {e.totalStations > 0 && (
+            <a href={`/directorio/${e.slug}`} class="l3-box" style="text-decoration:none; display:block;">
+              <span class="l3-box-title">Estaciones de bomberos</span>
+              <p class="l3-box-copy"><strong>{e.totalStations}</strong> estaciones documentadas en {e.estado}. Útiles para el directorio de emergencia de tu Programa Interno.</p>
+              <span style="font-size:0.78rem; font-weight:600; color:#dc2626;">Ver el directorio →</span>
+            </a>
+          )}
+
+          <div class="l3-box l3-box-dark">
+            <span class="l3-box-title">¿Te cotizamos lo que falta?</span>
+            <p class="l3-box-copy">Cuéntanos cómo es tu {nombreBajo} en {e.estado} y te decimos qué te aplica realmente, qué te falta y qué no necesitas comprar.</p>
+            <a href={waLink(`tengo un ${nombreBajo} en ${e.estado} y quiero cotizar equipo contra incendios`)} target="_blank" rel="noopener" class="l3-btn-wa">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+              <span>Escribirnos por WhatsApp</span>
+            </a>
+            {categoria && (
+              <a href={`/productos/${categoria.slug}`} class="l3-btn-ghost">
+                <span>Ver {categoria.nombre.toLowerCase()}</span>
+              </a>
+            )}
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

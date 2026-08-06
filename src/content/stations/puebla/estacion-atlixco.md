@@ -34,7 +34,7 @@ equipment:
   other: "Equipo de rescate en montaña para zona del Popocatépetl"
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Bomberos Atlixco | Cuerpo de Bomberos Ciudad de las Flores"
+metaTitle: "Bomberos Atlixco | Cuerpo de Ciudad las Flores"
 metaDescription: "Heroico Cuerpo de Bomberos de Atlixco, Pueblo Mágico. Cobertura zona del Popocatépetl. Teléfono 244 445-2200, emergencias 911. Rescate montaña."
 ---
 

@@ -30,7 +30,7 @@ equipment:
   rescueVehicles: 1
 verified: true
 lastUpdated: "2026-02-06"
-metaTitle: "Estación de Bomberos Metepec | Estado de México"
+metaTitle: "Estación de Bomberos Metepec | Estado México"
 metaDescription: "Estación de Bomberos de Metepec. Pueblo Mágico del Estado de México. Teléfono y servicios. Emergencias: 911."
 ---
 
