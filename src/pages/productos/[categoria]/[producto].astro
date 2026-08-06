@@ -40,6 +40,9 @@ const TEL_FMT = '55 5555 5555';
 const WA_NUM = '525500000000';
 const wa = (t: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(`Hola, necesito cotizar ${t}`)}`;
 
+/** "de" + un label que empieza con artículo: "el Cairns 1836" → "del Cairns 1836". */
+const deLabel = (s: string) => (/^el\s/i.test(s) ? `del ${s.slice(3)}` : `de ${s}`);
+
 const urlCat = `/productos/${cat.slug}`;
 const url = `${SITE}${urlCat}/${prod.slug}`;
 
@@ -187,10 +190,11 @@ const catalogoSchema = catalogo
             })),
           ],
           offers: {
+            // La oferta apunta a la misma URL que el producto: a su ficha L4 si existe.
             '@type': 'Offer',
             availability: 'https://schema.org/InStock',
             priceCurrency: 'MXN',
-            url: `${url}#catalogo`,
+            url: c.slug && c.l4 ? `${url}/${c.slug}` : `${url}#catalogo`,
             seller: { '@type': 'Organization', name: 'FIREFIGHTER México', url: SITE },
           },
         },
@@ -388,7 +392,8 @@ const faqSchema = faqs.length
                     {c.slug && c.l4 ? (
                       <a href={`${urlCat}/${prod.slug}/${c.slug}`} class="cg-btn">
                         <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        <span>Ver ficha de {c.fichaLabel ?? c.variante}</span>
+                        {/* "de" + "el X" se contrae en "del X": el label lleva su artículo */}
+                        <span>Ver ficha {deLabel(c.fichaLabel ?? c.variante)}</span>
                       </a>
                     ) : (
                       <a href={wa(`${prod.nombre} · ${c.marca} ${c.modelo} ${c.variante}`)} target="_blank" rel="noopener" class="cg-btn">

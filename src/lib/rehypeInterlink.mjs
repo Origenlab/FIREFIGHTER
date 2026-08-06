@@ -35,6 +35,15 @@ export const REGLAS_CATALOGO = [
   { termino: 'Bullard PX Series', href: `${CASCOS}/bullard-px-series`, titulo: 'Casco estructural Bullard PX Series' },
   { termino: 'PX Series', href: `${CASCOS}/bullard-px-series`, titulo: 'Casco estructural Bullard PX Series' },
   { termino: 'Bullard PX', href: `${CASCOS}/bullard-px-series`, titulo: 'Casco estructural Bullard PX Series' },
+  { termino: 'UST Traditional', href: `${CASCOS}/bullard-ust-traditional`, titulo: 'Casco estructural Bullard UST Traditional' },
+  { termino: 'UST LowRider', href: `${CASCOS}/bullard-ust-traditional`, titulo: 'Casco estructural Bullard UST Traditional' },
+  { termino: 'Bullard UST', href: `${CASCOS}/bullard-ust-traditional`, titulo: 'Casco estructural Bullard UST Traditional' },
+  { termino: 'Bullard LT', href: `${CASCOS}/bullard-lt-series`, titulo: 'Casco estructural Bullard LT Series' },
+  { termino: 'LT Series', href: `${CASCOS}/bullard-lt-series`, titulo: 'Casco estructural Bullard LT Series' },
+  { termino: 'Cairns 1836', href: `${CASCOS}/msa-cairns-1836`, titulo: 'Casco estructural MSA Cairns 1836' },
+  { termino: 'Cairns 660C', href: `${CASCOS}/msa-cairns-660c-metro`, titulo: 'Casco estructural MSA Cairns 660C Metro' },
+  { termino: '660C Metro', href: `${CASCOS}/msa-cairns-660c-metro`, titulo: 'Casco estructural MSA Cairns 660C Metro' },
+  { termino: 'Cairns XF1', href: `${CASCOS}/msa-cairns-xf1`, titulo: 'Casco estructural MSA Cairns XF1' },
 
   // ── L3 · producto. Varias formas de decir lo mismo: cada post usa la suya, y como solo se
   // enlaza un destino por artículo, sumar variantes amplía cobertura sin subir densidad.

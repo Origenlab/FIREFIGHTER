@@ -99,14 +99,14 @@ L3["catalogo"] = collections.OrderedDict([
       "estado": "documentada",
       "img": "/images/catalogo/1690210795713-600x450.webp",
       "alt": "Dos bomberos con casco estructural y visera durante una operación",
-      "desc": "La serie ligera, con <strong>Quick-Attach Blade System</strong> para cambiar la protección ocular sin herramienta y ajuste U-Fit de 12 posiciones. Es la única de las series consultadas cuyo manual de fabricante está disponible en español.",
+      "desc": "La serie ligera, con <strong>Quick-Attach</strong> para cambiar la protección ocular sin herramienta y ajuste U-Fit de 12 posiciones. Es la única serie donde el fabricante documenta <strong>qué ajusta cada eje</strong>: altura de uso y balance adelante-atrás por separado.",
       "specs": [
-        "Coquilla termoplástica de perfil bajo",
-        "Quick-Attach Blade System sin herramienta",
-        "Suspensión U-Fit con 12 posiciones de ajuste",
-        "Orejera de Nomex rip-stop de 6 oz reemplazable"
+        "Coquilla termoplástica de perfil contemporáneo",
+        "Quick-Attach para careta y goggles sin herramienta",
+        "U-Fit de 12 posiciones en dos ejes documentados",
+        "Modelos LTX y LTG4X en la misma serie"
       ],
-      "chip": "Manual del fabricante disponible en español"
+      "chip": "Ajuste documentado por eje · altura y balance"
     },
     {
       "marca": "MSA",

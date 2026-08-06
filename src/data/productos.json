@@ -2715,6 +2715,7 @@
                 ],
                 "chip": "Peso no publicado · se solicita por número de parte",
                 "slug": "bullard-px-series",
+                "fichaLabel": "la serie PX",
                 "l4": {
                   "seoTitle": "Casco Bullard PX Series NFPA 1970 · 2025",
                   "seoDescription": "Casco estructural Bullard PX: coquilla termoplástica, U-Fit de 36 posiciones, visor ReTrak y TrakLite integrado. Configuración y clave por partida en 24 h.",
@@ -2819,7 +2820,7 @@
                       "eyebrow": "Geometría",
                       "titulo": "14\" × 10\" × 6-7/8\" y el ancho que depende de la configuración",
                       "parrafos": [
-                        "Bullard publica las dimensiones exteriores de la PX en su hoja de especificación para licitación, y hay un detalle que casi nadie lee: el ancho de 10 pulgadas está medido <strong>en el herraje de la careta</strong>. Es decir, la dimensión que decide si el casco pasa por una escotilla o estorba dentro de la cabina depende de la protección ocular que se eligió."
+                        "Bullard publica las dimensiones exteriores de la PX en su hoja de especificación para licitación, y hay un detalle que casi nadie lee: el ancho de 10 pulgadas está medido <strong>en el herraje de la careta</strong>. Es decir, la dimensión que decide si el casco pasa por una escotilla o estorba dentro de la cabina depende de la protección ocular que se eligió. La comparación natural es contra la UST Traditional de la misma marca, que declara 15-5/8\" de largo y 12\" de ancho."
                       ],
                       "tabla": {
                         "head": [
@@ -3151,8 +3152,7 @@
                       "a": "Se fijan las seis decisiones —protección facial, protección ocular en renglón aparte, iluminación, barboquejo, color de coquilla y de cinta reflejante, orejera y sistema de confort— más la edición normativa vigente, el organismo certificador, el certificado del modelo cotizado, los números de parte de refacciones y la fecha de fabricación por unidad. Nosotros entregamos la propuesta ya desglosada así, con la clave por configuración y la cantidad por color."
                     }
                   ]
-                },
-                "fichaLabel": "la serie PX"
+                }
               },
               {
                 "marca": "Bullard",
@@ -3170,7 +3170,444 @@
                   "Tres opciones de protección ocular documentadas",
                   "Cinco años de garantía en la coquilla"
                 ],
-                "chip": "LowRider: 49.3 a 54.4 oz · 1.4 a 1.5 kg publicados"
+                "chip": "LowRider: 49.3 a 54.4 oz · 1.4 a 1.5 kg publicados",
+                "slug": "bullard-ust-traditional",
+                "fichaLabel": "la UST Traditional",
+                "l4": {
+                  "seoTitle": "Casco Bullard UST Traditional NFPA 1970",
+                  "seoDescription": "Casco tradicional Bullard UST: composite de fibra de vidrio con resina termoestable, ala completa de 15-5/8\", beading de aluminio y tres perfiles de serie.",
+                  "h1": "Casco estructural Bullard UST Traditional",
+                  "subtitulo": "La tradicional de ala completa de Bullard: coquilla de composite de fibra de vidrio con resina termoestable de 15-5/8\" × 12\" × 7\", borde elastomérico reforzado con aluminio, cofia de uretano sobre coquilla interior de alta temperatura y tres perfiles dentro de la misma serie.",
+                  "heroImg": {
+                    "src": "/images/catalogo/1638401607229-1000x750.webp",
+                    "alt": "Casco estructural tradicional de ala completa con protección facial en escena",
+                    "caption": "Silueta tradicional de ala completa"
+                  },
+                  "heroBloques": [
+                    {
+                      "label": "Por qué el ala completa sigue siendo una decisión técnica",
+                      "texto": "La silueta tradicional se discute como si fuera nostalgia y en realidad es <strong>geometría</strong>: el ala completa forma una cuenca que manda agua, brasa y escombro hacia atrás y afuera del cuello del chaquetón, y el composite termoestable aporta la rigidez para sostener ese voladizo. Lo que se paga por eso son <strong>1-5/8 de pulgada más de largo y 2 pulgadas más de ancho</strong> que un perfil recortado de la misma marca. La pregunta correcta no es cuál se ve mejor: es qué maniobra domina el turno."
+                    },
+                    {
+                      "label": "Distribución autorizada, no reventa",
+                      "texto": "Entregamos la serie con <strong>certificado del modelo cotizado, etiqueta legible y fecha de fabricación por unidad</strong>, y con los números de parte de suspensión, orejeras, barboquejo, borde y protección ocular, porque en un casco tradicional la reposición del borde y del portafrente es parte del mantenimiento. Propuesta con partidas y acabado definido en menos de <strong>24 horas hábiles</strong>, con cobertura en los <strong>32 estados de la República</strong>."
+                    }
+                  ],
+                  "heroDatos": [
+                    {
+                      "label": "Norma declarada",
+                      "valor": "NFPA 1970 · edición 2025"
+                    },
+                    {
+                      "label": "Dimensiones",
+                      "valor": "15-5/8\" × 12\" × 7\""
+                    },
+                    {
+                      "label": "Peso del LowRider",
+                      "valor": "1.4 a 1.5 kg publicados"
+                    }
+                  ],
+                  "specStrip": [
+                    {
+                      "label": "Coquilla",
+                      "valor": "Composite con resina termoestable"
+                    },
+                    {
+                      "label": "Acabado",
+                      "valor": "Hard coat de poliéster"
+                    },
+                    {
+                      "label": "Borde",
+                      "valor": "Elastomérico con refuerzo de aluminio"
+                    },
+                    {
+                      "label": "Suspensión",
+                      "valor": "Corona de seis llaves + ratchet"
+                    },
+                    {
+                      "label": "Protección ocular",
+                      "valor": "Tres opciones documentadas"
+                    },
+                    {
+                      "label": "Perfiles de la serie",
+                      "valor": "Traditional · LW · LowRider"
+                    }
+                  ],
+                  "secciones": [
+                    {
+                      "id": "la-tradicional",
+                      "eyebrow": "Qué estás comprando",
+                      "titulo": "El ala completa es una cuenca, no un adorno",
+                      "parrafos": [
+                        "En un casco tradicional el ala no termina en la nuca: la rodea. Esa continuidad forma una <strong>cuenca de escurrimiento</strong> que dirige el agua de la propia línea de ataque, la brasa y el escombro fino hacia atrás y hacia los costados, en vez de dejarlos caer entre el casco y el cuello del chaquetón. Es la razón por la que la mayoría de los cuerpos que trabajan interior con línea siguen especificando ala completa, y la razón por la que la silueta sobrevivió a cuatro generaciones de materiales.",
+                        "El costo de esa geometría es volumen y voladizo. Un ala que sobresale necesita una coquilla rígida que la sostenga sin flexionar, y ahí entra el composite de fibra de vidrio con resina termoestable: más rígido que un termoplástico, y por eso mismo la familia que Bullard usa para su línea tradicional."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Ala continua con cuenca trasera",
+                          "d": "Deriva agua y escombro fuera del cuello del chaquetón. Es lo que gana el ala completa y lo que se pierde al recortar el perfil."
+                        },
+                        {
+                          "t": "Composite de fibra de vidrio",
+                          "d": "Resina termoestable con el color integrado y acabado hard coat de poliéster resistente a la flama. Rigidez para el voladizo del ala y comportamiento estable tras exposiciones repetidas."
+                        },
+                        {
+                          "t": "Borde reforzado con aluminio",
+                          "d": "El perímetro del ala lleva un beading elastomérico con refuerzo de aluminio, sujeto con clip de latón y D-ring. Es pieza estructural y de mantenimiento, no terminación estética."
+                        },
+                        {
+                          "t": "Portafrente y marcaje",
+                          "d": "La configuración estándar del perfil LowRider incluye portafrente de 6\" tipo Maple Leaf; hay portafrentes de cuero como opción. Es donde vive la identificación de compañía y de mando."
+                        }
+                      ],
+                      "nota": "La serie UST no es un solo casco: Bullard la ofrece en <strong>tres perfiles</strong> —Traditional, UST-LW y LowRider— que resuelven el mismo problema de peso y equilibrio de forma distinta. La comparación está más abajo, y es la decisión que más conviene tomar antes de pedir precio."
+                    },
+                    {
+                      "id": "composite",
+                      "eyebrow": "Material de coquilla",
+                      "titulo": "Composite termoestable: qué gana y qué cuesta frente al termoplástico",
+                      "parrafos": [
+                        "La coquilla es <strong>fibra de vidrio con una resina termoestable retardante de flama</strong>, con el pigmento integrado en el moldeo y una capa exterior de polvo de poliéster con acabado hard coat. “Termoestable” es la palabra clave: a diferencia de un termoplástico, la resina cura de forma irreversible y no vuelve a ablandarse con temperatura, lo que sostiene la rigidez del ala en exposiciones repetidas.",
+                        "Lo que cuesta es volumen y precio de reposición. Un composite de este tipo se repone más caro que una coquilla termoplástica y suma dimensiones. Por eso Bullard mantiene las dos familias en catálogo: quien prioriza rigidez y silueta tradicional se queda en composite; quien prioriza perfil recortado y reposición económica se va al termoplástico."
+                      ],
+                      "nota": "Si el criterio de compra es peso y maniobra en espacio reducido, la comparación honesta no es contra otra marca: es contra el <strong>casco Bullard PX Series</strong>, la misma marca en termoplástico y perfil recortado. Los dos están certificados; resuelven turnos distintos."
+                    },
+                    {
+                      "id": "borde",
+                      "eyebrow": "El detalle que nadie especifica",
+                      "titulo": "El borde del ala: la pieza que se golpea primero",
+                      "parrafos": [
+                        "La hoja de especificación describe el perímetro del ala como un <strong>beading elastomérico reforzado con aluminio</strong>, fijado con un clip de latón y un D-ring. Suena a detalle de acabado y es lo contrario: el borde es lo primero que golpea un marco de puerta, lo que raspa contra el piso cuando el casco se apoya y lo que absorbe el impacto lateral que no llega a la coquilla.",
+                        "En una compra por volumen conviene pedir su número de parte junto con el de la suspensión y las orejeras. Un borde levantado o con el refuerzo expuesto es criterio de reposición inmediata: deja de proteger el canto del composite y empieza a acumular contaminantes en el hueco. Ninguna especificación de licitación que hayamos revisado en México lo menciona, y es una refacción de bajo costo que alarga la vida útil real del casco."
+                      ]
+                    },
+                    {
+                      "id": "perfiles",
+                      "eyebrow": "Los tres perfiles",
+                      "titulo": "Traditional, UST-LW y LowRider: la misma serie, tres respuestas",
+                      "parrafos": [
+                        "Bullard resolvió por iteración el problema clásico del casco tradicional —peso y centro de gravedad alto— sin abandonar la silueta. El resultado son tres perfiles de la misma serie. Elegir entre ellos es una decisión previa a pedir precio, porque cambian el peso publicado, la altura de uso y el interior."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Perfil",
+                          "Lo que publica Bullard",
+                          "Para quién"
+                        ],
+                        "rows": [
+                          [
+                            "UST Traditional",
+                            "Composite de fibra de vidrio con resina termoestable, 15-5/8\" × 12\" × 7\", tres opciones de protección ocular. No publica peso.",
+                            "Cuerpos con silueta tradicional normada que priorizan rigidez y cuenca completa, y para los que el peso no es criterio de evaluación escrito."
+                          ],
+                          [
+                            "UST-LW",
+                            "Plataforma ligera de la misma serie tradicional. Es la base sobre la que Bullard construyó el LowRider.",
+                            "Quien quiere ala completa con menos carga que la Traditional y no necesita el perfil bajo."
+                          ],
+                          [
+                            "UST LowRider",
+                            "49.3 a 54.4 oz —1.4 a 1.5 kg—, altura de uso más baja, diseño que “abraza” la parte posterior de la cabeza, U-Fit de 36 posiciones, sistema FireFit, acabado super matte y NFPA 1970 edición 2025.",
+                            "Turnos largos y maniobra interior donde el equilibrio y la carga cervical sí se evalúan. Es el único perfil de la serie con peso publicado."
+                          ]
+                        ]
+                      },
+                      "nota": "El peso de <strong>1.4 a 1.5 kg</strong> del LowRider es, hasta donde hemos verificado, el único peso que Bullard publica en toda su línea de casco estructural. Si el anexo técnico va a evaluar peso, ese perfil es el que se puede sostener con un número de fabricante."
+                    },
+                    {
+                      "id": "geometria",
+                      "eyebrow": "Cuánto ocupa",
+                      "titulo": "Lo que cuesta el ala completa, en pulgadas",
+                      "parrafos": [
+                        "Comparar siluetas con adjetivos no lleva a ninguna decisión. Bullard publica las dimensiones exteriores de sus dos familias, así que la diferencia se puede poner en números y contra la maniobra real: escotilla, interior de vehículo, gateo en espacio reducido y giro de cabeza con pieza facial puesta."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Dimensión",
+                          "UST Traditional",
+                          "PX Series (termoplástico)",
+                          "Diferencia"
+                        ],
+                        "rows": [
+                          [
+                            "Largo",
+                            "15-5/8\"",
+                            "14\"",
+                            "1-5/8\" más de ala en la tradicional: es la cuenca trasera"
+                          ],
+                          [
+                            "Ancho",
+                            "12\"",
+                            "10\" en el herraje de la careta",
+                            "2\" más de silueta: se nota al girar la cabeza entre obstáculos"
+                          ],
+                          [
+                            "Alto",
+                            "7\"",
+                            "6-7/8\"",
+                            "Prácticamente igual: la diferencia de la tradicional no es altura, es superficie"
+                          ],
+                          [
+                            "Peso publicado",
+                            "No publicado en la Traditional · 1.4 a 1.5 kg en el LowRider",
+                            "No publicado",
+                            "Solo un perfil de una de las dos familias tiene cifra de fabricante"
+                          ]
+                        ]
+                      },
+                      "nota": "La lectura correcta de la tabla: la tradicional no es “más grande” en todas las direcciones, es <strong>más ancha y con más ala</strong>. Si la restricción operativa es altura libre, las dos siluetas son equivalentes; si es paso lateral, no."
+                    },
+                    {
+                      "id": "suspension-y-confort",
+                      "eyebrow": "Ajuste e higiene",
+                      "titulo": "Corona de seis llaves, ratchet y el interior de una pieza",
+                      "parrafos": [
+                        "La suspensión de la serie está descrita con precisión en la hoja de licitación, y conviene copiarla así en una partida en lugar de reducirla a un número de puntos. El interior, además, es la parte del casco que más contamina y la que decide si la descontaminación se hace de verdad o se pospone."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Corona sobre seis llaves",
+                          "d": "Tres tiras de nylon de 3/4 de pulgada ancladas en seis llaves de nylon. En el perfil LowRider, Bullard cuenta 36 posiciones de ajuste del sistema U-Fit sobre esa misma arquitectura."
+                        },
+                        {
+                          "t": "Banda de ratchet con ajuste de altura",
+                          "d": "Ajuste de perímetro operable con guante, más un ajustador trasero de altura con al menos una pulgada de recorrido en tres llaves. El eje de altura es el que fija dónde queda el ala frente a los ojos."
+                        },
+                        {
+                          "t": "Sistema FireFit",
+                          "d": "Interior de una sola pieza con liberación rápida, estándar en el LowRider. Se retira completo para lavarlo, que es la diferencia entre un programa de descontaminación que se cumple y uno que existe en papel. La prueba de ajuste, en cambio, se hace con capucha puesta: el interior limpio cambia el volumen."
+                        },
+                        {
+                          "t": "Orejera y barboquejo",
+                          "d": "Orejera de Nomex rip-stop de 6 oz con tres capas de franela retardante; barboquejo de dos tramos de 3/4 de pulgada en Nomex con hebilla de liberación rápida y corredera tipo postman, con extensión de al menos 24 pulgadas."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ocular",
+                      "eyebrow": "Protección ocular",
+                      "titulo": "Tres opciones, y cómo el ala cambia su uso",
+                      "parrafos": [
+                        "La UST Traditional se documenta con tres opciones de protección ocular, y el ala completa modifica cómo se usan: da sombra sobre la careta —lo que ayuda con el reflejo y estorba con poca luz— y obliga a que el visor retráctil se guarde en un espacio que ya está ocupado por la geometría del ala.",
+                        "La regla de fondo no cambia respecto al resto de la línea: una careta montada al casco protege la cara de proyecciones frontales pero no cierra el contorno del ojo. Cuando el elemento trae la pieza facial del equipo de respiración, esa es su protección ocular primaria; para las maniobras sin máscara se especifican goggles, con su propio número de parte y en renglón aparte."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Careta de 4\" × 15\"",
+                          "d": "Policarbonato PPC con recubrimiento duro, ópticamente correcta, declarada contra ANSI/ISEA Z87.1. Es la opción más común y la más económica de reponer cuando se raya."
+                        },
+                        {
+                          "t": "Visor ReTrak",
+                          "d": "Poliarilato de alta temperatura, operación con una mano y desmontable sin herramienta. Bullard lo ofrece en UST, UST-LW, FX y PX, y declara los cascos con ReTrak contra NFPA 1971 y ANSI/ISEA Z87.1+."
+                        },
+                        {
+                          "t": "Goggles ventilados",
+                          "d": "Policarbonato de 2.8 mm con tratamiento antiempañante y ventilación. La única de las tres que sella el contorno del ojo para ventilación, remoción y rescate vehicular."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "configuracion",
+                      "eyebrow": "Cómo se pide",
+                      "titulo": "Acabado, frente y trim: lo que define una tradicional",
+                      "parrafos": [
+                        "En un casco tradicional la configuración no es solo funcional: el acabado, el portafrente y el color del trim son lo que hace reconocible a una corporación en escena. Y todo eso se define en la orden, no después."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Decisión",
+                          "Opciones publicadas",
+                          "Cómo se escribe en la partida"
+                        ],
+                        "rows": [
+                          [
+                            "Perfil de la serie",
+                            "Traditional, UST-LW o LowRider",
+                            "“Perfil LowRider” cuando el peso se evalúa; “Traditional” cuando la silueta está normada por procedimiento"
+                          ],
+                          [
+                            "Acabado",
+                            "Gloss o super matte —estándar en el LowRider—",
+                            "“Acabado super matte”, porque cambia la apariencia y el criterio de inspección visual"
+                          ],
+                          [
+                            "Color de coquilla y trim",
+                            "Coquilla en blanco, rojo, amarillo o negro; trim reflejante amarillo lima de serie",
+                            "Cantidad por color, indicando el color por función o rango"
+                          ],
+                          [
+                            "Portafrente",
+                            "6\" tipo Maple Leaf de serie; portafrentes de cuero opcionales",
+                            "“Portafrente de 6\" con número de unidad y nombre de la corporación”, especificando si lleva cuero"
+                          ],
+                          [
+                            "Protección ocular",
+                            "Careta de 4\", visor ReTrak o goggles",
+                            "Dos renglones: protección facial montada al casco y protección ocular, nunca uno solo"
+                          ],
+                          [
+                            "Iluminación y barboquejo",
+                            "TrakLite opcional; barboquejo estándar o con correa de garganta",
+                            "“Con TrakLite” y “barboquejo con correa de garganta” explícitos: van definidos en la clave"
+                          ]
+                        ]
+                      },
+                      "nota": "Súmale la <strong>edición normativa vigente</strong>, el certificado del modelo cotizado, el número de parte del borde y de la orejera, y la fecha de fabricación por unidad. Con eso la partida deja de admitir “equivalentes” que no lo son."
+                    },
+                    {
+                      "id": "lo-no-publicado",
+                      "eyebrow": "Lo que el fabricante no publica",
+                      "titulo": "Cuatro huecos de la Traditional y cómo cerrarlos",
+                      "parrafos": [
+                        "La hoja de licitación de la serie es de las más completas del mercado en materiales y construcción, y aun así hay datos que no están. Decirlo es parte del trabajo: un número inventado es exactamente lo que no se sostiene en una aclaración de bases ni en una inconformidad."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Dato ausente",
+                          "Qué decide",
+                          "Cómo se resuelve"
+                        ],
+                        "rows": [
+                          [
+                            "Peso de la UST Traditional",
+                            "Carga cervical en turnos largos y comparación entre perfiles",
+                            "Se pide por escrito para la clave cotizada; si el peso va a evaluarse, el perfil LowRider sí tiene cifra publicada"
+                          ],
+                          [
+                            "Rango de talla en pulgadas o centímetros",
+                            "Si el casco se comparte entre turnos y quién queda fuera del rango",
+                            "Se solicita el rango del sistema de ajuste para la configuración cotizada y se valida con prueba de ajuste"
+                          ],
+                          [
+                            "Espesor de la coquilla por zona",
+                            "Comparación técnica frente a fabricantes que sí lo publican por corona y ala",
+                            "Se pide el espesor nominal por zona; MSA lo publica para su tradicional, así que es un dato exigible en una comparativa"
+                          ],
+                          [
+                            "Vida útil declarada del casco",
+                            "Cuándo sale del inventario si no hubo impacto",
+                            "No hay cifra de fabricante: rige el retiro de NFPA 1850 (1851) a los diez años de la fecha de fabricación"
+                          ]
+                        ]
+                      },
+                      "nota": "Los cuatro se piden en un solo correo referido al número de parte cotizado, y los gestionamos como parte de la propuesta. Lo que no hacemos es rellenar el hueco con el dato de otro perfil de la misma serie: <strong>el peso del LowRider es del LowRider</strong>."
+                    },
+                    {
+                      "id": "mantenimiento",
+                      "eyebrow": "Ciclo de vida",
+                      "titulo": "Qué se inspecciona en un composite y qué cubre la garantía",
+                      "parrafos": [
+                        "Un composite termoestable no se deforma como un termoplástico: avisa distinto. Lo que hay que buscar en la inspección anual documentada es <strong>decoloración por calor, burbujeo o levantamiento del acabado, fibras expuestas en el canto del ala y borde con el refuerzo visible</strong>, además del estado del interior, del barboquejo y del portafrente. Un golpe absorbido puede comprometer la cofia sin dejar marca en la coquilla.",
+                        "Del lado comercial, Bullard publica <strong>cinco años de garantía en la coquilla</strong> y garantía de vida útil en los componentes no electrónicos, que su propia hoja define como los diez años de NFPA 1851. Es cobertura por defecto de fabricación, no una autorización para usar el casco más tiempo."
+                      ],
+                      "nota": "El retiro se rige por <strong>NFPA 1850 (1851)</strong>: diez años desde la fecha de fabricación de la etiqueta, más el retiro anticipado por impacto o daño. Antes de reemplazar la unidad completa conviene revisar si lo que falló es borde, interior, orejera o suspensión: las cuatro son refacciones con número de parte."
+                    }
+                  ],
+                  "galeria": [
+                    {
+                      "src": "/images/catalogo/1735107673023-600x400.webp",
+                      "alt": "Bombero de perfil con casco tradicional de ala completa",
+                      "caption": "El perfil que define la serie"
+                    },
+                    {
+                      "src": "/images/catalogo/1606613817012-600x450.webp",
+                      "alt": "Casco de ala completa visto desde atrás junto a la unidad",
+                      "caption": "La cuenca trasera en uso"
+                    },
+                    {
+                      "src": "/images/catalogo/1563062067-bb-600x450.webp",
+                      "alt": "Bombero con casco rojo y equipo de respiración autónoma de perfil",
+                      "caption": "Color por función y mando"
+                    },
+                    {
+                      "src": "/images/catalogo/1575507371089-600x450.webp",
+                      "alt": "Chaquetones y cascos estructurales colgados en la estación",
+                      "caption": "Una clave y un acabado por corporación"
+                    }
+                  ],
+                  "aplicaciones": [
+                    {
+                      "sector": "Cuerpos de bomberos",
+                      "desc": "Para corporaciones con la silueta tradicional normada por procedimiento. El portafrente de 6\" sostiene número de unidad e identificación de mando, y el borde es refacción de bajo costo."
+                    },
+                    {
+                      "sector": "Brigadas industriales",
+                      "desc": "Cuando la matriz de riesgo contempla intervención estructural con línea. Si la maniobra dominante es paso lateral en espacios reducidos, conviene evaluar antes el perfil recortado de la misma marca."
+                    },
+                    {
+                      "sector": "Licitación pública",
+                      "desc": "Partida cerrada por perfil de la serie, acabado, color, trim, portafrente, protección facial y ocular en renglones separados, y certificado del modelo cotizado con edición vigente."
+                    }
+                  ],
+                  "datoClave": {
+                    "titulo": "El peso es de un perfil, no de la serie",
+                    "texto": "Los <strong>1.4 a 1.5 kg</strong> publicados corresponden al perfil <strong>LowRider</strong>, no a la Traditional. Si el anexo técnico evalúa peso, especifica ese perfil: es el único de la línea con cifra de fabricante que se puede sostener por escrito."
+                  },
+                  "referencias": [
+                    {
+                      "code": "NFPA 1970 · 2025",
+                      "desc": "Edición declarada por Bullard para la serie, incluida la aprobación del perfil LowRider. Consolidó NFPA 1971, 1975, 1981 y 1982; la transición cerró el 18 de marzo de 2026."
+                    },
+                    {
+                      "code": "NFPA 1971 · sin edición",
+                      "desc": "Cita que todavía aparece en la hoja de especificación para licitación de la serie UST, anterior a la consolidación. No copiarla al anexo técnico sin actualizarla."
+                    },
+                    {
+                      "code": "ANSI/ISEA Z87.1",
+                      "desc": "Norma declarada para la careta de 4\" × 15\". Los cascos con visor ReTrak se declaran contra Z87.1+, que añade el requisito de impacto."
+                    },
+                    {
+                      "code": "NFPA 1850 · 2026",
+                      "desc": "Selección, cuidado y mantenimiento: inspección anual documentada y retiro a los diez años de la fecha de fabricación. Es lo que fija la vida útil, no la garantía."
+                    },
+                    {
+                      "code": "NOM-115-STPS",
+                      "desc": "Cascos de protección industrial: especificaciones, métodos de prueba y criterios de retiro. Es otra categoría de producto y no se homologa con un casco estructural."
+                    }
+                  ],
+                  "blog": [
+                    "casco-bombero-bullard-usrhb-guia",
+                    "mantenimiento-epp-estructural-nfpa-1851",
+                    "epp-completo-kit-bombero-profesional",
+                    "nfpa-1971-mexico-norma-bomberos",
+                    "brigadas-voluntarias-equipamiento-esencial",
+                    "capucha-nomex-pbi-proteccion-cuello-cara"
+                  ],
+                  "faqs": [
+                    {
+                      "q": "¿Cuál es la diferencia entre UST Traditional, UST-LW y UST LowRider?",
+                      "a": "Son tres perfiles de la misma serie tradicional. La Traditional es la referencia de la familia: composite de fibra de vidrio con resina termoestable, 15-5/8\" × 12\" × 7\" y tres opciones de protección ocular, sin peso publicado. La UST-LW es la plataforma ligera de esa misma silueta y la base sobre la que Bullard construyó el tercer perfil. El LowRider monta más bajo, abraza la parte posterior de la cabeza, trae U-Fit de 36 posiciones, sistema FireFit y acabado super matte, y es el único con peso publicado: 49.3 a 54.4 oz, es decir 1.4 a 1.5 kg."
+                    },
+                    {
+                      "q": "¿El ala completa sirve de algo o es tradición?",
+                      "a": "Sirve, y es medible en operación aunque no en una tabla: el ala continua forma una cuenca que manda agua de la línea, brasa y escombro fino hacia atrás y afuera del cuello del chaquetón. Eso es lo que se pierde al recortar el perfil. Lo que cuesta es volumen: 1-5/8 de pulgada más de largo y 2 pulgadas más de ancho que el perfil termoplástico de la misma marca. Si la maniobra dominante es interior con línea, el ala gana; si es paso lateral en espacios muy reducidos, el perfil recortado gana."
+                    },
+                    {
+                      "q": "¿Cuánto pesa la UST Traditional?",
+                      "a": "Bullard no publica el peso de la Traditional, y no lo vamos a estimar a partir del peso de otro perfil. El único dato de fabricante en la serie es el del LowRider: 49.3 a 54.4 oz (1.4 a 1.5 kg). Si el peso va a formar parte de la evaluación, hay dos caminos honestos: especificar el perfil LowRider, que tiene cifra publicada, o pedir el peso por escrito al fabricante para la clave exacta de la Traditional con protección ocular y accesorios montados."
+                    },
+                    {
+                      "q": "¿Qué es el beading del ala y por qué hay que pedir su número de parte?",
+                      "a": "Es el perímetro del ala: un beading elastomérico reforzado con aluminio, sujeto con clip de latón y D-ring. No es terminación estética, es la pieza que golpea primero contra marcos de puerta y la que se raspa cuando el casco se apoya. Un borde levantado o con el refuerzo expuesto deja de proteger el canto del composite y acumula contaminantes en el hueco, así que es criterio de reposición. Es una refacción de bajo costo que alarga la vida útil real del casco, y prácticamente ninguna especificación mexicana la contempla."
+                    },
+                    {
+                      "q": "¿Se le puede poner portafrente de cuero y águila?",
+                      "a": "El fabricante ofrece portafrente de 6\" como parte de la configuración —tipo Maple Leaf en el estándar del LowRider— y portafrentes de cuero como opción, así que la vía correcta es pedirlo configurado de fábrica y con número de parte. Sobre accesorios que no vengan del fabricante, el criterio es simple: el certificado se emite sobre el casco tal como se ensambla, así que cualquier pieza añadida debe estar autorizada por escrito antes de montarla en un casco en servicio."
+                    },
+                    {
+                      "q": "¿Conviene acabado gloss o super matte?",
+                      "a": "Es decisión de imagen y de inspección, no de protección. El super matte —estándar en el perfil LowRider— disimula mejor el rayón superficial y da un aspecto de uso más uniforme en la flota; el gloss mantiene la apariencia tradicional y hace más evidente cualquier marca. Para el programa de inspección conviene lo que permita ver la superficie: sobre acabado brillante se detectan antes el burbujeo y el levantamiento del recubrimiento, que son criterios de retiro."
+                    },
+                    {
+                      "q": "¿La UST acepta TrakLite y visor ReTrak?",
+                      "a": "Sí. El manual del TrakLite lista compatibilidad con las series UST6, FX, PX y LT, y el visor ReTrak está disponible en UST, UST-LW, FX y PX. Dos advertencias que sí importan: el TrakLite trae componentes electrónicos, así que introduce pilas AAA como consumible y una garantía distinta a la de la coquilla, y está declarado únicamente para Clase I División 2 o áreas no peligrosas, lo que lo descarta en instalaciones que exijan equipo apto para División 1."
+                    },
+                    {
+                      "q": "¿Cómo se escribe la partida de una UST Traditional?",
+                      "a": "Perfil de la serie, material de coquilla, dimensiones, acabado, color de coquilla y de trim reflejante, portafrente con el marcaje solicitado, protección facial y protección ocular en renglones separados, barboquejo, iluminación si aplica, edición normativa vigente, organismo certificador, certificado del modelo cotizado, números de parte de suspensión, orejera y borde, y fecha de fabricación por unidad. Nosotros entregamos la propuesta ya desglosada así, con cantidad por color y acabado."
+                    }
+                  ]
+                }
               },
               {
                 "marca": "Bullard",
@@ -3181,14 +3618,404 @@
                 "estado": "documentada",
                 "img": "/images/catalogo/1690210795713-600x450.webp",
                 "alt": "Dos bomberos con casco estructural y visera durante una operación",
-                "desc": "La serie ligera, con <strong>Quick-Attach Blade System</strong> para cambiar la protección ocular sin herramienta y ajuste U-Fit de 12 posiciones. Es la única de las series consultadas cuyo manual de fabricante está disponible en español.",
+                "desc": "La serie ligera, con <strong>Quick-Attach</strong> para cambiar la protección ocular sin herramienta y ajuste U-Fit de 12 posiciones. Es la única serie donde el fabricante documenta <strong>qué ajusta cada eje</strong>: altura de uso y balance adelante-atrás por separado.",
                 "specs": [
-                  "Coquilla termoplástica de perfil bajo",
-                  "Quick-Attach Blade System sin herramienta",
-                  "Suspensión U-Fit con 12 posiciones de ajuste",
-                  "Orejera de Nomex rip-stop de 6 oz reemplazable"
+                  "Coquilla termoplástica de perfil contemporáneo",
+                  "Quick-Attach para careta y goggles sin herramienta",
+                  "U-Fit de 12 posiciones en dos ejes documentados",
+                  "Modelos LTX y LTG4X en la misma serie"
                 ],
-                "chip": "Manual del fabricante disponible en español"
+                "chip": "Ajuste documentado por eje · altura y balance",
+                "slug": "bullard-lt-series",
+                "fichaLabel": "la LT Series",
+                "l4": {
+                  "seoTitle": "Casco Bullard LT Series LTX y LTG4X",
+                  "seoDescription": "Casco estructural Bullard LT Series: termoplástico contemporáneo, U-Fit de 12 posiciones en dos ejes, Quick-Attach para careta y goggles. Cotiza en 24 h.",
+                  "h1": "Casco estructural Bullard LT Series",
+                  "subtitulo": "La serie ligera de Bullard en sus modelos LTX y LTG4X: coquilla termoplástica de perfil contemporáneo, suspensión U-Fit con 12 posiciones repartidas en dos ejes —altura de uso y balance adelante-atrás— y herraje Quick-Attach para cambiar careta o goggles sin herramienta.",
+                  "heroImg": {
+                    "src": "/images/catalogo/1690210795713-600x450.webp",
+                    "alt": "Bomberos con casco estructural de perfil contemporáneo durante una operación",
+                    "caption": "La serie ligera en operación"
+                  },
+                  "heroBloques": [
+                    {
+                      "label": "Por qué esta serie sirve para dotar por volumen",
+                      "texto": "Cuando hay que equipar veinte, cincuenta o cien elementos, el casco que gana no es el más completo: es el que <strong>ajusta a más cabezas, se limpia rápido y se repone barato</strong>. La LT resuelve las tres cosas con una coquilla termoplástica de perfil contemporáneo, un sistema Quick-Attach que cambia la protección ocular sin herramienta y —esto es lo distintivo— un ajuste que el fabricante documenta <strong>eje por eje</strong> en lugar de venderlo como un número de posiciones."
+                    },
+                    {
+                      "label": "Distribución autorizada, no reventa",
+                      "texto": "Entregamos la serie con <strong>certificado del modelo cotizado, etiqueta legible y fecha de fabricación por unidad</strong>, y con los números de parte de banda de ratchet, careta, orejera e interior, que en una dotación grande son la diferencia entre reponer una pieza y reponer el casco. Propuesta con partidas y modelo definido —LTX o LTG4X— en menos de <strong>24 horas hábiles</strong>, con cobertura en los <strong>32 estados de la República</strong>."
+                    }
+                  ],
+                  "heroDatos": [
+                    {
+                      "label": "Norma declarada",
+                      "valor": "NFPA 1970 · edición 2025"
+                    },
+                    {
+                      "label": "Ajuste",
+                      "valor": "12 posiciones en dos ejes"
+                    },
+                    {
+                      "label": "Modelos",
+                      "valor": "LTX y LTG4X"
+                    }
+                  ],
+                  "specStrip": [
+                    {
+                      "label": "Coquilla",
+                      "valor": "Termoplástico contemporáneo"
+                    },
+                    {
+                      "label": "Ajuste de altura",
+                      "valor": "Pestañas A, B y C"
+                    },
+                    {
+                      "label": "Balance",
+                      "valor": "Postes 1 y 2"
+                    },
+                    {
+                      "label": "Protección ocular",
+                      "valor": "Careta R330 o goggles IZ4/FP4"
+                    },
+                    {
+                      "label": "Montaje",
+                      "valor": "Quick-Attach sin herramienta"
+                    },
+                    {
+                      "label": "Iluminación",
+                      "valor": "TrakLite compatible"
+                    }
+                  ],
+                  "secciones": [
+                    {
+                      "id": "la-serie",
+                      "eyebrow": "Qué estás comprando",
+                      "titulo": "Dos modelos, una plataforma ligera",
+                      "parrafos": [
+                        "El manual de fabricante cubre la serie con <strong>dos modelos: LTX y LTG4X</strong>, los dos descritos como casco estructural termoplástico de estilo contemporáneo. Es la línea que Bullard posiciona como ligera y de perfil recortado, y en la práctica es la que más se ve en dotaciones grandes: brigadas industriales, cuerpos municipales que equipan por licitación y programas de reposición escalonada.",
+                        "La decisión entre modelos no se toma por catálogo sino por el herraje y los accesorios que ya tiene la corporación. Cuando hay inventario de caretas o de goggles, el criterio es cuál de los dos monta lo que ya está en la estación sin comprar herraje nuevo."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Coquilla termoplástica",
+                          "d": "Perfil contemporáneo, más recortado que una tradicional de ala completa. Menos superficie que enganche en espacios reducidos y reposición más económica que un composite."
+                        },
+                        {
+                          "t": "Quick-Attach",
+                          "d": "El herraje que permite montar o cambiar careta y goggles <strong>sin herramienta</strong>. En una flota grande esto define si el cambio de protección ocular lo hace la estación o el proveedor."
+                        },
+                        {
+                          "t": "Careta R330",
+                          "d": "Careta de 4 pulgadas de PPC con recubrimiento duro. El manual la lista para FX y PX además de la LT, así que es refacción compartida entre series: una sola clave de repuesto para varias familias."
+                        },
+                        {
+                          "t": "Goggles IZ4 y FP4",
+                          "d": "Ensambles de goggle disponibles también con herraje Quick-Attach. Son la protección ocular real para maniobras sin pieza facial, y se piden por separado."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ajuste-por-eje",
+                      "eyebrow": "Lo que distingue a esta serie",
+                      "titulo": "12 posiciones, pero repartidas en dos ejes",
+                      "parrafos": [
+                        "Casi todos los fabricantes venden el ajuste como un número: 12 posiciones, 36 posiciones, ocho puntos. El manual de la LT hace algo distinto y más útil: <strong>dice qué controla cada ajuste</strong>. Las pestañas se identifican como A, B y C y mueven la <strong>altura de uso</strong>; los postes se identifican como 1 y 2 y controlan el <strong>balance adelante-atrás</strong>, es decir si el casco tiende a irse hacia la frente o hacia la nuca.",
+                        "Eso cambia la práctica de dotación por completo. Un elemento al que el casco “se le va para atrás” no necesita otra talla: necesita mover el poste. Un elemento que siente el ala demasiado baja no necesita otro casco: necesita cambiar de pestaña. Con esa información, el ajuste inicial de una flota deja de ser prueba y error y se convierte en un procedimiento de dos preguntas."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Ajuste",
+                          "Qué controla",
+                          "Síntoma que resuelve"
+                        ],
+                        "rows": [
+                          [
+                            "Pestañas A, B y C",
+                            "Altura de uso del casco sobre la cabeza",
+                            "El ala queda demasiado baja sobre los ojos o demasiado alta y deja frente expuesta"
+                          ],
+                          [
+                            "Postes 1 y 2",
+                            "Balance adelante-atrás y nivelación",
+                            "El casco se va hacia la nuca al mirar arriba o se cae hacia la frente al agacharse"
+                          ],
+                          [
+                            "Banda de ratchet",
+                            "Perímetro, operable con guante",
+                            "Ajuste fino por turno y por elemento, sin herramienta"
+                          ],
+                          [
+                            "Combinación",
+                            "12 configuraciones de asiento documentadas",
+                            "Compartir cascos entre turnos con un procedimiento escrito en lugar de criterio individual"
+                          ]
+                        ]
+                      },
+                      "nota": "Este es el dato que hay que llevarse a la capacitación de entrega: <strong>NOM-017-STPS</strong> obliga a capacitar en el uso del equipo, y un ajuste documentado por eje es lo que hace que esa capacitación sea reproducible en lugar de una demostración que se olvida."
+                    },
+                    {
+                      "id": "dotacion",
+                      "eyebrow": "Dotación por volumen",
+                      "titulo": "Por qué esta serie gana en pedidos grandes",
+                      "parrafos": [
+                        "En una compra de veinte cascos el precio unitario decide; en una de cien, lo que decide es el costo de operar la flota durante diez años. Ahí la LT tiene tres ventajas concretas: la coquilla termoplástica se repone más barato que un composite, la careta R330 es refacción compartida con otras series de la misma marca, y el herraje Quick-Attach permite que el cambio de protección ocular lo haga el propio personal.",
+                        "El punto a considerar es el opuesto: si el procedimiento de la corporación exige silueta tradicional de ala completa, esta serie no es la respuesta y conviene evaluar la <strong>UST Traditional</strong> de la misma marca. La comparación no es de calidad, es de geometría y de norma interna."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Reposición por pieza",
+                          "d": "Banda de ratchet, cubierta de la banda, almohadilla, interior, orejera, barboquejo y careta tienen número de parte. En flota grande la partida de refacciones se presupuesta desde el primer año."
+                        },
+                        {
+                          "t": "Refacción compartida",
+                          "d": "La careta R330 aparece en el manual para FX y PX además de la LT. Una sola clave cubre varias series, lo que simplifica el almacén de una corporación con parque mixto."
+                        },
+                        {
+                          "t": "Cambio sin herramienta",
+                          "d": "Quick-Attach permite pasar de careta a goggles según la maniobra sin mandar el casco a taller. Es tiempo de disponibilidad, no comodidad."
+                        },
+                        {
+                          "t": "Iluminación opcional",
+                          "d": "El manual del TrakLite lista compatibilidad con UST6, FX, PX y LT. Si se agrega, entran pilas AAA como consumible y la restricción de atmósfera Clase I División 2."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "limpieza",
+                      "eyebrow": "Lo que dice el fabricante, textual",
+                      "titulo": "Limpieza: detergente suave y agua, nada más",
+                      "parrafos": [
+                        "El manual es explícito y conviene citarlo en el procedimiento de la estación en lugar de parafrasearlo: la instrucción es <strong>limpiar coquilla interior y exterior con jabón o detergente suave</strong>, y no usar el casco si no está completamente limpio y seco. La versión en español del manual de la marca —publicada para la serie UST— lo pone en mayúsculas: limpiar sólo con detergente suave y agua, y <strong>no exponer el casco a pinturas, solventes, productos químicos, adhesivos o gasolina</strong>.",
+                        "Esto tiene una consecuencia que casi nadie aplica: los adhesivos entran en la lista. Las calcomanías de patrocinio, los stickers de identificación pegados encima y la pintura de retoque no son personalización inocua, son sustancias que el fabricante pide no aplicar sobre la coquilla. La identificación va donde el fabricante la previó: portafrente, marcaje de fábrica y cintas."
+                      ],
+                      "nota": "El mismo manual pide <strong>retirar el casco de servicio después de un impacto fuerte, aunque no haya daño visible</strong>, y nunca alterar ni modificar el diseño o la construcción sin instrucciones escritas explícitas del fabricante. Las dos frases valen más en una bitácora de estación que cualquier folleto."
+                    },
+                    {
+                      "id": "edicion",
+                      "eyebrow": "Edición normativa",
+                      "titulo": "El manual dice NFPA 1971 y la página dice NFPA 1970 · 2025",
+                      "parrafos": [
+                        "El manual de usuario de la serie declara que el modelo <strong>cumple o excede las especificaciones de NFPA 1971</strong>, sin edición. La página de producto de la marca, en cambio, declara hoy <strong>NFPA 1970 edición 2025</strong>, el estándar que consolidó las NFPA 1971, 1975, 1981 y 1982 y cuya transición cerró el 18 de marzo de 2026.",
+                        "Las dos cosas pueden ser ciertas a la vez porque son documentos con distinta fecha de revisión: un manual impreso no se reimprime cada vez que cambia un estándar. Lo que no se puede hacer es tomar la cita del manual y copiarla al anexo técnico de una convocatoria de 2026, porque estaría pidiendo una edición sustituida."
+                      ],
+                      "nota": "Lo exigible en la compra: <strong>certificado del modelo cotizado referido a la edición vigente</strong>, con organismo certificador y alcance. El manual sirve para operar y capacitar; el certificado es el que sostiene la partida."
+                    },
+                    {
+                      "id": "capacitacion",
+                      "eyebrow": "Entrega y capacitación",
+                      "titulo": "El expediente de entrega que pide la NOM-017-STPS",
+                      "parrafos": [
+                        "En México la compra no termina con la factura. <strong>NOM-017-STPS</strong> obliga al patrón a seleccionar el equipo según el riesgo del puesto, entregarlo y <strong>capacitar en su uso, limpieza, mantenimiento y límites</strong>. En un casco eso significa cuatro cosas concretas que se pueden documentar el día de la entrega.",
+                        "Cuando la dotación es grande, esa capacitación es la que determina si a los seis meses la flota sigue ajustada o si la mitad del personal trae el casco flojo. El ajuste documentado por eje de esta serie hace la diferencia: se enseña una vez, se escribe y se repite igual en cada turno."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Ajuste individual registrado",
+                          "d": "Pestaña —A, B o C— y poste —1 o 2— con los que quedó cada elemento, anotados en su expediente. Es un dato de dos caracteres que evita reajustar a ciegas."
+                        },
+                        {
+                          "t": "Prueba con el conjunto",
+                          "d": "Ajuste validado con capucha, protección ocular y pieza facial del equipo de respiración puestas, en posiciones reales de trabajo."
+                        },
+                        {
+                          "t": "Procedimiento de limpieza",
+                          "d": "Detergente suave y agua, sin solventes ni adhesivos, con el criterio de no usar el casco hasta que esté seco. Copiado textual del manual, no resumido."
+                        },
+                        {
+                          "t": "Criterios de retiro",
+                          "d": "Retiro tras impacto aunque no haya daño visible, y retiro programado a los diez años de la fecha de fabricación conforme a NFPA 1850 (1851)."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "lo-no-publicado",
+                      "eyebrow": "Lo que el fabricante no publica",
+                      "titulo": "Tres datos ausentes y una corrección que hicimos",
+                      "parrafos": [
+                        "El manual de la serie es fuerte en operación y débil en cifras de comparación. Lo decimos con nombre y apellido porque es lo que permite pedir el dato en lugar de suponerlo."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Dato ausente",
+                          "Qué decide",
+                          "Cómo se resuelve"
+                        ],
+                        "rows": [
+                          [
+                            "Peso de la serie",
+                            "Fatiga cervical y comparación entre familias de la misma marca",
+                            "Se solicita por escrito para la clave cotizada; en la línea Bullard el único peso publicado es el del perfil UST LowRider"
+                          ],
+                          [
+                            "Rango de talla en pulgadas o centímetros",
+                            "Qué personal queda fuera del rango en una dotación grande",
+                            "El manual no lo indica: se pide el rango del sistema U-Fit para el modelo cotizado y se valida con prueba de ajuste"
+                          ],
+                          [
+                            "Dimensiones exteriores",
+                            "Paso por escotilla y maniobra en cabina",
+                            "No están en el manual; se piden por escrito o se comparan contra las series que sí las publican en su hoja de licitación"
+                          ]
+                        ]
+                      },
+                      "nota": "La corrección: una ficha consolidada de nuestro propio archivo daba por hecho que <strong>el manual de esta serie estaba disponible en español</strong>. Al revisar el PDF, lo único en español es la advertencia de la Propuesta 65 de California. El manual de fabricante que sí existe traducido es el de la <strong>serie UST</strong>. Preferimos corregirlo aquí que sostener un dato cómodo."
+                    },
+                    {
+                      "id": "cuando-conviene",
+                      "eyebrow": "Criterio de selección",
+                      "titulo": "Cuándo conviene la LT y cuándo no",
+                      "parrafos": [
+                        "Ninguna serie es la mejor en abstracto, y una ficha que dice que sí no está informando, está vendiendo. Estos son los casos en los que esta serie es la respuesta correcta y los casos en los que hay que mandar al comprador a otra."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Situación",
+                          "Recomendación",
+                          "Por qué"
+                        ],
+                        "rows": [
+                          [
+                            "Dotación grande con presupuesto por unidad ajustado",
+                            "LT Series",
+                            "Coquilla termoplástica de reposición económica, refacción compartida y cambio de protección ocular sin herramienta"
+                          ],
+                          [
+                            "Procedimiento interno que exige ala completa",
+                            "UST Traditional",
+                            "La silueta es un requisito normado por la corporación; el composite sostiene el voladizo del ala"
+                          ],
+                          [
+                            "El peso es criterio de evaluación escrito",
+                            "Perfil UST LowRider",
+                            "Es el único de la línea con peso publicado por el fabricante: 1.4 a 1.5 kg"
+                          ],
+                          [
+                            "Se busca máxima iluminación y visor integrado",
+                            "PX Series",
+                            "Es la serie con más opciones de iluminación integrada y visor ReTrak del catálogo"
+                          ]
+                        ]
+                      },
+                      "nota": "El criterio que no aparece en ninguna tabla y decide más compras de las que debería: si la corporación ya tiene inventario de caretas y goggles con herraje de una serie, cambiar de familia cuesta más que la diferencia de precio unitario."
+                    },
+                    {
+                      "id": "mantenimiento",
+                      "eyebrow": "Ciclo de vida",
+                      "titulo": "Inspección, refacciones y retiro",
+                      "parrafos": [
+                        "La inspección de esta serie sigue el mismo criterio de todo casco estructural, con una particularidad del termoplástico: <strong>lo que hay que buscar es deformación y burbujeo, no fisuras</strong>. Un termoplástico expuesto a calor sostenido cede y se abomba antes de romperse; una coquilla con burbujeo se retira aunque la superficie esté completa.",
+                        "Del lado de las refacciones, la serie tiene listado de partes reemplazables: banda de ratchet, careta, orejera con protector de cuello e interior. Reponer esas cuatro piezas es lo que mantiene el ajuste y la higiene entre inspecciones anuales, y es una fracción del costo de la unidad completa."
+                      ],
+                      "nota": "El retiro se rige por <strong>NFPA 1850 (1851)</strong>: diez años desde la fecha de fabricación, más el retiro inmediato tras un impacto fuerte —aunque no haya daño visible— y el retiro cuando el daño ya no es económicamente reparable, que es la formulación literal del manual."
+                    }
+                  ],
+                  "galeria": [
+                    {
+                      "src": "/images/catalogo/1575507371202-600x450.webp",
+                      "alt": "Cascos estructurales con visera de policarbonato en la estación",
+                      "caption": "Dotación por volumen, misma clave"
+                    },
+                    {
+                      "src": "/images/catalogo/1503714964235-600x450.webp",
+                      "alt": "Bombero revisando y ajustando su equipo de protección antes de salir",
+                      "caption": "El ajuste se registra por elemento"
+                    },
+                    {
+                      "src": "/images/catalogo/1651368615152-600x450.webp",
+                      "alt": "Rack de equipo de protección personal listo en una estación de bomberos",
+                      "caption": "Refacciones por número de parte"
+                    },
+                    {
+                      "src": "/images/catalogo/1608723724615-600x450.webp",
+                      "alt": "Dos bomberos con casco identificado operando en ambiente con humo",
+                      "caption": "Identificación en escena"
+                    }
+                  ],
+                  "aplicaciones": [
+                    {
+                      "sector": "Brigadas industriales",
+                      "desc": "Dotación por volumen con ajuste documentado por eje, capacitación de entrega conforme a NOM-017-STPS y refacciones presupuestadas desde el primer año."
+                    },
+                    {
+                      "sector": "Cuerpos de bomberos",
+                      "desc": "Para corporaciones sin silueta tradicional normada, o para dotar personal de apoyo y rescate con perfil recortado mientras la línea de ataque usa ala completa."
+                    },
+                    {
+                      "sector": "Licitación pública",
+                      "desc": "Partida cerrada por modelo —LTX o LTG4X—, protección facial y ocular en renglones separados, edición normativa vigente y números de parte de refacciones."
+                    }
+                  ],
+                  "datoClave": {
+                    "titulo": "Registra dos caracteres por elemento",
+                    "texto": "La pestaña —<strong>A, B o C</strong>— y el poste —<strong>1 o 2</strong>— con los que quedó ajustado cada casco caben en dos caracteres del expediente. Es el dato que evita reajustar a ciegas cada vez que rota el turno."
+                  },
+                  "referencias": [
+                    {
+                      "code": "NFPA 1970 · 2025",
+                      "desc": "Edición que la marca declara hoy para la serie en su página de producto. Consolidó NFPA 1971, 1975, 1981 y 1982; la transición cerró el 18 de marzo de 2026."
+                    },
+                    {
+                      "code": "NFPA 1971 · sin edición",
+                      "desc": "Cita que aparece en el manual de usuario de la serie, anterior a la consolidación. Sirve para operar y capacitar, no para redactar el anexo técnico de una compra nueva."
+                    },
+                    {
+                      "code": "ANSI/ISEA Z87.1",
+                      "desc": "Norma de protección ocular y facial. La careta R330 de 4 pulgadas de PPC con recubrimiento duro es el componente declarado contra ella en la línea."
+                    },
+                    {
+                      "code": "NOM-017-STPS",
+                      "desc": "Selección, entrega y capacitación en el uso del equipo de protección personal según el riesgo del puesto. Es la norma mexicana que exige documentar la entrega."
+                    },
+                    {
+                      "code": "NFPA 1850 · 2026",
+                      "desc": "Selección, cuidado y mantenimiento: inspección anual documentada y retiro a los diez años de la fecha de fabricación."
+                    }
+                  ],
+                  "blog": [
+                    "casco-bombero-bullard-usrhb-guia",
+                    "equipar-brigada-industrial-mexico-guia",
+                    "nom-002-stps-guia-brigadas-industriales",
+                    "epp-completo-kit-bombero-profesional",
+                    "mantenimiento-epp-estructural-nfpa-1851",
+                    "nfpa-1971-mexico-norma-bomberos"
+                  ],
+                  "faqs": [
+                    {
+                      "q": "¿Cuál es la diferencia entre los modelos LTX y LTG4X?",
+                      "a": "El manual de fabricante cubre los dos como casco estructural termoplástico de estilo contemporáneo dentro de la misma serie, y la diferencia práctica está en el herraje y los accesorios que monta cada uno. Por eso el criterio de selección no es de catálogo: si la corporación ya tiene inventario de caretas o de goggles, conviene definir el modelo que usa ese herraje. En la propuesta indicamos el modelo, el herraje y los números de parte compatibles para que la reposición no obligue a comprar todo de nuevo."
+                    },
+                    {
+                      "q": "¿Qué significa que el ajuste tenga 12 posiciones en dos ejes?",
+                      "a": "Que el fabricante documenta qué controla cada ajuste en lugar de sumar posiciones. Las pestañas A, B y C mueven la altura de uso —qué tan abajo monta el casco— y los postes 1 y 2 controlan el balance adelante-atrás. Eso convierte un problema difuso en dos preguntas: si el casco se va hacia la nuca, se mueve el poste; si el ala queda muy baja sobre los ojos, se cambia la pestaña. En una dotación grande es la diferencia entre un procedimiento reproducible y prueba y error."
+                    },
+                    {
+                      "q": "¿Cuánto pesa un casco LT Series?",
+                      "a": "Bullard no publica el peso de esta serie y no lo vamos a estimar. En toda la línea de casco estructural de la marca el único peso publicado es el del perfil UST LowRider: 49.3 a 54.4 oz, es decir 1.4 a 1.5 kg. Si el peso va a ser criterio de evaluación en una convocatoria, hay dos caminos honestos: pedirlo por escrito al fabricante para la clave exacta que se va a cotizar, o especificar la serie que sí tiene cifra publicada."
+                    },
+                    {
+                      "q": "¿Se le pueden poner calcomanías o pintura de identificación?",
+                      "a": "El fabricante pide no hacerlo. La versión en español de su manual lo escribe en mayúsculas: limpiar sólo con detergente suave y agua, y no usar ni exponer el casco a pinturas, solventes, productos químicos, adhesivos o gasolina. Los adhesivos están en esa lista, así que las calcomanías pegadas sobre la coquilla no son personalización inocua. La identificación va donde el fabricante la previó: portafrente, marcaje de fábrica y cintas reflejantes especificadas en la orden."
+                    },
+                    {
+                      "q": "¿La LT acepta el sistema TrakLite?",
+                      "a": "Sí: el manual del TrakLite lista compatibilidad con las series UST6, FX, PX y LT. Dos consecuencias que conviene presupuestar antes de decidirlo. La primera, que introduce componentes electrónicos y por lo tanto pilas AAA alcalinas como consumible del programa. La segunda, y más importante para planta, que el sistema está declarado únicamente para Clase I División 2, Grupos A a D, o áreas no peligrosas: no cubre atmósferas clasificadas como División 1."
+                    },
+                    {
+                      "q": "¿El manual de esta serie está en español?",
+                      "a": "No, y vale la pena decirlo porque nuestra propia ficha interna lo daba por hecho: al revisar el PDF del manual de la serie LT, lo único en español es la advertencia de la Propuesta 65 de California. El manual de fabricante que sí existe traducido al español es el de la serie UST. Si el idioma de la documentación es un requisito de la convocatoria, hay que verificarlo por serie y por modelo antes de comprometerlo en la propuesta, y así lo entregamos nosotros."
+                    },
+                    {
+                      "q": "¿Qué se inspecciona en una coquilla termoplástica?",
+                      "a": "Deformación y burbujeo antes que fisuras. Un termoplástico expuesto a calor sostenido cede y se abomba, así que una coquilla abombada se retira aunque la superficie esté completa. Además se revisan decoloración por calor, estado del interior y de la banda de ratchet, integridad del barboquejo y de la orejera, y legibilidad de la etiqueta. El manual es tajante en un punto: después de un impacto fuerte el casco se reemplaza aunque no haya daño visible."
+                    },
+                    {
+                      "q": "¿Qué documentación entregan con una dotación grande?",
+                      "a": "Certificado del modelo cotizado referido a la edición normativa vigente, etiqueta legible y fecha de fabricación por unidad, ficha técnica con material de coquilla y sistema de ajuste, números de parte de banda de ratchet, careta, orejera e interior, procedimiento de limpieza y criterios de retiro, carta de distribuidor autorizado y factura desglosada por modelo y color. Para dotaciones grandes agregamos la hoja de registro de ajuste por elemento, con pestaña y poste."
+                    }
+                  ]
+                }
               },
               {
                 "marca": "MSA",
@@ -3206,7 +4033,391 @@
                   "Suspensión de seis tiras con ratchet pivotante",
                   "Rango de talla de 5-3/8 a 8-3/8 pulgadas"
                 ],
-                "chip": "Garantía de 10 años desde la fecha de fabricación"
+                "chip": "Garantía de 10 años desde la fecha de fabricación",
+                "slug": "msa-cairns-1836",
+                "fichaLabel": "el Cairns 1836",
+                "l4": {
+                  "seoTitle": "Casco MSA Cairns 1836 tradicional composite",
+                  "seoDescription": "Casco MSA Cairns 1836: composite moldeado en una pieza, espesor de 0.075\" y 0.085\", peso de 1.5 a 1.8 kg, talla 5-3/8\" a 8-3/8\" y garantía de 10 años.",
+                  "h1": "Casco estructural MSA Cairns 1836",
+                  "subtitulo": "La tradicional vigente de MSA y la ficha con más datos publicados del catálogo: coquilla de composite moldeada en una pieza con espesor declarado por zona, peso de 53.6 a 63.0 oz según configuración, suspensión de seis vías con talla de 5-3/8\" a 8-3/8\" y garantía de diez años desde la fecha de fabricación.",
+                  "heroImg": {
+                    "src": "/images/catalogo/1735107673023-1000x750.webp",
+                    "alt": "Bombero con casco tradicional de ala completa y capucha bajo el casco",
+                    "caption": "La tradicional vigente de MSA"
+                  },
+                  "heroBloques": [
+                    {
+                      "label": "Por qué esta ficha se puede defender por escrito",
+                      "texto": "De las seis series del catálogo, esta es la única que publica <strong>espesor de coquilla por zona, rango de peso, dimensiones y rango de talla en incrementos exactos</strong>. Eso cambia la naturaleza de la compra: un anexo técnico se puede redactar con números verificables —0.075\" en corona, 0.085\" en ala, 1.5 a 1.8 kg, 5-3/8\" a 8-3/8\"— en lugar de adjetivos que cualquier proveedor declara cumplir. Es también la serie que sustituye al <strong>Cairns 1044</strong>, descontinuado y todavía citado por nombre en especificaciones mexicanas."
+                    },
+                    {
+                      "label": "Distribución autorizada, no reventa",
+                      "texto": "Entregamos el casco con <strong>certificado del modelo cotizado, etiqueta legible y fecha de fabricación por unidad</strong> —dato que aquí manda, porque la garantía de diez años corre desde ahí—, más los números de parte de suspensión, orejeras, barboquejo, visor y portafrente. Propuesta con partidas, color y configuración ocular definidas en menos de <strong>24 horas hábiles</strong>, con cobertura en los <strong>32 estados de la República</strong>."
+                    }
+                  ],
+                  "heroDatos": [
+                    {
+                      "label": "Norma declarada",
+                      "valor": "NFPA 1971 · edición 2018"
+                    },
+                    {
+                      "label": "Peso publicado",
+                      "valor": "1.5 a 1.8 kg"
+                    },
+                    {
+                      "label": "Garantía",
+                      "valor": "10 años desde fabricación"
+                    }
+                  ],
+                  "specStrip": [
+                    {
+                      "label": "Coquilla",
+                      "valor": "Composite moldeado en una pieza"
+                    },
+                    {
+                      "label": "Espesor",
+                      "valor": "0.075\" corona · 0.085\" ala"
+                    },
+                    {
+                      "label": "Dimensiones",
+                      "valor": "15.3\" × 11.8\" × 5.78\""
+                    },
+                    {
+                      "label": "Suspensión",
+                      "valor": "Seis vías con ratchet pivotante"
+                    },
+                    {
+                      "label": "Rango de talla",
+                      "valor": "5-3/8\" a 8-3/8\" en 1/8\""
+                    },
+                    {
+                      "label": "Protección ocular",
+                      "valor": "Defender, Bourke o goggles"
+                    }
+                  ],
+                  "secciones": [
+                    {
+                      "id": "construccion",
+                      "eyebrow": "Qué estás comprando",
+                      "titulo": "Una coquilla moldeada en una sola pieza",
+                      "parrafos": [
+                        "La ficha de MSA describe la coquilla con un nivel de detalle poco común: <strong>composite de fibra de vidrio con resina termoestable de alta temperatura, tintada en masa, resistente a flama y a desprendimiento, reforzada con fibra picada de una y dos pulgadas y moldeada por compresión en una sola pieza</strong>. Cada parte de esa frase es un criterio de compra, no adorno.",
+                        "“Tintada en masa” significa que el color atraviesa el material y un rayón no deja fibra desnuda. “Moldeada en una pieza” significa que no hay unión estructural entre corona y ala, que es donde fallaría primero un ensamble en dos partes. Y “fibra picada de una y dos pulgadas” describe el refuerzo que le da rigidez al voladizo del ala sin sumar espesor uniforme."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Cofia de impacto en dos capas",
+                          "d": "Forro de polímero resistente al impacto cubierto por una espuma de uretano de celda abierta semirrígida y de alta temperatura, que cubre <strong>toda la corona interior</strong>. La celda abierta es lo que permite lavarla y secarla."
+                        },
+                        {
+                          "t": "Suspensión de seis vías",
+                          "d": "Tres tiras de nylon de 0.75 pulgadas montadas en seis puntos del forro de impacto, con ratchet pivotante. Es la descripción textual que conviene copiar a la partida en lugar de un número de puntos."
+                        },
+                        {
+                          "t": "Portafrente de latón colapsable",
+                          "d": "Diseñado para escudos de identificación de 6 o 5.5 pulgadas. “Colapsable” es intencional: cede en un golpe en lugar de transmitirlo a la coquilla."
+                        },
+                        {
+                          "t": "Cintas reflejantes en ocho piezas",
+                          "d": "Ocho piezas tetraédricas, en Reflexite o Scotchlite. La geometría en tetraedros devuelve luz desde más ángulos que una banda continua."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "espesor",
+                      "eyebrow": "Cómo se lee un espesor",
+                      "titulo": "0.075\" en la corona y 0.085\" en el ala: por qué son distintos",
+                      "parrafos": [
+                        "Este es el dato que ninguna otra serie del catálogo publica, y el que más se malinterpreta. MSA declara <strong>0.075 pulgadas de espesor en la corona y 0.085 pulgadas en el ala</strong>. La lectura ingenua es que la corona está “menos protegida”; la lectura correcta es que cada zona resuelve un problema distinto.",
+                        "La corona recibe impacto vertical y trabaja en conjunto con la cofia, que es la que absorbe: ahí el espesor de coquilla reparte la carga y el resto lo hace la espuma. El ala, en cambio, trabaja en voladizo, sin cofia detrás, y recibe golpes laterales contra marcos y estructura: necesita más material propio porque no tiene nada que la respalde. Diez milésimas de pulgada de diferencia son una decisión de ingeniería, no una tolerancia."
+                      ],
+                      "nota": "En una comparativa técnica, pedir el <strong>espesor nominal por zona</strong> es una pregunta legítima y discriminante: la mayoría de los fabricantes no lo publica, así que quien lo entrega demuestra control de proceso. Es uno de los cuatro datos que recomendamos exigir en un anexo técnico de cascos."
+                    },
+                    {
+                      "id": "peso",
+                      "eyebrow": "El rango de peso",
+                      "titulo": "1.5 a 1.8 kg: qué configuración cae en cada extremo",
+                      "parrafos": [
+                        "MSA publica el peso como rango —<strong>53.6 oz (1.5 kg) a 63.0 oz (1.8 kg)</strong>— y añade la condición que casi nadie lee: <strong>según configuración</strong>. Esas 9.4 onzas de diferencia, unos 265 gramos, no son variabilidad de fabricación: son los accesorios.",
+                        "El extremo bajo corresponde a una configuración simple; el alto, a una con visor articulado, careta externa, orejera de triple capa y portafrente con escudo. Sobre la columna cervical de un elemento en un turno de doce horas, esos 265 gramos son la diferencia entre terminar el turno cómodo o con dolor de cuello. Por eso el peso que hay que pedir es el de la clave cotizada, no el del rango."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Concepto",
+                          "Dato publicado",
+                          "Cómo usarlo en la compra"
+                        ],
+                        "rows": [
+                          [
+                            "Peso mínimo",
+                            "53.6 oz · 1.5 kg",
+                            "Referencia de configuración base. No asumir que la oferta llega en este extremo del rango"
+                          ],
+                          [
+                            "Peso máximo",
+                            "63.0 oz · 1.8 kg",
+                            "Configuración completa con accesorios. Es el número realista si se pide visor, careta y escudo"
+                          ],
+                          [
+                            "Diferencia",
+                            "9.4 oz · unos 265 g",
+                            "El costo en carga cervical de cada accesorio que se agrega a la partida"
+                          ],
+                          [
+                            "Condición del dato",
+                            "“Según configuración”",
+                            "Obliga a pedir el peso de la clave exacta: es la única cifra que se puede evaluar"
+                          ]
+                        ]
+                      },
+                      "nota": "Comparación útil dentro del catálogo: el único otro peso publicado es el del <strong>UST LowRider</strong> de Bullard, entre 1.4 y 1.5 kg. Es decir, la configuración base del 1836 arranca donde termina el rango del perfil ligero de la competencia directa."
+                    },
+                    {
+                      "id": "talla",
+                      "eyebrow": "Rango de talla",
+                      "titulo": "De 5-3/8\" a 8-3/8\" en incrementos de un octavo",
+                      "parrafos": [
+                        "MSA es el único fabricante del catálogo que publica el rango de talla en unidades verificables: <strong>de 5-3/8 a 8-3/8 pulgadas, ajustable en incrementos de 1/8 de pulgada</strong>. Traducido a lo que importa en una dotación, son 25 posiciones discretas de perímetro, no un “ajuste universal”.",
+                        "Ese dato resuelve una pregunta que en México casi nunca se hace antes de comprar: qué porcentaje del personal queda dentro del rango. Con un rango publicado se puede medir la plantilla, comparar contra la tabla y saber de antemano si alguien va a quedar fuera —y a quién hay que cotizarle otra serie— en lugar de descubrirlo el día de la entrega."
+                      ],
+                      "nota": "El ajuste se valida con capucha y pieza facial del equipo de respiración puestas. Un perímetro correcto en seco puede quedar apretado con capucha, y ahí es donde la <strong>capucha</strong> deja de ser un accesorio y se vuelve parte de la prueba de ajuste."
+                    },
+                    {
+                      "id": "ocular",
+                      "eyebrow": "Protección ocular",
+                      "titulo": "Defender, Bourke, careta externa y goggles: cuatro caminos",
+                      "parrafos": [
+                        "El 1836 es la serie con más opciones oculares documentadas del catálogo, y cada una responde a una tradición operativa distinta. La careta publicada es <strong>envolvente de alto pivote, de 4.0\" × 18.0\" × 0.150\"</strong> de espesor —las tres dimensiones están en la ficha, lo cual permite compararla con la de otras marcas.",
+                        "La regla de fondo es la misma de toda la línea: una careta o un visor montados al casco protegen la cara de proyecciones frontales pero no cierran el contorno del ojo. Cuando el elemento trae la pieza facial del equipo de respiración, esa es la protección primaria; para las maniobras sin máscara, goggles."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Visor Defender articulado",
+                          "d": "Integrado al casco, en versión clara o ámbar. Se despliega y se guarda con el casco puesto, lo que lo hace la opción práctica cuando la maniobra alterna interior y exterior."
+                        },
+                        {
+                          "t": "Bourke Eye Shield",
+                          "d": "La solución tradicional montada bajo el ala. Es la que muchos cuerpos con silueta tradicional tienen normada, y MSA la mantiene en catálogo por eso."
+                        },
+                        {
+                          "t": "Careta externa Tuffshield",
+                          "d": "Versión ámbar, envolvente y de alto pivote. Cubre más superficie facial y es la más simple de reponer cuando se raya."
+                        },
+                        {
+                          "t": "Sistemas de goggle ESS",
+                          "d": "La única opción que sella el contorno del ojo. Se especifica aparte, con su propio número de parte, y es lo que corresponde para ventilación, remoción y rescate vehicular."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "soft-goods",
+                      "eyebrow": "Orejeras y barboquejo",
+                      "titulo": "Triple capa y 35 pulgadas de extensión",
+                      "parrafos": [
+                        "Las orejeras se publican con su gramaje y su construcción: <strong>Nomex de 7.5 oz por yarda en amarillo o negro, con dos capas interiores de franela negra retardante</strong>. Tres capas en total. Es la pieza que cierra la brecha entre casco, capucha y cuello del chaquetón del traje estructural, y también la que más se contamina y menos se lava.",
+                        "El barboquejo es de tres piezas en cinta de Nomex hilado de 3/4 de pulgada, con hebilla de liberación rápida y corredera tipo postman opcional, y <strong>35 pulgadas a extensión total</strong>. Ese número importa más de lo que parece: define si el barboquejo cierra sobre una capucha y una barba, o si obliga a llevarlo al límite."
+                      ],
+                      "nota": "Las dos son refacciones con número de parte y las dos definen higiene. En una compra por volumen conviene pedir <strong>un juego de orejeras de repuesto por cada tres cascos</strong>: es la pieza que se retira para lavar y la que se pierde primero."
+                    },
+                    {
+                      "id": "el-1044",
+                      "eyebrow": "Migrar una especificación",
+                      "titulo": "Si tu especificación todavía pide un Cairns 1044",
+                      "parrafos": [
+                        "El <strong>Cairns 1044</strong> —y también el 1010— aparecen marcados como descontinuados en el sitio de MSA, y siguen siendo los modelos más citados por nombre en especificaciones y procedimientos mexicanos. Una convocatoria que pide un 1044 hoy está pidiendo un producto que el fabricante ya no ofrece, y el efecto práctico es que abre la puerta a “equivalentes” sin criterio escrito para evaluarlos.",
+                        "La salida no es cambiar un nombre por otro. Es reescribir la partida con los <strong>atributos</strong> que el 1044 representaba —silueta tradicional de ala completa, coquilla de composite, suspensión con ratchet, protección ocular tipo Bourke o visor integrado— y agregar los datos que ahora sí se pueden exigir porque el modelo vigente los publica."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Si la especificación dice…",
+                          "Escribe esto en su lugar",
+                          "Por qué"
+                        ],
+                        "rows": [
+                          [
+                            "“Casco MSA Cairns 1044 o equivalente”",
+                            "“Casco estructural tradicional de composite moldeado en una pieza, espesor mínimo declarado por zona, suspensión de seis vías con ratchet”",
+                            "Describe atributos verificables en lugar de un modelo descontinuado"
+                          ],
+                          [
+                            "“Con protección ocular”",
+                            "“Visor articulado integrado, más goggles como partida independiente”",
+                            "El visor y los goggles no son sustitutos: uno protege la cara, el otro sella el ojo"
+                          ],
+                          [
+                            "“Certificado NFPA”",
+                            "“Certificado del modelo cotizado con edición normativa vigente y organismo certificador”",
+                            "“NFPA” sin edición ni alcance no es verificable"
+                          ],
+                          [
+                            "“Talla ajustable”",
+                            "“Rango de ajuste declarado con incremento, de 5-3/8\" a 8-3/8\" en 1/8\"”",
+                            "Es el dato que permite saber si toda la plantilla entra en el rango"
+                          ]
+                        ]
+                      },
+                      "nota": "Si la especificación está en un procedimiento interno o en un manual de operación, conviene actualizar el documento y no solo la requisición: mientras el 1044 siga escrito ahí, va a volver a aparecer en la siguiente compra."
+                    },
+                    {
+                      "id": "garantia",
+                      "eyebrow": "Garantía y vida útil",
+                      "titulo": "Diez años desde la fecha de fabricación, no desde la compra",
+                      "parrafos": [
+                        "MSA garantiza el 1836 por <strong>diez años desde la fecha de fabricación</strong> contra defectos de material y de mano de obra. La palabra que decide el presupuesto es “fabricación”: un lote que estuvo dos años en inventario del distribuidor llega con ocho años de cobertura, no con diez.",
+                        "Y hay una coincidencia útil: el criterio de retiro de <strong>NFPA 1850 (1851)</strong> también son diez años desde la fecha de fabricación. Es decir, en este modelo la garantía y la vida útil normativa corren en paralelo, lo que hace del dato de la etiqueta el único número relevante para planear la reposición."
+                      ],
+                      "nota": "Pide la <strong>fecha de fabricación por unidad</strong> antes de firmar, no después. Es un dato que el proveedor tiene y que rara vez se entrega si no se solicita; con él se puede escalonar la reposición y evitar que toda la flota venza el mismo año."
+                    },
+                    {
+                      "id": "edicion",
+                      "eyebrow": "Edición normativa",
+                      "titulo": "La ficha declara NFPA 1971-2018 y qué significa hoy",
+                      "parrafos": [
+                        "La ficha de producto del 1836 declara conformidad con <strong>NFPA 1971-2018</strong>, la norma de conjuntos de protección para combate estructural y de proximidad. Esa edición fue consolidada en <strong>NFPA 1970 edición 2025</strong> junto con las NFPA 1975, 1981 y 1982, y el periodo de transición cerró el 18 de marzo de 2026.",
+                        "Que la ficha cite 2018 no invalida el producto ni el inventario ya etiquetado: la permanencia en servicio se rige por NFPA 1850 (1851). Lo que sí exige es precisión en la compra nueva, porque un certificado emitido hoy debería referirse a la edición vigente y no a la que quedó sustituida."
+                      ],
+                      "nota": "Lo exigible: <strong>certificado del modelo y de la configuración cotizada</strong>, con organismo certificador, alcance y edición. Si el certificado que entrega el proveedor todavía dice 2018, hay que pedir la constancia de la edición vigente por escrito antes de fallar la partida."
+                    },
+                    {
+                      "id": "lo-no-publicado",
+                      "eyebrow": "Lo que el fabricante no publica",
+                      "titulo": "Incluso la ficha más completa deja tres huecos",
+                      "parrafos": [
+                        "Sería fácil presentar esta serie como si no le faltara nada, y sería falso. Aun siendo la mejor documentada del catálogo, hay tres datos que no están y que conviene pedir por escrito."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Dato ausente",
+                          "Qué decide",
+                          "Cómo se resuelve"
+                        ],
+                        "rows": [
+                          [
+                            "Peso por número de parte",
+                            "La cifra real de la configuración cotizada dentro del rango de 1.5 a 1.8 kg",
+                            "Se pide el peso de la clave exacta con visor, careta, orejera y escudo montados"
+                          ],
+                          [
+                            "Edición vigente en el certificado",
+                            "Si la partida se puede fallar sin observaciones en 2026",
+                            "Se solicita constancia referida a NFPA 1970 edición 2025 para el modelo cotizado"
+                          ],
+                          [
+                            "Vida útil declarada por el fabricante",
+                            "Cuándo sale del inventario si no hubo impacto",
+                            "No hay cifra propia más allá de la garantía: rige el retiro de NFPA 1850 (1851) a los diez años de fabricación"
+                          ]
+                        ]
+                      },
+                      "nota": "Los tres se piden en un solo correo referido al número de parte, y los gestionamos como parte de la propuesta. La diferencia entre una ficha comercial y una propuesta técnica es exactamente esa: <strong>el dato se consigue, no se supone</strong>."
+                    }
+                  ],
+                  "galeria": [
+                    {
+                      "src": "/images/catalogo/1638401607229-600x400.webp",
+                      "alt": "Casco tradicional de bombero con visera y careta de protección facial",
+                      "caption": "Configuración ocular documentada"
+                    },
+                    {
+                      "src": "/images/catalogo/1756112277157-1000x750.webp",
+                      "alt": "Rack con cascos estructurales alineados en la estación",
+                      "caption": "Fecha de fabricación por unidad"
+                    },
+                    {
+                      "src": "/images/catalogo/1592235905030-600x450.webp",
+                      "alt": "Bombero con pieza facial de equipo de respiración bajo el casco estructural",
+                      "caption": "El ajuste se valida con el conjunto"
+                    },
+                    {
+                      "src": "/images/catalogo/1690210795713-600x450.webp",
+                      "alt": "Dos bomberos con casco estructural y visera durante una operación",
+                      "caption": "Silueta tradicional en escena"
+                    }
+                  ],
+                  "aplicaciones": [
+                    {
+                      "sector": "Cuerpos de bomberos",
+                      "desc": "Para corporaciones con silueta tradicional normada que necesitan sustituir un Cairns 1044 o 1010 descontinuado sin abrir la partida a equivalentes indefinidos."
+                    },
+                    {
+                      "sector": "Brigadas industriales",
+                      "desc": "Cuando la matriz de riesgo contempla intervención estructural y la evaluación pide datos verificables: espesor por zona, rango de peso y rango de talla publicados."
+                    },
+                    {
+                      "sector": "Licitación pública",
+                      "desc": "Es la serie del catálogo con la que un anexo técnico se puede redactar con números de fabricante en lugar de descripciones que cualquier oferta declara cumplir."
+                    }
+                  ],
+                  "datoClave": {
+                    "titulo": "Garantía y vida útil corren juntas",
+                    "texto": "Los <strong>diez años de garantía</strong> de MSA corren desde la <strong>fecha de fabricación</strong>, igual que el retiro obligatorio de NFPA 1850 (1851). Pide esa fecha por unidad antes de firmar: un lote con dos años de inventario llega con ocho de vida útil y de cobertura."
+                  },
+                  "referencias": [
+                    {
+                      "code": "NFPA 1971 · 2018",
+                      "desc": "Edición declarada en la ficha de producto del Cairns 1836. Fue consolidada en NFPA 1970 edición 2025; el inventario etiquetado bajo ella sigue siendo válido en servicio."
+                    },
+                    {
+                      "code": "NFPA 1970 · 2025",
+                      "desc": "Estándar vigente que integró NFPA 1971, 1975, 1981 y 1982. La transición cerró el 18 de marzo de 2026 y es la edición que debe citar un certificado emitido hoy."
+                    },
+                    {
+                      "code": "ANSI/ISEA Z87.1",
+                      "desc": "Norma de protección ocular y facial aplicable a caretas y goggles. La careta publicada del 1836 mide 4.0\" × 18.0\" × 0.150\" y es envolvente de alto pivote."
+                    },
+                    {
+                      "code": "NFPA 1850 · 2026",
+                      "desc": "Selección, cuidado y mantenimiento: inspección anual documentada y retiro a los diez años de la fecha de fabricación, el mismo horizonte que la garantía del fabricante."
+                    },
+                    {
+                      "code": "Cairns 1044 y 1010",
+                      "desc": "Modelos marcados como descontinuados en el sitio de MSA. Si una especificación todavía los pide por nombre, hay que reescribirla por atributos antes de licitar."
+                    }
+                  ],
+                  "blog": [
+                    "cascos-forestales-msa-cairns-guia",
+                    "casco-bombero-bullard-usrhb-guia",
+                    "nfpa-1971-mexico-norma-bomberos",
+                    "mantenimiento-epp-estructural-nfpa-1851",
+                    "epp-completo-kit-bombero-profesional",
+                    "capucha-nomex-pbi-proteccion-cuello-cara"
+                  ],
+                  "faqs": [
+                    {
+                      "q": "¿El Cairns 1836 sustituye al Cairns 1044?",
+                      "a": "En la práctica sí: el 1044 y el 1010 aparecen marcados como descontinuados en el sitio de MSA y el 1836 es su tradicional vigente. Pero conviene no hacer la sustitución solo por nombre. Lo correcto es reescribir la partida por atributos —silueta tradicional, coquilla de composite moldeada en una pieza, espesor declarado por zona, suspensión de seis vías con ratchet, protección ocular definida— y agregar los datos que el modelo vigente sí publica. Si el 1044 está citado en un procedimiento interno, hay que actualizar ese documento también."
+                    },
+                    {
+                      "q": "¿Por qué el ala es más gruesa que la corona?",
+                      "a": "Porque resuelven problemas distintos. La corona, con 0.075 pulgadas, trabaja junto con la cofia de impacto: la coquilla reparte la carga y la espuma de uretano absorbe. El ala, con 0.085 pulgadas, trabaja en voladizo y sin cofia detrás, y recibe los golpes laterales contra marcos y estructura, así que necesita más material propio. Esas diez milésimas de pulgada son una decisión de diseño, no una tolerancia de fabricación."
+                    },
+                    {
+                      "q": "¿Cuánto pesa exactamente y de qué depende?",
+                      "a": "MSA publica un rango: 53.6 oz (1.5 kg) a 63.0 oz (1.8 kg) según configuración. Los 265 gramos de diferencia son los accesorios: visor articulado, careta externa, orejera de triple capa y portafrente con escudo. Para una evaluación por peso, el número que sirve es el de la clave exacta que se va a cotizar, con todo montado, y se pide por escrito. Como referencia del catálogo, el único otro peso publicado es el del Bullard UST LowRider, entre 1.4 y 1.5 kg."
+                    },
+                    {
+                      "q": "¿Cómo sé si todo mi personal entra en el rango de talla?",
+                      "a": "Con este modelo se puede saber antes de comprar, porque el rango está publicado: de 5-3/8 a 8-3/8 pulgadas en incrementos de 1/8, que son 25 posiciones discretas de perímetro. El procedimiento es medir la plantilla, compararla con ese rango y detectar de antemano a quién habría que cotizarle otra serie. Y la prueba de ajuste se hace con capucha y pieza facial puestas: un perímetro correcto en seco puede quedar apretado con capucha."
+                    },
+                    {
+                      "q": "¿Qué diferencia hay entre el visor Defender, el Bourke y la careta externa?",
+                      "a": "El Defender es un visor articulado integrado al casco, en versión clara o ámbar, que se despliega y se guarda con el casco puesto. El Bourke Eye Shield es la solución tradicional montada bajo el ala, que muchos cuerpos con silueta tradicional tienen normada. La careta externa Tuffshield es envolvente, de alto pivote y cubre más superficie facial. Ninguna de las tres sella el contorno del ojo: para eso están los goggles ESS, que se especifican como partida aparte."
+                    },
+                    {
+                      "q": "¿La garantía de diez años cubre todo el casco?",
+                      "a": "Cubre defectos de material y de mano de obra, y corre desde la fecha de fabricación por MSA, no desde la compra. No es una autorización de uso por diez años ni cubre desgaste, contaminación o daño por impacto. La coincidencia útil es que el retiro obligatorio de NFPA 1850 (1851) también son diez años desde fabricación, así que en este modelo garantía y vida útil normativa corren en paralelo y basta un dato —la fecha de la etiqueta— para planear la reposición."
+                    },
+                    {
+                      "q": "¿Qué refacciones conviene comprar con la dotación?",
+                      "a": "Orejeras, suspensión completa, barboquejo, visor o careta según la configuración, y escudos de portafrente. La recomendación práctica para volumen es un juego de orejeras de repuesto por cada tres cascos: es la pieza que se retira para lavar, la que más se contamina y la que se pierde primero. El portafrente es de latón colapsable, diseñado para escudos de 6 o 5.5 pulgadas, así que el escudo se especifica con la medida y el marcaje desde la orden."
+                    },
+                    {
+                      "q": "¿Qué documentación entregan con este modelo?",
+                      "a": "Certificado del modelo y de la configuración cotizada con organismo certificador y alcance, constancia referida a la edición normativa vigente, etiqueta legible y fecha de fabricación por unidad, ficha técnica con espesor por zona, peso, dimensiones y rango de talla, números de parte de suspensión, orejeras, barboquejo, visor y portafrente, procedimiento de inspección y retiro, carta de distribuidor autorizado y factura desglosada por color y configuración."
+                    }
+                  ]
+                }
               },
               {
                 "marca": "MSA",
@@ -3224,7 +4435,381 @@
                   "Banda frontal con interfaz para pieza facial de ERA",
                   "Visor Defender retráctil o careta de 4 pulgadas"
                 ],
-                "chip": "MSA no publica peso ni edición · se piden por parte"
+                "chip": "MSA no publica peso ni edición · se piden por parte",
+                "slug": "msa-cairns-660c-metro",
+                "fichaLabel": "el 660C Metro",
+                "l4": {
+                  "seoTitle": "Casco MSA Cairns 660C Metro perfil bajo",
+                  "seoDescription": "Casco MSA Cairns 660C Metro: composite tintado en masa, cofia de impacto, ratchet de tres posiciones, banda con interfaz para pieza facial y visor Defender.",
+                  "h1": "Casco estructural MSA Cairns 660C Metro",
+                  "subtitulo": "El perfil metro de MSA: coquilla de composite tintado en masa con cofia de impacto, sistema patentado de liberación de coquilla ante enganche, ajuste de altura por ratchet de tres posiciones y banda frontal diseñada para convivir con la pieza facial del equipo de respiración.",
+                  "badge": "NFPA · edición a confirmar",
+                  "heroImg": {
+                    "src": "/images/catalogo/1575507371089-600x450.webp",
+                    "alt": "Cascos estructurales de perfil recortado colgados en la estación",
+                    "caption": "Perfil metro para maniobra en espacios reducidos"
+                  },
+                  "heroBloques": [
+                    {
+                      "label": "Por qué el perfil metro es una decisión de interfaz",
+                      "texto": "Un casco recortado no se elige por estética: se elige por lo que <strong>deja de estorbar</strong>. El 660C reduce superficie de ala y, sobre todo, resuelve dos interfaces que en un casco tradicional se resuelven a la fuerza: la <strong>banda frontal está diseñada para acomodar distintos diseños de pieza facial</strong> del equipo de respiración, y la coquilla incorpora un sistema patentado de liberación para escapar si algo la engancha. Esas dos cosas, no el perfil, son el argumento técnico."
+                    },
+                    {
+                      "label": "Distribución autorizada, no reventa",
+                      "texto": "Entregamos el casco con <strong>certificado del modelo cotizado, etiqueta legible y fecha de fabricación por unidad</strong>, y con los números de parte de suspensión, interior, orejera, barboquejo y visor. En este modelo insistimos en algo más: MSA <strong>no publica peso ni edición normativa</strong>, así que los dos se solicitan por escrito para el número de parte antes de cerrar. Propuesta en menos de <strong>24 horas hábiles</strong>, con cobertura en los <strong>32 estados de la República</strong>."
+                    }
+                  ],
+                  "heroDatos": [
+                    {
+                      "label": "Coquilla",
+                      "valor": "Composite tintado en masa"
+                    },
+                    {
+                      "label": "Ajuste de altura",
+                      "valor": "Ratchet de tres posiciones"
+                    },
+                    {
+                      "label": "Estado del dato",
+                      "valor": "Peso y edición por confirmar"
+                    }
+                  ],
+                  "specStrip": [
+                    {
+                      "label": "Coquilla",
+                      "valor": "Composite no corrosivo"
+                    },
+                    {
+                      "label": "Cofia",
+                      "valor": "Impact cap interior"
+                    },
+                    {
+                      "label": "Escape",
+                      "valor": "Liberación de coquilla patentada"
+                    },
+                    {
+                      "label": "Interfaz con ERA",
+                      "valor": "Banda frontal ajustable"
+                    },
+                    {
+                      "label": "Protección ocular",
+                      "valor": "Careta 4\", TuffShield o Defender"
+                    },
+                    {
+                      "label": "Colores",
+                      "valor": "Siete opciones de coquilla"
+                    }
+                  ],
+                  "secciones": [
+                    {
+                      "id": "el-perfil",
+                      "eyebrow": "Qué estás comprando",
+                      "titulo": "Perfil recortado, coquilla de composite y cofia interior",
+                      "parrafos": [
+                        "El 660C Metro es la respuesta de MSA para quien necesita casco estructural con menos silueta. La coquilla es de <strong>composite de fibra de vidrio tintado en masa, no corrosiva y resistente a agrietamiento y desprendimiento</strong>, y por dentro lleva una cofia de impacto que es la que absorbe energía. Esa combinación —composite afuera, cofia adentro— es la misma arquitectura de una tradicional; lo que cambia es cuánta superficie queda expuesta a engancharse.",
+                        "En operación, el perfil recortado se nota en tres momentos concretos: al entrar por una escotilla o un hueco, al trabajar dentro de un vehículo durante una extricación y al girar la cabeza en un espacio donde el ala de un casco tradicional toca antes que el hombro. Frente a una tradicional como el <strong>Cairns 1836</strong> de la misma marca, lo que se cede es la cuenca del ala completa."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Coquilla tintada en masa",
+                          "d": "El color atraviesa el material, así que un rayón profundo no deja fibra desnuda. El criterio de retiro se apoya en deformación, burbujeo y agrietamiento, no en la apariencia."
+                        },
+                        {
+                          "t": "Cofia de impacto",
+                          "d": "La pieza interior que absorbe el golpe deformándose. Es la que hay que inspeccionar después de una exposición térmica o de un impacto, aunque la coquilla se vea intacta."
+                        },
+                        {
+                          "t": "Interior configurable",
+                          "d": "MSA lo ofrece en franela estándar, en versión deluxe de piel con almohadilla de corona y en configuraciones removibles. La versión removible es la que hace viable el lavado periódico."
+                        },
+                        {
+                          "t": "Siete colores de coquilla",
+                          "d": "Negro, amarillo, rojo, blanco, naranja, azul y verde. Es el rango más amplio del catálogo y el que permite un código de color por función, por rango y por compañía sin pintar nada."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "liberacion",
+                      "eyebrow": "El sistema que casi nadie menciona",
+                      "titulo": "Liberación de coquilla: pensado para soltarse",
+                      "parrafos": [
+                        "Todos los cascos se diseñan para quedarse puestos. Este además está diseñado para <strong>soltarse a propósito</strong>: MSA publica un sistema patentado de liberación de la coquilla, previsto para escapar cuando algo la engancha —cable colgante, malla, estructura colapsada, cinta de una carga—. Es una función de rescate propio, no de confort.",
+                        "Vale la pena entender el compromiso: un casco que puede liberarse es un casco que también puede perderse en el peor momento, y por eso el barboquejo y la práctica de uso importan más, no menos. Lo que aporta el sistema es una salida cuando la alternativa es quedar anclado a una estructura con el aire corriendo."
+                      ],
+                      "nota": "En capacitación de entrega esto se demuestra y se practica, no se explica: el personal tiene que saber que existe, cómo se activa y en qué situación conviene usarlo. Si no se enseña, es una función que el casco trae y nadie va a usar."
+                    },
+                    {
+                      "id": "interfaz-era",
+                      "eyebrow": "La interfaz que decide el ajuste",
+                      "titulo": "La banda frontal y el reborde de la pieza facial",
+                      "parrafos": [
+                        "Aquí está el argumento más sólido de este modelo. MSA describe una <strong>banda frontal con interfaz para pieza facial, diseñada para acomodar distintos diseños de máscara</strong> de equipo de respiración. Traducido: la banda no compite por el espacio que ocupa el reborde superior de la máscara.",
+                        "El problema que resuelve es real y frecuente. Un casco cuya banda frontal queda justo donde va el reborde de la pieza facial empuja la máscara hacia abajo o hacia adelante, y el sello facial —lo único que separa al elemento de la atmósfera— se compromete. En una estación con dos o tres marcas de equipo de respiración, un casco que acomoda distintos diseños de máscara deja de ser una preferencia y se vuelve una necesidad de inventario."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Prueba con la máscara real",
+                          "d": "El ajuste se valida con la pieza facial que el elemento va a usar de verdad, no con una prestada. Entre marcas y entre tallas de máscara el reborde cambia de posición."
+                        },
+                        {
+                          "t": "Prueba con capucha",
+                          "d": "La capucha suma volumen justo donde el casco y la máscara ya compiten. Un ajuste correcto en seco puede empujar la máscara con capucha puesta."
+                        },
+                        {
+                          "t": "Posiciones reales de trabajo",
+                          "d": "Mirar hacia arriba, agacharse, avanzar en gateo y girar la cabeza. Lo que se busca es que el casco no se mueva y que no presione la máscara en ninguna de las cuatro."
+                        },
+                        {
+                          "t": "Ratchet trasero de tres posiciones",
+                          "d": "El ajuste de altura del 660C. Es el que fija a qué altura queda la banda frontal y, con ella, si toca o libera el reborde de la máscara."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ocular",
+                      "eyebrow": "Protección ocular",
+                      "titulo": "Tres opciones y el detalle del guante",
+                      "parrafos": [
+                        "El 660C se ofrece con careta estándar de 4 pulgadas, con TuffShield de 4 pulgadas o con el <strong>visor Defender retráctil</strong>. La ficha añade un dato que casi ninguna otra menciona y que en campo lo es todo: el Defender está declarado como <strong>operable con guante puesto</strong>.",
+                        "Ese detalle separa una función usable de una que se queda guardada. Un visor que requiere destreza de dedos desnudos no se despliega en escena; uno operable con guante estructural sí. Como en el resto de la línea, ninguna de las tres cierra el contorno del ojo: para eso están los goggles, y en este modelo conviene revisar disponibilidad porque varias combinaciones con goggles aparecen descontinuadas."
+                      ],
+                      "nota": "Si la partida va a incluir goggles, hay que <strong>confirmar el número de parte vigente</strong> antes de cotizar: en este modelo MSA marca como descontinuadas varias variantes de color con goggles ESS y algunas configuraciones de Defender. El casco sigue disponible; la combinación exacta puede no estarlo."
+                    },
+                    {
+                      "id": "sin-peso-ni-edicion",
+                      "eyebrow": "Lo que el fabricante no publica",
+                      "titulo": "Ni peso ni edición: cómo se compra igual",
+                      "parrafos": [
+                        "Este modelo es el caso contrario al del Cairns 1836 de la misma marca: la construcción está bien descrita, pero <strong>MSA no publica peso ni especifica la edición normativa</strong> en la página del producto. No lo vamos a rellenar con la cifra de otro modelo ni con un “aproximadamente”.",
+                        "Lo que sí se puede hacer es comprar con método. Los dos datos se piden por escrito referidos al número de parte, y mientras llegan, la partida se redacta con los atributos que sí están publicados. Así la evaluación se sostiene con documento y no con estimaciones."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Dato ausente",
+                          "Qué decide",
+                          "Cómo se resuelve"
+                        ],
+                        "rows": [
+                          [
+                            "Peso del casco",
+                            "Fatiga cervical y comparación contra el 1836 y contra la línea Bullard",
+                            "Se solicita por escrito para el número de parte, con la configuración ocular montada"
+                          ],
+                          [
+                            "Edición normativa declarada",
+                            "Si el certificado sirve para una compra nueva en 2026",
+                            "Se pide el certificado del modelo cotizado indicando edición, organismo certificador y alcance"
+                          ],
+                          [
+                            "Rango de talla en unidades",
+                            "Qué personal queda dentro del rango de ajuste",
+                            "Se pide el rango del sistema de ratchet; el 1836 de la misma marca lo publica de 5-3/8\" a 8-3/8\", así que es un dato exigible"
+                          ],
+                          [
+                            "Disponibilidad de la combinación",
+                            "Que la clave cotizada exista de verdad",
+                            "Se confirma el número de parte de la combinación color + visor + goggles antes de ofertar"
+                          ]
+                        ]
+                      },
+                      "nota": "Regla que aplicamos en toda la línea: <strong>un dato que no publica el fabricante no se estima, se solicita</strong>. Si el proveedor lo estima por ti, lo que estás comprando es su suposición con tu presupuesto."
+                    },
+                    {
+                      "id": "cuando-conviene",
+                      "eyebrow": "Criterio de selección",
+                      "titulo": "Cuándo el perfil metro es la respuesta correcta",
+                      "parrafos": [
+                        "Un perfil recortado no es “mejor” ni “peor” que una tradicional: cambia lo que gana y lo que pierde. Esta tabla es la conversación que tenemos con un comprador antes de cotizar."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Situación operativa",
+                          "Recomendación",
+                          "Por qué"
+                        ],
+                        "rows": [
+                          [
+                            "Extricación vehicular y espacios confinados frecuentes",
+                            "660C Metro",
+                            "Menos superficie de ala que enganche y perfil que libra el interior de un vehículo"
+                          ],
+                          [
+                            "Estación con dos o más marcas de pieza facial",
+                            "660C Metro",
+                            "La banda frontal está diseñada para acomodar distintos diseños de máscara"
+                          ],
+                          [
+                            "Interior con línea y mucha agua encima",
+                            "Cairns 1836 o UST Traditional",
+                            "El ala completa forma la cuenca que deriva agua y escombro fuera del cuello del chaquetón"
+                          ],
+                          [
+                            "El peso es criterio de evaluación escrito",
+                            "1836 o UST LowRider",
+                            "Son los dos modelos del catálogo con peso publicado por el fabricante"
+                          ]
+                        ]
+                      },
+                      "nota": "Muchas corporaciones no eligen: <strong>dotan por función</strong>. Ala completa para la línea de ataque, perfil recortado para rescate técnico y extricación. Cuesta más en inventario de refacciones y resuelve mejor las dos maniobras."
+                    },
+                    {
+                      "id": "configuracion",
+                      "eyebrow": "Cómo se pide",
+                      "titulo": "Las cinco decisiones de la partida",
+                      "parrafos": [
+                        "El 660C se configura por color, protección facial, interior, barboquejo y accesorios. Cada combinación es una clave distinta, y una requisición que no las fija deja la configuración al criterio del proveedor."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Decisión",
+                          "Opciones publicadas",
+                          "Cómo se escribe en la partida"
+                        ],
+                        "rows": [
+                          [
+                            "Color de coquilla",
+                            "Negro, amarillo, rojo, blanco, naranja, azul y verde",
+                            "Cantidad por color, asignando el color a función o rango"
+                          ],
+                          [
+                            "Protección facial",
+                            "Careta de 4\", TuffShield de 4\" o visor Defender retráctil",
+                            "“Visor Defender retráctil operable con guante”, y los goggles como partida independiente"
+                          ],
+                          [
+                            "Interior",
+                            "Franela estándar, deluxe de piel con almohadilla de corona, versiones removibles",
+                            "“Interior removible” cuando hay programa de descontaminación, porque es el que se puede lavar"
+                          ],
+                          [
+                            "Barboquejo",
+                            "Nomex negro suave con hebilla de liberación rápida y corredera postman",
+                            "Explícito en la partida, con el número de parte de repuesto"
+                          ],
+                          [
+                            "Datos a confirmar",
+                            "Peso y edición normativa no publicados",
+                            "Renglón de la propuesta: “el proveedor entrega peso por número de parte y certificado con edición vigente”"
+                          ]
+                        ]
+                      },
+                      "nota": "Con esos cinco renglones más el certificado y la fecha de fabricación por unidad, dos ofertas del mismo precio dejan de ser dos cascos distintos —que es el problema real de una licitación de cascos, no el precio—."
+                    },
+                    {
+                      "id": "mantenimiento",
+                      "eyebrow": "Ciclo de vida",
+                      "titulo": "Inspección del composite y retiro programado",
+                      "parrafos": [
+                        "En un composite lo que se busca en la inspección anual documentada es <strong>agrietamiento, desprendimiento del acabado, decoloración por calor y burbujeo</strong>, además del estado de la cofia por dentro, del interior, del barboquejo y del sistema de liberación de coquilla, que también se revisa porque es un mecanismo.",
+                        "El interior removible es lo que hace realista el lavado, y el lavado es lo que evita que el casco se convierta en el punto sucio del conjunto. La coquilla se limpia con detergente suave y agua: los solventes, adhesivos y pinturas quedan fuera, igual que en el resto de la línea."
+                      ],
+                      "nota": "El retiro se rige por <strong>NFPA 1850 (1851)</strong>: diez años desde la fecha de fabricación, más el retiro anticipado por impacto o daño. Al no haber vida útil declarada por el fabricante para este modelo, ese criterio normativo es el único que aplica."
+                    }
+                  ],
+                  "galeria": [
+                    {
+                      "src": "/images/catalogo/1592235905030-600x450.webp",
+                      "alt": "Bombero con pieza facial de equipo de respiración bajo el casco estructural",
+                      "caption": "La interfaz con la pieza facial"
+                    },
+                    {
+                      "src": "/images/catalogo/1606613817012-600x450.webp",
+                      "alt": "Bombero equipado junto a la unidad en escena",
+                      "caption": "Perfil recortado en operación"
+                    },
+                    {
+                      "src": "/images/catalogo/1776784163597-600x450.webp",
+                      "alt": "Equipo de rescate operando sobre un vehículo siniestrado",
+                      "caption": "Extricación: menos superficie que enganche"
+                    },
+                    {
+                      "src": "/images/catalogo/1726262693471-600x450.webp",
+                      "alt": "Casco de protección amarillo listo para asignación de brigada",
+                      "caption": "Siete colores para código por función"
+                    }
+                  ],
+                  "aplicaciones": [
+                    {
+                      "sector": "Cuerpos de bomberos",
+                      "desc": "Para rescate técnico y extricación vehicular, o como segunda configuración de la corporación cuando la línea de ataque usa ala completa."
+                    },
+                    {
+                      "sector": "Brigadas industriales",
+                      "desc": "Cuando la maniobra dominante es paso lateral en espacios reducidos y la planta tiene más de una marca de equipo de respiración en inventario."
+                    },
+                    {
+                      "sector": "Licitación pública",
+                      "desc": "Partida cerrada por color, protección facial, interior y barboquejo, con un renglón explícito que obliga al proveedor a entregar peso y certificado con edición vigente."
+                    }
+                  ],
+                  "datoClave": {
+                    "titulo": "Dos datos que el proveedor debe entregar",
+                    "texto": "MSA <strong>no publica peso ni edición normativa</strong> de este modelo. Ponlo como renglón de la partida: el proveedor entrega peso por número de parte y certificado del modelo con la edición vigente. Lo que no se pide por escrito, no llega."
+                  },
+                  "referencias": [
+                    {
+                      "code": "NFPA 1970 · 2025",
+                      "desc": "Estándar vigente para conjuntos de protección estructural y de proximidad. Es la edición que debe citar el certificado del modelo cotizado en una compra nueva."
+                    },
+                    {
+                      "code": "NFPA · sin edición",
+                      "desc": "La página de producto del 660C Metro no especifica edición normativa. Es exactamente el dato que hay que exigir por escrito antes de fallar una partida."
+                    },
+                    {
+                      "code": "ANSI/ISEA Z87.1",
+                      "desc": "Norma de protección ocular y facial. Aplica a la careta de 4\", al TuffShield y a los goggles que se especifiquen como partida independiente."
+                    },
+                    {
+                      "code": "NFPA 1850 · 2026",
+                      "desc": "Selección, cuidado y mantenimiento: inspección anual documentada y retiro a los diez años de la fecha de fabricación. Al no haber vida útil declarada, es el criterio aplicable."
+                    },
+                    {
+                      "code": "NOM-017-STPS",
+                      "desc": "Selección, entrega y capacitación en el uso del EPP. En este modelo la capacitación incluye demostrar el sistema de liberación de coquilla."
+                    }
+                  ],
+                  "blog": [
+                    "cascos-forestales-msa-cairns-guia",
+                    "rescate-vehicular-tecnicas-equipos",
+                    "epp-completo-kit-bombero-profesional",
+                    "casco-bombero-bullard-usrhb-guia",
+                    "mantenimiento-epp-estructural-nfpa-1851",
+                    "espacios-confinados-proteccion-respiratoria"
+                  ],
+                  "faqs": [
+                    {
+                      "q": "¿Qué gana y qué pierde un perfil metro frente a una tradicional?",
+                      "a": "Gana en maniobra: menos superficie de ala que enganche, mejor paso por escotillas y huecos, y menos interferencia dentro de un vehículo durante una extricación. Pierde la cuenca del ala completa, que es la que deriva agua de la línea, brasa y escombro fuera del cuello del chaquetón. Por eso muchas corporaciones no eligen entre uno y otro: dotan ala completa a la línea de ataque y perfil recortado al equipo de rescate técnico."
+                    },
+                    {
+                      "q": "¿Para qué sirve el sistema de liberación de coquilla?",
+                      "a": "Para escapar si algo engancha el casco: un cable colgante, una malla, estructura colapsada o la cinta de una carga. MSA lo publica como sistema patentado y es una función de rescate propio, no de confort. Tiene un compromiso obvio —un casco que puede liberarse también puede perderse— así que el barboquejo y la práctica importan más, no menos. Y sobre todo: hay que demostrarlo en la capacitación de entrega, porque una función que nadie sabe que existe no se usa."
+                    },
+                    {
+                      "q": "¿Por qué se insiste tanto en la banda frontal?",
+                      "a": "Porque es la interfaz que decide si el sello facial de la máscara se compromete. MSA describe la banda frontal del 660C como diseñada para acomodar distintos diseños de pieza facial de equipo de respiración. Un casco cuya banda queda justo donde va el reborde superior de la máscara la empuja y afecta el sello, que es lo único que separa al elemento de la atmósfera. En una estación con dos o tres marcas de ERA, esa compatibilidad deja de ser preferencia y se vuelve inventario."
+                    },
+                    {
+                      "q": "¿Cuánto pesa el 660C Metro?",
+                      "a": "MSA no publica el peso de este modelo, y no lo vamos a estimar a partir de otro. Se solicita por escrito al fabricante referido al número de parte y con la configuración ocular montada. Para referencia del catálogo: el Cairns 1836 de la misma marca publica 1.5 a 1.8 kg según configuración y el Bullard UST LowRider publica 1.4 a 1.5 kg. Si el peso va a ser criterio de evaluación, conviene especificar un modelo que sí tenga cifra publicada."
+                    },
+                    {
+                      "q": "¿Qué edición de la norma cumple?",
+                      "a": "La página de producto no especifica edición, así que la respuesta honesta es que hay que pedirla. Lo exigible en una compra nueva es el certificado del modelo cotizado referido a NFPA 1970 edición 2025 —el estándar vigente que consolidó las NFPA 1971, 1975, 1981 y 1982, con transición cerrada el 18 de marzo de 2026—, con organismo certificador y alcance. Nosotros lo gestionamos como parte de la propuesta y lo entregamos por escrito."
+                    },
+                    {
+                      "q": "¿El visor Defender se puede operar con guante?",
+                      "a": "Sí, y es un dato que MSA declara explícitamente para este modelo. Importa más de lo que parece: un visor que requiere dedos desnudos no se despliega en escena, así que en la práctica es como no tenerlo. Aun así, el visor no sustituye la protección ocular: no cierra el contorno del ojo. Para ventilación, remoción de escombro y rescate vehicular se especifican goggles, y en este modelo hay que confirmar el número de parte vigente porque varias combinaciones aparecen descontinuadas."
+                    },
+                    {
+                      "q": "¿Qué interior conviene elegir?",
+                      "a": "El removible, si existe un programa de descontaminación real. MSA ofrece franela estándar, versión deluxe de piel con almohadilla de corona y configuraciones removibles. El interior es la parte del casco que más se contamina y la que menos se lava, así que un interior que se retira completo es la diferencia entre un procedimiento que se cumple y uno que existe en papel. El deluxe gana en confort percibido; el removible gana en higiene."
+                    },
+                    {
+                      "q": "¿Cómo se escribe la partida de este modelo?",
+                      "a": "Cinco decisiones más dos exigencias documentales. Las decisiones: color de coquilla con cantidad por color, protección facial —careta de 4\", TuffShield o Defender—, goggles como partida independiente, tipo de interior y barboquejo. Las exigencias: que el proveedor entregue peso por número de parte y certificado del modelo con edición normativa vigente, más fecha de fabricación por unidad. Nosotros entregamos la propuesta ya desglosada así, con los números de parte confirmados como vigentes."
+                    }
+                  ]
+                }
               },
               {
                 "marca": "MSA",
@@ -3242,7 +4827,399 @@
                   "Headset de comunicación interno opcional",
                   "Interiores lavables y reemplazables"
                 ],
-                "chip": "Aprobación por número de parte · confirmar antes de licitar"
+                "chip": "Aprobación por número de parte · confirmar antes de licitar",
+                "slug": "msa-cairns-xf1",
+                "fichaLabel": "el Cairns XF1",
+                "l4": {
+                  "seoTitle": "Casco MSA Cairns XF1 jet con luz y comms",
+                  "seoDescription": "Casco MSA Cairns XF1 de silueta jet: iluminación frontal y lateral integrada, headset interno, tallas M y L y aprobaciones que cambian por número de parte.",
+                  "h1": "Casco estructural MSA Cairns XF1",
+                  "subtitulo": "La silueta jet de MSA: sin ala, con iluminación frontal y lateral integrada, comunicaciones con headset interno, interiores desmontables y lavables, en tallas M y L. Es un casco de plataforma, y su alcance de aprobación depende del número de parte.",
+                  "badge": "Alcance por número de parte",
+                  "heroImg": {
+                    "src": "/images/catalogo/1726262693471-600x450.webp",
+                    "alt": "Casco estructural de perfil jet con visor integrado en escena nocturna",
+                    "caption": "Silueta jet con luz integrada"
+                  },
+                  "heroBloques": [
+                    {
+                      "label": "Por qué este casco se compra por número de parte",
+                      "texto": "El XF1 no es una coquilla con accesorios: es una <strong>plataforma integrada</strong> —luz frontal y lateral, headset de comunicación interno, visor interno— y cada combinación es un número de parte distinto. MSA lo dice con todas sus letras en su propia página: <em>“Approvals subject to change without notice and may differ based on configuration, part number and/or country.”</em> Traducido a una compra mexicana: <strong>el alcance de certificación se verifica por parte y por país</strong>, no se hereda del nombre del modelo."
+                    },
+                    {
+                      "label": "Distribución autorizada, no reventa",
+                      "texto": "En este modelo nuestro trabajo empieza antes de cotizar: <strong>confirmamos por escrito qué aprobación ampara el número de parte</strong> y para qué uso, y entregamos certificado del modelo cotizado, etiqueta legible y fecha de fabricación por unidad. Si la configuración que pide la convocatoria no está amparada para combate estructural en el alcance que aplica, lo decimos antes de la propuesta. Respuesta en menos de <strong>24 horas hábiles</strong>, con cobertura en los <strong>32 estados de la República</strong>."
+                    }
+                  ],
+                  "heroDatos": [
+                    {
+                      "label": "Silueta",
+                      "valor": "Jet sin ala"
+                    },
+                    {
+                      "label": "Tallas",
+                      "valor": "Medium y Large"
+                    },
+                    {
+                      "label": "Aprobación",
+                      "valor": "Varía por parte y país"
+                    }
+                  ],
+                  "specStrip": [
+                    {
+                      "label": "Perfil",
+                      "valor": "Jet, sin ala"
+                    },
+                    {
+                      "label": "Iluminación",
+                      "valor": "Frontal y lateral integrada"
+                    },
+                    {
+                      "label": "Comunicación",
+                      "valor": "Headset interno opcional"
+                    },
+                    {
+                      "label": "Visor interno",
+                      "valor": "Declarado ANSI Z87 por parte"
+                    },
+                    {
+                      "label": "Interiores",
+                      "valor": "Desmontables y lavables"
+                    },
+                    {
+                      "label": "Acabados",
+                      "valor": "Cinco colores, brillante o mate"
+                    }
+                  ],
+                  "secciones": [
+                    {
+                      "id": "la-plataforma",
+                      "eyebrow": "Qué estás comprando",
+                      "titulo": "Un casco jet pensado como plataforma",
+                      "parrafos": [
+                        "La silueta jet sin ala existe por dos razones operativas: <strong>reduce la superficie que puede engancharse</strong> y libera espacio alrededor de la cabeza para montar cosas. El XF1 aprovecha las dos: sobre esa coquilla MSA integra iluminación frontal y lateral y un headset de comunicación interno, con interiores que se desmontan, se lavan y se reinstalan.",
+                        "Eso lo pone en una categoría distinta al resto del catálogo. Una tradicional y una metro se compran por construcción; esta se compra por <strong>qué trae integrado y con qué alcance está aprobada esa integración</strong>. Es la diferencia entre comparar cascos y comparar sistemas. Sigue siendo un casco estructural y se compra con el mismo expediente que el resto de la línea: certificado del modelo, etiqueta y fecha de fabricación."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Silueta jet sin ala",
+                          "d": "Menos superficie expuesta a engancharse con cable, malla o estructura, y menor interferencia en el interior de un vehículo o en un hueco estrecho."
+                        },
+                        {
+                          "t": "Iluminación integrada",
+                          "d": "Luz frontal y lateral montada en la coquilla, orientada a conciencia situacional: iluminar donde se mira y ser visible de costado, no sustituir la lámpara de intervención."
+                        },
+                        {
+                          "t": "Comunicación integrada",
+                          "d": "Headset interno para hablar sin sostener nada. En maniobras con las dos manos ocupadas —herramienta hidráulica, línea, camilla— eso es tiempo de operación, no comodidad."
+                        },
+                        {
+                          "t": "Interiores desmontables",
+                          "d": "Soft goods que se retiran completos para lavar y se reinstalan. En un casco con electrónica integrada, poder separar la parte lavable de la que no lo es deja de ser un detalle."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "aprobaciones",
+                      "eyebrow": "Lo que hay que verificar antes de cotizar",
+                      "titulo": "Las aprobaciones cambian por configuración, parte y país",
+                      "parrafos": [
+                        "MSA publica en la propia página del producto un aviso que conviene leer dos veces: <em>“Approvals subject to change without notice and may differ based on configuration, part number and/or country.”</em> Es decir, <strong>el alcance de aprobación no es una propiedad del modelo, es una propiedad del número de parte</strong> —y puede cambiar según el país donde se venda.",
+                        "Para un comprador mexicano eso tiene una consecuencia práctica: no se puede asumir que un casco de silueta jet, aunque lo venda una marca con presencia global, está amparado para combate estructural bajo el mismo alcance en todos sus números de parte. La verificación es documental, por parte, y se hace antes de la propuesta, no después de la entrega."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Qué verificar",
+                          "Cómo se pide",
+                          "Por qué importa"
+                        ],
+                        "rows": [
+                          [
+                            "Número de parte exacto",
+                            "La clave completa de la configuración cotizada, no el nombre del modelo",
+                            "Es la unidad a la que se refiere la aprobación según el propio aviso del fabricante"
+                          ],
+                          [
+                            "Norma y edición amparadas",
+                            "Constancia que indique norma, edición y alcance para ese número de parte",
+                            "Un casco puede estar aprobado bajo un esquema y no bajo el que exige la convocatoria"
+                          ],
+                          [
+                            "País del alcance",
+                            "Confirmación de que la aprobación aplica al mercado donde se va a usar",
+                            "El propio aviso menciona el país como variable de la aprobación"
+                          ],
+                          [
+                            "Alcance de los módulos",
+                            "Si la luz y el headset están cubiertos por la aprobación o van como accesorio",
+                            "Un componente electrónico integrado puede tener alcance distinto al de la coquilla"
+                          ]
+                        ]
+                      },
+                      "nota": "Esta es la ficha del catálogo donde más insistimos en lo mismo: <strong>si el alcance no está por escrito para el número de parte, no está</strong>. No es desconfianza hacia la marca, es cómo funciona una certificación de tercera parte."
+                    },
+                    {
+                      "id": "cuando-tiene-sentido",
+                      "eyebrow": "Criterio de selección",
+                      "titulo": "Cuándo un jet sin ala es la respuesta y cuándo no",
+                      "parrafos": [
+                        "Un jet no es una tradicional recortada: cambia lo que protege y lo que estorba. Frente a una tradicional como el Cairns 1836 se cede la cuenca del ala y se gana perfil; frente a un perfil metro se gana integración y se cede la banda frontal pensada para la pieza facial. En México, además, hay un factor cultural y normativo real —muchas corporaciones tienen la silueta tradicional escrita en su procedimiento—, así que esta decisión rara vez es solo técnica."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Situación",
+                          "Recomendación",
+                          "Por qué"
+                        ],
+                        "rows": [
+                          [
+                            "Rescate técnico, alturas, espacios confinados",
+                            "Cairns XF1",
+                            "Sin ala que engancharse, con luz y comunicación integradas y sin accesorios colgando"
+                          ],
+                          [
+                            "Maniobras con las dos manos ocupadas y necesidad de comunicación constante",
+                            "Cairns XF1",
+                            "El headset interno evita sostener o manipular un equipo de radio con guante"
+                          ],
+                          [
+                            "Interior estructural con línea y agua encima",
+                            "Cairns 1836 o UST Traditional",
+                            "La cuenca del ala completa deriva agua y escombro fuera del cuello del chaquetón"
+                          ],
+                          [
+                            "Procedimiento interno que exige silueta tradicional",
+                            "1836 o UST Traditional",
+                            "La silueta está normada por la corporación; discutirlo con el jefe de estación va antes que cotizar"
+                          ]
+                        ]
+                      },
+                      "nota": "Un patrón que funciona: <strong>dotar por función</strong>. La línea de ataque con ala completa y el equipo de rescate técnico con jet. Cuesta más en refacciones y resuelve mejor las dos maniobras, en lugar de comprometer las dos con un solo modelo."
+                    },
+                    {
+                      "id": "integracion",
+                      "eyebrow": "Luz y comunicación",
+                      "titulo": "Lo que cambia cuando la electrónica va adentro",
+                      "parrafos": [
+                        "Integrar luz y comunicación resuelve problemas —nada que colgar, nada que se enganche, manos libres— y crea otros que hay que presupuestar desde el principio. Un casco con electrónica tiene consumibles, tiene un componente que puede fallar sin que la coquilla tenga nada, y tiene una ruta de servicio distinta a la de un casco puramente mecánico.",
+                        "Ninguno de esos puntos es un argumento en contra: son renglones del presupuesto de operación que casi nunca aparecen en la comparativa de compra, y que a tres años explican por qué dos flotas del mismo tamaño cuestan distinto."
+                      ],
+                      "lista": [
+                        {
+                          "t": "Consumibles y carga",
+                          "d": "Antes de comprar hay que confirmar cómo se alimentan los módulos —pilas o batería recargable—, la autonomía declarada y el ciclo de reemplazo. Es un costo recurrente, no una compra única."
+                        },
+                        {
+                          "t": "Servicio del módulo",
+                          "d": "Qué pasa si falla la luz o el headset: si se repone el módulo, si va a servicio o si obliga a retirar el casco. Conviene pedirlo por escrito junto con el número de parte del repuesto."
+                        },
+                        {
+                          "t": "Atmósferas clasificadas",
+                          "d": "Cualquier equipo electrónico que entre a un área con atmósfera clasificada necesita su propia declaración. Si la instalación exige aptitud para División 1, hay que verificar el módulo específico, no el casco."
+                        },
+                        {
+                          "t": "Higiene con electrónica",
+                          "d": "Los interiores desmontables permiten lavar la parte textil sin mojar la parte electrónica. Es la razón práctica por la que en este modelo el soft good removible no es opcional en un programa de descontaminación."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "configuracion",
+                      "eyebrow": "Cómo se pide",
+                      "titulo": "Talla, color, acabado y módulos: cuatro decisiones y una verificación",
+                      "parrafos": [
+                        "El XF1 se surte en <strong>tallas Medium y Large</strong> —dos, no un rango continuo de ajuste—, en cinco colores y en acabado brillante o mate. La talla es la primera decisión y conviene tomarla midiendo, con capucha puesta y no a ojo: con solo dos tallas, el margen de error es menor que en un casco con 25 posiciones de perímetro."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Decisión",
+                          "Opciones publicadas",
+                          "Cómo se escribe en la partida"
+                        ],
+                        "rows": [
+                          [
+                            "Talla",
+                            "Medium y Large",
+                            "Cantidad por talla, resultado de medir la plantilla y no de estimarla"
+                          ],
+                          [
+                            "Color y acabado",
+                            "Negro, rojo, blanco, amarillo y azul; brillante o mate",
+                            "Color por función o compañía, con el acabado explícito"
+                          ],
+                          [
+                            "Módulos integrados",
+                            "Iluminación frontal y lateral; headset de comunicación interno",
+                            "Cada módulo como renglón, con número de parte, consumible y repuesto"
+                          ],
+                          [
+                            "Protección ocular",
+                            "Visor interno declarado ANSI Z87 en ciertas partes; configuraciones con careta clara",
+                            "Renglón propio, indicando la declaración que ampara el visor de esa parte"
+                          ],
+                          [
+                            "Verificación documental",
+                            "Aprobación por número de parte y país",
+                            "Renglón que obliga al proveedor a entregar la constancia de alcance antes de la entrega"
+                          ]
+                        ]
+                      },
+                      "nota": "Con dos tallas, la <strong>medición de la plantilla</strong> deja de ser un trámite: si una parte del personal queda fuera del rango de las dos tallas, este modelo no es la opción para esa parte de la dotación y hay que cotizarle otra serie."
+                    },
+                    {
+                      "id": "lo-no-publicado",
+                      "eyebrow": "Lo que el fabricante no publica",
+                      "titulo": "Cuatro datos ausentes en la página consultada",
+                      "parrafos": [
+                        "En la página de producto que consultamos no aparecen datos que en el resto del catálogo sí están. Los nombramos para poder pedirlos, no para descalificar el modelo: un casco de plataforma se documenta por número de parte, y buena parte de esa documentación se entrega bajo solicitud."
+                      ],
+                      "tabla": {
+                        "head": [
+                          "Dato ausente",
+                          "Qué decide",
+                          "Cómo se resuelve"
+                        ],
+                        "rows": [
+                          [
+                            "Material de la coquilla",
+                            "Comportamiento tras exposiciones repetidas y criterio de inspección",
+                            "Se pide la especificación de material para el número de parte cotizado"
+                          ],
+                          [
+                            "Peso del casco",
+                            "Fatiga cervical, más relevante aquí porque hay módulos montados",
+                            "Se pide el peso con luz y headset instalados, no el de la coquilla desnuda"
+                          ],
+                          [
+                            "Norma y edición por parte",
+                            "Si la configuración sirve para la convocatoria",
+                            "Se solicita constancia de alcance con norma, edición, número de parte y país"
+                          ],
+                          [
+                            "Autonomía de los módulos",
+                            "Costo de operación y disponibilidad en turno",
+                            "Se pide autonomía declarada, tipo de alimentación y número de parte del consumible"
+                          ]
+                        ]
+                      },
+                      "nota": "Los cuatro caben en un correo referido al número de parte, y los gestionamos como parte de la propuesta. En este modelo la regla de la casa se vuelve especialmente literal: <strong>el dato se consigue, no se supone</strong>."
+                    },
+                    {
+                      "id": "mantenimiento",
+                      "eyebrow": "Ciclo de vida",
+                      "titulo": "Inspección de un casco con módulos y retiro",
+                      "parrafos": [
+                        "La inspección de este casco tiene un componente que los demás no: además de revisar coquilla, interior, barboquejo, visor y la interfaz con la pieza facial del equipo de respiración, hay que <strong>verificar que los módulos enciendan y comuniquen</strong>, y revisar sus puntos de anclaje. Un módulo flojo es un enganche y un punto de entrada de contaminación.",
+                        "La limpieza sigue el criterio de toda la línea —detergente suave y agua, sin solventes, adhesivos ni pinturas— con la ventaja de que los interiores se desmontan completos. Lo que no se moja es la electrónica, y por eso el procedimiento de lavado debe estar escrito para este modelo en particular."
+                      ],
+                      "nota": "El retiro se rige por <strong>NFPA 1850 (1851)</strong>: diez años desde la fecha de fabricación, más el retiro anticipado por impacto o daño. Los módulos tienen su propio ciclo: pueden reponerse sin retirar el casco, siempre que el repuesto sea el que corresponde al número de parte."
+                    }
+                  ],
+                  "galeria": [
+                    {
+                      "src": "/images/catalogo/1608723724615-600x450.webp",
+                      "alt": "Dos bomberos con casco identificado operando en ambiente con humo",
+                      "caption": "Visibilidad y comunicación en humo"
+                    },
+                    {
+                      "src": "/images/catalogo/1759673824678-1000x750.webp",
+                      "alt": "Bombero equipado saliendo de una estructura durante una maniobra de rescate",
+                      "caption": "Maniobra en espacio reducido"
+                    },
+                    {
+                      "src": "/images/catalogo/1776784163597-600x450.webp",
+                      "alt": "Equipo de rescate operando sobre un vehículo siniestrado",
+                      "caption": "Rescate técnico con manos ocupadas"
+                    },
+                    {
+                      "src": "/images/catalogo/1690210795713-600x450.webp",
+                      "alt": "Dos bomberos con casco estructural y visera durante una operación",
+                      "caption": "Dotación por función"
+                    }
+                  ],
+                  "aplicaciones": [
+                    {
+                      "sector": "Rescate técnico",
+                      "desc": "Alturas, espacios confinados y extricación: sin ala que se engancha, con luz y comunicación integradas y sin accesorios colgando de la coquilla."
+                    },
+                    {
+                      "sector": "Brigadas industriales",
+                      "desc": "Cuando la maniobra exige manos libres y comunicación constante. Si el área tiene atmósfera clasificada, los módulos electrónicos necesitan su propia declaración de aptitud."
+                    },
+                    {
+                      "sector": "Licitación pública",
+                      "desc": "Partida por número de parte, con renglón explícito de constancia de alcance —norma, edición, parte y país— antes de la entrega."
+                    }
+                  ],
+                  "datoClave": {
+                    "titulo": "La aprobación es del número de parte",
+                    "texto": "MSA advierte que las aprobaciones <strong>pueden diferir según configuración, número de parte y país</strong>. En este modelo, pedir la constancia de alcance por parte no es exceso de celo: es la única forma de saber qué ampara el certificado que te van a entregar."
+                  },
+                  "referencias": [
+                    {
+                      "code": "Aviso de aprobaciones",
+                      "desc": "MSA publica en la página del producto que las aprobaciones pueden cambiar sin aviso y diferir según configuración, número de parte y país. Es el punto de partida de cualquier verificación."
+                    },
+                    {
+                      "code": "NFPA 1970 · 2025",
+                      "desc": "Estándar vigente para conjuntos de protección estructural y de proximidad. Es la referencia contra la que hay que pedir el alcance del número de parte cotizado."
+                    },
+                    {
+                      "code": "ANSI Z87",
+                      "desc": "Declaración que MSA indica para el visor interno en ciertos números de parte. Conviene confirmar cuál aplica a la configuración exacta que se va a comprar."
+                    },
+                    {
+                      "code": "NFPA 1850 · 2026",
+                      "desc": "Selección, cuidado y mantenimiento: inspección anual documentada y retiro a los diez años de la fecha de fabricación."
+                    },
+                    {
+                      "code": "NOM-017-STPS",
+                      "desc": "Selección, entrega y capacitación en el uso del EPP. En este modelo la capacitación incluye operación de los módulos de luz y comunicación."
+                    }
+                  ],
+                  "blog": [
+                    "rescate-vehicular-tecnicas-equipos",
+                    "espacios-confinados-proteccion-respiratoria",
+                    "cascos-forestales-msa-cairns-guia",
+                    "epp-completo-kit-bombero-profesional",
+                    "equipamiento-unidad-rescate-completa",
+                    "mantenimiento-epp-estructural-nfpa-1851"
+                  ],
+                  "faqs": [
+                    {
+                      "q": "¿Un casco jet sirve para combate estructural?",
+                      "a": "Depende del alcance de aprobación del número de parte, no de la silueta. MSA advierte en la propia página del XF1 que las aprobaciones pueden cambiar sin aviso y diferir según configuración, número de parte y país. Así que la respuesta correcta no es sí ni no: es pedir la constancia de alcance —norma, edición, número de parte y país— para la configuración exacta que se va a comprar. Nosotros hacemos esa verificación antes de cotizar y la entregamos por escrito."
+                    },
+                    {
+                      "q": "¿Qué gana un jet frente a una tradicional o un perfil metro?",
+                      "a": "Gana en enganche y en integración: sin ala hay menos superficie que se atore con cable, malla o estructura, y la coquilla libera espacio para montar luz y comunicación sin accesorios colgando. Pierde la cuenca del ala completa, que es la que deriva agua de la línea y escombro fuera del cuello del chaquetón. Por eso el jet se ve más en rescate técnico y espacios confinados que en interior estructural con línea."
+                    },
+                    {
+                      "q": "¿Cómo funcionan las tallas M y L?",
+                      "a": "Son dos tallas discretas, no un rango continuo de ajuste como los cascos con banda de ratchet de 25 posiciones. Eso obliga a medir la plantilla antes de comprar y no estimarla: si parte del personal queda fuera del rango que cubren las dos tallas, para esa parte de la dotación hay que cotizar otra serie. Es un dato que conviene resolver en la etapa de especificación, no el día de la entrega."
+                    },
+                    {
+                      "q": "¿La iluminación integrada sustituye la lámpara de intervención?",
+                      "a": "No. La luz integrada está orientada a conciencia situacional —iluminar donde se mira y ser visible de costado— y resuelve la tarea inmediata con manos libres. Una lámpara de intervención tiene otro alcance, otra potencia y otra autonomía. Lo que sí conviene pedir antes de comprar es la autonomía declarada del módulo, el tipo de alimentación y el número de parte del consumible, porque es un costo recurrente del programa."
+                    },
+                    {
+                      "q": "¿Se puede usar en un área con atmósfera clasificada?",
+                      "a": "Cualquier equipo electrónico que entre a un área clasificada necesita su propia declaración de aptitud, y eso aplica a los módulos de luz y de comunicación, no al casco. La verificación es por módulo y por número de parte. Como referencia de lo estricto que es este punto: el sistema de iluminación integrada de otra marca del catálogo está declarado únicamente para Clase I División 2, y no cubre atmósferas clasificadas como División 1."
+                    },
+                    {
+                      "q": "¿Qué mantenimiento tiene un casco con electrónica integrada?",
+                      "a": "Tres capas. La mecánica de siempre: coquilla, interior, barboquejo y visor. La eléctrica: verificar que los módulos enciendan y comuniquen, y revisar sus anclajes, porque un módulo flojo es un enganche y una entrada de contaminación. Y la de limpieza: los interiores se desmontan completos para lavarse con detergente suave y agua, sin mojar la parte electrónica. El procedimiento de lavado debe estar escrito para este modelo en particular."
+                    },
+                    {
+                      "q": "¿Qué pasa si falla la luz o el headset?",
+                      "a": "Hay que definirlo antes de comprar, y es una pregunta que casi nadie hace: si el módulo se repone en sitio, si va a servicio o si obliga a retirar el casco. Nosotros lo pedimos por escrito junto con el número de parte del repuesto y el tiempo de reposición. Un casco con un módulo muerto sigue siendo un casco, pero una flota donde el 30 % trae la luz apagada dejó de tener la capacidad por la que se pagó."
+                    },
+                    {
+                      "q": "¿Cómo se especifica este modelo en una licitación?",
+                      "a": "Por número de parte, con cinco renglones: talla y cantidad, color y acabado, módulos integrados con su consumible y repuesto, protección ocular indicando la declaración que la ampara, y un renglón de verificación documental que obliga al proveedor a entregar la constancia de alcance —norma, edición, número de parte y país— antes de la entrega. Sin ese último renglón, la partida queda abierta a que el alcance no sea el que la convocatoria supone."
+                    }
+                  ]
+                }
               }
             ]
           },

@@ -88,7 +88,7 @@ L4["secciones"] = [
     "eyebrow": "Geometría",
     "titulo": "14\" × 10\" × 6-7/8\" y el ancho que depende de la configuración",
     "parrafos": [
-      "Bullard publica las dimensiones exteriores de la PX en su hoja de especificación para licitación, y hay un detalle que casi nadie lee: el ancho de 10 pulgadas está medido <strong>en el herraje de la careta</strong>. Es decir, la dimensión que decide si el casco pasa por una escotilla o estorba dentro de la cabina depende de la protección ocular que se eligió."
+      "Bullard publica las dimensiones exteriores de la PX en su hoja de especificación para licitación, y hay un detalle que casi nadie lee: el ancho de 10 pulgadas está medido <strong>en el herraje de la careta</strong>. Es decir, la dimensión que decide si el casco pasa por una escotilla o estorba dentro de la cabina depende de la protección ocular que se eligió. La comparación natural es contra la UST Traditional de la misma marca, que declara 15-5/8\" de largo y 12\" de ancho."
     ],
     "tabla": {
       "head": ["Dimensión", "Valor publicado", "Por qué importa en operación"],

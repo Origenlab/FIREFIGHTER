@@ -125,6 +125,12 @@ export const REGLAS_SITIO: ReglaEnlace[] = [
   // ── L4 · configuraciones con ficha propia. Lo más específico del sitio.
   { termino: 'Bullard PX Series', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa/bullard-px-series', titulo: 'Casco estructural Bullard PX Series' },
   { termino: 'PX Series', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa/bullard-px-series', titulo: 'Casco estructural Bullard PX Series' },
+  { termino: 'UST Traditional', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa/bullard-ust-traditional', titulo: 'Casco estructural Bullard UST Traditional' },
+  { termino: 'UST LowRider', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa/bullard-ust-traditional', titulo: 'Casco estructural Bullard UST Traditional' },
+  { termino: 'LT Series', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa/bullard-lt-series', titulo: 'Casco estructural Bullard LT Series' },
+  { termino: 'Cairns 1836', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa/msa-cairns-1836', titulo: 'Casco estructural MSA Cairns 1836' },
+  { termino: '660C Metro', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa/msa-cairns-660c-metro', titulo: 'Casco estructural MSA Cairns 660C Metro' },
+  { termino: 'Cairns XF1', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa/msa-cairns-xf1', titulo: 'Casco estructural MSA Cairns XF1' },
 
   // ── L3 · fichas de producto publicadas. Van después: son menos específicas y
   // la plantilla filtra la regla de la propia página para no autoenlazarse.
