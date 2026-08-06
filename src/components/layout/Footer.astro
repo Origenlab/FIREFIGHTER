@@ -11,7 +11,7 @@
 
 import catalogo from '../../data/productos.json';
 import {
-  MARCA, MARCA_PARTES, DOMINIO, SITE, TAGLINE, DESCRIPTOR, GIRO,
+  MARCA, NOMBRE_EMPRESA, MARCA_PARTES, DOMINIO, SITE, TAGLINE, DESCRIPTOR, GIRO,
   CONTACTO, EMPRESA, MARCAS_DISTRIBUIDAS, NORMAS, CONDICIONES,
   AVISO_NO_EMERGENCIAS, AVISO_PRECIOS, wa,
 } from '../../data/marca';
@@ -101,7 +101,11 @@ const organizationSchema = {
   '@type': 'Organization',
   '@id': `${SITE}/#organization`,
   name: MARCA,
-  alternateName: DOMINIO,
+  // La empresa tiene dos nombres válidos: el dominio es la marca visible y
+  // «FIREFIGHTER México» es la razón comercial —y la forma que la gente busca—.
+  // Declarar las dos aquí es lo que permite que el buscador resuelva la misma
+  // entidad escrita de cualquiera de las dos maneras. Ver src/data/marca.ts.
+  alternateName: [NOMBRE_EMPRESA, DOMINIO],
   url: SITE,
   logo: {
     '@type': 'ImageObject',

@@ -2,7 +2,7 @@
 title: "Equipamiento de Unidad de Rescate Completa: Lo que Cuesta en Papeles vs Lo que Cuesta en Operación Real"
 description: "Análisis completo del equipamiento real de una unidad de rescate vehicular: componentes y funciones, diferencia básico vs completo, tabla con precios referenciales MXN 2024, criterios de priorización y financiamiento en México."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["unidad-rescate", "equipamiento", "presupuesto", "mexico"]
 draft: false
 ---

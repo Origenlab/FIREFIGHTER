@@ -3,6 +3,9 @@
  * Autoria institucional + politica editorial (senales E-E-A-T).
  */
 import { waLink } from '../../lib/blog';
+// La firma se escribe con el nombre de la empresa, no con el dominio: es una persona
+// respondiendo, y es el mismo valor que va al `author` del schema Article.
+import { AUTOR } from '../../data/marca';
 
 interface Props {
   compacto?: boolean;
@@ -18,7 +21,7 @@ const { compacto = false } = Astro.props;
     </span>
     <div style="min-width:0;">
       <span style="display:block; font-size:0.63rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#dc2626; margin-bottom:6px;">Quién escribe esto</span>
-      <p style="font-size:1rem; font-weight:800; color:#09090b; margin:0 0 4px; line-height:1.3;">Área técnica de FIREFIGHTER.COM.MX</p>
+      <p style="font-size:1rem; font-weight:800; color:#09090b; margin:0 0 4px; line-height:1.3;">{AUTOR}</p>
       <p style="font-size:0.78rem; color:#71717a; margin:0; line-height:1.6;">Distribuidores autorizados de MSA Safety, Scott, Bullard, Holmatro y Amerex</p>
     </div>
   </div>

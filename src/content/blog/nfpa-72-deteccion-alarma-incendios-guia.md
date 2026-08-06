@@ -2,7 +2,7 @@
 title: "NFPA 72: guía técnica completa de diseño de sistemas de detección y alarma contra incendios en México"
 description: "Guía de ingeniería sobre la norma NFPA 72 aplicada en México: sistemas analógicos vs convencionales, detección VESDA, selección de detectores, paneles de control, dispositivos de notificación, integración con BMS y mantenimiento obligatorio."
 pubDate: 2026-03-05
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["NFPA 72", "sistema detección incendios", "detectores humo", "alarma contra incendios México", "sistema analógico direccionable"]
 draft: false
 ---

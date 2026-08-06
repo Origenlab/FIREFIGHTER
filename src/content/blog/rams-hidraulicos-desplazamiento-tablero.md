@@ -2,7 +2,7 @@
 title: "Rams Hidráulicos y Desplazamiento de Tablero: Empujar el Auto, No a la Víctima"
 description: "Guía técnica del HR 4320 y la técnica de desplazamiento de tablero: principio operacional, extensión telescópica, puntos de anclaje seguros en chasis moderno, y cuándo el ram es la herramienta que salva la vida."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["rams-hidraulicos", "desplazamiento-tablero", "rescate-vehicular", "holmatro"]
 draft: false
 ---

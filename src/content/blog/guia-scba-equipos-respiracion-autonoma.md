@@ -2,7 +2,7 @@
 title: "SCBA para bomberos y brigadas industriales: guía técnica completa para elegir, operar y mantener equipos de respiración autónoma"
 description: "Guía de alto nivel sobre equipos SCBA: normas NFPA 1970, arquitectura del sistema, selección de cilindros, marcas MSA G1 y Scott Air-Pak, telemetría, mantenimiento NFPA 1850 y requisitos para brigadas en México."
 pubDate: 2026-01-22
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["SCBA", "respiración autónoma", "NFPA 1970", "MSA G1", "equipos bomberos México"]
 draft: false
 ---

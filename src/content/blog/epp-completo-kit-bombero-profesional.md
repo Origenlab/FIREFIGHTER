@@ -2,7 +2,7 @@
 title: "EPP completo del bombero profesional: el ensemble como sistema certificado"
 description: "EPP estructural NFPA 1970: guía de los 6 componentes, compatibilidad de ensemble, costos en México y cómo priorizar cuando el presupuesto es limitado."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["EPP bomberos", "NFPA 1970 ensemble", "kit bombero", "equipamiento brigadas México"]
 draft: false
 ---

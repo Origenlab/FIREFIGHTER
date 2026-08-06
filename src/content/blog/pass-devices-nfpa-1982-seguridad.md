@@ -2,7 +2,7 @@
 title: "Dispositivos PASS y NFPA 1970: por qué el bombero que murió tenía el PASS apagado"
 description: "Dispositivos PASS NFPA 1970: activación automática vs manual, prueba semanal, batería, decibeles en industria y uso como herramienta de mayday."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["PASS device", "NFPA 1970", "seguridad bomberos", "equipo SCBA"]
 draft: false
 ---

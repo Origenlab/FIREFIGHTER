@@ -2,7 +2,7 @@
 title: "Espacios confinados en México: protección respiratoria y el rescatista que también muere"
 description: "Espacios confinados México: estadísticas IMSS, 3 tipos de peligro, monitoreo pre-entrada, protocolo de 8 pasos y por qué el rescatista muere sin SCBA."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["espacios confinados", "NOM-033-STPS", "protección respiratoria", "SCBA industrial"]
 draft: false
 ---

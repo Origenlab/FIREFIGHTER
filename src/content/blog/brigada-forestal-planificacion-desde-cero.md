@@ -2,7 +2,7 @@
 title: "Planificación de brigada forestal desde cero: personas, procedimientos, equipo"
 description: "Guía completa para planificar una brigada forestal desde cero: dimensionamiento, perfil de personal, entrenamiento S-130/S-190, estructura ICS, equipamiento por etapa y acreditación CONAFOR."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["brigada-forestal", "planificacion-forestal", "ICS-incendios", "CONAFOR"]
 draft: false
 ---

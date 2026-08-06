@@ -2,7 +2,7 @@
 title: "Guía definitiva de trajes estructurales NFPA 1970: todo lo que debes saber antes de equipar a tu brigada"
 description: "Guía técnica de alto nivel sobre trajes estructurales certificados NFPA 1970: arquitectura de capas, TPP, THL, materiales Nomex y PBI, selección por operación, ciclo de vida y mantenimiento. Para bomberos y brigadas industriales en México."
 pubDate: 2026-01-15
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["trajes estructurales", "NFPA 1970", "EPP bomberos", "Nomex", "PBI Gold", "equipos bomberos México"]
 draft: false
 ---

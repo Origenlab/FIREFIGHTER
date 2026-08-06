@@ -2,7 +2,7 @@
 title: "Traje de bombero Nomex: guía técnica completa para brigadas en México"
 description: "Todo sobre trajes de bombero NFPA 1970 en México: TPP, THL, Nomex vs PBI, barrera de vapor, clima caliente y mantenimiento NFPA 1850. Guía real, no de catálogo."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["trajes bomberos", "Nomex", "NFPA 1970", "EPP bomberos México"]
 draft: false
 ---

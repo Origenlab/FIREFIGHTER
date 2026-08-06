@@ -2,7 +2,7 @@
 title: "Licitaciones públicas de equipos contra incendios en México: guía completa para proveedores y compradores 2026"
 description: "Guía técnica y legal completa sobre licitaciones públicas de equipos contra incendios en México: CompraNet, especificaciones NFPA, requisitos de certificación, errores frecuentes, estrategias de propuesta y cómo maximizar la calidad del equipo adquirido."
 pubDate: 2026-02-26
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["licitaciones públicas México", "CompraNet equipos bomberos", "equipos bomberos gobierno", "NFPA licitaciones", "proveedores equipos seguridad"]
 draft: false
 ---

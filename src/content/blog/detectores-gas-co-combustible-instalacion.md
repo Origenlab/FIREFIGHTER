@@ -2,7 +2,7 @@
 title: "Detectores de Gas CO y Combustible: Lo que el Cuerpo No Puede Detectar, el Sensor Sí"
 description: "Guía técnica de detectores de CO y gas combustible: bioquímica del CO, TLV-TWA 25 ppm vs IDLH, altura de instalación, gas natural vs LP, salida de relé para acción automática y calibración semestral obligatoria."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["detectores-co", "monoxido-carbono", "gas-combustible", "seguridad-industrial"]
 draft: false
 ---

@@ -2,7 +2,7 @@
 title: "Programa de mantenimiento anual del SCBA: los tres niveles y lo que más falla"
 description: "Mantenimiento SCBA en México: 3 niveles, piezas que más fallan, registro como protección legal y talleres autorizados MSA y Scott en el país."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["mantenimiento SCBA", "programa anual", "MSA Scott México", "brigadas industriales"]
 draft: false
 ---

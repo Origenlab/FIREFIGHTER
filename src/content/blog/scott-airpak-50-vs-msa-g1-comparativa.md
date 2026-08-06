@@ -2,7 +2,7 @@
 title: "Scott AirPak 50 vs MSA G1: comparativa técnica honesta para decidir sin presión de venta"
 description: "Scott AirPak 50 vs MSA G1: peso, HUD, PASS, mantenimiento en México, costo total y qué equipo conviene según el perfil de cada brigada."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["Scott AirPak 50", "MSA G1", "SCBA comparativa", "equipos respiración México"]
 draft: false
 ---

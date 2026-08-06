@@ -2,7 +2,7 @@
 title: "Expansores Hidráulicos para Vehículos Pesados: Cuando 350 mm No Son Suficientes"
 description: "Guía técnica de expansores hidráulicos para rescate en autobuses y camiones. Por qué los expansores estándar son insuficientes para vehículos pesados, puntas intercambiables SP 5250, y estabilización previa al rescate."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["expansores-hidraulicos", "rescate-vehicular", "vehiculos-pesados", "holmatro"]
 draft: false
 ---

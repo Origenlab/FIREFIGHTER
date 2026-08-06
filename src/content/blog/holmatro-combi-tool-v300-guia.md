@@ -2,7 +2,7 @@
 title: "Holmatro Combi Tool V300: La Herramienta que el Acero Boron Obligó a Inventar"
 description: "Guía técnica completa del Holmatro V300: tecnología CORE, especificaciones reales, por qué el acero UHSS invalida herramientas de generación anterior y cómo mantener el sistema hidráulico correctamente."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["holmatro", "combi-tool", "rescate-vehicular", "herramientas-hidraulicas"]
 draft: false
 ---

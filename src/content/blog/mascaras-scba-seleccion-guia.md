@@ -2,7 +2,7 @@
 title: "Máscaras SCBA: selección, fit test y mantenimiento para brigadas en México"
 description: "Máscaras SCBA: fit test cuantitativo vs cualitativo, sello dual, tallas reales, integración con radio portátil, desinfección y criterios de reemplazo."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["máscara SCBA", "fit test", "NFPA 1970", "respiración autónoma México"]
 draft: false
 ---

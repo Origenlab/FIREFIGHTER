@@ -2,7 +2,7 @@
 title: "NFPA 1936: La Certificación que Separa las Herramientas de Rescate Reales de las que Fallan Cuando Más se Necesitan"
 description: "Qué exige exactamente NFPA 1936, por qué las herramientas no certificadas fallan de forma impredecible, cómo verificar la certificación antes de comprar y el impacto legal de operar con equipamiento sin certificar."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["nfpa-1936", "certificacion", "herramientas-rescate", "holmatro"]
 draft: false
 ---

@@ -2,7 +2,7 @@
 title: "Válvulas OS&Y: el componente que cierra y nadie lo sabe hasta que el sistema falla"
 description: "En el 80% de incendios donde el sistema de sprinklers no respondió como se esperaba, la causa fue una válvula de control cerrada. No el sistema — la válvula. Guía completa de OS&Y, supervisión eléctrica, sellado con candado y los errores de instalación más frecuentes."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["válvulas OS&Y", "sistemas contra incendio", "NFPA 13", "supervisión de válvulas", "mantenimiento"]
 draft: false
 ---

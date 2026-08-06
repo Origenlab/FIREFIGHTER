@@ -2,7 +2,7 @@
 title: "Equipar una brigada con trajes para bomberos: tallaje, volumen y licitación"
 description: "Cómo comprar trajes para bomberos por volumen: programa de tallaje, especificación técnica y licitación LAASSP sin errores que retrasen la compra."
 pubDate: 2026-06-15
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["equipar brigada", "trajes para bomberos", "licitación bomberos", "tallaje trajes bombero", "compra volumen EPP"]
 draft: false
 ---

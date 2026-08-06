@@ -2,7 +2,7 @@
 title: "Detectores de Calor vs Detectores de Humo: La Regla No es 'Usa el Mejor', Es 'Usa el Correcto'"
 description: "Guía técnica de selección de detectores por tipo de espacio: temperatura fija vs termovelocimétrico vs combinado, los 5 espacios donde el calor es obligatorio, y casos reales de instalación incorrecta en auditorías."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["detectores-calor", "detectores-humo", "nfpa-72", "seleccion-detectores"]
 draft: false
 ---

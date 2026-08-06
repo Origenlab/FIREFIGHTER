@@ -2,7 +2,7 @@
 title: "Extintores en México 2026: guía técnica definitiva de tipos, clases de fuego, normas y selección correcta"
 description: "Todo sobre extintores portátiles en México: clases de fuego A-B-C-D-K, agentes PQS, CO₂, espuma AFFF y Clase K, normas NOM y NFPA aplicables, criterios de distribución por riesgo, mantenimiento obligatorio y cómo evitar los errores más comunes."
 pubDate: 2026-02-05
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["extintores", "extintor PQS", "extintor CO2", "clases de fuego", "NOM-002-STPS", "extintores México 2026"]
 draft: false
 ---

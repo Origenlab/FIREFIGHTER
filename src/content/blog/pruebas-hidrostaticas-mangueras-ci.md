@@ -2,7 +2,7 @@
 title: "Pruebas Hidrostáticas de Mangueras Contra Incendio: Protocolo y Frecuencia"
 description: "Guía completa de pruebas hidrostáticas para mangueras CI: presiones 250-300 PSI, frecuencia NFPA 1962, protocolo paso a paso, registros y qué hacer con mangueras reprobadas."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["gabinetes-mangueras", "pruebas-hidrostaticas", "mantenimiento-ci", "nfpa-1962"]
 draft: false
 ---

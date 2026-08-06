@@ -2,7 +2,7 @@
 title: "Mantenimiento de Sistemas de Alarma según NFPA 72: El Único Equipo que Se Espera Funcione Perfectamente Después de Años de Inactividad"
 description: "Guía de mantenimiento de sistemas de alarma: tabla de frecuencias NFPA 72 Capítulo 14, cómo detectar un sistema que no funciona, quién califica para el mantenimiento, registro documental y costo promedio anual en México."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["mantenimiento-alarma", "nfpa-72", "inspeccion", "sistemas-deteccion"]
 draft: false
 ---

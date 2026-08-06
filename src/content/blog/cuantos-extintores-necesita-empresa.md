@@ -2,7 +2,7 @@
 title: "Cuántos extintores necesita tu empresa: la pregunta que nadie formula correctamente"
 description: "La pregunta correcta no es cuántos extintores tienes — es cuántos del tipo correcto tienes en los lugares correctos para el riesgo real. Método NFPA 10 explicado sin matemáticas, distancias de viaje, ejemplo con planta de 2,000 m² y checklist NOM-002-STPS."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["cuántos extintores", "NFPA 10", "NOM-002-STPS", "cálculo extintores", "distribución extintores"]
 draft: false
 ---

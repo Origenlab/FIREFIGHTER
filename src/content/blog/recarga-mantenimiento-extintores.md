@@ -2,7 +2,7 @@
 title: "Recarga de extintores: la diferencia entre $80 pesos y uno que funciona"
 description: "La recarga de $80 pesos en tianguis va a dar exactamente ese valor cuando lo necesites. Guía completa de lo que debe incluir una recarga correcta, cómo identificar talleres certificados vs clandestinos, y la prueba hidrostática que nadie quiere pagar."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["recarga extintores", "mantenimiento extintores", "prueba hidrostática", "NOM-154-SCFI", "talleres certificados"]
 draft: false
 ---

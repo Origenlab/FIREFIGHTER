@@ -2,7 +2,7 @@
 title: "Casco de bombero Bullard USRHB: guía técnica para combate estructural"
 description: "Guía técnica del casco de bombero Bullard USRHB: diferencia casco industrial vs estructural, suspensión, visor NFPA 1970, integración con SCBA y mantenimiento."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["casco bombero", "Bullard USRHB", "NFPA 1970", "EPP estructural"]
 draft: false
 ---

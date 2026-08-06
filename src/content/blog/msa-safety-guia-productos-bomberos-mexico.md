@@ -2,7 +2,7 @@
 title: "MSA Safety en México: análisis técnico completo del catálogo de equipos para bomberos y brigadas industriales"
 description: "Guía técnica de los principales productos MSA Safety disponibles en México: SCBA G1 con HUD y telemetría iCom, cascos Gallet F1 XF y Cairns 1010, detectores Altair 4XR y 5X, arneses V-EDGE y programa de servicio certificado."
 pubDate: 2026-03-12
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["MSA Safety", "SCBA G1 MSA", "casco Gallet bomberos", "Cairns 1010", "detector Altair MSA México"]
 draft: false
 ---

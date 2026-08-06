@@ -2,7 +2,7 @@
 title: "Extintor de espuma AFFF: para el derrame que ningún PQS puede manejar"
 description: "Cuando un camión cisterna derrama 2,000 litros de diesel en una planta, ningún extintor PQS hace algo útil. Para eso existe la espuma AFFF. Guía de mecanismo, técnica de aplicación correcta, comparativa 3% vs 6% y la controversia del PFAS."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["espuma AFFF", "extintores", "combustible", "PFAS", "derrames industriales"]
 draft: false
 ---

@@ -2,7 +2,7 @@
 title: "Cascos forestales: guía técnica MSA, Bullard y diferencias con cascos de construcción"
 description: "Diferencias entre casco forestal y casco de construcción, NFPA 1950 para cascos, comparativa MSA vs Bullard vs Peltor y criterios de selección para brigadas en México."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["cascos-forestales", "NFPA-1977", "EPP-forestal", "brigadas-forestales"]
 draft: false
 ---

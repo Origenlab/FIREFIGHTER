@@ -2,7 +2,7 @@
 title: "Líneas de suministro de aire para espacios confinados: cuándo el SCBA portátil no es suficiente"
 description: "Líneas de suministro de aire para espacios confinados: SCBA vs suministro externo, NOM-033-STPS, manifold, señal de emergencia y tabla de configuraciones."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["líneas suministro aire", "espacios confinados", "NOM-033-STPS", "SCBA industrial"]
 draft: false
 ---

@@ -2,7 +2,7 @@
 title: "Mochilas aspersoras forestales: guía técnica para brigadas CONAFOR"
 description: "Guía técnica sobre mochilas aspersoras forestales: tipos, capacidades, marcas, mantenimiento crítico y tabla comparativa. Para brigadas CONAFOR y equipos privados."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["mochilas-aspersoras", "equipo-forestal", "brigadas-forestales", "CONAFOR"]
 draft: false
 ---

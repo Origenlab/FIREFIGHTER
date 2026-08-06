@@ -2,7 +2,7 @@
 title: "Tipos de trajes para bomberos: estructural, aproximación y forestal"
 description: "Comparativa de tipos de trajes para bomberos: estructural, aproximación, forestal y ARFF. Normas, tabla y cuál comprar según tu operación."
 pubDate: 2026-06-15
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["tipos trajes bomberos", "traje estructural", "traje forestal", "traje aproximación", "trajes para bomberos"]
 draft: false
 ---

@@ -2,7 +2,7 @@
 title: "Plan de mantenimiento de extintores: 50 tubos de metal o 50 extintores funcionales"
 description: "Una empresa con 50 extintores sin programa documentado no tiene protección — tiene 50 tubos de metal en las paredes. Los tres niveles de mantenimiento, checklist mensual en 8 puntos, señales de retiro inmediato y cómo organizar la bitácora sin que sea un caos."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["mantenimiento extintores", "plan de mantenimiento", "NOM-002-STPS", "seguridad industrial", "bitácora extintores"]
 draft: false
 ---

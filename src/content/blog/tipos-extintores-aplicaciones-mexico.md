@@ -2,7 +2,7 @@
 title: "Tipos de extintores: millones instalados con la etiqueta equivocada para el riesgo real"
 description: "En México hay millones de extintores con el agente incorrecto para el riesgo de su instalación. Guía de selección real por clases de fuego, tabla de eficacia por agente, errores más frecuentes por sector y las 4 preguntas que resuelven la selección."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["extintores", "clases de fuego", "selección de extintores", "PQS", "CO2", "Clase K"]
 draft: false
 ---

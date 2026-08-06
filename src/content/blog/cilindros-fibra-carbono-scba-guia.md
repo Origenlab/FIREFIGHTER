@@ -2,7 +2,7 @@
 title: "Cilindros de fibra de carbono para SCBA: inspección, vida útil y lo que no se ve"
 description: "Cilindros SCBA de fibra de carbono: física de falla, inspección post-uso, prueba hidrostática en México, vida útil 15 años y almacenamiento correcto."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["cilindros SCBA", "fibra de carbono", "inspección SCBA", "mantenimiento respiración"]
 draft: false
 ---

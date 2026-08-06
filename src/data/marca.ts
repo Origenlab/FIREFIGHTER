@@ -3,10 +3,24 @@
  * MARCA — Fuente única de verdad de la identidad de FIREFIGHTER.COM.MX
  * ═══════════════════════════════════════════════════════════════════════════
  *
- * REGLA: el sitio se llama FIREFIGHTER.COM.MX. Escrito así, en mayúsculas y con
- * el dominio completo, en logo, footer, títulos, meta, JSON-LD y copy. No se usan
- * las variantes «FIREFIGHTER Mexico», «Firefighter Mexico» ni «FirefighterMX»:
- * el dominio ES la marca y es lo que diferencia al sitio de cualquier otro.
+ * REGLA (confirmada por Frank el 2026-08-06): la empresa tiene DOS nombres y los
+ * dos son correctos. No son sinónimos intercambiables: cada uno tiene su lugar.
+ *
+ *   · MARCA = «FIREFIGHTER.COM.MX» — el sitio. Va en el wordmark del logo, en el
+ *     sufijo de los títulos, en `og:site_name`, en el footer y en las URLs. El
+ *     dominio ES la marca visible y es lo que diferencia al sitio de cualquier otro.
+ *
+ *   · EMPRESA = «FIREFIGHTER México» — la razón comercial. Va en el
+ *     `alternateName` del schema Organization y WebSite, en las firmas de autor
+ *     del blog y en la prosa donde el dominio se lee raro («Área técnica de
+ *     FIREFIGHTER.COM.MX» no es algo que una persona diga).
+ *
+ * Lo que NO se usa: «Firefighter Mexico» sin acento, «FirefighterMX», «FF México».
+ *
+ * Por qué importa el `alternateName`: «firefighter méxico» es la frase que la
+ * gente busca. Si la entidad solo declara el dominio, pierde su variante en
+ * español como entidad buscable. Una homologación anterior dejó el nombre en cero
+ * apariciones en todo el sitio; esta regla existe para que no vuelva a pasar.
  *
  * Todo dato corporativo, comercial o normativo que se repita en más de una
  * página vive aquí. Si un dato cambia, se cambia en este archivo y en ningún
@@ -15,8 +29,17 @@
 
 /* ── Identidad ───────────────────────────────────────────────────────────── */
 
-/** Marca comercial. Única forma correcta de escribirla. */
+/** Marca del sitio: wordmark, sufijo de títulos, og:site_name, footer, URLs. */
 export const MARCA = 'FIREFIGHTER.COM.MX';
+
+/**
+ * Nombre de la empresa. Va en `alternateName` del schema, en las firmas de autor
+ * y en la prosa. Las dos formas son correctas; esta es la que una persona dice.
+ */
+export const NOMBRE_EMPRESA = 'FIREFIGHTER México';
+
+/** Firma editorial del blog. Se escribe con el nombre de la empresa, no con el dominio. */
+export const AUTOR = `Área técnica de ${NOMBRE_EMPRESA}`;
 
 /** Partes del wordmark para renderizarlo con dos colores en el logo. */
 export const MARCA_PARTES = { nombre: 'FIREFIGHTER', tld: '.COM.MX' } as const;
@@ -71,7 +94,10 @@ export function wa(mensaje: string): string {
 /* ── Perfil corporativo ──────────────────────────────────────────────────── */
 
 export const EMPRESA = {
-  nombreComercial: MARCA,
+  /** Como se llama la empresa. */
+  nombreComercial: NOMBRE_EMPRESA,
+  /** Como se llama el sitio, que es la marca visible. Las dos formas son correctas. */
+  marcaSitio: MARCA,
   giro: GIRO,
   cobertura: 'Cobertura de venta y entrega en los 32 estados de la República Mexicana',
   coberturaCorta: 'Los 32 estados de México',

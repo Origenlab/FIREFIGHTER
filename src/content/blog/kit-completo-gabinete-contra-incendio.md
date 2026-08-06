@@ -2,7 +2,7 @@
 title: "Kit Completo de Gabinete Contra Incendio: Componentes, Especificaciones y Errores"
 description: "Guía técnica del kit completo de gabinete CI: 12-16 componentes correctos, tabla de especificaciones, errores de kits genéricos y requisitos NOM-002-STPS."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["gabinetes-mangueras", "kit-gabinete", "nom-002-stps", "especificaciones-tecnicas"]
 draft: false
 ---

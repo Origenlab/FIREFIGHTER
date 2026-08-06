@@ -2,7 +2,7 @@
 title: "Cómo equipar una brigada industrial en México: de NOM-002 a protección real"
 description: "Equipar brigadas industriales México: NOM-002-STPS, niveles de riesgo, EPP mínimo por nivel, SCBA como equipo omitido y responsabilidad legal ante accidentes."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["brigada industrial", "NOM-002-STPS", "EPP industrial", "equipamiento brigadas México"]
 draft: false
 ---

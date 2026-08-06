@@ -2,7 +2,7 @@
 title: "Herramientas Holmatro para rescate vehicular: análisis técnico completo de tijeras, expansores y sistemas Nexus"
 description: "Guía técnica de alto nivel sobre equipos Holmatro de rescate vehicular: tijeras SC, expansores SP, herramientas Nexus One con batería, técnicas de excarcelación en vehículos UHSS y vehículos eléctricos. Para bomberos y brigadas de rescate en México."
 pubDate: 2026-02-12
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["Holmatro", "rescate vehicular", "excarcelación", "UHSS", "herramientas hidráulicas bomberos"]
 draft: false
 ---

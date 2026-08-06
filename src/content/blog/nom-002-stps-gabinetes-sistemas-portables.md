@@ -3,7 +3,7 @@ title: "NOM-002-STPS-2010: Requisitos Reales para Gabinetes y Sistemas Portables
 seoTitle: "NOM-002-STPS gabinetes y portátiles"
 description: "Guía completa NOM-002-STPS-2010: alcance, requisitos de gabinetes CI, extintores portátiles, verificación periódica, sanciones STPS y tabla por área de riesgo."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["gabinetes-mangueras", "nom-002-stps", "normativa-mexicana", "brigadas-industriales"]
 draft: false
 ---

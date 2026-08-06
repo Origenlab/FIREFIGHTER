@@ -2,7 +2,7 @@
 title: "Brigadas de bomberos voluntarios en México: equipamiento real con presupuesto real"
 description: "1,200 cuerpos voluntarios en México operan con equipo retirado. EPP mínimo seguro, fuentes de financiamiento y cómo la industria local puede ayudar."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["bomberos voluntarios", "brigadas México", "EPP mínimo", "financiamiento bomberos"]
 draft: false
 ---

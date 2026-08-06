@@ -2,7 +2,7 @@
 title: "Módulos Monitor SLC: El Puente entre la Infraestructura Existente y el Panel Inteligente"
 description: "Guía técnica de módulos monitor SLC M500X: diferencia zona convencional vs lazo SLC, integración de detectores legacy, topología con aisladores, tipos de módulos y diseño de integración en 4 pasos."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["modulos-slc", "notifier", "integracion-alarma", "nfpa-72"]
 draft: false
 ---

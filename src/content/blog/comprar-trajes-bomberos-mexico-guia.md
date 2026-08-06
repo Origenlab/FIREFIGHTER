@@ -2,7 +2,7 @@
 title: "Cómo comprar trajes para bomberos en México: guía de compra 2026"
 description: "Guía para comprar trajes para bomberos en México: qué certificación exigir, documentos obligatorios y cómo evaluar al proveedor antes de pagar."
 pubDate: 2026-06-15
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["comprar trajes bomberos", "trajes para bomberos", "NFPA 1971", "NFPA 1970", "compra equipo bombero"]
 draft: false
 ---

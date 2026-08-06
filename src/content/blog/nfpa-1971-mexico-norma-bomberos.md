@@ -3,7 +3,7 @@ title: "NFPA 1970 en México: qué certifica, cómo leer un certificado y qué e
 seoTitle: "NFPA 1970 para traje estructural"
 description: "NFPA 1970 México: diferencia certificado vs diseñado para, cómo leer un certificado, ediciones 2013 vs 2018 y qué exigir en licitaciones CompraNet."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["NFPA 1970", "certificación EPP bomberos", "licitaciones México", "norma bomberos"]
 draft: false
 ---

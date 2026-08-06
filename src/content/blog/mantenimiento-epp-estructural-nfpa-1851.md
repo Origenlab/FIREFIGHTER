@@ -2,7 +2,7 @@
 title: "Mantenimiento EPP estructural bajo NFPA 1850: el programa que protege al bombero y a la institución"
 description: "NFPA 1850 en México: 3 niveles de mantenimiento, hollín como conductor térmico, detergentes FR aprobados, secado correcto y registro como protección legal."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["NFPA 1850", "mantenimiento EPP", "traje bombero", "brigadas México"]
 draft: false
 ---

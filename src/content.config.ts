@@ -82,7 +82,8 @@ const blog = defineCollection({
     seoDescription: z.string().max(158).optional(),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
-    author: z.string().default('Área técnica de FIREFIGHTER.COM.MX'),
+    // La firma va con el nombre de la empresa, no con el dominio (ver src/data/marca.ts).
+    author: z.string().default('Área técnica de FIREFIGHTER México'),
     image: z.string().optional(),
     imageAlt: z.string().optional(),
     tags: z.array(z.string()).default([]),

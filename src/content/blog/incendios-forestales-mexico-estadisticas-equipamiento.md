@@ -2,7 +2,7 @@
 title: "Incendios forestales en México: estadísticas 2020-2024 y brechas de equipamiento"
 description: "Datos CONAFOR 2020-2024 sobre incendios forestales en México: estados más afectados, hectáreas afectadas, causas y la brecha de equipamiento que explica muchos de los resultados."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["incendios-forestales-mexico", "estadisticas-CONAFOR", "brigadas-forestales", "equipamiento-forestal"]
 draft: false
 ---

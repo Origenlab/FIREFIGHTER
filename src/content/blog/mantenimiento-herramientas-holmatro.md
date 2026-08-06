@@ -2,7 +2,7 @@
 title: "Mantenimiento de Herramientas Holmatro: La Herramienta que No Avisa Que Va a Fallar"
 description: "Protocolo completo de mantenimiento para herramientas hidráulicas Holmatro: aceite ISO VG 32, inspección post-operación, mantenimiento mensual vs técnico certificado, señales de retiro y registro documental."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["mantenimiento", "holmatro", "herramientas-hidraulicas", "rescate-vehicular"]
 draft: false
 ---

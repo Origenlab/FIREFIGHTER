@@ -2,7 +2,7 @@
 title: "Guantes estructurales MSA Orca: protección de manos en combate de incendio"
 description: "Guantes estructurales NFPA 1970: piel de cabra vs vaca, barrera de vapor obligatoria, Kevlar, destreza con SCBA y criterios de retiro en México."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["guantes bombero", "MSA Orca", "NFPA 1970", "protección manos"]
 draft: false
 ---

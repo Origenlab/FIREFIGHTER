@@ -2,7 +2,7 @@
 title: "Equipamiento de los bomberos en México: qué llevan en cada emergencia"
 description: "Conoce el equipo esencial que usan los bomberos mexicanos: trajes de protección, SCBA, herramientas de rescate y vehículos especializados."
 pubDate: 2026-03-10
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["equipamiento", "bomberos", "rescate", "tecnologia", "seguridad"]
 draft: false
 ---

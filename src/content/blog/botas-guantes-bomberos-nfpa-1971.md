@@ -2,7 +2,7 @@
 title: "Botas y guantes para bomberos certificados NFPA 1970: guía técnica completa de selección y mantenimiento"
 description: "Análisis técnico profundo de botas y guantes estructurales NFPA 1970: pruebas de rendimiento, materiales, marcas HAIX y Jolly, selección por operación, integración con el sistema de traje y mantenimiento. Para bomberos profesionales y brigadas en México."
 pubDate: 2026-03-26
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["botas bomberos NFPA 1970", "guantes estructurales bomberos", "HAIX bomberos", "EPP bomberos México", "calzado protección incendios"]
 draft: false
 ---

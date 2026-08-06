@@ -2,7 +2,7 @@
 title: "Bombas contra incendio NFPA 20: pruebas semanales, no mensuales, no anuales"
 description: "La bomba contra incendio es el corazón del sistema. Si falla en el momento crítico, el mejor diseño de rociadores no sirve de nada. NFPA 20 exige pruebas semanales porque la confiabilidad se verifica en operación, no en papel. Guía completa de selección, curva de rendimiento y cuarto de bombas."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["bombas contra incendio", "NFPA 20", "sistemas contra incendio", "bomba jockey", "protección hidráulica"]
 draft: false
 ---

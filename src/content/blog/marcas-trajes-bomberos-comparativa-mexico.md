@@ -2,7 +2,7 @@
 title: "Marcas de trajes para bomberos: comparativa para comprar con criterio"
 description: "Comparativa de marcas de trajes para bomberos en México —Globe, Bristol, Lion, Honeywell— y qué importa más que la marca al comprar."
 pubDate: 2026-06-15
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["marcas trajes bomberos", "Globe", "Bristol", "trajes para bomberos", "MSA Safety"]
 draft: false
 ---

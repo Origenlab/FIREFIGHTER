@@ -2,7 +2,7 @@
 title: "Precio de trajes para bomberos en México 2026: rangos y cómo cotizar"
 description: "Cuánto cuesta un traje para bomberos en México en 2026: rangos por gama, factores de precio, costo por año de vida útil y cómo cotizar bien."
 pubDate: 2026-06-15
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["precio trajes bomberos", "costo traje bombero", "trajes para bomberos", "cotización equipo bombero", "NFPA 1970"]
 draft: false
 ---

@@ -3,7 +3,7 @@
  * Genera el JSON-LD estructurado que consumen los buscadores.
  * El nombre de marca y la URL base salen de src/data/marca.ts.
  */
-import { MARCA, SITE, DESCRIPTOR, TAGLINE } from '../data/marca';
+import { MARCA, NOMBRE_EMPRESA, SITE, DESCRIPTOR, TAGLINE } from '../data/marca';
 
 export interface StationData {
   name: string;
@@ -145,7 +145,7 @@ export function generateWebSiteSchema(baseUrl: string = SITE): object {
     '@type': 'WebSite',
     '@id': `${baseUrl}/#website`,
     name: MARCA,
-    alternateName: 'firefighter.com.mx',
+    alternateName: [NOMBRE_EMPRESA, 'firefighter.com.mx'],
     description:
       'Equipo contra incendios y para bomberos en México: EPP, SCBA, extintores, sistemas, detección y rescate certificados NFPA, NOM y UL. Incluye el directorio nacional de estaciones de bomberos.',
     url: baseUrl,
@@ -171,7 +171,12 @@ export function generateOrganizationSchema(baseUrl: string = SITE): object {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': `${baseUrl}/#organization`,
+    // La entidad tiene dos nombres válidos: el dominio es la marca visible y
+    // «FIREFIGHTER México» es la razón comercial —y la frase que la gente busca—.
+    // Declarar las dos es lo que permite que el buscador reconozca a la misma
+    // entidad escrita de las dos formas.
     name: MARCA,
+    alternateName: [NOMBRE_EMPRESA, 'firefighter.com.mx'],
     url: baseUrl,
     logo: {
       '@type': 'ImageObject',
@@ -215,13 +220,16 @@ export function generateArticleSchema(
     '@type': 'Article',
     headline: article.title,
     description: article.description,
-    // Autoría institucional: los artículos los firma el área técnica de la
-    // empresa, no una persona física. Se enlaza al nodo Organization del footer.
+    // Autoría institucional: los artículos los firma el área técnica de la empresa, no una
+    // persona física. Va con su PROPIO @id y como parte de la organización: reusar el @id del
+    // nodo Organization con otro `name` declaraba dos nombres para la misma entidad, que es
+    // justo lo que confunde a un buscador cuando intenta resolverla.
     author: {
       '@type': 'Organization',
-      '@id': `${baseUrl}/#organization`,
+      '@id': `${baseUrl}/#area-tecnica`,
       name: article.author,
       url: baseUrl,
+      parentOrganization: { '@id': `${baseUrl}/#organization` },
     },
     publisher: {
       '@type': 'Organization',

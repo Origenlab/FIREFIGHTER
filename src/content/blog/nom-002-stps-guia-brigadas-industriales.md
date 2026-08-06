@@ -2,7 +2,7 @@
 title: "NOM-002-STPS: la guía más completa para cumplir con la norma de incendios en empresas mexicanas en 2026"
 description: "Guía técnica actualizada para cumplir NOM-002-STPS en 2026: clasificación de riesgo, extintores, sistemas fijos, brigadas de emergencia, señalización, documentación, multas y cómo evitarlas. Para responsables de seguridad industrial en México."
 pubDate: 2026-01-29
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["NOM-002-STPS", "brigadas industriales", "prevención incendios México", "cumplimiento normativo", "seguridad industrial"]
 draft: false
 ---

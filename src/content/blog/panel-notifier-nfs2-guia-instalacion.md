@@ -2,7 +2,7 @@
 title: "Panel Notifier NFS2: cuando la programación incorrecta genera más riesgo que no tener panel"
 description: "Un panel de alarma mal programado es peor que no tener panel. Genera falsas alarmas, nadie las toma en serio, y el día del incendio real la gente camina lento. Guía técnica del NFS2-3030: protocolo CLIP vs FASTID, cálculo de batería, integración con supresión y los errores de programación más graves."
 pubDate: 2026-05-20
-author: "Área técnica de FIREFIGHTER.COM.MX"
+author: "Área técnica de FIREFIGHTER México"
 tags: ["Notifier NFS2", "panel de alarma", "detección de incendios", "NFPA 72", "sistemas de alarma"]
 draft: false
 ---
