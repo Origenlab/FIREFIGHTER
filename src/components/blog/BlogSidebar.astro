@@ -22,8 +22,8 @@ interface Props {
 const { posts, temaActivo, slugActual, temaProducto, sticky = true, compacto = false } = Astro.props;
 
 const conteo = conteoPorTema(posts);
-const populares = masConsultados(posts.filter(p => p.slug !== slugActual), 5);
-const recientes = posts.filter(p => p.slug !== slugActual).slice(0, 4);
+const populares = masConsultados(posts.filter((p: PostIdx) => p.slug !== slugActual), 5);
+const recientes = posts.filter((p: PostIdx) => p.slug !== slugActual).slice(0, 4);
 
 const temaCat = temaProducto ? getTema(temaProducto) : null;
 const catRelacionada = temaCat?.productoSlug
@@ -148,7 +148,7 @@ const catRelacionada = temaCat?.productoSlug
       <span class="txt">Publicaciones recientes</span>
     </div>
     <ul class="blog-list">
-      {recientes.map(p => (
+      {recientes.map((p: PostIdx) => (
         <li>
           <a href={`/blog/${p.slug}`} class="blog-link-item">
             <span class="t" style="display:block;">{p.title}</span>
