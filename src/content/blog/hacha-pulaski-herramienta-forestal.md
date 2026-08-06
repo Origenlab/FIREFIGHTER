@@ -2,7 +2,7 @@
 title: "Hacha Pulaski: la herramienta más importante en el kit forestal"
 description: "Historia, diseño, técnica de uso y mantenimiento del hacha Pulaski. La herramienta esencial de todo brigadista forestal, con tabla de uso por tipo de terreno."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["hacha-pulaski", "herramientas-forestales", "brigadas-forestales", "equipo-forestal"]
 draft: false
 ---

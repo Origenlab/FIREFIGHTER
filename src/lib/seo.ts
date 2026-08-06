@@ -1,7 +1,9 @@
 /**
- * SEO Utilities for firefighter.com.mx
- * Generates JSON-LD structured data for search engines
+ * Utilidades de SEO de FIREFIGHTER.COM.MX
+ * Genera el JSON-LD estructurado que consumen los buscadores.
+ * El nombre de marca y la URL base salen de src/data/marca.ts.
  */
+import { MARCA, SITE, DESCRIPTOR, TAGLINE } from '../data/marca';
 
 export interface StationData {
   name: string;
@@ -115,7 +117,7 @@ export function generateEmergencyServiceSchema(
  */
 export function generateBreadcrumbSchema(
   items: BreadcrumbItem[],
-  baseUrl: string = 'https://firefighter.com.mx'
+  baseUrl: string = SITE
 ): object {
   return {
     '@context': 'https://schema.org',
@@ -137,15 +139,17 @@ export function generateBreadcrumbSchema(
  * Generates WebSite JSON-LD schema for the homepage
  * @see https://schema.org/WebSite
  */
-export function generateWebSiteSchema(baseUrl: string = 'https://firefighter.com.mx'): object {
+export function generateWebSiteSchema(baseUrl: string = SITE): object {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     '@id': `${baseUrl}/#website`,
-    name: 'Firefighter.com.mx',
+    name: MARCA,
+    alternateName: 'firefighter.com.mx',
     description:
       'Equipo contra incendios y para bomberos en México: EPP, SCBA, extintores, sistemas, detección y rescate certificados NFPA, NOM y UL. Incluye el directorio nacional de estaciones de bomberos.',
     url: baseUrl,
+    publisher: { '@id': `${baseUrl}/#organization` },
     inLanguage: 'es-MX',
     potentialAction: {
       '@type': 'SearchAction',
@@ -162,12 +166,12 @@ export function generateWebSiteSchema(baseUrl: string = 'https://firefighter.com
  * Generates Organization JSON-LD schema
  * @see https://schema.org/Organization
  */
-export function generateOrganizationSchema(baseUrl: string = 'https://firefighter.com.mx'): object {
+export function generateOrganizationSchema(baseUrl: string = SITE): object {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': `${baseUrl}/#organization`,
-    name: 'Firefighter.com.mx',
+    name: MARCA,
     url: baseUrl,
     logo: {
       '@type': 'ImageObject',
@@ -175,11 +179,12 @@ export function generateOrganizationSchema(baseUrl: string = 'https://firefighte
       width: 200,
       height: 50,
     },
-    description:
-      'Distribuidor de equipo contra incendios y para bomberos en México: EPP estructural, SCBA, extintores, sistemas contra incendio, detección y alarma, rescate, forestal y señalética, con documentación para licitaciones.',
+    slogan: TAGLINE,
+    description: DESCRIPTOR,
     areaServed: {
       '@type': 'Country',
-      name: 'Mexico',
+      name: 'México',
+      identifier: 'MX',
     },
     contactPoint: {
       '@type': 'ContactPoint',
@@ -203,20 +208,25 @@ export function generateArticleSchema(
     image?: string;
   },
   pageUrl: string,
-  baseUrl: string = 'https://firefighter.com.mx'
+  baseUrl: string = SITE
 ): object {
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: article.title,
     description: article.description,
+    // Autoría institucional: los artículos los firma el área técnica de la
+    // empresa, no una persona física. Se enlaza al nodo Organization del footer.
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
+      '@id': `${baseUrl}/#organization`,
       name: article.author,
+      url: baseUrl,
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Firefighter.com.mx',
+      '@id': `${baseUrl}/#organization`,
+      name: MARCA,
       logo: {
         '@type': 'ImageObject',
         url: `${baseUrl}/images/logo-firefighter-mexico.svg`,

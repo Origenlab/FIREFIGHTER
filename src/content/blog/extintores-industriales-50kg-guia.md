@@ -2,7 +2,7 @@
 title: "Extintores sobre ruedas: cuando el de 6 kg es como apagar una hoguera con un vaso de agua"
 description: "Un derrame de solvente en 30 m² con extintor de 6 kg es una ecuación con resultado conocido. Para riesgos industriales reales, las reglas cambian: guía completa de extintores sobre ruedas, capacidades, sectores obligados y mantenimiento diferencial."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["extintores industriales", "extintores sobre ruedas", "50 kg", "protección industrial", "NFPA 10"]
 draft: false
 ---

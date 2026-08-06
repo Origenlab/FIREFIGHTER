@@ -2,7 +2,7 @@
 title: "Mangueras Contra Incendio: Guía de Selección por Tipo, Presión y Riesgo"
 description: "Guía técnica para seleccionar mangueras CI: tipos lino, sintética y caucho, presiones de trabajo, roscas NST vs Storz, diámetros y NOM-154-SCFI-2010."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["gabinetes-mangueras", "mangueras-ci", "nom-154-scfi", "brigadas-industriales"]
 draft: false
 ---

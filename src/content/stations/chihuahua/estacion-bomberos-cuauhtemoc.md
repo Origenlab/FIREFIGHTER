@@ -22,7 +22,7 @@ services:
   - capacitacion
 verified: false
 lastUpdated: "2026-08-06"
-metaTitle: "Bomberos Cuauhtémoc"
+metaTitle: "Bomberos Cuauhtémoc 10 de Mayo"
 metaDescription: "Estación de Bomberos de Cuauhtémoc en Cuauhtémoc, Chihuahua, C. 10 de Mayo 2210. Teléfono 625 582 0290. Emergencias 911."
 ---
 

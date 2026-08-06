@@ -2,7 +2,7 @@
 title: "Kit de brigada forestal para 10 personas: lista completa y presupuesto"
 description: "Lista completa de equipo para brigada forestal de 10 personas: EPP individual, herramientas, comunicación y primeros auxilios. Presupuesto estimado y errores frecuentes de equipamiento."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["kit-brigada-forestal", "equipamiento-forestal", "brigadas-forestales", "CONAFOR"]
 draft: false
 ---

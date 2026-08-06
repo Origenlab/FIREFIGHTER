@@ -2,7 +2,7 @@
 title: "MSA G1 SCBA: guía técnica para brigadas de bomberos e industria en México"
 description: "SCBA MSA G1: peso 10.9 kg, HUD 7 LEDs, PASS integrado automático, RIC/UAC para rescate de caído, mantenimiento trimestral y diferencia con Scott AP50."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["SCBA MSA G1", "equipo respiración autónoma", "NFPA 1970", "brigadas México"]
 draft: false
 ---

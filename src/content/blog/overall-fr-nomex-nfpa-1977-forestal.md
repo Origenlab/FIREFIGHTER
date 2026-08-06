@@ -2,7 +2,7 @@
 title: "Overall FR y Nomex para forestal: guía NFPA 1950 de ropa protectora"
 description: "Comparativa Nomex vs FR-cotton vs PBI para brigadistas forestales. Requisitos NFPA 1950, ensayos TPP y THL, mantenimiento correcto y cuándo reemplazar el overol."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["overall-nomex", "FR-forestal", "NFPA-1977", "ropa-protectora-forestal"]
 draft: false
 ---

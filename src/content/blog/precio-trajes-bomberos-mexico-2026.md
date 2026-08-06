@@ -2,14 +2,14 @@
 title: "Precio de trajes para bomberos en México 2026: rangos y cómo cotizar"
 description: "Cuánto cuesta un traje para bomberos en México en 2026: rangos por gama, factores de precio, costo por año de vida útil y cómo cotizar bien."
 pubDate: 2026-06-15
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["precio trajes bomberos", "costo traje bombero", "trajes para bomberos", "cotización equipo bombero", "NFPA 1970"]
 draft: false
 ---
 
 "Nada más dime cuánto cuesta un traje." Es la frase con la que empiezan la mayoría de las llamadas que recibimos, y la entendemos perfectamente: detrás casi siempre hay un presupuesto que cuadrar, un tesorero municipal que quiere un número o un gerente de planta que necesita una cifra para la requisición. El problema es que responder con una sola cifra sería hacerle un flaco favor a quien pregunta. Un traje estructural certificado en México puede costar desde unos 24,000 hasta más de 70,000 pesos por equipo completo, y los dos extremos pueden ser la compra correcta según la operación. El error no es pagar caro ni pagar barato: es comparar precios sin comparar lo que cada precio incluye.
 
-En FIREFIGHTER cotizamos trajes todos los días —para cuerpos voluntarios que juntan recursos peso por peso y para refinerías que no discuten la partida de seguridad— y hemos aprendido que el número, solo, miente. Esta guía te da los rangos reales de 2026, los factores técnicos que de verdad mueven el precio y, sobre todo, la forma de leer una cotización para que la cifra signifique algo.
+En FIREFIGHTER.COM.MX cotizamos trajes todos los días —para cuerpos voluntarios que juntan recursos peso por peso y para refinerías que no discuten la partida de seguridad— y hemos aprendido que el número, solo, miente. Esta guía te da los rangos reales de 2026, los factores técnicos que de verdad mueven el precio y, sobre todo, la forma de leer una cotización para que la cifra signifique algo.
 
 ## Rangos de precio de trajes para bomberos en México (2026)
 
@@ -69,7 +69,7 @@ Una buena cotización no es la del número más bajo: es la que te deja comparar
 
 Con esos datos, una propuesta seria debe regresarte mucho más que un precio: modelo y marca, edición de norma certificada, configuración de las tres capas, valores de TPP y THL, tiempo de entrega y condiciones de posventa. Si lo único que te devuelven es una cifra, te devolvieron la mitad de la información —y la mitad menos importante.
 
-## Por qué cotizar tus trajes para bomberos con FIREFIGHTER
+## Por qué cotizar tus trajes para bomberos con FIREFIGHTER.COM.MX
 
 El precio importa, y por eso lo tratamos con la seriedad que merece: cotizamos para que tomes una decisión informada, no para ganar un titular barato que te cueste caro en la segunda temporada de incendios.
 

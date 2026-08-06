@@ -2,7 +2,7 @@
 title: "Botas de bombero HAIX Fire Flash: guía técnica para operación estructural"
 description: "Botas de bombero NFPA 1970 México: suela térmica, GORE-TEX, plantilla de acero inoxidable, cuero ignífugo y diferencia crítica con bota industrial."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["botas bombero", "HAIX Fire Flash", "NFPA 1970", "EPP estructural"]
 draft: false
 ---

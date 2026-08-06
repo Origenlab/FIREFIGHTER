@@ -2,7 +2,7 @@
 title: "Generadores Hidráulicos para Rescate: El Componente que Nadie Revisa Hasta que Falla"
 description: "Guía técnica del Holmatro P50: flujo hidráulico, sistema de dos circuitos, aceite ISO VG 32, arranque en frío y mantenimiento post-operación. Por qué el generador define el rendimiento de todas las herramientas."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["generadores-hidraulicos", "holmatro", "rescate-vehicular", "mantenimiento"]
 draft: false
 ---

@@ -2,7 +2,7 @@
 title: "CONAFOR y el equipamiento de brigadas forestales: cómo funciona el sistema"
 description: "Estructura de brigadas CONAFOR, proceso de licitación de equipo forestal, especificaciones técnicas, diferencias con brigadas privadas y cómo proveer equipo al gobierno federal."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["CONAFOR", "brigadas-forestales", "licitacion-forestal", "equipamiento-forestal"]
 draft: false
 ---

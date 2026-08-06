@@ -21,7 +21,7 @@ services:
   - atencion-medica
 verified: false
 lastUpdated: "2026-08-06"
-metaTitle: "Bomberos Ojinaga"
+metaTitle: "Bomberos Ojinaga Protección Civil"
 metaDescription: "Protección Civil de Ojinaga en Ojinaga, Chihuahua, C. Vigésima 2121. Teléfono 626 453 0348. Emergencias 911."
 ---
 

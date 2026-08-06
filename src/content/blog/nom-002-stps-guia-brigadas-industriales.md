@@ -2,7 +2,7 @@
 title: "NOM-002-STPS: la guía más completa para cumplir con la norma de incendios en empresas mexicanas en 2026"
 description: "Guía técnica actualizada para cumplir NOM-002-STPS en 2026: clasificación de riesgo, extintores, sistemas fijos, brigadas de emergencia, señalización, documentación, multas y cómo evitarlas. Para responsables de seguridad industrial en México."
 pubDate: 2026-01-29
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["NOM-002-STPS", "brigadas industriales", "prevención incendios México", "cumplimiento normativo", "seguridad industrial"]
 draft: false
 ---
@@ -11,7 +11,7 @@ La inspección llega sin aviso. Un inspector de la STPS se presenta en la planta
 
 Este escenario no es hipotético. Es la realidad de decenas de empresas en México cada año. Y la ironía es que el costo de cumplir con la norma —extintores correctos, capacitación documentada, mantenimiento anual— es una fracción del costo de no cumplir.
 
-Esta guía desglosa exactamente qué requiere la **NOM-002-STPS-2010**, cómo aplicarla correctamente a tu empresa y cómo evitar los errores más costosos. En **FIREFIGHTER México** hemos acompañado a más de 400 empresas en procesos de cumplimiento normativo en todos los sectores. Todo lo que sigue está basado en casos reales.
+Esta guía desglosa exactamente qué requiere la **NOM-002-STPS-2010**, cómo aplicarla correctamente a tu empresa y cómo evitar los errores más costosos. En **FIREFIGHTER.COM.MX** hemos acompañado a más de 400 empresas en procesos de cumplimiento normativo en todos los sectores. Todo lo que sigue está basado en casos reales.
 
 ---
 
@@ -225,7 +225,7 @@ La STPS verifica tanto el estado físico de los equipos como la existencia y act
 
 ---
 
-## Cómo FIREFIGHTER México te lleva al cumplimiento total
+## Cómo FIREFIGHTER.COM.MX te lleva al cumplimiento total
 
 Nuestro proceso de cumplimiento NOM-002-STPS está diseñado para ser integral, documentado y verificable ante cualquier inspección:
 

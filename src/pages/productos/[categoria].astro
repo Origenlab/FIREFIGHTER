@@ -5,6 +5,8 @@
  * alternancia de fondo #ffffff / #f8fafc, bloques oscuros #09090b.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import CondicionesStrip from '../../components/empresa/CondicionesStrip.astro';
+import { CONTACTO } from '../../data/marca';
 import categorias from '../../data/productos.json';
 import { girosDeCategoria, claveRiesgo, PANORAMA } from '../../lib/cumplimiento';
 
@@ -62,12 +64,12 @@ const itemListSchema = {
       category: cat.nombre,
       ...(p.img ? { image: `${SITE}${p.img}` } : {}),
       ...(fichaHref(p) ? { url: `${SITE}${fichaHref(p)}` } : p.slug ? { url: `${url}#${p.slug}` } : {}),
-      brand: { '@type': 'Brand', name: cat.marcas?.[0] ?? 'FIREFIGHTER México' },
+      brand: { '@type': 'Brand', name: cat.marcas?.[0] ?? 'FIREFIGHTER.COM.MX' },
       offers: {
         '@type': 'Offer',
         availability: 'https://schema.org/InStock',
         priceCurrency: 'MXN',
-        seller: { '@type': 'Organization', name: 'FIREFIGHTER México' },
+        seller: { '@type': 'Organization', name: 'FIREFIGHTER.COM.MX' },
         url,
       },
     },
@@ -535,7 +537,7 @@ const faqSchema = tieneFaqs
           <p style="font-size:0.92rem; color:#a1a1aa; line-height:1.85; margin:0 0 28px; max-width:52ch;">
             La mayoría de los procesos no se pierden por precio, se pierden por un documento faltante. Cada envío sale con el expediente completo y sin costo adicional.
           </p>
-          <a href="mailto:licitaciones@firefighter.com.mx" class="l2-cta">
+          <a href={`mailto:${CONTACTO.emailLicitaciones}`} class="l2-cta">
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             <span>Escribir a licitaciones</span>
           </a>
@@ -676,7 +678,7 @@ const faqSchema = tieneFaqs
                 <span>Ventas directas</span>
                 <strong>55 5555 5555</strong>
               </a>
-              <a href="mailto:licitaciones@firefighter.com.mx">
+              <a href={`mailto:${CONTACTO.emailLicitaciones}`}>
                 <span>Licitaciones</span>
                 <strong>licitaciones@firefighter.com.mx</strong>
               </a>
@@ -716,7 +718,7 @@ const faqSchema = tieneFaqs
             const msg = val('ff-msg');
 
             const lineas = [
-              'Hola FIREFIGHTER, solicito cotizacion de ' + CATEGORIA + '.',
+              'Hola FIREFIGHTER.COM.MX, solicito cotizacion de ' + CATEGORIA + '.',
               '',
               'Nombre: ' + val('ff-nombre'),
               'Institucion: ' + val('ff-org'),
@@ -738,6 +740,9 @@ const faqSchema = tieneFaqs
       </script>
     </section>
   )}
+
+  <!-- ══════════ 7b · CONDICIONES COMERCIALES ══════════ -->
+  <CondicionesStrip fondo="#f8fafc" />
 
   <!-- ══════════ 8 · CATÁLOGO RELACIONADO (interlinking) ══════════ -->
   <section style="background:#09090b; padding:64px 0;">

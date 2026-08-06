@@ -2,7 +2,7 @@
 title: "EPP completo del bombero profesional: el ensemble como sistema certificado"
 description: "EPP estructural NFPA 1970: guía de los 6 componentes, compatibilidad de ensemble, costos en México y cómo priorizar cuando el presupuesto es limitado."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["EPP bomberos", "NFPA 1970 ensemble", "kit bombero", "equipamiento brigadas México"]
 draft: false
 ---
@@ -88,7 +88,7 @@ Lo que no es negociable en ningún escenario presupuestario: que cada componente
 
 ## El criterio de "presupuesto total por elemento operativo"
 
-En FIREFIGHTER hemos trabajado con coordinadores de protección civil que reciben presupuesto por "elemento operativo" y necesitan saber qué pueden lograr con ese número. La respuesta honesta:
+En FIREFIGHTER.COM.MX hemos trabajado con coordinadores de protección civil que reciben presupuesto por "elemento operativo" y necesitan saber qué pueden lograr con ese número. La respuesta honesta:
 
 Con $55,000–$65,000 MXN por elemento, puedes equipar un bombero con ensemble básico certificado completo (sin SCBA) que cumple con los requisitos de operación estructural segura.
 

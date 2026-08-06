@@ -233,7 +233,7 @@ const organizationSchema = {
           </a>
 
           <p style="font-size:0.82rem; color:#71717a; line-height:1.85; margin:0 0 22px; max-width:340px;">
-            Distribuidores autorizados de <strong style="color:#a1a1aa; font-weight:600;">{MARCAS_DISTRIBUIDAS.slice(0, 5).join(', ')}</strong> y otras marcas. Equipamos cuerpos de bomberos, brigadas industriales y proyectos contra incendios en {EMPRESA.coberturaCorta.toLowerCase()}.
+            Distribuidores autorizados de <strong style="color:#a1a1aa; font-weight:600;">{MARCAS_DISTRIBUIDAS.slice(0, 5).join(', ')}</strong> y otras marcas. Equipamos cuerpos de bomberos, brigadas industriales y proyectos contra incendios en {EMPRESA.coberturaCorta.charAt(0).toLowerCase() + EMPRESA.coberturaCorta.slice(1)}.
           </p>
 
           <!-- Datos de contacto especificados -->

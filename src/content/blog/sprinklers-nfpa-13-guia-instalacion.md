@@ -2,7 +2,7 @@
 title: "Sprinklers NFPA 13: el sistema que puede costar más por activación accidental que por incendio"
 description: "Un sprinkler activado por error descarga 150 litros por minuto. En 10 minutos: 1,500 litros. El daño por agua puede superar al incendio que habría controlado. Guía de tipos de sistemas, temperaturas de activación, densidades NFPA 13 y proceso de aprobación en México."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["sprinklers", "NFPA 13", "sistemas contra incendio", "rociadores", "protección automática"]
 draft: false
 ---

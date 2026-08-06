@@ -21,7 +21,7 @@ services:
   - atencion-medica
 verified: false
 lastUpdated: "2026-08-06"
-metaTitle: "Bomberos Delicias"
+metaTitle: "Bomberos Delicias Protección Civil"
 metaDescription: "Unidad de Protección Civil de Delicias en Delicias, Chihuahua, Av. Fernando Baeza Meléndez 202. Teléfono 639 139 0404. Emergencias 911."
 ---
 

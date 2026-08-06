@@ -2,7 +2,7 @@
 title: "Holmatro Combi Tool V300: La Herramienta que el Acero Boron Obligó a Inventar"
 description: "Guía técnica completa del Holmatro V300: tecnología CORE, especificaciones reales, por qué el acero UHSS invalida herramientas de generación anterior y cómo mantener el sistema hidráulico correctamente."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["holmatro", "combi-tool", "rescate-vehicular", "herramientas-hidraulicas"]
 draft: false
 ---
@@ -90,7 +90,7 @@ El mantenimiento diario que no puede omitirse incluye:
 
 La bitácora no es burocracia — es evidencia de que la herramienta estaba en condiciones conocidas antes de una operación. Si ocurre un incidente durante un rescate, la pregunta legal sobre el estado de la herramienta se responde con la bitácora.
 
-Para mantenimiento mayor — revisión de sellos, válvulas de control, ajuste de presión del sistema — se requiere técnico autorizado Holmatro. En México, FIREFIGHTER México tiene el respaldo técnico para mantenimiento certificado. Las intervenciones no autorizadas en piezas a presión anulan la garantía y, más importante, pueden producir fallas de forma impredecible.
+Para mantenimiento mayor — revisión de sellos, válvulas de control, ajuste de presión del sistema — se requiere técnico autorizado Holmatro. En México, FIREFIGHTER.COM.MX tiene el respaldo técnico para mantenimiento certificado. Las intervenciones no autorizadas en piezas a presión anulan la garantía y, más importante, pueden producir fallas de forma impredecible.
 
 ## Integración con el Sistema Hidráulico Completo
 

@@ -2,7 +2,7 @@
 title: "MSA Safety en México: análisis técnico completo del catálogo de equipos para bomberos y brigadas industriales"
 description: "Guía técnica de los principales productos MSA Safety disponibles en México: SCBA G1 con HUD y telemetría iCom, cascos Gallet F1 XF y Cairns 1010, detectores Altair 4XR y 5X, arneses V-EDGE y programa de servicio certificado."
 pubDate: 2026-03-12
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["MSA Safety", "SCBA G1 MSA", "casco Gallet bomberos", "Cairns 1010", "detector Altair MSA México"]
 draft: false
 ---
@@ -11,7 +11,7 @@ MSA Safety (Mine Safety Appliances Company) fue fundada en 1914 en Pittsburgh, P
 
 En ese tiempo, MSA ha pasado de fabricar un detector de gas a ser uno de los proveedores de EPP más completos del mercado: SCBA, cascos, detectores de gas, sistemas de protección contra caídas, ropa de protección y equipos de rescate para bomberos, industria de petróleo y gas, minería y militares en más de 140 países.
 
-En **FIREFIGHTER México** somos **distribuidores autorizados de MSA Safety** para México. Esto significa acceso directo al inventario, a los certificados de laboratorio por número de lote, al soporte técnico del fabricante y al programa de servicio certificado. Esta guía técnica analiza los productos MSA más relevantes para bomberos y brigadas industriales en el mercado mexicano.
+En **FIREFIGHTER.COM.MX** somos **distribuidores autorizados de MSA Safety** para México. Esto significa acceso directo al inventario, a los certificados de laboratorio por número de lote, al soporte técnico del fabricante y al programa de servicio certificado. Esta guía técnica analiza los productos MSA más relevantes para bomberos y brigadas industriales en el mercado mexicano.
 
 ---
 
@@ -186,7 +186,7 @@ Disponible en versiones de **3.5, 6, 9 y 15 metros** de longitud, con carcasa de
 
 ## Programa de servicio técnico MSA certificado en México
 
-Como distribuidores autorizados de MSA Safety, FIREFIGHTER México ofrece el programa completo de servicio técnico con respaldo del fabricante:
+Como distribuidores autorizados de MSA Safety, FIREFIGHTER.COM.MX ofrece el programa completo de servicio técnico con respaldo del fabricante:
 
 **Recarga de cilindros SCBA**: aire comprimido grado D (pureza ≥ 99.99%, CO ≤ 10 ppm, CO₂ ≤ 25 ppm, humedad ≤ 67 ppm) con certificado de composición del lote de cada recarga.
 
@@ -202,7 +202,7 @@ Como distribuidores autorizados de MSA Safety, FIREFIGHTER México ofrece el pro
 
 ---
 
-## Cómo adquirir equipos MSA Safety con FIREFIGHTER México
+## Cómo adquirir equipos MSA Safety con FIREFIGHTER.COM.MX
 
 Somos el canal técnico correcto para adquirir equipos MSA Safety en México: documentación completa de laboratorio por número de lote, servicio técnico con respaldo de fabricante, y la capacidad de preparar propuestas técnicas para licitaciones públicas con toda la documentación normativa requerida.
 

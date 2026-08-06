@@ -2,7 +2,7 @@
 title: "Rescate Vehicular en México: La Secuencia que Marca la Diferencia entre Supervivencia y Estadística"
 description: "Estadísticas reales de accidentes viales en México, secuencia operacional moderna de rescate vehicular, acero UHSS en campo, formación NFPA 1006 y el impacto del tiempo de excarcelación en supervivencia."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["rescate-vehicular", "excarcelacion", "nfpa-1006", "mexico"]
 draft: false
 ---

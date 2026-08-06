@@ -21,7 +21,7 @@ services:
   - atencion-medica
 verified: false
 lastUpdated: "2026-08-06"
-metaTitle: "Bomberos Cuauhtémoc"
+metaTitle: "Bomberos Cuauhtémoc Protección Civil"
 metaDescription: "Coordinación Municipal de Protección Civil de Cuauhtémoc en Cuauhtémoc, Chihuahua, Blvd. Jorge Castillo Cabrera, entre Cuautitlán y Netzahualcóyotl. Teléfono 625 581 2651. Emergencias 911."
 ---
 

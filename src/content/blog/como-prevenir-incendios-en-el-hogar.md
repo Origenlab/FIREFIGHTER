@@ -2,7 +2,7 @@
 title: "Cómo prevenir incendios en el hogar: guía práctica para familias mexicanas"
 description: "Aprende las medidas más efectivas para prevenir incendios en casa. Consejos prácticos, puntos de riesgo comunes y qué hacer si ocurre una emergencia."
 pubDate: 2026-03-05
-author: "Firefighter México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["prevencion", "incendios", "hogar", "seguridad", "familia"]
 draft: false
 ---

@@ -2,7 +2,7 @@
 title: "Distribución de Gabinetes CI en Plantas Industriales: Criterios NFPA 14 y NOM-002"
 description: "Criterios de distribución de gabinetes contra incendio en plantas industriales: NFPA 14, NOM-002-STPS, distancias de recorrido, zonas de riesgo y errores de diseño."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["gabinetes-mangueras", "plantas-industriales", "nfpa-14", "distribucion-sistemas-ci"]
 draft: false
 ---

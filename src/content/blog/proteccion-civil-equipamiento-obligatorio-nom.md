@@ -2,7 +2,7 @@
 title: "Protección Civil empresarial en México 2026: equipamiento obligatorio, brigadas, documentación y cómo pasar la inspección"
 description: "Guía actualizada 2026 sobre protección civil para empresas en México: qué equipos son obligatorios por nivel de riesgo, cómo estructurar la brigada, qué documentos debe tener el PIPC, simulacros requeridos y multas por incumplimiento de la STPS."
 pubDate: 2026-03-19
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["protección civil empresas México", "PIPC programa protección civil", "brigada emergencias empresa", "NOM-002-STPS 2026", "inspección STPS seguridad"]
 draft: false
 ---
@@ -219,7 +219,7 @@ La Ley Federal sobre Metrología y Normalización establece las sanciones en UMA
 
 ---
 
-## FIREFIGHTER México: el socio integral de protección civil para tu empresa
+## FIREFIGHTER.COM.MX: el socio integral de protección civil para tu empresa
 
 Nuestro modelo de servicio está diseñado para eliminar la brecha de cumplimiento de forma sistemática, no para vender extintores individualmente. El proceso completo:
 

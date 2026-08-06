@@ -2,7 +2,7 @@
 title: "Extintor PQS ABC: Lo que el manómetro verde no te dice"
 description: "El manómetro en zona verde no garantiza que el agente PQS salga cuando lo necesites. Guía completa sobre el extintor de polvo químico seco: mecanismo real, diferencias ABC vs BC, tabla de capacidades y los errores más comunes en campo."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["extintores", "PQS", "polvo químico seco", "NOM-154", "protección contra incendios"]
 draft: false
 ---

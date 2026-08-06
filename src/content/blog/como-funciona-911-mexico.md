@@ -2,7 +2,7 @@
 title: "¿Cómo funciona el 911 en México? Guía completa"
 description: "Todo lo que necesitas saber sobre el sistema de emergencias 911 en México: cómo funciona, qué decir al llamar y qué servicios puedes solicitar."
 pubDate: 2026-02-01
-author: "Firefighter México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 image: "/images/blog/911-mexico.jpg"
 imageAlt: "Operador de emergencias 911"
 tags: ["emergencias", "911", "seguridad"]

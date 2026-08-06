@@ -2,7 +2,7 @@
 title: "NFPA 72 en México: Los 12 Requisitos que las Aseguradoras Buscan Primero cuando Niegan un Siniestro"
 description: "Guía práctica de NFPA 72 para responsables de seguridad: qué regula exactamente, relación con reglamentos mexicanos, los 12 requisitos más violados, quién puede certificar, y diferencia entre supervisión local y monitoreo central 24/7."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["nfpa-72", "sistemas-alarma", "mexico", "deteccion-incendio"]
 draft: false
 ---

@@ -2,7 +2,7 @@
 title: "Historia del Cuerpo de Bomberos en México: más de 150 años de servicio"
 description: "Descubre cómo surgió y evolucionó el cuerpo de bomberos en México, desde sus primeras brigadas en el siglo XIX hasta los cuerpos profesionales modernos."
 pubDate: 2026-02-15
-author: "Firefighter México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["historia", "bomberos", "mexico", "tradicion"]
 draft: false
 ---

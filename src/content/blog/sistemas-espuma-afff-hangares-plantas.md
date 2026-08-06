@@ -2,7 +2,7 @@
 title: "Sistemas de espuma AFFF: activar antes de que el operador decida correr"
 description: "Un incendio de combustible en hangar se propaga a 1 metro por segundo. El sistema fijo tiene que activar antes de que el operador tome la decisión. Guía completa de espuma por tipo de expansión, normas por sector, la controversia del PFAS en México y los errores de diseño más frecuentes."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["espuma AFFF", "sistemas fijos", "NFPA 11", "NFPA 409", "hangares", "petroquímica"]
 draft: false
 ---

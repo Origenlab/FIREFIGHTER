@@ -1,0 +1,56 @@
+---
+/**
+ * Banda compacta de condiciones comerciales para el catálogo.
+ * Responde, sin salir de la página del producto, las cuatro preguntas que
+ * frenan una compra: cuándo cotizan, cuándo entregan, qué garantía hay y
+ * cómo facturan. Misma fuente que /contacto y /acerca-de: src/data/marca.ts.
+ */
+import { CONDICIONES, AVISO_PRECIOS } from '../../data/marca';
+
+interface Props {
+  fondo?: string;
+  /** Títulos a mostrar, en orden. Por defecto los cuatro decisivos. */
+  incluir?: string[];
+  oscuro?: boolean;
+}
+const {
+  fondo,
+  incluir = ['Respuesta a cotización', 'Tiempo de entrega', 'Garantía', 'Facturación'],
+  oscuro = false,
+} = Astro.props;
+
+const bg = fondo ?? (oscuro ? '#0c0c0f' : '#ffffff');
+const borde = oscuro ? '#1f1f23' : '#e4e4e7';
+const card = oscuro ? '#09090b' : '#ffffff';
+const tituloColor = oscuro ? '#dc2626' : '#dc2626';
+const textoColor = oscuro ? '#a1a1aa' : '#52525b';
+const notaColor = oscuro ? '#3f3f46' : '#a1a1aa';
+
+const items = incluir
+  .map((t) => CONDICIONES.find((c) => c.titulo === t))
+  .filter((c): c is (typeof CONDICIONES)[number] => Boolean(c));
+---
+
+<section style={`background:${bg}; padding:52px 0; border-top:1px solid ${borde};`}>
+  <div class="container-custom">
+
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:22px;">
+      <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+      <span style="font-size:0.68rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Condiciones comerciales</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px" style={`background:${borde}; border:1px solid ${borde}; border-radius:14px; overflow:hidden;`}>
+      {items.map(c => (
+        <div style={`background:${card}; padding:20px;`}>
+          <span style={`display:block; font-size:0.62rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:${tituloColor}; margin-bottom:8px;`}>{c.titulo}</span>
+          <p style={`font-size:0.8rem; color:${textoColor}; line-height:1.75; margin:0;`}>{c.detalle}</p>
+        </div>
+      ))}
+    </div>
+
+    <p style={`font-size:0.74rem; color:${notaColor}; line-height:1.7; margin:14px 0 0;`}>
+      {AVISO_PRECIOS} <a href="/contacto" style={`color:${oscuro ? '#71717a' : '#71717a'}; text-decoration:underline; text-underline-offset:2px;`}>Ver condiciones completas y marco normativo</a>.
+    </p>
+
+  </div>
+</section>

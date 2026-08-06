@@ -2,7 +2,7 @@
 title: "NFPA 1950: la norma que define el EPP real para incendios forestales"
 description: "Guía técnica de NFPA 1950: alcance, requisitos por categoría de EPP, ensayos de certificación, cómo verificar equipamiento y diferencias clave con NFPA 1970 para bomberos."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["NFPA-1977", "EPP-forestal", "normas-incendios", "brigadas-forestales"]
 draft: false
 ---

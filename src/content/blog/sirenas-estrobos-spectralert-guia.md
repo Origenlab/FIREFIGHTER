@@ -2,7 +2,7 @@
 title: "Sirenas y Estrobos SpectralAlert: El Sistema de Notificación que Más Se Subpresupuesta"
 description: "Guía técnica de notificación de alarma: 15 dB sobre ruido ambiental, sincronización de estrobos y epilepsia fotosensible, requisitos para cuartos de hotel, espaciado por candela y diseño para áreas industriales ruidosas."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["sirenas", "estrobos", "spectralert", "nfpa-72"]
 draft: false
 ---

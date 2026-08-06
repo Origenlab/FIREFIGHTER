@@ -2,14 +2,14 @@
 title: "Equipar una brigada con trajes para bomberos: tallaje, volumen y licitación"
 description: "Cómo comprar trajes para bomberos por volumen: programa de tallaje, especificación técnica y licitación LAASSP sin errores que retrasen la compra."
 pubDate: 2026-06-15
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["equipar brigada", "trajes para bomberos", "licitación bomberos", "tallaje trajes bombero", "compra volumen EPP"]
 draft: false
 ---
 
 Hace un par de temporadas acompañamos a una planta del Bajío que necesitaba equipar a una brigada de cuarenta personas. El área de compras había hecho su tarea: cotizó, comparó, eligió un buen traje certificado y cerró la orden a tiempo. El día de la entrega, sin embargo, descubrieron el problema que nadie había previsto: habían pedido las tallas "surtidas, en proporciones estándar", y la brigada real —operadores de planta, mujeres y hombres, complexiones de todo tipo— no se parecía en nada a esa proporción de catálogo. Una docena de trajes no le quedaba bien a nadie. Trajes correctos, certificados, de buena marca, inservibles por un supuesto administrativo.
 
-Esa historia resume por qué equipar una brigada completa no es comprar muchos trajes: es diseñar una compra. Cuando el pedido pasa de uno a treinta, cien o doscientos equipos, cada error se multiplica por el número de unidades, y los errores ya no se pagan con un traje, se pagan con decenas. En FIREFIGHTER acompañamos compras por volumen para cuerpos de bomberos, plantas industriales y dependencias de gobierno, y esta guía reúne lo que hay que hacer bien para que una compra masiva llegue completa, a tiempo, en talla y dentro de norma.
+Esa historia resume por qué equipar una brigada completa no es comprar muchos trajes: es diseñar una compra. Cuando el pedido pasa de uno a treinta, cien o doscientos equipos, cada error se multiplica por el número de unidades, y los errores ya no se pagan con un traje, se pagan con decenas. En FIREFIGHTER.COM.MX acompañamos compras por volumen para cuerpos de bomberos, plantas industriales y dependencias de gobierno, y esta guía reúne lo que hay que hacer bien para que una compra masiva llegue completa, a tiempo, en talla y dentro de norma.
 
 ## El error de las "tallas estándar" y por qué cuesta tanto
 
@@ -76,7 +76,7 @@ Antes de cerrar una compra por volumen, vale la pena confirmar que tienes resuel
 - La posventa garantizada: refacciones y reparación dentro de México.
 - El presupuesto de mantenimiento [NFPA 1850](/blog/mantenimiento-epp-estructural-nfpa-1851) contemplado desde el inicio, no como un extra de último momento.
 
-## Por qué equipar tu brigada con FIREFIGHTER
+## Por qué equipar tu brigada con FIREFIGHTER.COM.MX
 
 Una compra por volumen es donde más se nota la diferencia entre un proveedor que despacha cajas y uno que equipa operaciones, porque es donde más cosas pueden salir mal en silencio. Incluimos el programa de tallaje —nominal y con reserva operativa— para que cada traje ajuste a quien lo va a usar, y te ayudamos a redactar la especificación técnica que evita tanto el equipo de baja calidad como las cotizaciones que no se pueden comparar. Abrimos precio por volumen real y entregamos propuesta formal en menos de 24 horas. Trabajamos con distribución autorizada de marca —MSA, dueña de **Globe** y **Bristol**—, con certificación verificable y garantía de fabricante, y conocemos por dentro los procesos de gobierno: LAASSP, CABMS y la documentación completa que el sector exige. Coordinamos la logística en los 32 estados con verificación de talla y norma a la recepción, y después de la entrega acompañamos el programa NFPA 1850 de toda la flota de EPP con refacciones OEM, porque equipar una brigada no termina el día que llegan las cajas.
 

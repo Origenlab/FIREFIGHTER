@@ -2,7 +2,7 @@
 title: "Panel Notifier NFS2-3030: La Programación Incorrecta Puede Ignorar una Alarma Real"
 description: "Guía técnica del Notifier NFS2-3030: parámetros de programación críticos, protocolo CLIP vs FASTID, cálculo correcto de batería de respaldo, integración con supresión y mantenimiento mensual del operador."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["notifier", "nfs2-3030", "panel-alarma", "programacion"]
 draft: false
 ---

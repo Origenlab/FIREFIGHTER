@@ -2,7 +2,7 @@
 title: "Válvulas Angulares para Gabinetes Contra Incendio: Especificación y Mantenimiento"
 description: "Guía técnica de válvulas angulares para gabinetes CI: diferencias 1.5\" vs 2.5\", materiales certificados, torque de apertura, mantenimiento y NOM-002-STPS."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["gabinetes-mangueras", "valvulas-angulares", "mantenimiento-ci", "nom-002-stps"]
 draft: false
 ---

@@ -2,7 +2,7 @@
 title: "Diseño de sistemas contra incendio: sistemas que se aprueban en papel y fallan en operación"
 description: "El diseño de un sistema contra incendio en México puede hacerlo técnicamente cualquier ingeniero. El problema es que diseñar sin criterio hidráulico real y sin clasificar correctamente la ocupación produce sistemas que pasan auditorías y fallan en incendios. Los 3 errores más frecuentes que encontramos en revisión."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["diseño sistemas contra incendio", "NFPA 13", "clasificación de ocupación", "cálculo hidráulico", "protección contra incendios México"]
 draft: false
 ---

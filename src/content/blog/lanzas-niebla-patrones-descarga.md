@@ -2,7 +2,7 @@
 title: "Lanzas de Niebla y Patrones de Descarga: Guía Técnica para Brigadas"
 description: "Guía técnica sobre lanzas contra incendio: niebla vs chorro recto, patrones de descarga, selección por tipo de fuego, GPM y marcas TFT vs Elkhart."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["gabinetes-mangueras", "lanzas-incendio", "combate-incendios", "brigadas-industriales"]
 draft: false
 ---

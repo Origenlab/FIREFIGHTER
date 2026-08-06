@@ -13,11 +13,11 @@ const blogSchema = {
   '@context': 'https://schema.org',
   '@type': 'Blog',
   '@id': `${SITE}/blog#blog`,
-  name: 'Blog técnico FIREFIGHTER México',
+  name: 'Blog técnico FIREFIGHTER.COM.MX',
   description: 'Guías técnicas sobre equipos contra incendios, equipo para bomberos y cumplimiento normativo NFPA y NOM en México.',
   url: `${SITE}/blog`,
   inLanguage: 'es-MX',
-  publisher: { '@type': 'Organization', name: 'FIREFIGHTER México', url: SITE },
+  publisher: { '@type': 'Organization', name: 'FIREFIGHTER.COM.MX', url: SITE },
   blogPost: posts.slice(0, 20).map(p => ({
     '@type': 'BlogPosting',
     headline: p.title,
@@ -31,7 +31,7 @@ const blogSchema = {
 const serviciosSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Servicios de FIREFIGHTER México',
+  name: 'Servicios de FIREFIGHTER.COM.MX',
   itemListElement: SERVICIOS.map((s, i) => ({
     '@type': 'ListItem',
     position: i + 1,
@@ -42,7 +42,7 @@ const serviciosSchema = {
       serviceType: s.nombre,
       areaServed: { '@type': 'Country', name: 'México' },
       audience: { '@type': 'Audience', audienceType: s.paraQuien },
-      provider: { '@type': 'Organization', name: 'FIREFIGHTER México', url: SITE },
+      provider: { '@type': 'Organization', name: 'FIREFIGHTER.COM.MX', url: SITE },
     },
   })),
 };

@@ -1,41 +1,89 @@
-# FIREFIGHTER.COM.MX — Equipo contra incendios y directorio nacional de estaciones de bomberos
+# FIREFIGHTER.COM.MX
 
-> Firefighter México vende equipos contra incendios y equipo para bomberos (trajes, SCBA,
-> extintores, herramientas de rescate bajo normas NFPA, NOM y UL) y mantiene un directorio
-> de estaciones de bomberos de México con mapa interactivo y números de emergencia.
+> FIREFIGHTER.COM.MX es un distribuidor mexicano de equipo contra incendios y equipo de
+> protección personal para bomberos. Vende, entrega, capacita y da mantenimiento a equipo
+> bajo normas NFPA, NOM y UL en los 32 estados de la República Mexicana, con documentación
+> completa para licitaciones públicas y auditorías de protección civil. De forma paralela
+> publica, como servicio gratuito, un directorio nacional de estaciones de bomberos.
 
-Idioma: español (es-MX). País: México.
+Marca: FIREFIGHTER.COM.MX (escrita siempre con el dominio completo, en mayúsculas).
+Dominio: firefighter.com.mx
+Idioma: español (es-MX). País de operación: México. Moneda: MXN.
 
-## Acerca de
-El sitio combina dos vertientes: un catálogo comercial de equipo contra incendios y de
-protección para bomberos organizado en ocho categorías, y un directorio público de
-estaciones de bomberos por estado (con fichas de CDMX, Estado de México y Puebla) que
-incluye mapa, números de emergencia y un formulario para registrar nuevas estaciones.
+## Qué es este sitio
+Dos vertientes en un mismo dominio:
 
-## Servicios / Productos
-- Equipos para bomberos: EPP estructural (trajes Nomex, chaquetones, cascos, botas, guantes) — norma de referencia NFPA 1970.
-- SCBA y protección respiratoria.
-- Extintores.
-- Sistemas fijos contra incendio.
-- Herramientas de rescate.
-- Detección y alarma.
-- Gabinetes y mangueras.
-- Equipo forestal.
+1. **Catálogo comercial** de equipo contra incendios y de protección para bomberos,
+   organizado en ocho categorías, con ficha por producto y por configuración de fabricante.
+2. **Directorio público de estaciones de bomberos** por estado, con mapa, teléfonos de
+   emergencia y formulario para registrar estaciones faltantes. Es gratuito, no requiere
+   registro y no vende nada.
+
+FIREFIGHTER.COM.MX no es una autoridad ni una línea de auxilio. Ante una emergencia
+en curso en México se marca el 911.
+
+## Catálogo — ocho categorías
+- [EPP para Bomberos](https://firefighter.com.mx/productos/epp-para-bomberos) — trajes estructurales, chaquetones, cascos, botas, guantes y capuchas. Norma de referencia NFPA 1970.
+- [Equipos de Respiración](https://firefighter.com.mx/productos/equipos-de-respiracion) — SCBA de circuito abierto, máscaras, cilindros y líneas de aire. Norma de referencia NFPA 1981.
+- [Extintores y Extinción](https://firefighter.com.mx/productos/extintores-y-extincion) — extintores PQS, CO2, clase K, agua y espuma. Norma de referencia NOM-154-SCFI.
+- [Herramientas de Rescate](https://firefighter.com.mx/productos/herramientas-de-rescate) — equipo hidráulico de extracción, cizallas, separadores y rams. Norma de referencia NFPA 1936.
+- [Sistemas Contra Incendio](https://firefighter.com.mx/productos/sistemas-contra-incendio) — rociadores, bombas, gabinetes, mangueras y agentes limpios. Normas NFPA 13, NFPA 20 y NFPA 2001.
+- [Equipo Forestal](https://firefighter.com.mx/productos/equipo-forestal) — mochilas aspersoras, herramienta manual forestal y EPP de brigada. Norma de referencia NFPA 1977.
+- [Detección y Alarma](https://firefighter.com.mx/productos/deteccion-y-alarma) — paneles, detectores de humo y calor, estaciones manuales, sirenas y estrobos. Norma de referencia NFPA 72.
+- [Señalética y Seguridad](https://firefighter.com.mx/productos/senaletica-y-seguridad) — señalización de emergencia y equipo complementario. Norma de referencia NOM-003-SEGOB.
+
+## Servicios
+- Venta y distribución de equipo nuevo de marcas autorizadas.
+- Asesoría técnica: dimensionamiento por tipo de riesgo, norma aplicable y tamaño de brigada.
+- Mantenimiento: recarga de extintores, prueba hidrostática, servicio a SCBA en banco y bitácora de inspección.
+- Capacitación de uso, integración de brigada y prueba de ajuste facial.
+
+## Condiciones comerciales publicadas
+- Respuesta a cotización: máximo 24 horas hábiles con el requerimiento completo.
+- Vigencia de la cotización: 15 días naturales.
+- Tiempo de entrega: 3 a 5 días hábiles en existencia; 4 a 8 semanas sobre pedido o importación.
+- Cobertura de entrega: los 32 estados de la República Mexicana.
+- Garantía: directa del fabricante, de 12 a 60 meses según línea de producto.
+- Facturación: CFDI 4.0 desglosado por partida con marca, modelo y número de parte.
+- Precios en pesos mexicanos (MXN), sin IVA salvo indicación expresa.
+
+## Documentación que se entrega con el pedido
+Carta de distribuidor autorizado, ficha técnica en español, certificado de laboratorio
+tercero, certificado de origen, número de serie trazable, clave CABMS cuando la
+convocatoria lo requiere, manuales del fabricante, póliza de garantía y constancia
+de capacitación.
+
+## Marcas distribuidas
+MSA Safety, Scott Safety, Bullard, Holmatro, Amerex, Notifier, Haix.
+
+## Marco normativo de referencia
+NFPA 1970, NFPA 1981, NFPA 1977, NFPA 13, NFPA 20, NFPA 72, NFPA 2001,
+NOM-002-STPS-2010, NOM-154-SCFI-2005, UL Listed, FM Approvals.
 
 ## Páginas clave
-- [Inicio](https://firefighter.com.mx/): portada con categorías de producto y canales de cotización.
-- [Productos](https://firefighter.com.mx/productos): índice del catálogo por categoría.
-- [Equipos para bomberos](https://firefighter.com.mx/productos/equipos-bomberos): EPP estructural para combate de incendios.
-- [Extintores](https://firefighter.com.mx/productos/extintores): categoría de extintores del catálogo.
-- [Herramientas de rescate](https://firefighter.com.mx/productos/herramientas-rescate): categoría de herramientas de rescate.
-- [Directorio de estaciones](https://firefighter.com.mx/directorio): estaciones de bomberos por estado.
-- [Mapa](https://firefighter.com.mx/mapa): mapa interactivo de estaciones de bomberos en México.
-- [Emergencias](https://firefighter.com.mx/emergencias): números de emergencia en México (línea nacional 911).
-- [Agregar estación](https://firefighter.com.mx/agregar-estacion): formulario para sumar una estación al directorio.
-- [Blog](https://firefighter.com.mx/blog): artículos técnicos sobre equipo y normativa contra incendios.
-- [Acerca de](https://firefighter.com.mx/acerca-de): qué es el proyecto Firefighter México.
-- [Contacto](https://firefighter.com.mx/contacto): formulario de contacto y cotización.
+- [Inicio](https://firefighter.com.mx/)
+- [Catálogo completo](https://firefighter.com.mx/productos)
+- [Normativa y cumplimiento](https://firefighter.com.mx/cumplimiento) — qué exige la ley por giro y por estado.
+- [NOM-002-STPS-2010](https://firefighter.com.mx/cumplimiento/normas/nom-002-stps-2010) — ficha de la norma de brigadas industriales.
+- [Directorio de estaciones](https://firefighter.com.mx/directorio) — estaciones de bomberos por estado.
+- [Mapa de estaciones](https://firefighter.com.mx/mapa)
+- [Emergencias](https://firefighter.com.mx/emergencias) — números de emergencia en México (línea nacional 911).
+- [Agregar estación](https://firefighter.com.mx/agregar-estacion)
+- [Blog técnico](https://firefighter.com.mx/blog) — guías sobre equipo, selección y normativa.
+- [Quiénes somos](https://firefighter.com.mx/acerca-de)
+- [Contacto y cotización](https://firefighter.com.mx/contacto)
+- [Aviso de privacidad](https://firefighter.com.mx/privacidad)
+
+## Cobertura del directorio
+Estados con fichas publicadas: Aguascalientes, Chihuahua, Ciudad de México, Estado de
+México, Guanajuato, Jalisco, Nuevo León, Puebla y Veracruz. La información proviene de
+fuentes públicas y de aportaciones de la comunidad.
 
 ## Contacto
 - Sitio: https://firefighter.com.mx
-- Formulario de contacto: https://firefighter.com.mx/contacto
+- Ventas: ventas@firefighter.com.mx
+- Licitaciones públicas: licitaciones@firefighter.com.mx
+- Soporte: soporte@firefighter.com.mx
+- Formulario: https://firefighter.com.mx/contacto
+- Horario de atención comercial: lunes a viernes de 9:00 a 18:00 h y sábados de 9:00 a 14:00 h (hora del centro de México).
+- Emergencias en México: 911 (no es un número de FIREFIGHTER.COM.MX).

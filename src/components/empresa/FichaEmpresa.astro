@@ -1,0 +1,104 @@
+---
+/**
+ * Ficha de empresa — identidad corporativa especificada.
+ * Es el bloque que revisa un comprador B2B, un área de compras de gobierno o
+ * una junta de aclaraciones antes de invitar a cotizar.
+ *
+ * Todos los datos salen de src/data/marca.ts. No hay literales aquí.
+ */
+import {
+  MARCA, DOMINIO, SITE, TAGLINE, GIRO,
+  CONTACTO, EMPRESA, MARCAS_DISTRIBUIDAS,
+} from '../../data/marca';
+
+interface Props {
+  fondo?: string;
+  titulo?: string;
+  eyebrow?: string;
+}
+const {
+  fondo = '#fff',
+  titulo = 'Los datos de la empresa,<br>sin tener que pedirlos',
+  eyebrow = 'Ficha de empresa',
+} = Astro.props;
+
+const filas = [
+  { label: 'Marca comercial',   valor: MARCA },
+  { label: 'Sitio oficial',     valor: DOMINIO, href: SITE },
+  { label: 'Actividad',         valor: GIRO },
+  { label: 'Especialidad',      valor: TAGLINE },
+  { label: 'Cobertura',         valor: EMPRESA.cobertura },
+  { label: 'Horario comercial', valor: CONTACTO.horarioComercial },
+  { label: 'Idioma de atención',valor: EMPRESA.idiomaAtencion },
+  { label: 'Moneda de operación', valor: `Pesos mexicanos (${EMPRESA.monedaOperacion})` },
+  { label: 'Teléfono de ventas', valor: CONTACTO.telefonoVentas, href: CONTACTO.telefonoVentasHref },
+  { label: 'Correo comercial',   valor: CONTACTO.emailVentas, href: `mailto:${CONTACTO.emailVentas}` },
+  { label: 'Correo de licitaciones', valor: CONTACTO.emailLicitaciones, href: `mailto:${CONTACTO.emailLicitaciones}` },
+  { label: 'Correo de soporte',  valor: CONTACTO.emailSoporte, href: `mailto:${CONTACTO.emailSoporte}` },
+];
+---
+
+<section style={`background:${fondo}; padding:72px 0; border-top:1px solid #e4e4e7;`}>
+  <div class="container-custom">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" style="align-items:start; margin-bottom:40px;">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+          <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+          <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">{eyebrow}</span>
+        </div>
+        <h2 style="font-size:clamp(1.7rem,2.6vw,2.4rem); font-weight:800; color:#09090b; line-height:1.12; margin:0; letter-spacing:-0.02em;" set:html={titulo}></h2>
+      </div>
+      <p style="font-size:0.95rem; color:#52525b; line-height:1.85; margin:0;">
+        Un área de compras pierde días persiguiendo datos que el proveedor debería publicar: quién es,
+        qué vende exactamente, hasta dónde entrega y cómo factura. Aquí están todos, en un solo lugar
+        y en el mismo formato en el que los vas a necesitar para dar de alta al proveedor.
+      </p>
+    </div>
+
+    <!-- Tabla de identidad -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px" style="background:#e4e4e7; border:1px solid #e4e4e7; border-radius:14px; overflow:hidden; margin-bottom:22px;">
+      {filas.map(f => (
+        <div style="background:#fff; padding:16px 20px; display:flex; flex-direction:column; gap:5px; min-width:0;">
+          <span style="font-size:0.62rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#a1a1aa;">{f.label}</span>
+          {f.href ? (
+            <a href={f.href} style="font-size:0.86rem; font-weight:600; color:#dc2626; text-decoration:none; line-height:1.6; word-break:break-word;">{f.valor}</a>
+          ) : (
+            <span style="font-size:0.86rem; font-weight:600; color:#09090b; line-height:1.6;">{f.valor}</span>
+          )}
+        </div>
+      ))}
+    </div>
+
+    <!-- Marcas y perfil de cliente -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+      <div style="background:#fff; border:1px solid #e4e4e7; border-left:3px solid #dc2626; border-radius:14px; padding:26px;">
+        <span style="display:block; font-size:0.62rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#dc2626; margin-bottom:14px;">Marcas que distribuimos</span>
+        <div style="display:flex; flex-wrap:wrap; gap:6px;">
+          {MARCAS_DISTRIBUIDAS.map(m => (
+            <span style="font-size:0.78rem; font-weight:600; color:#3f3f46; background:#f4f4f5; padding:6px 12px; border-radius:6px;">{m}</span>
+          ))}
+        </div>
+        <p style="font-size:0.8rem; color:#71717a; line-height:1.8; margin:16px 0 0;">
+          La carta de distribuidor autorizado del fabricante correspondiente se entrega con cada
+          propuesta que incluye producto de esa marca.
+        </p>
+      </div>
+
+      <div style="background:#fff; border:1px solid #e4e4e7; border-left:3px solid #09090b; border-radius:14px; padding:26px;">
+        <span style="display:block; font-size:0.62rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#09090b; margin-bottom:14px;">A quién le vendemos</span>
+        <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px;">
+          {EMPRESA.tipoDeCliente.map(t => (
+            <li style="display:flex; align-items:flex-start; gap:9px; font-size:0.82rem; color:#52525b; line-height:1.65;">
+              <svg width="13" height="13" fill="#dc2626" viewBox="0 0 20 20" style="flex-shrink:0; margin-top:3px;" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              {t}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>

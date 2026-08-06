@@ -1,0 +1,101 @@
+---
+/**
+ * Condiciones comerciales + documentación entregable.
+ * Publicadas de forma expresa para que un comprador no tenga que preguntarlas
+ * y para que la propuesta formal no contradiga al sitio.
+ *
+ * Fuente única: src/data/marca.ts (CONDICIONES, DOCUMENTACION, AVISO_PRECIOS).
+ */
+import { CONDICIONES, DOCUMENTACION, AVISO_PRECIOS, NORMAS } from '../../data/marca';
+
+interface Props {
+  fondo?: string;
+  /** Muestra también el marco normativo completo. */
+  conNormas?: boolean;
+}
+const { fondo = '#f8fafc', conNormas = false } = Astro.props;
+---
+
+<section style={`background:${fondo}; padding:72px 0; border-top:1px solid #e4e4e7;`}>
+  <div class="container-custom">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16" style="align-items:start; margin-bottom:40px;">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+          <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+          <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Condiciones comerciales</span>
+        </div>
+        <h2 style="font-size:clamp(1.7rem,2.6vw,2.4rem); font-weight:800; color:#09090b; line-height:1.12; margin:0; letter-spacing:-0.02em;">
+          Las reglas del trato,<br>publicadas de antemano
+        </h2>
+      </div>
+      <p style="font-size:0.95rem; color:#52525b; line-height:1.85; margin:0;">
+        Estas son las mismas condiciones que van a aparecer en tu cotización. No cambian según
+        quién pregunte ni se negocian a la mitad del proceso. Si alguna no se puede cumplir en
+        un caso concreto, se dice por escrito en la propuesta antes de que firmes.
+      </p>
+    </div>
+
+    <!-- Condiciones -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px" style="background:#e4e4e7; border:1px solid #e4e4e7; border-radius:14px; overflow:hidden; margin-bottom:22px;">
+      {CONDICIONES.map(c => (
+        <div style="background:#fff; padding:22px 20px; display:flex; flex-direction:column; gap:8px;">
+          <span style="font-size:0.62rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#dc2626;">{c.titulo}</span>
+          <p style="font-size:0.81rem; color:#52525b; line-height:1.75; margin:0;">{c.detalle}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Documentación -->
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-5" style="margin-bottom:18px;">
+      <div style="background:#09090b; border-radius:14px; padding:28px;">
+        <span style="display:block; font-size:0.62rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#dc2626; margin-bottom:12px;">Qué viene con el pedido</span>
+        <h3 style="font-size:1.2rem; font-weight:800; color:#fff; margin:0 0 12px; line-height:1.35;">La documentación va incluida, no es un extra</h3>
+        <p style="font-size:0.85rem; color:#a1a1aa; line-height:1.85; margin:0;">
+          Es exactamente lo que revisa una auditoría de protección civil, una verificación de la STPS
+          o el área jurídica de una convocatoria. Si falta una pieza, la propuesta lo dice antes,
+          no se descubre el día de la entrega.
+        </p>
+      </div>
+
+      <div style="background:#fff; border:1px solid #e4e4e7; border-radius:14px; padding:28px;">
+        <ul style="list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr; gap:11px;">
+          {DOCUMENTACION.map(d => (
+            <li style="display:flex; align-items:flex-start; gap:10px; font-size:0.84rem; color:#3f3f46; line-height:1.65;">
+              <svg width="14" height="14" fill="#dc2626" viewBox="0 0 20 20" style="flex-shrink:0; margin-top:3px;" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              {d}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <p style="font-size:0.78rem; color:#71717a; line-height:1.75; margin:0;">{AVISO_PRECIOS}</p>
+
+    {conNormas && (
+      <div style="margin-top:40px; padding-top:36px; border-top:1px solid #e4e4e7;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+          <span style="display:block; width:24px; height:2px; background:#dc2626; flex-shrink:0; border-radius:2px;"></span>
+          <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Marco normativo</span>
+        </div>
+        <p style="font-size:0.9rem; color:#52525b; line-height:1.85; margin:0 0 22px; max-width:760px;">
+          Cada partida se cotiza contra una norma concreta y esa norma aparece por escrito en la
+          ficha técnica y en la propuesta. Estas son las de referencia del catálogo.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px" style="background:#e4e4e7; border:1px solid #e4e4e7; border-radius:14px; overflow:hidden;">
+          {NORMAS.map(n => {
+            const Tag = n.href ? 'a' : 'div';
+            return (
+              <Tag href={n.href} style="background:#fff; padding:18px 20px; display:flex; flex-direction:column; gap:5px; text-decoration:none;">
+                <span style={`font-size:0.8rem; font-weight:800; letter-spacing:0.01em; color:${n.href ? '#dc2626' : '#09090b'};`}>{n.clave}</span>
+                <span style="font-size:0.76rem; font-weight:600; color:#3f3f46; line-height:1.5;">{n.nombre}</span>
+                <span style="font-size:0.73rem; color:#a1a1aa; line-height:1.55;">{n.aplica}</span>
+              </Tag>
+            );
+          })}
+        </div>
+      </div>
+    )}
+
+  </div>
+</section>

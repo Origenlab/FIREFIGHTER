@@ -2,7 +2,7 @@
 title: "Extintor de CO₂: el agente que puede matar al mismo técnico que lo usó"
 description: "El CO₂ en espacios confinados sin ventilación no solo apaga el fuego — puede matar al operador. Guía técnica completa: mecanismo, efecto antorcha, distancias mínimas, tabla comparativa y mantenimiento del único extintor que se pesa, no se mide."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["extintores", "CO2", "dióxido de carbono", "sala de servidores", "protección contra incendios"]
 draft: false
 ---

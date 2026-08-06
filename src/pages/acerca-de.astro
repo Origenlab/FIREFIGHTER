@@ -2,11 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/layout/PageHero.astro';
 import Servicios from '../components/blog/Servicios.astro';
+import FichaEmpresa from '../components/empresa/FichaEmpresa.astro';
+import CondicionesComerciales from '../components/empresa/CondicionesComerciales.astro';
 import categorias from '../data/productos.json';
 import { getCollection } from 'astro:content';
 import { waLink } from '../lib/blog';
 
-const SITE = 'https://firefighter.com.mx';
+import { MARCA, SITE, DESCRIPTOR, GIRO, EMPRESA, MARCAS_DISTRIBUIDAS, NORMAS, CONTACTO } from '../data/marca';
+
 const estacionesPublicadas = (await getCollection('stations')).length;
 
 const principios = [
@@ -38,15 +41,34 @@ const pasos = [
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  name: 'Acerca de FIREFIGHTER México',
+  name: `Acerca de ${MARCA}`,
   url: `${SITE}/acerca-de`,
   inLanguage: 'es-MX',
+  // Se referencia el nodo Organization emitido en el footer en lugar de
+  // declarar una segunda organización con los mismos datos.
   mainEntity: {
     '@type': 'Organization',
-    name: 'FIREFIGHTER México',
+    '@id': `${SITE}/#organization`,
+    name: MARCA,
     url: SITE,
-    areaServed: { '@type': 'Country', name: 'México' },
-    description: 'Distribuidor de equipo para bomberos y equipos contra incendios en México, con asesoría técnica, documentación para licitaciones, mantenimiento y capacitación.',
+    description: DESCRIPTOR,
+    naics: undefined,
+    areaServed: { '@type': 'Country', name: 'México', identifier: 'MX' },
+    knowsAbout: NORMAS.map((n) => n.clave),
+    brand: MARCAS_DISTRIBUIDAS.map((m) => ({ '@type': 'Brand', name: m })),
+    makesOffer: {
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name: GIRO, areaServed: EMPRESA.coberturaCorta },
+      availableAtOrFrom: { '@type': 'Country', name: 'México' },
+      priceCurrency: EMPRESA.monedaOperacion,
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'sales',
+      email: CONTACTO.emailVentas,
+      areaServed: 'MX',
+      availableLanguage: 'Spanish',
+    },
   },
 };
 ---
@@ -65,7 +87,7 @@ const schema = {
     eyebrow="Quiénes somos"
     badge="Distribución autorizada"
     h1="Equipamos a quien entra<br>cuando todos los demás salen"
-    lead="FIREFIGHTER México es una empresa de equipamiento contra incendios: vendemos, entregamos, capacitamos y damos mantenimiento a equipo para cuerpos de bomberos, brigadas industriales y proyectos de protección contra incendio en los 32 estados."
+    lead="FIREFIGHTER.COM.MX es una empresa de equipamiento contra incendios: vendemos, entregamos, capacitamos y damos mantenimiento a equipo para cuerpos de bomberos, brigadas industriales y proyectos de protección contra incendio en los 32 estados."
     bloques={[
       {
         label: 'Lo que hacemos',
@@ -78,7 +100,7 @@ const schema = {
     ]}
   >
     <div slot="ctas" style="display:flex; flex-wrap:wrap; gap:10px;">
-      <a href={waLink('quiero saber más sobre FIREFIGHTER')} target="_blank" rel="noopener" class="l2-cta">
+      <a href={waLink('quiero saber más sobre FIREFIGHTER.COM.MX')} target="_blank" rel="noopener" class="l2-cta">
         <span>Hablar con nosotros</span>
       </a>
       <a href="/productos" class="l2-cta-ghost">
@@ -170,8 +192,14 @@ const schema = {
     </div>
   </section>
 
+  <!-- ══ FICHA DE EMPRESA ══ -->
+  <FichaEmpresa fondo="#f8fafc" />
+
   <!-- ══ SERVICIOS ══ -->
-  <Servicios fondo="#f8fafc" titulo="En qué te podemos<br>ayudar exactamente" />
+  <Servicios fondo="#fff" titulo="En qué te podemos<br>ayudar exactamente" />
+
+  <!-- ══ CONDICIONES COMERCIALES + MARCO NORMATIVO ══ -->
+  <CondicionesComerciales fondo="#f8fafc" conNormas={true} />
 
   <!-- ══ DIRECTORIO ══ -->
   <section style="background:#fff; border-top:1px solid #e4e4e7; padding:72px 0;">

@@ -2,7 +2,7 @@
 title: "Brigadas de bomberos voluntarios en México: equipamiento real con presupuesto real"
 description: "1,200 cuerpos voluntarios en México operan con equipo retirado. EPP mínimo seguro, fuentes de financiamiento y cómo la industria local puede ayudar."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["bomberos voluntarios", "brigadas México", "EPP mínimo", "financiamiento bomberos"]
 draft: false
 ---
@@ -29,7 +29,7 @@ Hay una distinción importante que frecuentemente se confunde:
 
 **EPP mínimo seguro** es el umbral debajo del cual operar en incendio estructural genera riesgo inaceptable para el brigadista. No es lo ideal. Es lo que se puede aceptar temporalmente mientras se consigue el equipo correcto.
 
-¿Cuál es ese umbral mínimo? En FIREFIGHTER, con la información de campo que tenemos, lo definimos así:
+¿Cuál es ese umbral mínimo? En FIREFIGHTER.COM.MX, con la información de campo que tenemos, lo definimos así:
 
 - Traje de dos capas con capa exterior FR y barrera de humedad funcional, aunque no sea NFPA 1970 edición reciente. Un traje certificado bajo edición 2013 en buenas condiciones es mejor que un traje "diseñado para cumplir" la edición 2018.
 - Casco estructural NFPA 1970, sin excepción. El casco industrial no es sustituto.

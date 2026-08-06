@@ -2,7 +2,7 @@
 title: "Cómo equipar una brigada industrial en México: de NOM-002 a protección real"
 description: "Equipar brigadas industriales México: NOM-002-STPS, niveles de riesgo, EPP mínimo por nivel, SCBA como equipo omitido y responsabilidad legal ante accidentes."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["brigada industrial", "NOM-002-STPS", "EPP industrial", "equipamiento brigadas México"]
 draft: false
 ---
@@ -52,7 +52,7 @@ La columna de riesgo alto no es opcional en instalaciones petroquímicas, planta
 
 ## El SCBA: el equipo que las empresas más omiten
 
-En el diagnóstico de equipamiento de brigadas industriales que hacemos en FIREFIGHTER, el SCBA es el componente más frecuentemente ausente, más frecuentemente remplazado por equipo inadecuado, y más frecuentemente justificado como "muy caro para el riesgo que tenemos."
+En el diagnóstico de equipamiento de brigadas industriales que hacemos en FIREFIGHTER.COM.MX, el SCBA es el componente más frecuentemente ausente, más frecuentemente remplazado por equipo inadecuado, y más frecuentemente justificado como "muy caro para el riesgo que tenemos."
 
 El razonamiento es comprensible. Un SCBA de presión positiva certificado NFPA 1970 cuesta entre $55,000 y $95,000 MXN. Para una brigada de 6 personas, estamos hablando de $330,000–$570,000 MXN solo en este componente. No es una inversión menor.
 

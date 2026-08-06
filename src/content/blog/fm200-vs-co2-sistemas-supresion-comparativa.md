@@ -2,7 +2,7 @@
 title: "FM-200 vs CO₂ vs NOVEC 1230: comparativa técnica definitiva para elegir el sistema de supresión correcto"
 description: "Análisis técnico profundo de los sistemas de supresión por agentes limpios: FM-200, CO₂, NOVEC 1230 e Inergen. Concentraciones de diseño, seguridad para personas, impacto ambiental, aplicaciones por tipo de espacio y cumplimiento NFPA 2001 en México."
 pubDate: 2026-02-19
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["FM-200", "NOVEC 1230", "CO2 sistemas supresión", "agentes limpios", "protección centros de datos México"]
 draft: false
 ---
@@ -191,7 +191,7 @@ El diseño e instalación de sistemas de supresión por agentes limpios en Méxi
 
 ---
 
-## FIREFIGHTER México: diseño e instalación de sistemas de supresión
+## FIREFIGHTER.COM.MX: diseño e instalación de sistemas de supresión
 
 Nuestro proceso incluye:
 

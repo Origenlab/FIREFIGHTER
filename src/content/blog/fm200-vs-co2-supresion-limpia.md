@@ -2,7 +2,7 @@
 title: "FM-200 vs CO₂: una diferencia técnica que es una decisión sobre riesgo de vida humana"
 description: "El CO₂ al 34% mata. El FM-200 al 7% hace el mismo trabajo y permite evacuar. Esa diferencia no es un detalle técnico — es una decisión de ingeniería sobre si aceptas riesgo de muerte en tu diseño. Comparativa honesta con costos, GWP y el futuro regulatorio de los HFCs."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["FM-200", "CO2", "supresión limpia", "NFPA 2001", "agentes limpios", "datacentros"]
 draft: false
 ---

@@ -2,7 +2,7 @@
 title: "Herramienta McLeod: técnica y uso para líneas de defensa forestales"
 description: "Guía técnica de la herramienta McLeod para incendios forestales: diseño dual, técnica correcta, profundidad de raspado, mantenimiento y comparativa vs Rhino y Hazel Hoe."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["mcleod", "herramientas-forestales", "lineas-de-defensa", "equipo-forestal"]
 draft: false
 ---

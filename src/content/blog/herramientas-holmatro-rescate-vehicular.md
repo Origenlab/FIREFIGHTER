@@ -2,7 +2,7 @@
 title: "Herramientas Holmatro para rescate vehicular: análisis técnico completo de tijeras, expansores y sistemas Nexus"
 description: "Guía técnica de alto nivel sobre equipos Holmatro de rescate vehicular: tijeras SC, expansores SP, herramientas Nexus One con batería, técnicas de excarcelación en vehículos UHSS y vehículos eléctricos. Para bomberos y brigadas de rescate en México."
 pubDate: 2026-02-12
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["Holmatro", "rescate vehicular", "excarcelación", "UHSS", "herramientas hidráulicas bomberos"]
 draft: false
 ---
@@ -13,7 +13,7 @@ El equipo de rescate despliega sus herramientas. Aquí es donde el equipamiento 
 
 Los vehículos de 2015 en adelante presentan aceros de ultra-alta resistencia (UHSS) en sus columnas y pilares que pueden superar los **1,500 MPa** de resistencia a la tracción —cinco veces más que el acero de carrocería convencional. Una tijera de rescate de generación anterior puede literalmente no poder cortar esos materiales. O puede tardar el doble, triplicando el tiempo de extracción.
 
-**Holmatro** es el fabricante de herramientas de rescate hidráulico que ha definido la respuesta técnica a este desafío. En **FIREFIGHTER México** somos distribuidores autorizados de Holmatro y esta guía desglosa todo lo que necesitas saber para seleccionar y operar sus sistemas correctamente.
+**Holmatro** es el fabricante de herramientas de rescate hidráulico que ha definido la respuesta técnica a este desafío. En **FIREFIGHTER.COM.MX** somos distribuidores autorizados de Holmatro y esta guía desglosa todo lo que necesitas saber para seleccionar y operar sus sistemas correctamente.
 
 ---
 
@@ -176,7 +176,7 @@ Las herramientas de corte y expansión son el núcleo del sistema, pero una unid
 
 Las mejores herramientas del mundo en manos de personal sin entrenamiento técnico actualizado no producen los mejores resultados. Holmatro trabaja con la VFDB y el ERS (European Rescue Specialists) para desarrollar los programas de capacitación basados en análisis de accidentes reales y crash tests de vehículos modernos.
 
-**Niveles de capacitación disponibles en México a través de FIREFIGHTER México:**
+**Niveles de capacitación disponibles en México a través de FIREFIGHTER.COM.MX:**
 
 **Nivel básico (16 horas)**: operación segura de herramientas hidráulicas, protocolo de estabilización, técnicas de excarcelación en vehículos convencionales, gestión de escena.
 
@@ -199,7 +199,7 @@ Las mejores herramientas del mundo en manos de personal sin entrenamiento técni
 
 ---
 
-## FIREFIGHTER México: distribuidores autorizados Holmatro
+## FIREFIGHTER.COM.MX: distribuidores autorizados Holmatro
 
 Como distribuidores autorizados de Holmatro en México, ofrecemos acceso al catálogo completo Nexus, el sistema de demostración en sitio para evaluación antes de compra, capacitación de operadores y el programa de mantenimiento preventivo certificado.
 

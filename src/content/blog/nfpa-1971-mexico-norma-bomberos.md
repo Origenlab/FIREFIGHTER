@@ -3,7 +3,7 @@ title: "NFPA 1970 en México: qué certifica, cómo leer un certificado y qué e
 seoTitle: "NFPA 1970 para traje estructural"
 description: "NFPA 1970 México: diferencia certificado vs diseñado para, cómo leer un certificado, ediciones 2013 vs 2018 y qué exigir en licitaciones CompraNet."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["NFPA 1970", "certificación EPP bomberos", "licitaciones México", "norma bomberos"]
 draft: false
 ---
@@ -43,7 +43,7 @@ Otras variantes de la misma evasión:
 
 Ninguna de esas frases equivale a: "Este ensemble fue sometido a pruebas por [laboratorio acreditado], obtuvo el Certificado de Conformidad número [X], bajo NFPA 1970 edición [año]."
 
-En FIREFIGHTER hemos evaluado proveedores que muestran ficha técnica con el logo de NFPA y frases de cumplimiento, cuyo equipo nunca estuvo en ningún laboratorio de certificación. El logo de NFPA no es propiedad exclusiva de nadie — cualquiera puede ponerlo en un documento. Lo que no puede falsificarse (al menos no sin riesgo legal significativo) es un número de certificado expedido por un laboratorio acreditado.
+En FIREFIGHTER.COM.MX hemos evaluado proveedores que muestran ficha técnica con el logo de NFPA y frases de cumplimiento, cuyo equipo nunca estuvo en ningún laboratorio de certificación. El logo de NFPA no es propiedad exclusiva de nadie — cualquiera puede ponerlo en un documento. Lo que no puede falsificarse (al menos no sin riesgo legal significativo) es un número de certificado expedido por un laboratorio acreditado.
 
 ## Cómo leer un certificado de conformidad NFPA 1970
 

@@ -2,7 +2,7 @@
 title: "Gabinetes Contra Incendio Tipo I vs Tipo II: Diferencias Críticas y Errores de Especificación"
 description: "Guía técnica sobre gabinetes CI Tipo I, II y III: diferencias constructivas, normativa NOM-002-STPS, cuándo usar cada tipo y errores graves de especificación."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["gabinetes-mangueras", "nom-002-stps", "proteccion-incendio", "normativa-mexicana"]
 draft: false
 ---

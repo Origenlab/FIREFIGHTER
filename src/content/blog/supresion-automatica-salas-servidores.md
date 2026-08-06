@@ -2,7 +2,7 @@
 title: "Supresión automática en datacentros: un incendio con fecha desconocida y consecuencias calculables"
 description: "Un datacentro sin sistema de supresión limpia no es un riesgo de incendio — es una certeza con fecha desconocida. Por qué los sprinklers son incorrectos, cómo funciona VESDA, la secuencia de supresión correcta y la comparativa honesta de agentes limpios para TI."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["datacentro", "supresión automática", "FM-200", "Novec 1230", "VESDA", "sala de servidores"]
 draft: false
 ---

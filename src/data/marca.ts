@@ -5,7 +5,7 @@
  *
  * REGLA: el sitio se llama FIREFIGHTER.COM.MX. Escrito así, en mayúsculas y con
  * el dominio completo, en logo, footer, títulos, meta, JSON-LD y copy. No se usan
- * las variantes "FIREFIGHTER México", "Firefighter México" ni "FirefighterMX":
+ * las variantes «FIREFIGHTER Mexico», «Firefighter Mexico» ni «FirefighterMX»:
  * el dominio ES la marca y es lo que diferencia al sitio de cualquier otro.
  *
  * Todo dato corporativo, comercial o normativo que se repita en más de una

@@ -2,7 +2,7 @@
 title: "SCBA en brigadas industriales: por qué un respirador de 3M no es suficiente"
 description: "SCBA vs respiradores en brigadas industriales: APF, atmósferas IDLH, H2S en petroquímica, CO en siderurgia y cómo especificarlos en NOM-002."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["SCBA industrial", "NOM-002-STPS", "APF respiradores", "brigadas industriales México"]
 draft: false
 ---

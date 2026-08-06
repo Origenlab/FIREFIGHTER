@@ -2,7 +2,7 @@
 title: "Acoples Storz y Conexiones Rápidas: Estandarización en México"
 description: "Todo sobre acoples Storz para sistemas CI: historia, diferencias con NST/NH, tamaños 1.5\" a 5\", estandarización en México y tabla de compatibilidad."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["gabinetes-mangueras", "acoples-storz", "conexiones-incendio", "bomberos-mexico"]
 draft: false
 ---

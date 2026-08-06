@@ -2,7 +2,7 @@
 title: "Detección de Incendio en Hospitales: Por Qué la Evacuación Total es la Respuesta Incorrecta"
 description: "Guía técnica de sistemas de alarma hospitalarios: lógica defend in place, sistema de dos etapas, NFPA 101 para salud, zonas de alarma visual sin sonido, integración con puertas cortafuego y comunicación selectiva por zona."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["hospitales", "defend-in-place", "nfpa-101", "deteccion-incendio"]
 draft: false
 ---

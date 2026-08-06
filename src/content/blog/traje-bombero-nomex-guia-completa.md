@@ -2,14 +2,14 @@
 title: "Traje de bombero Nomex: guía técnica completa para brigadas en México"
 description: "Todo sobre trajes de bombero NFPA 1970 en México: TPP, THL, Nomex vs PBI, barrera de vapor, clima caliente y mantenimiento NFPA 1850. Guía real, no de catálogo."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["trajes bomberos", "Nomex", "NFPA 1970", "EPP bomberos México"]
 draft: false
 ---
 
 Estimamos que entre el 18 y el 22% de los trajes estructurales actualmente en servicio en cuerpos de bomberos mexicanos tienen la barrera de vapor comprometida sin que sus usuarios lo sepan. No hemos auditado todos los departamentos del país — nadie lo ha hecho. Pero hemos visitado suficientes estaciones, en suficientes estados, para ver el patrón con claridad: trajes lavados con lejía, secados en secadora industrial, guardados húmedos, con costuras reparadas en talabartería local. Trajes que a la vista parecen funcionales y en operación fallan en el momento que más importa.
 
-Este artículo no es el resumen de una ficha técnica. Es lo que en FIREFIGHTER hemos aprendido evaluando equipos desde Hermosillo hasta Mérida, desde instalaciones petroquímicas del Golfo hasta cuerpos municipales del altiplano.
+Este artículo no es el resumen de una ficha técnica. Es lo que en FIREFIGHTER.COM.MX hemos aprendido evaluando equipos desde Hermosillo hasta Mérida, desde instalaciones petroquímicas del Golfo hasta cuerpos municipales del altiplano.
 
 ## Por qué el 22% de los trajes en servicio ya fallaron (aunque no lo parezca)
 
@@ -51,7 +51,7 @@ Ambos materiales cumplen NFPA 1970. Ambos protegen. La pregunta correcta no es "
 
 **PBI Gold** es polibencimidazol mezclado con Kevlar. La característica que lo distingue en operación no está en el primer uso — está en el décimo, en el vigesimoquinto, después de múltiples lavados y exposiciones. El PBI mantiene su integridad estructural a temperaturas donde el Nomex ya cedió. Sigue siendo íntegro como barrera a 1,000°C cuando el Nomex está en proceso de carbonización. Para un cuerpo de bomberos con alta frecuencia operativa — intervenciones semanales, training intensivo, climas extremos — la diferencia de costo inicial ($3,000–$8,000 MXN por traje) se amortiza en vida útil y en seguridad.
 
-La regla práctica que usamos en FIREFIGHTER: brigada industrial con menos de 2 intervenciones anuales y mantenimiento riguroso → Nomex IIIA. Cuerpo de bomberos municipal o industrial con actividad frecuente y climas extremos → PBI Gold es la inversión correcta.
+La regla práctica que usamos en FIREFIGHTER.COM.MX: brigada industrial con menos de 2 intervenciones anuales y mantenimiento riguroso → Nomex IIIA. Cuerpo de bomberos municipal o industrial con actividad frecuente y climas extremos → PBI Gold es la inversión correcta.
 
 ## Tabla comparativa de materiales para capa exterior
 

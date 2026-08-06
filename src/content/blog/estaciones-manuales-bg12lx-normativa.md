@@ -2,7 +2,7 @@
 title: "Estación Manual BG12LX: El Vínculo entre el Ojo Humano y el Sistema de Alarma"
 description: "Guía técnica de la estación manual BG12LX: doble acción, altura de instalación, distancia de viaje 60m, dirección SLC individual, rearme con llave y mantenimiento trimestral funcional según NFPA 72."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["estacion-manual", "bg12lx", "nfpa-72", "alarma-incendio"]
 draft: false
 ---

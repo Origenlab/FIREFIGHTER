@@ -82,7 +82,7 @@ const blog = defineCollection({
     seoDescription: z.string().max(158).optional(),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
-    author: z.string().default('Firefighter México'),
+    author: z.string().default('Área técnica de FIREFIGHTER.COM.MX'),
     image: z.string().optional(),
     imageAlt: z.string().optional(),
     tags: z.array(z.string()).default([]),

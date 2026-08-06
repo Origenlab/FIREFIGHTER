@@ -2,7 +2,7 @@
 title: "Guía definitiva de trajes estructurales NFPA 1970: todo lo que debes saber antes de equipar a tu brigada"
 description: "Guía técnica de alto nivel sobre trajes estructurales certificados NFPA 1970: arquitectura de capas, TPP, THL, materiales Nomex y PBI, selección por operación, ciclo de vida y mantenimiento. Para bomberos y brigadas industriales en México."
 pubDate: 2026-01-15
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["trajes estructurales", "NFPA 1970", "EPP bomberos", "Nomex", "PBI Gold", "equipos bomberos México"]
 draft: false
 ---
@@ -11,7 +11,7 @@ En una intervención de combate de incendio estructural, un bombero dispone —e
 
 Sin embargo, la NFPA estima que el 22% de los trajes estructurales en servicio activo en América del Norte operan con algún nivel de degradación no detectada —pérdida de integridad en el moisture barrier, desgaste en zonas de alta fricción, o reflectivos por debajo del umbral de rendimiento. En México, sin un programa sistemático de inspección y sin exigencias de certificación de laboratorio en la mayoría de las licitaciones públicas, ese porcentaje es presumiblemente mayor.
 
-Esta guía existe para que las decisiones sobre equipamiento se tomen con criterio técnico real. En **FIREFIGHTER México**, como distribuidores autorizados de MSA Safety y proveedores certificados para brigadas en los 32 estados, llevamos más de una década aplicando estos criterios con cuerpos de bomberos municipales, brigadas industriales y dependencias de protección civil.
+Esta guía existe para que las decisiones sobre equipamiento se tomen con criterio técnico real. En **FIREFIGHTER.COM.MX**, como distribuidores autorizados de MSA Safety y proveedores certificados para brigadas en los 32 estados, llevamos más de una década aplicando estos criterios con cuerpos de bomberos municipales, brigadas industriales y dependencias de protección civil.
 
 ---
 
@@ -137,7 +137,7 @@ Los detalles de construcción son tan importantes como los materiales:
 
 ### MSA Safety — Línea Orca: el estándar de distribución autorizada
 
-Como **distribuidores autorizados de MSA Safety en México**, en FIREFIGHTER México tenemos acceso directo al inventario, a las fichas técnicas de laboratorio y al soporte técnico del fabricante para la línea Orca. La configuración estándar —cubierta Nomex IIIA + moisture barrier CROSSTECH® + liner Caldura® 7.5— ofrece el mejor equilibrio entre protección certificada y precio competitivo para brigadas industriales y cuerpos de bomberos municipales.
+Como **distribuidores autorizados de MSA Safety en México**, en FIREFIGHTER.COM.MX tenemos acceso directo al inventario, a las fichas técnicas de laboratorio y al soporte técnico del fabricante para la línea Orca. La configuración estándar —cubierta Nomex IIIA + moisture barrier CROSSTECH® + liner Caldura® 7.5— ofrece el mejor equilibrio entre protección certificada y precio competitivo para brigadas industriales y cuerpos de bomberos municipales.
 
 **Disponibilidad en México**: tallas XS a 3XL, corte europeo y americano, opciones de personalización (logos bordados, codificación de color por función, ajuste de corte para usuario específico).
 
@@ -219,7 +219,7 @@ Un traje debe salir del servicio activo inmediatamente ante cualquiera de estas 
 
 ---
 
-## FIREFIGHTER México: distribuidores autorizados, soporte técnico real
+## FIREFIGHTER.COM.MX: distribuidores autorizados, soporte técnico real
 
 No vendemos "trajes para bomberos". Desarrollamos sistemas de protección personal que cumplen las normas, sobreviven la operación y pueden demostrarse técnicamente ante cualquier auditoría.
 

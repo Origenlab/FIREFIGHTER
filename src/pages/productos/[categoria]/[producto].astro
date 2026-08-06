@@ -11,6 +11,7 @@
  * clases .l3-* / .l2-* en modules.css.
  */
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CondicionesStrip from '../../../components/empresa/CondicionesStrip.astro';
 import categorias from '../../../data/productos.json';
 import { getPosts } from '../../../lib/blogData';
 import { crearInterlinker, REGLAS_SITIO } from '../../../lib/interlink';
@@ -136,7 +137,7 @@ const productSchema = {
   category: cat.nombre,
   url,
   image: [`${SITE}${heroImg.src}`, ...galeria.slice(0, 3).map((g: any) => `${SITE}${g.src}`)],
-  brand: { '@type': 'Brand', name: cat.marcas?.[0] ?? 'FIREFIGHTER México' },
+  brand: { '@type': 'Brand', name: cat.marcas?.[0] ?? 'FIREFIGHTER.COM.MX' },
   ...(specStrip.length
     ? {
         additionalProperty: specStrip.slice(0, 6).map((s: any) => ({
@@ -151,14 +152,14 @@ const productSchema = {
     availability: 'https://schema.org/InStock',
     priceCurrency: 'MXN',
     url,
-    seller: { '@type': 'Organization', name: 'FIREFIGHTER México', url: SITE },
+    seller: { '@type': 'Organization', name: 'FIREFIGHTER.COM.MX', url: SITE },
   },
 };
 
 // Catálogo por marca: cada card es un Product dentro de un ItemList.
 // La marca vive en la card, no en el catálogo: así entran varias marcas en el mismo grid.
 const marcasCatalogo: string[] = catalogo
-  ? [...new Set(catalogo.cards.map((c: any) => c.marca as string))]
+  ? [...new Set<string>(catalogo.cards.map((c: any) => String(c.marca)))]
   : [];
 
 const catalogoSchema = catalogo
@@ -195,7 +196,7 @@ const catalogoSchema = catalogo
             availability: 'https://schema.org/InStock',
             priceCurrency: 'MXN',
             url: c.slug && c.l4 ? `${url}/${c.slug}` : `${url}#catalogo`,
-            seller: { '@type': 'Organization', name: 'FIREFIGHTER México', url: SITE },
+            seller: { '@type': 'Organization', name: 'FIREFIGHTER.COM.MX', url: SITE },
           },
         },
       })),
@@ -790,7 +791,7 @@ const faqSchema = faqs.length
             const msg = val('l3-msg');
 
             const lineas = [
-              'Hola FIREFIGHTER, solicito cotizacion de ' + PRODUCTO + '.',
+              'Hola FIREFIGHTER.COM.MX, solicito cotizacion de ' + PRODUCTO + '.',
               'Linea: ' + CATEGORIA,
               '',
               'Nombre: ' + val('l3-nombre'),
@@ -846,6 +847,9 @@ const faqSchema = faqs.length
       </div>
     </section>
   )}
+
+  <!-- ══════════ 4b · CONDICIONES COMERCIALES ══════════ -->
+  <CondicionesStrip oscuro={true} />
 
   <!-- ══════════ 5 · OTRAS LÍNEAS DEL CATÁLOGO ══════════ -->
   <section style="background:#0c0c0f; padding:64px 0; border-top:1px solid #1f1f23;">

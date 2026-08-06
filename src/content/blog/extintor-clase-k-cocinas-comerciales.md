@@ -2,7 +2,7 @@
 title: "Extintor Clase K: por qué una cocina de hotel con PQS es una trampa mortal"
 description: "Una freidora comercial a 190°C con extintor PQS en la pared es un riesgo que muy pocos gerentes de operaciones entienden hasta que ocurre el accidente. Guía completa sobre acetato de potasio, saponificación, NFPA 96 y tabla de capacidades por equipo."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["extintores", "Clase K", "cocinas comerciales", "NFPA 96", "acetato de potasio"]
 draft: false
 ---

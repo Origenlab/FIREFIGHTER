@@ -2,7 +2,7 @@
 title: "NFPA 25: el sistema que nunca probaste bajo carga puede fallar el día que importa"
 description: "NFPA 25 no existe para generar burocracia — existe porque en los incendios donde el sistema no funcionó, la causa más frecuente fue mantenimiento omitido que nadie registró. Tabla de frecuencias por componente, qué significa impairment y las consecuencias reales de un sistema no mantenido."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["NFPA 25", "mantenimiento sistemas contra incendio", "inspección sprinklers", "mantenimiento bombas", "protección contra incendios"]
 draft: false
 ---

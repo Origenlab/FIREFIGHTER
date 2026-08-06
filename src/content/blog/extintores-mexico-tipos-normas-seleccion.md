@@ -2,7 +2,7 @@
 title: "Extintores en México 2026: guía técnica definitiva de tipos, clases de fuego, normas y selección correcta"
 description: "Todo sobre extintores portátiles en México: clases de fuego A-B-C-D-K, agentes PQS, CO₂, espuma AFFF y Clase K, normas NOM y NFPA aplicables, criterios de distribución por riesgo, mantenimiento obligatorio y cómo evitar los errores más comunes."
 pubDate: 2026-02-05
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["extintores", "extintor PQS", "extintor CO2", "clases de fuego", "NOM-002-STPS", "extintores México 2026"]
 draft: false
 ---
@@ -216,11 +216,11 @@ La prueba hidrostática la realiza solo una empresa certificada. El cilindro se 
 
 ---
 
-## FIREFIGHTER México: extintores certificados, no solo baratos
+## FIREFIGHTER.COM.MX: extintores certificados, no solo baratos
 
 En el mercado mexicano proliferan extintores con etiquetas que simulan clasificaciones UL sin respaldo real, recargados con agentes de calidad inferior o de procedencia no rastreable. La diferencia se descubre exactamente cuando más importa: en el momento de usar el extintor.
 
-En FIREFIGHTER México suministramos exclusivamente extintores con:
+En FIREFIGHTER.COM.MX suministramos exclusivamente extintores con:
 
 - Certificación NOM-154-SCFI-2005 vigente y verificable
 - Clasificación UL de laboratorio acreditado, por modelo y lote específico

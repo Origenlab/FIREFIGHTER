@@ -2,7 +2,7 @@
 title: "Detectores Ópticos de Humo SD355: Por Qué el Tipo Incorrecto Puede Costarte 6 Minutos de Respuesta"
 description: "Guía técnica del detector fotoeléctrico SD355: diferencia real con detectores de ionización, compensación de deriva automática, incendios smoldering, distancias NFPA 72 y mantenimiento semestral correcto."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["detectores-humo", "sd355", "nfpa-72", "deteccion-incendio"]
 draft: false
 ---

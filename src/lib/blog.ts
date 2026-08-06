@@ -1,10 +1,12 @@
 /**
- * Taxonomia y utilidades del blog FIREFIGHTER.
+ * Taxonomia y utilidades del blog FIREFIGHTER.COM.MX.
  *
  * Los "temas" son espejo de las categorias del catalogo: cada articulo cae en
  * exactamente un tema y cada tema apunta a su categoria de producto. Eso crea
  * el circuito de trafico interno blog -> catalogo -> cotizacion.
  */
+
+import { CONTACTO } from '../data/marca';
 
 export interface Tema {
   slug: string;
@@ -157,7 +159,7 @@ export function formatFechaCorta(fecha: Date | string): string {
   return new Date(fecha).toLocaleDateString('es-MX', { year: 'numeric', month: 'short', day: 'numeric' });
 }
 
-export const WA_BASE = 'https://wa.me/525500000000';
+export const WA_BASE = CONTACTO.whatsappBase;
 
 export function waLink(texto: string): string {
   return `${WA_BASE}?text=${encodeURIComponent(`Hola, ${texto}`)}`;

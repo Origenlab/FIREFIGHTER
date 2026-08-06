@@ -2,7 +2,7 @@
 title: "Cuántos extintores necesita tu empresa: la pregunta que nadie formula correctamente"
 description: "La pregunta correcta no es cuántos extintores tienes — es cuántos del tipo correcto tienes en los lugares correctos para el riesgo real. Método NFPA 10 explicado sin matemáticas, distancias de viaje, ejemplo con planta de 2,000 m² y checklist NOM-002-STPS."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["cuántos extintores", "NFPA 10", "NOM-002-STPS", "cálculo extintores", "distribución extintores"]
 draft: false
 ---
@@ -114,6 +114,6 @@ Para verificar que los extintores que ya tienes cumplen con certificación real 
 
 El programa de mantenimiento que garantiza que todos los extintores en la distribución correcta están en condición de uso está en el artículo sobre [plan de mantenimiento anual](/blog/plan-mantenimiento-anual-extintores).
 
-Para asesoría técnica en el cálculo de distribución correcta para tu instalación específica, contacta a FIREFIGHTER México en [productos/extintores](/productos/extintores-y-extincion).
+Para asesoría técnica en el cálculo de distribución correcta para tu instalación específica, contacta a FIREFIGHTER.COM.MX en [productos/extintores](/productos/extintores-y-extincion).
 
 La auditoría STPS verifica que tienes extintores. Un incendio verifica si están en el lugar correcto, son del tipo correcto y están en condición de funcionar. Solo una de esas dos verificaciones tiene consecuencias reales.

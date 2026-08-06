@@ -2,7 +2,7 @@
 title: "Iluminación LED en Escenas de Emergencia: La Seguridad del Rescatista Empieza Antes del Rescate"
 description: "Guía técnica de iluminación para escenas de rescate nocturno: lúmenes necesarios, posicionamiento correcto, 56,000 lúmenes Holmatro, fuentes de energía y tiempo de despliegue como criterio de selección real."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["iluminacion-led", "seguridad-escena", "rescate-vehicular", "equipamiento"]
 draft: false
 ---

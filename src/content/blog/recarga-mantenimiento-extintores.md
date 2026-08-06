@@ -2,7 +2,7 @@
 title: "Recarga de extintores: la diferencia entre $80 pesos y uno que funciona"
 description: "La recarga de $80 pesos en tianguis va a dar exactamente ese valor cuando lo necesites. Guía completa de lo que debe incluir una recarga correcta, cómo identificar talleres certificados vs clandestinos, y la prueba hidrostática que nadie quiere pagar."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["recarga extintores", "mantenimiento extintores", "prueba hidrostática", "NOM-154-SCFI", "talleres certificados"]
 draft: false
 ---
@@ -104,6 +104,6 @@ El extintor Clase K es el único que requiere mantenimiento semestral en lugar d
 
 El programa completo de mantenimiento para instalaciones con 10 o más extintores — incluyendo la documentación que protege al responsable en caso de auditoría o siniestro — está en el artículo sobre [plan de mantenimiento anual de extintores](/blog/plan-mantenimiento-anual-extintores). La selección correcta de tipos de extintores según el riesgo de cada área está en [tipos de extintores y sus aplicaciones en México](/blog/tipos-extintores-aplicaciones-mexico).
 
-Para recargas con técnicos certificados y materiales de calidad documentada, contacta a FIREFIGHTER México a través de [productos/extintores](/productos/extintores-y-extincion).
+Para recargas con técnicos certificados y materiales de calidad documentada, contacta a FIREFIGHTER.COM.MX a través de [productos/extintores](/productos/extintores-y-extincion).
 
 El extintor que vas a necesitar en el momento más crítico de tu vida laboral es ese que está en la pared ahora mismo. Vale la pena saber con certeza si está listo o si es solo una apariencia de protección.

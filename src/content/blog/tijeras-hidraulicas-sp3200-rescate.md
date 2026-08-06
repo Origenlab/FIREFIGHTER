@@ -2,7 +2,7 @@
 title: "Tijeras Hidráulicas SP 3200: 45 Segundos vs 4 Minutos en Acero UHSS"
 description: "Guía técnica de las tijeras Holmatro SP 3200: fuerza de corte 1,100 kN, rotación 360°, tipos de corte y cuchillas intercambiables. Por qué las tijeras de generación anterior fallan en vehículos modernos."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["tijeras-hidraulicas", "holmatro", "rescate-vehicular", "acero-uhss"]
 draft: false
 ---

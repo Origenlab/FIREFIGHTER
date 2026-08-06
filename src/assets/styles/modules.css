@@ -689,12 +689,21 @@
 .l3-il:hover { color: #dc2626; text-decoration-color: #dc2626; }
 .l3-nota .l3-il { color: #991b1b; }
 
-/* Nota / callout */
+/* Nota / callout.
+   Dos formas de uso conviven en el sitio: como contenedor <div> con un <svg> y
+   un <p> dentro (flex), y como <p class="l3-nota"> de una sola línea. La
+   variante <p> NO puede ser flex: convertiría cada <a> o <strong> del texto en
+   un ítem de fila y partiría el párrafo en columnas. */
 .l3-nota {
   display: flex; gap: 12px; margin: 22px 0 0;
   background: #fef2f2; border: 1px solid #fecaca; border-left: 3px solid #dc2626;
   border-radius: 0 11px 11px 0; padding: 16px 18px;
 }
+p.l3-nota {
+  display: block;
+  font-size: 0.85rem; color: #52525b; line-height: 1.75;
+}
+p.l3-nota strong { color: #991b1b; font-weight: 650; }
 .l3-nota svg { width: 15px; height: 15px; flex-shrink: 0; margin-top: 3px; color: #dc2626; }
 .l3-nota p { font-size: 0.85rem; color: #52525b; line-height: 1.75; margin: 0; }
 .l3-nota p strong { color: #991b1b; font-weight: 650; }
@@ -714,8 +723,16 @@
   text-transform: uppercase; color: #dc2626;
 }
 .l3-box-dark .l3-box-head { padding-bottom: 13px; margin-bottom: 15px; border-bottom: 1px solid #27272a; }
-.l3-box-title { font-size: 0.96rem; font-weight: 800; color: #fafafa; line-height: 1.35; margin: 0 0 8px; letter-spacing: -0.01em; }
-.l3-box-copy { font-size: 0.79rem; color: #a1a1aa; line-height: 1.7; margin: 0 0 14px; }
+/* Título y copy de caja. El color por defecto es el de FONDO CLARO, que es el
+   caso mayoritario (.l3-box y .l3-box-red). La variante oscura lo invierte.
+   Antes el default era #fafafa y los títulos de las cajas claras salían en
+   blanco sobre blanco: invisibles en toda la sección de cumplimiento. */
+.l3-box-title { display: block; font-size: 0.96rem; font-weight: 800; color: #09090b; line-height: 1.35; margin: 0 0 8px; letter-spacing: -0.01em; }
+.l3-box-copy { font-size: 0.79rem; color: #52525b; line-height: 1.7; margin: 0 0 14px; }
+.l3-box-red .l3-box-title { color: #991b1b; }
+.l3-box-red .l3-box-copy { color: #52525b; }
+.l3-box-dark .l3-box-title { color: #fafafa; }
+.l3-box-dark .l3-box-copy { color: #a1a1aa; }
 .l3-facts { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
 .l3-fact { display: flex; align-items: flex-start; gap: 8px; font-size: 0.75rem; color: #d4d4d8; line-height: 1.5; }
 .l3-fact svg { width: 13px; height: 13px; flex-shrink: 0; margin-top: 2px; color: #dc2626; }

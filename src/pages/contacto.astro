@@ -2,8 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/layout/PageHero.astro';
 import { waLink } from '../lib/blog';
-
-const SITE = 'https://firefighter.com.mx';
+import CondicionesComerciales from '../components/empresa/CondicionesComerciales.astro';
+import { MARCA, SITE, CONTACTO } from '../data/marca';
 
 const canales = [
   {
@@ -19,8 +19,8 @@ const canales = [
     eyebrow: 'Compra pública',
     titulo: 'Licitaciones y CompraNet',
     texto: 'Carta de distribuidor autorizado, certificados de laboratorio, fichas técnicas y propuesta desglosada por partida con clave CABMS. Escríbenos con la convocatoria.',
-    accion: 'licitaciones@firefighter.com.mx',
-    href: 'mailto:licitaciones@firefighter.com.mx',
+    accion: CONTACTO.emailLicitaciones,
+    href: `mailto:${CONTACTO.emailLicitaciones}`,
     externo: false,
     destacado: false,
   },
@@ -28,8 +28,8 @@ const canales = [
     eyebrow: 'Ventas',
     titulo: 'Correo comercial',
     texto: 'Para pedidos, seguimiento de una propuesta en curso o programar mantenimiento, recarga y pruebas del equipo que ya tienes en servicio.',
-    accion: 'ventas@firefighter.com.mx',
-    href: 'mailto:ventas@firefighter.com.mx',
+    accion: CONTACTO.emailVentas,
+    href: `mailto:${CONTACTO.emailVentas}`,
     externo: false,
     destacado: false,
   },
@@ -47,17 +47,25 @@ const canales = [
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
-  name: 'Contacto — FIREFIGHTER México',
+  name: `Contacto — ${MARCA}`,
   url: `${SITE}/contacto`,
   inLanguage: 'es-MX',
   mainEntity: {
     '@type': 'Organization',
-    name: 'FIREFIGHTER México',
+    '@id': `${SITE}/#organization`,
+    name: MARCA,
     url: SITE,
     contactPoint: [
-      { '@type': 'ContactPoint', contactType: 'sales', email: 'ventas@firefighter.com.mx', areaServed: 'MX', availableLanguage: 'es' },
-      { '@type': 'ContactPoint', contactType: 'bidding', email: 'licitaciones@firefighter.com.mx', areaServed: 'MX', availableLanguage: 'es' },
+      { '@type': 'ContactPoint', contactType: 'sales', telephone: `+52${CONTACTO.telefonoVentas.replace(/\D/g, '')}`, email: CONTACTO.emailVentas, areaServed: 'MX', availableLanguage: 'es' },
+      { '@type': 'ContactPoint', contactType: 'bidding', email: CONTACTO.emailLicitaciones, areaServed: 'MX', availableLanguage: 'es' },
+      { '@type': 'ContactPoint', contactType: 'customer support', email: CONTACTO.emailSoporte, areaServed: 'MX', availableLanguage: 'es' },
     ],
+    openingHoursSpecification: CONTACTO.horarioSchema.map((h) => ({
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: h.dias,
+      opens: h.abre,
+      closes: h.cierra,
+    })),
   },
 };
 ---
@@ -127,12 +135,15 @@ const schema = {
     </div>
   </section>
 
+  <!-- ══ CONDICIONES COMERCIALES ══ -->
+  <CondicionesComerciales fondo="#f8fafc" />
+
   <!-- ══ FORMULARIO ══ -->
-  <section id="formulario" style="background:#f8fafc; padding:72px 0;">
+  <section id="formulario" style="background:#fff; padding:72px 0; border-top:1px solid #e4e4e7;">
     <div class="container-custom">
       <div class="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-12" style="align-items:start;">
 
-        <div style="background:#fff; border:1px solid #e4e4e7; border-radius:16px; padding:32px;">
+        <div style="background:#f8fafc; border:1px solid #e4e4e7; border-radius:16px; padding:32px;">
           <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px;">
             <span style="display:block; width:24px; height:2px; background:#dc2626; border-radius:2px;"></span>
             <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#dc2626;">Formulario</span>
@@ -202,9 +213,28 @@ const schema = {
               <span style="width:7px; height:7px; background:#22c55e; border-radius:50%; display:block;"></span>
               <span style="font-size:0.64rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:#a1a1aa;">Horario de atención</span>
             </div>
-            <p style="font-size:0.87rem; color:#a1a1aa; line-height:1.85; margin:0 0 18px;">
-              Contestamos correos y WhatsApp en horario hábil, y las cotizaciones salen en menos de 24 horas hábiles. Si escribes un viernes por la tarde, lo verás el lunes temprano.
-            </p>
+            <div style="display:flex; flex-direction:column; gap:9px; margin-bottom:16px;">
+              <div style="display:flex; justify-content:space-between; gap:12px; font-size:0.82rem;">
+                <span style="color:#71717a;">Lunes a viernes</span><strong style="color:#fafafa; font-weight:600;">9:00 – 18:00 h</strong>
+              </div>
+              <div style="display:flex; justify-content:space-between; gap:12px; font-size:0.82rem;">
+                <span style="color:#71717a;">Sábados</span><strong style="color:#fafafa; font-weight:600;">9:00 – 14:00 h</strong>
+              </div>
+              <div style="display:flex; justify-content:space-between; gap:12px; font-size:0.82rem; padding-top:9px; border-top:1px solid #27272a;">
+                <span style="color:#71717a;">Domingos y festivos</span><strong style="color:#71717a; font-weight:600;">Cerrado</strong>
+              </div>
+              <div style="display:flex; justify-content:space-between; gap:12px; font-size:0.82rem;">
+                <span style="color:#71717a;">Cotización</span><strong style="color:#fafafa; font-weight:600;">≤ 24 h hábiles</strong>
+              </div>
+              <div style="display:flex; justify-content:space-between; gap:12px; font-size:0.82rem;">
+                <span style="color:#71717a;">Zona horaria</span><strong style="color:#fafafa; font-weight:600;">Centro de México</strong>
+              </div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:7px; margin-bottom:18px; padding-top:14px; border-top:1px solid #27272a;">
+              <a href={CONTACTO.telefonoVentasHref} style="font-size:0.82rem; color:#a1a1aa; text-decoration:none;">Ventas · {CONTACTO.telefonoVentas}</a>
+              <a href={`mailto:${CONTACTO.emailVentas}`} style="font-size:0.82rem; color:#a1a1aa; text-decoration:none; word-break:break-all;">{CONTACTO.emailVentas}</a>
+              <a href={`mailto:${CONTACTO.emailLicitaciones}`} style="font-size:0.82rem; color:#a1a1aa; text-decoration:none; word-break:break-all;">{CONTACTO.emailLicitaciones}</a>
+            </div>
             <a href={waLink('tengo una duda')} target="_blank" rel="noopener" class="blog-btn-wa">Escribir por WhatsApp</a>
           </div>
 

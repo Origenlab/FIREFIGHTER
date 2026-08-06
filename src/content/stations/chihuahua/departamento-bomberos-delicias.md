@@ -21,7 +21,7 @@ services:
   - prevencion
 verified: false
 lastUpdated: "2026-08-06"
-metaTitle: "Bomberos Delicias"
+metaTitle: "Bomberos Delicias Departamento"
 metaDescription: "Departamento de Bomberos de Delicias en Delicias, Chihuahua, C. Central 4. Emergencias 911."
 ---
 

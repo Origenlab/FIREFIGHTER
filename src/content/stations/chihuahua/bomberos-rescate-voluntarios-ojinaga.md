@@ -19,7 +19,7 @@ services:
   - proteccion-civil
 verified: false
 lastUpdated: "2026-08-06"
-metaTitle: "Bomberos Ojinaga"
+metaTitle: "Bomberos Ojinaga Voluntarios"
 metaDescription: "Bomberos y Rescate Voluntarios de Ojinaga en Ojinaga, Chihuahua. Emergencias 911."
 ---
 

@@ -2,7 +2,7 @@
 title: "NOM-154-SCFI: cómo saber si la certificación de tu extintor es real o una calcomanía"
 description: "Un extintor con calcomanía 'certificado NOM-154-SCFI' comprado en tianguis puede ser perfectamente falso. Guía para verificar certificación real, reconocer extintores falsificados y las consecuencias legales de instalar equipo no certificado."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["NOM-154-SCFI", "certificación extintores", "EMA", "normativa México", "extintores certificados"]
 draft: false
 ---

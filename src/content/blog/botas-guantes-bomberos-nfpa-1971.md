@@ -2,7 +2,7 @@
 title: "Botas y guantes para bomberos certificados NFPA 1970: guía técnica completa de selección y mantenimiento"
 description: "Análisis técnico profundo de botas y guantes estructurales NFPA 1970: pruebas de rendimiento, materiales, marcas HAIX y Jolly, selección por operación, integración con el sistema de traje y mantenimiento. Para bomberos profesionales y brigadas en México."
 pubDate: 2026-03-26
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["botas bomberos NFPA 1970", "guantes estructurales bomberos", "HAIX bomberos", "EPP bomberos México", "calzado protección incendios"]
 draft: false
 ---
@@ -131,7 +131,7 @@ Son los guantes para combate de incendios estructurales. Deben proveer protecci�
 
 ### Marcas de guantes estructurales disponibles en México
 
-**PGI / Shelby Fire (USA)**: fabricante de referencia para cuerpos de bomberos norteamericanos. El modelo **Shelby 5228** (cuero de vaca + CROSSTECH + liner Nomex) es uno de los guantes estructurales más utilizados en América. Disponible vía importación a través de distribuidores como FIREFIGHTER México.
+**PGI / Shelby Fire (USA)**: fabricante de referencia para cuerpos de bomberos norteamericanos. El modelo **Shelby 5228** (cuero de vaca + CROSSTECH + liner Nomex) es uno de los guantes estructurales más utilizados en América. Disponible vía importación a través de distribuidores como FIREFIGHTER.COM.MX.
 
 **Ansell / Marigold (UK)**: el modelo **ActivArmr 97-300** para bombero ofrece certificación NFPA 1970 y EN 659:2003+A1:2008 simultáneamente —especialmente valorado en licitaciones que mezclan especificaciones de ambas normas.
 
@@ -220,11 +220,11 @@ La selección de botas y guantes debe hacerse en función de tres variables simu
 
 **2. Clima de operación**: en climas de más de 35°C (Sonora, Sinaloa, Veracruz, Yucatán), el peso de la bota y la transpirabilidad del guante son factores que afectan directamente los tiempos de intervención segura. Priorizar ligereza y transpirabilidad sin comprometer la certificación.
 
-**3. Integración con el traje existente**: si la brigada ya tiene trajes de un fabricante específico, consultar con el fabricante o con un distribuidor técnico (como FIREFIGHTER México) qué botas y guantes han sido probados en conjunto para garantizar la integración correcta.
+**3. Integración con el traje existente**: si la brigada ya tiene trajes de un fabricante específico, consultar con el fabricante o con un distribuidor técnico (como FIREFIGHTER.COM.MX) qué botas y guantes han sido probados en conjunto para garantizar la integración correcta.
 
 ---
 
-## FIREFIGHTER México: asesoría técnica en EPP de extremidades
+## FIREFIGHTER.COM.MX: asesoría técnica en EPP de extremidades
 
 Suministramos botas y guantes certificados NFPA 1970 para bomberos y brigadas industriales en México. Nuestra asesoría técnica incluye la evaluación de integración con el traje existente, la verificación de los certificados de laboratorio por número de lote y la medición profesional del pie para garantizar el ajuste correcto.
 

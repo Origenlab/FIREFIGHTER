@@ -2,7 +2,7 @@
 title: "SCBA para bomberos y brigadas industriales: guía técnica completa para elegir, operar y mantener equipos de respiración autónoma"
 description: "Guía de alto nivel sobre equipos SCBA: normas NFPA 1970, arquitectura del sistema, selección de cilindros, marcas MSA G1 y Scott Air-Pak, telemetría, mantenimiento NFPA 1850 y requisitos para brigadas en México."
 pubDate: 2026-01-22
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["SCBA", "respiración autónoma", "NFPA 1970", "MSA G1", "equipos bomberos México"]
 draft: false
 ---
@@ -121,7 +121,7 @@ Los sistemas de telemetría modernos (MSA iCom, Draeger Guardian) transmiten la 
 
 ### MSA G1 SCBA — Tecnología de referencia mundial
 
-El **MSA G1** es el SCBA más tecnológicamente avanzado disponible en México. Como **distribuidores autorizados de MSA Safety**, en FIREFIGHTER México contamos con stock, servicio técnico certificado y capacidad de integrar el G1 con los sistemas de radio existentes de la brigada.
+El **MSA G1** es el SCBA más tecnológicamente avanzado disponible en México. Como **distribuidores autorizados de MSA Safety**, en FIREFIGHTER.COM.MX contamos con stock, servicio técnico certificado y capacidad de integrar el G1 con los sistemas de radio existentes de la brigada.
 
 **Arquitectura técnica del G1:**
 
@@ -208,7 +208,7 @@ Poseer el mejor SCBA del mercado sin personal certificado para operarlo es equiv
 - Emergencia: respuesta a falla de equipo, procedimiento de bombero atrapado, rescate con RIC
 - Fit test: prueba de hermeticidad de máscara (cuantitativo o cualitativo) para cada usuario
 
-En **FIREFIGHTER México** ofrecemos cursos de certificación de operadores con instructores certificados NFPA. Para compras de 5 o más SCBA, la capacitación inicial está incluida sin costo adicional.
+En **FIREFIGHTER.COM.MX** ofrecemos cursos de certificación de operadores con instructores certificados NFPA. Para compras de 5 o más SCBA, la capacitación inicial está incluida sin costo adicional.
 
 ---
 

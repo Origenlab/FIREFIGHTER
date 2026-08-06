@@ -1,10 +1,10 @@
 /**
  * Recortes de título y descripción para SERP.
- * SEOHead añade " | Firefighter.com.mx" (22 caracteres) a todo título,
+ * SEOHead añade " | FIREFIGHTER.COM.MX" (22 caracteres) a todo título,
  * así que aquí se trabaja siempre sobre el presupuesto ya descontado.
  */
 
-const SUFIJO = ' | Firefighter.com.mx'.length; // 21
+const SUFIJO = ' | FIREFIGHTER.COM.MX'.length; // 21
 export const MAX_TITULO = 65 - SUFIJO;         // 44 caracteres útiles
 export const MAX_DESC = 158;
 

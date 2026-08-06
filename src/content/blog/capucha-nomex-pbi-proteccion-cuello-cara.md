@@ -2,7 +2,7 @@
 title: "Capucha Nomex y PBI: protección de cuello y cara en bomberos estructurales"
 description: "Guía técnica de capuchas Nomex y PBI para bomberos: brecha casco-máscara, doble capa, ajuste con SCBA, mantenimiento y criterios de retiro. México, NFPA 1970."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["capucha Nomex", "PBI", "NFPA 1970", "protección cuello cara"]
 draft: false
 ---

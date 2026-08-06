@@ -2,7 +2,7 @@
 title: "Dispositivos PASS y NFPA 1970: por qué el bombero que murió tenía el PASS apagado"
 description: "Dispositivos PASS NFPA 1970: activación automática vs manual, prueba semanal, batería, decibeles en industria y uso como herramienta de mayday."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["PASS device", "NFPA 1970", "seguridad bomberos", "equipo SCBA"]
 draft: false
 ---
@@ -25,7 +25,7 @@ Durante décadas, los PASS fueron dispositivos separados del SCBA — clips que 
 
 El problema documentado en operaciones reales con PASS separado: se olvida de activar. No es descuido crónico de ningún bombero en particular — es que en la secuencia de equipamiento rápido, bajo presión de tiempo, en un incendio activo, el paso de "activar el PASS" compite con docenas de otros pasos y ocurre que se omite.
 
-Los reportes de incidentes de NFPA (FIREFIGHTER FATALITY INVESTIGATION AND PREVENTION PROGRAM, publicaciones anuales) documentan casos específicos donde bomberos murieron en operación y el PASS no activó porque estaba apagado. El patrón es consistente: dispositivo PASS separado, operación de alta presión, activación olvidada.
+Los reportes de incidentes de NFPA (FIREFIGHTER.COM.MX FATALITY INVESTIGATION AND PREVENTION PROGRAM, publicaciones anuales) documentan casos específicos donde bomberos murieron en operación y el PASS no activó porque estaba apagado. El patrón es consistente: dispositivo PASS separado, operación de alta presión, activación olvidada.
 
 La solución de diseño fue integrar el PASS al SCBA con activación automática al iniciar el flujo de aire. El bombero que abre el cilindro para respirar tiene el PASS activo. Sin acción adicional, sin paso adicional en la secuencia de equipamiento, sin posibilidad de olvidar.
 

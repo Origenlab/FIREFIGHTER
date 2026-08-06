@@ -4,18 +4,20 @@ interface Props {
   data: Record<string, any>;
 }
 
+import { MARCA, SITE, DESCRIPTOR } from '../../data/marca';
+
 const { type, data } = Astro.props;
 
-const siteUrl = 'https://firefighter.com.mx';
+const siteUrl = SITE;
 
 // Base schemas
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Firefighter México",
+  "name": MARCA,
   "url": siteUrl,
   "logo": `${siteUrl}/images/logo-firefighter-mexico.svg`,
-  "description": "Distribuidor de equipo contra incendios y para bomberos en México, con directorio nacional de estaciones de bomberos.",
+  "description": DESCRIPTOR,
   "sameAs": [],
   "contactPoint": {
     "@type": "ContactPoint",
@@ -28,7 +30,7 @@ const organizationSchema = {
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Firefighter México",
+  "name": MARCA,
   "url": siteUrl,
   "description": "Equipo contra incendios y para bomberos certificado NFPA, NOM y UL, con directorio nacional de estaciones de bomberos.",
   "potentialAction": {

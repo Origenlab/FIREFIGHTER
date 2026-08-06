@@ -67,7 +67,7 @@ Hay una idea que repetimos en cada capacitación de compras: con un traje certif
 
 Léela en diagonal y vas a notar un patrón: la columna de la derecha siempre traslada el riesgo hacia ti. Un proveedor que no documenta, que no mide y que no responde por la posventa no está bajando el precio, está descontando todo aquello por lo que vale la pena pagar. Cuando una cotización es sospechosamente más barata que las demás, casi nunca es porque alguien encontró una eficiencia: es porque algo de esta tabla no está incluido.
 
-## Por qué comprar tus trajes para bomberos con FIREFIGHTER
+## Por qué comprar tus trajes para bomberos con FIREFIGHTER.COM.MX
 
 No vendemos trajes sueltos; equipamos operaciones que no admiten un segundo error. Esa diferencia es la razón por la que cuerpos de bomberos, brigadas industriales y dependencias de gobierno en 32 estados nos confían una compra donde la única métrica que importa de verdad es que la persona que use el traje regrese a casa.
 

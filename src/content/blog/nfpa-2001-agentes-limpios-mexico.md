@@ -2,7 +2,7 @@
 title: "NFPA 2001 y agentes limpios: limpio para los equipos no siempre significa seguro para las personas"
 description: "Hay agentes limpios que no dejan residuo. Y hay agentes limpios que son seguros para humanos a las concentraciones de diseño. No todos los que cumplen lo primero cumplen lo segundo. Guía completa de NFPA 2001, NOAEL, LOAEL, el Protocolo de Kigali y qué significa para instalaciones en México."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["NFPA 2001", "agentes limpios", "FM-200", "Novec 1230", "IG-541", "Protocolo de Kigali"]
 draft: false
 ---

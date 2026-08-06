@@ -2,7 +2,7 @@
 title: "Plan de mantenimiento de extintores: 50 tubos de metal o 50 extintores funcionales"
 description: "Una empresa con 50 extintores sin programa documentado no tiene protección — tiene 50 tubos de metal en las paredes. Los tres niveles de mantenimiento, checklist mensual en 8 puntos, señales de retiro inmediato y cómo organizar la bitácora sin que sea un caos."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["mantenimiento extintores", "plan de mantenimiento", "NOM-002-STPS", "seguridad industrial", "bitácora extintores"]
 draft: false
 ---
@@ -128,6 +128,6 @@ Para instalaciones con 100 o más extintores, el tiempo de gestión manual justi
 
 La [NOM-154-SCFI](/blog/nom-154-scfi-norma-extintores-mexico) define los requisitos de certificación de los extintores que entran a ese programa. La [recarga y mantenimiento correctos](/blog/recarga-mantenimiento-extintores) detalla lo que debe incluir el mantenimiento anual del Nivel 2. Y la distribución correcta de extintores según [cuántos necesita tu empresa](/blog/cuantos-extintores-necesita-empresa) define qué equipos deben estar en ese programa.
 
-Para asesoría en el diseño de tu programa de mantenimiento y contratos de servicio con técnicos certificados, contacta a FIREFIGHTER México en [productos/extintores](/productos/extintores-y-extincion).
+Para asesoría en el diseño de tu programa de mantenimiento y contratos de servicio con técnicos certificados, contacta a FIREFIGHTER.COM.MX en [productos/extintores](/productos/extintores-y-extincion).
 
 Un programa de mantenimiento documentado es el mínimo no negociable. No porque lo pida la STPS — aunque sí lo pide. Sino porque sin él, los extintores en las paredes son equipos cuya condición real en cualquier momento dado es desconocida. Y en protección contra incendios, lo desconocido es exactamente lo más peligroso.

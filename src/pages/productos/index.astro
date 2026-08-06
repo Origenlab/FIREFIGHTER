@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import CondicionesStrip from '../../components/empresa/CondicionesStrip.astro';
 import categorias from '../../data/productos.json';
 
 const normas = [...new Set(categorias.map(c => c.norma))];
@@ -238,6 +239,8 @@ const waBase = 'https://wa.me/525500000000';
     </div>
   </section>
 
+  <!-- ══ CONDICIONES COMERCIALES ══ -->
+  <CondicionesStrip fondo="#ffffff" />
 </BaseLayout>
 
 <script>

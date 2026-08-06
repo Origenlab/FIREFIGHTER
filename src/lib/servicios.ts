@@ -1,5 +1,5 @@
 /**
- * Servicios de FIREFIGHTER que se promueven desde el blog.
+ * Servicios de FIREFIGHTER.COM.MX que se promueven desde el blog.
  * Solo afirmaciones que ya se sostienen en el catalogo del sitio:
  * distribucion autorizada, documentacion para licitaciones, mantenimiento
  * en banco, capacitacion e instalacion, cobertura en los 32 estados.

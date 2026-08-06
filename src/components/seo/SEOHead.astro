@@ -1,5 +1,6 @@
 ---
 import { descripcionSeo } from '../../lib/seoText';
+import { MARCA, SITE } from '../../data/marca';
 import type { StationData, BreadcrumbItem } from '../../lib/seo';
 import {
   generateEmergencyServiceSchema,
@@ -53,8 +54,8 @@ const {
   article,
 } = Astro.props;
 
-const siteName = 'Firefighter.com.mx';
-const siteUrl = 'https://firefighter.com.mx';
+const siteName = MARCA;
+const siteUrl = SITE;
 const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 const fullTitle = `${title} | ${siteName}`;
 
@@ -135,9 +136,9 @@ if (type === 'article' && article && publishedDate) {
 <meta name="geo.placename" content="México" />
 
 <!-- Additional SEO -->
-<meta name="author" content="Firefighter.com.mx" />
-<meta name="publisher" content="Firefighter.com.mx" />
-<meta name="copyright" content={`© ${new Date().getFullYear()} Firefighter.com.mx`} />
+<meta name="author" content={siteName} />
+<meta name="publisher" content={siteName} />
+<meta name="copyright" content={`© ${new Date().getFullYear()} ${siteName}`} />
 <meta name="rating" content="general" />
 <meta name="distribution" content="global" />
 

@@ -2,7 +2,7 @@
 title: "Gabinetes Contra Incendio en Hoteles: Normativa y Cumplimiento Real"
 description: "Requisitos normativos de gabinetes CI en hoteles México: NOM-002-STPS, NOM-003-SEGOB, NFPA 13, distancias de recorrido, mantenimiento y cumplimiento real por categoría."
 pubDate: 2026-05-20
-author: "FIREFIGHTER México"
+author: "Área técnica de FIREFIGHTER.COM.MX"
 tags: ["gabinetes-mangueras", "hoteles-normativa", "proteccion-incendio", "nom-002-stps"]
 draft: false
 ---
