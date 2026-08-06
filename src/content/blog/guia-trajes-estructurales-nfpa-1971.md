@@ -82,6 +82,8 @@ Es la primera barrera de contacto con el entorno hostil. Sus funciones son múlt
 
 **Nomex® IIIA (DuPont)** — Poliamida aromática. No arde: al contacto con la llama se carboniza, formando una barrera protectora que impide la propagación. Es el material de mayor adopción mundial por su excelente relación rendimiento-precio. Disponible en 4.5 oz y 6 oz; la variante de 6 oz ofrece mayor durabilidad y TPP ligeramente superior.
 
+Aquí está el detalle que casi nadie escribe en una requisición: **una misma línea de traje puede ofrecerse con varias barreras exteriores distintas, y el nombre comercial del traje no dice cuál trae**. En nuestro catálogo eso se resuelve publicando una ficha por configuración: la de **PBI MAX 7.0**, la de **barrera Advance** y la de **Kombat Flex** son tres documentos distintos porque son tres ensambles distintos, aunque el traje se llame igual en los tres casos. Si la partida solo dice el nombre de la línea, el proveedor elige la barrera por ti.
+
 **PBI Gold® (PBI Performance Products)** — Blend de polibencimidazol (PBI) y para-aramida (Kevlar®). La mayor resistencia térmica disponible en tela de cubierta exterior comercial. Mantiene el 93% de su resistencia a la tracción después de exposición a 1,000°F (538°C) por 5 minutos —condición en que el Nomex estándar ya ha cedido. Precio 2–2.5× mayor que el Nomex; justificado para combate estructural de alta frecuencia.
 
 **TenCate Defender® M** — Material desarrollado para maximizar el THL sin comprometer el TPP. Logra el mayor THL del mercado en su categoría (hasta 210 W/m² en algunos sistemas). Preferido para climas cálidos y operaciones de larga duración. Ideal para brigadas del sureste y noroeste de México.

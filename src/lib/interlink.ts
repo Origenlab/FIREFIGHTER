@@ -66,12 +66,17 @@ export function crearInterlinker(reglas: ReglaEnlace[], maxEnlaces = 12): Interl
 
     cands.sort((a, b) => a.inicio - b.inicio || b.largo - a.largo);
 
-    // 2 · descartar solapes
+    // 2 · descartar solapes y destinos repetidos DENTRO del mismo nodo de texto.
+    //     El filtro `usados` de arriba solo ve los destinos ya insertados en nodos anteriores,
+    //     así que dos reglas distintas con el mismo href —"pieza facial" y "equipo de
+    //     respiración", por ejemplo— podían enlazar dos veces al mismo destino en un párrafo.
     const firmes: Cand[] = [];
+    const enEsteNodo = new Set<string>();
     let corte = -1;
     for (const c of cands) {
-      if (c.inicio < corte) continue;
+      if (c.inicio < corte || enEsteNodo.has(c.href)) continue;
       firmes.push(c);
+      enEsteNodo.add(c.href);
       corte = c.inicio + c.largo;
     }
 
@@ -153,6 +158,24 @@ export const REGLAS_SITIO: ReglaEnlace[] = [
   { termino: 'Programa Interno de Protección Civil', href: '/cumplimiento#estados', titulo: 'Quién autoriza el Programa Interno en cada estado' },
   { termino: 'protección civil', href: '/cumplimiento#estados', titulo: 'Normativa de protección civil por entidad federativa' },
   { termino: 'brigada contra incendio', href: '/cumplimiento/normas/nom-002-stps-2010#brigadas', titulo: 'Cuándo la NOM-002 obliga a constituir brigada' },
+
+  // ── Sustantivo a secas. Estas reglas SOLO corren en el cuerpo de las fichas L3 y L4, donde
+  // el contexto ya es estructural: cuando la ficha del traje dice "la bota" o la del casco dice
+  // "la careta", habla de la pieza hermana del mismo conjunto. En el blog serían peligrosas
+  // (hay artículos de forestal, industrial y rescate) y por eso no están en REGLAS_CATALOGO.
+  // Van después de las versiones con adjetivo para que gane siempre la más específica.
+  { termino: 'chaquetones', href: '/productos/epp-para-bomberos/trajes-estructurales-nomex-pbi', titulo: 'Trajes estructurales Nomex y PBI certificados' },
+  { termino: 'chaquetón', href: '/productos/epp-para-bomberos/trajes-estructurales-nomex-pbi', titulo: 'Trajes estructurales Nomex y PBI certificados' },
+  { termino: 'cascos', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa', titulo: 'Cascos estructurales Bullard y MSA certificados' },
+  { termino: 'casco', href: '/productos/epp-para-bomberos/cascos-bullard-y-msa', titulo: 'Cascos estructurales Bullard y MSA certificados' },
+  { termino: 'botas', href: '/productos/epp-para-bomberos/botas-dielectricas', titulo: 'Botas estructurales para bombero certificadas' },
+  { termino: 'guantes', href: '/productos/epp-para-bomberos/guantes-de-intervencion', titulo: 'Guantes estructurales para bombero certificados' },
+  { termino: 'capuchas', href: '/productos/epp-para-bomberos/protector-de-cuello-y-capucha', titulo: 'Capuchas con bloqueo de partículas certificadas' },
+  { termino: 'protector de cuello', href: '/productos/epp-para-bomberos/protector-de-cuello-y-capucha', titulo: 'Capuchas con bloqueo de partículas certificadas' },
+  { termino: 'caretas', href: '/productos/epp-para-bomberos/viseras-y-caretas', titulo: 'Viseras, caretas y goggles para casco estructural' },
+  { termino: 'careta', href: '/productos/epp-para-bomberos/viseras-y-caretas', titulo: 'Viseras, caretas y goggles para casco estructural' },
+  { termino: 'goggles', href: '/productos/epp-para-bomberos/viseras-y-caretas', titulo: 'Viseras, caretas y goggles para casco estructural' },
+  { termino: 'pieza facial', href: '/productos/equipos-de-respiracion', titulo: 'Equipos de respiración autónoma certificados' },
 
   { termino: 'NFPA 1970', href: '/blog/nfpa-1971-mexico-norma-bomberos', titulo: 'NFPA 1970 en México: qué certifica y cómo leer un certificado' },
   { termino: 'NFPA 1971', href: '/blog/nfpa-1971-mexico-norma-bomberos', titulo: 'NFPA 1970 en México: qué certifica y cómo leer un certificado' },

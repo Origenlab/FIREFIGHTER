@@ -6,19 +6,32 @@
  *   · trabaja sobre el árbol HAST, no sobre cadenas de texto, así que **no puede romper el HTML**
  *   · si cambia una URL del catálogo se corrige en un solo lugar
  *
- * Dirección del enlace: blog → catálogo. Es la que importa, porque el blog tiene más páginas y
- * más antigüedad que las fichas de producto. El camino inverso (ficha → blog) ya lo cubren el
- * sidebar de guías y el interlinker de `src/lib/interlink.ts`.
+ * Dirección del enlace: blog → catálogo y blog → /cumplimiento. Es la que importa, porque el
+ * blog tiene más páginas y más antigüedad que las fichas de producto y que la sección normativa.
+ * El camino inverso (ficha → blog) ya lo cubren el sidebar de guías y el interlinker de
+ * `src/lib/interlink.ts`.
  *
  * Reglas:
  *   · solo la PRIMERA aparición de cada término, y un enlace por destino por artículo
- *   · tope de MAX_ENLACES por artículo para que no se lea como sobreoptimización
+ *   · el tope es **proporcional al largo del artículo**, no fijo (ver TOPE)
  *   · nunca dentro de <a>, <code>, <pre>, <h1>…<h6> ni <blockquote>
  *   · nunca enlaza un artículo a sí mismo ni a la página en la que ya está
  *   · solo apunta a páginas indexables: las L3/L4 en borrador con noindex quedan fuera
  */
 
+/**
+ * Tope proporcional. Un tope fijo trataba igual a una nota de 600 palabras y a una guía de
+ * 3,000: en la corta se leía como sobreoptimización y en la larga dejaba fuera a las fichas
+ * L4, que son las más específicas del sitio y las últimas de la lista.
+ * Densidad objetivo: ~1 enlace cada 400 palabras, con piso de 4 y techo de 10.
+ */
+const TOPE = { palabrasPorEnlace: 300, min: 4, max: 10 };
+
+/** Se conserva como default del parámetro `max` para llamadas fuera del pipeline del blog. */
 const MAX_ENLACES = 6;
+
+const topePorLargo = (palabras) =>
+  Math.max(TOPE.min, Math.min(TOPE.max, Math.floor(palabras / TOPE.palabrasPorEnlace)));
 
 const P = '/productos';
 const TRAJES = `${P}/epp-para-bomberos/trajes-estructurales-nomex-pbi`;
@@ -27,6 +40,7 @@ const BOTAS = `${P}/epp-para-bomberos/botas-dielectricas`;
 const CAPUCHA = `${P}/epp-para-bomberos/protector-de-cuello-y-capucha`;
 const GUANTES = `${P}/epp-para-bomberos/guantes-de-intervencion`;
 const VISERAS = `${P}/epp-para-bomberos/viseras-y-caretas`;
+const C = '/cumplimiento';
 
 /**
  * El orden importa: lo más específico primero. En un solape gana el término que empieza antes
@@ -34,8 +48,15 @@ const VISERAS = `${P}/epp-para-bomberos/viseras-y-caretas`;
  */
 export const REGLAS_CATALOGO = [
   // ── L4 · configuraciones de marca
-  { termino: 'SKÖLD HERÖ', href: `${TRAJES}/skold-hero-pbi-max-7-0`, titulo: 'Traje estructural SKÖLD HERÖ con barrera PBI MAX 7.0' },
+  { termino: 'PBI MAX 7.0', href: `${TRAJES}/skold-hero-pbi-max-7-0`, titulo: 'Traje estructural SKÖLD HERÖ con barrera PBI MAX 7.0' },
   { termino: 'PBI MAX', href: `${TRAJES}/skold-hero-pbi-max-7-0`, titulo: 'Traje estructural SKÖLD HERÖ con barrera PBI MAX 7.0' },
+  { termino: 'SKÖLD HERÖ', href: `${TRAJES}/skold-hero-pbi-max-7-0`, titulo: 'Traje estructural SKÖLD HERÖ con barrera PBI MAX 7.0' },
+  // Las otras cuatro barreras exteriores de la misma línea. Se exige la palabra "barrera" o el
+  // nombre compuesto: "Advance" y "Pioneer" a secas son demasiado comunes en español técnico.
+  { termino: 'barrera Advance', href: `${TRAJES}/skold-hero-advance`, titulo: 'Traje estructural SKÖLD HERÖ con barrera Advance' },
+  { termino: 'Kombat Flex', href: `${TRAJES}/skold-hero-kombat-flex`, titulo: 'Traje estructural SKÖLD HERÖ con barrera Kombat Flex' },
+  { termino: 'barrera Pioneer', href: `${TRAJES}/skold-hero-pioneer`, titulo: 'Traje estructural SKÖLD HERÖ con barrera Pioneer' },
+  { termino: 'Defender 750', href: `${TRAJES}/skold-hero-defender-750`, titulo: 'Traje estructural SKÖLD HERÖ con barrera Defender 750' },
   { termino: 'Bullard PX Series', href: `${CASCOS}/bullard-px-series`, titulo: 'Casco estructural Bullard PX Series' },
   { termino: 'PX Series', href: `${CASCOS}/bullard-px-series`, titulo: 'Casco estructural Bullard PX Series' },
   { termino: 'Bullard PX', href: `${CASCOS}/bullard-px-series`, titulo: 'Casco estructural Bullard PX Series' },
@@ -136,6 +157,78 @@ export const REGLAS_CATALOGO = [
   { termino: 'equipo forestal', href: `${P}/equipo-forestal`, titulo: 'Equipo para incendios forestales' },
   { termino: 'extintores', href: `${P}/extintores-y-extincion`, titulo: 'Extintores y equipos de extinción' },
   { termino: 'señalética', href: `${P}/senaletica-y-seguridad`, titulo: 'Señalética y seguridad' },
+
+  // ── Vocabulario real de los artículos técnicos de las otras siete líneas.
+  // Sin estos términos, 22 de los 100 posts no tenían un solo enlace al catálogo: hablan de
+  // sprinklers, paneles y acoples, no de "sistemas fijos" ni de "detección y alarma".
+  // Detección y alarma
+  { termino: 'detector de humo', href: `${P}/deteccion-y-alarma`, titulo: 'Sistemas de detección y alarma de incendio' },
+  { termino: 'detectores de humo', href: `${P}/deteccion-y-alarma`, titulo: 'Sistemas de detección y alarma de incendio' },
+  { termino: 'detector de calor', href: `${P}/deteccion-y-alarma`, titulo: 'Sistemas de detección y alarma de incendio' },
+  { termino: 'detectores de calor', href: `${P}/deteccion-y-alarma`, titulo: 'Sistemas de detección y alarma de incendio' },
+  { termino: 'detector de gas', href: `${P}/deteccion-y-alarma`, titulo: 'Sistemas de detección y alarma de incendio' },
+  { termino: 'detectores de gas', href: `${P}/deteccion-y-alarma`, titulo: 'Sistemas de detección y alarma de incendio' },
+  { termino: 'panel de alarma', href: `${P}/deteccion-y-alarma`, titulo: 'Sistemas de detección y alarma de incendio' },
+  { termino: 'panel direccionable', href: `${P}/deteccion-y-alarma`, titulo: 'Sistemas de detección y alarma de incendio' },
+  { termino: 'Notifier', href: `${P}/deteccion-y-alarma`, titulo: 'Sistemas de detección y alarma de incendio' },
+  { termino: 'SpectrAlert', href: `${P}/deteccion-y-alarma`, titulo: 'Sistemas de detección y alarma de incendio' },
+  { termino: 'sirenas y estrobos', href: `${P}/deteccion-y-alarma`, titulo: 'Sistemas de detección y alarma de incendio' },
+  { termino: 'NFPA 72', href: `${P}/deteccion-y-alarma`, titulo: 'Sistemas de detección y alarma de incendio' },
+  // Sistemas fijos, mangueras y gabinetes
+  { termino: 'sprinklers', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'rociadores', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'NFPA 13', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'bomba contra incendio', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'bombas contra incendio', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'NFPA 20', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'gabinete contra incendio', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'gabinetes contra incendio', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'manguera contra incendio', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'mangueras contra incendio', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'acoples Storz', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'acople Storz', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'válvula OS&Y', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'válvulas OS&Y', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'agente limpio', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'agentes limpios', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'NFPA 2001', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  { termino: 'supresión automática', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
+  // Herramientas de rescate
+  { termino: 'herramienta hidráulica', href: `${P}/herramientas-de-rescate`, titulo: 'Herramientas de rescate hidráulicas y manuales' },
+  { termino: 'herramientas hidráulicas', href: `${P}/herramientas-de-rescate`, titulo: 'Herramientas de rescate hidráulicas y manuales' },
+  { termino: 'generador hidráulico', href: `${P}/herramientas-de-rescate`, titulo: 'Herramientas de rescate hidráulicas y manuales' },
+  { termino: 'Holmatro', href: `${P}/herramientas-de-rescate`, titulo: 'Herramientas de rescate hidráulicas y manuales' },
+  { termino: 'NFPA 1936', href: `${P}/herramientas-de-rescate`, titulo: 'Herramientas de rescate hidráulicas y manuales' },
+  // Forestal
+  { termino: 'McLeod', href: `${P}/equipo-forestal`, titulo: 'Equipo para incendios forestales' },
+  { termino: 'línea de defensa', href: `${P}/equipo-forestal`, titulo: 'Equipo para incendios forestales' },
+  { termino: 'mochila aspersora', href: `${P}/equipo-forestal`, titulo: 'Equipo para incendios forestales' },
+  { termino: 'NFPA 1977', href: `${P}/equipo-forestal`, titulo: 'Equipo para incendios forestales' },
+  // Extintores
+  { termino: 'extintor', href: `${P}/extintores-y-extincion`, titulo: 'Extintores y equipos de extinción' },
+  { termino: 'recarga de extintores', href: `${P}/extintores-y-extincion`, titulo: 'Extintores y equipos de extinción' },
+  { termino: 'NOM-154-SCFI', href: `${P}/extintores-y-extincion`, titulo: 'Extintores y equipos de extinción' },
+  // Señalética
+  { termino: 'señalización de emergencia', href: `${P}/senaletica-y-seguridad`, titulo: 'Señalética y seguridad' },
+  { termino: 'ruta de evacuación', href: `${P}/senaletica-y-seguridad`, titulo: 'Señalética y seguridad' },
+  { termino: 'NOM-003-SEGOB', href: `${P}/senaletica-y-seguridad`, titulo: 'Señalética y seguridad' },
+
+  // ── Cumplimiento. Van al final a propósito: son el destino menos específico de la lista y
+  // no deben ganarle a una regla de catálogo cuando ambas coinciden en el mismo párrafo.
+  // Sin ellas la sección /cumplimiento no recibía un solo enlace del blog, que son 117 páginas.
+  // Los términos son de vocabulario legal, no comercial: no se solapan con el catálogo.
+  { termino: 'NOM-002-STPS-2010', href: `${C}/normas/nom-002-stps-2010`, titulo: 'NOM-002-STPS-2010: qué obliga y con qué numeral' },
+  { termino: 'NOM-002-STPS', href: `${C}/normas/nom-002-stps-2010`, titulo: 'NOM-002-STPS-2010: qué obliga y con qué numeral' },
+  { termino: 'clasificación de riesgo de incendio', href: `${C}/normas/nom-002-stps-2010#clasificacion`, titulo: 'Riesgo ordinario o alto: la Tabla A.1 de la NOM-002' },
+  { termino: 'riesgo de incendio alto', href: `${C}/normas/nom-002-stps-2010#clasificacion`, titulo: 'Riesgo ordinario o alto: la Tabla A.1 de la NOM-002' },
+  { termino: 'Programa Interno de Protección Civil', href: `${C}#estados`, titulo: 'Quién autoriza el Programa Interno en cada estado' },
+  { termino: 'programa interno de protección civil', href: `${C}#estados`, titulo: 'Quién autoriza el Programa Interno en cada estado' },
+  { termino: 'protección civil', href: `${C}#estados`, titulo: 'Normativa de protección civil por entidad federativa' },
+  { termino: 'brigada contra incendio', href: `${C}/normas/nom-002-stps-2010#brigadas`, titulo: 'Cuándo la NOM-002 obliga a constituir brigada' },
+  { termino: 'brigadas contra incendio', href: `${C}/normas/nom-002-stps-2010#brigadas`, titulo: 'Cuándo la NOM-002 obliga a constituir brigada' },
+  { termino: 'simulacros de evacuación', href: `${C}#calendario`, titulo: 'Calendario de cumplimiento: qué se vence y cada cuánto' },
+  { termino: 'cocina comercial', href: `${C}/giro/restaurante`, titulo: 'Protección contra incendios en restaurantes y cocinas comerciales' },
+  { termino: 'brigada industrial', href: `${C}/giro/industria`, titulo: 'Protección contra incendios en industria y parques industriales' },
 ];
 
 /** Nodos cuyo interior no se toca. */
@@ -149,12 +242,20 @@ const construirRegex = (t) =>
 
 export default function rehypeInterlink(opciones = {}) {
   const reglas = opciones.reglas ?? REGLAS_CATALOGO;
-  const max = opciones.max ?? MAX_ENLACES;
 
   return function transformador(tree, file) {
     // La página en la que estamos: para no enlazarla a sí misma
     const rutaArchivo = String(file?.history?.[0] ?? file?.path ?? '');
     const propio = rutaArchivo.split('/').pop()?.replace(/\.mdx?$/, '') ?? '';
+
+    // Tope proporcional al largo real del artículo. Se cuenta antes de tocar el árbol.
+    let palabras = 0;
+    const contar = (n) => {
+      if (n.type === 'text') palabras += n.value.split(/\s+/).filter(Boolean).length;
+      (n.children ?? []).forEach(contar);
+    };
+    contar(tree);
+    const max = opciones.max ?? topePorLargo(palabras);
 
     const pendientes = reglas
       .filter((r) => !r.href.endsWith(`/${propio}`))
@@ -182,12 +283,16 @@ export default function rehypeInterlink(opciones = {}) {
 
       cands.sort((a, b) => a.inicio - b.inicio || b.largo - a.largo);
 
-      // descartar solapes
+      // descartar solapes y destinos repetidos dentro del mismo nodo de texto: el filtro
+      // `usados` solo ve lo ya insertado en nodos anteriores, así que dos reglas con el mismo
+      // href podían enlazar dos veces al mismo destino en un párrafo.
       const firmes = [];
+      const enEsteNodo = new Set();
       let corte = -1;
       for (const c of cands) {
-        if (c.inicio < corte) continue;
+        if (c.inicio < corte || enEsteNodo.has(c.href)) continue;
         firmes.push(c);
+        enEsteNodo.add(c.href);
         corte = c.inicio + c.largo;
       }
 

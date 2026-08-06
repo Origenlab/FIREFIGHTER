@@ -51,7 +51,7 @@ El uso del nombre "Cairns" como referente de calidad en protección forestal en 
 
 MSA Safety sí fabrica cascos forestales —su línea V-Gard para protección forestal y el modelo Skullgard— pero no son los "Cairns" populares. Para cascos de bomberos estructurales, los Cairns son una excelente opción. Para forestales, hay que buscar en otro catálogo.
 
-Para información sobre cascos de bomberos estructurales certificados NFPA 1970, consulte el artículo sobre [guía de cascos para bomberos](/blog/cascos-forestales-msa-cairns-guia).
+Si lo que necesita es la otra categoría, la de estructura, ahí el catálogo es otro: los cascos estructurales se documentan por serie y por perfil —el ala completa de la UST Traditional, el perfil ligero de la LT Series, el jet sin ala del Cairns XF1— y cada uno se certifica bajo NFPA 1970, no bajo NFPA 1950. Confundir las dos familias es el error de compra más común de esta línea, y se paga en las dos direcciones: un casco estructural pesa de más para caminar ocho horas de línea de defensa, y un casco forestal no está evaluado para el calor radiante de un interior.
 
 ## Los cascos forestales correctos: Bullard, 3M Peltor y alternativas
 

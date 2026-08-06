@@ -133,7 +133,7 @@
         ],
         "slug": "trajes-estructurales-nomex-pbi",
         "l3": {
-          "seoTitle": "Trajes estructurales Nomex y PBI NFPA 1970",
+          "seoTitle": "Trajes estructurales Nomex y PBI NFPA",
           "seoDescription": "Chaquetón y pantalón de tres capas en Nomex IIIA o PBI Matrix certificados NFPA 1970. Tallas XS a 4XL, corte hombre y mujer y cotización en 24 horas.",
           "h1": "Trajes estructurales para bombero en Nomex y PBI",
           "subtitulo": "Chaquetón y pantalón de tres capas certificados NFPA 1970: capa exterior en Nomex IIIA o PBI Matrix, barrera de humedad y barrera térmica, en tallas de XS a 4XL con corte para hombre y mujer.",
@@ -214,7 +214,7 @@
                 ],
                 "chip": "Certificación UL · expediente MH60435",
                 "l4": {
-                  "seoTitle": "Traje SKÖLD HERÖ PBI MAX 7.0 certificado UL",
+                  "seoTitle": "Traje SKÖLD HERÖ PBI MAX 7.0 con UL",
                   "seoDescription": "Traje estructural SKÖLD HERÖ con barrera PBI MAX de 7 oz, Stedair 3000 y Defender M. Certificación UL, expediente MH60435, tallas S a 4X y cotización en 24 h.",
                   "h1": "Traje estructural SKÖLD HERÖ con barrera PBI MAX 7.0",
                   "subtitulo": "Chaquetón y pantalón del conjunto HERÖ en su única configuración documentada: exterior PBI MAX de 7 oz en 70 % PBI y 30 % Kevlar, barrera de humedad Stedair 3000 y barrera térmica Defender M, con certificación de laboratorio UL bajo el expediente MH60435.",
@@ -492,7 +492,7 @@
                     },
                     {
                       "id": "cbrn",
-                      "eyebrow": "Lo que el fabricante no publica",
+                      "eyebrow": "La opción que no se documenta sola",
                       "titulo": "La declaración CBRN: qué dice y qué no",
                       "parrafos": [
                         "SKÖLD indica que el HERÖ cuenta con barreras interiores resistentes a agentes <strong>químicos, bacteriológicos, radiológicos y nucleares</strong>. Es una afirmación del fabricante, y la ficha <strong>no publica el ensayo, la norma ni el alcance</strong> de esa resistencia.",
@@ -540,7 +540,7 @@
                     },
                     {
                       "sector": "Brigadas industriales",
-                      "desc": "Para brigadas cuya matriz de riesgo y nivel de entrenamiento incluyan intervención estructural. El conjunto no sustituye equipo de respiración, evaluación atmosférica, comunicaciones ni respaldo."
+                      "desc": "Instalaciones con carga de fuego alta y personal que entra, no solo que evacúa. El conjunto es una capa del sistema: sin equipo de respiración, evaluación atmosférica, comunicaciones y respaldo, la prenda no compensa lo que falta."
                     },
                     {
                       "sector": "Licitación pública",
@@ -614,7 +614,8 @@
                       "q": "¿Qué datos necesitan para cotizar y de qué depende el tiempo de entrega?",
                       "a": "Necesitamos número de usuarios y funciones, presentación por partida —chaquetón, pantalón o completo—, tallas o disposición para recibir juego de muestra, color, edición normativa y certificado que exige tu compra, accesorios, y fecha objetivo. El plazo depende de si las claves salen de inventario o entran a programa de producción del fabricante: tallas medias en configuración estándar suelen salir en días, y bordado institucional o tallas extremas entran a fabricación. Te damos fecha comprometida por partida y te decimos de qué depende, en lugar de un plazo único que después no se cumple."
                     }
-                  ]
+                  ],
+                  "galeriaIntro": "Referencias del conjunto con la configuración de barrera exterior más resistente de la línea. El color y el patrón de cintas se eligen en la orden; la barrera, en la ficha."
                 }
               },
               {
@@ -746,16 +747,16 @@
                     },
                     {
                       "id": "lo-no-publicado",
-                      "eyebrow": "Lo que falta",
+                      "eyebrow": "Los cinco huecos",
                       "titulo": "Los cinco datos que la ficha no publica y qué decide cada uno",
                       "parrafos": [
                         "Esta es la parte que ningún catálogo te va a poner por escrito, así que la ponemos nosotros. No es una lista de defectos: es el mapa de lo que hay que resolver antes de firmar, y sirve igual para evaluar a cualquier proveedor que te ofrezca esta configuración."
                       ],
                       "tabla": {
                         "head": [
-                          "Dato ausente",
-                          "Qué decide",
-                          "Consecuencia de no tenerlo"
+                          "Hueco de la ficha",
+                          "De qué depende",
+                          "Qué pasa si no llega"
                         ],
                         "rows": [
                           [
@@ -859,8 +860,8 @@
                       ],
                       "tabla": {
                         "head": [
-                          "En la partida escribe",
-                          "En lugar de"
+                          "Redacción que sirve",
+                          "Redacción que se presta a interpretación"
                         ],
                         "rows": [
                           [
@@ -1026,7 +1027,8 @@
                       "q": "¿Cuánto tardan en conseguir la ficha y en cotizar?",
                       "a": "La cotización sale en menos de 24 horas hábiles con lo que está publicado y con el estado de cada dato pendiente marcado como tal. El tiempo de la ficha depende del fabricante, y no vamos a prometerte un plazo que no controlamos: te decimos cuándo la solicitamos y te avisamos en cuanto llega o si no llega. Antes de cerrar un pedido de brigada enviamos juego de tallas de muestra."
                     }
-                  ]
+                  ],
+                  "galeriaIntro": "Imágenes de referencia del conjunto. La barrera Advance no se distingue a la vista de ninguna de sus hermanas: la diferencia está en el laminado y en el certificado."
                 }
               },
               {
@@ -1185,16 +1187,16 @@
                     },
                     {
                       "id": "lo-no-publicado",
-                      "eyebrow": "Lo que falta",
+                      "eyebrow": "Movilidad sin cifras",
                       "titulo": "Los datos ausentes y qué decide cada uno en movilidad",
                       "parrafos": [
                         "Esta tabla es el mapa de lo que hay que resolver antes de firmar, y sirve igual para evaluar a cualquier proveedor que te ofrezca esta configuración."
                       ],
                       "tabla": {
                         "head": [
-                          "Dato ausente",
-                          "Qué decide",
-                          "Consecuencia de no tenerlo"
+                          "Dato sin publicar",
+                          "Qué define en movilidad",
+                          "Riesgo de no pedirlo"
                         ],
                         "rows": [
                           [
@@ -1281,8 +1283,8 @@
                       ],
                       "tabla": {
                         "head": [
-                          "En la partida escribe",
-                          "En lugar de"
+                          "Cómo pedirlo para que se cumpla",
+                          "Cómo suele escribirse"
                         ],
                         "rows": [
                           [
@@ -1452,7 +1454,8 @@
                       "q": "¿Cuánto tardan en organizar una demo y en cotizar?",
                       "a": "La cotización sale en menos de 24 horas hábiles con lo que está publicado y con el estado de cada dato pendiente marcado como tal. La demo depende de disponibilidad de prenda de muestra en la talla que necesitas y te damos fecha comprometida al confirmarla. El tiempo de respuesta del fabricante para la ficha no lo controlamos, así que no te prometemos un plazo: te decimos cuándo la solicitamos y te avisamos en cuanto llega."
                     }
-                  ]
+                  ],
+                  "galeriaIntro": "Referencias de uso donde importa esta configuración: gateo, arrastre y trabajo con los brazos por encima de la cabeza. La movilidad se evalúa vistiendo, no mirando."
                 }
               },
               {
@@ -1542,7 +1545,7 @@
                         "El <strong>SKÖLD HERÖ</strong> admite cinco barreras exteriores: Advance, Kombat Flex, PBI MAX 7.0, Pioneer y Defender 750. El conjunto no cambia —DRD en la espalda, cuello de cobertura 360°, arnés de Kevlar, refuerzos y claves de producto siguen siendo los del modelo—, pero sí cambia la combinación de tres capas que se certifica.",
                         "Esa distinción es la que hace que esta ficha exista. No es un detalle burocrático: es la diferencia entre entregar un expediente que resiste una auditoría y entregar un expediente que se cae en la primera pregunta. Y aplica igual a cualquier marca, no solo a SKÖLD."
                       ],
-                      "nota": "En la partida tiene que aparecer <strong>la configuración de barreras completa</strong>, no solo el modelo. “SKÖLD HERÖ” describe una familia, no un ensamble certificado."
+                      "nota": "Una partida que solo dice el modelo deja la decisión más importante en manos del proveedor: <strong>la configuración de barreras completa</strong> es lo que hay que escribir. “SKÖLD HERÖ” describe una familia, no un ensamble certificado."
                     },
                     {
                       "id": "como-funciona",
@@ -1653,16 +1656,16 @@
                     },
                     {
                       "id": "lo-no-publicado",
-                      "eyebrow": "Lo que falta",
+                      "eyebrow": "Composite sin declarar",
                       "titulo": "Sin las tres capas no se sabe qué composite se certificó",
                       "parrafos": [
                         "Los datos ausentes de esta configuración no son solo un problema de comparación: son exactamente los que definen el ensamble que un certificado tendría que amparar."
                       ],
                       "tabla": {
                         "head": [
-                          "Dato ausente",
-                          "Qué decide",
-                          "Consecuencia de no tenerlo"
+                          "Capa o valor ausente",
+                          "Qué queda sin definir",
+                          "Consecuencia en el certificado"
                         ],
                         "rows": [
                           [
@@ -1735,8 +1738,8 @@
                       ],
                       "tabla": {
                         "head": [
-                          "En la partida escribe",
-                          "En lugar de"
+                          "Texto que amarra el ensamble",
+                          "Texto que lo deja abierto"
                         ],
                         "rows": [
                           [
@@ -1836,7 +1839,7 @@
                     },
                     {
                       "sector": "Brigadas industriales",
-                      "desc": "Dotación conforme a NOM-002-STPS con expediente documental completo para auditoría interna y de cliente. La configuración de barreras se declara, no se asume."
+                      "desc": "Plantas que documentan cada compra para auditoría interna y de cliente. El punto fino de esta configuración es que sin las tres capas declaradas no hay ensamble definido, y sin ensamble definido el expediente queda abierto."
                     }
                   ],
                   "datoClave": {
@@ -1906,7 +1909,8 @@
                       "q": "¿Cuánto tardan en conseguir la declaración de alcance y en cotizar?",
                       "a": "La cotización sale en menos de 24 horas hábiles con lo que está publicado y con el estado de cada dato pendiente marcado como tal. El tiempo de respuesta del fabricante para la ficha y la declaración de alcance no lo controlamos y no vamos a prometerte un plazo: te decimos cuándo lo solicitamos y te avisamos en cuanto llega o si no llega. Si tu proceso no admite esperar, evaluamos PBI MAX 7.0."
                     }
-                  ]
+                  ],
+                  "galeriaIntro": "Referencias del conjunto. Las tres capas que definen esta configuración van una encima de la otra y ninguna es visible desde afuera."
                 }
               },
               {
@@ -1996,7 +2000,7 @@
                         "El <strong>SKÖLD HERÖ</strong> admite cinco barreras exteriores: Advance, Kombat Flex, PBI MAX 7.0, Pioneer y Defender 750. El conjunto no cambia —DRD en la espalda, cuello de cobertura 360°, arnés de Kevlar, refuerzos y claves de producto son los del modelo—; lo que cambia es la capa que recibe la llama y la abrasión.",
                         "Esta configuración tiene un problema adicional que no es técnico sino de nombre, y que en la práctica genera más errores de compra que cualquier discusión sobre telas. Lo abordamos primero porque es lo que más dinero cuesta cuando se pasa por alto."
                       ],
-                      "nota": "En la partida tiene que aparecer <strong>la configuración de barreras completa</strong>, no solo el modelo ni la familia comercial. “SKÖLD HERÖ Defender” no describe un ensamble."
+                      "nota": "Aquí el nombre engaña doble, así que conviene ser explícito: lo que va en la partida es <strong>la configuración de barreras completa</strong>, no el modelo ni la familia comercial. “SKÖLD HERÖ Defender” no describe un ensamble."
                     },
                     {
                       "id": "no-es-defender-m",
@@ -2112,16 +2116,16 @@
                     },
                     {
                       "id": "lo-no-publicado",
-                      "eyebrow": "Lo que falta",
+                      "eyebrow": "Después del nombre, el dato",
                       "titulo": "Los datos ausentes de esta configuración",
                       "parrafos": [
                         "Resuelta la ambigüedad de nombre, queda el vacío de información. Esta tabla es el mapa de lo que hay que pedir antes de firmar."
                       ],
                       "tabla": {
                         "head": [
-                          "Dato ausente",
+                          "Lo que no está en la hoja",
                           "Qué decide",
-                          "Consecuencia de no tenerlo"
+                          "Qué cuesta no tenerlo"
                         ],
                         "rows": [
                           [
@@ -2177,8 +2181,8 @@
                       ],
                       "tabla": {
                         "head": [
-                          "En la partida escribe",
-                          "En lugar de"
+                          "Cómo se escribe sin ambigüedad",
+                          "Cómo se escribe hoy"
                         ],
                         "rows": [
                           [
@@ -2241,7 +2245,7 @@
                       "titulo": "Primero la partida, después el precio",
                       "parrafos": [
                         "Revisamos tu requisición o tus bases para que cada capa aparezca nombrada con su función y su posición en el ensamble, y solicitamos al fabricante la ficha de la configuración con composición, gramaje, barreras interiores, valores de TPP y THL del ensamble armado y la declaración de alcance del certificado.",
-                        "Si la ficha no llega o llega incompleta, te lo decimos y comparamos contra PBI MAX 7.0 con lo que sí está publicado. Antes de cerrar un pedido de brigada enviamos <strong>juego de tallas de muestra</strong>: la tabla de medidas UL describe la prenda extendida, no el cuerpo del elemento."
+                        "Cuando el fabricante no manda la ficha completa, lo decimos en la propuesta y armamos la comparación contra PBI MAX 7.0 solo con lo que está publicado. Antes de cerrar un pedido de brigada enviamos <strong>juego de tallas de muestra</strong>: la tabla de medidas UL describe la prenda extendida, no el cuerpo del elemento."
                       ]
                     }
                   ],
@@ -2278,7 +2282,7 @@
                     },
                     {
                       "sector": "Brigadas industriales",
-                      "desc": "Dotación conforme a NOM-002-STPS con expediente documental completo. La configuración de barreras se declara capa por capa, no por familia comercial."
+                      "desc": "Dotación con expediente completo bajo NOM-002-STPS, donde la auditoría revisa papeles antes que prendas. Aquí la configuración se declara capa por capa: “SKÖLD HERÖ Defender 750” nombra una familia y una barrera, no un ensamble."
                     }
                   ],
                   "datoClave": {
@@ -2348,7 +2352,8 @@
                       "q": "¿Pueden revisar mis bases antes de que las publique?",
                       "a": "Sí, y es lo que recomendamos hacer primero. Revisamos que cada capa aparezca nombrada con su función y su posición en el ensamble, que el certificado se pida con expediente, organismo emisor y edición, y que las claves de producto y tallas queden especificadas como el fabricante las publica. Después cotizamos. Cuesta media hora y evita una aclaración de bases o una impugnación."
                     }
-                  ]
+                  ],
+                  "galeriaIntro": "Referencias del conjunto. Conviene recordar aquí que el nombre de la barrera y el del modelo se parecen: la clave de producto de la orden es lo que evita recibir otra cosa."
                 }
               }
             ]
@@ -2440,7 +2445,7 @@
               "eyebrow": "Ajuste y tallaje",
               "titulo": "El ajuste también es protección",
               "parrafos": [
-                "Un traje que no ajusta no protege menos por el material, protege menos por geometría: al levantar los brazos el chaquetón sube y descubre la cintura, y la norma exige un traslape mínimo entre chaquetón y pantalón que se pierde con dos tallas de más. El corte diferenciado para mujer no es un tema comercial: un patrón masculino sobre torso femenino genera holgura en el pecho y presión en el hombro, y ahí empieza la pérdida de movilidad.",
+                "Un traje que no ajusta no protege menos por el material, protege menos por geometría: al levantar los brazos el chaquetón sube y descubre la cintura, y la norma exige un traslape mínimo entre chaquetón y pantalón que se pierde con dos tallas de más. El mismo criterio aplica hacia afuera: el traje cierra contra el guante estructural en la muñeca, contra la bota estructural en el empeine y contra la capucha de bloqueo de partículas en el cuello, y ninguna de esas tres uniones se resuelve sola. El corte diferenciado para mujer no es un tema comercial: un patrón masculino sobre torso femenino genera holgura en el pecho y presión en el hombro, y ahí empieza la pérdida de movilidad.",
                 "Para un pedido de brigada tomamos cuatro medidas por elemento y enviamos un juego de tallas de muestra antes de cerrar el pedido. Es el paso que evita la escena clásica de la entrega: veinte trajes correctos y cinco imposibles de usar."
               ],
               "lista": [
@@ -2454,11 +2459,11 @@
                 },
                 {
                   "t": "Entrepierna",
-                  "d": "Determina el largo del pantalón sobre la bota. Un pantalón corto expone el empeine."
+                  "d": "Determina el largo del pantalón sobre la bota estructural. Un pantalón corto expone el empeine, y ese hueco no lo cubre ninguna de las dos piezas."
                 },
                 {
                   "t": "Estatura y largo de manga",
-                  "d": "Define el traslape con el guante y la posición de la cinta reflejante."
+                  "d": "Define el traslape con el guante —según se use puño gauntlet por fuera o wristlet por dentro— y la posición de la cinta reflejante."
                 }
               ]
             },
@@ -2512,7 +2517,7 @@
               "titulo": "PFAS en la barrera de humedad: qué preguntar",
               "parrafos": [
                 "Las barreras de humedad y los tratamientos repelentes que se usaron durante décadas se construyeron con fluoropolímeros de la familia <strong>PFAS</strong>. Varios cuerpos en Estados Unidos y Europa ya especifican ensambles PFAS-free en sus bases de compra, y los fabricantes están lanzando líneas alternas mientras la normativa se mueve. En México todavía no es un requisito, pero sí es una conversación que ya está ocurriendo dentro de las áreas de seguridad e higiene.",
-                "Nuestra postura es simple: te decimos qué barrera trae el ensamble que estás cotizando y si el fabricante tiene una declaración vigente al respecto. Un traje con barrera convencional sigue siendo certificable y seguro hoy; lo que no conviene es comprar a diez años sin saber qué estás comprando."
+                "Y no es exclusivo de esta línea: la barrera libre de PFAS ya aparece declarada en los guantes estructurales del catálogo, que es donde el mercado suele moverse primero. Nuestra postura es simple: te decimos qué barrera trae el ensamble que estás cotizando y si el fabricante tiene una declaración vigente al respecto. Un traje con barrera convencional sigue siendo certificable y seguro hoy; lo que no conviene es comprar a diez años sin saber qué estás comprando."
               ]
             }
           ],
@@ -2545,7 +2550,7 @@
             },
             {
               "sector": "Brigadas industriales",
-              "desc": "Dotación conforme a NOM-002-STPS dimensionada por carga de fuego de la planta, con expediente listo para auditoría interna y de cliente."
+              "desc": "Dotación dimensionada por la carga de fuego de la planta, no por número de empleados. El expediente que pide una auditoría es el mismo que pide una licitación: certificado del ensamble, edición normativa y trazabilidad por prenda."
             },
             {
               "sector": "Protección civil",
@@ -2604,7 +2609,8 @@
               "q": "¿Qué documentación entregan para una licitación de trajes?",
               "a": "Certificado del ensamble por fabricante, certificado del laboratorio que lo evaluó, carta de distribuidor autorizado, ficha técnica en español con composición de las tres capas, listado de número de serie y fecha de fabricación por prenda, procedimiento de lavado y retiro de servicio, y factura desglosada por partida y talla. Va completo y sin costo adicional; si la convocatoria pide un formato específico, lo armamos con ese formato."
             }
-          ]
+          ],
+          "galeriaIntro": "Referencias del conjunto en estación y en intervención. Lo que no se ve en ninguna foto es la barrera de humedad ni el forro térmico, que son las dos capas que deciden el TPP y el THL: esas van en la ficha, no en la imagen."
         }
       },
       {
@@ -2958,9 +2964,9 @@
                       ],
                       "tabla": {
                         "head": [
-                          "Decisión",
-                          "Opciones publicadas",
-                          "Cómo se escribe en la partida"
+                          "Qué se elige",
+                          "Lo que Bullard publica",
+                          "Cómo se escribe en la orden"
                         ],
                         "rows": [
                           [
@@ -3009,16 +3015,16 @@
                     },
                     {
                       "id": "lo-no-publicado",
-                      "eyebrow": "Lo que el fabricante no publica",
+                      "eyebrow": "Cuatro preguntas al fabricante",
                       "titulo": "Cuatro datos que la PX no trae en la ficha y hay que pedir",
                       "parrafos": [
                         "Esta serie está mejor documentada que el promedio del mercado —dimensiones, materiales, normas de la careta, descripción de la suspensión—, y aun así hay huecos que importan cuando la compra se evalúa por criterios y no por preferencia. Nombrarlos vale más que rellenarlos: un número inventado es lo que después no se puede sostener en una aclaración de bases."
                       ],
                       "tabla": {
                         "head": [
-                          "Dato ausente",
-                          "Qué decide",
-                          "Cómo se resuelve"
+                          "Dato que la PX no trae",
+                          "Para qué se necesita",
+                          "Dónde se consigue"
                         ],
                         "rows": [
                           [
@@ -3159,7 +3165,8 @@
                       "q": "¿Cómo se escribe la partida para que llegue exactamente esta configuración?",
                       "a": "Se fijan las seis decisiones —protección facial, protección ocular en renglón aparte, iluminación, barboquejo, color de coquilla y de cinta reflejante, orejera y sistema de confort— más la edición normativa vigente, el organismo certificador, el certificado del modelo cotizado, los números de parte de refacciones y la fecha de fabricación por unidad. Nosotros entregamos la propuesta ya desglosada así, con la clave por configuración y la cantidad por color."
                     }
-                  ]
+                  ],
+                  "galeriaIntro": "Perfiles y detalles de la serie. El visor retráctil se ve; los 36 puntos de ajuste de la suspensión y la clave de la careta cotizada, no."
                 }
               },
               {
@@ -3423,9 +3430,9 @@
                       ],
                       "tabla": {
                         "head": [
-                          "Decisión",
-                          "Opciones publicadas",
-                          "Cómo se escribe en la partida"
+                          "Punto de decisión",
+                          "Alternativas de la serie",
+                          "Cómo queda en la orden"
                         ],
                         "rows": [
                           [
@@ -3464,16 +3471,16 @@
                     },
                     {
                       "id": "lo-no-publicado",
-                      "eyebrow": "Lo que el fabricante no publica",
+                      "eyebrow": "Hasta la hoja más completa",
                       "titulo": "Cuatro huecos de la Traditional y cómo cerrarlos",
                       "parrafos": [
                         "La hoja de licitación de la serie es de las más completas del mercado en materiales y construcción, y aun así hay datos que no están. Decirlo es parte del trabajo: un número inventado es exactamente lo que no se sostiene en una aclaración de bases ni en una inconformidad."
                       ],
                       "tabla": {
                         "head": [
-                          "Dato ausente",
+                          "Hueco de la hoja de licitación",
                           "Qué decide",
-                          "Cómo se resuelve"
+                          "Cómo se cierra"
                         ],
                         "rows": [
                           [
@@ -3614,7 +3621,8 @@
                       "q": "¿Cómo se escribe la partida de una UST Traditional?",
                       "a": "Perfil de la serie, material de coquilla, dimensiones, acabado, color de coquilla y de trim reflejante, portafrente con el marcaje solicitado, protección facial y protección ocular en renglones separados, barboquejo, iluminación si aplica, edición normativa vigente, organismo certificador, certificado del modelo cotizado, números de parte de suspensión, orejera y borde, y fecha de fabricación por unidad. Nosotros entregamos la propuesta ya desglosada así, con cantidad por color y acabado."
                     }
-                  ]
+                  ],
+                  "galeriaIntro": "La silueta tradicional de ala completa en operación. Entre la Traditional y la LowRider la diferencia de perfil es visible; la de peso solo está publicada para una de las dos."
                 }
               },
               {
@@ -3839,16 +3847,16 @@
                     },
                     {
                       "id": "lo-no-publicado",
-                      "eyebrow": "Lo que el fabricante no publica",
+                      "eyebrow": "Fuerte en operación, débil en cifras",
                       "titulo": "Tres datos ausentes y una corrección que hicimos",
                       "parrafos": [
                         "El manual de la serie es fuerte en operación y débil en cifras de comparación. Lo decimos con nombre y apellido porque es lo que permite pedir el dato en lugar de suponerlo."
                       ],
                       "tabla": {
                         "head": [
-                          "Dato ausente",
-                          "Qué decide",
-                          "Cómo se resuelve"
+                          "Cifra que el manual no da",
+                          "Qué se compara con ella",
+                          "Cómo se obtiene"
                         ],
                         "rows": [
                           [
@@ -4022,7 +4030,8 @@
                       "q": "¿Qué documentación entregan con una dotación grande?",
                       "a": "Certificado del modelo cotizado referido a la edición normativa vigente, etiqueta legible y fecha de fabricación por unidad, ficha técnica con material de coquilla y sistema de ajuste, números de parte de banda de ratchet, careta, orejera e interior, procedimiento de limpieza y criterios de retiro, carta de distribuidor autorizado y factura desglosada por modelo y color. Para dotaciones grandes agregamos la hoja de registro de ajuste por elemento, con pestaña y poste."
                     }
-                  ]
+                  ],
+                  "galeriaIntro": "Referencias del perfil ligero en uso. El sistema de acople rápido de careta y goggles es lo que distingue a esta serie y es lo único que la foto alcanza a insinuar."
                 }
               },
               {
@@ -4045,7 +4054,7 @@
                 "slug": "msa-cairns-1836",
                 "fichaLabel": "el Cairns 1836",
                 "l4": {
-                  "seoTitle": "Casco MSA Cairns 1836 tradicional composite",
+                  "seoTitle": "Casco MSA Cairns 1836 de composite",
                   "seoDescription": "Casco MSA Cairns 1836: composite moldeado en una pieza, espesor de 0.075\" y 0.085\", peso de 1.5 a 1.8 kg, talla 5-3/8\" a 8-3/8\" y garantía de 10 años.",
                   "h1": "Casco estructural MSA Cairns 1836",
                   "subtitulo": "La tradicional vigente de MSA y la ficha con más datos publicados del catálogo: coquilla de composite moldeada en una pieza con espesor declarado por zona, peso de 53.6 a 63.0 oz según configuración, suspensión de seis vías con talla de 5-3/8\" a 8-3/8\" y garantía de diez años desde la fecha de fabricación.",
@@ -4289,16 +4298,16 @@
                     },
                     {
                       "id": "lo-no-publicado",
-                      "eyebrow": "Lo que el fabricante no publica",
+                      "eyebrow": "Tres huecos de la mejor documentada",
                       "titulo": "Incluso la ficha más completa deja tres huecos",
                       "parrafos": [
                         "Sería fácil presentar esta serie como si no le faltara nada, y sería falso. Aun siendo la mejor documentada del catálogo, hay tres datos que no están y que conviene pedir por escrito."
                       ],
                       "tabla": {
                         "head": [
-                          "Dato ausente",
-                          "Qué decide",
-                          "Cómo se resuelve"
+                          "Dato fuera de la ficha técnica",
+                          "Qué resuelve",
+                          "Cómo pedirlo"
                         ],
                         "rows": [
                           [
@@ -4424,7 +4433,8 @@
                       "q": "¿Qué documentación entregan con este modelo?",
                       "a": "Certificado del modelo y de la configuración cotizada con organismo certificador y alcance, constancia referida a la edición normativa vigente, etiqueta legible y fecha de fabricación por unidad, ficha técnica con espesor por zona, peso, dimensiones y rango de talla, números de parte de suspensión, orejeras, barboquejo, visor y portafrente, procedimiento de inspección y retiro, carta de distribuidor autorizado y factura desglosada por color y configuración."
                     }
-                  ]
+                  ],
+                  "galeriaIntro": "El perfil tradicional de composite en escena. Es el modelo mejor documentado del catálogo: casi todo lo que importa está en su ficha técnica, no en la imagen."
                 }
               },
               {
@@ -4584,7 +4594,7 @@
                     },
                     {
                       "id": "sin-peso-ni-edicion",
-                      "eyebrow": "Lo que el fabricante no publica",
+                      "eyebrow": "Sin peso y sin edición",
                       "titulo": "Ni peso ni edición: cómo se compra igual",
                       "parrafos": [
                         "Este modelo es el caso contrario al del Cairns 1836 de la misma marca: la construcción está bien descrita, pero <strong>MSA no publica peso ni especifica la edición normativa</strong> en la página del producto. No lo vamos a rellenar con la cifra de otro modelo ni con un “aproximadamente”.",
@@ -4592,9 +4602,9 @@
                       ],
                       "tabla": {
                         "head": [
-                          "Dato ausente",
+                          "Lo que MSA no publica del 660C",
                           "Qué decide",
-                          "Cómo se resuelve"
+                          "Cómo se suple"
                         ],
                         "rows": [
                           [
@@ -4668,9 +4678,9 @@
                       ],
                       "tabla": {
                         "head": [
-                          "Decisión",
-                          "Opciones publicadas",
-                          "Cómo se escribe en la partida"
+                          "Qué se define",
+                          "Configuraciones publicadas",
+                          "Cómo se pide"
                         ],
                         "rows": [
                           [
@@ -4816,7 +4826,8 @@
                       "q": "¿Cómo se escribe la partida de este modelo?",
                       "a": "Cinco decisiones más dos exigencias documentales. Las decisiones: color de coquilla con cantidad por color, protección facial —careta de 4\", TuffShield o Defender—, goggles como partida independiente, tipo de interior y barboquejo. Las exigencias: que el proveedor entregue peso por número de parte y certificado del modelo con edición normativa vigente, más fecha de fabricación por unidad. Nosotros entregamos la propuesta ya desglosada así, con los números de parte confirmados como vigentes."
                     }
-                  ]
+                  ],
+                  "galeriaIntro": "Perfil metro en operación, que es la razón de existir de este modelo: menos ala, más espacio libre al girar la cabeza en un vano."
                 }
               },
               {
@@ -5002,7 +5013,7 @@
                           ]
                         ]
                       },
-                      "nota": "Un patrón que funciona: <strong>dotar por función</strong>. La línea de ataque con ala completa y el equipo de rescate técnico con jet. Cuesta más en refacciones y resuelve mejor las dos maniobras, en lugar de comprometer las dos con un solo modelo."
+                      "nota": "Un patrón que funciona: <strong>dotar por función</strong>. La línea de ataque con ala completa y el equipo de rescate técnico con jet. Y conviene decidir en el mismo movimiento la protección facial: en un jet sin ala, la careta y los goggles cargan un trabajo que en una tradicional reparte el ala. Cuesta más en refacciones y resuelve mejor las dos maniobras, en lugar de comprometer las dos con un solo modelo."
                     },
                     {
                       "id": "integracion",
@@ -5040,9 +5051,9 @@
                       ],
                       "tabla": {
                         "head": [
-                          "Decisión",
-                          "Opciones publicadas",
-                          "Cómo se escribe en la partida"
+                          "Qué hay que elegir",
+                          "Lo que publica MSA",
+                          "Cómo se redacta"
                         ],
                         "rows": [
                           [
@@ -5076,16 +5087,16 @@
                     },
                     {
                       "id": "lo-no-publicado",
-                      "eyebrow": "Lo que el fabricante no publica",
+                      "eyebrow": "Lo que la página no dice",
                       "titulo": "Cuatro datos ausentes en la página consultada",
                       "parrafos": [
                         "En la página de producto que consultamos no aparecen datos que en el resto del catálogo sí están. Los nombramos para poder pedirlos, no para descalificar el modelo: un casco de plataforma se documenta por número de parte, y buena parte de esa documentación se entrega bajo solicitud."
                       ],
                       "tabla": {
                         "head": [
-                          "Dato ausente",
-                          "Qué decide",
-                          "Cómo se resuelve"
+                          "Ausencia en la página de producto",
+                          "Qué queda sin resolver",
+                          "Cómo se pregunta"
                         ],
                         "rows": [
                           [
@@ -5117,7 +5128,7 @@
                       "eyebrow": "Ciclo de vida",
                       "titulo": "Inspección de un casco con módulos y retiro",
                       "parrafos": [
-                        "La inspección de este casco tiene un componente que los demás no: además de revisar coquilla, interior, barboquejo, visor y la interfaz con la pieza facial del equipo de respiración, hay que <strong>verificar que los módulos enciendan y comuniquen</strong>, y revisar sus puntos de anclaje. Un módulo flojo es un enganche y un punto de entrada de contaminación.",
+                        "La inspección de este casco tiene un componente que los demás no: además de revisar coquilla, interior, barboquejo, visor y la interfaz con la pieza facial del equipo de respiración —y con el cuello del chaquetón y la capucha, que es donde se cierra el conjunto—, hay que <strong>verificar que los módulos enciendan y comuniquen</strong>, y revisar sus puntos de anclaje. Un módulo flojo es un enganche y un punto de entrada de contaminación.",
                         "La limpieza sigue el criterio de toda la línea —detergente suave y agua, sin solventes, adhesivos ni pinturas— con la ventaja de que los interiores se desmontan completos. Lo que no se moja es la electrónica, y por eso el procedimiento de lavado debe estar escrito para este modelo en particular."
                       ],
                       "nota": "El retiro se rige por <strong>NFPA 1850 (1851)</strong>: diez años desde la fecha de fabricación, más el retiro anticipado por impacto o daño. Los módulos tienen su propio ciclo: pueden reponerse sin retirar el casco, siempre que el repuesto sea el que corresponde al número de parte."
@@ -5226,7 +5237,8 @@
                       "q": "¿Cómo se especifica este modelo en una licitación?",
                       "a": "Por número de parte, con cinco renglones: talla y cantidad, color y acabado, módulos integrados con su consumible y repuesto, protección ocular indicando la declaración que la ampara, y un renglón de verificación documental que obliga al proveedor a entregar la constancia de alcance —norma, edición, número de parte y país— antes de la entrega. Sin ese último renglón, la partida queda abierta a que el alcance no sea el que la convocatoria supone."
                     }
-                  ]
+                  ],
+                  "galeriaIntro": "El perfil jet sin ala en uso. La luz y la comunicación integradas van por dentro de la coquilla y se piden por número de parte, no por descripción."
                 }
               }
             ]
@@ -5519,7 +5531,8 @@
               "q": "¿Qué debe pedir una licitación de cascos para que dos ofertas sean comparables?",
               "a": "Serie y modelo vigentes, material de coquilla, descripción literal de la suspensión con su número de parte, rango de talla, configuración de protección facial y de protección ocular en renglones separados, accesorios, color y marcaje, edición normativa vigente, organismo certificador, certificado del modelo cotizado, idioma del manual y fecha de fabricación por unidad. Sin ese desglose, dos cotizaciones del mismo precio pueden corresponder a cascos de categorías distintas."
             }
-          ]
+          ],
+          "galeriaIntro": "Perfiles de casco en operación. La silueta —ala completa, perfil metro o jet— es lo único de esta pieza que una foto sí resuelve; la coquilla, la cofia y la edición certificada se leen en la etiqueta interior."
         }
       },
       {
@@ -5558,7 +5571,7 @@
         ],
         "slug": "botas-dielectricas",
         "l3": {
-          "seoTitle": "Botas estructurales para bombero NFPA 1970",
+          "seoTitle": "Botas estructurales de bombero NFPA",
           "seoDescription": "Botas estructurales HAIX, Black Diamond y Croydon: caña de 11 a 16 pulgadas, puntera compuesta o de acero, anchos publicados y barrera CROSSTECH.",
           "h1": "Botas estructurales para bombero, de 11 a 16 pulgadas",
           "subtitulo": "Calzado de protección para combate estructural con caña de 11\" a 16\", puntera compuesta o de acero, plantilla antipunción, barrera CROSSTECH y sistemas de ancho publicados por el fabricante: la talla sin ancho declarado no resuelve el calce.",
@@ -5913,7 +5926,7 @@
               "eyebrow": "Carga sobre el usuario",
               "titulo": "El peso que casi nadie publica",
               "parrafos": [
-                "En una bota, el peso se paga en cada paso: es la parte del ensamble que el elemento levanta miles de veces por turno. Y aun así, de las nueve referencias que revisamos <strong>solo Croydon publica peso por par</strong>: 3,661 g la FILTREX y 3,225 g la RESCUE. HAIX, Black Diamond y LION-Thorogood no lo publican en las fuentes consultadas.",
+                "El peso se paga distinto en cada pieza del conjunto: en el casco estructural se paga en el cuello después de una hora de trabajo con la cabeza girada, y en la bota se paga en cada paso, porque es la parte del ensamble que el elemento levanta miles de veces por turno. Dicho de otra forma: es la parte del ensamble que el elemento levanta miles de veces por turno. Y aun así, de las nueve referencias que revisamos <strong>solo Croydon publica peso por par</strong>: 3,661 g la FILTREX y 3,225 g la RESCUE. HAIX, Black Diamond y LION-Thorogood no lo publican en las fuentes consultadas.",
                 "Eso deja al comprador con dos caminos honestos si el peso va a ser criterio de evaluación en una licitación: pedirlo por escrito al fabricante para la clave exacta —con la talla de referencia, porque el peso cambia con la talla— o especificar la referencia que sí lo publica. Lo que no funciona es estimarlo: una diferencia de 300 gramos por par es real en fatiga y no se puede inventar."
               ],
               "nota": "Cuando pidas peso, pídelo <strong>por par y con la talla de referencia indicada</strong>. Un peso “por bota” o sin talla no se puede comparar entre marcas."
@@ -5933,7 +5946,7 @@
                 },
                 {
                   "t": "Secado correcto",
-                  "d": "A temperatura ambiente, con circulación de aire y con la plantilla retirada. Nunca con calor directo. Un par de repuesto por elemento es lo que permite secar sin dejar a nadie sin bota."
+                  "d": "A temperatura ambiente, con circulación de aire y con la plantilla retirada. Nunca con calor directo. Es la misma lógica del guante estructural, donde dos pares por elemento son lo que permite secar sin dejar a nadie sin equipo. Un par de repuesto por elemento es lo que permite secar sin dejar a nadie sin bota."
                 },
                 {
                   "t": "Plantillas como consumible",
@@ -6042,7 +6055,8 @@
               "q": "¿Qué documentación entregan para una licitación de botas?",
               "a": "Certificado del modelo cotizado con la edición normativa vigente y el organismo certificador nombrado, etiqueta y ficha técnica con altura de caña, puntera, barrera y sistema de ancho, curva de tallas y anchos confirmada contra el levantamiento por usuario, números de parte de plantillas y agujetas de repuesto, procedimiento de secado e inspección, carta de distribuidor autorizado y factura desglosada por modelo, talla y ancho. Si la convocatoria pide un formato específico, lo armamos con ese formato."
             }
-          ]
+          ],
+          "galeriaIntro": "Uso del calzado en escena. Ninguna imagen muestra lo que decide la compra: la altura de caña en pulgadas, el ancho y la resistencia eléctrica declarada en ensayo del fabricante."
         }
       },
       {
@@ -6081,7 +6095,7 @@
         ],
         "slug": "guantes-de-intervencion",
         "l3": {
-          "seoTitle": "Guantes estructurales para bombero NFPA 1970",
+          "seoTitle": "Guantes estructurales de bombero NFPA",
           "seoDescription": "Guantes estructurales certificados NFPA 1970: puño gauntlet o wristlet, concha de canguro, koala o Kevlar, barrera declarada y tallas de XXS a Jumbo.",
           "h1": "Guantes estructurales para bombero, gauntlet y wristlet",
           "subtitulo": "Guante de intervención con concha de piel de canguro, koala, búfalo de agua o compuesto de Kevlar, barrera de humedad declarada por modelo y curvas de tallas que van de XXS a Jumbo: la pieza del conjunto donde la destreza también es un criterio de seguridad.",
@@ -6519,7 +6533,7 @@
             },
             {
               "sector": "Brigadas industriales",
-              "desc": "Para brigadas cuya matriz de riesgo y entrenamiento contemplen intervención con exposición térmica. Un guante estructural no sustituye al de extricación, químicos o superficie caliente."
+              "desc": "Donde el entrenamiento contempla intervención con exposición térmica y no solo evacuación. El guante estructural no sustituye al de extricación, al de químicos ni al de superficie caliente: son cuatro renglones distintos de la misma dotación."
             },
             {
               "sector": "Licitación pública",
@@ -6586,7 +6600,8 @@
               "q": "¿Cómo se secan y cada cuándo se reemplazan?",
               "a": "A temperatura ambiente, con circulación de aire y sin prensar: el calor directo endurece y agrieta la piel, y una concha endurecida ya perdió la destreza por la que se pagó. Dos pares por elemento es lo que permite secar sin dejar a nadie sin guante. El retiro sigue NFPA 1850 (1851) —diez años desde la fecha de fabricación— más el retiro anticipado por daño, endurecimiento, contaminación no removible o pérdida evidente de destreza."
             }
-          ]
+          ],
+          "galeriaIntro": "Manos en maniobra, que es donde se comprueba lo único que no se puede fotografiar: la destreza. El tipo de puño y el material de la concha sí se distinguen de cerca; la barrera de humedad, nunca."
         }
       },
       {
@@ -6625,7 +6640,7 @@
         ],
         "slug": "protector-de-cuello-y-capucha",
         "l3": {
-          "seoTitle": "Capuchas de bloqueo de partículas NFPA 1971",
+          "seoTitle": "Capuchas con bloqueo de partículas",
           "seoDescription": "Capuchas para bombero con capa de bloqueo de partículas: eficiencias publicadas de 0.1 a 1.0 micras, retención después de lavadas, bib de 21\" a 23\" y TPP y THL.",
           "h1": "Capuchas para bombero con bloqueo de partículas",
           "subtitulo": "Protector de cuello y capucha estructural en tejido aramídico o con capa intermedia de bloqueo de partículas: eficiencias declaradas entre 0.1 y 1.0 micras, retención después de 10 y de 100 lavadas, y bib de 21\" a 23\" para cerrar la interfaz con casco y pieza facial.",
@@ -7090,7 +7105,8 @@
               "q": "¿Cada cuándo se reemplaza una capucha?",
               "a": "Por dos criterios. El del conjunto: NFPA 1850 (1851) fija el retiro a los diez años de la fecha de fabricación, más el retiro anticipado por daño o contaminación no removible. Y el propio de la capa de partículas: cuando se superan los ciclos de lavado para los que el fabricante documenta retención de eficiencia. Por eso conviene registrar los lavados por pieza: es el único dato que permite retirarla contra evidencia y no contra su apariencia."
             }
-          ]
+          ],
+          "galeriaIntro": "La pieza en uso, bajo el casco y sobre el cuello del chaquetón. La capa de bloqueo de partículas va por dentro y no se ve: se pide por eficiencia publicada y por retención después de lavados."
         }
       },
       {
@@ -7129,8 +7145,8 @@
         ],
         "slug": "viseras-y-caretas",
         "l3": {
-          "seoTitle": "Viseras y caretas para casco de bombero NFPA",
-          "seoDescription": "Viseras, caretas, Bourkes y goggles para casco estructural: son componente del casco, no protección ocular primaria. Qué exigir en el certificado y qué nadie publica.",
+          "seoTitle": "Viseras y caretas para casco de bombero",
+          "seoDescription": "Viseras, caretas, Bourkes y goggles de casco estructural: son componente del casco, no protección ocular primaria. Qué pedir en el certificado.",
           "h1": "Viseras, caretas y goggles para casco estructural",
           "subtitulo": "Visor retráctil integrado, careta externa de 4 y 6 pulgadas, Bourkes y goggles: cuatro formas de cubrir la cara que la norma trata como componentes del casco, no como productos certificados por separado, y ninguna de ellas sustituye a la pieza facial del equipo de respiración.",
           "heroImg": {
@@ -7659,7 +7675,8 @@
               "q": "¿Hay una norma mexicana que cubra viseras y caretas de bombero?",
               "a": "No con requisitos de desempeño. La NOM de cascos de protección clasifica en clases G, E y C y prueba impacto, penetración, tensión eléctrica y combustión; no tiene un solo requisito óptico, y define “visera” como la parte del casco que se proyecta hacia el frente, es decir, el ala. La NOM de equipo de protección personal es de proceso: análisis de riesgos, determinación, entrega, capacitación y supervisión, y en su guía de referencia lista anteojos, goggles y pantalla facial. La forma correcta de armar el documento es citar NFPA para el desempeño y la NOM de EPP para el proceso."
             }
-          ]
+          ],
+          "galeriaIntro": "Configuraciones de protección facial en operación. Lo que una foto no puede mostrar es si ese componente quedó dentro del alcance del certificado del casco, que es justamente la pregunta de esta ficha."
         }
       }
     ],

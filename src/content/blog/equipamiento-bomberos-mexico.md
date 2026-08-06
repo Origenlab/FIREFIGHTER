@@ -33,6 +33,8 @@ El casco protege cabeza y cuello de impactos, calor y caída de objetos.
 - Visera protectora abatible contra radiación térmica
 - Modelos tradicionales europeos y americanos coexisten en México
 
+Las dos siluetas conviven en las estaciones mexicanas y no compiten: el ala completa tradicional —la UST Traditional es el ejemplo mejor documentado— y el perfil ligero de la LT Series responden a maniobras distintas. Lo que decide entre una y otra es el peso que el cuello aguanta en un turno largo y el espacio libre que queda al girar la cabeza dentro de un vano.
+
 ### Botas y guantes
 
 - **Botas**: suela antiderrapante, puntera de acero, resistentes a perforación y calor

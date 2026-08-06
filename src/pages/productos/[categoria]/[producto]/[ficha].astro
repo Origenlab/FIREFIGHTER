@@ -345,7 +345,9 @@ const faqSchema = faqs.length
             <div id="galeria" class="l3-sec">
               <div class="l3-sec-eyebrow"><i></i><span>Galería técnica</span></div>
               <h2 class="l3-sec-title">{card.modelo} {card.variante} en operación</h2>
-              <p class="l3-p">Imágenes de referencia del conjunto estructural y de su uso en estación e intervención. La configuración final se confirma por clave de producto en la orden.</p>
+              {/* Igual que en la L3: la intro de la galería es dato, no plantilla. Las once
+                  fichas L4 cerraban la galería con esta misma frase. */}
+              <p class="l3-p" set:html={il(l4?.galeriaIntro ?? 'Imágenes de referencia del conjunto estructural y de su uso en estación e intervención. La configuración final se confirma por clave de producto en la orden.')}></p>
               <div class="l3-gal">
                 {galeria.map((im: any) => (
                   <figure class="cs-shot cs-shot-sm">

@@ -13,6 +13,8 @@ Un casco industrial clase E está diseñado para resistir impacto vertical de ob
 
 La diferencia no es de grado. Es de categoría. Usar un casco industrial en combate de incendio estructural no es "protección reducida". Es ausencia de protección para las amenazas específicas que ese entorno presenta.
 
+Este artículo usa el USRHB como caso de estudio porque su documentación permite explicar cada criterio con números. Las series de la misma marca que hoy documentamos con ficha por configuración son la Bullard PX Series, la UST Traditional y la LT Series: si vas a redactar una partida, conviene revisarlas por número de parte y no por el nombre genérico de la familia.
+
 ## Por qué un casco de construcción no sirve en combate de incendio
 
 La confusión es comprensible: ambos son cascos, ambos son duros, ambos tienen certificación de algún tipo. El problema es que las amenazas son fundamentalmente diferentes.
@@ -50,6 +52,8 @@ Para verificar que la visera de cualquier casco tiene certificación NFPA 1970 r
 Lo que vemos en el mercado mexicano: cascos que tienen carcasa certificada pero cuya visera es un componente comercial sin certificación NFPA. El proveedor muestra el certificado del casco y confía en que el comprador no lea los detalles del componente.
 
 Lee los detalles del componente.
+
+Y conviene tenerlo presente al redactar la partida: la norma exige que el casco se suministre con **careta o goggles**, y cuando trae los dos, **solo uno de ellos tiene que formar parte del producto certificado**. Por eso la protección facial se pide indicando cuál componente quedó dentro del alcance del certificado. Las series Bullard que hoy documentamos con ficha por configuración son la **Bullard PX Series**, la **UST Traditional** y la **LT Series**, cada una con su propia combinación de visor retráctil, careta externa y goggles.
 
 ## Integración con capucha Nomex y SCBA
 

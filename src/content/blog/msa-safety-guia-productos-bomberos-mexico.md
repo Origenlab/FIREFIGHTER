@@ -87,6 +87,8 @@ El PASS integrado en el G1 combina alarma acústica de **104 dB** (audible a tra
 
 ## Cascos para bomberos: Gallet F1 XF y Cairns 1010
 
+**Nota de vigencia, revisada en 2026.** MSA marca hoy como descontinuados los Cairns 1044 y 1010, dos modelos que siguen apareciendo con frecuencia en especificaciones mexicanas. Si tu pliego los nombra, conviene actualizarlo: las series vigentes de la familia que documentamos con ficha propia son el Cairns 1836, tradicional de composite; el Cairns 660C Metro, de perfil bajo; y el Cairns XF1, tipo jet y sin ala. Pedir un modelo descontinuado por número de parte es la forma más rápida de dejar una partida sin ofertas válidas.
+
 ### MSA Gallet F1 XF: el estándar europeo de alta protección
 
 El **Gallet F1 XF** es el casco de combate de incendios más utilizado en Europa y uno de los más avanzados disponibles en México. Fabricado en Pont-Saint-Esprit, Francia, combina la ingeniería de composite de alta resistencia con una ergonomía desarrollada en colaboración con bomberos profesionales durante más de 15 años.

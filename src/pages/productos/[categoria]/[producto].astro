@@ -476,7 +476,10 @@ const faqSchema = faqs.length
             <div id="galeria" class="l3-sec">
               <div class="l3-sec-eyebrow"><i></i><span>Galería técnica</span></div>
               <h2 class="l3-sec-title">{prod.nombre} en operación</h2>
-              <p class="l3-p">Imágenes de referencia de la pieza y de su uso en estación e intervención. La configuración final se define en el pedido.</p>
+              {/* La intro de la galería vive en los datos: escrita en la plantilla salía idéntica
+                  en las seis fichas y era la frase que más delataba el molde. El fallback
+                  conserva el texto anterior para cualquier ficha que aún no la tenga. */}
+              <p class="l3-p" set:html={il(l3?.galeriaIntro ?? 'Imágenes de referencia de la pieza y de su uso en estación e intervención. La configuración final se define en el pedido.')}></p>
               <div class="l3-gal">
                 {galeria.map((im: any) => (
                   <figure class="cs-shot cs-shot-sm">
