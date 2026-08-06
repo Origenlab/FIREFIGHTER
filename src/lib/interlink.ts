@@ -183,9 +183,11 @@ export const REGLAS_SITIO: ReglaEnlace[] = [
   { termino: 'cilindro de aire respirable', href: '/productos/equipos-de-respiracion/cilindros-30-45-60-min', titulo: 'Cilindros de aire respirable para equipos autónomos' },
   { termino: 'cilindros', href: '/productos/equipos-de-respiracion/cilindros-30-45-60-min', titulo: 'Cilindros de aire respirable para equipos autónomos' },
   { termino: 'cilindro', href: '/productos/equipos-de-respiracion/cilindros-30-45-60-min', titulo: 'Cilindros de aire respirable para equipos autónomos' },
+  { termino: 'piezas faciales', href: '/productos/equipos-de-respiracion/mascaras-completas-3m', titulo: 'Piezas faciales de presión positiva y prueba de ajuste' },
+  { termino: 'prueba de ajuste', href: '/productos/equipos-de-respiracion/mascaras-completas-3m', titulo: 'Piezas faciales de presión positiva y prueba de ajuste' },
   { termino: 'careta', href: '/productos/epp-para-bomberos/viseras-y-caretas', titulo: 'Viseras, caretas y goggles para casco estructural' },
   { termino: 'goggles', href: '/productos/epp-para-bomberos/viseras-y-caretas', titulo: 'Viseras, caretas y goggles para casco estructural' },
-  { termino: 'pieza facial', href: '/productos/equipos-de-respiracion', titulo: 'Equipos de respiración autónoma certificados' },
+  { termino: 'pieza facial', href: '/productos/equipos-de-respiracion/mascaras-completas-3m', titulo: 'Piezas faciales de presión positiva y prueba de ajuste' },
 
   { termino: 'NFPA 1970', href: '/blog/nfpa-1971-mexico-norma-bomberos', titulo: 'NFPA 1970 en México: qué certifica y cómo leer un certificado' },
   { termino: 'NFPA 1971', href: '/blog/nfpa-1971-mexico-norma-bomberos', titulo: 'NFPA 1970 en México: qué certifica y cómo leer un certificado' },

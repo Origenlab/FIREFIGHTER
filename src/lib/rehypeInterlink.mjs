@@ -42,6 +42,7 @@ const GUANTES = `${P}/epp-para-bomberos/guantes-de-intervencion`;
 const VISERAS = `${P}/epp-para-bomberos/viseras-y-caretas`;
 const ERA = `${P}/equipos-de-respiracion/scba-scott-air-pak`;
 const CILINDROS = `${P}/equipos-de-respiracion/cilindros-30-45-60-min`;
+const FACIALES = `${P}/equipos-de-respiracion/mascaras-completas-3m`;
 const C = '/cumplimiento';
 
 /**
@@ -163,6 +164,13 @@ export const REGLAS_CATALOGO = [
   { termino: 'cilindros SCBA', href: CILINDROS, titulo: 'Cilindros de aire respirable para equipos autónomos' },
   { termino: 'cilindro SCBA', href: CILINDROS, titulo: 'Cilindros de aire respirable para equipos autónomos' },
   { termino: 'prueba hidrostática', href: CILINDROS, titulo: 'Cilindros de aire respirable para equipos autónomos' },
+  // Piezas faciales. "máscara" a secas aparece en artículos de purificadores y de soldadura.
+  { termino: 'piezas faciales', href: FACIALES, titulo: 'Piezas faciales de presión positiva y prueba de ajuste' },
+  { termino: 'pieza facial', href: FACIALES, titulo: 'Piezas faciales de presión positiva y prueba de ajuste' },
+  { termino: 'máscaras de SCBA', href: FACIALES, titulo: 'Piezas faciales de presión positiva y prueba de ajuste' },
+  { termino: 'máscara del SCBA', href: FACIALES, titulo: 'Piezas faciales de presión positiva y prueba de ajuste' },
+  { termino: 'prueba de ajuste', href: FACIALES, titulo: 'Piezas faciales de presión positiva y prueba de ajuste' },
+  { termino: 'fit test', href: FACIALES, titulo: 'Piezas faciales de presión positiva y prueba de ajuste' },
 
   // ── L2 · categorías
   { termino: 'EPP para bomberos', href: `${P}/epp-para-bomberos`, titulo: 'EPP para bomberos certificado NFPA 1970' },
