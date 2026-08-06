@@ -399,7 +399,10 @@ const faqSchema = faqs.length
                     ) : (
                       <a href={wa(`${prod.nombre} · ${c.marca} ${c.modelo} ${c.variante}`)} target="_blank" rel="noopener" class="cg-btn">
                         <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
-                        <span>Cotizar {c.variante}</span>
+                        {/* La variante no siempre es un buen texto de botón: en el ERA es el
+                            tipo de línea y dos cards la comparten. `fichaLabel` permite que
+                            el botón diga el modelo, que es lo que la persona escribe. */}
+                        <span>Cotizar {c.fichaLabel ?? c.variante}</span>
                       </a>
                     )}
                   </div>

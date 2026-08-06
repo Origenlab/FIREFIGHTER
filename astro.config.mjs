@@ -67,9 +67,16 @@ const SLUGS_REDIRIGIDOS = [
 
 // Fichas L3 en borrador (sin bloque `l3` en productos.json): salen con noindex,
 // asi que tampoco deben ir al sitemap. Se quitan de aqui al enriquecer la ficha.
-// Ya no queda ninguna L3 en borrador dentro de EPP para bomberos: las seis fichas tienen
-// bloque `l3`. La lista se conserva porque es el mecanismo de alta de las próximas categorías.
-const L3_BORRADOR = [];
+// EPP para bomberos está cerrada: sus seis fichas tienen bloque `l3`.
+// Equipos de respiración abrió el 2026-08-06 con la ficha del ERA; sus otros cinco productos
+// salen con noindex hasta que se enriquezcan, y se van quitando de esta lista uno por uno.
+const L3_BORRADOR = [
+  '/productos/equipos-de-respiracion/mascaras-completas-3m',
+  '/productos/equipos-de-respiracion/cilindros-30-45-60-min',
+  '/productos/equipos-de-respiracion/sistemas-rit-de-rescate',
+  '/productos/equipos-de-respiracion/reguladores-y-valvulas',
+  '/productos/equipos-de-respiracion/maletines-de-mantenimiento',
+];
 
 // Fichas de estado sin verificacion contra texto legal consolidado (confianza != alta):
 // salen con noindex, asi que tampoco deben ir al sitemap. Se quitan de aqui solas

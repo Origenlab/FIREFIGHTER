@@ -173,6 +173,12 @@ export const REGLAS_SITIO: ReglaEnlace[] = [
   { termino: 'capuchas', href: '/productos/epp-para-bomberos/protector-de-cuello-y-capucha', titulo: 'Capuchas con bloqueo de partículas certificadas' },
   { termino: 'protector de cuello', href: '/productos/epp-para-bomberos/protector-de-cuello-y-capucha', titulo: 'Capuchas con bloqueo de partículas certificadas' },
   { termino: 'caretas', href: '/productos/epp-para-bomberos/viseras-y-caretas', titulo: 'Viseras, caretas y goggles para casco estructural' },
+  // ── L3 de equipos de respiración. La categoría abrió el 2026-08-06. Estas reglas van antes
+  // que la de la categoría ('equipo de respiración') para que gane la ficha, que es más
+  // específica y es la que tiene el detalle de NIOSH y de la configuración aprobada.
+  { termino: 'equipos de respiración autónoma', href: '/productos/equipos-de-respiracion/scba-scott-air-pak', titulo: 'Equipos de respiración autónoma certificados NFPA 1970 y NIOSH' },
+  { termino: 'equipo de respiración autónomo', href: '/productos/equipos-de-respiracion/scba-scott-air-pak', titulo: 'Equipos de respiración autónoma certificados NFPA 1970 y NIOSH' },
+  { termino: 'ERA de circuito abierto', href: '/productos/equipos-de-respiracion/scba-scott-air-pak', titulo: 'Equipos de respiración autónoma certificados NFPA 1970 y NIOSH' },
   { termino: 'careta', href: '/productos/epp-para-bomberos/viseras-y-caretas', titulo: 'Viseras, caretas y goggles para casco estructural' },
   { termino: 'goggles', href: '/productos/epp-para-bomberos/viseras-y-caretas', titulo: 'Viseras, caretas y goggles para casco estructural' },
   { termino: 'pieza facial', href: '/productos/equipos-de-respiracion', titulo: 'Equipos de respiración autónoma certificados' },

@@ -40,6 +40,7 @@ const BOTAS = `${P}/epp-para-bomberos/botas-dielectricas`;
 const CAPUCHA = `${P}/epp-para-bomberos/protector-de-cuello-y-capucha`;
 const GUANTES = `${P}/epp-para-bomberos/guantes-de-intervencion`;
 const VISERAS = `${P}/epp-para-bomberos/viseras-y-caretas`;
+const ERA = `${P}/equipos-de-respiracion/scba-scott-air-pak`;
 const C = '/cumplimiento';
 
 /**
@@ -140,12 +141,25 @@ export const REGLAS_CATALOGO = [
   { termino: 'goggles estructurales', href: VISERAS, titulo: 'Viseras, caretas y goggles para casco estructural' },
   { termino: 'Bourkes', href: VISERAS, titulo: 'Viseras, caretas y goggles para casco estructural' },
 
+  // Equipos de respiración autónoma. Van ANTES de la regla de categoría 'SCBA' para que la
+  // ficha gane: es la que explica la doble certificación NIOSH + NFPA. Se exige "autónomo",
+  // "ERA" o el nombre de plataforma; "respiración" a secas aparece en artículos de espacios
+  // confinados y de líneas de aire, que son otro producto.
+  { termino: 'equipos de respiración autónoma', href: ERA, titulo: 'Equipos de respiración autónoma certificados NFPA 1970 y NIOSH' },
+  { termino: 'equipo de respiración autónomo', href: ERA, titulo: 'Equipos de respiración autónoma certificados NFPA 1970 y NIOSH' },
+  { termino: 'equipo de respiración autónoma', href: ERA, titulo: 'Equipos de respiración autónoma certificados NFPA 1970 y NIOSH' },
+  { termino: 'ERA de circuito abierto', href: ERA, titulo: 'Equipos de respiración autónoma certificados NFPA 1970 y NIOSH' },
+  { termino: 'MSA G1', href: ERA, titulo: 'Equipos de respiración autónoma certificados NFPA 1970 y NIOSH' },
+  { termino: 'Air-Pak', href: ERA, titulo: 'Equipos de respiración autónoma certificados NFPA 1970 y NIOSH' },
+  { termino: 'NIOSH', href: ERA, titulo: 'Equipos de respiración autónoma certificados NFPA 1970 y NIOSH' },
+  { termino: 'NFPA 1981', href: ERA, titulo: 'Equipos de respiración autónoma certificados NFPA 1970 y NIOSH' },
+
   // ── L2 · categorías
   { termino: 'EPP para bomberos', href: `${P}/epp-para-bomberos`, titulo: 'EPP para bomberos certificado NFPA 1970' },
   { termino: 'EPP estructural', href: `${P}/epp-para-bomberos`, titulo: 'EPP para bomberos certificado NFPA 1970' },
   { termino: 'equipo de protección personal', href: `${P}/epp-para-bomberos`, titulo: 'EPP para bomberos certificado NFPA 1970' },
-  { termino: 'equipos de respiración autónoma', href: `${P}/equipos-de-respiracion`, titulo: 'Equipos de respiración autónoma SCBA' },
-  { termino: 'equipo de respiración autónoma', href: `${P}/equipos-de-respiracion`, titulo: 'Equipos de respiración autónoma SCBA' },
+  // Las dos variantes de "equipo de respiración autónoma" ahora apuntan a la ficha L3, que es
+  // más específica; se quitaron de aquí para no dejar reglas muertas apuntando a la categoría.
   { termino: 'protección respiratoria', href: `${P}/equipos-de-respiracion`, titulo: 'Equipos de respiración autónoma SCBA' },
   { termino: 'SCBA', href: `${P}/equipos-de-respiracion`, titulo: 'Equipos de respiración autónoma SCBA' },
   { termino: 'sistemas fijos', href: `${P}/sistemas-contra-incendio`, titulo: 'Sistemas fijos contra incendio' },
