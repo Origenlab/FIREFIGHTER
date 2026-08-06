@@ -23,6 +23,7 @@ const MAX_ENLACES = 6;
 const P = '/productos';
 const TRAJES = `${P}/epp-para-bomberos/trajes-estructurales-nomex-pbi`;
 const CASCOS = `${P}/epp-para-bomberos/cascos-bullard-y-msa`;
+const BOTAS = `${P}/epp-para-bomberos/botas-dielectricas`;
 
 /**
  * El orden importa: lo más específico primero. En un solape gana el término que empieza antes
@@ -66,6 +67,15 @@ export const REGLAS_CATALOGO = [
   { termino: 'casco para bombero', href: CASCOS, titulo: 'Cascos estructurales Bullard y MSA certificados' },
   { termino: 'cascos Bullard', href: CASCOS, titulo: 'Cascos estructurales Bullard y MSA certificados' },
   { termino: 'casco Bullard', href: CASCOS, titulo: 'Cascos estructurales Bullard y MSA certificados' },
+
+  // Botas. Igual que en cascos: se exige "estructural", marca o "de bombero", porque "botas"
+  // a secas aparece en artículos de forestal y de calzado industrial.
+  { termino: 'botas estructurales', href: BOTAS, titulo: 'Botas estructurales para bombero certificadas' },
+  { termino: 'bota estructural', href: BOTAS, titulo: 'Botas estructurales para bombero certificadas' },
+  { termino: 'botas de bombero', href: BOTAS, titulo: 'Botas estructurales para bombero certificadas' },
+  { termino: 'bota de bombero', href: BOTAS, titulo: 'Botas estructurales para bombero certificadas' },
+  { termino: 'botas para bomberos', href: BOTAS, titulo: 'Botas estructurales para bombero certificadas' },
+  { termino: 'HAIX', href: BOTAS, titulo: 'Botas estructurales para bombero certificadas' },
 
   // ── L2 · categorías
   { termino: 'EPP para bomberos', href: `${P}/epp-para-bomberos`, titulo: 'EPP para bomberos certificado NFPA 1970' },

@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
-import { existsSync, statSync } from 'node:fs';
+import { existsSync, statSync, readFileSync } from 'node:fs';
 import rehypeInterlink from './src/lib/rehypeInterlink.mjs';
 
 // ─── Sitemap lastmod dinámico ──────────────────────────────────────────────
@@ -68,11 +68,24 @@ const SLUGS_REDIRIGIDOS = [
 // Fichas L3 en borrador (sin bloque `l3` en productos.json): salen con noindex,
 // asi que tampoco deben ir al sitemap. Se quitan de aqui al enriquecer la ficha.
 const L3_BORRADOR = [
-  '/productos/epp-para-bomberos/botas-dielectricas',
   '/productos/epp-para-bomberos/guantes-de-intervencion',
   '/productos/epp-para-bomberos/protector-de-cuello-y-capucha',
   '/productos/epp-para-bomberos/viseras-y-caretas',
 ];
+
+// Fichas de estado sin verificacion contra texto legal consolidado (confianza != alta):
+// salen con noindex, asi que tampoco deben ir al sitemap. Se quitan de aqui solas
+// al cambiar "confianza" a "alta" en src/data/cumplimiento-estados.json.
+const CUMPLIMIENTO_BORRADOR = JSON.parse(
+  readFileSync(join(ROOT, 'src/data/cumplimiento-estados.json'), 'utf8')
+)
+  .filter((e) => e.confianza !== 'alta')
+  .flatMap((e) => [
+    `/cumplimiento/estado/${e.slug}`,
+    ...JSON.parse(readFileSync(join(ROOT, 'src/data/cumplimiento-giros.json'), 'utf8')).map(
+      (g) => `/cumplimiento/estado/${e.slug}/${g.slug}`,
+    ),
+  ]);
 
 export default defineConfig({
   site: 'https://firefighter.com.mx',
@@ -82,7 +95,9 @@ export default defineConfig({
       priority: 0.7,
       filter: (page) => {
         const path = new URL(page).pathname.replace(/\/$/, '');
-        return !SLUGS_REDIRIGIDOS.includes(path) && !L3_BORRADOR.includes(path);
+        return !SLUGS_REDIRIGIDOS.includes(path)
+          && !L3_BORRADOR.includes(path)
+          && !CUMPLIMIENTO_BORRADOR.includes(path);
       },
       serialize: (item) => {
         // lastmod real por archivo fuente; si no se resuelve, se omite
