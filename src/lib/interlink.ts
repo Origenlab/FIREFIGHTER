@@ -144,9 +144,15 @@ export const REGLAS_SITIO: ReglaEnlace[] = [
   { termino: 'traje estructural', href: '/productos/epp-para-bomberos/trajes-estructurales-nomex-pbi', titulo: 'Trajes estructurales Nomex y PBI certificados' },
   { termino: 'guantes estructurales', href: '/productos/epp-para-bomberos/guantes-de-intervencion', titulo: 'Guantes estructurales para bombero certificados' },
   { termino: 'guante estructural', href: '/productos/epp-para-bomberos/guantes-de-intervencion', titulo: 'Guantes estructurales para bombero certificados' },
-  { termino: 'protección facial', href: '/productos/epp-para-bomberos/viseras-y-caretas', titulo: 'Viseras, caretas y goggles para casco estructural' },
-  { termino: 'careta del casco', href: '/productos/epp-para-bomberos/viseras-y-caretas', titulo: 'Viseras, caretas y goggles para casco estructural' },
-  { termino: 'viseras y caretas', href: '/productos/epp-para-bomberos/viseras-y-caretas', titulo: 'Viseras, caretas y goggles para casco estructural' },
+
+  // ── Cumplimiento · normativa mexicana. Va antes que las NFPA porque la NOM
+  // es la que tiene fuerza legal en México y es el destino que queremos reforzar.
+  { termino: 'NOM-002-STPS-2010', href: '/cumplimiento/normas/nom-002-stps-2010', titulo: 'NOM-002-STPS-2010: qué obliga y con qué numeral' },
+  { termino: 'NOM-002-STPS', href: '/cumplimiento/normas/nom-002-stps-2010', titulo: 'NOM-002-STPS-2010: qué obliga y con qué numeral' },
+  { termino: 'clasificación de riesgo de incendio', href: '/cumplimiento/normas/nom-002-stps-2010#clasificacion', titulo: 'Riesgo ordinario o alto: la Tabla A.1 de la NOM-002' },
+  { termino: 'Programa Interno de Protección Civil', href: '/cumplimiento#estados', titulo: 'Quién autoriza el Programa Interno en cada estado' },
+  { termino: 'protección civil', href: '/cumplimiento#estados', titulo: 'Normativa de protección civil por entidad federativa' },
+  { termino: 'brigada contra incendio', href: '/cumplimiento/normas/nom-002-stps-2010#brigadas', titulo: 'Cuándo la NOM-002 obliga a constituir brigada' },
 
   { termino: 'NFPA 1970', href: '/blog/nfpa-1971-mexico-norma-bomberos', titulo: 'NFPA 1970 en México: qué certifica y cómo leer un certificado' },
   { termino: 'NFPA 1971', href: '/blog/nfpa-1971-mexico-norma-bomberos', titulo: 'NFPA 1970 en México: qué certifica y cómo leer un certificado' },
