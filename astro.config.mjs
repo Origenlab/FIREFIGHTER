@@ -72,7 +72,6 @@ const SLUGS_REDIRIGIDOS = [
 // salen con noindex hasta que se enriquezcan, y se van quitando de esta lista uno por uno.
 const L3_BORRADOR = [
   '/productos/equipos-de-respiracion/mascaras-completas-3m',
-  '/productos/equipos-de-respiracion/cilindros-30-45-60-min',
   '/productos/equipos-de-respiracion/sistemas-rit-de-rescate',
   '/productos/equipos-de-respiracion/reguladores-y-valvulas',
   '/productos/equipos-de-respiracion/maletines-de-mantenimiento',

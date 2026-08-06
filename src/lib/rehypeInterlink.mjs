@@ -41,6 +41,7 @@ const CAPUCHA = `${P}/epp-para-bomberos/protector-de-cuello-y-capucha`;
 const GUANTES = `${P}/epp-para-bomberos/guantes-de-intervencion`;
 const VISERAS = `${P}/epp-para-bomberos/viseras-y-caretas`;
 const ERA = `${P}/equipos-de-respiracion/scba-scott-air-pak`;
+const CILINDROS = `${P}/equipos-de-respiracion/cilindros-30-45-60-min`;
 const C = '/cumplimiento';
 
 /**
@@ -153,6 +154,15 @@ export const REGLAS_CATALOGO = [
   { termino: 'Air-Pak', href: ERA, titulo: 'Equipos de respiración autónoma certificados NFPA 1970 y NIOSH' },
   { termino: 'NIOSH', href: ERA, titulo: 'Equipos de respiración autónoma certificados NFPA 1970 y NIOSH' },
   { termino: 'NFPA 1981', href: ERA, titulo: 'Equipos de respiración autónoma certificados NFPA 1970 y NIOSH' },
+  // Cilindros. Se exige "de aire respirable", "de fibra de carbono" o "SCBA": "cilindro" a secas
+  // aparece en artículos de extintores, de agentes limpios y de espuma.
+  { termino: 'cilindros de aire respirable', href: CILINDROS, titulo: 'Cilindros de aire respirable para equipos autónomos' },
+  { termino: 'cilindro de aire respirable', href: CILINDROS, titulo: 'Cilindros de aire respirable para equipos autónomos' },
+  { termino: 'cilindros de fibra de carbono', href: CILINDROS, titulo: 'Cilindros de aire respirable para equipos autónomos' },
+  { termino: 'cilindro de fibra de carbono', href: CILINDROS, titulo: 'Cilindros de aire respirable para equipos autónomos' },
+  { termino: 'cilindros SCBA', href: CILINDROS, titulo: 'Cilindros de aire respirable para equipos autónomos' },
+  { termino: 'cilindro SCBA', href: CILINDROS, titulo: 'Cilindros de aire respirable para equipos autónomos' },
+  { termino: 'prueba hidrostática', href: CILINDROS, titulo: 'Cilindros de aire respirable para equipos autónomos' },
 
   // ── L2 · categorías
   { termino: 'EPP para bomberos', href: `${P}/epp-para-bomberos`, titulo: 'EPP para bomberos certificado NFPA 1970' },
