@@ -25,6 +25,7 @@ const TRAJES = `${P}/epp-para-bomberos/trajes-estructurales-nomex-pbi`;
 const CASCOS = `${P}/epp-para-bomberos/cascos-bullard-y-msa`;
 const BOTAS = `${P}/epp-para-bomberos/botas-dielectricas`;
 const CAPUCHA = `${P}/epp-para-bomberos/protector-de-cuello-y-capucha`;
+const GUANTES = `${P}/epp-para-bomberos/guantes-de-intervencion`;
 
 /**
  * El orden importa: lo más específico primero. En un solape gana el término que empieza antes
@@ -89,6 +90,19 @@ export const REGLAS_CATALOGO = [
   { termino: 'capucha Nomex', href: CAPUCHA, titulo: 'Capuchas con bloqueo de partículas certificadas' },
   { termino: 'capucha de Nomex', href: CAPUCHA, titulo: 'Capuchas con bloqueo de partículas certificadas' },
   { termino: 'capucha aramídica', href: CAPUCHA, titulo: 'Capuchas con bloqueo de partículas certificadas' },
+
+  // Guantes. Misma cautela: "guantes" a secas cubre nitrilo, extricación y forestal, así que
+  // se exige "estructural", "de intervención", "de bombero" o la marca.
+  { termino: 'guantes estructurales', href: GUANTES, titulo: 'Guantes estructurales para bombero certificados' },
+  { termino: 'guante estructural', href: GUANTES, titulo: 'Guantes estructurales para bombero certificados' },
+  { termino: 'guantes de intervención', href: GUANTES, titulo: 'Guantes estructurales para bombero certificados' },
+  { termino: 'guante de intervención', href: GUANTES, titulo: 'Guantes estructurales para bombero certificados' },
+  { termino: 'guantes de bombero', href: GUANTES, titulo: 'Guantes estructurales para bombero certificados' },
+  { termino: 'guante de bombero', href: GUANTES, titulo: 'Guantes estructurales para bombero certificados' },
+  { termino: 'guantes para bomberos', href: GUANTES, titulo: 'Guantes estructurales para bombero certificados' },
+  { termino: 'guantes gauntlet', href: GUANTES, titulo: 'Guantes estructurales para bombero certificados' },
+  { termino: 'Shelby', href: GUANTES, titulo: 'Guantes estructurales para bombero certificados' },
+  { termino: 'Pro-Tech 8', href: GUANTES, titulo: 'Guantes estructurales para bombero certificados' },
 
   // ── L2 · categorías
   { termino: 'EPP para bomberos', href: `${P}/epp-para-bomberos`, titulo: 'EPP para bomberos certificado NFPA 1970' },
