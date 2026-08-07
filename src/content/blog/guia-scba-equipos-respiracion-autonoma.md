@@ -160,6 +160,12 @@ El **PSS 7000** de Drager (Alemania) está certificado bajo NFPA 1970 y EN 137 s
 
 ---
 
+### Componente que casi nunca se revisa: la conexión de rescate
+
+Desde la edición 2002 de la norma de SCBA, todo equipo certificado debe llevar una conexión universal de rescate —la RIC UAC— en una posición determinada, para que una fuente externa pueda reponerle aire al cilindro cuando el usuario está atrapado y no se le puede sacar. Es un acople del equipo, no un accesorio opcional, y por diseño es interoperable entre marcas: un fabricante declara por escrito que su manguera funciona con cualquier SCBA que cumpla esa edición o una posterior.
+
+Dos cosas que conviene saber antes de escribirlas en un procedimiento. La primera es que la conexión debe mantenerse limpia: los fabricantes advierten que no debe tener contacto con aceite ni grasa. La segunda es que la universalidad es del acople, no de la política de cada marca: una prohíbe expresamente usar esa conexión para pasar aire de un equipo autónomo a otro, y otra establece que un equipo de 5,500 psi solo puede recibir aire, nunca donarlo. Si la flota mezcla marcas, el procedimiento escrito tiene que adoptar la restricción más severa.
+
 ## Criterios de selección según perfil de brigada
 
 | Perfil de brigada | SCBA recomendado | Cilindro | Módulos adicionales |

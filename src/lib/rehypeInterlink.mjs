@@ -43,6 +43,7 @@ const VISERAS = `${P}/epp-para-bomberos/viseras-y-caretas`;
 const ERA = `${P}/equipos-de-respiracion/scba-scott-air-pak`;
 const CILINDROS = `${P}/equipos-de-respiracion/cilindros-30-45-60-min`;
 const FACIALES = `${P}/equipos-de-respiracion/mascaras-completas-3m`;
+const RIT = `${P}/equipos-de-respiracion/sistemas-rit-de-rescate`;
 const C = '/cumplimiento';
 
 /**
@@ -171,6 +172,16 @@ export const REGLAS_CATALOGO = [
   { termino: 'máscara del SCBA', href: FACIALES, titulo: 'Piezas faciales de presión positiva y prueba de ajuste' },
   { termino: 'prueba de ajuste', href: FACIALES, titulo: 'Piezas faciales de presión positiva y prueba de ajuste' },
   { termino: 'fit test', href: FACIALES, titulo: 'Piezas faciales de presión positiva y prueba de ajuste' },
+  // Sistemas RIT. "rescate" a secas es de las palabras más frecuentes del blog, así que todas
+  // las reglas exigen el contexto de aire o de cuadrilla.
+  { termino: 'sistemas RIT', href: RIT, titulo: 'Sistemas RIT de aire de rescate para bomberos' },
+  { termino: 'sistema RIT', href: RIT, titulo: 'Sistemas RIT de aire de rescate para bomberos' },
+  { termino: 'paquete RIT', href: RIT, titulo: 'Sistemas RIT de aire de rescate para bomberos' },
+  { termino: 'equipo de intervención rápida', href: RIT, titulo: 'Sistemas RIT de aire de rescate para bomberos' },
+  { termino: 'cuadrilla de intervención rápida', href: RIT, titulo: 'Sistemas RIT de aire de rescate para bomberos' },
+  { termino: 'aire de rescate', href: RIT, titulo: 'Sistemas RIT de aire de rescate para bomberos' },
+  { termino: 'transllenado', href: RIT, titulo: 'Sistemas RIT de aire de rescate para bomberos' },
+  { termino: 'RIC UAC', href: RIT, titulo: 'Sistemas RIT de aire de rescate para bomberos' },
 
   // ── L2 · categorías
   { termino: 'EPP para bomberos', href: `${P}/epp-para-bomberos`, titulo: 'EPP para bomberos certificado NFPA 1970' },

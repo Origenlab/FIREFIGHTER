@@ -85,10 +85,12 @@ La secuencia operativa completa de mayday que involucra al PASS:
 2. El oficial de mando recibe la alarma de mayday por radio si el bombero pudo transmitir, o por la señal del PASS
 3. El equipo RIC entra con instrucciones de última posición conocida del bombero
 4. El equipo RIC sigue la señal PASS para localización
-5. Al contactar al bombero caído, la conexión UAC del SCBA permite suministrar aire adicional mientras se prepara la extracción
+5. Al contactar al bombero caído se le repone aire por la conexión RIC UAC de su propio SCBA, mientras se prepara la extracción
 6. El PASS se desactiva solo cuando el bombero incapacitado está fuera de la zona de riesgo y en condición segura
 
 Ninguno de esos pasos funciona si el PASS estaba apagado en el paso 1.
+
+Conviene precisar qué ocurre en el paso 5, porque se malinterpreta seguido. El aire no sale del equipo del rescatista: sale de un paquete RIT independiente que la cuadrilla lleva consigo, y la maniobra no llena el cilindro del caído —iguala las presiones de las dos botellas y se detiene ahí—. Un fabricante publica que la igualación tarda alrededor de 60 segundos, y otro advierte por escrito que después de la transferencia no se obtiene la duración nominal de ninguno de los dos cilindros. Que el manómetro del rescatado se estabilice por debajo de «lleno» es el comportamiento normal del sistema.
 
 ## Señales de retiro del PASS
 

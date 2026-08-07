@@ -29,6 +29,12 @@ No existe una unidad de rescate vehicular completa que sea solo herramientas hid
 
 **Mangueras hidráulicas adicionales**: para escenarios donde la distancia entre el generador y el punto de trabajo excede las mangueras estándar. La longitud estándar de manguera (10 m) no alcanza en todos los escenarios.
 
+### Aire de Rescate para el Personal
+
+El renglón que casi nunca aparece en la lista de compra de una unidad, y que no protege a la víctima sino al rescatista: un paquete portátil de aire para reponerle aire a un bombero atrapado o sin autonomía. Lleva cilindro dedicado, reductor de presión y manguera con la conexión universal de rescate; según la configuración, también pieza facial de reemplazo.
+
+Dos advertencias antes de cotizarlo. Ninguno de estos paquetes está certificado, y no es un defecto: la aprobación de protección respiratoria se emite solo para respiradores completos, y un cilindro con manguera no lo es —un fabricante lo declara textualmente en su manual—. Y casi todos cotizan el cilindro por separado, así que una partida que dice «sistema RIT» sin desglose puede llegar sin botella. Existe además en el mercado la bolsa sola, anunciada como «bolsa RIT», que es exactamente eso: el contenedor vacío.
+
 ### Estabilización del Vehículo
 
 Conjunto de bloques y cuñas de rescate: madera dura o polímero de alta densidad, en múltiples tamaños, para estabilizar vehículos en posición sobre ruedas, sobre costado o sobre techo. Sin estabilización, no hay rescate seguro.

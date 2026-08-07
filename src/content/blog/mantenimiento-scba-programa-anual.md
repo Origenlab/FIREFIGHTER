@@ -68,6 +68,8 @@ La experiencia de mantenimiento de SCBA en México muestra un patrón consistent
 
 **Correas y hebillas del arnés:** el arnés soporta el peso del equipo en operación. Las correas se fatigan, especialmente en las zonas de hebilla. Una correa rota durante una operación puede hacer que el equipo se desplace de posición, interfiriendo con el movimiento y en casos extremos, con el acceso a los controles.
 
+**El paquete de aire de rescate:** no es una pieza del SCBA, pero se degrada por la misma razón que la válvula de bypass —porque nadie lo abre—. Un maletín de aire de rescate puede pasar años cerrado y verse perfecto mientras su cilindro se vence: la prueba hidrostática y la fecha de retiro corren igual guardado que en uso. Revise presión de botella y estado de la conexión de rescate en la misma rutina de la unidad, no en el inventario anual, y lleve registro de cada apertura con la presión encontrada.
+
 ## El registro de mantenimiento como documento legal
 
 Si un SCBA falla en operación y hay lesiones, la primera pregunta de cualquier investigación será: ¿cuándo fue el último mantenimiento y qué se verificó?

@@ -188,6 +188,11 @@ export const REGLAS_SITIO: ReglaEnlace[] = [
   { termino: 'careta', href: '/productos/epp-para-bomberos/viseras-y-caretas', titulo: 'Viseras, caretas y goggles para casco estructural' },
   { termino: 'goggles', href: '/productos/epp-para-bomberos/viseras-y-caretas', titulo: 'Viseras, caretas y goggles para casco estructural' },
   { termino: 'pieza facial', href: '/productos/equipos-de-respiracion/mascaras-completas-3m', titulo: 'Piezas faciales de presión positiva y prueba de ajuste' },
+  { termino: 'sistemas RIT', href: '/productos/equipos-de-respiracion/sistemas-rit-de-rescate', titulo: 'Sistemas RIT de aire de rescate para bomberos' },
+  { termino: 'sistema RIT', href: '/productos/equipos-de-respiracion/sistemas-rit-de-rescate', titulo: 'Sistemas RIT de aire de rescate para bomberos' },
+  { termino: 'paquete RIT', href: '/productos/equipos-de-respiracion/sistemas-rit-de-rescate', titulo: 'Sistemas RIT de aire de rescate para bomberos' },
+  { termino: 'aire de rescate', href: '/productos/equipos-de-respiracion/sistemas-rit-de-rescate', titulo: 'Sistemas RIT de aire de rescate para bomberos' },
+  { termino: 'transllenado', href: '/productos/equipos-de-respiracion/sistemas-rit-de-rescate', titulo: 'Sistemas RIT de aire de rescate para bomberos' },
 
   { termino: 'NFPA 1970', href: '/blog/nfpa-1971-mexico-norma-bomberos', titulo: 'NFPA 1970 en México: qué certifica y cómo leer un certificado' },
   { termino: 'NFPA 1971', href: '/blog/nfpa-1971-mexico-norma-bomberos', titulo: 'NFPA 1970 en México: qué certifica y cómo leer un certificado' },

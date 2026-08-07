@@ -71,7 +71,6 @@ const SLUGS_REDIRIGIDOS = [
 // Equipos de respiración abrió el 2026-08-06 con la ficha del ERA; sus otros cinco productos
 // salen con noindex hasta que se enriquezcan, y se van quitando de esta lista uno por uno.
 const L3_BORRADOR = [
-  '/productos/equipos-de-respiracion/sistemas-rit-de-rescate',
   '/productos/equipos-de-respiracion/reguladores-y-valvulas',
   '/productos/equipos-de-respiracion/maletines-de-mantenimiento',
 ];
