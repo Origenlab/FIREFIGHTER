@@ -685,3 +685,110 @@
   border-top: 1px solid #f4f4f5; padding-top: 11px;
   font-size: 0.74rem; font-weight: 600; color: #dc2626;
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   CUMPLIMIENTO · bloques ampliados de la ficha de estado
+   Municipios, plazos, sanciones, equipo y fuentes. Solo se renderizan
+   en las entidades cuyo JSON trae esos campos, así que estas clases
+   pueden no aparecer en 31 de las 32 fichas. Sin iconos, igual que el
+   resto de la sección: la jerarquía es tipográfica.
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── Municipio por municipio ── */
+.cmp-muni { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 20px; }
+@media (min-width: 900px) { .cmp-muni { grid-template-columns: 1fr 1fr; } }
+
+.cmp-mu {
+  background: #fff; border: 1px solid #e4e4e7; border-radius: 12px;
+  padding: 18px 19px 16px; display: flex; flex-direction: column;
+}
+.cmp-mu-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding-bottom: 12px; margin-bottom: 12px; border-bottom: 1px solid #f4f4f5;
+}
+.cmp-mu-n { font-size: 0.98rem; font-weight: 700; color: #09090b; margin: 0; line-height: 1.25; }
+.cmp-mu-costo {
+  flex-shrink: 0; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.03em;
+  color: #15803d; background: #f0fdf4; border: 1px solid #bbf7d0;
+  border-radius: 99px; padding: 3px 9px; white-space: nowrap;
+}
+.cmp-mu-costo.is-nd { color: #a1a1aa; background: #fafafa; border-color: #e4e4e7; }
+
+.cmp-mu-datos { margin: 0 0 12px; display: flex; flex-direction: column; gap: 9px; }
+.cmp-mu-datos > div { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 12px; }
+.cmp-mu-datos dt {
+  font-size: 0.6rem; font-weight: 800; letter-spacing: 0.09em;
+  text-transform: uppercase; color: #a1a1aa; padding-top: 2px;
+}
+.cmp-mu-datos dd { margin: 0; font-size: 0.78rem; color: #3f3f46; line-height: 1.65; }
+
+.cmp-mu-mas {
+  margin: 0 0 12px; background: #f8fafc; border-left: 3px solid #dc2626;
+  border-radius: 0 8px 8px 0; padding: 11px 13px;
+  font-size: 0.76rem; color: #52525b; line-height: 1.7;
+}
+.cmp-mu-mas b {
+  display: block; font-size: 0.56rem; font-weight: 800; letter-spacing: 0.1em;
+  text-transform: uppercase; color: #dc2626; margin-bottom: 4px;
+}
+.cmp-mu-fuente {
+  margin-top: auto; font-size: 0.72rem; font-weight: 600; color: #dc2626; text-decoration: none;
+}
+.cmp-mu-fuente:hover { text-decoration: underline; }
+
+/* ── Plazos del trámite ── */
+.cmp-plazo-head { display: flex; align-items: center; gap: 10px; margin: 20px 0 11px; }
+.cmp-plazo-head span {
+  font-size: 0.63rem; font-weight: 800; letter-spacing: 0.11em;
+  text-transform: uppercase; color: #09090b; white-space: nowrap;
+}
+.cmp-plazo-head i { flex: 1; height: 1px; background: #e4e4e7; }
+
+.cmp-plazos { display: flex; flex-direction: column; gap: 7px; }
+.cmp-plazo {
+  display: grid; grid-template-columns: 1fr; gap: 4px;
+  background: #fff; border: 1px solid #e4e4e7; border-radius: 10px; padding: 12px 15px;
+}
+@media (min-width: 768px) {
+  .cmp-plazo { grid-template-columns: 190px minmax(0, 1fr); gap: 18px; align-items: baseline; }
+}
+.cmp-plazo.is-hot { border-color: #fecaca; background: #fffbfb; }
+.cmp-plazo-t {
+  font-size: 0.8rem; font-weight: 700; color: #09090b; line-height: 1.4;
+  font-variant-numeric: tabular-nums;
+}
+.cmp-plazo.is-hot .cmp-plazo-t { color: #dc2626; }
+.cmp-plazo strong { display: block; font-size: 0.82rem; font-weight: 600; color: #3f3f46; line-height: 1.55; }
+.cmp-plazo em {
+  display: block; font-style: normal; font-size: 0.7rem; color: #a1a1aa;
+  line-height: 1.55; margin-top: 3px;
+}
+
+/* ── Equipo: puente al catálogo ── */
+.cmp-equipo { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 20px; }
+@media (min-width: 900px) { .cmp-equipo { grid-template-columns: 1fr 1fr; } }
+.cmp-eq {
+  display: flex; gap: 14px; text-decoration: none;
+  background: #fff; border: 1px solid #e4e4e7; border-radius: 12px; padding: 16px 18px;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.cmp-eq:hover { border-color: #dc2626; box-shadow: 0 6px 18px rgba(220,38,38,0.07); }
+.cmp-eq-n {
+  flex-shrink: 0; font-size: 0.72rem; font-weight: 800; color: #d4d4d8;
+  letter-spacing: 0.04em; font-variant-numeric: tabular-nums; padding-top: 2px;
+}
+.cmp-eq-t { display: block; font-size: 0.87rem; font-weight: 700; color: #09090b; line-height: 1.35; margin-bottom: 6px; }
+.cmp-eq-d { font-size: 0.76rem; color: #52525b; line-height: 1.7; margin: 0 0 10px; }
+.cmp-eq-cta { font-size: 0.73rem; font-weight: 600; color: #dc2626; }
+
+/* ── Fuentes oficiales ── */
+.cmp-fuentes { display: grid; grid-template-columns: 1fr; gap: 8px; margin-top: 18px; }
+@media (min-width: 768px) { .cmp-fuentes { grid-template-columns: 1fr 1fr; } }
+.cmp-fu {
+  display: flex; flex-direction: column; gap: 3px; text-decoration: none;
+  background: #fff; border: 1px solid #e4e4e7; border-radius: 10px; padding: 12px 14px;
+  transition: border-color 0.18s ease;
+}
+.cmp-fu:hover { border-color: #dc2626; }
+.cmp-fu-t { font-size: 0.78rem; font-weight: 600; color: #09090b; line-height: 1.5; }
+.cmp-fu-d { font-size: 0.68rem; color: #a1a1aa; }

@@ -7,7 +7,7 @@ import categorias from '../../../data/productos.json';
 import {
   GIROS, getGiro, REVISADO, AVISO_LEGAL,
   ESTADOS, PANORAMA, cruce, etiquetaRiesgo, claveRiesgo,
-  estadosPorRegion, otrosGiros as otrosGirosDe, rutaCruce, rutaGiro,
+  estadosPorRegion, otrosGiros as otrosGirosDe, rutaCruce, rutaGiro, enTexto, articulo, Articulo,
 } from '../../../lib/cumplimiento';
 
 export async function getStaticPaths() {
@@ -34,7 +34,7 @@ const masExigentes = ESTADOS
   .sort((a, b) => b.simulacrosMin - a.simulacrosMin);
 const simulacrosFed = g.riesgoNom === 'ordinario' ? 1 : 2;
 
-const descripcion = `Qué exige la ley mexicana en materia de protección contra incendios a un ${g.nombre.toLowerCase()}: extintores, detección, evacuación, brigadas y los documentos que revisa el inspector.`;
+const descripcion = `Qué exige la ley mexicana en materia de protección contra incendios a ${articulo(g.nombre)} ${g.nombre.toLowerCase()}: extintores, detección, evacuación, brigadas y los documentos que revisa el inspector.`;
 
 const bloques = [
   { id: 'extintores', t: 'Extintores y agentes', icono: 'M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z', items: g.extintores },
@@ -48,7 +48,7 @@ const faqSchema = {
   '@type': 'FAQPage',
   mainEntity: g.errores.map(e => ({
     '@type': 'Question',
-    name: `${e.titulo} — ¿por qué es un problema en un ${g.nombre.toLowerCase()}?`,
+    name: `${e.titulo} — ¿por qué es un problema en ${articulo(g.nombre)} ${g.nombre.toLowerCase()}?`,
     acceptedAnswer: { '@type': 'Answer', text: e.detalle },
   })),
 };
@@ -61,7 +61,7 @@ const artSchema = {
   description: descripcion,
   url,
   inLanguage: 'es-MX',
-  publisher: { '@type': 'Organization', name: 'FIREFIGHTER.COM.MX', url: SITE },
+  publisher: { '@type': 'Organization', name: 'FIREFIGHTER México', url: SITE },
 };
 ---
 
@@ -179,14 +179,14 @@ const artSchema = {
 
           <div class="l3-sec" id="estados">
             <div class="l3-sec-eyebrow"><i></i><span>El carril estatal</span></div>
-            <h2 class="l3-sec-title">Lo que le exige cada estado a un {g.nombre.toLowerCase()}</h2>
+            <h2 class="l3-sec-title">Lo que le exige cada estado a {articulo(g.nombre)} {g.nombre.toLowerCase()}</h2>
             <p class="l3-p">Todo lo anterior es la obligación <strong>federal</strong> de la <a class="l3-il" href="/cumplimiento/normas/nom-002-stps-2010">NOM-002-STPS-2010</a>, idéntica en las {PANORAMA.total} entidades. En paralelo corre el carril de <strong>protección civil</strong>, que sí cambia de un estado a otro: quién autoriza tu Programa Interno, cuánto dura, cuántos simulacros te exigen y si necesitas un consultor con registro estatal.</p>
             <p class="l3-p">Cada ficha de abajo cruza las dos autoridades para este giro en concreto y publica <strong>el número que realmente tienes que planear</strong>, que siempre es el más exigente de los dos. La cifra al lado de cada estado son los simulacros anuales resultantes de ese cruce.</p>
 
             {masExigentes.length > 0 && (
               <div class="l3-box l3-box-red">
                 <span class="l3-box-title">Dónde no basta con cumplir la NOM</span>
-                <p class="l3-box-copy">Para un {g.nombre.toLowerCase()} la NOM-002 pide {simulacrosFed === 1 ? 'un simulacro' : `${simulacrosFed} simulacros`} al año. En {masExigentes.length} {masExigentes.length === 1 ? 'entidad' : 'entidades'} la ley estatal pide más, y ahí el número que manda es el estatal: {masExigentes.slice(0, 6).map((e, i) => (<>{i > 0 ? ', ' : ''}<a class="l3-il" href={rutaCruce(e, g)}>{e.estado}</a> ({e.simulacrosMin})</>))}{masExigentes.length > 6 ? ' y otras más' : ''}.</p>
+                <p class="l3-box-copy">{Articulo(g.nombre)} {g.nombre.toLowerCase()} necesita, por la NOM-002, pide {simulacrosFed === 1 ? 'un simulacro' : `${simulacrosFed} simulacros`} al año. En {masExigentes.length} {masExigentes.length === 1 ? 'entidad' : 'entidades'} la ley estatal pide más, y ahí el número que manda es el estatal: {masExigentes.slice(0, 6).map((e, i) => (<>{i > 0 ? ', ' : ''}<a class="l3-il" href={rutaCruce(e, g)}>{e.estado}</a> ({e.simulacrosMin})</>))}{masExigentes.length > 6 ? ' y otras más' : ''}.</p>
               </div>
             )}
 
@@ -232,7 +232,7 @@ const artSchema = {
           <div class="l3-sec">
             <div class="l3-sec-eyebrow"><i></i><span>Qué comprar</span></div>
             <h2 class="l3-sec-title">El equipo que resuelve estos requisitos</h2>
-            <p class="l3-p">Los requisitos de arriba se traducen en equipo concreto. {categoria ? <>La línea que más pesa en este giro es <a class="l3-il" href={`/productos/${categoria.slug}`}>{categoria.nombre.toLowerCase()}</a>, pero casi ninguna instalación se resuelve con una sola categoría.</> : <>Casi ninguna instalación se resuelve con una sola categoría.</>} Antes de cotizar conviene tener la <a class="l3-il" href="/cumplimiento/normas/nom-002-stps-2010#clasificacion">clasificación de riesgo de incendio</a> hecha: de ese estudio dependen el número de extintores, la brigada y los sistemas fijos, y es lo primero que pide el inspector.</p>
+            <p class="l3-p">Los requisitos de arriba se traducen en equipo concreto. {categoria ? <>La línea que más pesa en este giro es <a class="l3-il" href={`/productos/${categoria.slug}`}>{enTexto(categoria.nombre)}</a>, pero casi ninguna instalación se resuelve con una sola categoría.</> : <>Casi ninguna instalación se resuelve con una sola categoría.</>} Antes de cotizar conviene tener la <a class="l3-il" href="/cumplimiento/normas/nom-002-stps-2010#clasificacion">clasificación de riesgo de incendio</a> hecha: de ese estudio dependen el número de extintores, la brigada y los sistemas fijos, y es lo primero que pide el inspector.</p>
             <div class="cmp-cross">
               <a href="/productos" class="cmp-cx">
                 <span class="cmp-cx-k">CAT</span>
@@ -287,13 +287,13 @@ const artSchema = {
           <div class="l3-box l3-box-dark">
             <span class="l3-box-title">¿Te cotizamos lo que falta?</span>
             <p class="l3-box-copy">Nos dedicamos a equipar, no a vender de más. Cuéntanos cómo es tu instalación y te decimos qué te aplica realmente y qué no necesitas comprar.</p>
-            <a href={waLink(`tengo un ${g.nombre.toLowerCase()} y quiero cotizar equipo contra incendios`)} target="_blank" rel="noopener" class="l3-btn-wa">
+            <a href={waLink(`tengo ${articulo(g.nombre)} ${g.nombre.toLowerCase()} y quiero cotizar equipo contra incendios`)} target="_blank" rel="noopener" class="l3-btn-wa">
               <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
               <span>Escribirnos por WhatsApp</span>
             </a>
             {categoria && (
               <a href={`/productos/${categoria.slug}`} class="l3-btn-ghost">
-                <span>Ver {categoria.nombre.toLowerCase()}</span>
+                <span>Ver {enTexto(categoria.nombre)}</span>
               </a>
             )}
           </div>

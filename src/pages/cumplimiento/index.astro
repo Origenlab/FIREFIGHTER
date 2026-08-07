@@ -190,7 +190,9 @@ const capas = [
             <span class="cmp-side-title">Cómo leer las fichas</span>
             <ul class="cmp-side-leg">
               <li><i class="is-ok"></i><span>Verificada contra el texto legal del congreso estatal o su periódico oficial.</span></li>
-              <li><i class="is-draft"></i><span>En verificación: viene de fuentes de gobierno que no pudimos contrastar. Sale con <code>noindex</code>.</span></li>
+              {PANORAMA.documentados < PANORAMA.total && (
+                <li><i class="is-draft"></i><span>En verificación: viene de fuentes de gobierno que no pudimos contrastar. Sale con <code>noindex</code>.</span></li>
+              )}
               <li><i class="is-bom"></i><span>La etiqueta roja indica de quién dependen los bomberos: municipal, estatal, integrado con protección civil o patronato.</span></li>
             </ul>
           </div>

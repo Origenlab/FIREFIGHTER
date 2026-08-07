@@ -229,6 +229,87 @@ export const AVISO_LEGAL =
    ════════════════════════════════════════════════════════════════════ */
 
 
+/* ── Bloques opcionales de la ficha de estado ───────────────────────────
+   Son opcionales a propósito: una entidad recién levantada tiene los seis
+   campos base y nada más, y su ficha sigue siendo válida. Conforme se
+   verifica más material se van llenando estos bloques y la plantilla los
+   va mostrando sola. Así se sube el nivel de una entidad sin tocar las 31
+   restantes ni dejar secciones vacías. */
+
+/** Régimen sancionador estatal. Los montos se publican en UMA y en pesos. */
+export interface SancionesEstado {
+  /** Artículo y ley de los que sale el rango. Se muestra al pie del bloque. */
+  fundamento: string;
+  /**
+   * Piso de la multa. **Opcional a propósito**: hay leyes que solo fijan techo
+   * y no mínimo. En ese caso se omite y la ficha dice que la ley no lo fija,
+   * en vez de inventar un cero o copiar el piso de otro estado.
+   */
+  umaMin?: number;
+  umaMax: number;
+  /** Tope en UMA cuando hay reincidencia. Omitir si la ley no lo agrava. */
+  reincidenciaUma?: number;
+  /** Sanciones que no son multa: clausura, suspensión, arresto. */
+  otras: string[];
+  /** El matiz que evita malinterpretar el rango. */
+  nota?: string;
+}
+
+/** Una fila de la línea de tiempo del trámite. */
+export interface PlazoEstado {
+  que: string;
+  plazo: string;
+  fundamento: string;
+  /** Ámbito del plazo: la ley estatal casi nunca los fija y conviene decirlo. */
+  ambito: 'estatal' | 'municipal';
+  destacado?: boolean;
+}
+
+/** Municipio con trámite propio documentado en fuente oficial. */
+export interface MunicipioEstado {
+  nombre: string;
+  /** Nombre del trámite tal como lo llama el municipio. */
+  tramite: string;
+  dependencia: string;
+  /** Vigencia publicada, o el texto que explique por qué no la hay. */
+  vigencia: string;
+  /** Costo publicado, con el detalle completo. `null` = no está publicado; se dice, no se inventa. */
+  costo: string | null;
+  /**
+   * Etiqueta corta del costo para el badge de la card, cuando el texto largo
+   * no se puede resumir solo. Sin esto, un municipio cuyo `costo` explica que
+   * NO hay tarifa salía con un badge verde de "Costo publicado".
+   * Si empieza con "Sin", el badge se pinta en gris.
+   */
+  costoResumen?: string;
+  /** Plazo de resolución publicado. */
+  resolucion?: string;
+  /** Lo que este municipio pide de más que el estado. Es el dato accionable. */
+  adicional?: string;
+  url?: string;
+}
+
+/** Pregunta frecuente propia de la entidad. Alimenta el FAQPage schema. */
+export interface FaqEstado {
+  q: string;
+  a: string;
+}
+
+/** Puente al catálogo: qué equipo se compra por una exigencia real de la entidad. */
+export interface EquipoEstado {
+  /** Qué hay que instalar o comprar. */
+  que: string;
+  /** De qué norma o reglamento sale. Sin fundamento no se publica. */
+  porque: string;
+  /** Slug de la categoría de `productos.json` a la que enlaza. */
+  categoria: string;
+}
+
+export interface FuenteEstado {
+  titulo: string;
+  url: string;
+}
+
 export interface EstadoNormativa {
   estado: string;
   slug: string;
@@ -244,6 +325,19 @@ export interface EstadoNormativa {
   consultor: string;
   distintivo: string;
   confianza: 'alta' | 'media';
+
+  // ── Opcionales. Ver el bloque de comentarios de arriba.
+  /** Fecha de revisión propia de esta entidad. Si falta, se usa `REVISADO`. */
+  revisado?: string;
+  sanciones?: SancionesEstado;
+  plazos?: PlazoEstado[];
+  municipios?: MunicipioEstado[];
+  /** Conclusión del bloque de municipios: en qué se diferencian entre sí. */
+  municipiosNota?: string;
+  faqs?: FaqEstado[];
+  equipo?: EquipoEstado[];
+  /** Fuentes oficiales de la ficha. Se listan al pie, con rel nofollow. */
+  fuentes?: FuenteEstado[];
 }
 
 export interface EstadoGeo {
@@ -272,12 +366,27 @@ export interface Estado extends EstadoNormativa {
 
 const geo = statesGeo as EstadoGeo[];
 
-/** Resume el campo `bomberos` en una etiqueta de una palabra para las cards. */
+/**
+ * Resume el campo `bomberos` en una etiqueta corta para las cards.
+ * Se deriva de la PRIMERA palabra del texto: al redactar el campo hay que
+ * empezar con el modelo ("Municipal.", "Estatal.", "Coexisten…") o la
+ * etiqueta sale mal. Ver el playbook de alta de estados.
+ */
 function modeloDeBomberos(txt: string): string {
   const t = txt.toLowerCase();
+  // Antes que 'patronato', porque una A.B.P. también suele describirse como
+  // sostenida por donativos y caería en la rama equivocada.
+  if (t.startsWith('asistencia privada') || t.includes('beneficencia privada') || t.includes('asistencia privada (a.b.p'))
+    return 'Asistencia privada';
+  // Antes que 'coexisten': el estado con agencia única estatal Y bomberos
+  // municipales propios no es ni 'Integrado con PC' ni 'Mixto' a secas.
+  if (t.startsWith('coexisten un organismo estatal integrado')) return 'Integrado + municipal';
   if (t.startsWith('integrado') || t.includes('misma dependencia') || t.includes('dentro de la coordinación estatal') || t.includes('dirección de bomberos'))
     return 'Integrado con PC';
   if (t.startsWith('estatal')) return 'Estatal';
+  // Antes de 'patronato': hay estados donde la ley no regula bomberos y cada
+  // municipio elige su modelo, así que el texto menciona patronatos sin serlo.
+  if (t.startsWith('municipal por convenio')) return 'Municipal por convenio';
   if (t.startsWith('no hay cuerpo') || t.includes('patronato')) return 'Patronato';
   if (t.startsWith('coexisten')) return 'Mixto';
   if (t.startsWith('municipal')) return 'Municipal';
@@ -430,3 +539,44 @@ export const girosDeCategoria = (productoSlug: string) =>
 
 /** Índice de dos dígitos para la cabecera tipográfica de las cards. */
 export const indice = (i: number) => String(i + 1).padStart(2, '0');
+
+/**
+ * Artículo indeterminado que le corresponde a un nombre de giro.
+ * Sin esto salía "un oficina corporativa", "un escuela" y "un gasolinera" en
+ * los títulos, los leads y las descripciones de las guías: cuatro de los diez
+ * giros empiezan con sustantivo femenino.
+ *
+ * La heurística mira solo la primera palabra, que es el núcleo del nombre, y
+ * la da por femenina si termina en 'a'. Cubre los diez giros del catálogo.
+ * Si algún día entra un giro como "el día" o "el mapa", agregar la excepción.
+ */
+export function articulo(nombre: string): 'un' | 'una' {
+  const nucleo = nombre.trim().split(/[\s,]+/)[0].toLowerCase();
+  return nucleo.endsWith('a') ? 'una' : 'un';
+}
+
+/** Igual que `articulo`, pero con mayúscula inicial para arrancar una frase. */
+export const Articulo = (nombre: string) => (articulo(nombre) === 'una' ? 'Una' : 'Un');
+
+/**
+ * Baja a minúsculas un nombre del catálogo para meterlo dentro de una frase,
+ * pero deja intactas las siglas. Sin esto, "EPP para Bomberos" salía como
+ * "ver epp para bomberos", que se lee como error de dedo.
+ */
+export const enTexto = (nombre: string) =>
+  nombre
+    .split(' ')
+    .map(p => (p.length > 1 && p === p.toUpperCase() ? p : p.toLowerCase()))
+    .join(' ');
+
+/**
+ * Fecha de revisión que se muestra en la ficha de una entidad.
+ * Cuando se verifica un estado a fondo se le pone `revisado` propio, en vez de
+ * mover `REVISADO` global y dar a entender que se revisaron los 32 ese día.
+ */
+export const revisadoDe = (e: Pick<Estado, 'revisado'>) => e.revisado ?? REVISADO;
+
+/** Entidades cuya ficha ya trae los bloques ampliados (sanciones, plazos, municipios, FAQs). */
+export const ESTADOS_AMPLIADOS = ESTADOS.filter(
+  e => e.sanciones || e.plazos?.length || e.municipios?.length || e.faqs?.length,
+);

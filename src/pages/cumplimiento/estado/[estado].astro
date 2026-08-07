@@ -3,10 +3,11 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import PageHero from '../../../components/layout/PageHero.astro';
 import { tituloSeo } from '../../../lib/seoText';
 import { waLink } from '../../../lib/blog';
+import categorias from '../../../data/productos.json';
 import {
   ESTADOS, GIROS, getEstado, cruce, etiquetaRiesgo, claveRiesgo,
   REGIONES, REVISADO, AVISO_LEGAL, UMBRALES, PANORAMA,
-  vecinosDe, rutaGiro, rutaCruce, indice,
+  vecinosDe, rutaGiro, rutaCruce, indice, revisadoDe, pesos, UMA, enTexto,
 } from '../../../lib/cumplimiento';
 
 export async function getStaticPaths() {
@@ -19,6 +20,9 @@ const slug = Astro.params.estado as string;
 const e = getEstado(slug)!;
 const url = `${SITE}/cumplimiento/estado/${e.slug}`;
 
+/** Portales genéricos que no sirven para verificar nada. Hoy ninguno en uso. */
+const PLACEHOLDERS_LEY: string[] = [];
+
 const region = REGIONES.find(r => r.key === e.region)?.nombre ?? '';
 const vecinos = vecinosDe(e);
 
@@ -26,7 +30,24 @@ const vecinos = vecinosDe(e);
    Es el argumento de por qué la ficha estatal no es redundante con la nacional. */
 const mandaElEstado = GIROS.filter(g => cruce(e, g).simulacrosOrigen === 'estatal');
 
-const descripcion = `Normativa de protección civil aplicable a empresas en ${e.estado}: ley estatal, quién autoriza el Programa Interno, vigencia, simulacros obligatorios y si se exige consultor registrado.`;
+/* Bloques ampliados. Son opcionales por entidad: una ficha recién levantada
+   solo tiene los seis campos base y la plantilla no renderiza nada de esto.
+   Ver el playbook de alta de estados antes de llenarlos. */
+const revisado = revisadoDe(e);
+const sanciones = e.sanciones;
+const plazos = e.plazos ?? [];
+const plazosEstatales = plazos.filter(p => p.ambito === 'estatal');
+const plazosMunicipales = plazos.filter(p => p.ambito === 'municipal');
+const municipios = e.municipios ?? [];
+const faqs = e.faqs ?? [];
+const fuentes = e.fuentes ?? [];
+/* Puente comercial: solo se publica el renglón cuya categoría existe de verdad
+   en el catálogo, para que el bloque nunca genere un enlace muerto. */
+const equipo = (e.equipo ?? [])
+  .map(x => ({ ...x, cat: (categorias as any[]).find(c => c.slug === x.categoria) }))
+  .filter(x => x.cat);
+
+const descripcion = `Normativa de protección civil aplicable a empresas en ${e.estado}: ley estatal, quién autoriza el Programa Interno, vigencia, simulacros obligatorios${municipios.length ? ', trámite municipio por municipio' : ''} y si se exige consultor registrado.`;
 
 const fichas = [
   { k: 'Ley aplicable', v: e.ley, sub: e.leyFecha },
@@ -37,6 +58,33 @@ const fichas = [
   { k: 'Consultor o tercero acreditado', v: e.consultor },
 ];
 
+/* Índice del sidebar: se arma de lo que la ficha realmente tiene, para no
+   ofrecer anclas que no existen en las entidades sin bloques ampliados. */
+const toc = [
+  { id: 'giros', t: 'Qué necesita tu giro' },
+  ...(municipios.length ? [{ id: 'municipios', t: `El trámite, municipio por municipio` }] : []),
+  ...(plazos.length ? [{ id: 'plazos', t: 'Plazos del trámite' }] : []),
+  ...(sanciones ? [{ id: 'sanciones', t: 'Cuánto cuesta no cumplir' }] : []),
+  ...(equipo.length ? [{ id: 'equipo', t: 'Qué equipo se compra' }] : []),
+  { id: 'nacional', t: 'La guía nacional del giro' },
+  { id: 'federal', t: 'Lo federal aplica igual' },
+  ...(faqs.length ? [{ id: 'preguntas', t: `Preguntas sobre ${e.estado}` }] : []),
+  { id: 'verificaciones', t: 'Antes de contratar' },
+];
+
+const faqSchema = faqs.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      mainEntity: faqs.map(f => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    }
+  : null;
+
 const artSchema = {
   '@context': 'https://schema.org',
   '@type': 'TechArticle',
@@ -46,7 +94,7 @@ const artSchema = {
   url,
   inLanguage: 'es-MX',
   spatialCoverage: { '@type': 'State', name: e.estado, containedInPlace: { '@type': 'Country', name: 'México' } },
-  publisher: { '@type': 'Organization', name: 'FIREFIGHTER.COM.MX', url: SITE },
+  publisher: { '@type': 'Organization', name: 'FIREFIGHTER México', url: SITE },
 };
 ---
 
@@ -63,6 +111,7 @@ const artSchema = {
 >
   <Fragment slot="head">
     {e.listo && <script type="application/ld+json" set:html={JSON.stringify(artSchema)} />}
+    {e.listo && faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
   </Fragment>
 
   <PageHero
@@ -74,7 +123,9 @@ const artSchema = {
     justificado
     bloques={[
       { label: 'Lo distintivo de este estado', texto: e.distintivo },
-      { label: 'Alcance de esta ficha', texto: `Cubre el marco <strong style="color:#e4e4e7;">estatal</strong>. Los trámites de apertura, el visto bueno de bomberos y el reglamento de construcción son en su mayoría <strong style="color:#e4e4e7;">municipales</strong> y cambian dentro del mismo estado: verifícalos siempre con el ayuntamiento donde esté el inmueble. Última revisión: ${REVISADO}.` },
+      { label: 'Alcance de esta ficha', texto: municipios.length
+        ? `Cubre el marco <strong style="color:#e4e4e7;">estatal</strong> y, además, el trámite de <strong style="color:#e4e4e7;">${municipios.length} municipios</strong> documentado en fuente oficial: qué se presenta, ante quién, cuánto cuesta, cuánto dura y qué pide de más cada uno. Es la parte que decide el calendario y el presupuesto, y la que casi nadie publica. Última revisión: ${revisado}.`
+        : `Cubre el marco <strong style="color:#e4e4e7;">estatal</strong>. Los trámites de apertura, el visto bueno de bomberos y el reglamento de construcción son en su mayoría <strong style="color:#e4e4e7;">municipales</strong> y cambian dentro del mismo estado: verifícalos siempre con el ayuntamiento donde esté el inmueble. Última revisión: ${revisado}.` },
     ]}
   >
     <div slot="ctas" style="display:flex; flex-wrap:wrap; gap:10px;">
@@ -117,7 +168,11 @@ const artSchema = {
                 </div>
               ))}
             </div>
-            {e.leyUrl && e.leyUrl !== 'https://www.jalisco.gob.mx/' && e.leyUrl !== 'https://legislaturaqueretaro.gob.mx/' && (
+            {/* Se filtran los portales genéricos que queden como placeholder: enlazar a
+                la home de un congreso no ayuda a verificar nada. La lista está vacía
+                porque las 32 entidades ya tienen URL directa al texto; se conserva el
+                guard por si entra una ficha nueva sin fuente localizada. */}
+            {e.leyUrl && !PLACEHOLDERS_LEY.includes(e.leyUrl) && (
               <a href={e.leyUrl} target="_blank" rel="noopener nofollow" class="cmp-fuente">
                 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                 <span>Consultar el texto oficial de la ley</span>
@@ -168,6 +223,155 @@ const artSchema = {
             )}
           </div>
 
+          {municipios.length > 0 && (
+            <div class="l3-sec" id="municipios">
+              <div class="l3-sec-eyebrow"><i></i><span>Lo que la ficha estatal no resuelve</span></div>
+              <h2 class="l3-sec-title">El trámite, municipio por municipio</h2>
+              <p class="l3-p">Todo lo anterior es el marco <strong>estatal</strong>. El trámite que realmente presentas, lo que cuesta, cada cuánto se renueva y qué te piden de más lo fija el <strong>reglamento municipal</strong>, y dentro de {e.estado} las diferencias son grandes. Esto es lo que pudimos documentar en fuente oficial de cada municipio.</p>
+              {e.municipiosNota && (
+                <div class="l3-box l3-box-red">
+                  <span class="l3-box-title">Lo que decide tu presupuesto</span>
+                  <p class="l3-box-copy">{e.municipiosNota}</p>
+                </div>
+              )}
+
+              <div class="cmp-muni">
+                {municipios.map(m => (
+                  <div class="cmp-mu">
+                    <div class="cmp-mu-head">
+                      <h3 class="cmp-mu-n">{m.nombre}</h3>
+                      {(() => {
+                        /* El badge resume; el detalle completo va siempre en la fila
+                           de abajo. Gris cuando no hay tarifa publicada o cuando el
+                           resumen dice que no la hay. */
+                        const etiqueta = m.costoResumen ?? (m.costo ? 'Costo publicado' : 'Costo no publicado');
+                        const gris = !m.costo || /^sin\b/i.test(etiqueta);
+                        return <span class={`cmp-mu-costo ${gris ? 'is-nd' : ''}`}>{etiqueta}</span>;
+                      })()}
+                    </div>
+                    <dl class="cmp-mu-datos">
+                      <div><dt>Trámite</dt><dd>{m.tramite}</dd></div>
+                      <div><dt>Dependencia</dt><dd>{m.dependencia}</dd></div>
+                      <div><dt>Vigencia</dt><dd>{m.vigencia}</dd></div>
+                      {m.resolucion && <div><dt>Resolución</dt><dd>{m.resolucion}</dd></div>}
+                      {m.costo && <div><dt>Costo</dt><dd>{m.costo}</dd></div>}
+                    </dl>
+                    {m.adicional && (
+                      <p class="cmp-mu-mas"><b>Lo que pide de más</b>{m.adicional}</p>
+                    )}
+                    {m.url && (
+                      <a href={m.url} target="_blank" rel="noopener nofollow" class="cmp-mu-fuente">Ver la fuente oficial</a>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              <p class="l3-nota">Los reglamentos municipales se reforman sin aviso y varios no publican tarifa. Confirma el costo y la vigencia en la ventanilla del municipio donde esté el inmueble antes de presupuestar: lo de aquí sirve para saber <strong>qué preguntar</strong>, no para dar por hecho.</p>
+            </div>
+          )}
+
+          {plazos.length > 0 && (
+            <div class="l3-sec" id="plazos">
+              <div class="l3-sec-eyebrow"><i></i><span>Calendario del trámite</span></div>
+              <h2 class="l3-sec-title">Cuánto tarda cada paso</h2>
+              {plazosEstatales.length > 0 && (
+                <>
+                  <div class="cmp-plazo-head"><span>Ámbito estatal</span><i></i></div>
+                  <div class="cmp-plazos">
+                    {plazosEstatales.map(p => (
+                      <div class={`cmp-plazo ${p.destacado ? 'is-hot' : ''}`}>
+                        <span class="cmp-plazo-t">{p.plazo}</span>
+                        <div style="min-width:0;">
+                          <strong>{p.que}</strong>
+                          <em>{p.fundamento}</em>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
+              {plazosMunicipales.length > 0 && (
+                <>
+                  <div class="cmp-plazo-head" style="margin-top:24px;"><span>Ámbito municipal</span><i></i></div>
+                  <div class="cmp-plazos">
+                    {plazosMunicipales.map(p => (
+                      <div class={`cmp-plazo ${p.destacado ? 'is-hot' : ''}`}>
+                        <span class="cmp-plazo-t">{p.plazo}</span>
+                        <div style="min-width:0;">
+                          <strong>{p.que}</strong>
+                          <em>{p.fundamento}</em>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
+          )}
+
+          {sanciones && (
+            <div class="l3-sec" id="sanciones">
+              <div class="l3-sec-eyebrow"><i></i><span>Consecuencias</span></div>
+              <h2 class="l3-sec-title">Cuánto cuesta no cumplir en {e.estado}</h2>
+              <p class="l3-p">Estas son las sanciones del <strong>carril estatal</strong> de protección civil. Corren en paralelo a las de la Secretaría del Trabajo por incumplir la <a class="l3-il" href="/cumplimiento/normas/nom-002-stps-2010#sanciones">NOM-002-STPS-2010</a>, que son federales y se acumulan: una inspección no excluye a la otra.</p>
+
+              <div class="cmp-multa">
+                {sanciones.umaMin !== undefined ? (
+                  <div class="cmp-multa-row">
+                    <span>Mínimo — {sanciones.umaMin.toLocaleString('es-MX')} UMA</span><strong>{pesos(sanciones.umaMin)}</strong>
+                  </div>
+                ) : (
+                  <div class="cmp-multa-row">
+                    <span>Mínimo</span><strong style="font-size:0.82rem; color:#71717a;">La ley no lo fija</strong>
+                  </div>
+                )}
+                <div class="cmp-multa-row">
+                  <span>Máximo — {sanciones.umaMax.toLocaleString('es-MX')} UMA</span><strong>{pesos(sanciones.umaMax)}</strong>
+                </div>
+                {sanciones.reincidenciaUma && (
+                  <div class="cmp-multa-row is-hot">
+                    <span>Reincidencia — hasta {sanciones.reincidenciaUma.toLocaleString('es-MX')} UMA</span><strong>{pesos(sanciones.reincidenciaUma)}</strong>
+                  </div>
+                )}
+              </div>
+
+              <p class="l3-p" style="margin-top:18px;">Calculado con la UMA vigente de <strong>${UMA.diaria}</strong> diarios ({UMA.fuente}, vigente desde el {UMA.vigenciaDesde}). Además de la multa, la autoridad puede imponer:</p>
+              <div class="cmp-check">
+                {sanciones.otras.map(o => <div><span>{o}</span></div>)}
+              </div>
+
+              {sanciones.nota && (
+                <div class="l3-box l3-box-red" style="margin-top:18px;">
+                  <span class="l3-box-title">El dato que se cita mal</span>
+                  <p class="l3-box-copy">{sanciones.nota}</p>
+                </div>
+              )}
+
+              <p class="l3-nota"><strong>Fundamento.</strong> {sanciones.fundamento}</p>
+            </div>
+          )}
+
+          {equipo.length > 0 && (
+            <div class="l3-sec" id="equipo">
+              <div class="l3-sec-eyebrow"><i></i><span>De la norma al presupuesto</span></div>
+              <h2 class="l3-sec-title">Qué equipo se compra para cumplir en {e.estado}</h2>
+              <p class="l3-p">Los requisitos de arriba se traducen en compras concretas. Estos son los renglones que en {e.estado} salen de una exigencia local y no solo del mínimo federal, con el fundamento de cada uno. Antes de cotizar conviene tener hecha la <a class="l3-il" href="/cumplimiento/normas/nom-002-stps-2010#clasificacion">clasificación de riesgo de incendio</a>: de ella dependen las cantidades.</p>
+              <div class="cmp-equipo">
+                {equipo.map((x, i) => (
+                  <a href={`/productos/${x.cat.slug}`} class="cmp-eq">
+                    <span class="cmp-eq-n">{indice(i)}</span>
+                    <div style="min-width:0;">
+                      <strong class="cmp-eq-t">{x.que}</strong>
+                      <p class="cmp-eq-d">{x.porque}</p>
+                      <span class="cmp-eq-cta">Ver {enTexto(x.cat.nombre)}</span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+              <p class="l3-nota">No compres contra esta lista sin haber clasificado tu centro de trabajo. Si algo de aquí no te aplica, te lo decimos: <a class="l3-il" href="/productos">el catálogo completo</a> está para lo que sí necesitas, no para llenar una cotización.</p>
+            </div>
+          )}
+
           <div class="l3-sec" id="nacional">
             <div class="l3-sec-eyebrow"><i></i><span>La otra entrada</span></div>
             <h2 class="l3-sec-title">La guía nacional de cada giro</h2>
@@ -214,6 +418,23 @@ const artSchema = {
             </a>
           </div>
 
+          {faqs.length > 0 && (
+            <div class="l3-sec" id="preguntas">
+              <div class="l3-sec-eyebrow"><i></i><span>Preguntas frecuentes</span></div>
+              <h2 class="l3-sec-title">Lo que nos preguntan de {e.estado}</h2>
+              <p class="l3-p">Dudas propias de esta entidad. Las generales del cumplimiento contra incendios en México están en el <a class="l3-il" href="/cumplimiento">centro de cumplimiento</a>.</p>
+              {faqs.map(f => (
+                <details class="l2-faq">
+                  <summary>
+                    {f.q}
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="transition:transform 0.2s ease;" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                  </summary>
+                  <div class="l2-faq-body">{f.a}</div>
+                </details>
+              ))}
+            </div>
+          )}
+
           <div class="l3-sec" id="verificaciones">
             <div class="l3-sec-eyebrow"><i></i><span>Antes de contratar</span></div>
             <h2 class="l3-sec-title">Tres verificaciones que evitan repetir el trámite</h2>
@@ -245,8 +466,24 @@ const artSchema = {
             </div>
           )}
 
+          {fuentes.length > 0 && (
+            <div class="l3-sec" id="fuentes">
+              <div class="l3-sec-eyebrow"><i></i><span>De dónde sale cada dato</span></div>
+              <h2 class="l3-sec-title">Fuentes oficiales de esta ficha</h2>
+              <p class="l3-p">Publicamos el enlace para que puedas verificarlo por tu cuenta. Si algo de esta ficha ya no coincide con el texto vigente, te agradecemos el aviso y lo corregimos.</p>
+              <div class="cmp-fuentes">
+                {fuentes.map(f => (
+                  <a href={f.url} target="_blank" rel="noopener nofollow" class="cmp-fu">
+                    <span class="cmp-fu-t">{f.titulo}</span>
+                    <span class="cmp-fu-d">{(() => { try { return new URL(f.url).hostname.replace(/^www\./, ''); } catch { return ''; } })()}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
           <p class="cmp-legal" style="margin-top:34px;">
-            <strong>Aviso.</strong> {AVISO_LEGAL} Esta ficha cubre el marco estatal; los trámites municipales varían dentro del mismo estado. Última revisión normativa: {REVISADO}.
+            <strong>Aviso.</strong> {AVISO_LEGAL} Esta ficha cubre el marco estatal{municipios.length ? ' y el trámite de los municipios que pudimos documentar en fuente oficial' : '; los trámites municipales varían dentro del mismo estado'}. Última revisión normativa de esta ficha: {revisado}.
           </p>
         </div>
 
@@ -254,10 +491,7 @@ const artSchema = {
 
           <nav class="l3-toc" aria-label="Contenido de la ficha">
             <span class="l3-box-title">En esta ficha</span>
-            <a href="#giros">Qué necesita tu giro</a>
-            <a href="#nacional">La guía nacional del giro</a>
-            <a href="#federal">Lo federal aplica igual</a>
-            <a href="#verificaciones">Antes de contratar</a>
+            {toc.map(s => <a href={`#${s.id}`}>{s.t}</a>)}
           </nav>
 
 

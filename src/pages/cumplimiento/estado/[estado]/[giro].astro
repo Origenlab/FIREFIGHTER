@@ -7,7 +7,7 @@ import categorias from '../../../../data/productos.json';
 import {
   ESTADOS, GIROS, getEstado, getGiro, cruce, etiquetaRiesgo, claveRiesgo,
   REGIONES, REVISADO, AVISO_LEGAL, PANORAMA,
-  vecinosDe, otrosGiros as otrosGirosDe, rutaCruce, rutaGiro, rutaEstado,
+  vecinosDe, otrosGiros as otrosGirosDe, rutaCruce, rutaGiro, rutaEstado, enTexto, articulo, Articulo,
 } from '../../../../lib/cumplimiento';
 
 export async function getStaticPaths() {
@@ -32,8 +32,10 @@ const otrosGiros = otrosGirosDe(g);
    sin él, las 320 fichas de cruce solo se alcanzan desde su estado padre. */
 const mismoGiroVecinos = vecinosDe(e);
 const nombreBajo = g.nombre.toLowerCase();
+const art = articulo(g.nombre);
+const Art = Articulo(g.nombre);
 
-const descripcion = `Qué exige la ley a un ${nombreBajo} en ${e.estado}: extintores, simulacros, brigada, Programa Interno de Protección Civil y los documentos que revisa el inspector. Obligación federal y estatal en una sola guía.`;
+const descripcion = `Qué exige la ley a ${art} ${nombreBajo} en ${e.estado}: extintores, simulacros, brigada, Programa Interno de Protección Civil y los documentos que revisa el inspector. Obligación federal y estatal en una sola guía.`;
 
 const artSchema = {
   '@context': 'https://schema.org',
@@ -44,7 +46,7 @@ const artSchema = {
   url,
   inLanguage: 'es-MX',
   spatialCoverage: { '@type': 'State', name: e.estado, containedInPlace: { '@type': 'Country', name: 'México' } },
-  publisher: { '@type': 'Organization', name: 'FIREFIGHTER.COM.MX', url: SITE },
+  publisher: { '@type': 'Organization', name: 'FIREFIGHTER México', url: SITE },
 };
 
 const cifras = [
@@ -74,7 +76,7 @@ const cifras = [
     eyebrow={`${e.estado} · ${region}`}
     badge={etiquetaRiesgo(g.riesgoNom)}
     h1={`${g.nombre}<br>en ${e.estado}:<br>qué exige la ley`}
-    lead={`Un ${nombreBajo} en ${e.estado} responde ante <strong style="color:#e4e4e7;">dos autoridades a la vez</strong>: la Secretaría del Trabajo, con obligaciones idénticas en todo el país, y la protección civil de ${e.estado}, con reglas propias. Esta guía cruza ambas y te dice el número que tienes que cumplir, que siempre es el más exigente de los dos.`}
+    lead={`${Art} ${nombreBajo} en ${e.estado} responde ante <strong style="color:#e4e4e7;">dos autoridades a la vez</strong>: la Secretaría del Trabajo, con obligaciones idénticas en todo el país, y la protección civil de ${e.estado}, con reglas propias. Esta guía cruza ambas y te dice el número que tienes que cumplir, que siempre es el más exigente de los dos.`}
     alinear="center"
     justificado
     bloques={[
@@ -83,7 +85,7 @@ const cifras = [
     ]}
   >
     <div slot="ctas" style="display:flex; flex-wrap:wrap; gap:10px;">
-      <a href={waLink(`tengo un ${nombreBajo} en ${e.estado} y necesito cumplir con protección contra incendios`)} target="_blank" rel="noopener" class="l2-cta">
+      <a href={waLink(`tengo ${art} ${nombreBajo} en ${e.estado} y necesito cumplir con protección contra incendios`)} target="_blank" rel="noopener" class="l2-cta">
         <span>Cotizar lo que me falta</span>
       </a>
       <a href={`/cumplimiento/giro/${g.slug}`} class="l2-cta-ghost">
@@ -172,7 +174,7 @@ const cifras = [
             </ul>
 
             {categoria && (
-              <p class="l3-p" style="margin-top:16px;">En catálogo, la línea que más se mueve para este giro es <a class="l3-il" href={`/productos/${categoria.slug}`}>{categoria.nombre.toLowerCase()}</a>. Conviene tener la clasificación de riesgo antes de cotizar: de ella dependen el número de extintores y si te aplican brigada y sistemas fijos.</p>
+              <p class="l3-p" style="margin-top:16px;">En catálogo, la línea que más se mueve para este giro es <a class="l3-il" href={`/productos/${categoria.slug}`}>{enTexto(categoria.nombre)}</a>. Conviene tener la clasificación de riesgo antes de cotizar: de ella dependen el número de extintores y si te aplican brigada y sistemas fijos.</p>
             )}
 
             <h3 style="font-size:1rem; font-weight:700; color:#09090b; margin:28px 0 0;">Detección, alarma y sistemas fijos</h3>
@@ -390,13 +392,13 @@ const cifras = [
           <div class="l3-box l3-box-dark">
             <span class="l3-box-title">¿Te cotizamos lo que falta?</span>
             <p class="l3-box-copy">Cuéntanos cómo es tu {nombreBajo} en {e.estado} y te decimos qué te aplica realmente, qué te falta y qué no necesitas comprar.</p>
-            <a href={waLink(`tengo un ${nombreBajo} en ${e.estado} y quiero cotizar equipo contra incendios`)} target="_blank" rel="noopener" class="l3-btn-wa">
+            <a href={waLink(`tengo ${art} ${nombreBajo} en ${e.estado} y quiero cotizar equipo contra incendios`)} target="_blank" rel="noopener" class="l3-btn-wa">
               <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
               <span>Escribirnos por WhatsApp</span>
             </a>
             {categoria && (
               <a href={`/productos/${categoria.slug}`} class="l3-btn-ghost">
-                <span>Ver {categoria.nombre.toLowerCase()}</span>
+                <span>Ver {enTexto(categoria.nombre)}</span>
               </a>
             )}
           </div>
